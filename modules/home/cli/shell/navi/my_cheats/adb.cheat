@@ -1,0 +1,6 @@
+% adb
+
+# install apk
+adb push <apk> /sdcard/ ; adb shell pm install -r /sdcard/<apk> ; adb shell rm /sdcard/<apk>
+
+$ apk: ls *.apk

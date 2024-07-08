@@ -1,0 +1,6 @@
+% systemd
+
+# restart user services
+systemctl --user restart <name>
+
+$ name: ls ~/.config/systemd/user/ | grep -v /

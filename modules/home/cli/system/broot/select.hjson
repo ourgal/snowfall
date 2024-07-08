@@ -1,0 +1,9 @@
+verbs: [
+    {
+        invocation: "ok"
+        key: "enter"
+        leave_broot: true
+        execution: "sh -c \"echo {file} > /tmp/broot_selection_path\""
+        apply_to: "file"
+    }
+]

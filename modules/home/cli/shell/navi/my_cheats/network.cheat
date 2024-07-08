@@ -1,0 +1,4 @@
+% network
+
+# check domain IP info
+dig <domain> +short | nali

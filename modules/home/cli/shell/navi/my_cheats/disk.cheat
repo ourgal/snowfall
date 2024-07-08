@@ -1,0 +1,4 @@
+% disk
+
+# erase disk
+sudo dd if=/dev/urandom of=/dev/sdX bs=10M

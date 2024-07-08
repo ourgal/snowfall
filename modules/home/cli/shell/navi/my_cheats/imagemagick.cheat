@@ -1,0 +1,9 @@
+% imagemagick
+
+# convert image to gray
+convert <image> -colorspace Gray <image>
+
+$ image: ls *.png *.jpg *.jpeg *.webp
+
+# convert image to avif
+convert <image> $(echo <image> | cut -d "." -f 1).avif && rm <image>

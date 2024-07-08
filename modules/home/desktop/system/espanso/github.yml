@@ -1,0 +1,6 @@
+matches:
+  - replace: https://github.com/{{clipboard}}
+    trigger: :gh
+    vars:
+      - name: clipboard
+        type: clipboard

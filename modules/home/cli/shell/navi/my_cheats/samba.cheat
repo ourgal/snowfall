@@ -1,0 +1,4 @@
+% samba
+
+# add new user to samba service and set password
+sudo smbpasswd -a $USER

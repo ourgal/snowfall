@@ -1,0 +1,41 @@
+{
+  lib,
+  namespace,
+  config,
+  ...
+}:
+let
+  inherit (lib.${namespace}) enabled disabled enabledList;
+  user = (config.${namespace}.user).name;
+in
+{
+  imports = [ ./hardware-configuration.nix ];
+
+  dot =
+    {
+      user.host = "surface";
+      boot.systemd = enabled;
+      gpu.intel = enabled;
+    }
+    // enabledList [
+      "adb"
+      "appimage"
+      "audio"
+      "bluetooth"
+      "common"
+      "desktop"
+      "fonts"
+      "harmonia"
+      "kmonad"
+      "laptop"
+      "location"
+      "nh"
+      "power"
+      "tpm"
+      "udisks2"
+    ];
+
+  snowfallorg.users.${user}.home = disabled;
+
+  system.stateVersion = "23.11";
+}

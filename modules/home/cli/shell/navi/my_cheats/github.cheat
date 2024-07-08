@@ -1,0 +1,4 @@
+% github
+
+# change user info
+git config --local user.name <name> && git config --local user.email <mail> && git config --local commit.gpgsign false && git config credential.https://github.com.username <name>

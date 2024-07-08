@@ -1,0 +1,4 @@
+% gpg
+
+# list keys
+gpg -k --fingerprint --keyid-format long

@@ -1,0 +1,6 @@
+% distrobox
+
+# enter a distrobox
+distrobox enter <name>
+
+$ name: distrobox ls | awk -F '|' 'NR > 1 {print $2}' | tr -d ' ' | fzf

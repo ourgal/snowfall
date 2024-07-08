@@ -1,0 +1,7 @@
+% opencc
+
+# convert to zht
+echo "<string>" | opencc -c s2tw.json | tee /dev/tty | tr -d '\n' | xclip -sel clip
+
+# convert to zhs
+echo "<string>" | opencc -c t2s.json | tee /dev/tty | tr -d '\n' | xclip -sel clip

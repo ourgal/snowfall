@@ -1,0 +1,236 @@
+add_newline = false
+format = "$hostname$username$localip$shlvl$singularity$kubernetes$directory$vcsh$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$docker_context$package$buf$c$cmake$cobol$container$daml$dart$deno$dotnet$elixir$elm$erlang$golang$haskell$helm$java$julia$kotlin$lua$nim$nodejs$ocaml$perl$php$pulumi$purescript$python$rlang$red$ruby$rust$scala$swift$terraform$vlang$vagrant$zig$nix_shell$conda$spack$memory_usage$aws$gcloud$openstack$azure$env_var$crystal$custom$sudo$cmd_duration$line_break$jobs$battery$time$status$shell$character"
+palette = "catppuccin_macchiato"
+
+[aws]
+format = "[$symbol($profile)(($region))($duration)]($style)"
+symbol = " "
+
+[battery]
+charging_symbol = "󰂄"
+discharging_symbol = ""
+full_symbol = "󰁹"
+
+[[battery.display]]
+style = "bold red"
+threshold = 30
+
+[character]
+error_symbol = "[](bold red)"
+success_symbol = "[](bold green)"
+
+[cmd_duration]
+format = "[$duration ]($style)"
+min_time = 10000
+style = "fg:#999999"
+
+[cobol]
+format = "[$symbol($version)]($style) "
+
+[conda]
+format = "[$symbol($version)]($style) "
+
+[crystal]
+format = "[$symbol($version)]($style) "
+
+[dart]
+format = "[$symbol($version)]($style) "
+
+[deno]
+format = "[$symbol($version)]($style) "
+
+[directory]
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+read_only = " 󰌾"
+truncation_length = 5
+
+[docker_context]
+format = "[$symbol$context]($style) "
+symbol = " "
+
+[dotnet]
+format = "[$symbol($version)(󰓾 $tfm)]($style) "
+
+[elixir]
+format = "[$symbol($version (OTP $otp_version))]($style) "
+symbol = " "
+
+[elm]
+format = "[$symbol($version)]($style) "
+
+[erlang]
+format = "[$symbol($version)]($style) "
+
+[gcloud]
+format = "[$symbol$account(@$domain)(($region))]($style) "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = "[($state( $progress_current of $progress_total))]($style) "
+
+[git_status]
+ahead = "[↑·${count}](fg:#26C281) "
+behind = "[↓·${count}](fg:#8F1D21) "
+conflicted = "✖ "
+deleted = "[Δ ${count}](fg:#C93756) "
+diverged = "V [> ${ahead_count}](fg:#26C281) [< ${behind_count}](fg:#8F1D21) "
+format = "([$all_status$ahead_behind]($style))"
+modified = "[✚ ${count}](fg:#FBCEB1) "
+renamed = "[󰑕 ${count}](fg:#BF55EC) "
+staged = "[● ${count}](fg:#19B5FE) "
+stashed = "⚑ "
+style = "bright-white"
+untracked = "[… ${count}](fg:#BFBFBF) "
+
+[golang]
+format = "[$symbol($version)]($style) "
+
+[helm]
+format = "[$symbol($version)]($style) "
+
+[hg_branch]
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[hostname]
+disabled = false
+format = "<[$hostname]($style)> "
+ssh_only = true
+style = "bold dimmed white"
+trim_at = "-"
+
+[java]
+format = "[$symbol($version)]($style) "
+
+[julia]
+format = "[$symbol($version)]($style) "
+
+[kotlin]
+format = "[$symbol($version)]($style) "
+
+[kubernetes]
+format = "[$symbol$context( ($namespace))]($style) "
+
+[line_break]
+disabled = false
+
+[lua]
+format = "[$symbol($version)]($style) "
+
+[memory_usage]
+disabled = false
+format = "$symbol[${ram}( | ${swap})]($style) "
+style = "bold dimmed white"
+symbol = "󰍛 "
+threshold = 70
+
+[nim]
+format = "[$symbol($version)]($style) "
+
+[nix_shell]
+format = "[$symbol$state( ($name))]($style) "
+symbol = " "
+
+[nodejs]
+format = "[$symbol($version)]($style) "
+
+[ocaml]
+format = "[$symbol($version)(($switch_indicator$switch_name))]($style) "
+
+[openstack]
+format = "[$symbol$cloud(($project))]($style) "
+
+[package]
+format = "[$symbol($version)]($style) "
+
+[palettes.catppuccin_macchiato]
+base = "#24273a"
+blue = "#8aadf4"
+crust = "#181926"
+flamingo = "#f0c6c6"
+green = "#a6da95"
+lavender = "#b7bdf8"
+mantle = "#1e2030"
+maroon = "#ee99a0"
+mauve = "#c6a0f6"
+overlay0 = "#6e738d"
+overlay1 = "#8087a2"
+overlay2 = "#939ab7"
+peach = "#f5a97f"
+pink = "#f5bde6"
+red = "#ed8796"
+rosewater = "#f4dbd6"
+sapphire = "#7dc4e4"
+sky = "#91d7e3"
+subtext0 = "#a5adcb"
+subtext1 = "#b8c0e0"
+surface0 = "#363a4f"
+surface1 = "#494d64"
+surface2 = "#5b6078"
+teal = "#8bd5ca"
+text = "#cad3f5"
+yellow = "#eed49f"
+
+[perl]
+format = "[$symbol($version)]($style) "
+
+[php]
+format = "[$symbol($version)]($style) "
+
+[pulumi]
+format = "[$symbol$stack]($style) "
+
+[purescript]
+format = "[$symbol($version)]($style) "
+
+[python]
+format = "[${symbol}${pyenv_prefix}(${version})(($virtualenv))]($style) "
+style = "bold green"
+
+[red]
+format = "[$symbol($version)]($style) "
+
+[ruby]
+format = "[$symbol($version)]($style) "
+
+[rust]
+format = "[$symbol($version)]($style) "
+
+[scala]
+format = "[$symbol($version)]($style) "
+
+[shlvl]
+symbol = " "
+
+[sudo]
+format = "[as $symbol] "
+
+[swift]
+format = "[$symbol($version)]($style) "
+
+[terraform]
+format = "[$symbol$workspace]($style) "
+
+[time]
+disabled = false
+format = "󰥔 $time($style) "
+style = "bright-white"
+time_format = "%H:%M"
+
+[username]
+format = "[$user]($style) "
+show_always = false
+style_user = "bold dimmed blue"
+
+[vagrant]
+format = "[$symbol($version)]($style) "
+
+[zig]
+format = "[$symbol($version)]($style) "
