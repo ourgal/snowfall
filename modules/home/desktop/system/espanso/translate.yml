@@ -1,0 +1,5 @@
+matches:
+  - replace: "trans -t en -p "
+    trigger: :tre
+  - replace: "trans -t zh -p "
+    trigger: :trz

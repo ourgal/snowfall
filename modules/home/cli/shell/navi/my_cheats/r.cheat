@@ -1,0 +1,4 @@
+% r
+
+# install R packages
+R -e "renv::install('<name>')"

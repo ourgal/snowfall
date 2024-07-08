@@ -1,0 +1,4 @@
+% powershell
+
+# set user env
+[Environment]::SetEnvironmentVariable("<Name>", "<Value>", "User")

@@ -1,0 +1,4 @@
+% crawler
+
+# fufugal
+set name "<name>" ; curl -s https://cc.llgal.xyz/game/$name/ --referer https://fufugal.com/ | htmlq 'div.mdui-col-xs-12.mdui-col-sm-7.mdui-text-truncate span' -t

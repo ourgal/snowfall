@@ -1,0 +1,13 @@
+% nix
+
+# home manager switch
+home-manager switch
+
+# nios rebuild
+nixos-rebuild switch
+
+# update only one flake input
+nix flake lock --update-input <input>
+
+# update all flake
+nix flake update

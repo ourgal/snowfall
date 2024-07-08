@@ -1,0 +1,11 @@
+{ ... }@args:
+args.module (
+  args
+  // {
+    path = ./.;
+    nixPkgs = [
+      "gobang"
+      "mycli"
+    ];
+  }
+)

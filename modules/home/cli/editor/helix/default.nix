@@ -1,0 +1,594 @@
+{ ... }@args:
+args.module (
+  args
+  // (
+    with args;
+    let
+      tmuxEnabled = config.${namespace}.cli.shell.tmux.enable;
+      zellijEnabled = config.${namespace}.cli.shell.zellij.enable;
+      helix-tmux = "${pkgs.${namespace}.helix-tmux}/bin/helix-tmux";
+      helix-zellij = "${pkgs.${namespace}.helix-zellij}/bin/helix-zellij";
+      tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";
+      zellij-popup = "${pkgs.${namespace}.zellij-popup}/bin/zellij-popup";
+
+      zellijEnter = "zellij action write 13";
+    in
+    {
+      path = ./.;
+      progs = {
+        helix = {
+          catppuccin = disabled;
+          settings = {
+            theme = "catppuccin_mocha";
+            editor =
+              enableOpt [
+                "true-color"
+                "auto-save"
+                "color-modes"
+              ]
+              // {
+                line-number = "relative";
+                bufferline = "multiple";
+                shell = [
+                  "${pkgs.fish}/bin/fish"
+                  "-c"
+                ];
+                idle-timeout = 0;
+                indent-guides = {
+                  render = true;
+                  character = "⸽"; # Some characters that work well: "▏", "┆", "┊", "⸽"
+                  skip-levels = 1;
+                };
+                statusline = {
+                  left = [
+                    "mode"
+                    "spinner"
+                  ];
+                  center = [ "file-name" ];
+                  right = [
+                    "diagnostics"
+                    "selections"
+                    "position"
+                    "file-encoding"
+                    "file-line-ending"
+                    "file-type"
+                  ];
+                  separator = "│";
+                  mode.normal = "NORMAL";
+                  mode.insert = "INSERT";
+                  mode.select = "SELECT";
+                };
+                cursor-shape = {
+                  insert = "bar";
+                };
+                soft-wrap = enabled;
+              };
+            keys = {
+              normal = {
+                "L" = ":buffer-next";
+                "H" = ":buffer-previous";
+                "C-h" = "jump_view_left";
+                "C-l" = "jump_view_right";
+                "C-j" = "jump_view_down";
+                "C-k" = "jump_view_up";
+                "C-g" =
+                  if tmuxEnabled then
+                    ":sh ${helix-tmux} lazygit"
+                  else if zellijEnabled then
+                    ":sh ${helix-zellij} lazygit"
+                  else
+                    "";
+                "X" = [
+                  ":w"
+                  ":bclose"
+                ];
+                r = "replace_with_yanked";
+                R = "rename_symbol";
+                c = [
+                  "trim_selections"
+                  "change_selection"
+                ];
+                "*" =
+                  if tmuxEnabled then
+                    [
+                      "search_selection"
+                      "select_all"
+                      "select_regex"
+                      ":sh tmux send-key C-m"
+                    ]
+                  else if zellijEnabled then
+                    [
+                      "search_selection"
+                      "select_all"
+                      "select_regex"
+                      ":sh ${zellijEnter}"
+                    ]
+                  else
+                    "search_selection";
+                "G" = "goto_last_line";
+                "$" = "goto_line_end";
+                "^" = "goto_first_nonwhitespace";
+                "0" = "goto_line_start";
+                V = "extend_line_below";
+                "A-v" = "extend_line_above";
+                "esc" = "collapse_selection";
+                "A-." = { };
+                ";" = "repeat_last_motion";
+                "Z" = {
+                  Z = ":xa";
+                  Q = ":qa!";
+                };
+                g = {
+                  "/" =
+                    if tmuxEnabled then
+                      ":sh ${helix-tmux} search"
+                    else if zellijEnabled then
+                      ":sh ${helix-zellij} search"
+                    else
+                      "";
+                  z = [
+                    "split_selection_on_newline"
+                    ":sort"
+                    "keep_primary_selection"
+                  ];
+                  e = { };
+                  s = { };
+                  l = { };
+                  h = { };
+                  w = { };
+                };
+                "C-s" = "select_regex";
+                s = "goto_word";
+                "space" = {
+                  l = {
+                    f = ":fmt";
+                  };
+                  s = { };
+                  S = { };
+                  R = { };
+                  y = { };
+                  Y = { };
+                  c = { };
+                  C = { };
+                  "A-c" = { };
+                  p = { };
+                  P = { };
+                  y = { };
+                  Y = { };
+                  B = ":sh ${helix-tmux} blame";
+                  f =
+                    if tmuxEnabled then
+                      ":sh ${helix-tmux} broot"
+                    else if zellijEnabled then
+                      ":sh ${helix-zellij} broot"
+                    else
+                      "";
+                  e =
+                    if tmuxEnabled then
+                      ":sh ${helix-tmux} lf"
+                    else if zellijEnabled then
+                      ":sh ${helix-zellij} lf"
+                    else
+                      "";
+                  o = "symbol_picker";
+                  O = "workspace_symbol_picker";
+                  "/" =
+                    if tmuxEnabled then
+                      ":sh ${tmux-popup} '${helix-tmux} livegrep'"
+                    else if zellijEnabled then
+                      ":sh ${zellij-popup} '${helix-zellij} livegrep'"
+                    else
+                      "";
+                  "*" = [
+                    "search_selection"
+                    "global_search"
+                    ":sh tmux send-key C-m"
+                  ];
+                  "." = {
+                    "." =
+                      if tmuxEnabled then
+                        [
+                          ":wa"
+                          ":sh ${helix-tmux} make"
+                        ]
+                      else if zellijEnabled then
+                        [
+                          ":wa"
+                          ":sh ${helix-zellij} make"
+                        ]
+                      else
+                        "";
+                  };
+                };
+                "C-a" = [
+                  ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                  "increment"
+                ];
+                "C-x" = [
+                  ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                  "decrement"
+                ];
+              };
+              select = {
+                r = "replace_with_yanked";
+                R = "rename_symbol";
+                "A-d" = "delete_selection";
+                c = [
+                  "trim_selections"
+                  "change_selection"
+                ];
+                "*" =
+                  if tmuxEnabled then
+                    [
+                      "search_selection"
+                      "select_all"
+                      "select_regex"
+                      ":sh tmux send-key C-m"
+                    ]
+                  else if zellijEnabled then
+                    [
+                      "search_selection"
+                      "select_all"
+                      "select_regex"
+                      ":sh ${zellijEnter}"
+                    ]
+                  else
+                    "search_selection";
+                G = "goto_file_end";
+                "$" = "goto_line_end";
+                "^" = "goto_first_nonwhitespace";
+                "0" = "goto_line_start";
+                # "s" = { };
+                # "S" = { };
+                "/" = "select_regex";
+                "?" = "split_selection";
+                "esc" = [
+                  "normal_mode"
+                  "collapse_selection"
+                ];
+                "A-." = { };
+                ";" = "repeat_last_motion";
+                g = {
+                  z = [
+                    "split_selection_on_newline"
+                    ":sort"
+                    "keep_primary_selection"
+                  ];
+                  e = { };
+                  s = { };
+                  l = { };
+                  h = { };
+                  w = { };
+                };
+                "C-s" = "select_regex";
+                s = "goto_word";
+                "space" = {
+                  l = {
+                    f = ":fmt";
+                  };
+                  s = { };
+                  S = { };
+                  R = { };
+                  y = { };
+                  Y = { };
+                  c = { };
+                  C = { };
+                  "A-c" = { };
+                  p = { };
+                  P = { };
+                  y = { };
+                  Y = { };
+                  B = ":sh ${helix-tmux} blame";
+                  f =
+                    if tmuxEnabled then
+                      ":sh ${helix-tmux} broot"
+                    else if zellijEnabled then
+                      ":sh ${helix-zellij} broot"
+                    else
+                      "";
+                  e =
+                    if tmuxEnabled then
+                      ":sh ${helix-tmux} lf"
+                    else if zellijEnabled then
+                      ":sh ${helix-zellij} lf"
+                    else
+                      "";
+                  o = "symbol_picker";
+                  O = "workspace_symbol_picker";
+                  "/" =
+                    if tmuxEnabled then
+                      ":sh ${tmux-popup} ${helix-tmux} livegrep'"
+                    else if zellijEnabled then
+                      ":sh ${zellij-popup} '${helix-zellij} livegrep'"
+                    else
+                      "";
+                  "*" = [
+                    "search_selection"
+                    "global_search"
+                    ":sh tmux send-key C-m"
+                  ];
+                  "." = {
+                    "." =
+                      if tmuxEnabled then
+                        [
+                          ":wa"
+                          ":sh ${helix-tmux} make"
+                        ]
+                      else if zellijEnabled then
+                        [
+                          ":wa"
+                          ":sh ${helix-zellij} make"
+                        ]
+                      else
+                        "";
+                  };
+                  "C-a" = [
+                    ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                    "increment"
+                  ];
+                  "C-x" = [
+                    ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                    "decrement"
+                  ];
+                };
+              };
+            };
+          };
+          languages = {
+            language = [
+              {
+                name = "r";
+                auto-format = true;
+              }
+              {
+                name = "dhall";
+                auto-format = true;
+              }
+              {
+                name = "python";
+                auto-format = true;
+                scope = "source.python";
+                injection-regex = "python";
+                file-types = [
+                  "py"
+                  "pyi"
+                  "py3"
+                  "pyw"
+                  ".pythonstartup"
+                  ".pythonrc"
+                ];
+                shebangs = [ "python" ];
+                roots = [
+                  "."
+                  "pyproject.toml"
+                  "pyrightconfig.json"
+                ];
+                comment-token = "#";
+                language-servers = [
+                  {
+                    name = "ruff-lsp";
+                    only-features = [ "format" ];
+                  }
+                  {
+                    name = "pyright";
+                    except-features = [ "format" ];
+                  }
+                  "scls"
+                ];
+                indent = {
+                  tab-width = 4;
+                  unit = "    ";
+                };
+                formatter = {
+                  command = "ruff";
+                  args = [
+                    "format"
+                    "-"
+                  ];
+                };
+              }
+              {
+                name = "lua";
+                language-servers = [
+                  "scls"
+                  "lua-language-server"
+                ];
+                formatter = {
+                  command = "stylua";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "toml";
+                language-servers = [
+                  "scls"
+                  "taplo"
+                ];
+                formatter = {
+                  command = "taplo";
+                  args = [
+                    "fmt"
+                    "-"
+                  ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "markdown";
+                language-servers = [
+                  "scls"
+                  "marksman"
+                ];
+                formatter = {
+                  command = "autocorrect";
+                  args = [
+                    "--stdin"
+                    "-"
+                  ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "nix";
+                language-servers = [
+                  "scls"
+                  "nil"
+                ];
+                formatter = {
+                  command = "nixfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "yaml";
+                language-servers = [
+                  "scls"
+                  "yaml-language-server"
+                  "ansible-language-server"
+                ];
+                formatter = {
+                  command = "yamlfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "bash";
+                language-servers = [
+                  "scls"
+                  "bash-language-server"
+                ];
+                formatter = {
+                  command = "shfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "c-sharp";
+                formatter = {
+                  command = "dotnet-csharpier";
+                  args = [ "--fast" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "jsonnet";
+                formatter = {
+                  command = "jsonnetfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "perl";
+                formatter = {
+                  command = "perltidy";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+              {
+                name = "json";
+                language-servers = [
+                  {
+                    name = "vscode-json-language-server";
+                    except-features = [ "format" ];
+                  }
+                  "biome"
+                ];
+                auto-format = true;
+              }
+              {
+                name = "typst";
+                scope = "source.typst";
+                injection-regex = "typ";
+                comment-token = "//";
+                indent = {
+                  tab-width = 2;
+                  unit = " ";
+                };
+                roots = [ ];
+                text-width = 100;
+                rulers = [ 100 ];
+                soft-wrap.wrap-at-text-width = true;
+                language-servers = [ { name = "typst-lsp"; } ];
+                formatter = {
+                  command = "typstfmt";
+                };
+                file-types = [ "typ" ];
+                auto-format = true;
+              }
+              {
+                name = "latex";
+                formatter = {
+                  command = "latexindent";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
+            ];
+            language-server = {
+              pyright = {
+                command = "pyright-langserver";
+                args = [ "--stdio" ];
+                config = {
+                  reportMissingTypeStubs = false;
+                  python.analysis = {
+                    typeCheckingMode = "basic";
+                    autoImportCompletions = true;
+                  };
+                };
+              };
+              ruff = {
+                command = "ruff-lsp";
+                config = {
+                  documentFormatting = true;
+                  settings.run = "onSave";
+                };
+              };
+              yaml-language-server.config.yaml = {
+                format = enabled;
+                validation = true;
+                schemas = {
+                  "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}";
+                };
+              };
+              scls = {
+                command = "simple-completion-language-server";
+                config =
+                  enableOpt [
+                    "snippets_first" # completions will return before snippets by default
+                    "feature_words" # enable completion by word
+                    "feature_snippets" # enable snippets
+                    "feature_unicode_input" # enable "unicode input"
+                  ]
+                  // {
+                    max_completion_items = 20; # set max completion results len for each group: words, snippets, unicode-input
+                  };
+                environment = {
+                  RUST_LOG = "info,simple-completion-langauge-server=info";
+                  LOG_FILE = "/tmp/completion.log";
+                };
+              };
+              biome = {
+                command = "biome";
+                args = [ "lsp-proxy" ];
+              };
+              typst-lsp = {
+                command = "typst-lsp";
+              };
+            };
+          };
+        };
+      };
+      myPkgs = [
+        "simple-completion-language-server"
+        "live-grep"
+      ];
+    }
+  )
+)
