@@ -30,7 +30,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "freshrss";
-    port = mkOpt' int 5000;
+    port = mkOpt' (either port (listOf port)) 5000;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

@@ -1,12 +1,17 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
       image = "docker.io/tindy2013/subconverter:${cfg.version}";
-      ports = [ "${toString cfg.port}:25500" ];
+      ports = dockerPots cfg.port;
       volumes = [ "${cfg.nfs}${cfg.name}_config:/base" ];
       environment = {
         TZ = "Asia/Shanghai";
@@ -16,7 +21,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "subconverter";
-    port = mkOpt' int 25500;
+    port = mkOpt' (either port (listOf port)) 25500;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

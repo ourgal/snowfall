@@ -1,12 +1,17 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
       image = "docker.io/leonismoe/ariang:${cfg.version}";
-      ports = [ "0.0.0.0:${toString cfg.port}:8080" ];
+      ports = dockerPots cfg.port;
       environment = {
         TZ = "Asia/Shanghai";
       };
@@ -15,7 +20,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "ariang";
-    port = mkOpt' int 8080;
+    port = mkOpt' (either port (listOf port)) 8080;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

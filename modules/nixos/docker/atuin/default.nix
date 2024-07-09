@@ -1,7 +1,12 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   password = args.lib.strings.fileContents ./password.key;
   value = {
@@ -13,7 +18,7 @@ let
         ATUIN_OPEN_REGISTRATION = "true";
       };
       volumes = [ "${cfg.nfs}${cfg.name}_config:/config:rw" ];
-      ports = [ "${toString cfg.port}:8888/tcp" ];
+      ports = dockerPots cfg.port;
       cmd = [
         "server"
         "start"
@@ -36,7 +41,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "atuin";
-    port = mkOpt' int 8888;
+    port = mkOpt' (either port (listOf port)) 8888;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };
