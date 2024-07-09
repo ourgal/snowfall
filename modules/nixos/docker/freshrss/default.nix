@@ -21,7 +21,7 @@ let
       volumes = [ "${cfg.nfs}${cfg.name}_db:/var/lib/mysql" ];
       environment = {
         MYSQL_DATABASE = "freshrss";
-        MYSQL_PASSWORD = lib.string.fileContents ./secret.key;
+        MYSQL_PASSWORD = lib.strings.fileContents ./secret.key;
         MYSQL_RANDOM_ROOT_PASSWORD = "1";
         MYSQL_USER = "freshrss";
       };
