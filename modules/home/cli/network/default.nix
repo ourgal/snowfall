@@ -11,6 +11,7 @@ args.module (
       "ipinfo"
       "nali"
       "q"
+      "tcping-go"
       "whois"
       "wirelesstools"
     ];
