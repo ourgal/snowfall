@@ -16,6 +16,15 @@ in
       user.host = "surface";
       boot.systemd = enabled;
       gpu.intel = enabled;
+      firewall = enabledList [
+        "aria2"
+        "barrier"
+        "dufs"
+        "harmonia"
+        "mdns"
+        "scream"
+        "transmission"
+      ];
     }
     // enabledList [
       "adb"

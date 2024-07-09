@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib.${namespace}) enabled disabled;
+  inherit (lib.${namespace}) enabled disabled enabledList;
   user = (config.${namespace}.user).name;
 in
 {
@@ -17,6 +17,10 @@ in
     common = enabled;
     nfs = enabled;
     caddy = enabled;
+    firewall = enabledList [
+      "docker"
+      "mdns"
+    ];
     docker =
       let
         nfs = "/net/brix.local/srv/nfs/docker/";
@@ -40,10 +44,12 @@ in
           version = "latest";
         };
         soft-serve = enabled // {
-          port = 23232;
-          port1 = 23231;
-          port2 = 23233;
-          port3 = 9418;
+          port = [
+            23232
+            23231
+            23233
+            9418
+          ];
           inherit nfs;
           version = "v0.7.4";
         };
@@ -53,7 +59,11 @@ in
           version = "v18.3.0";
         };
         syncthing = enabled // {
-          port = 8384;
+          port = [
+            8384
+            22000
+            21027
+          ];
           inherit nfs;
           version = "version-v1.27.9";
         };

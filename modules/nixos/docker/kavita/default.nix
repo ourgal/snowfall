@@ -6,7 +6,7 @@ let
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
       image = "docker.io/linuxserver/kavita:${cfg.version}";
-      ports = [ "0.0.0.0:${toString cfg.port}:5000" ];
+      ports = [ "${toString cfg.port}:5000" ];
       volumes = [
         "${cfg.nfs}${cfg.name}_config:/config"
         "${cfg.nfsRoot}books:/books:ro"
@@ -17,7 +17,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "kavita";
-    port = mkOpt' int 5000;
+    port = mkOpt' (either port (listOf port)) 5000;
     nfs = mkOpt' str "";
     nfsRoot = mkOpt' str "";
     version = mkOpt' str "latest";

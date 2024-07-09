@@ -1,12 +1,17 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
       image = "docker.io/xhofe/alist-aria2:${cfg.version}";
-      ports = [ "${toString cfg.port}:5244" ];
+      ports = dockerPots cfg.port;
       volumes = [ "${cfg.nfs}${cfg.name}_config:/opt/alist/data" ];
       environment = {
         PUID = "0";
@@ -18,7 +23,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "alist";
-    port = mkOpt' int 5244;
+    port = mkOpt' (either port (listOf port)) 5244;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

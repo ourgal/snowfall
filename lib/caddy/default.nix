@@ -19,10 +19,16 @@ with lib;
       containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
       configs = attrsets.foldlAttrs (
         acc: name: value:
-        acc
-        // {
-          "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString value.port}";
-        }
+        let
+          port =
+            if builtins.isInt value.port then
+              value.port
+            else if builtins.isList value.port then
+              builtins.head value.port
+            else
+              builtins.throw "not supported port type";
+        in
+        acc // { "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString port}"; }
       ) { } containerEnabled;
     in
     {

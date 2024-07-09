@@ -1,7 +1,12 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
@@ -10,12 +15,12 @@ let
         TZ = "Asia/Shanghai";
         LOG_LEVEL = "info";
       };
-      ports = [ "0.0.0.0:${toString cfg.port}:8191" ];
+      ports = dockerPots cfg.port;
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "flaresolverr";
-    port = mkOpt' int 8191;
+    port = mkOpt' (either port (listOf port)) 8191;
     version = mkOpt' str "latest";
   };
   path = ./.;

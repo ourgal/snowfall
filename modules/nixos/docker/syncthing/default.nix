@@ -1,17 +1,17 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPots
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.oci-containers.containers.${cfg.name} = {
       image = "docker.io/linuxserver/syncthing:${cfg.version}";
-      ports = [
-        "0.0.0.0:${toString cfg.port}:8384"
-        "0.0.0.0:22000:22000/tcp"
-        "0.0.0.0:22000:22000/udp"
-        "0.0.0.0:21027:21027/udp"
-      ];
+      ports = dockerPots cfg.port;
       volumes = [
         "${cfg.nfs}${cfg.name}_config:/config"
         "${cfg.nfs}${cfg.name}_sync:/sync"
@@ -22,7 +22,11 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "syncthing";
-    port = mkOpt' int 8384;
+    port = mkOpt' (either port (listOf port)) [
+      8384
+      22000
+      21027
+    ];
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };
