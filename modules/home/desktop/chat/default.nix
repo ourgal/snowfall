@@ -3,6 +3,9 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "telegram";
+    nixPkgs = [
+      "element-desktop"
+      "telegram-desktop"
+    ];
   }
 )
