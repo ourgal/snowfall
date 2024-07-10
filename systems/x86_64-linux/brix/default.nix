@@ -17,6 +17,7 @@ in
     common = enabled;
     nfs = enabled;
     caddy = enabled;
+    logrotate = enabled;
     firewall = enabledList [
       "docker"
       "mdns"

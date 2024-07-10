@@ -38,6 +38,7 @@ in
       "kmonad"
       "laptop"
       "location"
+      "logrotate"
       "nh"
       "power"
       "tpm"
