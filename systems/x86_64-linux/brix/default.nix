@@ -20,6 +20,7 @@ in
     firewall = enabledList [
       "docker"
       "mdns"
+      "nfs"
     ];
     docker =
       let
