@@ -78,7 +78,7 @@ rec {
       prefix = "modules/home/";
     });
 
-  enableSubModule =
+  enableHomeSubModule =
     {
       path,
       subModule ? [ ],
@@ -97,6 +97,27 @@ rec {
         else
           builtins.throw "not supported type";
       prefix = "modules/home/";
+    });
+
+  enableNixosSubModule =
+    {
+      path,
+      subModule ? [ ],
+      ...
+    }:
+    let
+      type = builtins.typeOf subModule;
+    in
+    (mkModuleOpt {
+      inherit path;
+      value =
+        if (type == "list") then
+          enabledList subModule
+        else if (type == "string") then
+          enabledList [ subModule ]
+        else
+          builtins.throw "not supported type";
+      prefix = "modules/nixos/";
     });
 
   # cfgNixos config.${namespace} ./. => config.${namespace}.cli.anime.adl
@@ -228,7 +249,7 @@ rec {
           programs = (progsHandle progs);
           services = (progsHandle servs);
           home.sessionVariables = env;
-          ${namespace} = enableSubModule {
+          ${namespace} = enableHomeSubModule {
             inherit path;
             subModule = enable;
           };
