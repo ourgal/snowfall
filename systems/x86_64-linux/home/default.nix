@@ -37,6 +37,7 @@ in
       "harmonia"
       "kmonad"
       "location"
+      "logrotate"
       "nfsMount"
       "nh"
       "power"
