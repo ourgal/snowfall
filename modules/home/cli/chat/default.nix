@@ -3,7 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "nchat";
+    nixPkgs = [
+      "gomuks"
+      "nchat"
+    ];
     enable = "tg";
   }
 )
