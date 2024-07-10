@@ -12,6 +12,7 @@ let
     disabled
     enable
     with'
+    enableNixosSubModule
     ;
   value = {
     security.rtkit = enabled;
@@ -44,7 +45,11 @@ let
         xmonad = disabled;
         qtile = enabled;
       };
-      displayManager.gdm = enabled // enable [ "wayland" ];
+    };
+
+    ${namespace} = enableNixosSubModule {
+      inherit path;
+      subModule = "sddm";
     };
 
     services.libinput = enabled;
