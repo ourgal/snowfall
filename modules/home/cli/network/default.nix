@@ -8,6 +8,7 @@ args.module (
       "dogdns"
       "dstp"
       "gping"
+      "httping"
       "ipinfo"
       "nali"
       "q"
