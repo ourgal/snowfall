@@ -1,6 +1,6 @@
 { channels, ... }:
 final: prev: {
-  ncaht = prev.nchat.overrideAttrs (_oldAttrs: rec {
+  nchat = prev.nchat.overrideAttrs (_oldAttrs: rec {
     version = "4.50";
     src = prev.fetchFromGitHub {
       owner = "d99kris";
