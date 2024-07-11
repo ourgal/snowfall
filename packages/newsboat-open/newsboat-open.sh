@@ -17,7 +17,7 @@ https://www.youtube.com/watch*)
     fi
   done
 
-  if ! yt-dlp -P "$path" -f 22 "$@"; then
+  if ! yt-dlp -P "$path" "$@"; then
     yt-dlp -P "$path" "$@"
   fi
 
