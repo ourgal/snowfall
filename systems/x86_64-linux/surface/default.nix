@@ -23,6 +23,7 @@ in
         "harmonia"
         "kdeconnect"
         "mdns"
+        "roc"
         "scream"
         "transmission"
       ];
