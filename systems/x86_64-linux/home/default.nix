@@ -21,6 +21,7 @@ in
         "barrier"
         "dufs"
         "harmonia"
+        "kdeconnect"
         "mdns"
         "scream"
         "transmission"
