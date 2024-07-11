@@ -32,6 +32,7 @@ args.module (
         volume-max = 200;
         audio-pitch-correction = "yes";
         hwdec = "auto";
+        audio-device = "alsa";
       };
       yt_subs_config = {
         osd-bar-align-y = 0.92;
