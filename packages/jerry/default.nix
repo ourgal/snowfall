@@ -1,32 +1,15 @@
-{
-  stdenv,
-  fzf,
-  ueberzugpp,
-  curl,
-  mpv,
-  jq,
-  fetchFromGitHub,
-  ...
-}:
+{ stdenv, fetchFromGitHub, ... }:
 
 stdenv.mkDerivation {
   pname = "jerry";
-  version = "unstable-2024-06-19";
+  version = "unstable-2024-07-08";
 
   src = fetchFromGitHub {
     owner = "justchokingaround";
     repo = "jerry";
-    rev = "989ec646f514387265a1f19550d24914ba67fcdf";
-    hash = "sha256-pjS2b2P15z9LqwoHqG02vtX/mVeKM4t5dmn5URiszeI=";
+    rev = "761b7b6f19af063bc908f56842dab167b0ce0af8";
+    sha256 = "0vbp48xx0a4mdsdvbjamiafzmmhvwlqsfdch26r5s1fs5nrsp6g2";
   };
-
-  buildInputs = [
-    curl
-    mpv
-    jq
-    ueberzugpp
-    fzf
-  ];
 
   dontBuild = true;
 
