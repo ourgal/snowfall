@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "chafa";
     myPkgs = "jerry";
     value = with args; {
       sops = {
