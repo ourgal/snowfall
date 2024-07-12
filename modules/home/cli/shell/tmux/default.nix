@@ -193,7 +193,7 @@ args.module (
           plugin = resurrect;
           extraConfig = ''
             set -g @resurrect-capture-pane-contents 'on'
-            set -g @resurrect-processes 'lazygit lf newsboat clifm "devbox shell" "hx *" ncmpcpp "~nnn-wrapped->nnn"'
+            set -g @resurrect-processes 'lazygit newsboat clifm "devbox shell" "hx *" ncmpcpp "~nnn-wrapped->nnn" "~lf->lf"'
           '';
         }
         {
