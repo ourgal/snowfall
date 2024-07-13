@@ -10,6 +10,7 @@ args.module (
     ];
     enable = [
       "git"
+      "gitui"
       "jujutsu"
       "lazygit"
     ];
