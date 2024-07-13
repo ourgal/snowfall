@@ -66,7 +66,6 @@ args.module (
           };
         }
         "gh"
-        "gitui"
         {
           fish = {
             shellAbbrs = {
