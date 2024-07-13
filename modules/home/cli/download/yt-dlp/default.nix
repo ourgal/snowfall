@@ -15,6 +15,7 @@ args.module (
           concurrent-fragments = 5;
           trim-filenames = 20;
           embed-subs = true;
+          downloader = "aria2c";
         };
       };
     };
