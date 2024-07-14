@@ -529,6 +529,14 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "c";
+                formatter = {
+                  command = "clang-format";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
