@@ -17,6 +17,7 @@ args.module (
     enable = [
       "android"
       "ansible"
+      "c"
       "cookiecutter"
       "cpp"
       "dart"
