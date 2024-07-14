@@ -68,7 +68,10 @@ args.module (
       "xcp"
       "zenith"
     ];
-    myPkgs = "advance-touch";
+    myPkgs = [
+      "advance-touch"
+      "c"
+    ];
     pyPkgs = "qrcode";
     # nvtop = "full";
     xorgPkgs = "xev";
