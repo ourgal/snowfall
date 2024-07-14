@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "gpg-tui";
     servs = with args; {
       gpg-agent = {
         enableSshSupport = false;
