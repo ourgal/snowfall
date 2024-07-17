@@ -7,6 +7,7 @@ args.module (
       "cachix"
       "devbox"
       "devenv"
+      "treefmt2"
       "universal-ctags"
     ];
     progs = {
