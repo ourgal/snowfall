@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       "nix-du"
+      "nix-generate-from-cpan"
       "nix-info"
       "nix-output-monitor"
       "nix-search-cli"
