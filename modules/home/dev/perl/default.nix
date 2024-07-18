@@ -7,6 +7,9 @@ args.module (
       "perl"
       "perlnavigator"
     ];
-    perlPkgs = "PerlTidy";
+    perlPkgs = [
+      "PerlLanguageServer"
+      "PerlTidy"
+    ];
   }
 )
