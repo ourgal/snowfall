@@ -34,6 +34,7 @@ args.module (
       "libva-utils"
       "mmv-go"
       "nfs-utils"
+      "nvtop"
       "onefetch"
       "ouch"
       "p7zip"
@@ -50,7 +51,6 @@ args.module (
       "sshfs"
       "sshpass"
       "sshs"
-      "nvtop"
       "superfile"
       "sysz"
       "termscp"
@@ -66,6 +66,7 @@ args.module (
       "wev"
       "wget"
       "xcp"
+      "xdotool"
       "zenith"
     ];
     myPkgs = [
