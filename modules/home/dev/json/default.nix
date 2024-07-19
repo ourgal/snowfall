@@ -6,8 +6,11 @@ args.module (
     nixPkgs = [
       "biome"
       "fx"
+      "jq"
+      "jqp"
       "jsonfmt"
       "yj"
+      "yq-go"
     ];
     nodePkgs = [
       "fixjson"

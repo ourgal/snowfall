@@ -5,8 +5,6 @@ args.module (
     path = ./.;
     nixPkgs = [
       "gnumake"
-      "jq"
-      "jqp"
       "pipx"
       "podman"
       "podman-compose"
