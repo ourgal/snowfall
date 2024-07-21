@@ -591,6 +591,7 @@ args.module (
               };
             };
           };
+          package = pkgs.${namespace}.helix;
         };
       };
       myPkgs = [
