@@ -33,6 +33,7 @@ args.module (
       "rofi"
       "sbsrf"
       "scream"
+      "sxhkd"
     ];
     value = with args; {
       colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
