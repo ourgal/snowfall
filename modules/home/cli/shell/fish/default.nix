@@ -49,7 +49,7 @@ args.module (
               ''
                 if test $XDG_CURRENT_DESKTOP = "Hyprland"
                   hyprctl dispatch dpms off
-                else 
+                else
                   xset dpms force off
                 end
               '';
@@ -232,6 +232,15 @@ args.module (
               repo = "todo-comments.fish";
               rev = "fb818507c2b95e498495fb73206eb101566d71ee";
               sha256 = "0myfyc72kcwjvv0c1yza7wr0xxw949ypg0yfpb0y043cdnm7b867";
+            };
+          }
+          {
+            name = "rgg.fish";
+            src = fetchFromGitHub {
+              owner = "soraxas";
+              repo = "rgg.fish";
+              rev = "00a852b7d62553b24b8f1bf65d63744ff40c0e5c";
+              sha256 = "12a8924naw1wibkd4chrmqx9pa8dk5rs587xvcnihqvbwjh2jd1y";
             };
           }
         ];
