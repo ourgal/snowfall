@@ -49,7 +49,7 @@ let
 
     ${namespace} = enableNixosSubModule {
       inherit path;
-      subModule = "sddm";
+      subModule = "gdm";
     };
 
     services.libinput = enabled;
