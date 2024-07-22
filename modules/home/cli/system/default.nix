@@ -71,6 +71,7 @@ args.module (
     ];
     myPkgs = [
       "advance-touch"
+      "archwiki"
       "c"
     ];
     pyPkgs = "qrcode";
