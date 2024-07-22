@@ -23,7 +23,6 @@ args.module (
             editor =
               enableOpt [
                 "true-color"
-                "auto-save"
                 "color-modes"
               ]
               // {
@@ -34,6 +33,7 @@ args.module (
                   "-c"
                 ];
                 idle-timeout = 0;
+                popup-border = "none";
                 indent-guides = {
                   render = true;
                   character = "⸽"; # Some characters that work well: "▏", "┆", "┊", "⸽"
@@ -57,6 +57,17 @@ args.module (
                   mode.normal = "NORMAL";
                   mode.insert = "INSERT";
                   mode.select = "SELECT";
+                };
+                lsp = {
+                  display-messages = true;
+                  display-inlay-hints = true;
+                };
+                auto-save = {
+                  focus-lost = true;
+                  after-delay = {
+                    enable = true;
+                    timeout = 1000;
+                  };
                 };
                 cursor-shape = {
                   insert = "bar";
