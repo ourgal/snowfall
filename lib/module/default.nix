@@ -198,6 +198,8 @@ rec {
               (builtins.foldl' (acc: v: acc // (setHandle { "${setName}" = v; })) { } setValue)
             else if (builtins.isString setValue) then
               { "${setName}".text = setValue; }
+            else if (builtins.isAttrs setValue) then
+              { "${setName}".source = setValue; }
             else
               builtins.throw "not supported type";
         in
