@@ -8,6 +8,7 @@ args.module (
       "eureka"
       "taskwarrior"
       "todo-sh"
+      "ttdl"
     ];
   }
 )
