@@ -7,8 +7,5 @@ args.module (
     dataFiles = {
       "vim/.keep" = "";
     };
-    env = {
-      MANPAGER = "vim -M +MANPAGER -";
-    };
   }
 )
