@@ -559,6 +559,14 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "nickel";
+                formatter = {
+                  command = "nickel";
+                  args = [ "format" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
