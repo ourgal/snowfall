@@ -25,6 +25,7 @@ args.module (
       "deno"
       "dhall"
       "docker"
+      "dot"
       "dotnet"
       "editorconfig"
       "fennel"
