@@ -548,6 +548,17 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "cue";
+                formatter = {
+                  command = "cue";
+                  args = [
+                    "fmt"
+                    "-"
+                  ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
