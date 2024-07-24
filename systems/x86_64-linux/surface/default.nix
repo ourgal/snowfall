@@ -9,8 +9,6 @@ let
   user = (config.${namespace}.user).name;
 in
 {
-  imports = [ ./hardware-configuration.nix ];
-
   dot =
     {
       user.host = "surface";
@@ -35,6 +33,7 @@ in
       "bluetooth"
       "common"
       "desktop"
+      "disko"
       "fonts"
       "harmonia"
       "kmonad"
