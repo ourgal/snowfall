@@ -54,6 +54,10 @@
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -107,6 +111,7 @@
       systems.modules.nixos = with inputs; [
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
+        disko.nixosModules.disko
       ];
 
       homes.modules = with inputs; [

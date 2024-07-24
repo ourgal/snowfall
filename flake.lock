@@ -387,6 +387,26 @@
         "type": "github"
       }
     },
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721735625,
+        "narHash": "sha256-4T0FK0b3Q7Dd7oj79M7GhA9+YqKxxGT0iN+h8yqdP7s=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "4698b1ef375e9c904037e0b2049aa73d39ac1b2d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
     "emacs": {
       "inputs": {
         "flake-utils": "flake-utils_6",
@@ -1706,11 +1726,11 @@
     },
     "nixpkgs_10": {
       "locked": {
-        "lastModified": 1720691131,
-        "narHash": "sha256-CWT+KN8aTPyMIx8P303gsVxUnkinIz0a/Cmasz1jyIM=",
+        "lastModified": 1721686456,
+        "narHash": "sha256-nw/BnNzATDPfzpJVTnY8mcSKKsz6BJMEFRkJ332QSN0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a046c1202e11b62cbede5385ba64908feb7bfac4",
+        "rev": "575f3027caa1e291d24f1e9fb0e3a19c2f26d96b",
         "type": "github"
       },
       "original": {
@@ -2132,6 +2152,7 @@
         "catppuccin": "catppuccin",
         "compose2nix": "compose2nix",
         "deploy-rs": "deploy-rs",
+        "disko": "disko",
         "home-manager": "home-manager",
         "homeage": "homeage",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
