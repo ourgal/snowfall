@@ -21,6 +21,7 @@ args.module (
       "c"
       "cookiecutter"
       "cpp"
+      "cue"
       "dart"
       "deno"
       "dhall"
