@@ -41,6 +41,7 @@ args.module (
       "lua"
       "markdown"
       "network"
+      "nickel"
       "nix"
       "nodejs"
       "perl"
