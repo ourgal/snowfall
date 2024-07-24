@@ -30,6 +30,7 @@ args.module (
       "dotnet"
       "editorconfig"
       "fennel"
+      "fsharp"
       "go"
       "haskell"
       "json"
