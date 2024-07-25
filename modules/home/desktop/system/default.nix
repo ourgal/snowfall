@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "blobdrop";
     nixPkgs = [
       "brightnessctl"
       "clash-verge"
