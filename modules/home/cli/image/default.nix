@@ -12,6 +12,7 @@ args.module (
     myPkgs = [
       "autocrop"
       "pik"
+      "rimage"
     ];
   }
 )
