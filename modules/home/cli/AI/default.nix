@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       "aichat"
+      "piper-tts"
       "tgpt"
     ];
   }
