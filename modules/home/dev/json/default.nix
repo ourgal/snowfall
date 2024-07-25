@@ -6,6 +6,8 @@ args.module (
     nixPkgs = [
       "biome"
       "fx"
+      "jid"
+      "jnv"
       "jq"
       "jqp"
       "jsonfmt"
