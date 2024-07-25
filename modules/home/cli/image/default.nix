@@ -9,6 +9,9 @@ args.module (
       "imagemagick"
       "viu"
     ];
-    myPkgs = "autocrop";
+    myPkgs = [
+      "autocrop"
+      "pik"
+    ];
   }
 )
