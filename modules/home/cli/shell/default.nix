@@ -34,8 +34,12 @@ args.module (
       "vtm"
       "wtf"
       "yank"
+      "zf"
     ];
-    myPkgs = "fzfp";
+    myPkgs = [
+      "fzfp"
+      "zfind"
+    ];
     enable = [
       "atuin"
       "carapace"
