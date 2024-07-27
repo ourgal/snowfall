@@ -7,6 +7,7 @@ args.module (
       "cachix"
       "devbox"
       "devenv"
+      "keep-sorted"
       "treefmt2"
       "universal-ctags"
     ];
