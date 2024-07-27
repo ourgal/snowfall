@@ -3,7 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "neovide";
-    enable = "emacs";
+    progs = "emacs";
   }
 )
