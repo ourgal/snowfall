@@ -14,7 +14,7 @@ args.module (
             "scroll-full-overlap" = "0.01";
             "scroll-step" = "100";
 
-            "font" = "inconsolata 15";
+            "font" = "Source Han Sans SC 14";
           }
           // lib.mkIf (config.catppuccin.enable != true) {
             "default-bg" = "#000000"; # 00
