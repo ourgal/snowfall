@@ -4,11 +4,14 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
-      "iosevka"
       "fira-code"
       "font-awesome"
+      "iosevka"
       "joypixels"
       "nerdfonts"
+      "quivira"
+      "source-code-pro"
+      "symbola"
     ];
   }
 )
