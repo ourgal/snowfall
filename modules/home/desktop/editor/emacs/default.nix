@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     progs = "emacs";
+    servs = "emacs";
   }
 )
