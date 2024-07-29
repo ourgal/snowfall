@@ -16,6 +16,7 @@ args.module (
     ];
     nodePkgs = [
       "fixjson"
+      "prettier"
       "vscode-json-languageserver"
     ];
     myPkgs = "vscode-json-language-server";
