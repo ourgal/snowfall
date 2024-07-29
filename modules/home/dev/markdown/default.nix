@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     pyPkgs = "mdformat";
+    nodePkgs = "prettier";
     nixPkgs = [
       "autocorrect"
       "marksman"

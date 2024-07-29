@@ -436,10 +436,10 @@ args.module (
                   "marksman"
                 ];
                 formatter = {
-                  command = "autocorrect";
+                  command = "bash";
                   args = [
-                    "--stdin"
-                    "-"
+                    "-c"
+                    "prettier --parser markdown | autocorrect --stdin"
                   ];
                 };
                 auto-format = true;
