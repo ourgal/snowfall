@@ -142,13 +142,13 @@ args.module (
                     ":sort"
                     "keep_primary_selection"
                   ];
+                  c = "toggle_comments";
                   e = { };
                   s = { };
                   l = { };
                   h = { };
                   w = { };
                 };
-                "C-s" = "select_regex";
                 s = "goto_word";
                 "space" = {
                   l = {
@@ -211,6 +211,8 @@ args.module (
                         "";
                   };
                 };
+                "C-s" = "select_regex";
+                "C-c" = { };
                 "C-a" = [
                   ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
                   "increment"
@@ -265,13 +267,13 @@ args.module (
                     ":sort"
                     "keep_primary_selection"
                   ];
+                  c = "toggle_comments";
                   e = { };
                   s = { };
                   l = { };
                   h = { };
                   w = { };
                 };
-                "C-s" = "select_regex";
                 s = "goto_word";
                 "space" = {
                   l = {
@@ -333,6 +335,8 @@ args.module (
                       else
                         "";
                   };
+                  "C-s" = "select_regex";
+                  "C-c" = { };
                   "C-a" = [
                     ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
                     "increment"
