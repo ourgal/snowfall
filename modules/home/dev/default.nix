@@ -38,6 +38,7 @@ args.module (
       "jsonnet"
       "k8s"
       "latex"
+      "lisp"
       "log"
       "lua"
       "markdown"

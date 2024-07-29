@@ -3,6 +3,9 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "sbcl";
+    nixPkgs = [
+      "parinfer-rust-emacs"
+      "sbcl"
+    ];
   }
 )
