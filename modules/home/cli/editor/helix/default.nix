@@ -507,13 +507,13 @@ args.module (
               }
               {
                 name = "json";
-                language-servers = [
-                  {
-                    name = "vscode-json-language-server";
-                    except-features = [ "format" ];
-                  }
-                  "biome"
-                ];
+                formatter = {
+                  command = "prettier";
+                  args = [
+                    "--parser"
+                    "json"
+                  ];
+                };
                 auto-format = true;
               }
               {
