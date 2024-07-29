@@ -8,6 +8,7 @@ args.module (
         shellInit = # fish
           ''
             fish_add_path ~/.local/bin
+            fish_add_path ~/.config/emacs/bin
           '';
         interactiveShellInit = # fish
           ''
