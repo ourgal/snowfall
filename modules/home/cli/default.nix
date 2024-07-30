@@ -30,6 +30,7 @@ args.module (
       "download"
       "editor"
       "encrypt"
+      "grammar"
       "image"
       "mail"
       "math"
