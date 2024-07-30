@@ -35,6 +35,7 @@ args.module (
       "sbsrf"
       "scream"
       "sxhkd"
+      "xbanish"
     ];
     value = with args; {
       colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
