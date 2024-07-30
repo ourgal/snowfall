@@ -33,7 +33,6 @@ args.module (
       "fennel"
       "fsharp"
       "go"
-      "grammar"
       "haskell"
       "json"
       "jsonnet"
