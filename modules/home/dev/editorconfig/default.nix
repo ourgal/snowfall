@@ -16,6 +16,9 @@ args.module (
             indent_style = "space";
             indent_size = 2;
           };
+          "Makefile" = {
+            indent_style = "tab";
+          };
         };
       };
     };
