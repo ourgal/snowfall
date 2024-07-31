@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      "deploy-rs"
       "nix-du"
       "nix-generate-from-cpan"
       "nix-info"

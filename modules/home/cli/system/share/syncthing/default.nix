@@ -15,7 +15,7 @@ args.module (
         ln = config.lib.file.mkOutOfStoreSymlink;
       in
       {
-        home.files = {
+        home.file = {
           ".vim".source = ln "${sync}/vim";
         };
         xdg = {

@@ -3,7 +3,13 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "openssl";
+    nixPkgs = [
+      "openssl"
+      "sshpass"
+      "sshs"
+      "termscp"
+    ];
+    enable = "ssh-tpm-agent";
     progs = {
       ssh = {
         matchBlocks = {
