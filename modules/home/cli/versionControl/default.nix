@@ -9,6 +9,7 @@ args.module (
       "tokei"
     ];
     enable = [
+      "gh"
       "git"
       "gitui"
       "jujutsu"
