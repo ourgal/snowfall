@@ -24,8 +24,10 @@ args.module (
       "nyancat"
       "pet"
       "pipes"
+      "poop"
       "sad"
       "skate"
+      "skim"
       "sttr"
       "termshot"
       "tmate"
@@ -42,6 +44,7 @@ args.module (
     ];
     enable = [
       "atuin"
+      "broot"
       "carapace"
       "cod"
       "fish"
@@ -52,6 +55,7 @@ args.module (
       "serpl"
       "starship"
       "tealdeer"
+      "tere"
       "tmux"
       "zoxide"
       "zsh"
