@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    servs = "lorri";
     nixPkgs = [
       "nil"
       "nix-init"
