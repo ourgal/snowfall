@@ -21,13 +21,5 @@ args.module (
         };
       }
     ];
-    value = {
-      xdg.dataFile = {
-        "task/hooks/on-modify.timewarrior" = {
-          source = ./on-modify.timewarrior;
-          executable = true;
-        };
-      };
-    };
   }
 )

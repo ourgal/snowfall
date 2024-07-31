@@ -22,6 +22,7 @@ in
       "docker"
       "mdns"
       "nfs"
+      "syncthing"
     ];
     docker =
       let

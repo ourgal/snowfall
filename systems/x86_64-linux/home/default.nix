@@ -25,6 +25,7 @@ in
         "mdns"
         "roc"
         "scream"
+        "syncthing"
         "transmission"
       ];
     }
