@@ -65,7 +65,6 @@ args.module (
             };
           };
         }
-        "gh"
         {
           fish = {
             shellAbbrs = {
