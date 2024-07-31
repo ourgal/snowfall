@@ -15,6 +15,7 @@ args.module (
       "swww"
       "variety"
       "xclip"
+      "xcolor"
     ];
     enable = [
       "barrier"
