@@ -27,7 +27,7 @@ args.module (
           urls-source "freshrss"
           freshrss-url "http://freshrss.zxc.cn/api/greader.php"
           freshrss-login "admin"
-          freshrss-password "lj7lirSJjVYKkp"
+          freshrss-password "${lib.strings.fileContents ./password.key}"
         '';
       };
     };
