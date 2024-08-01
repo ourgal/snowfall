@@ -4,9 +4,10 @@ args.module (
   // {
     path = ./.;
     pyPkgs = [
-      # "ipython"
+      "black"
       "ptpython"
       "websockets"
+      # "ipython"
     ];
     nixPkgs = [
       "rye"
@@ -35,19 +36,21 @@ args.module (
     };
     files = [
       {
-        ".rye/config.toml" = ''
-          [[sources]]
-          name = "default"
-          url = "https://mirrors.aliyun.com/pypi/simple/"
-        '';
+        ".rye/config.toml" = # toml
+          ''
+            [[sources]]
+            name = "default"
+            url = "https://mirrors.aliyun.com/pypi/simple/"
+          '';
       }
       {
-        ".pip/pip.conf" = ''
-          [global]
-          index-url = https://mirrors.aliyun.com/pypi/simple/
-          [install]
-          trusted-host = mirror.aliyun.com
-        '';
+        ".pip/pip.conf" = # toml
+          ''
+            [global]
+            index-url = https://mirrors.aliyun.com/pypi/simple/
+            [install]
+            trusted-host = mirror.aliyun.com
+          '';
       }
     ];
   }
