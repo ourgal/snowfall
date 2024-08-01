@@ -3,9 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
+    progs = with args; {
       emacs = {
         extraPackages = epkgs: [ epkgs.vterm ];
+        package = pkgs.emacs-gtk;
       };
     };
     servs = "emacs";
