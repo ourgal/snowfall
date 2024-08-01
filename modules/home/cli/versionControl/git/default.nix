@@ -14,6 +14,7 @@ args.module (
         "git-extras"
         "gitleaks"
         "mob"
+        "pre-commit"
         "tig"
       ];
       progs = [
