@@ -88,6 +88,11 @@ in
           inherit nfs mount;
           version = "0.8.2";
         };
+        miniflux = enabled // {
+          ports = 5002;
+          inherit nfs;
+          version = "2.1.4";
+        };
       };
   };
 
