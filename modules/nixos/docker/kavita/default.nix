@@ -4,21 +4,36 @@ let
   inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
   cfg = cfgNixos config.${namespace} ./.;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/linuxserver/kavita:${cfg.version}";
-      ports = [ "${toString cfg.port}:5000" ];
-      volumes = [
-        "${cfg.nfs}${cfg.name}_config:/config"
-        "${cfg.mount}books:/books:ro"
-        "${cfg.mount}wenku8:/wenku8:ro"
-      ];
-      extraOptions = [ "--network=proxy" ];
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/linuxserver/kavita:${cfg.version}";
+        ports = [ "${toString cfg.ports}:5000" ];
+        volumes = [
+          "config:/config"
+          "${cfg.mount}/books:/books:ro"
+          "${cfg.mount}/wenku:/wenku:ro"
+        ];
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
+      };
+      networks.proxy.name = "proxy";
+      docker-compose.volumes = {
+        config = {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${cfg.nfs},nfsvers=4";
+            device = ":${cfg.nfsPath}/${cfg.name}_config";
+          };
+        };
+      };
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "kavita";
-    port = mkOpt' (either port (listOf port)) 5000;
+    ports = mkOpt' port 5000;
     nfs = mkOpt' str "";
+    nfsPath = mkOpt' str "/docker";
     mount = mkOpt' str "";
     version = mkOpt' str "latest";
   };

@@ -26,28 +26,28 @@ in
     ];
     docker =
       let
-        nfs = "/net/brix.local/srv/nfs/docker/";
-        mount = "/home/${user}/mnt/nfs/docker/syncthing_sync/";
+        nfs = "brix.local";
+        mount = "/home/${user}/mnt/nfs/docker/syncthing_sync";
       in
       enabled
       // {
         freshrss = enabled // {
-          port = 5000;
+          ports = 5000;
           inherit nfs;
           version = "1.24.1";
         };
         subconverter = enabled // {
-          port = 25500;
+          ports = 25500;
           inherit nfs;
           version = "0.9.0";
         };
         e5 = enabled // {
-          port = 1066;
+          ports = 1066;
           inherit nfs;
           version = "latest";
         };
         soft-serve = enabled // {
-          port = [
+          ports = [
             23232
             23231
             23233
@@ -57,12 +57,12 @@ in
           version = "v0.7.4";
         };
         atuin = enabled // {
-          port = 8888;
+          ports = 8888;
           inherit nfs;
           version = "v18.3.0";
         };
         syncthing = enabled // {
-          port = [
+          ports = [
             8384
             22000
             21027
@@ -71,20 +71,20 @@ in
           version = "version-v1.27.9";
         };
         alist = enabled // {
-          port = 5244;
+          ports = 5244;
           inherit nfs;
           version = "v3.35.0";
         };
         flaresolverr = enabled // {
-          port = 8191;
+          ports = 8191;
           version = "v3.3.21";
         };
         ariang = enabled // {
-          port = 8080;
+          ports = 8080;
           version = "1.3.7";
         };
         kavita = enabled // {
-          port = 5001;
+          ports = 5001;
           inherit nfs mount;
           version = "0.8.2";
         };

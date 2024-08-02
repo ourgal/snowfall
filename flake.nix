@@ -58,6 +58,10 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    arion = {
+      url = "github:hercules-ci/arion";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -112,6 +116,7 @@
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
         disko.nixosModules.disko
+        arion.nixosModules.arion
       ];
 
       homes.modules = with inputs; [

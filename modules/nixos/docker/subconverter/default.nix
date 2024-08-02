@@ -5,24 +5,39 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPots
+    dockerPorts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/tindy2013/subconverter:${cfg.version}";
-      ports = dockerPots cfg.port;
-      volumes = [ "${cfg.nfs}${cfg.name}_config:/base" ];
-      environment = {
-        TZ = "Asia/Shanghai";
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/tindy2013/subconverter:${cfg.version}";
+        ports = dockerPorts cfg.ports;
+        volumes = [ "config:/base" ];
+        environment = {
+          TZ = "Asia/Shanghai";
+        };
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
       };
-      extraOptions = [ "--network=proxy" ];
+      networks.proxy.name = "proxy";
+      docker-compose.volumes = {
+        config = {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${cfg.nfs},nfsvers=4";
+            device = ":${cfg.nfsPath}/${cfg.name}_config";
+          };
+        };
+      };
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "subconverter";
-    port = mkOpt' (either port (listOf port)) 25500;
+    ports = mkOpt' (either port (listOf port)) 25500;
     nfs = mkOpt' str "";
+    nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";
   };
   path = ./.;

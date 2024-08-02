@@ -5,22 +5,27 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPots
+    dockerPorts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/leonismoe/ariang:${cfg.version}";
-      ports = dockerPots cfg.port;
-      environment = {
-        TZ = "Asia/Shanghai";
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/leonismoe/ariang:${cfg.version}";
+        ports = dockerPorts cfg.ports;
+        environment = {
+          TZ = "Asia/Shanghai";
+        };
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
       };
-      extraOptions = [ "--network=proxy" ];
+      networks.proxy.name = "proxy";
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "ariang";
-    port = mkOpt' (either port (listOf port)) 8080;
+    ports = mkOpt' (either port (listOf port)) 8080;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

@@ -5,29 +5,51 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPots
+    dockerPorts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/linuxserver/syncthing:${cfg.version}";
-      ports = dockerPots cfg.port;
-      volumes = [
-        "${cfg.nfs}${cfg.name}_config:/config"
-        "${cfg.nfs}${cfg.name}_sync:/sync"
-      ];
-      hostname = config.dot.user.host;
-      extraOptions = [ "--network=proxy" ];
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/linuxserver/syncthing:${cfg.version}";
+        ports = dockerPorts cfg.ports;
+        volumes = [
+          "config:/config"
+          "sync:/sync"
+        ];
+        hostname = config.dot.user.host;
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
+      };
+      networks.proxy.name = "proxy";
+      docker-compose.volumes = {
+        config = {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${cfg.nfs},nfsvers=4";
+            device = ":${cfg.nfsPath}/${cfg.name}_config";
+          };
+        };
+        sync = {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${cfg.nfs},nfsvers=4";
+            device = ":${cfg.nfsPath}/${cfg.name}_sync";
+          };
+        };
+      };
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "syncthing";
-    port = mkOpt' (either port (listOf port)) [
+    ports = mkOpt' (either port (listOf port)) [
       8384
       22000
       21027
     ];
     nfs = mkOpt' str "";
+    nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";
   };
   path = ./.;
