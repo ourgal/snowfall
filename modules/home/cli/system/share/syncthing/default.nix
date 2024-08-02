@@ -27,6 +27,7 @@ args.module (
           };
           dataFile = {
             task.source = ln "${sync}/task";
+            nap.source = ln "${sync}/nap";
           };
         };
       };
