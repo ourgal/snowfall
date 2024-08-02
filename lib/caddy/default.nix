@@ -5,7 +5,7 @@ with lib;
     domain: container:
     if container.enable then
       ''
-        reverse_proxy http://${domain}:${toString container.port}
+        reverse_proxy http://${domain}:${toString container.ports}
       ''
     else
       "";
@@ -20,15 +20,15 @@ with lib;
       configs = attrsets.foldlAttrs (
         acc: name: value:
         let
-          port =
-            if builtins.isInt value.port then
-              value.port
-            else if builtins.isList value.port then
-              builtins.head value.port
+          ports =
+            if builtins.isInt value.ports then
+              value.ports
+            else if builtins.isList value.ports then
+              builtins.head value.ports
             else
               builtins.throw "not supported port type";
         in
-        acc // { "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString port}"; }
+        acc // { "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString ports}"; }
       ) { } containerEnabled;
     in
     {

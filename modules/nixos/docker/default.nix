@@ -17,6 +17,7 @@ let
     users.users.${user}.extraGroups = [ "docker" ];
 
     virtualisation.oci-containers.backend = "docker";
+    virtualisation.arion.backend = "docker";
     environment.systemPackages = with pkgs; [ docker-compose ];
   };
   path = ./.;

@@ -5,29 +5,45 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPots
+    dockerPorts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   sshKeys = config.${namespace}.user.sshKeys.home;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/charmcli/soft-serve:${cfg.version}";
-      ports = dockerPots cfg.port;
-      environment = {
-        SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/charmcli/soft-serve:${cfg.version}";
+        ports = dockerPorts cfg.ports;
+        environment = {
+          SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
+        };
+        volumes = [ "config:/soft-serve" ];
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
       };
-      volumes = [ "${cfg.nfs}${cfg.name}_config:/soft-serve" ];
+      networks.proxy.name = "proxy";
+      docker-compose.volumes = {
+        config = {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${cfg.nfs},nfsvers=4";
+            device = ":${cfg.nfsPath}/${cfg.name}_config";
+          };
+        };
+      };
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "soft-serve";
-    port = mkOpt' (either port (listOf port)) [
+    ports = mkOpt' (either port (listOf port)) [
       23232
       23231
       23233
       9418
     ];
     nfs = mkOpt' str "";
+    nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";
   };
   path = ./.;

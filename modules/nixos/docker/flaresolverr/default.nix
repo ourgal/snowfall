@@ -5,22 +5,28 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPots
+    dockerPorts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
-    virtualisation.oci-containers.containers.${cfg.name} = {
-      image = "docker.io/flaresolverr/flaresolverr:${cfg.version}";
-      environment = {
-        TZ = "Asia/Shanghai";
-        LOG_LEVEL = "info";
+    virtualisation.arion.projects.${cfg.name}.settings = {
+      services.${cfg.name}.service = {
+        name = cfg.name;
+        image = "docker.io/flaresolverr/flaresolverr:${cfg.version}";
+        environment = {
+          TZ = "Asia/Shanghai";
+          LOG_LEVEL = "info";
+        };
+        ports = dockerPorts cfg.ports;
+        restart = "unless-stopped";
+        networks = [ "proxy" ];
       };
-      ports = dockerPots cfg.port;
+      networks.proxy.name = "proxy";
     };
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "flaresolverr";
-    port = mkOpt' (either port (listOf port)) 8191;
+    ports = mkOpt' (either port (listOf port)) 8191;
     version = mkOpt' str "latest";
   };
   path = ./.;

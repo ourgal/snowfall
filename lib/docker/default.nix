@@ -1,7 +1,7 @@
 { lib, ... }:
 with lib;
 {
-  dockerPots =
+  dockerPorts =
     ports:
     let
       toStr = s: "${toString s}:${toString s}";
@@ -21,10 +21,10 @@ with lib;
         acc: name: value:
         let
           port =
-            if builtins.isInt value.port then
-              [ value.port ]
-            else if builtins.isList value.port && builtins.all builtins.isInt value.port then
-              value.port
+            if builtins.isInt value.ports then
+              [ value.ports ]
+            else if builtins.isList value.ports && builtins.all builtins.isInt value.ports then
+              value.ports
             else
               builtins.throw "not supported port type";
         in
