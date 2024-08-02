@@ -13,6 +13,7 @@ args.module (
         "git-bug"
         "git-extras"
         "gitleaks"
+        "lefthook"
         "mob"
         "pre-commit"
         "tig"
