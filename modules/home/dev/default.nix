@@ -8,6 +8,7 @@ args.module (
       "devbox"
       "devenv"
       "keep-sorted"
+      "nap"
       "treefmt2"
       "universal-ctags"
     ];
