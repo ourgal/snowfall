@@ -176,7 +176,7 @@ We can also link a playerctl function to a button click!
 ```lua
 local playerctl = bling.signal.playerctl.lib()
 button:buttons(gears.table.join(
-	awful.button({}, 1, function() 
+	awful.button({}, 1, function()
 		playerctl:play_pause()
 	end)
 ))
@@ -203,7 +203,7 @@ By default, this module will output signals from the most recently active player
 - `interval`: This option is a number specifying the update interval for fetching the player position. It is 1 by default.
 
 - `debounce_delay`: This option is a number specifying the debounce timer interval. If a new metadata signal gets emitted before debounce_delay has passed, the last signal will be dropped.
-This is to help with some players sending multiple signals. It is `0.35` by default.
+  This is to help with some players sending multiple signals. It is `0.35` by default.
 
 These options can be set through a call to `bling.signal.playerctl.lib/cli()` or these theme variables:
 

@@ -62,4 +62,3 @@ The left area shows the deck layout in action. In this screenshot it is used tog
 ![](https://cdn.discordapp.com/attachments/635625954219261982/877957824225894430/unknown.png)
 
 *screenshot by [JavaCafe01](https://github.com/JavaCafe01)*
-

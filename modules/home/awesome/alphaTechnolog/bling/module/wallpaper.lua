@@ -158,8 +158,8 @@ local simple_index = 0
 function setters.simple(args)
     local wallpapers = prepare_list(args)
     simple_index = (simple_index % #wallpapers) + 1
-    if type(args.screen) == 'table' then
-        for _,v in ipairs(args.screen) do
+    if type(args.screen) == "table" then
+        for _, v in ipairs(args.screen) do
             args.screen = v
             apply(wallpapers[simple_index], args)
             args.screen = nil
@@ -176,8 +176,8 @@ end
 -- @see prepare_list
 function setters.random(args)
     local wallpapers = prepare_list(args)
-    if type(args.screen) == 'table' then
-        for _,v in ipairs(args.screen) do
+    if type(args.screen) == "table" then
+        for _, v in ipairs(args.screen) do
             args.screen = v
             apply(wallpapers[math.random(#wallpapers)], args)
             args.screen = nil
@@ -231,10 +231,8 @@ function setters.simple_schedule(args)
                 end
                 simple_schedule_object.closest_lower_time = k
             end
-            simple_schedule_object.timer.timeout = helpers.time.time_diff(
-                next_time,
-                current_time
-            )
+            simple_schedule_object.timer.timeout =
+                helpers.time.time_diff(next_time, current_time)
             if simple_schedule_object.timer.timeout < 0 then
                 -- the next_time is the day after, so we add 24 hours to the timer
                 simple_schedule_object.timer.timeout = simple_schedule_object.timer.timeout
@@ -330,8 +328,10 @@ function setup(args)
     config.set_function = config.set_function
         or (config.wallpaper and setters.simple or setters.awesome_wallpaper)
     local function set_wallpaper(s)
-        if type(config.screen) ~= 'table' then
-            if config.screen and s and config.screen ~= s then return end
+        if type(config.screen) ~= "table" then
+            if config.screen and s and config.screen ~= s then
+                return
+            end
             config.screen = s or config.screen
         end
         config.set_function(config)

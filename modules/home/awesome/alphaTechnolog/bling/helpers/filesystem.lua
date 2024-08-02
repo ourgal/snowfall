@@ -22,14 +22,14 @@ function _filesystem.list_directory_files(path, exts, recursive)
     end
 
     -- Build a table of files from the path with the required extensions
-    local file_list = Gio.File.new_for_path(path):enumerate_children(
-        "standard::*",
-        0
-    )
+    local file_list =
+        Gio.File.new_for_path(path):enumerate_children("standard::*", 0)
     if file_list then
-        for file in function()
-            return file_list:next_file()
-        end do
+        for file in
+            function()
+                return file_list:next_file()
+            end
+        do
             local file_type = file:get_file_type()
             if file_type == "REGULAR" then
                 local file_name = file:get_display_name()
@@ -53,10 +53,12 @@ function _filesystem.list_directory_files(path, exts, recursive)
 end
 
 function _filesystem.save_image_async_curl(url, filepath, callback)
-    awful.spawn.with_line_callback(string.format("curl -L -s %s -o %s", url, filepath),
-    {
-      exit=callback
-    })
+    awful.spawn.with_line_callback(
+        string.format("curl -L -s %s -o %s", url, filepath),
+        {
+            exit = callback,
+        }
+    )
 end
 
 return _filesystem

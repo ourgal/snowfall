@@ -6,7 +6,7 @@ if [[ $# -lt 2 || $1 == "-h" ]]; then
   exit 0
 fi
 
-if [[ "$1" == "kdeconnect.app" ]]; then
+if [[ $1 == "kdeconnect.app" ]]; then
   WID=$(xdotool search --classname "$1")
 else
   WID=$(xdotool search --onlyvisible --name "$1")

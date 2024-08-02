@@ -51,7 +51,7 @@ function popup_livegrep() {
   # live-grep: interactive search, output is "file:line" pairs
   FILE_PATHS=$(live-grep --exit-on-execution | tr '\n' ' ' | sed 's/ *$//')
 
-  if [[ -n "$FILE_PATHS" ]]; then
+  if [[ -n $FILE_PATHS ]]; then
     tmux send-keys ":o $FILE_PATHS" C-m
   fi
 }

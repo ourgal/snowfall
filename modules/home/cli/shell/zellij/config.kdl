@@ -134,7 +134,7 @@ keybinds clear-defaults=true {
                 move_to_focused_tab true
             };
             SwitchToMode "Normal"
-        }        
+        }
         bind "d" { Detach; }
 
         // bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }

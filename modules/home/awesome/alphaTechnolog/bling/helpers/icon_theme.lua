@@ -8,9 +8,8 @@ local ipairs = ipairs
 
 local icon_theme = { mt = {} }
 
-local name_lookup =
-{
-    ["jetbrains-studio"] = "android-studio"
+local name_lookup = {
+    ["jetbrains-studio"] = "android-studio",
 }
 
 local function get_icon_by_pid_command(self, client, apps)
@@ -71,15 +70,20 @@ end
 function icon_theme:get_client_icon_path(client)
     local apps = Gio.AppInfo.get_all()
 
-    return  get_icon_by_pid_command(self, client, apps) or
-            get_icon_by_icon_name(self, client, apps) or
-            get_icon_by_class(self, client, apps) or
-            client.icon or
-            self:choose_icon({"window", "window-manager", "xfwm4-default", "window_list" })
+    return get_icon_by_pid_command(self, client, apps)
+        or get_icon_by_icon_name(self, client, apps)
+        or get_icon_by_class(self, client, apps)
+        or client.icon
+        or self:choose_icon({
+            "window",
+            "window-manager",
+            "xfwm4-default",
+            "window_list",
+        })
 end
 
 function icon_theme:choose_icon(icons_names)
-    local icon_info = self.gtk_theme:choose_icon(icons_names, self.icon_size, 0);
+    local icon_info = self.gtk_theme:choose_icon(icons_names, self.icon_size, 0)
     if icon_info then
         local icon_path = icon_info:get_filename()
         if icon_path then
@@ -95,7 +99,7 @@ function icon_theme:get_gicon_path(gicon)
         return ""
     end
 
-    local icon_info = self.gtk_theme:lookup_by_gicon(gicon, self.icon_size, 0);
+    local icon_info = self.gtk_theme:lookup_by_gicon(gicon, self.icon_size, 0)
     if icon_info then
         local icon_path = icon_info:get_filename()
         if icon_path then
@@ -119,7 +123,7 @@ function icon_theme:get_icon_path(icon_name)
 end
 
 local function new(theme_name, icon_size)
-    local ret = gobject{}
+    local ret = gobject({})
     gtable.crush(ret, icon_theme, true)
 
     ret.name = theme_name or nil
@@ -127,7 +131,7 @@ local function new(theme_name, icon_size)
 
     if theme_name then
         ret.gtk_theme = Gtk.IconTheme.new()
-        Gtk.IconTheme.set_custom_theme(ret.gtk_theme, theme_name);
+        Gtk.IconTheme.set_custom_theme(ret.gtk_theme, theme_name)
     else
         ret.gtk_theme = Gtk.IconTheme.get_default()
     end

@@ -50,56 +50,61 @@ local function draw_widget(
     end
 
     local widget = wibox.widget({
-        (widget_template or {
-            {
+        (
+            widget_template
+            or {
                 {
                     {
                         {
-                            id = "icon_role",
-                            resize = true,
-                            forced_height = dpi(20),
-                            forced_width = dpi(20),
-                            widget = wibox.widget.imagebox,
-                        },
-                        {
                             {
-                                id = "name_role",
-                                align = "center",
-                                widget = wibox.widget.textbox,
-                            },
-                            left = dpi(4),
-                            right = dpi(4),
-                            widget = wibox.container.margin,
-                        },
-                        layout = wibox.layout.align.horizontal,
-                    },
-                    {
-                        {
-                            {
-                                id = "image_role",
+                                id = "icon_role",
                                 resize = true,
-                                clip_shape = helpers.shape.rrect(screen_radius),
+                                forced_height = dpi(20),
+                                forced_width = dpi(20),
                                 widget = wibox.widget.imagebox,
                             },
-                            valign = "center",
-                            halign = "center",
-                            widget = wibox.container.place,
+                            {
+                                {
+                                    id = "name_role",
+                                    align = "center",
+                                    widget = wibox.widget.textbox,
+                                },
+                                left = dpi(4),
+                                right = dpi(4),
+                                widget = wibox.container.margin,
+                            },
+                            layout = wibox.layout.align.horizontal,
                         },
-                        top = margin * 0.25,
-                        widget = wibox.container.margin,
+                        {
+                            {
+                                {
+                                    id = "image_role",
+                                    resize = true,
+                                    clip_shape = helpers.shape.rrect(
+                                        screen_radius
+                                    ),
+                                    widget = wibox.widget.imagebox,
+                                },
+                                valign = "center",
+                                halign = "center",
+                                widget = wibox.container.place,
+                            },
+                            top = margin * 0.25,
+                            widget = wibox.container.margin,
+                        },
+                        fill_space = true,
+                        layout = wibox.layout.fixed.vertical,
                     },
-                    fill_space = true,
-                    layout = wibox.layout.fixed.vertical,
+                    margins = margin,
+                    widget = wibox.container.margin,
                 },
-                margins = margin,
-                widget = wibox.container.margin,
-            },
-            bg = widget_bg,
-            shape_border_width = widget_border_width,
-            shape_border_color = widget_border_color,
-            shape = helpers.shape.rrect(screen_radius),
-            widget = wibox.container.background,
-        }),
+                bg = widget_bg,
+                shape_border_width = widget_border_width,
+                shape_border_color = widget_border_color,
+                shape = helpers.shape.rrect(screen_radius),
+                widget = wibox.container.background,
+            }
+        ),
         width = widget_width,
         height = widget_height,
         widget = wibox.container.constraint,
@@ -153,20 +158,20 @@ local enable = function(opts)
     tag.connect_signal("property::selected", function(t)
         -- Awesome switches up tags on startup really fast it seems, probably depends on what rules you have set
         -- which can cause the c.content to not show the correct image
-        gears.timer
-        {
+        gears.timer({
             timeout = 0.1,
-            call_now  = false,
+            call_now = false,
             autostart = true,
             single_shot = true,
             callback = function()
                 if t.selected == true then
                     for _, c in ipairs(t:clients()) do
-                        c.prev_content = gears.surface.duplicate_surface(c.content)
+                        c.prev_content =
+                            gears.surface.duplicate_surface(c.content)
                     end
                 end
-            end
-        }
+            end,
+        })
     end)
 
     awesome.connect_signal("bling::task_preview::visibility", function(s, v, c)

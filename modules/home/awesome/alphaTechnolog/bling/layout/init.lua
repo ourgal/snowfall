@@ -6,10 +6,10 @@ local relative_lua_path = tostring(...)
 
 local function get_layout_icon_path(name)
     local relative_icon_path = relative_lua_path
-        :match("^.*bling"):gsub("%.", "/")
-        .. "/icons/layouts/" .. name .. ".png"
+        :match("^.*bling")
+        :gsub("%.", "/") .. "/icons/layouts/" .. name .. ".png"
 
-    for p in package.path:gmatch('([^;]+)') do
+    for p in package.path:gmatch("([^;]+)") do
         p = p:gsub("?.*", "")
         local absolute_icon_path = p .. relative_icon_path
         if gears.filesystem.file_readable(absolute_icon_path) then
@@ -32,12 +32,12 @@ local layouts = {
     "horizontal",
     "centered",
     "equalarea",
-    "deck"
+    "deck",
 }
 
 for _, layout_name in ipairs(layouts) do
     local icon_raw = get_layout_icon_path(layout_name)
-    if beautiful["layout_" .. layout_name] == nil then 
+    if beautiful["layout_" .. layout_name] == nil then
         beautiful["layout_" .. layout_name] = get_icon(icon_raw)
     end
     M[layout_name] = require(... .. "." .. layout_name)

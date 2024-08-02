@@ -58,6 +58,7 @@ bling.module.wallpaper.setup {
     change_timer = 631
 }
 ```
+
 ### Details
 
 The setup function will do 2 things: call the set-function when awesome requests a wallpaper, and manage a timer to call `set_function` periodically.
@@ -68,24 +69,25 @@ The `set_function` is a function called every times a wallpaper is needed.
 
 The module provides some setters:
 
-* `bling.module.wallpaper.setters.awesome_wallpaper`: beautiful.theme_assets.wallpaper with defaults from beautiful.
-* `bling.module.wallpaper.setters.simple`: slideshow from the `wallpaper` argument.
-* `bling.module.wallpaper.setters.random`: same as simple but in a random way.
-* `bling.module.wallpaper.setters.simple_schedule`: takes a table of `["HH:MM:SS"] = wallpaper` arguments, where wallpaper is the `wallpaper` argument used by `schedule_set_function`.
+- `bling.module.wallpaper.setters.awesome_wallpaper`: beautiful.theme_assets.wallpaper with defaults from beautiful.
+- `bling.module.wallpaper.setters.simple`: slideshow from the `wallpaper` argument.
+- `bling.module.wallpaper.setters.random`: same as simple but in a random way.
+- `bling.module.wallpaper.setters.simple_schedule`: takes a table of `["HH:MM:SS"] = wallpaper` arguments, where wallpaper is the `wallpaper` argument used by `schedule_set_function`.
 
 A wallpaper is one of the following elements:
 
-* a color
-* an image
-* a folder containing images
-* a function that sets a wallpaper
-* everything gears.wallpaper functions can manage (cairo surface, cairo pattern string)
-* a list containing any of the elements above
+- a color
+- an image
+- a folder containing images
+- a function that sets a wallpaper
+- everything gears.wallpaper functions can manage (cairo surface, cairo pattern string)
+- a list containing any of the elements above
 
 To set up for multiple screens, two possible methods are:
-* Call the `setup` function for each screen, passing the appropriate configuration and `screen` arg
-* Call the `setup` function once, passing a table of screens as the `screen` arg. This applies the same configuration to all screens in the table
-_Note_: Multiple screen setup only works for the `simple` and `random` setters
+
+- Call the `setup` function for each screen, passing the appropriate configuration and `screen` arg
+- Call the `setup` function once, passing a table of screens as the `screen` arg. This applies the same configuration to all screens in the table
+  _Note_: Multiple screen setup only works for the `simple` and `random` setters
 
 ```lua
 -- This is a valid wallpaper definition
@@ -103,10 +105,11 @@ bling.module.wallpaper.setup {
     change_timer = 10,
 }
 ```
+
 The provided setters `simple` and `random` will use 2 internal functions that you can use to write your own setter:
 
-* `bling.module.wallpaper.prepare_list`: return a list of wallpapers directly usable by `apply` (for now, it just explores folders)
-* `bling.module.wallpaper.apply`: a wrapper for gears.wallpaper functions, using the args table of setup
+- `bling.module.wallpaper.prepare_list`: return a list of wallpapers directly usable by `apply` (for now, it just explores folders)
+- `bling.module.wallpaper.apply`: a wrapper for gears.wallpaper functions, using the args table of setup
 
 Here are the defaults:
 

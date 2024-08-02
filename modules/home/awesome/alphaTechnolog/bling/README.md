@@ -8,23 +8,23 @@ All documentation, instructions, and previews are [here](https://blingcorp.githu
 ## Features
 
 - Layouts
-    - mstab (master-slave tab layout)
-    - centered
-    - vertical
-    - horizontal
-    - equalarea
+  - mstab (master-slave tab layout)
+  - centered
+  - vertical
+  - horizontal
+  - equalarea
 - Modules
-    - Flash Focus
-    - Tabbed container
-    - Tiled Wallpaper
-    - Wallpaper Easy Setup
-    - Window Swallowing
-    - Scratchpad
+  - Flash Focus
+  - Tabbed container
+  - Tiled Wallpaper
+  - Wallpaper Easy Setup
+  - Window Swallowing
+  - Scratchpad
 - Signals
-    - Playerctl
+  - Playerctl
 - Widgets
-    - Tag Preview
-    - Task Preview
+  - Tag Preview
+  - Task Preview
 
 All naming credit goes to [JavaCafe01](https://github.com/JavaCafe01).
 

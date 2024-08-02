@@ -5,7 +5,7 @@ fail() {
 }
 
 fzf=$(command -v fzf 2>/dev/null) || fzf=$(dirname "$0")/fzf
-[[ -x "$fzf" ]] || fail 'fzf executable not found'
+[[ -x $fzf ]] || fail 'fzf executable not found'
 
 if [[ -n $TMUX_POPUP_NESTED_FB ]]; then
   eval "$TMUX_POPUP_NESTED_FB" && exec fzf "$@"

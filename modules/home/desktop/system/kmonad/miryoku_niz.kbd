@@ -1,10 +1,10 @@
 ;; Copyright 2021 Manna Harbour
 ;; github.com/manna-harbour/miryoku
-       
-       
-       
-       
-       
+
+
+
+
+
 (defcfg
   input (device-file "/dev/input/by-id/usb-CATEX_TECH._75EC-XRGB_CA2015010002-event-kbd")
   output (uinput-sink "Miryoku KMonad output")

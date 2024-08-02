@@ -25,6 +25,6 @@ stdenv.mkDerivation {
     cp dmenu_path $out/bin
     cp dmenu_run $out/bin
     cp stest $out/bin
-    runHook postInstall  
+    runHook postInstall
   '';
 }

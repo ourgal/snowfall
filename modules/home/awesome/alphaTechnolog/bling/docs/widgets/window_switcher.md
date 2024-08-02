@@ -37,6 +37,7 @@ awesome.emit_signal("bling::window_switcher::turn_on")
 ```
 
 For example:
+
 ```lua
  awful.key({Mod1}, "Tab", function()
      awesome.emit_signal("bling::window_switcher::turn_on")
@@ -44,6 +45,7 @@ For example:
 ```
 
 ### Theme Variables
+
 ```lua
 theme.window_switcher_widget_bg = "#000000"              -- The bg color of the widget
 theme.window_switcher_widget_border_width = 3            -- The border width of the widget

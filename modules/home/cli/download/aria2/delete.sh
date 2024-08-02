@@ -28,7 +28,7 @@
 
 CHECK_CORE_FILE() {
   CORE_FILE="$(dirname $0)/core"
-  if [[ -f "${CORE_FILE}" ]]; then
+  if [[ -f ${CORE_FILE} ]]; then
     . "${CORE_FILE}"
   else
     echo "!!! core file does not exist !!!"
@@ -47,12 +47,12 @@ CHECK_RPC_CONECTION() {
 }
 
 DELETE_ON_STOP() {
-  if [[ "${TASK_STATUS}" = "error" && "${DELETE_ON_ERROR}" = "true" ]] || [[ "${TASK_STATUS}" = "removed" && "${DELETE_ON_REMOVED}" = "true" ]]; then
+  if [[ ${TASK_STATUS} == "error" && ${DELETE_ON_ERROR} == "true" ]] || [[ ${TASK_STATUS} == "removed" && ${DELETE_ON_REMOVED} == "true" ]]; then
     if [[ -f "${TASK_PATH}.aria2" ]]; then
       echo -e "$(DATE_TIME) ${INFO} Download task ${TASK_STATUS}, deleting files..."
       rm -vrf "${TASK_PATH}.aria2" "${TASK_PATH}"
     else
-      [[ -e "${TASK_PATH}" ]] &&
+      [[ -e ${TASK_PATH} ]] &&
         echo -e "$(DATE_TIME) ${WARRING} Skip delete. Download completed files: ${TASK_PATH}" ||
         echo -e "$(DATE_TIME) ${WARRING} Skip delete. File does not exist: ${TASK_PATH}"
     fi
@@ -66,7 +66,7 @@ DELETE_ON_UNKNOWN() {
     echo -e "$(DATE_TIME) ${INFO} Download task force removed, deleting files..."
     rm -vrf "${FILE_PATH}.aria2" "${FILE_PATH}"
   else
-    [[ -e "${FILE_PATH}" ]] &&
+    [[ -e ${FILE_PATH} ]] &&
       echo -e "$(DATE_TIME) ${WARRING} Skip delete. Download completed files: ${FILE_PATH}" ||
       echo -e "$(DATE_TIME) ${WARRING} Skip delete. File does not exist: ${FILE_PATH}"
   fi
@@ -80,7 +80,7 @@ DELETE_FILE() {
     DELETE_ON_STOP
     DELETE_DOT_TORRENT
     DELETE_EMPTY_DIR
-  elif CHECK_RPC_CONECTION && [[ "${DELETE_ON_UNKNOWN}" = "true" && ${FILE_NUM} -eq 1 ]]; then
+  elif CHECK_RPC_CONECTION && [[ ${DELETE_ON_UNKNOWN} == "true" && ${FILE_NUM} -eq 1 ]]; then
     DELETE_ON_UNKNOWN
   else
     echo -e "$(DATE_TIME) ${ERROR} Aria2 RPC interface error!"

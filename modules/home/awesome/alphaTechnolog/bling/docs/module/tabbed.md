@@ -5,6 +5,7 @@ Tabbed implements a tab container. There are also different themes for the tabs.
 ### Usage
 
 You should bind these functions to keys in order to use the tabbed module effectively:
+
 ```lua
 bling.module.tabbed.pick()                 -- picks a client with your cursor to add to the tabbing group
 bling.module.tabbed.pop()                  -- removes the focused client from the tabbing group
@@ -51,7 +52,9 @@ Modern theme:
 *screenshot by [JavaCafe01](https://github.com/JavaCafe01)*
 
 ### Signals
+
 The tabbed module emits a few signals for the purpose of integration,
+
 ```lua
 -- bling::tabbed::update -- triggered whenever a tabbed object is updated
 --             tabobj -- the object that caused the update

@@ -1,4 +1,4 @@
---      _    _ _     _             _ 
+--      _    _ _     _             _
 --     / \  | | |   | | __ ___   _(_)
 --    / _ \ | | |_  | |/ _` \ \ / / |
 --   / ___ \| | | |_| | (_| |\ V /| |
@@ -7,5 +7,5 @@
 --  github: @AllJavi
 --
 
-require('configuration.client.rules')
-require('configuration.client.signals')
+require("configuration.client.rules")
+require("configuration.client.signals")

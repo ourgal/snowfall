@@ -183,7 +183,15 @@ function playerctl:get_player_of_name(name)
     return nil
 end
 
-local function emit_metadata_signal(self, title, artist, artUrl, album, new, player_name)
+local function emit_metadata_signal(
+    self,
+    title,
+    artist,
+    artUrl,
+    album,
+    new,
+    player_name
+)
     title = gstring.xml_escape(title)
     artist = gstring.xml_escape(artist)
     album = gstring.xml_escape(album)
@@ -196,11 +204,31 @@ local function emit_metadata_signal(self, title, artist, artUrl, album, new, pla
     if artUrl ~= "" then
         local art_path = os.tmpname()
         helpers.filesystem.save_image_async_curl(artUrl, art_path, function()
-            self:emit_signal("metadata", title, artist, art_path, album, new, player_name)
-            capi.awesome.emit_signal("bling::playerctl::title_artist_album", title, artist, art_path, player_name)
+            self:emit_signal(
+                "metadata",
+                title,
+                artist,
+                art_path,
+                album,
+                new,
+                player_name
+            )
+            capi.awesome.emit_signal(
+                "bling::playerctl::title_artist_album",
+                title,
+                artist,
+                art_path,
+                player_name
+            )
         end)
     else
-        capi.awesome.emit_signal("bling::playerctl::title_artist_album", title, artist, "", player_name)
+        capi.awesome.emit_signal(
+            "bling::playerctl::title_artist_album",
+            title,
+            artist,
+            "",
+            player_name
+        )
         self:emit_signal("metadata", title, artist, "", album, new, player_name)
     end
 end
@@ -231,20 +259,33 @@ local function metadata_cb(self, player, metadata)
             or artist ~= self._private.last_artist
             or artUrl ~= self._private.last_artUrl
         then
-            if (title == "" and artist == "" and artUrl == "") then return end
+            if title == "" and artist == "" and artUrl == "" then
+                return
+            end
 
-            if self._private.metadata_timer ~= nil and self._private.metadata_timer.started then
+            if
+                self._private.metadata_timer ~= nil
+                and self._private.metadata_timer.started
+            then
                 self._private.metadata_timer:stop()
             end
 
-            self._private.metadata_timer = gtimer {
+            self._private.metadata_timer = gtimer({
                 timeout = self.debounce_delay,
                 autostart = true,
                 single_shot = true,
                 callback = function()
-                    emit_metadata_signal(self, title, artist, artUrl, album, true, player.player_name)
-                end
-            }
+                    emit_metadata_signal(
+                        self,
+                        title,
+                        artist,
+                        artUrl,
+                        album,
+                        true,
+                        player.player_name
+                    )
+                end,
+            })
 
             -- Re-sync with position timer when track changes
             self._private.position_timer:again()
@@ -259,11 +300,18 @@ end
 local function position_cb(self)
     local player = self._private.manager.players[1]
     if player then
-
         local position = player:get_position() / 1000000
         local length = (player.metadata.value["mpris:length"] or 0) / 1000000
-        if position ~= self._private.last_position or length ~= self._private.last_length then
-            capi.awesome.emit_signal("bling::playerctl::position", position, length, player.player_name)
+        if
+            position ~= self._private.last_position
+            or length ~= self._private.last_length
+        then
+            capi.awesome.emit_signal(
+                "bling::playerctl::position",
+                position,
+                length,
+                player.player_name
+            )
             self:emit_signal("position", position, length, player.player_name)
             self._private.last_position = position
             self._private.last_length = length
@@ -282,10 +330,18 @@ local function playback_status_cb(self, player, status)
         -- Reported as PLAYING, PAUSED, or STOPPED
         if status == "PLAYING" then
             self:emit_signal("playback_status", true, player.player_name)
-            capi.awesome.emit_signal("bling::playerctl::status", true, player.player_name)
+            capi.awesome.emit_signal(
+                "bling::playerctl::status",
+                true,
+                player.player_name
+            )
         else
             self:emit_signal("playback_status", false, player.player_name)
-            capi.awesome.emit_signal("bling::playerctl::status", false, player.player_name)
+            capi.awesome.emit_signal(
+                "bling::playerctl::status",
+                false,
+                player.player_name
+            )
         end
     end
 end
@@ -439,7 +495,15 @@ local function get_current_player_info(self, player)
     local artUrl = player:print_metadata_prop("mpris:artUrl") or ""
     local album = player:get_album() or ""
 
-    emit_metadata_signal(self, title, artist, artUrl, album, false, player.player_name)
+    emit_metadata_signal(
+        self,
+        title,
+        artist,
+        artUrl,
+        album,
+        false,
+        player.player_name
+    )
     playback_status_cb(self, player, player.playback_status)
     volume_cb(self, player, player.volume)
     loop_status_cb(self, player, player.loop_status)
@@ -456,12 +520,12 @@ local function start_manager(self)
     end
 
     -- Timer to update track position at specified interval
-    self._private.position_timer = gtimer {
+    self._private.position_timer = gtimer({
         timeout = self.interval,
         callback = function()
             position_cb(self)
         end,
-    }
+    })
 
     -- Manage existing players on startup
     for _, name in ipairs(self._private.manager.player_names) do
@@ -519,16 +583,21 @@ end
 local function new(args)
     args = args or {}
 
-    local ret = gobject{}
+    local ret = gobject({})
     gtable.crush(ret, playerctl, true)
 
     -- Grab settings from beautiful variables if not set explicitly
     args.ignore = args.ignore or beautiful.playerctl_ignore
     args.player = args.player or beautiful.playerctl_player
-    ret.update_on_activity = args.update_on_activity or
-                              beautiful.playerctl_update_on_activity or true
-    ret.interval = args.interval or beautiful.playerctl_position_update_interval or 1
-    ret.debounce_delay = args.debounce_delay or beautiful.playerctl_debounce_delay or 0.35
+    ret.update_on_activity = args.update_on_activity
+        or beautiful.playerctl_update_on_activity
+        or true
+    ret.interval = args.interval
+        or beautiful.playerctl_position_update_interval
+        or 1
+    ret.debounce_delay = args.debounce_delay
+        or beautiful.playerctl_debounce_delay
+        or 0.35
     parse_args(ret, args)
 
     ret._private = {}

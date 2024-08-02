@@ -1,4 +1,4 @@
---      _    _ _     _             _ 
+--      _    _ _     _             _
 --     / \  | | |   | | __ ___   _(_)
 --    / _ \ | | |_  | |/ _` \ \ / / |
 --   / ___ \| | | |_| | (_| |\ V /| |
@@ -7,10 +7,10 @@
 --  github: @AllJavi
 --
 
-local gtable = require('gears.table')
-local default_theme = require('theme.default-theme')
+local gtable = require("gears.table")
+local default_theme = require("theme.default-theme")
 -- PICK THEME HERE
-local theme = require('theme.gruvbox-theme')
+local theme = require("theme.gruvbox-theme")
 
 local final_theme = {}
 gtable.crush(final_theme, default_theme.theme)

@@ -12,10 +12,11 @@ function mylayout.arrange(p)
     local nslaves = #p.clients - nmaster
 
     local master_area_width = area.width * t.master_width_factor
-    if t.master_count == 0 then master_area_width = 0 end
+    if t.master_count == 0 then
+        master_area_width = 0
+    end
     local slave_width = 0.5 * (area.width - master_area_width)
     local master_area_x = area.x + slave_width
-
 
     -- Special case: few slaves -> make masters take more space - unless requested otherwise!
     if nslaves < 2 and t.master_fill_policy ~= "master_width_factor" then
@@ -27,7 +28,6 @@ function mylayout.arrange(p)
             master_area_width = area.width
         end
     end
-
 
     -- iterate through masters
     for idx = 1, nmaster do
@@ -41,7 +41,6 @@ function mylayout.arrange(p)
         }
         p.geometries[c] = g
     end
-
 
     -- iterate through slaves
     local number_of_left_sided_slaves = math.floor(nslaves / 2)

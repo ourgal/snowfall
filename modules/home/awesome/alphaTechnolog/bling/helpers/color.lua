@@ -74,23 +74,22 @@ end
 -- Converts the given hex color to rgba
 function _color.hex_to_rgba(color)
     color = color:gsub("#", "")
-    return { r = tonumber("0x" .. color:sub(1, 2)),
-             g = tonumber("0x" .. color:sub(3, 4)),
-             b = tonumber("0x" .. color:sub(5, 6)),
-             a = #color == 8 and tonumber("0x" .. color:sub(7, 8)) or 255 }
+    return {
+        r = tonumber("0x" .. color:sub(1, 2)),
+        g = tonumber("0x" .. color:sub(3, 4)),
+        b = tonumber("0x" .. color:sub(5, 6)),
+        a = #color == 8 and tonumber("0x" .. color:sub(7, 8)) or 255,
+    }
 end
 
 -- Converts the given rgba color to hex
 function _color.rgba_to_hex(color)
-	local r = _color.clip(color.r or color[1], 0, 255)
-	local g = _color.clip(color.g or color[2], 0, 255)
-	local b = _color.clip(color.b or color[3], 0, 255)
-	local a = _color.clip(color.a or color[4] or 255, 0, 255)
-	return "#" .. format("%02x%02x%02x%02x",
-			floor(r),
-			floor(g),
-			floor(b),
-            floor(a))
+    local r = _color.clip(color.r or color[1], 0, 255)
+    local g = _color.clip(color.g or color[2], 0, 255)
+    local b = _color.clip(color.b or color[3], 0, 255)
+    local a = _color.clip(color.a or color[4] or 255, 0, 255)
+    return "#"
+        .. format("%02x%02x%02x%02x", floor(r), floor(g), floor(b), floor(a))
 end
 
 -- Converts the given hex color to hsv
@@ -116,17 +115,19 @@ function _color.hex_to_hsv(color)
     end
     V = C_max
 
-    return { h = H,
-             s = S * 100,
-             v = V * 100 }
+    return { h = H, s = S * 100, v = V * 100 }
 end
 
 -- Converts the given hsv color to hex
 function _color.hsv_to_hex(H, S, V)
     S = S / 100
     V = V / 100
-    if H > 360 then H = 360 end
-    if H < 0 then H = 0 end
+    if H > 360 then
+        H = 360
+    end
+    if H < 0 then
+        H = 0
+    end
     local C = V * S
     local X = C * (1 - abs(((H / 60) % 2) - 1))
     local m = V - C
@@ -149,10 +150,12 @@ function _color.hsv_to_hex(H, S, V)
 end
 
 function _color.multiply(color, amount)
-    return { _color.clip(color.r * amount, 0, 255),
-             _color.clip(color.g * amount, 0, 255),
-             _color.clip(color.b * amount, 0, 255),
-             255 }
+    return {
+        _color.clip(color.r * amount, 0, 255),
+        _color.clip(color.g * amount, 0, 255),
+        _color.clip(color.b * amount, 0, 255),
+        255,
+    }
 end
 
 return _color

@@ -1,4 +1,4 @@
---      _    _ _     _             _ 
+--      _    _ _     _             _
 --     / \  | | |   | | __ ___   _(_)
 --    / _ \ | | |_  | |/ _` \ \ / / |
 --   / ___ \| | | |_| | (_| |\ V /| |
@@ -9,6 +9,6 @@
 --  Mod Keys definition
 
 return {
-    mod_key = 'Mod4',
-    alt_key = 'Mod1'
+  mod_key = "Mod4",
+  alt_key = "Mod1",
 }

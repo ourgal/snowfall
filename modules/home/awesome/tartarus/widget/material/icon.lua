@@ -1,14 +1,14 @@
 -- Default widget requirements
-local base = require('wibox.widget.base')
-local gtable = require('gears.table')
+local base = require("wibox.widget.base")
+local gtable = require("gears.table")
 local setmetatable = setmetatable
 
 -- Commons requirements
-local wibox = require('wibox')
+local wibox = require("wibox")
 
 -- Local declarations
 
-local mat_list_item = {mt = {}}
+local mat_list_item = { mt = {} }
 
 function mat_list_item:layout(_, width, height)
   local layout = {}
@@ -45,7 +45,7 @@ end
 
 function mat_list_item:set_size(size)
   self._private.size = size
-  self:emit_signal('widget::layout_changed')
+  self:emit_signal("widget::layout_changed")
 end
 
 function mat_list_item:get_size()
@@ -53,14 +53,9 @@ function mat_list_item:get_size()
 end
 
 local function new(icon, size)
-  local ret =
-    base.make_widget(
-    nil,
-    nil,
-    {
-      enable_properties = true
-    }
-  )
+  local ret = base.make_widget(nil, nil, {
+    enable_properties = true,
+  })
 
   gtable.crush(ret, mat_list_item, true)
   ret._private.icon = icon

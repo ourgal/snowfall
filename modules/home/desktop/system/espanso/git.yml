@@ -40,12 +40,12 @@ matches:
   # Git Config User Local
   - trigger: "gituserl."
     replace: 'git config --local user.name "$|$"'
-  ### -------------
-  ### Push | Pull | Commits
-  ### -------------
-
   # Git Status
   - trigger: "gits."
+    ### -------------
+    ### Push | Pull | Commits
+    ### -------------
+
     replace: "git status"
   # Git Add
   - trigger: "gita."
@@ -116,10 +116,10 @@ matches:
     replace: "git pull origin homolog"
   - trigger: "gituh3."
     replace: "git pull origin homologation"
-  ### Stash
-
   # Stash
   - trigger: "gitst."
+    ### Stash
+
     replace: "git stash"
   - trigger: "gitstl."
     replace: "git stash list"
@@ -131,10 +131,10 @@ matches:
     replace: "git stash drop"
   - trigger: "gitstiu."
     replace: "git stash --include-untracked"
-  ### Branch
-
   # Git Merge
   - trigger: "gitm."
+    ### Branch
+
     replace: "git merge "
   # Git Branch Main
   - trigger: "gitbm."
@@ -197,12 +197,12 @@ matches:
   # Delete Remote Branch
   - trigger: "gitbdr."
     replace: "git push origin --delete "
-  ###-------
-  ### Log
-  ###-------
-
   # Log
   - trigger: "gitl."
+    ###-------
+    ### Log
+    ###-------
+
     replace: "git log"
   # Log Pretty
   - trigger: "gitlp."
@@ -216,12 +216,12 @@ matches:
   # Log Log Pretty Formated
   - trigger: "gitlpf."
     replace: 'git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
-  ###--------------------------
-  ### Revert | Rebase | Reset
-  ###--------------------------
-
   # Git Rebase
   - trigger: "gitrb."
+    ###--------------------------
+    ### Revert | Rebase | Reset
+    ###--------------------------
+
     replace: "git rebase master"
   # Git Reset
   - trigger: "gitrs."
@@ -260,12 +260,12 @@ matches:
   # Git Cherry Pick
   - trigger: "gitcyp."
     replace: "git cherry-pick "
-  ###---------------------------------------------
-  ### Discarding All Local Changes / Restore
-  ###---------------------------------------------
-
   # Git Restore
   - trigger: "gitrt."
+    ###---------------------------------------------
+    ### Discarding All Local Changes / Restore
+    ###---------------------------------------------
+
     replace: "git restore ."
   # Git Clean
   - trigger: "gitcln."

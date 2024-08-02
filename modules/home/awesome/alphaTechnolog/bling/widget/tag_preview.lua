@@ -37,19 +37,25 @@ local function draw_widget(
     local tag_screen = t.screen
     for i, c in ipairs(t:clients()) do
         if not c.hidden and not c.minimized then
-
-
-            local img_box = wibox.widget ({
+            local img_box = wibox.widget({
                 resize = true,
                 forced_height = 100 * scale,
                 forced_width = 100 * scale,
                 widget = wibox.widget.imagebox,
             })
 
-			-- If fails to set image, fallback to a awesome icon
-			if not pcall(function() img_box.image = gears.surface.load(c.icon) end) then
-				img_box.image = beautiful.theme_assets.awesome_icon (24, "#222222", "#fafafa")
-			end
+            -- If fails to set image, fallback to a awesome icon
+            if
+                not pcall(function()
+                    img_box.image = gears.surface.load(c.icon)
+                end)
+            then
+                img_box.image = beautiful.theme_assets.awesome_icon(
+                    24,
+                    "#222222",
+                    "#fafafa"
+                )
+            end
 
             if tag_preview_image then
                 if c.prev_content or t.selected then
@@ -114,7 +120,7 @@ local function draw_widget(
         end
     end
 
-    return wibox.widget {
+    return wibox.widget({
         {
             background_image,
             {
@@ -133,14 +139,14 @@ local function draw_widget(
                 margins = margin,
                 widget = wibox.container.margin,
             },
-            layout = wibox.layout.stack
+            layout = wibox.layout.stack,
         },
         bg = widget_bg,
         shape_border_width = widget_border_width,
         shape_border_color = widget_border_color,
         shape = helpers.shape.rrect(screen_radius),
         widget = wibox.container.background,
-    }
+    })
 end
 
 local enable = function(opts)
@@ -184,20 +190,20 @@ local enable = function(opts)
     tag.connect_signal("property::selected", function(t)
         -- Awesome switches up tags on startup really fast it seems, probably depends on what rules you have set
         -- which can cause the c.content to not show the correct image
-        gears.timer
-        {
+        gears.timer({
             timeout = 0.1,
-            call_now  = false,
+            call_now = false,
             autostart = true,
             single_shot = true,
             callback = function()
                 if t.selected == true then
                     for _, c in ipairs(t:clients()) do
-                        c.prev_content = gears.surface.duplicate_surface(c.content)
+                        c.prev_content =
+                            gears.surface.duplicate_surface(c.content)
                     end
                 end
-            end
-        }
+            end,
+        })
     end)
 
     awesome.connect_signal("bling::tag_preview::update", function(t)
@@ -245,4 +251,4 @@ local enable = function(opts)
     end)
 end
 
-return {enable = enable, draw_widget = draw_widget}
+return { enable = enable, draw_widget = draw_widget }

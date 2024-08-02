@@ -51,7 +51,7 @@ set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 set send_charset = "utf-8:iso-8859-1:us-ascii"
 set charset = "utf-8"
-set arrow_cursor = "no" # Change `color indicator` depending 
+set arrow_cursor = "no" # Change `color indicator` depending
 
 # Pager View Options
 set pager_index_lines = 10  # Shows 10 lines of index when pager is active

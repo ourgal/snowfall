@@ -1,7 +1,7 @@
-local awful = require 'awful'
+local awful = require("awful")
 
-awful.screen.connect_for_each_screen(function (s)
-    s:connect_signal('property::geometry', function ()
-        awesome.restart()
-    end)
+awful.screen.connect_for_each_screen(function(s)
+  s:connect_signal("property::geometry", function()
+    awesome.restart()
+  end)
 end)
