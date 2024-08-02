@@ -10,6 +10,7 @@ args.module (
       path = ./.;
       nixPkgs = [
         "bit"
+        "commitizen"
         "git-bug"
         "git-extras"
         "gitleaks"
