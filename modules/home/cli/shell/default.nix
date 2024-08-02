@@ -18,7 +18,6 @@ args.module (
       "hyperfine"
       "lolcat"
       "mprocs"
-      "nap"
       "neo"
       "nerdfix"
       "nyancat"
