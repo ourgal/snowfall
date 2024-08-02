@@ -4,6 +4,5 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "gg";
-    myPkgs = "clashctl";
   }
 )
