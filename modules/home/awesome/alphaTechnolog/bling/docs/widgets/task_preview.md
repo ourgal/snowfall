@@ -27,6 +27,7 @@ bling.widget.task_preview.enable {
 ```
 
 To allow for more customization, there is also a `widget_structure` property (as seen in some default awesome widgets) which is optional. An example is as follows -
+
 ```lua
 bling.widget.task_preview.enable {
     x = 20,                    -- The x-coord of the popup
@@ -83,6 +84,7 @@ By default, the widget is not visible. You must implement when it will update an
 ### Example Implementation
 
 We can trigger the widget to show the specific client when hovering over it in the tasklist. The code shown below is the example icon only tasklist from the [AwesomeWM docs](https://awesomewm.org/doc/api/classes/awful.widget.tasklist.html). Basically, we are going to toggle the widget through the tasklist's `create_callback`. (The bling addons are commented)
+
 ```lua
 s.mytasklist = awful.widget.tasklist {
     screen   = s,
@@ -141,6 +143,7 @@ s.mytasklist = awful.widget.tasklist {
 ```
 
 ### Theme Variables
+
 ```lua
 theme.task_preview_widget_border_radius = 0        -- Border radius of the widget (With AA)
 theme.task_preview_widget_bg = "#000000"           -- The bg color of the widget

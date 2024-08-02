@@ -32,32 +32,44 @@ end
 local function _7_(t)
   return awful.tag.viewprev(t.screen)
 end
-taglist_buttons = gears.table.join(awful.button({}, 1, _1_), awful.button({modkey}, 1, _2_), awful.button({}, 3, awful.tag.viewtoggle), awful.button({modkey}, 3, _4_), awful.button({}, 4, _6_), awful.button({}, 5, _7_))
+taglist_buttons = gears.table.join(
+  awful.button({}, 1, _1_),
+  awful.button({ modkey }, 1, _2_),
+  awful.button({}, 3, awful.tag.viewtoggle),
+  awful.button({ modkey }, 3, _4_),
+  awful.button({}, 4, _6_),
+  awful.button({}, 5, _7_)
+)
 local tasklist_buttons
 local function _8_(c)
-  if (c == _G.client.focus) then
+  if c == _G.client.focus then
     c.minimized = true
     return nil
   else
-    return c:emit_signal("request::activate", "tasklist", {raise = true})
+    return c:emit_signal("request::activate", "tasklist", { raise = true })
   end
 end
 local function _10_()
-  return awful.menu.client_list({theme = {width = 250}})
+  return awful.menu.client_list({ theme = { width = 250 } })
 end
 local function _11_()
   return awful.client.focus.byidx(1)
 end
 local function _12_()
-  return awful.client.focus.byidx(( - 1))
+  return awful.client.focus.byidx(-1)
 end
-tasklist_buttons = gears.table.join(awful.button({}, 1, _8_), awful.button({}, 3, _10_), awful.button({}, 4, _11_), awful.button({}, 5, _12_))
+tasklist_buttons = gears.table.join(
+  awful.button({}, 1, _8_),
+  awful.button({}, 3, _10_),
+  awful.button({}, 4, _11_),
+  awful.button({}, 5, _12_)
+)
 local function set_wallpaper(s)
   local wallpaper
   local function _13_()
     local w = beautiful.wallpaper
     if w then
-      if (type(w) == "function") then
+      if type(w) == "function" then
         return w(s)
       else
         return w
@@ -74,6 +86,6 @@ local function set_wallpaper(s)
   end
 end
 local function _17_(s)
-  return awful.tag({"1", "2", "3", "4", "5", "6", "7", "8", "9"}, s, awful.layout.layouts[1])
+  return awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 end
 return awful.screen.connect_for_each_screen(_17_)

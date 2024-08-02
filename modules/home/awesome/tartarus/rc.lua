@@ -1,4 +1,4 @@
---      _    _ _     _             _ 
+--      _    _ _     _             _
 --     / \  | | |   | | __ ___   _(_)
 --    / _ \ | | |_  | |/ _` \ \ / / |
 --   / ___ \| | | |_| | (_| |\ V /| |
@@ -8,7 +8,7 @@
 --
 
 local gears = require("gears")
-local beautiful = require('beautiful')
+local beautiful = require("beautiful")
 local awful = require("awful")
 require("awful.autofocus")
 
@@ -42,17 +42,17 @@ end
 -- }}}
 --]]
 
-awful.util.shell = 'sh'
+awful.util.shell = "sh"
 
 beautiful.init(require("theme"))
 
 require("layout")
 
-require('configuration.client')
-require('configuration.tags')
-root.keys(require('configuration.keys.global'))
+require("configuration.client")
+require("configuration.tags")
+root.keys(require("configuration.keys.global"))
 
-require('module.notifications')
-require('module.auto-start')
+require("module.notifications")
+require("module.auto-start")
 require("module.titlebar")
-require('module.volume-osd')
+require("module.volume-osd")

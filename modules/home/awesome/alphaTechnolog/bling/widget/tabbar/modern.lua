@@ -137,7 +137,12 @@ local function create(c, focused_bool, buttons, inactive_bool)
             },
             text_temp,
             {
-                { min, floating, close, layout = wibox.layout.fixed.horizontal },
+                {
+                    min,
+                    floating,
+                    close,
+                    layout = wibox.layout.fixed.horizontal,
+                },
                 top = dpi(10),
                 right = dpi(10),
                 bottom = dpi(10),
@@ -170,20 +175,10 @@ local function create(c, focused_bool, buttons, inactive_bool)
             widget = wibox.container.margin,
         })
 
-        left_shape = helpers.shape.prrect(
-            border_radius,
-            false,
-            false,
-            true,
-            false
-        )
-        right_shape = helpers.shape.prrect(
-            border_radius,
-            false,
-            false,
-            false,
-            true
-        )
+        left_shape =
+            helpers.shape.prrect(border_radius, false, false, true, false)
+        right_shape =
+            helpers.shape.prrect(border_radius, false, false, false, true)
     else
         main_content = wibox.widget({
             {
@@ -202,20 +197,10 @@ local function create(c, focused_bool, buttons, inactive_bool)
             widget = wibox.container.margin,
         })
 
-        left_shape = helpers.shape.prrect(
-            border_radius,
-            false,
-            true,
-            false,
-            false
-        )
-        right_shape = helpers.shape.prrect(
-            border_radius,
-            true,
-            false,
-            false,
-            false
-        )
+        left_shape =
+            helpers.shape.prrect(border_radius, false, true, false, false)
+        right_shape =
+            helpers.shape.prrect(border_radius, true, false, false, false)
     end
 
     local wid_temp = wibox.widget({

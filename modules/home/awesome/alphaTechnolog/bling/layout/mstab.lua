@@ -20,9 +20,8 @@ local tabbar_position = beautiful.mstab_tabbar_position
 local bar_style = beautiful.mstab_tabbar_style
     or beautiful.tabbar_style
     or "default"
-local bar = require(
-    tostring(...):match(".*bling") .. ".widget.tabbar." .. bar_style
-)
+local bar =
+    require(tostring(...):match(".*bling") .. ".widget.tabbar." .. bar_style)
 local tabbar_size = bar.size
     or beautiful.mstab_bar_height
     or beautiful.tabbar_size
@@ -89,7 +88,7 @@ function update_tabbar(
 
         -- Change visibility of the tab bar when layout, selected tag or number of clients (visible, master, slave) changes
         local function adjust_visibility()
-            local name = awful.layout.getname( awful.layout.get( s ) )
+            local name = awful.layout.getname(awful.layout.get(s))
             s.tabbar.visible = (name == mylayout.name)
         end
 

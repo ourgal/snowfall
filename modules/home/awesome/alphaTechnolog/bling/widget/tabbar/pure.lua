@@ -41,24 +41,36 @@ local function create(c, focused_bool, buttons, inactive_bool)
                 widget = wibox.container.place,
             },
             { -- Right
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.floatingbutton(c)
-                ) or nil,
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.stickybutton(c)
-                ) or nil,
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.ontopbutton(c)
-                ) or nil,
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.maximizedbutton(c)
-                ) or nil,
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.minimizebutton(c)
-                ) or nil,
-                focused_bool and wibox.widget.base.make_widget(
-                    awful.titlebar.widget.closebutton(c)
-                ) or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.floatingbutton(c)
+                        )
+                    or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.stickybutton(c)
+                        )
+                    or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.ontopbutton(c)
+                        )
+                    or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.maximizedbutton(c)
+                        )
+                    or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.minimizebutton(c)
+                        )
+                    or nil,
+                focused_bool
+                        and wibox.widget.base.make_widget(
+                            awful.titlebar.widget.closebutton(c)
+                        )
+                    or nil,
                 layout = wibox.layout.fixed.horizontal,
             },
             layout = wibox.layout.align.horizontal,

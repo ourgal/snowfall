@@ -12,4 +12,3 @@ case "$choice" in
   1) takeshot --win  ;;
   2) takeshot --area ;;
 esac
-

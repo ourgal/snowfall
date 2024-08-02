@@ -221,7 +221,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  border-radius: 0px;
                      	  border: 0px;
                      	  font-style: normal;
@@ -237,7 +237,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  opacity: 0.3;
                      	  border: 0px;
                      	  transition: all 0.3s ease-in-out;
@@ -253,7 +253,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  opacity: 1.0;
                      	  border: 0px;
                      	  transition: all 0.3s ease-in-out;
@@ -269,7 +269,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  opacity: 0.8;
                      	  border: 0px;
                      	  transition: all 0.3s ease-in-out;
@@ -293,7 +293,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -308,7 +308,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -323,7 +323,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -338,7 +338,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -353,7 +353,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -368,7 +368,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -383,7 +383,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -398,7 +398,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -413,7 +413,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -428,7 +428,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -443,7 +443,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -458,7 +458,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -473,7 +473,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else
@@ -488,7 +488,7 @@ args.module (
                  else if cfg.simplebar == true then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
-                               background: transparent;   
+                               background: transparent;
                      	  margin: 4px;
                      	''
                  else

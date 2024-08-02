@@ -3,13 +3,13 @@ index 70bcded..78a63f8 100644
 --- a/tg/msg.py
 +++ b/tg/msg.py
 @@ -203,7 +202,8 @@ class MsgProxy:
- 
+
      @property
      def reply_msg_id(self) -> Optional[int]:
 -        return self.msg.get("reply_to_message_id")
 +        if self.msg.get("reply_to"):
 +            return self.msg["reply_to"]["message_id"]
- 
+
      @property
      def reply_markup(self) -> Optional[Dict[str, Any]]:
 diff --git a/tg/tdlib.py b/tg/tdlib.py
@@ -19,7 +19,7 @@ index 17b1023..222c9d7 100644
 @@ -108,13 +108,11 @@ class Tdlib(Telegram):
          }
          return self._send_data(data)
- 
+
 -    def reply_message(
 -        self, chat_id: int, reply_to_message_id: int, text: str
 -    ) -> AsyncResult:
@@ -37,17 +37,17 @@ index e895bf8..3a7c014 100644
 --- a/tg/utils.py
 +++ b/tg/utils.py
 @@ -190,7 +190,7 @@ def notify(
- 
+
  def string_len_dwc(string: str) -> int:
      """Returns string len including count for double width characters"""
 -    return sum(1 + (unicodedata.east_asian_width(c) in "WF") for c in string)
 +    return sum(1 + (unicodedata.east_asian_width(c) in "AWFN") for c in string)
- 
- 
+
+
  def truncate_to_len(string: str, width: int) -> str:
 @@ -202,17 +202,17 @@ def truncate_to_len(string: str, width: int) -> str:
      out_string = ""
- 
+
      for char in string:
 -        cur_len += 2 if unicodedata.east_asian_width(char) in "WF" else 1
 -        out_string += char
@@ -59,13 +59,13 @@ index e895bf8..3a7c014 100644
 +        out_string += char
 +        cur_len += chr_len
      return out_string
- 
- 
+
+
  def copy_to_clipboard(text: str) -> None:
 -    subprocess.run(
 -        config.COPY_CMD, universal_newlines=True, input=text, shell=True
 -    )
 +    subprocess.run(config.COPY_CMD, universal_newlines=True, input=text, shell=True)
- 
- 
+
+
  class suspend:

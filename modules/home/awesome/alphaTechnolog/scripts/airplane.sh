@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-status () {
+status() {
   status=$(nmcli radio wifi)
   if [[ $status == "enabled" ]]; then
     echo "off"

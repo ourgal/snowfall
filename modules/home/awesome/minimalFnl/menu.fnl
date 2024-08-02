@@ -26,4 +26,3 @@
 
 (set menubar.utils.terminal settings.terminal)
 M
-

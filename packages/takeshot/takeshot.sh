@@ -33,15 +33,15 @@ shotarea() {
   notify_user
 }
 
-if [[ ! -d "$dir" ]]; then
+if [[ ! -d $dir ]]; then
   mkdir -p "$dir"
 fi
 
-if [[ "$1" == "now" ]]; then
+if [[ $1 == "now" ]]; then
   shotnow
-elif [[ "$1" == "win" ]]; then
+elif [[ $1 == "win" ]]; then
   shotwin
-elif [[ "$1" == "area" ]]; then
+elif [[ $1 == "area" ]]; then
   shotarea
 else
   echo -e "Available Options : now win area"

@@ -30,7 +30,8 @@ end
 --- The turn off animation
 local function animate_turn_off(self, anim, axis)
     self.screen_on_toggled_scratchpad = self.client.screen
-    self.tag_on_toggled_scratchpad = self.screen_on_toggled_scratchpad.selected_tag
+    self.tag_on_toggled_scratchpad =
+        self.screen_on_toggled_scratchpad.selected_tag
 
     if self.client.floating == false then
         -- Save the client geometry before floating it
@@ -68,8 +69,13 @@ local function abort_if_tag_was_switched(self)
     -- Toggle off scratchpad at tag 1
     -- Switch to tag 2
     -- Outcome: The client will remain on tag 1 and will instead be removed from tag 2
-    if (self.turning_off) and (self.screen_on_toggled_scratchpad and
-        self.screen_on_toggled_scratchpad.selected_tag) ~= self.tag_on_toggled_scratchpad
+    if
+        self.turning_off
+        and (
+                self.screen_on_toggled_scratchpad
+                and self.screen_on_toggled_scratchpad.selected_tag
+            )
+            ~= self.tag_on_toggled_scratchpad
     then
         if self.rubato.x then
             self.rubato.x:abort()
@@ -121,7 +127,7 @@ function Scratchpad:new(args)
 
     args.rubato = args.rubato or {}
 
-    local ret = gears.object{}
+    local ret = gears.object({})
     gears.table.crush(ret, Scratchpad)
     gears.table.crush(ret, args)
 
@@ -134,7 +140,12 @@ function Scratchpad:new(args)
         end)
 
         ret.rubato.x.ended:subscribe(function()
-            if ((ret.rubato.y and ret.rubato.y.state == false) or (ret.rubato.y == nil)) and ret.turning_off == true then
+            if
+                (
+                    (ret.rubato.y and ret.rubato.y.state == false)
+                    or (ret.rubato.y == nil)
+                ) and ret.turning_off == true
+            then
                 on_animate_turn_off_end(ret)
             end
         end)
@@ -148,7 +159,12 @@ function Scratchpad:new(args)
         end)
 
         ret.rubato.y.ended:subscribe(function()
-            if ((ret.rubato.x and ret.rubato.x.state == false) or (ret.rubato.x == nil)) and ret.turning_off == true then
+            if
+                (
+                    (ret.rubato.x and ret.rubato.x.state == false)
+                    or (ret.rubato.x == nil)
+                ) and ret.turning_off == true
+            then
                 on_animate_turn_off_end(ret)
             end
         end)
@@ -198,11 +214,18 @@ function Scratchpad:turn_on()
     local anim_y = self.rubato.y
 
     local in_anim = false
-    if (anim_x and anim_x.state == true) or (anim_y and anim_y.state == true) then
+    if
+        (anim_x and anim_x.state == true) or (anim_y and anim_y.state == true)
+    then
         in_anim = true
     end
 
-    if self.client and not in_anim and self.client.first_tag and self.client.first_tag.selected then
+    if
+        self.client
+        and not in_anim
+        and self.client.first_tag
+        and self.client.first_tag.selected
+    then
         self.client:raise()
         capi.client.focus = self.client
         return
@@ -310,7 +333,9 @@ function Scratchpad:turn_off()
     local anim_y = self.rubato.y
 
     local in_anim = false
-    if (anim_x and anim_x.state == true) or (anim_y and anim_y.state == true) then
+    if
+        (anim_x and anim_x.state == true) or (anim_y and anim_y.state == true)
+    then
         in_anim = true
     end
 

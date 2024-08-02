@@ -2,21 +2,21 @@
 
 cache_file=$HOME/.cache/awesomewm/services/redshift_state
 
-initial_hook () {
+initial_hook() {
   if [ ! -d $(dirname $cache_file) ]; then
     mkdir -p $(dirname $cache_file)
   fi
   if [ ! -f $cache_file ]; then
-    echo off > $cache_file
+    echo off >$cache_file
   fi
 }
 
-get_state () {
+get_state() {
   # check if redshift is running
   cat $cache_file
 }
 
-restore () {
+restore() {
   local state=$(get_state)
   if [[ $state == "on" ]]; then
     enable_redshift
@@ -25,20 +25,20 @@ restore () {
   fi
 }
 
-disable_redshift () {
-  redshift -x 2>&1 > /dev/null
+disable_redshift() {
+  redshift -x 2>&1 >/dev/null
   # saving state
-  echo off > $cache_file
+  echo off >$cache_file
 }
 
-enable_redshift () {
-  redshift -x 2>&1 > /dev/null
-  redshift -O 5000 2>&1 > /dev/null
+enable_redshift() {
+  redshift -x 2>&1 >/dev/null
+  redshift -O 5000 2>&1 >/dev/null
   # saving new state
-  echo on > $cache_file
+  echo on >$cache_file
 }
 
-toggle () {
+toggle() {
   local state=$(get_state)
   if [[ $state == "on" ]]; then
     disable_redshift

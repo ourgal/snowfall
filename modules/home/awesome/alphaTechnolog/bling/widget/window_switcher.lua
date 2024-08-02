@@ -13,15 +13,12 @@ local window_switcher_grabber
 local get_num_clients = function()
     local minimized_clients_in_tag = 0
     local matcher = function(c)
-        return awful.rules.match(
-            c,
-            {
-                minimized = true,
-                skip_taskbar = false,
-                hidden = false,
-                first_tag = awful.screen.focused().selected_tag,
-            }
-        )
+        return awful.rules.match(c, {
+            minimized = true,
+            skip_taskbar = false,
+            hidden = false,
+            first_tag = awful.screen.focused().selected_tag,
+        })
     end
     for c in awful.client.iterate(matcher) do
         minimized_clients_in_tag = minimized_clients_in_tag + 1
@@ -121,9 +118,7 @@ local function draw_widget(
                         cr.operator = cairo.Operator.SOURCE
                         cr:paint()
                         self:get_children_by_id("thumbnail")[1].image =
-                            gears.surface.load(
-                                img
-                            )
+                            gears.surface.load(img)
                     end,
                     {
                         {
@@ -277,7 +272,8 @@ local enable = function(opts)
     local scroll_next_key = opts.scroll_next_key or 5
 
     local cycleClientsByIdx = opts.cycleClientsByIdx or awful.client.focus.byidx
-    local filterClients = opts.filterClients or awful.widget.tasklist.filter.currenttags
+    local filterClients = opts.filterClients
+        or awful.widget.tasklist.filter.currenttags
 
     local window_switcher_box = awful.popup({
         bg = "#00000000",

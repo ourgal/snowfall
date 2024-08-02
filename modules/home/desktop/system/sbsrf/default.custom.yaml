@@ -1,8 +1,8 @@
 patch:
   schema_list:
-    - { schema: sbfm }
+    - {schema: sbfm}
   key_binder/bindings:
-    - { accept: "Shift+space", toggle: ascii_mode, when: always }
+    - {accept: "Shift+space", toggle: ascii_mode, when: always}
   ascii_composer:
     good_old_caps_lock: false
     switch_key:

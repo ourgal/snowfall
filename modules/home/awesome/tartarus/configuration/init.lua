@@ -1,4 +1,4 @@
---      _    _ _     _             _ 
+--      _    _ _     _             _
 --     / \  | | |   | | __ ___   _(_)
 --    / _ \ | | |_  | |/ _` \ \ / / |
 --   / ___ \| | | |_| | (_| |\ V /| |
@@ -8,6 +8,6 @@
 --
 
 return {
-	-- keys = require('configuration.keys'),
-  	apps = require('configuration.apps')
+  -- keys = require('configuration.keys'),
+  apps = require("configuration.apps"),
 }

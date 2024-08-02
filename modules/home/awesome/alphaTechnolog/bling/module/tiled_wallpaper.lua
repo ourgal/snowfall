@@ -5,10 +5,10 @@
     They can be applied to lua by changing the naming conventions
     and adjusting for the missing namespaces (and classes)
     for example:
-    cairo_rectangle(cr, 1, 1, 1, 1) in C would be written as 
+    cairo_rectangle(cr, 1, 1, 1, 1) in C would be written as
     cr:rectangle(1, 1, 1, 1) in lua
-    and 
-    cairo_fill(cr) in C would be written as 
+    and
+    cairo_fill(cr) in C would be written as
     cr:fill() in lua
 --]]
 

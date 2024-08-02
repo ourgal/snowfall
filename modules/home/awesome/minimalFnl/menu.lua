@@ -12,8 +12,16 @@ end
 local function _2_()
   return _G.awesome.quit()
 end
-M.myawesomemenu = {{"hotkeys", _1_}, {"manual", (settings.terminal .. " -e man awesome")}, {"edit config", (settings.editor_cmd .. " " .. _G.awesome.conffile)}, {"restart", _G.awesome.restart}, {"quit", _2_}}
-M.mymainmenu = awful.menu({items = {{"awesome", M.myawesomemenu, beautiful.awesome_icon}, {"open terminal", settings.terminal}}})
-M.mylauncher = awful.widget.launcher({image = beautiful.awesome_icon, menu = M.mymainmenu})
+M.myawesomemenu = {
+  { "hotkeys", _1_ },
+  { "manual", (settings.terminal .. " -e man awesome") },
+  { "edit config", (settings.editor_cmd .. " " .. _G.awesome.conffile) },
+  { "restart", _G.awesome.restart },
+  { "quit", _2_ },
+}
+M.mymainmenu = awful.menu({
+  items = { { "awesome", M.myawesomemenu, beautiful.awesome_icon }, { "open terminal", settings.terminal } },
+})
+M.mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu = M.mymainmenu })
 menubar.utils.terminal = settings.terminal
 return M
