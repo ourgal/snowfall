@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "whitespace-format";
     nixPkgs = [
       "cachix"
       "devbox"
