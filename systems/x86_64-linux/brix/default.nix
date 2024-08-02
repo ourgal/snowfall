@@ -27,7 +27,7 @@ in
     docker =
       let
         nfs = "/net/brix.local/srv/nfs/docker/";
-        nfsRoot = "/net/brix.local/srv/nfs/";
+        mount = "/home/${user}/mnt/nfs/docker/syncthing_sync/";
       in
       enabled
       // {
@@ -85,7 +85,7 @@ in
         };
         kavita = enabled // {
           port = 5001;
-          inherit nfs nfsRoot;
+          inherit nfs mount;
           version = "0.8.2";
         };
       };

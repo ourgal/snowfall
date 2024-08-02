@@ -9,8 +9,8 @@ let
       ports = [ "${toString cfg.port}:5000" ];
       volumes = [
         "${cfg.nfs}${cfg.name}_config:/config"
-        "${cfg.nfsRoot}books:/books:ro"
-        "${cfg.nfsRoot}wenku8:/wenku8:ro"
+        "${cfg.mount}books:/books:ro"
+        "${cfg.mount}wenku8:/wenku8:ro"
       ];
       extraOptions = [ "--network=proxy" ];
     };
@@ -19,7 +19,7 @@ let
     name = mkOpt' str "kavita";
     port = mkOpt' (either port (listOf port)) 5000;
     nfs = mkOpt' str "";
-    nfsRoot = mkOpt' str "";
+    mount = mkOpt' str "";
     version = mkOpt' str "latest";
   };
   path = ./.;
