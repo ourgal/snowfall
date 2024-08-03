@@ -6,6 +6,7 @@ let
     cfgNixos
     mkOpt'
     dockerPorts
+    dockerVolumes
     ;
   cfg = cfgNixos config.${namespace} ./.;
   dbPass = args.lib.strings.fileContents ./dbPass.key;
@@ -54,22 +55,10 @@ let
         };
       };
       networks.proxy.name = "proxy";
-      docker-compose.volumes = {
-        config = {
-          driver_opts = {
-            type = "nfs";
-            o = "addr=${cfg.nfs},nfsvers=4";
-            device = ":${cfg.nfsPath}/${cfg.name}_config";
-          };
-        };
-        db = {
-          driver_opts = {
-            type = "nfs";
-            o = "addr=${cfg.nfs},nfsvers=4";
-            device = ":${cfg.nfsPath}/${cfg.name}_db";
-          };
-        };
-      };
+      docker-compose.volumes = dockerVolumes [
+        "config"
+        "db"
+      ] cfg.name cfg.nfs cfg.nfsPath;
     };
   };
   extraOpts = with lib.types; {

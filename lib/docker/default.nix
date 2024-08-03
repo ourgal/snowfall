@@ -1,6 +1,5 @@
 { lib, ... }:
-with lib;
-{
+rec {
   dockerPorts =
     host: container:
     let
@@ -16,8 +15,8 @@ with lib;
   dockerOpenFirewall =
     docker:
     let
-      containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
-      ports = attrsets.foldlAttrs (
+      containerEnabled = lib.attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
+      ports = lib.attrsets.foldlAttrs (
         acc: name: value:
         let
           port =
@@ -37,4 +36,24 @@ with lib;
         allowedUDPPorts = ports;
       };
     };
+
+  dockerVolume = vname: pname: nfs: nfsPath: {
+    "${vname}" = {
+      driver_opts = {
+        type = "nfs";
+        o = "addr=${nfs},nfsvers=4";
+        device = ":${nfsPath}/${pname}_${vname}";
+      };
+    };
+  };
+
+  dockerVolumes =
+    vname: pname: nfs: nfsPath:
+    if builtins.isList vname then
+      builtins.foldl' (acc: v: acc // dockerVolume v pname nfs nfsPath) { } vname
+    else if builtins.isString vname then
+      dockerVolume vname pname nfs nfsPath
+    else
+      builtins.throw "not support volume type";
+
 }
