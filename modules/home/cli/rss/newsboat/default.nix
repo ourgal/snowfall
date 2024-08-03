@@ -24,10 +24,10 @@ args.module (
           bind-key j down article
           bind-key k up article
 
-          urls-source "freshrss"
-          freshrss-url "http://freshrss.zxc.cn/api/greader.php"
-          freshrss-login "admin"
-          freshrss-password "${lib.strings.fileContents ./password.key}"
+          urls-source "miniflux"
+          miniflux-url "http://miniflux.zxc.cn/"
+          miniflux-login "fairever"
+          miniflux-password "${lib.strings.fileContents ./password.key}"
         '';
       };
     };
