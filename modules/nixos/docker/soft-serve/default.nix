@@ -14,7 +14,12 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/charmcli/soft-serve:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports [
+          23232
+          23231
+          23233
+          9418
+        ];
         environment = {
           SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
         };

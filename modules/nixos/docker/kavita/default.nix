@@ -1,14 +1,19 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPorts
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.arion.projects.${cfg.name}.settings = {
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/linuxserver/kavita:${cfg.version}";
-        ports = [ "${toString cfg.ports}:5000" ];
+        ports = dockerPorts cfg.ports 5000;
         volumes = [
           "config:/config"
           "${cfg.mount}/books:/books:ro"

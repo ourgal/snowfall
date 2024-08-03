@@ -2,14 +2,14 @@
 with lib;
 {
   dockerPorts =
-    ports:
+    host: container:
     let
-      toStr = s: "${toString s}:${toString s}";
+      toStr = x: y: "${toString x}:${toString y}";
     in
-    if builtins.isInt ports then
-      [ (toStr ports) ]
-    else if builtins.isList ports then
-      builtins.map (p: toStr p) ports
+    if builtins.isInt host && builtins.isInt container then
+      [ (toStr host container) ]
+    else if builtins.isList host && builtins.isList container then
+      lib.lists.zipListsWith toStr host container
     else
       "";
 

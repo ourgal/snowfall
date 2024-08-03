@@ -21,7 +21,7 @@ let
             ATUIN_OPEN_REGISTRATION = "true";
           };
           volumes = [ "config:/config:rw" ];
-          ports = dockerPorts cfg.ports;
+          ports = dockerPorts cfg.ports 8888;
           command = [
             "server"
             "start"
@@ -64,7 +64,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "atuin";
-    ports = mkOpt' (either port (listOf port)) 8888;
+    ports = mkOpt' port 8888;
     nfs = mkOpt' str "";
     nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";

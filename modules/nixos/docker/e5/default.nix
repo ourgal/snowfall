@@ -13,7 +13,7 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/hanhongyong/ms365-e5-renew-x:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports 1066;
         volumes = [ "config:/app/appdata/DataBase" ];
         environment = {
           TZ = "Asia/Shanghai";
@@ -35,7 +35,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "e5";
-    ports = mkOpt' (either port (listOf port)) 1066;
+    ports = mkOpt' port 1066;
     nfs = mkOpt' str "";
     nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";
