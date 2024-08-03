@@ -6,6 +6,7 @@ let
     cfgNixos
     mkOpt'
     dockerPorts
+    dockerVolumes
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
@@ -19,15 +20,7 @@ let
         networks = [ "proxy" ];
       };
       networks.proxy.name = "proxy";
-      docker-compose.volumes = {
-        config = {
-          driver_opts = {
-            type = "nfs";
-            o = "addr=${cfg.nfs},nfsvers=4";
-            device = ":${cfg.nfsPath}/${cfg.name}_config";
-          };
-        };
-      };
+      docker-compose.volumes = dockerVolumes "config" cfg.name cfg.nfs cfg.nfsPath;
     };
   };
   extraOpts = with lib.types; {
