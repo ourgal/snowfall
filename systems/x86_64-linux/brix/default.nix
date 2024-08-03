@@ -31,11 +31,6 @@ in
       in
       enabled
       // {
-        freshrss = enabled // {
-          ports = 5000;
-          inherit nfs;
-          version = "1.24.1";
-        };
         subconverter = enabled // {
           ports = 25500;
           inherit nfs;
