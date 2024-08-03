@@ -17,7 +17,7 @@ let
           TZ = "Asia/Shanghai";
           LOG_LEVEL = "info";
         };
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports 8191;
         restart = "unless-stopped";
         networks = [ "proxy" ];
       };
@@ -26,7 +26,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "flaresolverr";
-    ports = mkOpt' (either port (listOf port)) 8191;
+    ports = mkOpt' port 8191;
     version = mkOpt' str "latest";
   };
   path = ./.;

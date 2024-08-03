@@ -13,7 +13,7 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/tindy2013/subconverter:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports 25500;
         volumes = [ "config:/base" ];
         environment = {
           TZ = "Asia/Shanghai";
@@ -35,7 +35,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "subconverter";
-    ports = mkOpt' (either port (listOf port)) 25500;
+    ports = mkOpt' port 25500;
     nfs = mkOpt' str "";
     nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";

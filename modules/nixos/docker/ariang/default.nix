@@ -13,7 +13,7 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/leonismoe/ariang:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports 8080;
         environment = {
           TZ = "Asia/Shanghai";
         };
@@ -25,7 +25,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "ariang";
-    ports = mkOpt' (either port (listOf port)) 8080;
+    ports = mkOpt' port 8080;
     nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };

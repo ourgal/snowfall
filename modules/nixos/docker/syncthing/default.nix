@@ -13,7 +13,11 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/linuxserver/syncthing:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports [
+          8384
+          22000
+          21027
+        ];
         volumes = [
           "config:/config"
           "sync:/sync"

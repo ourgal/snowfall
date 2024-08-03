@@ -1,7 +1,12 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPorts
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   dbPass = args.lib.strings.fileContents ./dbPass.key;
   adminPass = args.lib.strings.fileContents ./adminPass.key;
@@ -11,7 +16,7 @@ let
         ${cfg.name}.service = {
           name = cfg.name;
           image = "docker.io/miniflux/miniflux:${cfg.version}";
-          ports = [ "${toString cfg.ports}:8080" ];
+          ports = dockerPorts cfg.ports 8080;
           volumes = [ "config:/config" ];
           environment = {
             DATABASE_URL = "postgres://miniflux:${dbPass}@${cfg.name}-postgres/miniflux?sslmode=disable";

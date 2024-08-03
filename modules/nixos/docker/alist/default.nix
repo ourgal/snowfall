@@ -13,7 +13,7 @@ let
       services.${cfg.name}.service = {
         name = cfg.name;
         image = "docker.io/xhofe/alist-aria2:${cfg.version}";
-        ports = dockerPorts cfg.ports;
+        ports = dockerPorts cfg.ports 5244;
         volumes = [ "config:/opt/alist/data" ];
         environment = {
           PUID = "0";
@@ -37,7 +37,7 @@ let
   };
   extraOpts = with lib.types; {
     name = mkOpt' str "alist";
-    ports = mkOpt' (either port (listOf port)) 5244;
+    ports = mkOpt' port 5244;
     nfs = mkOpt' str "";
     nfsPath = mkOpt' str "/docker";
     version = mkOpt' str "latest";

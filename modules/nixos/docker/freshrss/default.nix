@@ -1,7 +1,12 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule cfgNixos mkOpt';
+  inherit (lib.${namespace})
+    nixosModule
+    cfgNixos
+    mkOpt'
+    dockerPorts
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     virtualisation.arion.projects.${cfg.name}.settings = {
@@ -9,7 +14,7 @@ let
         ${cfg.name}.service = {
           name = cfg.name;
           image = "docker.io/linuxserver/freshrss:${cfg.version}";
-          ports = [ "${toString cfg.ports}:80" ];
+          ports = dockerPorts cfg.ports 80;
           volumes = [ "config:/config" ];
           environment = {
             PGID = "1000";
