@@ -12,6 +12,7 @@ args.module (
       "nap"
       "treefmt2"
       "universal-ctags"
+      "watchman"
     ];
     progs = {
       direnv = {
