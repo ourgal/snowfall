@@ -5,34 +5,26 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
+    arionProj
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services.${cfg.name}.service = {
-        name = cfg.name;
-        image = "docker.io/tindy2013/subconverter:${cfg.version}";
-        ports = dockerPorts cfg.ports 25500;
-        volumes = [ "config:/base" ];
-        environment = {
-          TZ = "Asia/Shanghai";
-        };
-        restart = "unless-stopped";
-        networks = [ "proxy" ];
+  value =
+    with cfg;
+    arionProj {
+      inherit
+        name
+        version
+        ports
+        nfs
+        nfsPath
+        ;
+      image = "tindy2013/subconverter";
+      volumes = "config:/base";
+      env = {
+        TZ = "Asia/Shanghai";
       };
-      networks.proxy.name = "proxy";
-      docker-compose.volumes = {
-        config = {
-          driver_opts = {
-            type = "nfs";
-            o = "addr=${cfg.nfs},nfsvers=4";
-            device = ":${cfg.nfsPath}/${cfg.name}_config";
-          };
-        };
-      };
+      containerPorts = 25500;
     };
-  };
   extraOpts = with lib.types; {
     name = mkOpt' str "subconverter";
     ports = mkOpt' port 25500;

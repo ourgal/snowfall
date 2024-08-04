@@ -5,27 +5,26 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
-    dockerVolumes
+    arionProj
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services.${cfg.name}.service = {
-        name = cfg.name;
-        image = "docker.io/hanhongyong/ms365-e5-renew-x:${cfg.version}";
-        ports = dockerPorts cfg.ports 1066;
-        volumes = [ "config:/app/appdata/DataBase" ];
-        environment = {
-          TZ = "Asia/Shanghai";
-        };
-        restart = "unless-stopped";
-        networks = [ "proxy" ];
+  value =
+    with cfg;
+    arionProj {
+      inherit
+        name
+        version
+        ports
+        nfs
+        nfsPath
+        ;
+      image = "hanhongyong/ms365-e5-renew-x";
+      config = "/app/appdata/DataBase";
+      env = {
+        TZ = "Asia/Shanghai";
       };
-      networks.proxy.name = "proxy";
-      docker-compose.volumes = dockerVolumes "config" cfg.name cfg.nfs cfg.nfsPath;
+      containerPorts = 1066;
     };
-  };
   extraOpts = with lib.types; {
     name = mkOpt' str "e5";
     ports = mkOpt' port 1066;

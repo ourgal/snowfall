@@ -5,35 +5,29 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
-    dockerVolumes
+    arionProj
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services.${cfg.name}.service = {
-        name = cfg.name;
-        image = "docker.io/linuxserver/syncthing:${cfg.version}";
-        ports = dockerPorts cfg.ports [
-          8384
-          22000
-          21027
-        ];
-        volumes = [
-          "config:/config"
-          "sync:/sync"
-        ];
-        hostname = config.dot.user.host;
-        restart = "unless-stopped";
-        networks = [ "proxy" ];
-      };
-      networks.proxy.name = "proxy";
-      docker-compose.volumes = dockerVolumes [
-        "config"
-        "sync"
-      ] cfg.name cfg.nfs cfg.nfsPath;
+  value =
+    with cfg;
+    arionProj {
+      inherit
+        name
+        version
+        ports
+        nfs
+        nfsPath
+        ;
+      image = "linuxserver/syncthing";
+      config = "/config";
+      volumes = "sync:/sync";
+      hostname = config.dot.user.host;
+      containerPorts = [
+        8384
+        22000
+        21027
+      ];
     };
-  };
   extraOpts = with lib.types; {
     name = mkOpt' str "syncthing";
     ports = mkOpt' (either port (listOf port)) [

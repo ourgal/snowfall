@@ -5,52 +5,45 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
-    dockerVolumes
+    arionProjs
     ;
   cfg = cfgNixos config.${namespace} ./.;
   password = args.lib.strings.fileContents ./password.key;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services = {
-        ${cfg.name}.service = {
-          name = cfg.name;
-          image = "ghcr.io/atuinsh/atuin:${cfg.version}";
-          environment = {
-            ATUIN_DB_URI = "postgres://atuin:${password}@${cfg.name}_db/atuin";
-            ATUIN_HOST = "0.0.0.0";
-            ATUIN_OPEN_REGISTRATION = "true";
-          };
-          volumes = [ "config:/config:rw" ];
-          ports = dockerPorts cfg.ports 8888;
-          command = [
-            "server"
-            "start"
-          ];
-          depends_on = [ "${cfg.name}_db" ];
-          restart = "unless-stopped";
-          networks = [ "proxy" ];
+  value =
+    with cfg;
+    arionProjs [
+      {
+        inherit
+          name
+          version
+          ports
+          nfs
+          nfsPath
+          ;
+        image = "atuinsh/atuin";
+        imageHost = "ghcr.io";
+        env = {
+          ATUIN_DB_URI = "postgres://atuin:${password}@${name}_db/atuin";
+          ATUIN_HOST = "0.0.0.0";
+          ATUIN_OPEN_REGISTRATION = "true";
         };
-        "${cfg.name}_db".service = {
-          name = "${cfg.name}_db";
-          image = "postgres:14";
-          environment = {
-            POSTGRES_DB = "atuin";
-            POSTGRES_PASSWORD = password;
-            POSTGRES_USER = "atuin";
-          };
-          volumes = [ "db:/var/lib/postgresql/data:rw" ];
-          restart = "unless-stopped";
-          networks = [ "proxy" ];
+        config = "/config";
+        cmd = [
+          "server"
+          "start"
+        ];
+        depends = "${name}_db";
+        containerPorts = 8888;
+      }
+      {
+        inherit name nfs nfsPath;
+        image = "postgres";
+        version = "14";
+        env = {
+          POSTGRES_PASSWORD = password;
         };
-      };
-      networks.proxy.name = "proxy";
-      docker-compose.volumes = dockerVolumes [
-        "config"
-        "db"
-      ] cfg.name cfg.nfs cfg.nfsPath;
-    };
-  };
+      }
+    ];
   extraOpts = with lib.types; {
     name = mkOpt' str "atuin";
     ports = mkOpt' port 8888;
