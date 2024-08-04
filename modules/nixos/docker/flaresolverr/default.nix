@@ -5,25 +5,20 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
+    arionProj
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services.${cfg.name}.service = {
-        name = cfg.name;
-        image = "docker.io/flaresolverr/flaresolverr:${cfg.version}";
-        environment = {
-          TZ = "Asia/Shanghai";
-          LOG_LEVEL = "info";
-        };
-        ports = dockerPorts cfg.ports 8191;
-        restart = "unless-stopped";
-        networks = [ "proxy" ];
+  value =
+    with cfg;
+    arionProj {
+      inherit name version ports;
+      image = "flaresolverr/flaresolverr";
+      env = {
+        TZ = "Asia/Shanghai";
+        LOG_LEVEL = "info";
       };
-      networks.proxy.name = "proxy";
+      containerPorts = 8191;
     };
-  };
   extraOpts = with lib.types; {
     name = mkOpt' str "flaresolverr";
     ports = mkOpt' port 8191;

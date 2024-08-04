@@ -5,28 +5,19 @@ let
     nixosModule
     cfgNixos
     mkOpt'
-    dockerPorts
+    arionProj
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = {
-    virtualisation.arion.projects.${cfg.name}.settings = {
-      services.${cfg.name}.service = {
-        name = cfg.name;
-        image = "docker.io/leonismoe/ariang:${cfg.version}";
-        ports = dockerPorts cfg.ports 8080;
-        environment = {
-          TZ = "Asia/Shanghai";
-        };
-        restart = "unless-stopped";
-        networks = [ "proxy" ];
-      };
-      networks.proxy.name = "proxy";
+  value =
+    with cfg;
+    arionProj {
+      inherit name version ports;
+      image = "leonismoe/ariang";
+      containerPorts = 8080;
     };
-  };
   extraOpts = with lib.types; {
     name = mkOpt' str "ariang";
     ports = mkOpt' port 8080;
-    nfs = mkOpt' str "";
     version = mkOpt' str "latest";
   };
   path = ./.;
