@@ -72,6 +72,7 @@ rec {
       hostname ? "",
       depends ? [ ],
       networks ? "proxy",
+      user ? null,
       cmd ? [ ],
       healthcheck ? { },
       nfs ? "",
@@ -158,7 +159,7 @@ rec {
     {
       virtualisation.arion.projects.${projectName}.settings = {
         services.${_name}.service = {
-          inherit hostname;
+          inherit hostname user;
           name = _name;
           volumes = _volumes ++ (convert2List nativeVolumes);
           image = "${imageHost}/${image}:${version}";
