@@ -20,6 +20,7 @@ args.module (
       "flake"
       "thaw"
     ];
+    myPkgs = "nix-repl";
     enable = [
       "comma"
       "home-manager"
