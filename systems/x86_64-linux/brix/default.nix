@@ -88,6 +88,11 @@ in
           inherit nfs;
           version = "2.1.4";
         };
+        qd = enabled // {
+          ports = 8923;
+          inherit nfs;
+          version = "20240210";
+        };
       };
   };
 
