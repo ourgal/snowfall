@@ -12,6 +12,7 @@ args.module (
           WantedBy = [ "default.target" ];
         };
         Service = {
+          ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
           ExecStart = "${pkgs.xbanish}/bin/xbanish";
         };
       };
