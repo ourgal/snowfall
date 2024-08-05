@@ -1829,11 +1829,11 @@
     },
     "nixpkgs_10": {
       "locked": {
-        "lastModified": 1722372011,
-        "narHash": "sha256-B2xRiC3NEJy/82ugtareBkRqEkPGpMyjaLxaR8LBxNs=",
+        "lastModified": 1722651103,
+        "narHash": "sha256-IRiJA0NVAoyaZeKZluwfb2DoTpBAj+FLI0KfybBeDU0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "cf05eeada35e122770c5c14add958790fcfcbef5",
+        "rev": "a633d89c6dc9a2a8aae11813a62d7c58b2c0cc51",
         "type": "github"
       },
       "original": {
@@ -1906,38 +1906,6 @@
       }
     },
     "nixpkgs_15": {
-      "locked": {
-        "lastModified": 1719468428,
-        "narHash": "sha256-vN5xJAZ4UGREEglh3lfbbkIj+MPEYMuqewMn4atZFaQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "1e3deb3d8a86a870d925760db1a5adecc64d329d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_16": {
-      "locked": {
-        "lastModified": 1715413075,
-        "narHash": "sha256-FCi3R1MeS5bVp0M0xTheveP6hhcCYfW/aghSTPebYL4=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "e4e7a43a9db7e22613accfeb1005cca1b2b1ee0d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_17": {
       "locked": {
         "lastModified": 1706487304,
         "narHash": "sha256-LE8lVX28MV2jWJsidW13D2qrHU/RUUONendL2Q/WlJg=",
@@ -2296,7 +2264,7 @@
     "rust-overlay": {
       "inputs": {
         "flake-utils": "flake-utils_12",
-        "nixpkgs": "nixpkgs_17"
+        "nixpkgs": "nixpkgs_15"
       },
       "locked": {
         "lastModified": 1715393623,
@@ -2335,7 +2303,7 @@
       "inputs": {
         "flake-compat": "flake-compat_10",
         "nixpkgs": [
-          "unstable"
+          "nixpkgs"
         ],
         "snowfall-lib": "snowfall-lib"
       },
@@ -2446,7 +2414,9 @@
     },
     "sops-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_15",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nixpkgs-stable": "nixpkgs-stable_3"
       },
       "locked": {
@@ -2701,7 +2671,9 @@
     "wired": {
       "inputs": {
         "flake-parts": "flake-parts_10",
-        "nixpkgs": "nixpkgs_16",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "rust-overlay": "rust-overlay"
       },
       "locked": {

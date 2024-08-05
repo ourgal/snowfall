@@ -18,13 +18,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     homeage.url = "github:jordanisaacs/homeage";
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
-    wired.url = "github:Toqozz/wired-notify";
+    wired = {
+      url = "github:Toqozz/wired-notify";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,8 +47,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     snowfall-flake = {
       url = "github:snowfallorg/flake";
-      # Flake requires some packages that aren't on 22.05, but are available on unstable.
-      inputs.nixpkgs.follows = "unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     snowfall-thaw = {
       url = "github:snowfallorg/thaw";
