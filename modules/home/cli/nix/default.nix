@@ -20,7 +20,10 @@ args.module (
       "flake"
       "thaw"
     ];
-    myPkgs = "nix-repl";
+    myPkgs = [
+      "nix-auto-follow"
+      "nix-repl"
+    ];
     enable = [
       "comma"
       "home-manager"
