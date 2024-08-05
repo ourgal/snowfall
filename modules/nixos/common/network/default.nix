@@ -7,7 +7,7 @@ let
       networkmanager = enabled;
       # useDHCP = false;
       # useNetworkd = true;
-      enableIPv6 = false;
+      enableIPv6 = true;
       stevenblack = enabled // {
         block = [
           "fakenews"
