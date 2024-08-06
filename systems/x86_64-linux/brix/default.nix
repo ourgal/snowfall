@@ -18,6 +18,7 @@ in
     nfs = enabled;
     caddy = enabled;
     logrotate = enabled;
+    mosdns-cn = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
