@@ -29,7 +29,7 @@ let
           CREATE_ADMIN = 1;
           ADMIN_USERNAME = "fairever";
           ADMIN_PASSWORD = adminPass;
-          POLLING_PARSING_ERROR_LIMIT = 1;
+          POLLING_PARSING_ERROR_LIMIT = 0;
         };
         depends = [ "${name}_db" ];
         containerPorts = 8080;
