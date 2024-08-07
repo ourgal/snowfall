@@ -9,6 +9,7 @@ let
       # settings.KbdInteractiveAuthentication = false;
       settings.PermitRootLogin = "yes";
     };
+    programs.mosh = enabled;
   };
   path = ./.;
   _args = {
