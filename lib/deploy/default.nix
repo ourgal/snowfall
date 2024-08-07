@@ -23,7 +23,7 @@
                 path = inputs.deploy-rs.lib.${system}.activate.nixos host;
               };
             };
-            confirmTimeout = 300;
+            confirmTimeout = 1000;
           };
         }
       ) { } names;
