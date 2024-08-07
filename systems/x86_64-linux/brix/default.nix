@@ -93,6 +93,11 @@ in
           inherit nfs;
           version = "20240210";
         };
+        dufs = enabled // {
+          ports = 5003;
+          inherit nfs;
+          version = "v0.41.0";
+        };
       };
   };
 
