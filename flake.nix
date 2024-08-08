@@ -99,6 +99,7 @@
         cfgHome = lib.cfgHome;
         tomlFile = lib.tomlFile;
       };
+      homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;
     in
     lib.mkFlake {
       channels-config = {
@@ -134,9 +135,7 @@
         nixvim.homeManagerModules.nixvim
       ];
 
-      # Add modules to a specific home.
-      homes.users."zxc@home".specialArgs = homeSpecialArgs;
-      homes.users."zxc@surface".specialArgs = homeSpecialArgs;
+      homes.users = homeSpecialArgsFinal;
 
       deploy = lib.mkDeploy { inherit (inputs) self; };
     };
