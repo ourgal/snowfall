@@ -33,8 +33,6 @@ writeShellApplication rec {
     TRANSITION3="--transition-type center --transition-step 30"
     TRANSITION4="--transition-type outer --transition-pos 0.3,0.8 --transition-step 30"
     TRANSITION5="--transition-type wipe --transition-angle 270 --transition-step 30"
-    WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
-    PREVIOUS=$WALLPAPER
     if [ -d "$wallpaperDir" ]; then
       cd "$wallpaperDir" || exit
       git pull
@@ -42,6 +40,8 @@ writeShellApplication rec {
       git clone $wallpaperGit "$wallpaperDir"
       chown -R zxc:users "$wallpaperDir"
     fi
+    WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
+    PREVIOUS=$WALLPAPER
     while true; do
       if [ "$WALLPAPER" == "$PREVIOUS" ]; then
         WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
