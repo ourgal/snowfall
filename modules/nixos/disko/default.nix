@@ -11,6 +11,8 @@ let
             "/dev/nvme0n1"
           else if (host == "home") then
             "/dev/sda"
+          else if (host == "air") then
+            "/dev/nvme0n1"
           else if (host == "brix") then
             "/dev/sda"
           else
@@ -23,7 +25,7 @@ let
               priority = 1;
               name = "ESP";
               start = "1M";
-              end = "128M";
+              end = if (host == "surface") then "128M" else "512M";
               type = "EF00";
               content = {
                 type = "filesystem";

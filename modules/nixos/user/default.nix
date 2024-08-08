@@ -13,23 +13,13 @@ let
     isAttrs
     ;
   inherit (builtins) attrValues;
-  inherit (lib.${namespace}) mkOpt' cfgNixos;
+  inherit (lib.${namespace}) mkOpt' cfgNixos settings;
   cfg = cfgNixos config.${namespace} ./.;
 in
 {
   options.${namespace}.user = with types; {
     name = mkOpt' str "zxc";
-    host =
-      let
-        hostType = enum [
-          "surface"
-          "home"
-          "brix"
-          "nuc"
-          "tower"
-        ];
-      in
-      mkOpt' hostType null;
+    host = mkOpt' settings.hostType null;
     sshKeys = mkOpt' attrs {
       home = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7yaID+Y+VigvaMEE+DmWXvzk1cpUckTM8HNkt/e2TS zxc@surface";
       surface = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKh/IvmV+xANBHNefAhW395MyRG2Z9gjg+1Wj7gr15TQ zxc@home";
