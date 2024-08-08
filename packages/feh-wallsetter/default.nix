@@ -27,8 +27,6 @@ writeShellApplication rec {
     wallpaperDir="$HOME/Pictures/wallpapers"
     wallpaperGit="${repo}"
     TIMEOUT=720
-    WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
-    PREVIOUS=$WALLPAPER
     if [ -d "$wallpaperDir" ]; then
       cd "$wallpaperDir" || exit
       git pull
@@ -36,6 +34,8 @@ writeShellApplication rec {
       git clone $wallpaperGit "$wallpaperDir"
       chown -R zxc:users "$wallpaperDir"
     fi
+    WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
+    PREVIOUS=$WALLPAPER
     while true; do
       if [ "$WALLPAPER" == "$PREVIOUS" ]; then
         WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
