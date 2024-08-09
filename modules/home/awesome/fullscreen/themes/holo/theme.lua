@@ -338,18 +338,13 @@ function theme.at_screen_connect(s)
   s.mytag = wibox.container.margin(mytaglistcont, dpi(0), dpi(0), dpi(5), dpi(5))
 
   -- Create a tasklist widget
-  s.mytasklist = awful.widget.tasklist(
-    s,
-    awful.widget.tasklist.filter.currenttags,
-    awful.util.tasklist_buttons,
-    {
-      bg_focus = theme.bg_focus,
-      shape = gears.shape.rectangle,
-      shape_border_width = 5,
-      shape_border_color = theme.tasklist_bg_normal,
-      align = "center",
-    }
-  )
+  s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons, {
+    bg_focus = theme.bg_focus,
+    shape = gears.shape.rectangle,
+    shape_border_width = 5,
+    shape_border_color = theme.tasklist_bg_normal,
+    align = "center",
+  })
 
   -- Create the wibox
   s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(32) })

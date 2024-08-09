@@ -113,8 +113,7 @@ local global_keys = awful.util.table.join(
   end, { description = "next/prev spotify song", group = "hotkeys" }),
   awful.key({}, "XF86AudioPlay", function()
     awful.spawn("sp play", false)
-  end, { description = "play/pause spotify song", group = "hotkeys" }
-),
+  end, { description = "play/pause spotify song", group = "hotkeys" }),
   -- }}}
 
   -- microphone toggle {{{
