@@ -7,7 +7,9 @@ in
     awesome.minimal = enabled;
     fonts = enabled;
     cli = enabled;
-    desktop = enabled;
+    desktop = enabled // {
+      editor = enabled;
+    };
     dev = enabled;
   };
 }

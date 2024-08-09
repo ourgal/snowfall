@@ -9,7 +9,6 @@ args.module (
       "browser"
       "chat"
       "document"
-      "editor"
       "game"
       "image"
       "math"
