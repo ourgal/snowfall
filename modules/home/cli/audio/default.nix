@@ -3,7 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "sonicradio";
+    myPkgs = [
+      "sonicradio"
+      "roc-switch"
+    ];
     nixPkgs = [
       "id3v2"
       "pulsemixer"
