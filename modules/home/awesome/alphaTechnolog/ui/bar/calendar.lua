@@ -69,15 +69,12 @@ awful.screen.connect_for_each_screen(function(s)
     visible = false,
     ontop = true,
     placement = function(d)
-      return awful.placement.bottom_right(
-        d,
-        {
-          margins = {
-            bottom = beautiful.bar_height + beautiful.useless_gap * 2,
-            right = beautiful.useless_gap * 2,
-          },
-        }
-      )
+      return awful.placement.bottom_right(d, {
+        margins = {
+          bottom = beautiful.bar_height + beautiful.useless_gap * 2,
+          right = beautiful.useless_gap * 2,
+        },
+      })
     end,
     shape = helpers.mkroundedrect(),
     screen = s,
