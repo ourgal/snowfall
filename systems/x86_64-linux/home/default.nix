@@ -16,6 +16,7 @@ in
       user.host = "home";
       boot.systemd = enabled;
       gpu.nvidia = enabled;
+      autorandr.home = enabled;
       firewall = enabledList [
         "aria2"
         "barrier"
