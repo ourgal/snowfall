@@ -10,6 +10,7 @@ args.module (
       "dufs"
       "ffsend"
       "nfs-utils"
+      "pcp"
       "portal"
       "qrcp"
       "rsync"
