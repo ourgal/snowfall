@@ -1,0 +1,4 @@
+% git
+
+# lefthook
+nap ci/treefmt.toml > treefmt.toml && nap ci/lefthook.yml > lefthook.yml && mkdir -p .lefthook/commit-msg/ && nap ci/commitlint.sh > .lefthook/commit-msg/commitlint.sh && lefthook install
