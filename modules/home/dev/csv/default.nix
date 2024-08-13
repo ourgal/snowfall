@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "miller"
       "usql"
       "xsv"
       # keep-sorted end
