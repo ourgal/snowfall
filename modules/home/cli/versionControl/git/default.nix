@@ -9,15 +9,18 @@ args.module (
     {
       path = ./.;
       nixPkgs = [
+        # keep-sorted start
         "bit"
         "commitizen"
         "git-bug"
         "git-extras"
         "gitleaks"
+        "hub"
         "lefthook"
         "mob"
         "pre-commit"
         "tig"
+        # keep-sorted end
       ];
       progs = [
         {
