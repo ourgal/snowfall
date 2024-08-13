@@ -6,7 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "faq"
-      "taplo"
       # keep-sorted end
     ];
   }
