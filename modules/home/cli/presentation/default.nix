@@ -6,6 +6,7 @@ args.module (
     myPkgs = "lookatme";
     nixPkgs = [
       # keep-sorted start
+      "doitlive"
       "mdp"
       "presenterm"
       "slides"
