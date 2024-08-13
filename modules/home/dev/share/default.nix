@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "silicon";
+    nixPkgs = [
+      # keep-sorted start
+      "carbon-now-cli"
+      "silicon"
+      # keep-sorted end
+    ];
   }
 )
