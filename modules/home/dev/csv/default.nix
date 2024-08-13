@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "csview"
+      "csvquote"
       "miller"
       "tidy-viewer"
       "usql"
