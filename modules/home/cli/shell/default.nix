@@ -5,48 +5,31 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
-      "bat"
-      "bfs"
       "choose"
       "doge"
-      "figlet"
       "fpp"
       "fzf"
       "fzy"
-      "genact"
       "glow"
       "halp"
       "handlr"
-      "hwatch"
-      "hyperfine"
-      "lolcat"
       "mprocs"
-      "neo"
       "nerdfix"
-      "nyancat"
       "pet"
-      "pipes"
       "poop"
-      "pyp"
-      "sad"
       "skate"
       "skim"
-      "sttr"
-      "termshot"
       "tmate"
-      "tmatrix"
-      "viddy"
       "vtm"
       "wtf"
       "yank"
       "zf"
       # keep-sorted end
     ];
-    myPkgs = [
-      "fzfp"
-      "zfind"
-    ];
+    myPkgs = "zfind";
     enable = [
+      # keep-sorted start
+      "asciiart"
       "atuin"
       "broot"
       "carapace"
@@ -58,11 +41,14 @@ args.module (
       "ov"
       "serpl"
       "starship"
+      "string"
       "tealdeer"
       "tere"
       "tmux"
+      "utils"
       "zoxide"
       "zsh"
+      # keep-sorted end
     ];
     value = with args; {
       ${namespace}.cli.shell.tmux = {

@@ -9,6 +9,7 @@ args.module (
       "graphviz"
       "imagemagick"
       "menyoki"
+      "termshot"
       "viu"
       # keep-sorted end
     ];
