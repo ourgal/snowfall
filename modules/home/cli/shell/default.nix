@@ -16,6 +16,7 @@ args.module (
       "genact"
       "glow"
       "halp"
+      "handlr"
       "hwatch"
       "hyperfine"
       "lolcat"
