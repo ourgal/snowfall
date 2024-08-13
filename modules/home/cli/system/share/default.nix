@@ -20,6 +20,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
+      "oneshot"
       "pbgopy"
       "rclone"
       "syncthing"
