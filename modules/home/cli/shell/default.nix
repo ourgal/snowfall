@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "bat"
       "bfs"
       "choose"
@@ -36,6 +37,7 @@ args.module (
       "wtf"
       "yank"
       "zf"
+      # keep-sorted end
     ];
     myPkgs = [
       "fzfp"
