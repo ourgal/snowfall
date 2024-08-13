@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "miller"
+      "tidy-viewer"
       "usql"
       "xsv"
       # keep-sorted end
