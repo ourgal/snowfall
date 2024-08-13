@@ -3,7 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "baidupcs-go";
+    myPkgs = [
+      "baidupcs-go"
+      "dra"
+    ];
     nixPkgs = "libgen-cli";
     enable = [
       "aria2"
