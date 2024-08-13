@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = "whitespace-format";
     nixPkgs = [
+      # keep-sorted start
       "cachix"
       "devbox"
       "devenv"
@@ -12,7 +13,9 @@ args.module (
       "nap"
       "treefmt2"
       "universal-ctags"
+      "watchexec"
       "watchman"
+      # keep-sorted end
     ];
     progs = {
       direnv = {
@@ -20,6 +23,7 @@ args.module (
       };
     };
     enable = [
+      # keep-sorted start
       "android"
       "ansible"
       "c"
@@ -64,6 +68,7 @@ args.module (
       "web"
       "yaml"
       "zig"
+      # keep-sorted end
     ];
   }
 )
