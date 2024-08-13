@@ -9,6 +9,7 @@ args.module (
       "charm-freeze"
       "fastfetch"
       "kmon"
+      "neofetch"
       "onefetch"
       "screenkey"
       "sysz"
