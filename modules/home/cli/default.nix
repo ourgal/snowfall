@@ -4,10 +4,12 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "gnumake"
       "pipx"
       "podman"
       "podman-compose"
+      # keep-sorted end
     ];
     files = {
       ".ssh./.keep" = "";
@@ -21,6 +23,7 @@ args.module (
         sig.packages."${pkgs.system}".default
       ];
     enable = [
+      # keep-sorted start
       "AI"
       "anime"
       "audio"
@@ -46,6 +49,7 @@ args.module (
       "translate"
       "versionControl"
       "video"
+      # keep-sorted end
     ];
   }
 )
