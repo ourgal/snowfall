@@ -5,8 +5,11 @@ args.module (
     path = ./.;
     myPkgs = "fingerpaint";
     nixPkgs = [
+      # keep-sorted start
       "gimp"
+      "nomacs"
       "viewnior"
+      # keep-sorted end
     ];
     enable = "feh";
   }
