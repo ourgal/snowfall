@@ -15,6 +15,7 @@ args.module (
         "fac"
         "git-bug"
         "git-extras"
+        "git-graph"
         "gitleaks"
         "hub"
         "lefthook"
