@@ -27,7 +27,12 @@ args.module (
       "zf"
       # keep-sorted end
     ];
-    myPkgs = "zfind";
+    myPkgs = [
+      # keep-sorted start
+      "reader"
+      "zfind"
+      # keep-sorted end
+    ];
     enable = [
       # keep-sorted start
       "asciiart"
