@@ -20,6 +20,7 @@ args.module (
       "skate"
       "skim"
       "tmate"
+      "tsukae"
       "vtm"
       "wtf"
       "yank"
