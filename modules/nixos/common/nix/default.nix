@@ -62,6 +62,14 @@ let
 
     programs.nix-ld = enabled // {
       package = pkgs.nix-ld-rs;
+
+      libraries = with pkgs; [
+        gcc
+        icu
+        libcxx
+        stdenv.cc.cc.lib
+        zlib
+      ];
     };
   };
   path = ./.;
