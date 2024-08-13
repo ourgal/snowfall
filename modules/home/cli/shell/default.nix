@@ -18,6 +18,7 @@ args.module (
       "nerdfix"
       "pet"
       "poop"
+      "qrscan"
       "skate"
       "skim"
       "tmate"
