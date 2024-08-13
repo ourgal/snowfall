@@ -9,6 +9,7 @@ args.module (
       "croc"
       "dufs"
       "ffsend"
+      "miniserve"
       "nfs-utils"
       "pcp"
       "portal"
