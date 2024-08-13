@@ -3,14 +3,11 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "pot";
     nixPkgs = [
       # keep-sorted start
-      "gtt"
-      "opencc"
-      "udict"
-      "ydict"
+      "crow-translate"
       # keep-sorted end
     ];
-    enable = "translate-shell";
   }
 )

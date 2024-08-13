@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     enable = [
+      # keep-sorted start
       "anime"
       "audio"
       "browser"
@@ -15,8 +16,10 @@ args.module (
       "search"
       "system"
       "terminal"
+      "translate"
       "video"
       "xprofile"
+      # keep-sorted end
     ];
   }
 )
