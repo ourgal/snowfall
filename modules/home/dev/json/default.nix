@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "biome"
       "fx"
       "jid"
@@ -11,13 +12,17 @@ args.module (
       "jq"
       "jqp"
       "jsonfmt"
+      "miller"
       "yj"
       "yq-go"
+      # keep-sorted end
     ];
     nodePkgs = [
+      # keep-sorted start
       "fixjson"
       "prettier"
       "vscode-json-languageserver"
+      # keep-sorted end
     ];
     myPkgs = "vscode-json-language-server";
   }
