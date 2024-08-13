@@ -209,6 +209,7 @@ args.module (
     {
       path = ./.;
       nixPkgs = "gitmux";
+      myPkgs = "fzfp";
       progs = [
         {
           tmux = {

@@ -11,34 +11,17 @@ args.module (
       "coreutils-full"
       "cpu-x"
       "cyme"
-      "diskus"
       "dmidecode"
-      "du-dust"
-      "dua"
-      "duc"
-      "duf"
-      "fd"
       "file"
-      "gdu"
       "glxinfo"
-      "hck"
       "libva-utils"
-      "mmv-go"
       "pciutils"
-      "procs"
       "progress"
-      "ripgrep"
-      "rm-improved"
-      "sd"
-      "trash-cli"
-      "ugrep"
       "usbutils"
       "vulkan-tools"
       "wev"
-      "xcp"
       # keep-sorted end
     ];
     xorgPkgs = "xev";
-    enable = "eza";
   }
 )
