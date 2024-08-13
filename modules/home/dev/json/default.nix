@@ -8,6 +8,7 @@ args.module (
       "biome"
       "fx"
       "jid"
+      "jiq"
       "jnv"
       "jq"
       "jqp"
