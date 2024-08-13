@@ -26,6 +26,11 @@ args.module (
       "vscode-json-languageserver"
       # keep-sorted end
     ];
-    myPkgs = "vscode-json-language-server";
+    myPkgs = [
+      # keep-sorted start
+      "jtbl"
+      "vscode-json-language-server"
+      # keep-sorted end
+    ];
   }
 )
