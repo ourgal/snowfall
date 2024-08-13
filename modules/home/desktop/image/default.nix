@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "gimp"
       "nomacs"
+      "qview"
       "viewnior"
       # keep-sorted end
     ];
