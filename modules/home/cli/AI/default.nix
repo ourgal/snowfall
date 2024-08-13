@@ -4,9 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
-      "aichat"
+      # keep-sorted start
       "piper-tts"
       "tgpt"
+      # keep-sorted end
     ];
+    enable = "aichat";
   }
 )
