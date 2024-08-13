@@ -5,8 +5,6 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
-      "gobang"
-      "mycli"
       "usql"
       # keep-sorted end
     ];

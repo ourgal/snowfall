@@ -4,8 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "gobang"
       "litecli"
+      "usql"
+      # keep-sorted end
     ];
   }
 )

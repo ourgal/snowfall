@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "xsv";
+    nixPkgs = [
+      # keep-sorted start
+      "usql"
+      "xsv"
+      # keep-sorted end
+    ];
   }
 )
