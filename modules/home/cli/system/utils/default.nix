@@ -21,6 +21,7 @@ args.module (
       "file"
       "gdu"
       "glxinfo"
+      "hck"
       "libva-utils"
       "mmv-go"
       "pciutils"
