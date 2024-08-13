@@ -25,6 +25,7 @@ args.module (
       "pet"
       "pipes"
       "poop"
+      "pyp"
       "sad"
       "skate"
       "skim"
