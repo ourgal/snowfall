@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "lnav";
+    nixPkgs = [
+      # keep-sorted start
+      "fblog"
+      "lnav"
+      # keep-sorted end
+    ];
   }
 )
