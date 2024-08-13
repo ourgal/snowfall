@@ -4,18 +4,25 @@ args.module (
   // {
     path = ./.;
     myPkgs = [
-      "sonicradio"
+      # keep-sorted start
+      "code-radio-cli"
       "roc-switch"
+      "sonicradio"
+      # keep-sorted end
     ];
     nixPkgs = [
+      # keep-sorted start
       "id3v2"
       "pulsemixer"
+      # keep-sorted end
     ];
     enable = [
+      # keep-sorted start
       "cava"
       "mpd"
       "pipewire"
       "pyradio"
+      # keep-sorted end
     ];
   }
 )
