@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "boxes"
       "figlet"
+      "figurine"
       "genact"
       "lolcat"
       "neo"
