@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "ruplacer"
       "sad"
       "sd"
       # keep-sorted end
