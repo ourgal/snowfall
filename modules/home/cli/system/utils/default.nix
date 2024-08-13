@@ -11,6 +11,7 @@ args.module (
       "coreutils-full"
       "cpu-x"
       "cyme"
+      "diskus"
       "dmidecode"
       "du-dust"
       "dua"
