@@ -4,8 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
-      "shfmt"
+      # keep-sorted start
+      "jc"
       "shellcheck"
+      "shfmt"
+      # keep-sorted end
     ];
     nodePkgs = "bash-language-server";
   }
