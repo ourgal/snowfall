@@ -4,10 +4,13 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
+      "fast-ssh"
       "openssl"
       "sshpass"
       "sshs"
       "termscp"
+      # keep-sorted end
     ];
     enable = "ssh-tpm-agent";
     progs = {
