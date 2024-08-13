@@ -15,6 +15,7 @@ args.module (
       "fzy"
       "genact"
       "glow"
+      "halp"
       "hwatch"
       "hyperfine"
       "lolcat"
