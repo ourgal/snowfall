@@ -12,8 +12,8 @@ args.module (
         # keep-sorted start
         "bit"
         "commitizen"
-        "gex"
         "fac"
+        "gex"
         "git-bug"
         "git-extras"
         "git-graph"
