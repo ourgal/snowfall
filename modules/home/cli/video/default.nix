@@ -4,8 +4,10 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "ffmpeg-full"
       "mediainfo"
+      # keep-sorted end
     ];
   }
 )

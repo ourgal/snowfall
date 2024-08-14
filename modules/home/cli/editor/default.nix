@@ -4,10 +4,12 @@ args.module (
   // {
     path = ./.;
     enable = [
+      # keep-sorted start
       "helix"
       "kakoune"
       "nixvim"
       "vim"
+      # keep-sorted end
     ];
   }
 )

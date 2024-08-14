@@ -4,9 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "amfora"
       "circumflex"
       "w3m"
+      # keep-sorted end
     ];
   }
 )

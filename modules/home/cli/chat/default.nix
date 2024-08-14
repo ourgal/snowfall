@@ -4,8 +4,10 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "gomuks"
       "nchat"
+      # keep-sorted end
     ];
     enable = "tg";
   }
