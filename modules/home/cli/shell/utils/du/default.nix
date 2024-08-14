@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "wiper";
     nixPkgs = [
       # keep-sorted start
       "diskus"
