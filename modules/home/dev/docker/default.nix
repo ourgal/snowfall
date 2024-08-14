@@ -4,9 +4,12 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "dive"
-      "lazydocker"
       "docker-compose"
+      "lazydocker"
+      "oxker"
+      # keep-sorted end
     ];
   }
 )
