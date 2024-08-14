@@ -33,7 +33,6 @@ args.module (
       "dart"
       "deno"
       "dhall"
-      "docker"
       "dot"
       "dotnet"
       "editorconfig"
