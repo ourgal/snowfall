@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "hexabyte";
+    myPkgs = [
+      # keep-sorted start
+      "hexabyte"
+      "hexpatch"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "heh"
