@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "toolong";
     nixPkgs = [
       # keep-sorted start
       "fblog"
