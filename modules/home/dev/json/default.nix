@@ -30,6 +30,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "jtbl"
+      "otree"
       "vscode-json-language-server"
       # keep-sorted end
     ];
