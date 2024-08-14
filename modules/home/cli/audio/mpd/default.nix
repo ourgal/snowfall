@@ -4,8 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
+      "mmtc"
       "mpc-cli"
       "vimpc"
+      # keep-sorted end
     ];
     progs = {
       ncmpcpp = {
