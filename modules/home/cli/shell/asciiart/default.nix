@@ -12,6 +12,7 @@ args.module (
       "lolcat"
       "neo"
       "nyancat"
+      "peaclock"
       "pipes"
       "tmatrix"
       # keep-sorted end
