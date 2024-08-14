@@ -4,8 +4,10 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "bk"
       "cheat"
+      # keep-sorted end
     ];
   }
 )

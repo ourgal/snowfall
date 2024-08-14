@@ -4,15 +4,19 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "git-agecrypt"
       "git-credential-gopass"
       "git-crypt"
       "gopass"
+      # keep-sorted end
     ];
     pyPkgs = "names";
     enable = [
+      # keep-sorted start
       "gpg"
       "sops"
+      # keep-sorted end
     ];
   }
 )
