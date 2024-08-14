@@ -175,6 +175,7 @@ args.module (
         extrakto
         fuzzback
         pkgs.${namespace}.tmux-edgelord
+        pkgs.${namespace}.tmux-fzf-url
         jump
         tmux-thumbs
         {
