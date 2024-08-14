@@ -3,7 +3,9 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "impala";
     nixPkgs = [
+      # keep-sorted start
       "dig"
       "dogdns"
       "dstp"
@@ -15,6 +17,7 @@ args.module (
       "tcping-go"
       "whois"
       "wirelesstools"
+      # keep-sorted end
     ];
   }
 )
