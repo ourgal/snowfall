@@ -15,6 +15,7 @@ args.module (
       "sysz"
       "toolbox"
       "topgrade"
+      "ugm"
       "ventoy-bin-full"
       "wget"
       "xdotool"
