@@ -15,6 +15,7 @@ args.module (
       "jqp"
       "jsonfmt"
       "miller"
+      "visidata"
       "yj"
       "yq-go"
       # keep-sorted end
