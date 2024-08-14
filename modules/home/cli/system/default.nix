@@ -24,6 +24,7 @@ args.module (
       # keep-sorted start
       "archwiki"
       "blendr"
+      "bluetui"
       "c"
       # keep-sorted end
     ];
