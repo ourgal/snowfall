@@ -46,7 +46,6 @@ args.module (
       "k8s"
       "latex"
       "lisp"
-      "log"
       "lua"
       "markdown"
       "network"
