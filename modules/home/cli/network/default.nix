@@ -3,7 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "impala";
+    myPkgs = [
+      # keep-sorted start
+      "impala"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "dig"
