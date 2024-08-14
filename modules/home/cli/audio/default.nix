@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "code-radio-cli"
+      "radio-go-go"
       "roc-switch"
       "sonicradio"
       # keep-sorted end
