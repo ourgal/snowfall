@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "id3v2"
       "pulsemixer"
+      "scope-tui"
       # keep-sorted end
     ];
     enable = [
