@@ -10,6 +10,7 @@ args.module (
       "doge"
       "fpp"
       "fzf"
+      "fzf-make"
       "fzy"
       "glow"
       "halp"
