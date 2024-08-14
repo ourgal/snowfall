@@ -4,7 +4,9 @@ let
   inherit (lib.${namespace}) nixosModule enabled disabled;
   value = {
     networking = {
-      networkmanager = enabled;
+      networkmanager = enabled // {
+        wifi.backend = "iwd";
+      };
       # useDHCP = false;
       # useNetworkd = true;
       enableIPv6 = true;
