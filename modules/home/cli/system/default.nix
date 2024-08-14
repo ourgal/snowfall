@@ -23,6 +23,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "archwiki"
+      "blendr"
       "c"
       # keep-sorted end
     ];
