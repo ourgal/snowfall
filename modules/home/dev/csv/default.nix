@@ -11,6 +11,7 @@ args.module (
       "miller"
       "tidy-viewer"
       "usql"
+      "visidata"
       "xsv"
       # keep-sorted end
     ];

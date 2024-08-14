@@ -8,6 +8,7 @@ args.module (
       "gobang"
       "litecli"
       "usql"
+      "visidata"
       # keep-sorted end
     ];
   }
