@@ -31,6 +31,7 @@ args.module (
     ];
     myPkgs = [
       # keep-sorted start
+      "play"
       "reader"
       "zfind"
       # keep-sorted end
