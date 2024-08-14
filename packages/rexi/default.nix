@@ -1,53 +1,40 @@
-{ pkgs, ... }:
-let
-  advance-touch =
-    {
-      lib,
-      buildPythonPackage,
-      fetchFromGitHub,
-      pythonOlder,
-      poetry-core,
-      typer,
-      colorama,
-      textual,
-      pythonRelaxDepsHook,
-      ...
-    }:
+{
+  lib,
+  fetchFromGitHub,
+  python3,
+}:
 
-    buildPythonPackage rec {
-      pname = "rexi";
-      version = "1.1.3";
-      disabled = pythonOlder "3.8";
+python3.pkgs.buildPythonApplication rec {
+  pname = "rexi";
+  version = "1.1.3";
 
-      src = fetchFromGitHub {
-        owner = "royreznik";
-        repo = pname;
-        rev = "v${version}";
-        hash = "sha256-i1iHFnvuxLwMqokuJD0K8pKTJJgGbI0NT5WQ1+6lK0E=";
-      };
+  src = fetchFromGitHub {
+    owner = "royreznik";
+    repo = pname;
+    rev = "v${version}";
+    hash = "sha256-i1iHFnvuxLwMqokuJD0K8pKTJJgGbI0NT5WQ1+6lK0E=";
+  };
 
-      format = "pyproject";
+  format = "pyproject";
 
-      propagatedBuildInputs = [
-        typer
-        colorama
-        textual
-      ];
+  propagatedBuildInputs = with python3.pkgs; [
+    typer
+    colorama
+    textual
+  ];
 
-      nativeBuildInputs = [
-        poetry-core
-        pythonRelaxDepsHook
-      ];
+  nativeBuildInputs = with python3.pkgs; [
+    poetry-core
+    pythonRelaxDepsHook
+  ];
 
-      pythonRelaxDeps = true;
+  pythonRelaxDeps = true;
 
-      meta = with lib; {
-        description = "Terminal UI for Regex Testing";
-        mainProgram = "rexi";
-        homepage = "https://github.com/royreznik/rexi";
-        license = licenses.mit;
-        maintainers = with maintainers; [ zxc ];
-      };
-    };
-in
-pkgs.python3Packages.callPackage advance-touch { }
+  meta = with lib; {
+    description = "Terminal UI for Regex Testing";
+    mainProgram = "rexi";
+    homepage = "https://github.com/royreznik/rexi";
+    license = licenses.mit;
+    maintainers = with maintainers; [ zxc ];
+  };
+}
