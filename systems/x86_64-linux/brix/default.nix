@@ -98,6 +98,10 @@ in
           inherit nfs;
           version = "v0.41.0";
         };
+        pairdrop = enabled // {
+          ports = 5004;
+          version = "1.10.9";
+        };
       };
   };
 
