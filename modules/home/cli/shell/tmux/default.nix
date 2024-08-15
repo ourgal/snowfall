@@ -6,6 +6,14 @@ args.module (
     let
       inherit (pkgs) tmuxPlugins fetchFromGitHub;
       cfg = cfgHome config.${namespace} ./.;
+      termsand =
+        (fetchFromGitHub {
+          owner = "ourgal";
+          repo = "termsand";
+          rev = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
+          hash = "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb/wroGpj0=";
+        })
+        + "/sand.sh";
       baseConf = ''
         set -g default-terminal "tmux-256color"
         set -ag terminal-overrides ",xterm-256color:RGB"
@@ -110,6 +118,8 @@ args.module (
 
         # trigger copy mode by
         bind b copy-mode
+
+        bind E run-shell ${termsand}
       '';
       themeType = lib.types.enum [
         "tmux2k"
@@ -210,7 +220,12 @@ args.module (
     {
       path = ./.;
       nixPkgs = "gitmux";
-      myPkgs = "fzfp";
+      myPkgs = [
+        # keep-sorted start
+        "fzfp"
+        "termsand"
+        # keep-sorted end
+      ];
       progs = [
         {
           tmux = {
