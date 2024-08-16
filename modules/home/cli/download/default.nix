@@ -9,7 +9,12 @@ args.module (
       "dra"
       # keep-sorted end
     ];
-    nixPkgs = "libgen-cli";
+    nixPkgs = [
+      # keep-sorted start
+      "libgen-cli"
+      "tdl"
+      # keep-sorted end
+    ];
     enable = [
       # keep-sorted start
       "aria2"
