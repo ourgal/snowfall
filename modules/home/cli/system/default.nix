@@ -8,6 +8,7 @@ args.module (
       "bluetuith"
       "charm-freeze"
       "fastfetch"
+      "geekbench"
       "kmon"
       "neofetch"
       "onefetch"
