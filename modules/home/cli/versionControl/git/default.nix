@@ -8,6 +8,7 @@ args.module (
     in
     {
       path = ./.;
+      myPkgs = "geminicommit";
       nixPkgs = [
         # keep-sorted start
         "bit"
