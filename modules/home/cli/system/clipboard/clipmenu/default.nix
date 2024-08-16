@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     servs = {
       clipmenu = {
-        launcher = "fzf";
+        launcher = "rofi";
       };
     };
   }
