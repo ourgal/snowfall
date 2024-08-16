@@ -145,7 +145,11 @@ globalkeys = gears.table.join(
 
   awful.key({ modkey }, "a", function()
     os.execute("playerctl play-pause")
-  end, { description = "Player Play/Pause", group = "launcher" })
+  end, { description = "Player Play/Pause", group = "launcher" }),
+
+  awful.key({ modkey }, "c", function()
+    os.execute("clipmenu")
+  end, { description = "Clipboard history", group = "launcher" })
 )
 
 -- Bind all key numbers to tags.
