@@ -5,8 +5,10 @@ args.module (
     path = ./.;
     myPkgs = "blobdrop";
     nixPkgs = [
+      # keep-sorted start
       "brightnessctl"
       "clash-verge"
+      "clipqr"
       "fuzzel"
       "libnotify"
       "polkit"
@@ -16,8 +18,10 @@ args.module (
       "variety"
       "xclip"
       "xcolor"
+      # keep-sorted end
     ];
     enable = [
+      # keep-sorted start
       "barrier"
       "cursor"
       "dunst"
@@ -37,6 +41,7 @@ args.module (
       "scream"
       "sxhkd"
       "xbanish"
+      # keep-sorted end
     ];
     value = with args; {
       colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
