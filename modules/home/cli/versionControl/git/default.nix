@@ -8,7 +8,6 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "geminicommit";
       nixPkgs = [
         # keep-sorted start
         "bit"
@@ -26,6 +25,7 @@ args.module (
         "tig"
         # keep-sorted end
       ];
+      enable = "geminicommit";
       progs = [
         {
           git = {
