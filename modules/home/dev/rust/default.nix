@@ -4,8 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
-      "rustc"
+      # keep-sorted start
       "cargo"
+      "rustc"
+      "rustycli"
+      # keep-sorted end
     ];
     files = {
       ".cargo/config.toml" = ''
