@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
+      "clipcat"
       "clipmenu"
       "clipse"
       # keep-sorted end
