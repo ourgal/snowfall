@@ -3,6 +3,15 @@ args.module (
   args
   // {
     path = ./.;
+    progs = with args; {
+      fish = {
+        functions = {
+          stc = {
+            body = "${pkgs.stc-cli}/bin/stc --homedir=${config.xdg.configHome}/syncthing $argv";
+          };
+        };
+      };
+    };
     servs = {
       syncthing = {
         extraOptions = [ "--no-default-folder" ];
