@@ -45,6 +45,7 @@ args.module (
       "carapace"
       "cod"
       "fish"
+      "lazycli"
       "lesspipe"
       "navi"
       "nushell"
