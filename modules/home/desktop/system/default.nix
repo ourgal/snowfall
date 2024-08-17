@@ -23,6 +23,7 @@ args.module (
     enable = [
       # keep-sorted start
       "barrier"
+      "clipboard"
       "cursor"
       "dunst"
       "espanso"

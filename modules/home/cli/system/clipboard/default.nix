@@ -3,13 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
-      # keep-sorted start
-      "clipcat"
-      "clipmenu"
-      "clipse"
-      # keep-sorted end
-    ];
+    enable = "clipse";
     nixPkgs = "clipboard-jh";
   }
 )
