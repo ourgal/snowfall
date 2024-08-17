@@ -148,7 +148,7 @@ globalkeys = gears.table.join(
   end, { description = "Player Play/Pause", group = "launcher" }),
 
   awful.key({ modkey }, "c", function()
-    os.execute("clipmenu")
+    os.execute("clipcat-menu")
   end, { description = "Clipboard history", group = "launcher" })
 )
 
