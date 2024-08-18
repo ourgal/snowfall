@@ -102,6 +102,11 @@ in
           ports = 5004;
           version = "1.10.9";
         };
+        rustypaste = enabled // {
+          ports = 8000;
+          inherit nfs;
+          version = "sha-1d5a9c6";
+        };
       };
   };
 
