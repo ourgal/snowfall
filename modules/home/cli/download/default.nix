@@ -9,6 +9,7 @@ args.module (
       "dra"
       # keep-sorted end
     ];
+    pyPkgs = "downloader-cli";
     nixPkgs = [
       # keep-sorted start
       "libgen-cli"
