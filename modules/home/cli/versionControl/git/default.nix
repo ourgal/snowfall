@@ -18,6 +18,7 @@ args.module (
         "git-extras"
         "git-graph"
         "gitleaks"
+        "gitmoji-cli"
         "hub"
         "lefthook"
         "mob"
