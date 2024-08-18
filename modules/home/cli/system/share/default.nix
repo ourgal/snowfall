@@ -17,6 +17,7 @@ args.module (
       "qrcp"
       "rsync"
       "sshfs"
+      "webwormhole"
       # keep-sorted end
     ];
     enable = [
