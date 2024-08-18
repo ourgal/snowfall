@@ -1,0 +1,11 @@
+[server]
+address = "http://rustypaste.zxc.cn"
+#auth_token = ""
+#delete_token = ""
+
+[paste]
+oneshot = false
+#expire = "10min"
+
+[style]
+prettify = true

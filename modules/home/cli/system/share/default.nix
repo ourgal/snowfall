@@ -23,6 +23,7 @@ args.module (
       "oneshot"
       "pbgopy"
       "rclone"
+      "rustypaste-cli"
       "syncthing"
       # keep-sorted end
     ];
