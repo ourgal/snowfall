@@ -9,6 +9,7 @@ args.module (
       "croc"
       "dufs"
       "ffsend"
+      "magic-wormhole-rs"
       "miniserve"
       "nfs-utils"
       "pcp"
