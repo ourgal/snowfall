@@ -21,6 +21,7 @@ args.module (
         "gitmoji-cli"
         "hub"
         "lefthook"
+        "license-cli"
         "mob"
         "pre-commit"
         "tig"
