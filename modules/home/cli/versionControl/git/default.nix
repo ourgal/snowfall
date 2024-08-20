@@ -11,6 +11,7 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "git-fame"
+        "git-toolbelt"
         "gitcs"
         # keep-sorted end
       ];
