@@ -8,7 +8,12 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "gitcs";
+      myPkgs = [
+        # keep-sorted start
+        "git-fame"
+        "gitcs"
+        # keep-sorted end
+      ];
       nixPkgs = [
         # keep-sorted start
         "bit"
@@ -78,6 +83,7 @@ args.module (
             aliases = {
               bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
               heat = "!${pkgs.${namespace}.git-heatgrid}/bin/git-heatgrid";
+              fame = "!${pkgs.${namespace}.git-fame}/bin/git-fame";
             };
           };
         }
