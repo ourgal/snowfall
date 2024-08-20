@@ -22,6 +22,7 @@ args.module (
         "gitleaks"
         "gitmoji-cli"
         "gitnr"
+        "gitstats"
         "hub"
         "lefthook"
         "license-cli"
