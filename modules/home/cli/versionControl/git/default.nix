@@ -22,6 +22,7 @@ args.module (
         "gex"
         "git-bug"
         "git-cliff"
+        "git-dive"
         "git-extras"
         "git-graph"
         "gitleaks"
