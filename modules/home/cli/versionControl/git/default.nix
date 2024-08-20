@@ -8,6 +8,7 @@ args.module (
     in
     {
       path = ./.;
+      myPkgs = "gitcs";
       nixPkgs = [
         # keep-sorted start
         "bit"
