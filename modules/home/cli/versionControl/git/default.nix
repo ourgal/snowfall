@@ -28,6 +28,7 @@ args.module (
         "git-dive"
         "git-extras"
         "git-graph"
+        "git-upstream"
         "gitleaks"
         "gitmoji-cli"
         "gitnr"
