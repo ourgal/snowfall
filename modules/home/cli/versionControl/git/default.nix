@@ -15,6 +15,7 @@ args.module (
         "fac"
         "gex"
         "git-bug"
+        "git-cliff"
         "git-extras"
         "git-graph"
         "gitleaks"
