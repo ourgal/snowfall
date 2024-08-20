@@ -24,6 +24,7 @@ args.module (
         "git-absorb"
         "git-backdate"
         "git-bars"
+        "git-big-picture"
         "git-bug"
         "git-cliff"
         "git-dive"
