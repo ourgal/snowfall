@@ -20,6 +20,7 @@ args.module (
         "commitizen"
         "fac"
         "gex"
+        "git-absorb"
         "git-bars"
         "git-bug"
         "git-cliff"
