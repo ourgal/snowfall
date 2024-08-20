@@ -30,6 +30,7 @@ args.module (
         "git-extras"
         "git-graph"
         "git-instafix"
+        "git-quick-stats"
         "git-upstream"
         "gitleaks"
         "gitmoji-cli"
