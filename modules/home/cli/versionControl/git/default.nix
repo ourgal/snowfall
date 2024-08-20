@@ -22,6 +22,7 @@ args.module (
         "fac"
         "gex"
         "git-absorb"
+        "git-backdate"
         "git-bars"
         "git-bug"
         "git-cliff"
