@@ -25,6 +25,7 @@ args.module (
         "git-backdate"
         "git-bars"
         "git-big-picture"
+        "git-branchless"
         "git-bug"
         "git-cliff"
         "git-dive"
