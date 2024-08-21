@@ -110,6 +110,12 @@ in
           inherit nfs;
           version = "sha-1d5a9c6";
         };
+        vaultwarden = enabled // {
+          ports = 5005;
+          inherit nfs;
+          version = "1.32.0-alpine";
+          duckdns = enabled;
+        };
       };
   };
 
