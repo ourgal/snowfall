@@ -41,7 +41,9 @@ with lib;
       token,
     }:
     let
-      containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
+      containerEnabled = attrsets.filterAttrs (
+        n: v: (n != "enable") && (v.enable == true) && (v.duckdns.enable == true)
+      ) docker;
       configs = attrsets.foldlAttrs (
         acc: name: value:
         let

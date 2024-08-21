@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, namespace, ... }:
 rec {
   dockerPorts =
     host: container:
@@ -58,12 +58,13 @@ rec {
 
   arionProj =
     {
-      name,
+      cfg,
+      name ? cfg.name,
       projectName ? name,
       image,
       imageHost ? "docker.io",
-      version ? "latest",
-      ports ? [ ],
+      version ? cfg.version,
+      ports ? cfg.ports,
       env ? { },
       containerPorts ? [ ],
       config ? "",
@@ -75,8 +76,8 @@ rec {
       user ? null,
       cmd ? [ ],
       healthcheck ? { },
-      nfs ? "",
-      nfsPath ? "docker",
+      nfs ? cfg.nfs,
+      nfsPath ? cfg.nfsPath,
     }:
     let
       convert2List =
@@ -178,4 +179,31 @@ rec {
 
   arionProjs =
     args: builtins.foldl' (acc: a: lib.attrsets.recursiveUpdate (arionProj a) acc) { } args;
+
+  dockerOpts =
+    {
+      name,
+      ports ? [ ],
+      nfs ? "",
+      nfsPath ? "/docker",
+      version ? "latest",
+      mount ? "",
+    }:
+    let
+      mkOpt' = lib.${namespace}.mkOpt';
+      str = lib.types.str;
+      port = lib.types.port;
+      either = lib.types.either;
+      listOf = lib.types.listOf;
+      switch = lib.${namespace}.switch;
+    in
+    {
+      name = mkOpt' str name;
+      ports = mkOpt' (either port (listOf port)) ports;
+      nfs = mkOpt' str nfs;
+      nfsPath = mkOpt' str nfsPath;
+      version = mkOpt' str version;
+      mount = mkOpt' str mount;
+      duckdns = switch;
+    };
 }

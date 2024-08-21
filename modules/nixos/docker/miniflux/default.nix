@@ -4,52 +4,41 @@ let
   inherit (lib.${namespace})
     nixosModule
     cfgNixos
-    mkOpt'
     arionProjs
+    dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   dbPass = args.lib.strings.fileContents ./dbPass.key;
   adminPass = args.lib.strings.fileContents ./adminPass.key;
-  value =
-    with cfg;
-    arionProjs [
-      {
-        inherit
-          name
-          version
-          ports
-          nfs
-          nfsPath
-          ;
-        image = "miniflux/miniflux";
-        config = "/config";
-        env = {
-          DATABASE_URL = "postgres://miniflux:${dbPass}@${name}_db/miniflux?sslmode=disable";
-          RUN_MIGRATIONS = 1;
-          CREATE_ADMIN = 1;
-          ADMIN_USERNAME = "fairever";
-          ADMIN_PASSWORD = adminPass;
-          POLLING_PARSING_ERROR_LIMIT = 0;
-        };
-        depends = [ "${name}_db" ];
-        containerPorts = 8080;
-      }
-      {
-        inherit name nfs nfsPath;
-        image = "postgres";
-        version = "15";
-        env = {
-          POSTGRES_PASSWORD = dbPass;
-        };
-      }
-    ];
-  extraOpts = with lib.types; {
-    name = mkOpt' str "miniflux";
-    ports = mkOpt' port 8080;
-    nfs = mkOpt' str "";
-    nfsPath = mkOpt' str "/docker";
-    version = mkOpt' str "latest";
-  };
+  value = arionProjs [
+    {
+      inherit cfg;
+      image = "miniflux/miniflux";
+      config = "/config";
+      env = {
+        DATABASE_URL = "postgres://miniflux:${dbPass}@${cfg.name}_db/miniflux?sslmode=disable";
+        RUN_MIGRATIONS = 1;
+        CREATE_ADMIN = 1;
+        ADMIN_USERNAME = "fairever";
+        ADMIN_PASSWORD = adminPass;
+        POLLING_PARSING_ERROR_LIMIT = 0;
+      };
+      depends = [ "${cfg.name}_db" ];
+      containerPorts = ports;
+    }
+    {
+      inherit cfg;
+      ports = [ ];
+      image = "postgres";
+      version = "15";
+      env = {
+        POSTGRES_PASSWORD = dbPass;
+      };
+    }
+  ];
+  name = "miniflux";
+  ports = 8080;
+  extraOpts = dockerOpts { inherit name ports; };
   path = ./.;
   _args = {
     inherit
