@@ -4,15 +4,20 @@ args.module (
   // {
     path = ./.;
     pyPkgs = [
+      # keep-sorted start
       "black"
+      "ipython"
       "ptpython"
       "websockets"
-      # "ipython"
+      # keep-sorted end
     ];
     nixPkgs = [
-      "rye"
-      "pyright"
+      # keep-sorted start
       "poetry"
+      "pyright"
+      "rye"
+      "uv"
+      # keep-sorted end
     ];
     progs = {
       ruff = {
