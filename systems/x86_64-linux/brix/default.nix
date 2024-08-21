@@ -20,6 +20,7 @@ in
       xcaddy = enabled;
     };
     logrotate = enabled;
+    soft-serve = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -42,16 +43,6 @@ in
           ports = 1066;
           inherit nfs;
           version = "latest";
-        };
-        soft-serve = enabled // {
-          ports = [
-            23232
-            23231
-            23233
-            9418
-          ];
-          inherit nfs;
-          version = "v0.7.4";
         };
         atuin = enabled // {
           ports = 8888;
