@@ -4,27 +4,23 @@ let
   inherit (lib.${namespace})
     nixosModule
     cfgNixos
-    mkOpt'
     arionProj
+    dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value =
-    with cfg;
-    arionProj {
-      inherit name version ports;
-      image = "linuxserver/pairdrop";
-      env = {
-        PUID = 1000;
-        PGID = 1000;
-        TZ = "Asia/Shanghai";
-      };
-      containerPorts = 3000;
+  value = arionProj {
+    inherit cfg;
+    image = "linuxserver/pairdrop";
+    env = {
+      PUID = 1000;
+      PGID = 1000;
+      TZ = "Asia/Shanghai";
     };
-  extraOpts = with lib.types; {
-    name = mkOpt' str "pairdrop";
-    ports = mkOpt' port 3000;
-    version = mkOpt' str "latest";
+    containerPorts = ports;
   };
+  name = "pairdrop";
+  ports = 3000;
+  extraOpts = dockerOpts { inherit name ports; };
   path = ./.;
   _args = {
     inherit

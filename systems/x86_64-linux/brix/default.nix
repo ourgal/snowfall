@@ -16,7 +16,9 @@ in
     boot.systemd = enabled;
     common = enabled;
     nfs = enabled;
-    caddy = enabled;
+    caddy = enabled // {
+      xcaddy = enabled;
+    };
     logrotate = enabled;
     firewall = enabledList [
       "docker"
@@ -69,6 +71,7 @@ in
           ports = 5244;
           inherit nfs;
           version = "v3.35.0";
+          duckdns = enabled;
         };
         flaresolverr = enabled // {
           ports = 8191;

@@ -4,40 +4,28 @@ let
   inherit (lib.${namespace})
     nixosModule
     cfgNixos
-    mkOpt'
     arionProj
+    dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
   authCode = lib.strings.fileContents ./authCode.key;
-  value =
-    with cfg;
-    arionProj {
-      inherit
-        name
-        version
-        ports
-        nfs
-        nfsPath
-        ;
-      image = "b3log/siyuan";
-      config = "/siyuan/workspace";
-      user = "1000:100";
-      cmd = [
-        "--workspace=/siyuan/workspace/"
-        "--accessAuthCode=${authCode}"
-      ];
-      env = {
-        TZ = "Asia/Shanghai";
-      };
-      containerPorts = 6806;
+  value = arionProj {
+    inherit cfg;
+    image = "b3log/siyuan";
+    config = "/siyuan/workspace";
+    user = "1000:100";
+    cmd = [
+      "--workspace=/siyuan/workspace/"
+      "--accessAuthCode=${authCode}"
+    ];
+    env = {
+      TZ = "Asia/Shanghai";
     };
-  extraOpts = with lib.types; {
-    name = mkOpt' str "siyuan";
-    ports = mkOpt' port 6806;
-    nfs = mkOpt' str "";
-    nfsPath = mkOpt' str "/docker";
-    version = mkOpt' str "latest";
+    containerPorts = ports;
   };
+  name = "siyuan";
+  ports = 6806;
+  extraOpts = dockerOpts { inherit name ports; };
   path = ./.;
   _args = {
     inherit
