@@ -51,6 +51,7 @@ args.module (
       "navi"
       "nushell"
       "ov"
+      "rbw"
       "serpl"
       "starship"
       "string"
