@@ -18,6 +18,7 @@ args.module (
       "mprocs"
       "nerdfix"
       "pet"
+      "pinentry-all"
       "poop"
       "qrscan"
       "skate"
