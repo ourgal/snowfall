@@ -21,6 +21,7 @@ in
     };
     logrotate = enabled;
     soft-serve = enabled;
+    atuin = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -43,11 +44,6 @@ in
           ports = 1066;
           inherit nfs;
           version = "latest";
-        };
-        atuin = enabled // {
-          ports = 8888;
-          inherit nfs;
-          version = "v18.3.0";
         };
         syncthing = enabled // {
           ports = [
