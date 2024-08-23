@@ -14,15 +14,19 @@ args.module (
     ];
     enable = "ssh-tpm-agent";
     progs = {
-      ssh = {
-        matchBlocks = {
-          soft = {
-            host = "soft";
-            hostname = "brix.local";
-            port = 23231;
-          };
+      ssh =
+        let
+          inherit (args.lib.${args.namespace}) mkSshConfig;
+        in
+        {
+          matchBlocks = {
+            soft = {
+              host = "soft";
+              hostname = "brix.local";
+              port = 23231;
+            };
+          } // mkSshConfig;
         };
-      };
     };
   }
 )
