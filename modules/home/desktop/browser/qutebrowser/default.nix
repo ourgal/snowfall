@@ -35,6 +35,7 @@ args.module (
             "d" = "forward";
             "b" = "cmd-set-text -s :quickmark-load -t ";
             "B" = "cmd-set-text -s :open -t dict ";
+            "e" = "cmd-set-text -s :open {url}";
             # "." = "search-next";
             # "," = "search-prev";
             ">" = "tab-move +";
