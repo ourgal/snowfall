@@ -4,6 +4,9 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "clipcat";
+    confs = {
+      clipcat = ./clipcatd.toml;
+    };
     value = with args; {
       systemd.user.services.clipcat = {
         Unit = {
