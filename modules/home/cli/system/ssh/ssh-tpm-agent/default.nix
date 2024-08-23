@@ -26,7 +26,10 @@ args.module (
           };
 
           Service = {
-            Environment = "SSH_AUTH_SOCK=%t/ssh-tpm-agent.sock";
+            Environment = [
+              "SSH_ASKPASS=${args.pkgs.x11_ssh_askpass}/libexec/x11-ssh-askpass"
+              "SSH_AUTH_SOCK=%t/ssh-tpm-agent.sock"
+            ];
             ExecStart = "${ssh-tpm-agent}/bin/ssh-tpm-agent";
             PassEnvironment = "SSH_AGENT_PID";
             SuccessExitStatus = 2;
