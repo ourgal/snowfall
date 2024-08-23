@@ -27,6 +27,10 @@ in
       surfaceTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMxVxA1nDOq6viqme5MgNLfhIK4zDt6zQO9fKd7TmHmTV09s6ps7s3awZW9DRmX7owxWryeI/Qp/Rr7RN19fsUc=";
       airTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD49nOsRKfMRDHoFAhj6sEFcgOfn+1q/5R5HX5tAs/VnzXBaq7h/9j0o88o8txh+j52ToRdWRMz+yDoF1gepUlw=";
     };
+    duckdns = {
+      token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
+      domain = mkOpt' str (lib.strings.fileContents ./duckdns_domain.key);
+    };
   };
 
   config = mkIf (isString cfg.name && isString cfg.host && isAttrs cfg.sshKeys) {

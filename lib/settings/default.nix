@@ -4,9 +4,7 @@ let
     "air"
     "brix"
     "home"
-    "nuc"
     "surface"
-    "tower"
   ];
   laptops = [
     "air"
@@ -17,10 +15,18 @@ let
     "home"
     "surface"
   ];
+  servers = {
+    syncthing = [ "brix" ];
+  };
 in
 {
   settings = {
-    inherit allHosts laptops desktops;
+    inherit
+      allHosts
+      laptops
+      desktops
+      servers
+      ;
     hostType = lib.types.enum allHosts;
   };
   homeSpecialArgs =
