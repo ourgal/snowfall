@@ -123,6 +123,7 @@
         catppuccin.nixosModules.catppuccin
         disko.nixosModules.disko
         arion.nixosModules.arion
+        sops-nix.nixosModules.sops
       ];
 
       homes.modules = with inputs; [

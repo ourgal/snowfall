@@ -17,8 +17,7 @@ let
   cfg = cfgNixos config.${namespace} ./.;
   docker = config.${namespace}.docker;
   host = "brix.local";
-  token = lib.strings.fileContents ./token.key;
-  domain = lib.strings.fileContents ./domain.key;
+  inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
       "${builtins.fetchurl {
