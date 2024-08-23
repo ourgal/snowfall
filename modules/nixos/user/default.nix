@@ -21,11 +21,11 @@ in
     name = mkOpt' str "zxc";
     host = mkOpt' settings.hostType null;
     sshKeys = mkOpt' attrs {
-      home = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKh/IvmV+xANBHNefAhW395MyRG2Z9gjg+1Wj7gr15TQ";
-      surface = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7yaID+Y+VigvaMEE+DmWXvzk1cpUckTM8HNkt/e2TS";
-      homeTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN1qDy5JZkarq9GWtlsl54k9ppze5kDxQN4f5zoZAynslHdS8r5K2CTiCeL/e2+O115HCDMo4+3KIq0sVLzfNm4=";
-      surfaceTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMxVxA1nDOq6viqme5MgNLfhIK4zDt6zQO9fKd7TmHmTV09s6ps7s3awZW9DRmX7owxWryeI/Qp/Rr7RN19fsUc=";
-      airTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD49nOsRKfMRDHoFAhj6sEFcgOfn+1q/5R5HX5tAs/VnzXBaq7h/9j0o88o8txh+j52ToRdWRMz+yDoF1gepUlw=";
+      home = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKh/IvmV+xANBHNefAhW395MyRG2Z9gjg+1Wj7gr15TQ zxc@home";
+      surface = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7yaID+Y+VigvaMEE+DmWXvzk1cpUckTM8HNkt/e2TS zxc@surface";
+      homeTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKXfKLJn7V0doSMw/B9c06hHuC4QyUoqXBeHOVBSUzikK8Mx05KTZ/vP56oRLufycEWh231UlRNNT/tAJxUGXG4= zxc@home";
+      surfaceTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK4Vmz7OBbHKVXZPeJ9AD2H4UPbogSDn2qU14ZDEiShu2cdnBxM1VT4hye3kLvd5cGv0rCzeswzhpy00YRItiYg= zxc@surface";
+      airTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDzUqUSlLW5aVxSYjuE4FSniaKl5S3KmFO1V58lLyJh9WddEwqH/phTlxKA8KWRHDFdEge96LVHM6t/aeLZb52c= zxc@air";
     };
     duckdns = {
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
