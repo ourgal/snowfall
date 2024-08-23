@@ -18,6 +18,7 @@ in
       gpu.nvidia = enabled;
       autorandr.home = enabled;
       firewall = enabledList [
+        # keep-sorted start
         "aria2"
         "barrier"
         "dufs"
@@ -28,9 +29,11 @@ in
         "scream"
         "syncthing"
         "transmission"
+        # keep-sorted end
       ];
     }
     // enabledList [
+      # keep-sorted start
       "adb"
       "appimage"
       "audio"
@@ -45,8 +48,11 @@ in
       "nfsMount"
       "nh"
       "power"
+      "sops-nix"
+      "syncthing"
       "tpm"
       "udisks2"
+      # keep-sorted end
     ];
 
   snowfallorg.users.${user}.home = disabled;

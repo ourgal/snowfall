@@ -15,6 +15,7 @@ in
     user.host = "brix";
     boot.systemd = enabled;
     common = enabled;
+    sops-nix = enabled;
     nfs = enabled;
     caddy = enabled // {
       xcaddy = enabled;
@@ -22,11 +23,11 @@ in
     logrotate = enabled;
     soft-serve = enabled;
     atuin = enabled;
+    syncthing = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
       "nfs"
-      "syncthing"
     ];
     docker =
       let
@@ -44,15 +45,6 @@ in
           ports = 1066;
           inherit nfs;
           version = "latest";
-        };
-        syncthing = enabled // {
-          ports = [
-            8384
-            22000
-            21027
-          ];
-          inherit nfs;
-          version = "version-v1.27.9";
         };
         alist = enabled // {
           ports = 5244;
