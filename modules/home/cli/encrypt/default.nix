@@ -9,6 +9,7 @@ args.module (
       "git-credential-gopass"
       "git-crypt"
       "gopass"
+      "ssh-to-age"
       # keep-sorted end
     ];
     pyPkgs = "names";
