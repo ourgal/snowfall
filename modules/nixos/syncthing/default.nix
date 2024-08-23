@@ -45,6 +45,7 @@ let
       vim = desktops ++ syncthing;
       books = [ "home" ] ++ syncthing;
       wenku = [ "home" ] ++ syncthing;
+      linovel = [ "home" ] ++ syncthing;
     };
   value = {
     sops.secrets."syncthing/${host}/key".owner = user;
