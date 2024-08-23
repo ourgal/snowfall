@@ -14,10 +14,12 @@
           host,
           hosts ? [ ],
         }:
+        let
+          devices = if (builtins.elem host hosts) then builtins.filter (e: e != host) hosts else [ ];
+        in
         {
           path = "${dataDir}/${name}";
-          devices = builtins.filter (e: e != host) hosts;
-
+          inherit devices;
         };
     in
     lib.attrsets.mapAttrs (
