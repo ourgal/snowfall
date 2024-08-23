@@ -1,0 +1,15 @@
+keys:
+  - &primary age13wh4kyz2q9u5rnq44nh73pvnx3n2eztj7v0rypyxv2442laztugslduhg9
+  - &brix age1whqt5sysaj267dt92hcwvlvg5uet62ukt974g693473n7h24ugwqjgq002
+  - &home age1wwpqkge6wjlphheul2hajdh56up9jv0yrnpcufwucy0fwr3nguxsavaewa
+  - &air age1x9gcqpe39uf0x5fa5fx0p4w93uw258g4rkddqfv0xtjjn2mgwexqdksaf0
+  - &surface age1pz49xyuk4t2sxrfd8thlm3ezy94j08psd543ykx0u257evvtwd3s0p3fsr
+creation_rules:
+  - path_regex: secrets/zxc/default.yaml
+    key_groups:
+      - age:
+          - *primary
+          - *brix
+          - *home
+          - *air
+          - *surface

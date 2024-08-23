@@ -1,29 +1,33 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    progs = with args; {
-      fish = {
-        functions = {
-          stc = {
-            body = "${pkgs.stc-cli}/bin/stc --homedir=${config.xdg.configHome}/syncthing $argv";
+  // (
+    let
+      inherit (args)
+        config
+        lib
+        pkgs
+        namespace
+        ;
+      inherit (pkgs) stc-cli;
+      inherit (lib.${namespace}) switch cfgHome;
+      inherit (config.xdg) configHome dataHome;
+      ln = config.lib.file.mkOutOfStoreSymlink;
+      sync = "${dataHome}/syncthing";
+      cfg = cfgHome config.${namespace} ./.;
+    in
+    {
+      path = ./.;
+      progs = {
+        fish = {
+          functions = {
+            stc = {
+              body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
+            };
           };
         };
       };
-    };
-    servs = {
-      syncthing = {
-        extraOptions = [ "--no-default-folder" ];
-      };
-    };
-    value =
-      with args;
-      let
-        sync = "${config.xdg.dataHome}/syncthing";
-        ln = config.lib.file.mkOutOfStoreSymlink;
-      in
-      {
+      value = {
         home.file = {
           ".vim".source = ln "${sync}/vim";
         };
@@ -39,6 +43,14 @@ args.module (
             nap.source = ln "${sync}/nap";
           };
         };
+        services.syncthing = {
+          enable = cfg.service.enable;
+          extraOptions = [ "--no-default-folder" ];
+        };
       };
-  }
+      extraOpts = {
+        service = switch;
+      };
+    }
+  )
 )
