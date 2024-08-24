@@ -26,7 +26,7 @@ args.module (
 
           urls-source "miniflux"
           miniflux-url "http://miniflux.zxc.cn/"
-          miniflux-login "fairever"
+          miniflux-login "miniflux"
           miniflux-password "${lib.strings.fileContents ./password.key}"
         '';
       };
