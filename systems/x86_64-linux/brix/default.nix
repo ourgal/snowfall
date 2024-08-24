@@ -24,6 +24,7 @@ in
     soft-serve = enabled;
     atuin = enabled;
     syncthing = enabled;
+    ariang = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -55,10 +56,6 @@ in
         flaresolverr = enabled // {
           ports = 8191;
           version = "v3.3.21";
-        };
-        ariang = enabled // {
-          ports = 8080;
-          version = "1.3.7";
         };
         kavita = enabled // {
           ports = 5001;
