@@ -26,6 +26,7 @@ in
     syncthing = enabled;
     ariang = enabled;
     dufs = enabled;
+    pairdrop = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -72,10 +73,6 @@ in
           ports = 8923;
           inherit nfs;
           version = "20240210";
-        };
-        pairdrop = enabled // {
-          ports = 5004;
-          version = "1.10.9";
         };
         rustypaste = enabled // {
           ports = 8000;
