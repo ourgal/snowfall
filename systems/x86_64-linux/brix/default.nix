@@ -27,6 +27,7 @@ in
     ariang = enabled;
     dufs = enabled;
     pairdrop = enabled;
+    rustypaste = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -73,11 +74,6 @@ in
           ports = 8923;
           inherit nfs;
           version = "20240210";
-        };
-        rustypaste = enabled // {
-          ports = 8000;
-          inherit nfs;
-          version = "sha-1d5a9c6";
         };
         vaultwarden = enabled // {
           ports = 5005;
