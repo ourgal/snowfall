@@ -25,7 +25,6 @@ in
     atuin = enabled;
     syncthing = enabled;
     ariang = enabled;
-    kavita = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -34,6 +33,7 @@ in
     docker =
       let
         nfs = "brix.local";
+        mount = "/home/${user}/.local/share/syncthing";
       in
       enabled
       // {
@@ -56,6 +56,11 @@ in
         flaresolverr = enabled // {
           ports = 8191;
           version = "v3.3.21";
+        };
+        kavita = enabled // {
+          ports = 5000;
+          inherit nfs mount;
+          version = "0.8.2";
         };
         miniflux = enabled // {
           ports = 5002;
