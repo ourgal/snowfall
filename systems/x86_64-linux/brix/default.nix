@@ -25,6 +25,7 @@ in
     atuin = enabled;
     syncthing = enabled;
     ariang = enabled;
+    dufs = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -71,11 +72,6 @@ in
           ports = 8923;
           inherit nfs;
           version = "20240210";
-        };
-        dufs = enabled // {
-          ports = 5003;
-          inherit nfs;
-          version = "v0.41.0";
         };
         pairdrop = enabled // {
           ports = 5004;
