@@ -61,12 +61,12 @@ in
           version = "v3.3.21";
         };
         kavita = enabled // {
-          ports = 5000;
+          ports = 6000;
           inherit nfs mount;
           version = "0.8.2";
         };
         miniflux = enabled // {
-          ports = 5002;
+          ports = 6002;
           inherit nfs;
           version = "2.1.4";
         };
@@ -76,7 +76,7 @@ in
           version = "20240210";
         };
         vaultwarden = enabled // {
-          ports = 5005;
+          ports = 6005;
           inherit nfs;
           version = "1.32.0-alpine";
           duckdns = enabled;
