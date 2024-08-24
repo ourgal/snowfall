@@ -28,6 +28,7 @@ in
     dufs = enabled;
     pairdrop = enabled;
     rustypaste = enabled;
+    miniflux = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -64,11 +65,6 @@ in
           ports = 6000;
           inherit nfs mount;
           version = "0.8.2";
-        };
-        miniflux = enabled // {
-          ports = 6002;
-          inherit nfs;
-          version = "2.1.4";
         };
         qd = enabled // {
           ports = 8923;
