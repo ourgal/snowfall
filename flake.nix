@@ -134,6 +134,7 @@
         nix-index-database.hmModules.nix-index
         catppuccin.homeManagerModules.catppuccin
         nixvim.homeManagerModules.nixvim
+        nyaa.homeManagerModule
       ];
 
       homes.users = homeSpecialArgsFinal;

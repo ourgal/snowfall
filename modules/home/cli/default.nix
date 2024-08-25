@@ -19,7 +19,6 @@ args.module (
       with args.inputs;
       [
         compose2nix.packages."${pkgs.system}".default
-        nyaa.packages."${pkgs.system}".default
         sig.packages."${pkgs.system}".default
       ];
     enable = [
