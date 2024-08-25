@@ -14,13 +14,7 @@ args.module (
     files = {
       ".ssh./.keep" = "";
     };
-    inputPkgs =
-      with args;
-      with args.inputs;
-      [
-        compose2nix.packages."${pkgs.system}".default
-        sig.packages."${pkgs.system}".default
-      ];
+    inputPkgs = with args; with args.inputs; [ compose2nix.packages."${pkgs.system}".default ];
     enable = [
       # keep-sorted start
       "AI"
