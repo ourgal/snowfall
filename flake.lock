@@ -178,26 +178,6 @@
         "type": "github"
       }
     },
-    "compose2nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1720032541,
-        "narHash": "sha256-PqBjivVCJS3qUXVBMeTLj03OlY2E5/TfJssd/p2m8js=",
-        "owner": "aksiksi",
-        "repo": "compose2nix",
-        "rev": "923f6bc058118f76e69ed96332e40a472d8fd702",
-        "type": "github"
-      },
-      "original": {
-        "owner": "aksiksi",
-        "repo": "compose2nix",
-        "type": "github"
-      }
-    },
     "crate2nix": {
       "inputs": {
         "cachix": "cachix",
@@ -2206,7 +2186,6 @@
         "aagl": "aagl",
         "arion": "arion",
         "catppuccin": "catppuccin",
-        "compose2nix": "compose2nix",
         "deploy-rs": "deploy-rs",
         "disko": "disko",
         "home-manager": "home-manager",
