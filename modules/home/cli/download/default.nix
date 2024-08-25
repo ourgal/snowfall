@@ -20,6 +20,7 @@ args.module (
       # keep-sorted start
       "aria2"
       "eget"
+      "nyaa"
       "transmission"
       "yt-dlp"
       # keep-sorted end
