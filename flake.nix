@@ -43,7 +43,6 @@
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sig.url = "github:ynqa/sig";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     snowfall-flake = {
       url = "github:snowfallorg/flake";

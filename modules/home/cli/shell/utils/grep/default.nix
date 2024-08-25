@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "sig";
     nixPkgs = [
       # keep-sorted start
       "ripgrep"
