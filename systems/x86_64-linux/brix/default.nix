@@ -30,6 +30,7 @@ in
     rustypaste = enabled;
     miniflux = enabled;
     kavita = enabled;
+    vaultwarden = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -65,12 +66,6 @@ in
           ports = 8923;
           inherit nfs;
           version = "20240210";
-        };
-        vaultwarden = enabled // {
-          ports = 6005;
-          inherit nfs;
-          version = "1.32.0-alpine";
-          duckdns = enabled;
         };
       };
   };
