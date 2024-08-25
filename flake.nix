@@ -35,10 +35,6 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    compose2nix = {
-      url = "github:aksiksi/compose2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nyaa = {
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";

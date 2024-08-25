@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "compose2nix";
     nixPkgs = [
       # keep-sorted start
       "dive"
