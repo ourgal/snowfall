@@ -29,6 +29,7 @@ in
     pairdrop = enabled;
     rustypaste = enabled;
     miniflux = enabled;
+    kavita = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -37,7 +38,6 @@ in
     docker =
       let
         nfs = "brix.local";
-        mount = "/home/${user}/.local/share/syncthing";
       in
       enabled
       // {
@@ -60,11 +60,6 @@ in
         flaresolverr = enabled // {
           ports = 8191;
           version = "v3.3.21";
-        };
-        kavita = enabled // {
-          ports = 6000;
-          inherit nfs mount;
-          version = "0.8.2";
         };
         qd = enabled // {
           ports = 8923;
