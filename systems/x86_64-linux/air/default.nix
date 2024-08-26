@@ -34,6 +34,7 @@ in
       "adb"
       "appimage"
       "audio"
+      "bandwhich"
       "bluetooth"
       "common"
       "desktop"
