@@ -47,6 +47,8 @@ args.module (
             "u" = "navigate up";
             # "p" = "tab-focus last";
             "pp" = "open -t {clipboard}";
+            "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
+            "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
           };
         };
         quickmarks = args.tomlFile ./quickmarks.key;
