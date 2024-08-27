@@ -9,6 +9,7 @@ args.module (
       "cachix"
       "devbox"
       "devenv"
+      "honcho"
       "keep-sorted"
       "nap"
       "process-compose"
