@@ -1,9 +1,8 @@
-#!/usr/bin/env bash
-case "$1" in
-https://pbs.twimg.com* | *.jpg | *.png)
+function image() {
   feh "$@"
-  ;;
-https://www.youtube.com/watch*)
+}
+
+function youtube() {
   path="$HOME/Downloads/youtube"
 
   cutoff_date=$(date -d "1 day ago" +%s)
@@ -23,14 +22,38 @@ https://www.youtube.com/watch*)
 
   latest_file=$(ls -t --time=creation $path/*.mp4 | head -n 1)
   mpv --speed=3 "$latest_file"
+}
+
+function bilibili() {
+  mpv --speed=3 "$@"
+}
+
+function video() {
+  mpv "$@"
+}
+
+function ff() {
+  firefox "$@" &
+}
+
+function qute() {
+  qutebrowser "$@"
+}
+
+case "$1" in
+https://pbs.twimg.com* | *.jpg | *.png)
+  image "$@"
+  ;;
+https://www.youtube.com/watch*)
+  ff "$@"
   ;;
 https://www.bilibili.com/video*)
-  mpv --speed=3 "$@"
+  bilibili "$@"
   ;;
 https://video.twimg.com/*)
-  mpv "$@"
+  video "$@"
   ;;
 *)
-  firefox "$@" &
+  ff "$@"
   ;;
 esac
