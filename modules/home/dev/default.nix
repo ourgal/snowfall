@@ -11,6 +11,7 @@ args.module (
       "devenv"
       "keep-sorted"
       "nap"
+      "process-compose"
       "treefmt2"
       "universal-ctags"
       "watchexec"
