@@ -21,6 +21,7 @@ let
         settings = {
           download-dir = "/home/${user}/Downloads/transmission/";
         };
+        package = pkgs.transmission_4;
       };
     users.users.${user}.extraGroups = [ "transmission" ];
   };
