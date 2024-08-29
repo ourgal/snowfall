@@ -23,6 +23,11 @@ let
           mode = "0600";
           path = "/home/${user}/.config/tg/conf.py";
         };
+        "espanso/mail.yml" = {
+          owner = user;
+          mode = "0600";
+          path = "/home/${user}/.config/espanso/match/mail.yml";
+        };
       };
     };
   };
