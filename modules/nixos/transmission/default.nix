@@ -1,6 +1,11 @@
 { ... }@args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    pkgs
+    ;
   inherit (lib.${namespace}) nixosModule enabled enable;
   user = config.${namespace}.user.name;
   value = {
@@ -11,7 +16,7 @@ let
         "openRPCPort"
       ]
       // {
-        # webHome = pkgs.flood-for-transmission;
+        webHome = pkgs.flood-for-transmission;
         downloadDirPermissions = "770";
         settings = {
           download-dir = "/home/${user}/Downloads/transmission/";
