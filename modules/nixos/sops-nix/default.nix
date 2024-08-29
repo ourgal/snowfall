@@ -18,6 +18,11 @@ let
           mode = "0600";
           path = "/home/${user}/.local/share/jerry/anilist_user_id.txt";
         };
+        "tg" = {
+          owner = user;
+          mode = "0600";
+          path = "/home/${user}/.config/tg/conf.py";
+        };
       };
     };
   };
