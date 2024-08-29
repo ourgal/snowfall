@@ -1,7 +1,7 @@
 { ... }@args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled enable;
+  inherit (lib.${namespace}) nixosModule enabled enableOpt;
   user = config.${namespace}.user.name;
   folder = "/home/${user}/mnt/nfs";
   value = {
@@ -10,7 +10,7 @@ let
       // {
         exports = "/srv/nfs        192.168.123.0/24(rw,sync,crossmnt,fsid=0,no_subtree_check,no_root_squash,insecure)";
       }
-      // enable [ "createMountPoints" ];
+      // enableOpt [ "createMountPoints" ];
 
     # systemd.tmpfiles.rules = [ "d ${folder} 0770 ${user} users -" ];
     systemd.user.tmpfiles.users.${user}.rules = [ "d ${folder} 0770 ${user} users -" ];

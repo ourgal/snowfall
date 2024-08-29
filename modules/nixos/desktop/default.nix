@@ -10,7 +10,7 @@ let
     nixosModule
     enabled
     disabled
-    enable
+    enableOpt
     with'
     enableNixosSubModule
     ;
@@ -57,7 +57,7 @@ let
     hardware = {
       opengl =
         enabled
-        // enable [
+        // enableOpt [
           "driSupport"
           "driSupport32Bit"
         ]
