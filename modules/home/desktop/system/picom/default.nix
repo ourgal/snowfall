@@ -5,14 +5,20 @@ args.module (
     with args;
     let
       awesome = config.${namespace}.awesome;
+      conf =
+        if (awesome.alphaTechnolog == enabled) then
+          { alphaTechnolog = enabled; }
+        else if (awesome.tartarus == enabled) then
+          { tartarus = enabled; }
+        else if (awesome."0xTux" == enabled) then
+          { tartarus = enabled; }
+        else
+          { minimal = enabled; };
     in
     {
       path = ./.;
       value = {
-        ${namespace}.desktop.system.picom = {
-          minimal = lib.mkIf ((awesome.minimal == enabled) || (awesome.minimalFnl == enabled)) enabled;
-          tartarus = lib.mkIf (awesome.tartarus == enabled) enabled;
-          alphaTechnolog = lib.mkIf (awesome.alphaTechnolog == enabled) enabled;
+        ${namespace}.desktop.system.picom = conf // {
           yoru = disabled;
         };
         xsession = enabled // {
