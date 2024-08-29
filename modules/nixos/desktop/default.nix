@@ -40,6 +40,7 @@ let
     services.xserver = enabled // {
       windowManager = {
         awesome = enabled // {
+          luaModules = with pkgs.luaPackages; [ vicious ];
           package = pkgs.awesome-git;
         };
         xmonad = disabled;
