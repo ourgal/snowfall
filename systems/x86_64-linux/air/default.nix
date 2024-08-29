@@ -24,7 +24,6 @@ in
         "mdns"
         "roc"
         "scream"
-        "syncthing"
         "transmission"
         # keep-sorted end
       ];
