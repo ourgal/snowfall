@@ -3,11 +3,13 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;
   user = config.${namespace}.user.name;
+  host = config.${namespace}.user.host;
+  desktops = lib.${namespace}.settings.desktops;
   value = {
     sops = {
       age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
       defaultSopsFile = lib.snowfall.fs.get-file "secrets/${config.${namespace}.user.name}/default.yaml";
-      secrets = {
+      secrets = lib.mkIf (builtins.elem host desktops) {
         "jerry/token" = {
           owner = user;
           mode = "0600";
