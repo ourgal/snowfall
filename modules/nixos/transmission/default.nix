@@ -6,12 +6,12 @@ let
     config
     pkgs
     ;
-  inherit (lib.${namespace}) nixosModule enabled enable;
+  inherit (lib.${namespace}) nixosModule enabled enableOpt;
   user = config.${namespace}.user.name;
   value = {
     services.transmission =
       enabled
-      // enable [
+      // enableOpt [
         "openPeerPorts"
         "openRPCPort"
       ]

@@ -88,8 +88,8 @@
         disabledList = lib.disabledList;
         enabled = lib.enabled;
         disabled = lib.disabled;
-        enableOpt = lib.enable;
-        disableOpt = lib.disable;
+        enableOpt = lib.enableOpt;
+        disableOpt = lib.disableOpt;
         mkOpt' = lib.mkOpt';
         cfgHome = lib.cfgHome;
         tomlFile = lib.tomlFile;

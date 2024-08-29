@@ -18,7 +18,7 @@ rec {
 
   enabledList = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = enabled; }) { } opts;
 
-  enable = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
+  enableOpt = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
 
   disabled = {
     enable = false;
@@ -26,7 +26,7 @@ rec {
 
   disabledList = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = disabled; }) { } opts;
 
-  disable = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = false; }) { } opts;
+  disableOpt = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = false; }) { } opts;
 
   switch = {
     enable = mkBoolOpt' false;

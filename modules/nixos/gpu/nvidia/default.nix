@@ -5,8 +5,8 @@ let
     nixosModule
     enabled
     disabled
-    enable
-    disable
+    enableOpt
+    disableOpt
     ;
   value = {
     services.xserver.videoDrivers = [ "nvidia" ];
@@ -17,9 +17,9 @@ let
 
     hardware.nvidia = {
       modesetting = enabled;
-      powerManagement = disabled // disable [ "finegrained" ];
+      powerManagement = disabled // disableOpt [ "finegrained" ];
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-    } // enable [ "nvidiaSettings" ] // disable [ "open" ];
+    } // enableOpt [ "nvidiaSettings" ] // disableOpt [ "open" ];
   };
   path = ./.;
   _args = {

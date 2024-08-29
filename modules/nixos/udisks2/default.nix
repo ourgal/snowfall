@@ -1,10 +1,10 @@
 { ... }@args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled enable;
+  inherit (lib.${namespace}) nixosModule enabled enableOpt;
   value = {
     programs.fuse.userAllowOther = true;
-    services.udisks2 = enabled // enable [ "mountOnMedia" ];
+    services.udisks2 = enabled // enableOpt [ "mountOnMedia" ];
   };
   path = ./.;
   _args = {

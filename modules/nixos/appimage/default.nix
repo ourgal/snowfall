@@ -1,9 +1,9 @@
 { ... }@args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled enable;
+  inherit (lib.${namespace}) nixosModule enabled enableOpt;
   value = {
-    programs.appimage = enabled // enable [ "binfmt" ];
+    programs.appimage = enabled // enableOpt [ "binfmt" ];
   };
   path = ./.;
   _args = {

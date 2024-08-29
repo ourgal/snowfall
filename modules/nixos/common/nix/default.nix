@@ -8,7 +8,7 @@ let
     ;
   inherit (lib.${namespace})
     nixosModule
-    enable
+    enableOpt
     disabled
     enabled
     ;
@@ -24,7 +24,7 @@ let
         ];
       in
       {
-        settings = enable [ "auto-optimise-store" ] // {
+        settings = enableOpt [ "auto-optimise-store" ] // {
           experimental-features = [
             "nix-command"
             "flakes"
@@ -45,7 +45,7 @@ let
             dates = "weekly";
             options = "--delete-older-than 7d";
           }
-          // enable [ "automatic" ];
+          // enableOpt [ "automatic" ];
       };
 
     nixpkgs.config.allowUnfree = true;
@@ -58,7 +58,7 @@ let
       }
       nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
     '';
-    system.autoUpgrade = disabled // enable [ "allowReboot" ];
+    system.autoUpgrade = disabled // enableOpt [ "allowReboot" ];
 
     programs.nix-ld = enabled // {
       package = pkgs.nix-ld-rs;

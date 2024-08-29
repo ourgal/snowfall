@@ -4,12 +4,12 @@ let
   inherit (lib.${namespace})
     nixosModule
     enabled
-    enable
+    enableOpt
     with'
     ;
   value = {
     services.pipewire = enabled // {
-      alsa = enabled // enable [ "support32Bit" ];
+      alsa = enabled // enableOpt [ "support32Bit" ];
       pulse = enabled;
       # If you want to use JACK applications, uncomment this
       #jack = enabled;
