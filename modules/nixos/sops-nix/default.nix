@@ -38,6 +38,11 @@ let
           mode = "0600";
           path = "/home/${user}/.config/aichat/config.yaml";
         };
+        "rclone" = {
+          owner = user;
+          mode = "0600";
+          path = "/home/${user}/.config/rclone/rclone.conf";
+        };
       };
     };
   };
