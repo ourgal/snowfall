@@ -23,6 +23,7 @@ args.module (
         "rclone"
       ];
       value = {
+        systemd.user.tmpfiles.rules = [ "d ${dir} - - - -" ];
         systemd.user.services.rclone-alist = lib.${namespace}.mkRcloneService { inherit name dir pkgs; };
         sops = {
           secrets = mkIf cfg.sops.enable {
