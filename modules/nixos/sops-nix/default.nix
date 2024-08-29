@@ -33,6 +33,11 @@ let
           mode = "0600";
           path = "/home/${user}/.config/geminicommit/config.toml";
         };
+        "aichat" = {
+          owner = user;
+          mode = "0600";
+          path = "/home/${user}/.config/aichat/config.yaml";
+        };
       };
     };
   };
