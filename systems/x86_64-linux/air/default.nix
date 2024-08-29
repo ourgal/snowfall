@@ -50,6 +50,7 @@ in
       "sops-nix"
       "syncthing"
       "tpm"
+      "transmission"
       "udisks2"
       # keep-sorted end
     ];

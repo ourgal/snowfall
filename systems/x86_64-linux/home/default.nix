@@ -28,7 +28,6 @@ in
         "roc"
         "scream"
         "syncthing"
-        "transmission"
         # keep-sorted end
       ];
     }
@@ -52,6 +51,7 @@ in
       "sops-nix"
       "syncthing"
       "tpm"
+      "transmission"
       "udisks2"
       # keep-sorted end
     ];
