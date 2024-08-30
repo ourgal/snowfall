@@ -4,10 +4,6 @@ args.module (
   // {
     path = ./.;
     myPkgs = "pot";
-    nixPkgs = [
-      # keep-sorted start
-      "crow-translate"
-      # keep-sorted end
-    ];
+    enable = "crow-translate";
   }
 )
