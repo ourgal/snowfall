@@ -1,9 +1,6 @@
 (local awful (require :awful))
 ; (local wibox (require :wibox))
 (local beautiful (require :beautiful))
-(local gears (require :gears))
-(beautiful.init (.. (gears.filesystem.get_configuration_dir)
-                    :themes/default/theme.fnl))
 
 (_G.client.connect_signal :manage
                           (fn [c]
