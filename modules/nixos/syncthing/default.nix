@@ -28,6 +28,10 @@ let
       id = "ZUFZMMQ-GQCZNZG-CJJLM6C-ZAQ3N72-DDB7UWG-557BNYG-BF7JDH2-DVDWYAR";
       autoAcceptFolders = true;
     };
+    nuc = {
+      id = "C2Z5Q2H-F5EGNLP-P5XHXUN-S6EIDTY-IKJSTGJ-VJVMMO5-YQXI7ZF-227QKAX";
+      autoAcceptFolders = true;
+    };
   };
   folders =
     let
@@ -46,6 +50,8 @@ let
       books = [ "home" ] ++ syncthing;
       wenku = [ "home" ] ++ syncthing;
       linovel = [ "home" ] ++ syncthing;
+      gal-save = [ "nuc" ] ++ syncthing;
+      game-save = [ "nuc" ] ++ syncthing;
     };
   value = {
     sops.secrets."syncthing/${host}/key".owner = user;
