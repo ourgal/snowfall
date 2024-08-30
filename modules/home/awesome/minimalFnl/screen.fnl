@@ -2,8 +2,6 @@
 (local wibox (require :wibox))
 (local gears (require :gears))
 (local beautiful (require :beautiful))
-(beautiful.init (.. (gears.filesystem.get_configuration_dir)
-                    :themes/default/theme.fnl))
 
 (local settings (require :settings))
 (local modkey settings.modkey)

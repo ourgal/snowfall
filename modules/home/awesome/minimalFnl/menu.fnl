@@ -1,8 +1,5 @@
 (local awful (require :awful))
 (local beautiful (require :beautiful))
-(local gears (require :gears))
-(beautiful.init (.. (gears.filesystem.get_configuration_dir)
-                    :themes/default/theme.fnl))
 
 (local hotkeys-popup (require :awful.hotkeys_popup))
 (local menubar (require :menubar))

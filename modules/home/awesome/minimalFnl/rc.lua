@@ -2,6 +2,7 @@ pcall(require, "luarocks.loader")
 do
 end
 (package.loaded)["naughty.dbus"] = {}
+require("themes.default")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 require("error_handing")
@@ -30,4 +31,5 @@ local function _1_(host)
   end
 end
 autostart = _1_
-return run("uname -n", autostart)
+run("uname -n", autostart)
+return spawn("wezterm")

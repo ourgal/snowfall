@@ -1,5 +1,9 @@
 (pcall require :luarocks.loader)
 (tset package.loaded :naughty.dbus {})
+
+;; themes
+(require :themes.default)
+
 (require :awful.autofocus)
 (require :awful.hotkeys_popup.keys)
 (require :error_handing)
@@ -20,4 +24,5 @@
                     (spawn :brave {:screen 2 :tag :2}))
                   (when (= host :surface)
                     (spawn :wezterm)))]
-  (run "uname -n" autostart))
+  (run "uname -n" autostart)
+  (spawn :wezterm))
