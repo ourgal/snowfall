@@ -14,7 +14,6 @@ args.module (
             awful.spawn("firefox", { screen = 1, tag = "2" })
             awful.spawn("${terminal}", { screen = 2, tag = "1" })
             awful.spawn("brave", { screen = 2, tag = "2" })
-            awful.spawn("crow")
           ''
         # lua
         else

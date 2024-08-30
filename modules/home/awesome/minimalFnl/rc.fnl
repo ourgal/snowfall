@@ -17,9 +17,7 @@
                     (spawn :wezterm {:screen 1 :tag :1})
                     (spawn :firefox {:screen 1 :tag :2})
                     (spawn :wezterm {:screen 2 :tag :1})
-                    (spawn :brave {:screen 2 :tag :2})
-                    (spawn :crow))
+                    (spawn :brave {:screen 2 :tag :2}))
                   (when (= host :surface)
-                    (spawn :wezterm)
-                    (spawn :crow)))]
+                    (spawn :wezterm)))]
   (run "uname -n" autostart))
