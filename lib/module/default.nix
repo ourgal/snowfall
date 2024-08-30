@@ -178,30 +178,34 @@ rec {
           setHandle =
             set:
             let
-              setName = with builtins; head (attrNames set);
-              setValue = with builtins; head (attrValues set);
+              _handle =
+                name: value:
+                if (builtins.isPath value) then
+                  let
+                    filename = builtins.baseNameOf value;
+                    extension = lib.lists.last (lib.strings.splitString "." filename);
+                    nameFinal = if (name != "") then name + "/" else "";
+                    executable = if (builtins.elem extension [ "sh" ]) then true else false;
+                  in
+                  {
+                    "${nameFinal}${filename}" = {
+                      source = value;
+                      inherit executable;
+                    };
+                  }
+                else if (builtins.isList value) then
+                  (builtins.foldl' (acc: v: acc // (setHandle { "${name}" = v; })) { } value)
+                else if (builtins.isString value) then
+                  { "${name}".text = value; }
+                else if (builtins.isAttrs value) then
+                  { "${name}".source = value; }
+                else
+                  builtins.throw "not supported type";
             in
-            if (builtins.isPath setValue) then
-              let
-                filename = builtins.baseNameOf setValue;
-                extension = lib.lists.last (lib.strings.splitString "." filename);
-                nameFinal = if (setName != "") then setName + "/" else "";
-                executable = if (builtins.elem extension [ "sh" ]) then true else false;
-              in
-              {
-                "${nameFinal}${filename}" = {
-                  source = setValue;
-                  inherit executable;
-                };
-              }
-            else if (builtins.isList setValue) then
-              (builtins.foldl' (acc: v: acc // (setHandle { "${setName}" = v; })) { } setValue)
-            else if (builtins.isString setValue) then
-              { "${setName}".text = setValue; }
-            else if (builtins.isAttrs setValue) then
-              { "${setName}".source = setValue; }
-            else
-              builtins.throw "not supported type";
+            lib.attrsets.foldlAttrs (
+              acc: n: v:
+              acc // (_handle n v)
+            ) { } set;
         in
         if (builtins.isAttrs conf) then
           (setHandle conf)
@@ -214,13 +218,10 @@ rec {
         if (builtins.isString progs) then
           { ${progs} = enabled; }
         else if (builtins.isAttrs progs) then
-          let
-            values = with builtins; head (attrValues progs);
-            name = with builtins; head (attrNames progs);
-          in
-          {
-            ${name} = (enabled // values);
-          }
+          lib.attrsets.foldlAttrs (
+            acc: n: v:
+            acc // { ${n} = (enabled // v); }
+          ) { } progs
         else if (builtins.isList progs) then
           builtins.foldl' (acc: p: acc // (progsHandle p)) { } progs
         else
