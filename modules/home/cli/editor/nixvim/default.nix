@@ -11,41 +11,73 @@ args.module (
     ];
     nodePkgs = "neovim";
     pyPkgs = "pynvim";
-    progs = {
-      nixvim = {
-        extraLuaPackages = ps: [ ps.magick ];
+    progs = [
+      {
+        nixvim = {
+          extraLuaPackages = ps: [ ps.magick ];
 
-        globals.mapleader = " ";
+          globals.mapleader = " ";
 
-        autoCmd = [
-          {
-            event = [ "TextYankPost" ];
-            pattern = [ "*" ];
-            command = "silent! lua vim.highlight.on_yank {higroup=(vim.fn['hlexists']('HighlightedyankRegion') > 0 and 'HighlightedyankRegion' or 'IncSearch'), timeout=200}";
-          }
-        ];
+          autoCmd = [
+            {
+              event = [ "TextYankPost" ];
+              pattern = [ "*" ];
+              command = "silent! lua vim.highlight.on_yank {higroup=(vim.fn['hlexists']('HighlightedyankRegion') > 0 and 'HighlightedyankRegion' or 'IncSearch'), timeout=200}";
+            }
+          ];
 
-        highlight = {
-          Comment = {
-            fg = "#ff00ff";
-            bg = "#000000";
-            underline = true;
-            bold = true;
+          highlight = {
+            Comment = {
+              fg = "#ff00ff";
+              bg = "#000000";
+              underline = true;
+              bold = true;
+            };
+          };
+
+          extraConfigLua = builtins.readFile ./extraConfig.lua;
+
+          extraPlugins = with args.pkgs.vimPlugins; [
+            clipboard-image-nvim
+            friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
+            glow-nvim # Glow inside of Neovim
+            nvim-web-devicons # Should load this in at Telescope/Neotree actions.
+            ultisnips
+            vim-be-good
+          ];
+        };
+      }
+      {
+        fish = {
+          functions = {
+            vn = {
+              body = # fish
+                ''
+                  set -x NVIM_APPNAME nvchad
+                  nvim $argv
+                '';
+              description = "nvchad";
+            };
+            vl = {
+              body = # fish
+                ''
+                  set -x NVIM_APPNAME lazyvim
+                  nvim $argv
+                '';
+              description = "lazyvim";
+            };
+            va = {
+              body = # fish
+                ''
+                  set -x NVIM_APPNAME astrovim
+                  nvim $argv
+                '';
+              description = "astrovim";
+            };
           };
         };
-
-        extraConfigLua = builtins.readFile ./extraConfig.lua;
-
-        extraPlugins = with args.pkgs.vimPlugins; [
-          clipboard-image-nvim
-          friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
-          glow-nvim # Glow inside of Neovim
-          nvim-web-devicons # Should load this in at Telescope/Neotree actions.
-          ultisnips
-          vim-be-good
-        ];
-      };
-    };
+      }
+    ];
     enable = [
       "alpha-nvim"
       "auto-save-nvim"

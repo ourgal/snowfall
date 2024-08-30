@@ -56,30 +56,6 @@ args.module (
               '';
             description = "turn screen off";
           };
-          vn = {
-            body = # fish
-              ''
-                set -x NVIM_APPNAME nvchad
-                nvim $argv
-              '';
-            description = "nvchad";
-          };
-          vl = {
-            body = # fish
-              ''
-                set -x NVIM_APPNAME lazyvim
-                nvim $argv
-              '';
-            description = "lazyvim";
-          };
-          va = {
-            body = # fish
-              ''
-                set -x NVIM_APPNAME astrovim
-                nvim $argv
-              '';
-            description = "astrovim";
-          };
         };
         plugins = with args.pkgs; [
           {
