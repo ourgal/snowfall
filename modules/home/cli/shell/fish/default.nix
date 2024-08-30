@@ -56,7 +56,7 @@ args.module (
               '';
             description = "turn screen off";
           };
-          nv = {
+          vn = {
             body = # fish
               ''
                 set -x NVIM_APPNAME nvchad
@@ -64,7 +64,7 @@ args.module (
               '';
             description = "nvchad";
           };
-          lv = {
+          vl = {
             body = # fish
               ''
                 set -x NVIM_APPNAME lazyvim
@@ -72,7 +72,7 @@ args.module (
               '';
             description = "lazyvim";
           };
-          av = {
+          va = {
             body = # fish
               ''
                 set -x NVIM_APPNAME astrovim
