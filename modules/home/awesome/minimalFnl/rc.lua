@@ -21,12 +21,10 @@ local function _1_(host)
     spawn("firefox", { screen = 1, tag = "2" })
     spawn("wezterm", { screen = 2, tag = "1" })
     spawn("brave", { screen = 2, tag = "2" })
-    spawn("crow")
   else
   end
   if host == "surface" then
-    spawn("wezterm")
-    return spawn("crow")
+    return spawn("wezterm")
   else
     return nil
   end
