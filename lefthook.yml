@@ -5,7 +5,7 @@ pre-commit:
     keep-sorted:
       run: keep-sorted --mode fix {all_files}
     whitespace:
-      run: whitespace-format --remove-trailing-whitespace --remove-trailing-empty-lines {all_files} --exclude "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf)$"
+      run: whitespace-format --remove-trailing-whitespace --remove-trailing-empty-lines {all_files} --exclude "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico)$"
       gitleaks:
         run: gitleaks detect -v
 commit-msg:

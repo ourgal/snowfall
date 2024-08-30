@@ -12,6 +12,8 @@ args.module (
           { tartarus = enabled; }
         else if (awesome."0xTux" == enabled) then
           { tartarus = enabled; }
+        else if (awesome.Amitabha37377.topbar_dock == enabled) then
+          { Amitabha37377.topbar_dock = enabled; }
         else
           { minimal = enabled; };
     in
