@@ -13,16 +13,4 @@
 (require :keys)
 (require :rules)
 (require :signals)
-(let [awful (require :awful)
-      spawn awful.spawn
-      run awful.spawn.easy_async_with_shell
-      autostart (fn [host]
-                  (when (= host :home)
-                    (spawn :wezterm {:screen 1 :tag :1})
-                    (spawn :firefox {:screen 1 :tag :2})
-                    (spawn :wezterm {:screen 2 :tag :1})
-                    (spawn :brave {:screen 2 :tag :2}))
-                  (when (= host :surface)
-                    (spawn :wezterm)))]
-  (run "uname -n" autostart)
-  (spawn :wezterm))
+(require :autostart)

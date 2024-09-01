@@ -15,6 +15,7 @@ args.module (
         ./screen.lua
         ./settings.lua
         ./signals.lua
+        ./autostart.lua
         ./themes
       ];
     };
