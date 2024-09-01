@@ -1,10 +1,10 @@
 (let [awful (require :awful)
-      spawn awful.spawn
-      host (os.getenv :hostname)]
-  (if (= host :home)
+      settings (require :settings)
+      spawn awful.spawn]
+  (if (= settings.host :home)
       (do
-        (spawn :wezterm {:screen 1 :tag :1})
-        (spawn :firefox {:screen 1 :tag :2})
-        (spawn :wezterm {:screen 2 :tag :1})
-        (spawn :brave {:screen 2 :tag :2}))
-      (spawn :wezterm)))
+        (spawn settings.terminal {:screen 1 :tag :1})
+        (spawn settings.browser {:screen 1 :tag :2})
+        (spawn settings.terminal {:screen 2 :tag :1})
+        (spawn settings.browserS {:screen 2 :tag :2}))
+      (spawn settings.terminal)))
