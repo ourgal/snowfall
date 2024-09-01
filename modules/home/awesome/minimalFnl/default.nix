@@ -5,18 +5,20 @@ args.module (
     path = ./.;
     confs = {
       awesome = [
-        ./rc.lua
+        # keep-sorted start
+        ./autostart.lua
         ./error_handing.lua
-        ./keys.lua
+        ./keys
         ./layouts.lua
         ./menu.lua
         ./mouse.lua
-        ./rules.lua
+        ./rc.lua
+        ./rules
         ./screen.lua
         ./settings.lua
         ./signals.lua
-        ./autostart.lua
         ./themes
+        # keep-sorted end
       ];
     };
   }

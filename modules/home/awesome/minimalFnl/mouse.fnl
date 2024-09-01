@@ -1,8 +1,8 @@
-(local gears (require :gears))
-(local awful (require :awful))
-(local menu (require :menu))
-(_G.root.buttons (gears.table.join (awful.button {} 3
-                                                 (fn []
-                                                   (menu.mymainmenu:toggle)))
-                                   (awful.button {} 4 awful.tag.viewnext)
-                                   (awful.button {} 5 awful.tag.viewprev)))
+(let [gears (require :gears)
+      awful (require :awful)
+      menu (require :menu)
+      join gears.table.join
+      button awful.button]
+  (_G.root.buttons (join (button {} 3 #(menu.mymainmenu:toggle))
+                         (button {} 4 awful.tag.viewnext)
+                         (button {} 5 awful.tag.viewprev))))
