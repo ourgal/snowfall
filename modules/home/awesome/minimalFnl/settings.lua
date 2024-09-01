@@ -1,3 +1,20 @@
+local host = nil
+do
+  local f = io.open("/etc/hostname")
+  local function close_handlers_10_auto(ok_11_auto, ...)
+    f:close()
+    if ok_11_auto then
+      return ...
+    else
+      return error(..., 0)
+    end
+  end
+  local function _2_()
+    host = f:read()
+    return nil
+  end
+  close_handlers_10_auto(_G.xpcall(_2_, (package.loaded.fennel or debug).traceback))
+end
 local awful = require("awful")
 local terminal = "wezterm"
 local editor = (os.getenv("EDITOR") or "vim")
@@ -10,7 +27,6 @@ local launcher_cmd = (launcher .. " -show drun")
 local playerctl = "playerctl"
 local playerctl_cmd = ("playerctl" .. " play-pause")
 local tag_num = 9
-local host = os.getenv("hostname")
 local suit = awful.layout.suit
 local left_click = 1
 local right_click = 3

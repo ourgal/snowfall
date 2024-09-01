@@ -1,3 +1,7 @@
+(var host nil)
+(with-open [f (io.open :/etc/hostname)]
+  (set host (f:read)))
+
 (let [awful (require :awful)
       terminal :wezterm
       editor (-> (os.getenv :EDITOR) (or :vim))
@@ -10,7 +14,6 @@
       playerctl :playerctl
       playerctl_cmd (.. :playerctl " play-pause")
       tag_num 9
-      host (os.getenv :hostname)
       suit awful.layout.suit
       left_click 1
       right_click 3]
