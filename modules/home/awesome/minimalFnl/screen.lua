@@ -63,28 +63,28 @@ tasklist_buttons = gears.table.join(
   awful.button({}, 4, _11_),
   awful.button({}, 5, _12_)
 )
-local function set_wallpaper(s)
-  local wallpaper
-  local function _13_()
-    local w = beautiful.wallpaper
-    if w then
-      if type(w) == "function" then
-        return w(s)
-      else
-        return w
-      end
-    else
-      return nil
-    end
+local connect = awful.screen.connect_for_each_screen
+local maximized = gears.wallpaper.maximized
+local call
+local function _13_(_241, _242)
+  if type(_241) == "function" then
+    return _241(_242)
+  else
+    return _241
   end
-  wallpaper = _13_()
+end
+call = _13_
+local set_wallpaper
+local function _15_(s)
+  local wallpaper = call(beautiful.wallpaper, s)
   if wallpaper then
-    return gears.wallpaper.maximized(wallpaper, s, true)
+    return maximized(wallpaper, s, true)
   else
     return nil
   end
 end
+set_wallpaper = _15_
 local function _17_(s)
   return awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 end
-return awful.screen.connect_for_each_screen(_17_)
+return connect(_17_)

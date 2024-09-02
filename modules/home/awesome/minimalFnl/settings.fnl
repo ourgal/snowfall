@@ -30,6 +30,9 @@
    : browser
    : browserS
    : browserSS
+   :wallpapers {:enable false
+                :dir (.. (os.getenv :HOME) :/Pictures/wallpapers)
+                :time 1800}
    :layouts [suit.spiral.dwindle suit.max suit.max.fullscreen]
    :mappings {:client {:keys {:fullscreen {:modkey [modkey]
                                            :key :f
