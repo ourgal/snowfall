@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "choose"
+      "circumflex"
       "didyoumean"
       "doge"
       "fpp"
