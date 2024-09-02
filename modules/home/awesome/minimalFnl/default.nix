@@ -18,6 +18,7 @@ args.module (
         ./settings.lua
         ./signals.lua
         ./themes
+        ./wallpaper.lua
         # keep-sorted end
       ];
     };

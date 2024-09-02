@@ -1,7 +1,5 @@
 (let [xresources (require :beautiful.xresources)
       dpi xresources.apply_dpi
-      gfs (require :gears.filesystem)
-      themes-path (gfs.get_themes_dir)
       bg_normal "#222222"]
   {:font "FiraCode Nerd Font"
    : bg_normal

@@ -13,4 +13,5 @@
 (require :keys)
 (require :rules)
 (require :signals)
+(require :wallpaper)
 (require :autostart)

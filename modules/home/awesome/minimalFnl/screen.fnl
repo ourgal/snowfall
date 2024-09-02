@@ -40,17 +40,16 @@
                          (awful.button {} 5
                                        (fn [] (awful.client.focus.byidx (- 1))))))
 
-(fn set-wallpaper [s]
-  (let [wallpaper ((fn []
-                     (let [w beautiful.wallpaper]
-                       (if w
-                           (if (= (type w) :function)
-                               (w s)
-                               w)))))]
-    (when wallpaper
-      (gears.wallpaper.maximized wallpaper s true))))
-
 ; (_G.screen.connect_signal "property::geometry" set-wallpaper)
-(awful.screen.connect_for_each_screen (fn [s] ; (set-wallpaper s)
-                                        (awful.tag [:1 :2 :3 :4 :5 :6 :7 :8 :9]
-                                                   s (. awful.layout.layouts 1))))
+(let [connect awful.screen.connect_for_each_screen
+      maximized gears.wallpaper.maximized
+      call #(if (-> $1 (type) (= :function))
+                ($1 $2)
+                $1)
+      set-wallpaper (fn [s]
+                      (let [wallpaper (call beautiful.wallpaper s)]
+                        (when wallpaper
+                          (maximized wallpaper s true))))]
+  (connect (fn [s]
+             (awful.tag [:1 :2 :3 :4 :5 :6 :7 :8 :9] s
+                        (. awful.layout.layouts 1)))))

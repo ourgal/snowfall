@@ -44,6 +44,7 @@ return {
   browser = browser,
   browserS = browserS,
   browserSS = browserSS,
+  wallpapers = { dir = (os.getenv("HOME") .. "/Pictures/wallpapers"), time = 1800, enable = false },
   layouts = { suit.spiral.dwindle, suit.max, suit.max.fullscreen },
   mappings = {
     client = {

@@ -1,7 +1,5 @@
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-local gfs = require("gears.filesystem")
-local themes_path = gfs.get_themes_dir()
 local bg_normal = "#222222"
 return {
   font = "FiraCode Nerd Font",
