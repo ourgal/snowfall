@@ -3,12 +3,12 @@ local wibox = require("wibox")
 local naughty = require("naughty")
 
 local BatteryMeter = function(color)
-  local full_battery = "<span color='" .. color .. "' font='12'></span>"
-  local semi_full_battery = "<span color='" .. color .. "' font='12'></span>"
-  local half_battery = "<span color='" .. color .. "' font='12'></span>"
-  local semi_half_battery = "<span color='" .. color .. "' font='12'></span>"
-  local low_battery = "<span color='" .. color .. "' font='12'></span>"
-  local extreme_low_battery = "<span color='" .. color .. "' font='12'></span>"
+  local full_battery = "<span color='" .. color .. "' font='12'>󰁹</span>"
+  local semi_full_battery = "<span color='" .. color .. "' font='12'>󰂀</span>"
+  local half_battery = "<span color='" .. color .. "' font='12'>󰁿</span>"
+  local semi_half_battery = "<span color='" .. color .. "' font='12'>󰁼</span>"
+  local low_battery = "<span color='" .. color .. "' font='12'>󰁺</span>"
+  local extreme_low_battery = "<span color='" .. color .. "' font='12'>󰂃</span>"
 
   local battery_icon = {
     id = "icon",

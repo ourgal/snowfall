@@ -117,7 +117,7 @@ local TopPanel = function(s)
     },
     layout = wibox.layout.ratio.horizontal,
   })
-  distribution:ajust_ratio(2, 0.04, 0.90, 0.6)
+  distribution:ajust_ratio(1, 0.04, 0.9, 0.06)
 
   local mainLayer = wibox.widget({
     wibox.widget({
