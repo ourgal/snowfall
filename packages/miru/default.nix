@@ -8,11 +8,11 @@
 let
   pname = "miru";
   pnameCap = lib.${namespace}.capitalize pname;
-  version = "5.4.0";
+  version = "5.5.6";
 
   src = fetchurl {
     url = "https://github.com/ThaUnknown/miru/releases/download/v${version}/linux-Miru-${version}.AppImage";
-    hash = "sha256-KdFSr60yn0l1lX1dgUCy0Sqpis82F9X6kgvSLGM5hk0=";
+    hash = "sha256-yfavGhH/QROChWB0MxYt8+dssYo0+/1bV+h2Ce951RE=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
