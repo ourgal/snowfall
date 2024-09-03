@@ -16,6 +16,7 @@ local clickable_container_color = require("widget.clickable-container-color")
 local clickable_container = require("widget.clickable-container")
 local dpi = require("beautiful").xresources.apply_dpi
 local apps = require("configuration.apps")
+local home = os.getenv("HOME")
 
 local dashboardPanel = function(s)
   local dashboard = wibox({
@@ -146,27 +147,27 @@ local dashboardPanel = function(s)
   distribution:add_widget_at({
     {
       {
-        folder(beautiful.code_folder, "/home/alljavi-shared/code"),
+        folder(beautiful.code_folder, home .. "/code"),
         widget = wibox.container.background,
       },
       {
-        folder(beautiful.design_folder, "/home/alljavi-shared/design"),
+        folder(beautiful.design_folder, home .. "/design"),
         widget = wibox.container.background,
       },
       {
-        folder(beautiful.download_folder, "/home/alljavi-shared/descargas"),
+        folder(beautiful.download_folder, home .. "/descargas"),
         widget = wibox.container.background,
       },
       {
-        folder(beautiful.teleco_folder, "/home/alljavi-shared/teleco"),
+        folder(beautiful.teleco_folder, home .. "/teleco"),
         widget = wibox.container.background,
       },
       {
-        folder(beautiful.design3d_folder, "/home/alljavi-shared/3d design"),
+        folder(beautiful.design3d_folder, home .. "/3d design"),
         widget = wibox.container.background,
       },
       {
-        folder(beautiful.shared_folder, "/home/alljavi-shared"),
+        folder(beautiful.shared_folder, home),
         widget = wibox.container.background,
       },
       layout = wibox.layout.ratio.vertical,

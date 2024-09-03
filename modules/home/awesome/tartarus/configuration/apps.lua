@@ -35,9 +35,9 @@ return {
     -- Quake terminal
     quake = "kitty --name QuakeTerminal",
     -- Rofi AppMenu
-    rofi_appmenu = "sh /home/alljavi/.config/rofi/launchers/colorful/launcher.sh",
+    rofi_appmenu = "rofi -show drun",
     -- Rofi powermenu
-    rofi_powermenu = "sh /home/alljavi/.config/rofi/applets/menu/powermenu.sh",
+    rofi_powermenu = "rofi -show power",
     -- Discord
     discord = "discord",
   },

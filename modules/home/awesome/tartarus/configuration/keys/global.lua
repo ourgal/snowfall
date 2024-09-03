@@ -135,6 +135,9 @@ local global_keys = awful.util.table.join(
   awful.key({ modkey, "Shift" }, "q", function()
     awesome.emit_signal("module::exit_screen:show")
   end, { description = "toggle exit screen", group = "hotkeys" }),
+  awful.key({ modkey }, "o", function(c)
+    c:move_to_screen()
+  end, { description = "move to screen", group = "hotkeys" }),
   -- }}}
 
   -- screentshot utility {{{
@@ -186,11 +189,11 @@ local global_keys = awful.util.table.join(
   -- }}}
 
   -- launch rofi {{{
-  awful.key({ modkey }, "\\", function()
+  awful.key({ modkey }, "d", function()
     local focused = awful.screen.focused()
     awful.spawn(apps.default.rofi_appmenu, false)
   end, { description = "open application drawer", group = "launcher" }),
-  awful.key({ modkey, "Shift" }, "\\", function()
+  awful.key({ modkey, "Shift" }, "d", function()
     local focused = awful.screen.focused()
     awful.spawn(apps.default.rofi_powermenu, false)
   end, { description = "open application drawer", group = "launcher" })

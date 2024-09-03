@@ -16,7 +16,7 @@ local RamMeter = function(color)
     {
       {
         id = "icon",
-        markup = "<span color='" .. color .. "'></span>",
+        markup = "<span color='" .. color .. "'>󰍛</span>",
         font = "JetBrains Mono Medium Nerd Font Complete 22",
         align = "center",
         valign = "center",
