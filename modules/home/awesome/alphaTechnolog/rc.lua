@@ -4,6 +4,6 @@ require("awful.autofocus")
 
 require("signal.global")
 require("user_likes")
-require("autostart")
+-- require("autostart")
 require("configuration")
 require("ui")
