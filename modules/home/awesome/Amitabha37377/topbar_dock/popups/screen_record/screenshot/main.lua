@@ -321,14 +321,7 @@ end)
 --Screenshot Functionalities-----------------
 ---------------------------------------------
 
-local file = io.popen("cat ~/.config/awesome/ss_index.txt")
-
---- @type number?
-local ss_index = 1
-if file then
-  ss_index = tonumber(file:read("*all"))
-  file:close()
-end
+local settings = require("settings")
 
 local open_pictures = naughty.action({
   name = "Pictures",
@@ -350,26 +343,26 @@ open_pictures:connect_signal("invoked", function()
 end)
 
 delete_ss:connect_signal("invoked", function()
-  awful.spawn.with_shell("rm " .. "Pictures/" .. ss_index - 1 .. ".png", false)
+  awful.spawn.with_shell("rm " .. "Pictures/" .. settings.ss_index - 1 .. ".png", false)
 end)
 
 open_image:connect_signal("invoked", function()
-  awful.spawn.with_shell("feh Pictures/" .. ss_index - 1 .. ".png --scale-down", false)
+  awful.spawn.with_shell("feh Pictures/" .. settings.ss_index - 1 .. ".png --scale-down", false)
 end)
 
 fullscreen:connect_signal("button::release", function(_, _, _, button)
   if button == 1 then
     ss_tool.visible = false
-    awful.spawn.easy_async_with_shell("sleep 0.3 && scrot ~/Pictures/" .. ss_index .. ".png", function()
+    awful.spawn.easy_async_with_shell("sleep 0.3 && scrot ~/Pictures/" .. settings.ss_index .. ".png", function()
       naughty.notify({
         title = '<span color="' .. color.white .. '" font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
         text = '<span color="' .. color.white .. '"> Screenshot Captured!</span>',
         timeout = 5,
-        icon = os.getenv("HOME") .. "/Pictures/" .. ss_index .. ".png",
+        icon = os.getenv("HOME") .. "/Pictures/" .. settings.ss_index .. ".png",
         actions = { open_image, open_pictures, delete_ss },
       })
-      ss_index = ss_index + 1
-      awful.spawn.with_shell("echo " .. ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
+      settings.ss_index = settings.ss_index + 1
+      awful.spawn.with_shell("echo " .. settings.ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
     end)
   end
 end)
@@ -378,18 +371,18 @@ timer_button:connect_signal("button::release", function(_, _, _, button)
   if button == 1 then
     ss_tool.visible = false
     awful.spawn.easy_async_with_shell(
-      "sleep 0.3 && scrot -d " .. delay_time .. " ~/Pictures/" .. ss_index .. ".png",
+      "sleep 0.3 && scrot -d " .. delay_time .. " ~/Pictures/" .. settings.ss_index .. ".png",
       function()
         naughty.notify({
           title = '<span color="' .. color.white .. '" font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
           text = '<span color="' .. color.white .. '"> Screenshot Captured!</span>',
 
           timeout = 5,
-          icon = os.getenv("HOME") .. "/Pictures/" .. ss_index .. ".png",
+          icon = os.getenv("HOME") .. "/Pictures/" .. settings.ss_index .. ".png",
           actions = { open_image, open_pictures, delete_ss },
         })
-        ss_index = ss_index + 1
-        awful.spawn.with_shell("echo " .. ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
+        settings.ss_index = settings.ss_index + 1
+        awful.spawn.with_shell("echo " .. settings.ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
       end
     )
   end
@@ -398,19 +391,22 @@ end)
 selection:connect_signal("button::release", function(_, _, _, button)
   if button == 1 then
     ss_tool.visible = false
-    awful.spawn.easy_async_with_shell("sleep 0.3 && scrot -s " .. "~/Pictures/" .. ss_index .. ".png", function()
-      naughty.notify({
-        title = '<span color="' .. color.white .. '" font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
-        text = '<span color="' .. color.white .. '"> Screenshot Captured!</span>',
-        -- title = '<span font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
-        -- text = "Screen Captured!",
-        timeout = 5,
-        icon = os.getenv("HOME") .. "/Pictures/" .. ss_index .. ".png",
-        actions = { open_image, open_pictures, delete_ss },
-      })
-      ss_index = ss_index + 1
-      awful.spawn.with_shell("echo " .. ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
-    end)
+    awful.spawn.easy_async_with_shell(
+      "sleep 0.3 && scrot -s " .. "~/Pictures/" .. settings.ss_index .. ".png",
+      function()
+        naughty.notify({
+          title = '<span color="' .. color.white .. '" font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
+          text = '<span color="' .. color.white .. '"> Screenshot Captured!</span>',
+          -- title = '<span font="Ubuntu Nerd Font Bold 14">  Screenshot Tool</span>',
+          -- text = "Screen Captured!",
+          timeout = 5,
+          icon = os.getenv("HOME") .. "/Pictures/" .. settings.ss_index .. ".png",
+          actions = { open_image, open_pictures, delete_ss },
+        })
+        settings.ss_index = settings.ss_index + 1
+        awful.spawn.with_shell("echo " .. settings.ss_index + 1 .. " > ~/.config/awesome/ss_index.txt")
+      end
+    )
   end
 end)
 
