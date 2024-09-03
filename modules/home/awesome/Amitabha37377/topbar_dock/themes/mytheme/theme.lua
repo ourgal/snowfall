@@ -81,22 +81,10 @@ theme.tasklist_shape_border_color_minimized = color.magenta
 theme.tasklist_shape_border_color_urgent = color.yellow
 
 -- Default layout icons
-theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
-theme.layout_fairv = "/usr/share/awesome/themes/default/layouts/fairvw.png"
-theme.layout_floating = "/usr/share/awesome/themes/default/layouts/floatingw.png"
-theme.layout_magnifier = "/usr/share/awesome/themes/default/layouts/magnifierw.png"
-theme.layout_max = "/usr/share/awesome/themes/default/layouts/maxw.png"
-theme.layout_fullscreen = "/usr/share/awesome/themes/default/layouts/fullscreenw.png"
-theme.layout_tilebottom = "/usr/share/awesome/themes/default/layouts/tilebottomw.png"
-theme.layout_tileleft = "/usr/share/awesome/themes/default/layouts/tileleftw.png"
-theme.layout_tile = "/usr/share/awesome/themes/default/layouts/tilew.png"
-theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
-theme.layout_spiral = "/usr/share/awesome/themes/default/layouts/spiralw.png"
-theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
-theme.layout_cornernw = "/usr/share/awesome/themes/default/layouts/cornernw.png"
-theme.layout_cornerne = "/usr/share/awesome/themes/default/layouts/cornerne.png"
-theme.layout_cornersw = "/usr/share/awesome/themes/default/layouts/cornersw.png"
-theme.layout_cornerse = "/usr/share/awesome/themes/default/layouts/cornerse.png"
+local awesome_icons = require("awesome_icons")
+for k, v in pairs(awesome_icons) do
+  theme[k] = v
+end
 
 --------------------------------
 --Taglist-----------------------

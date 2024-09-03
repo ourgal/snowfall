@@ -1,13 +1,13 @@
-local user_profile = {
-  name = "Shehejek",
-  image_path = os.getenv("HOME") .. "/.config/awesome/popups/control_center/assets/Untitled.png",
-  dnd_status = false,
+local fs = require("gears.filesystem")
+local dir = fs.get_configuration_dir()
+return {
   browser = "firefox ",
-  file_manager = "thunar ",
-  terminal = "wezterm",
-  icon_theme_path = "/.icons/Papirus/32x32/apps/",
-  wallpaper = os.getenv("HOME") .. "/.config/awesome/Wallpapers/catMachup.jpg",
   fallback_password = "1234",
+  file_manager = "thunar ",
+  icon_theme_path = "/.icons/Papirus/32x32/apps/",
+  image_path = (dir .. "popups/control_center/assets/Untitled.png"),
+  name = os.getenv("USER"),
+  terminal = "wezterm",
+  wallpaper = (dir .. "Wallpapers/catMachup.jpg"),
+  dnd_status = false,
 }
-
-return user_profile

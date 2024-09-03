@@ -249,26 +249,26 @@ function _M.get()
     }),
 
     --Toggle powermenu
-    awful.key({
-      modifiers = { modkey, "Shift" },
-      key = "c",
-      description = "Powermenu",
-      group = "awesome",
-      on_press = function()
-        powermenu.visible = not powermenu.visible
-      end,
-    }),
+    -- awful.key({
+    --   modifiers = { modkey, "Shift" },
+    --   key = "c",
+    --   description = "Powermenu",
+    --   group = "awesome",
+    --   on_press = function()
+    --     powermenu.visible = not powermenu.visible
+    --   end,
+    -- }),
 
     --Lock Screen
-    awful.key({
-      modifiers = { modkey, "Shift" },
-      key = "s",
-      description = "Lockscreen",
-      group = "awesome",
-      on_press = function()
-        awesome.emit_signal("screen::lock")
-      end,
-    }),
+    -- awful.key({
+    --   modifiers = { modkey, "Shift" },
+    --   key = "s",
+    --   description = "Lockscreen",
+    --   group = "awesome",
+    --   on_press = function()
+    --     awesome.emit_signal("screen::lock")
+    --   end,
+    -- }),
 
     -- Brightness Control
     awful.key({
@@ -370,7 +370,8 @@ function _M.get()
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     awful.key({ modkey }, "d", function()
-      awesome.emit_signal("widget::launcher")
+      os.execute("rofi -show drun")
+      -- awesome.emit_signal("widget::launcher")
     end, { description = "show launcher", group = "awesome" }),
 
     --   -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
