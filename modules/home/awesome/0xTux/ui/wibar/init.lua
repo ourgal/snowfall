@@ -61,9 +61,9 @@ return function(s)
         },
         {
           layout = wibox.layout.fixed.horizontal,
-          create_capsule_widget(module.profile()),
-          create_capsule_widget(module.gpu()),
-          create_capsule_widget(module.tailscale()),
+          -- create_capsule_widget(module.profile()),
+          -- create_capsule_widget(module.gpu()),
+          -- create_capsule_widget(module.tailscale()),
           create_capsule_widget(module.battery()),
           create_capsule_widget(module.systray()),
           create_capsule_widget(wibox.widget.textclock()),
