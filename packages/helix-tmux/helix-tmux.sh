@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-status_line=$(wezterm cli get-text | rg -e "(?:NORMAL|INSERT|SELECT)\s+[\x{2800}-\x{28FF}]*\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
+status_line=$(tmux capture-pane -p | rg -e "(?:NORMAL|INSERT|SELECT)\s+[\x{2800}-\x{28FF}]*\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
 filename=$(echo "$status_line" | awk '{ print $1}')
 folder=$(dirname "$filename")
 line_number=$(echo "$status_line" | awk '{ print $2}')
@@ -16,7 +16,11 @@ function popup_lazygit() {
 function popup_lf() {
   local TEMP
   TEMP=$(mktemp)
-  tmux_popup "lf -selection-path=$TEMP -command ':cd $folder'"
+  if test -z "$folder"; then
+    tmux_popup "lf -selection-path=$TEMP"
+  else
+    tmux_popup "lf -selection-path=$TEMP -command ':cd $folder'"
+  fi
   echo >>"$TEMP"
   while read -r line; do
     tmux send-keys ":open $line" C-m
@@ -61,7 +65,11 @@ function popup_make() {
 }
 
 function popup_blame() {
-  tmux_popup "tig blame $filename +$line_number"
+  if test -n "$filename" && test -n "$line_number"; then
+    tmux_popup "tig blame $filename +$line_number"
+  else
+    echo "error"
+  fi
 }
 
 case "$1" in
