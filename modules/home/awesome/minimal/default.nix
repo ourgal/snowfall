@@ -37,23 +37,21 @@ args.module (
     in
     {
       path = ./.;
-      confs = [
-        {
-          "awesome/rc.lua" = finalConfig;
-          "awesome/settings.lua" = settingConfig;
-          awesome = [
-            ./error_handing.lua
-            ./keys.lua
-            ./layouts.lua
-            ./menu.lua
-            ./mouse.lua
-            ./rules.lua
-            ./screen.lua
-            ./signals.lua
-            ./themes
-          ];
-        }
-      ];
+      confs = {
+        "awesome/rc.lua" = finalConfig;
+        "awesome/settings.lua" = settingConfig;
+        awesome = [
+          ./error_handing.lua
+          ./keys.lua
+          ./layouts.lua
+          ./menu.lua
+          ./mouse.lua
+          ./rules.lua
+          ./screen.lua
+          ./signals.lua
+          ./themes
+        ];
+      };
     }
   )
 )
