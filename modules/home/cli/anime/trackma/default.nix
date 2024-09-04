@@ -10,5 +10,12 @@ args.module (
     confs = {
       trackma = ./config.json;
     };
+    progs = {
+      fish = {
+        shellAbbrs = {
+          tmc = "trackma-curses";
+        };
+      };
+    };
   }
 )
