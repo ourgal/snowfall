@@ -33,6 +33,9 @@ in
     name = mkOpt' str "zxc";
     browser = mkOpt' str "firefox";
     editor = mkOpt' str "hx";
+    terminal = mkOpt' str "kitty";
+    browserS = mkOpt' str "brave";
+    browserSS = mkOpt' str "qutebrowser";
   };
 
   config = mkIf (isString cfg.name) {
