@@ -2,18 +2,18 @@
 args.module (
   args
   // (
-    with args;
     let
       baseConfig = builtins.readFile ./rc.lua;
-      terminal = "wezterm";
+      inherit (args) namespace;
+      inherit (args.config.${namespace}.user) terminal browser browserS;
       hostConfig =
-        if (host == "home") then # lua
+        if (args.host == "home") then # lua
           ''
             local awful = require("awful")
             awful.spawn("${terminal}", { screen = 1, tag = "1" })
-            awful.spawn("firefox", { screen = 1, tag = "2" })
+            awful.spawn("${browser}", { screen = 1, tag = "2" })
             awful.spawn("${terminal}", { screen = 2, tag = "1" })
-            awful.spawn("brave", { screen = 2, tag = "2" })
+            awful.spawn("${browserS}", { screen = 2, tag = "2" })
           ''
         # lua
         else
