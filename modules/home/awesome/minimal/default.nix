@@ -22,12 +22,25 @@ args.module (
             awful.spawn("${terminal}")
           '';
       finalConfig = baseConfig + hostConfig;
+      settingConfig = # lua
+        ''
+          local terminal = "${terminal}"
+          local editor = os.getenv("EDITOR") or "vim"
+
+          return {
+            modkey = "Mod4",
+            terminal = terminal,
+            editor = editor,
+            editor_cmd = terminal .. " -e " .. editor,
+          }
+        '';
     in
     {
       path = ./.;
       confs = [
-        { "awesome/rc.lua" = finalConfig; }
         {
+          "awesome/rc.lua" = finalConfig;
+          "awesome/settings.lua" = settingConfig;
           awesome = [
             ./error_handing.lua
             ./keys.lua
@@ -36,7 +49,6 @@ args.module (
             ./mouse.lua
             ./rules.lua
             ./screen.lua
-            ./settings.lua
             ./signals.lua
             ./themes
           ];
