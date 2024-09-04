@@ -14,6 +14,10 @@ args.module (
           { tartarus = enabled; }
         else if (awesome.Amitabha37377.topbar_dock == enabled) then
           { Amitabha37377.topbar_dock = enabled; }
+        else if (awesome.minimal == enabled) then
+          { minimal = enabled; }
+        else if (awesome.minimalFnl == enabled) then
+          { minimal = enabled; }
         else
           { minimal = enabled; };
     in
