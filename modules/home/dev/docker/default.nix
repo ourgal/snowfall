@@ -12,5 +12,12 @@ args.module (
       "oxker"
       # keep-sorted end
     ];
+    progs = {
+      fish = {
+        shellAbbrs = {
+          ad = "lazydocker";
+        };
+      };
+    };
   }
 )

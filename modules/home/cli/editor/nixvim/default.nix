@@ -49,6 +49,9 @@ args.module (
       }
       {
         fish = {
+          shellAbbrs = {
+            v = "lvim";
+          };
           functions = {
             vn = {
               body = # fish
