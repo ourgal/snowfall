@@ -9,6 +9,11 @@ args.module (
       "zed-editor"
       # keep-sorted end
     ];
-    enable = "emacs";
+    enable = [
+      # keep-sorted start
+      "emacs"
+      "lite-xl"
+      # keep-sorted end
+    ];
   }
 )
