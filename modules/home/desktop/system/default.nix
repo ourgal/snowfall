@@ -48,8 +48,10 @@ args.module (
       colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
       ${namespace}.desktop.system = {
         waybar = {
-          slickbar = enabled;
-          clock24h = enabled;
+          hyprland = {
+            slickbar = enabled;
+            clock24h = enabled;
+          };
         };
       };
     };

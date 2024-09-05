@@ -116,7 +116,7 @@ args.module (
               exec-once = $POLKIT_BIN
               exec-once = dbus-update-activation-environment --systemd --all
               exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-              ${if config.${namespace}.desktop.system.waybar.enable then "exec-once = waybar" else ""}
+              ${if config.${namespace}.desktop.system.waybar.hyprland.enable then "exec-once = waybar" else ""}
               exec-once = ${pkgs.${namespace}.swww-wallsetter}/bin/swww-wallsetter
               exec-once = ${pkgs.swayidle}/bin/swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
               dwindle {
