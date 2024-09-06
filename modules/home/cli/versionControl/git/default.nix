@@ -31,6 +31,7 @@ args.module (
         "git-cliff"
         "git-dive"
         "git-extras"
+        "git-filter-repo"
         "git-graph"
         "git-instafix"
         "git-quick-stats"
