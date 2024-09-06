@@ -13,10 +13,14 @@ args.module (
     enable = [
       # keep-sorted start
       "gh"
-      "git"
       "gitui"
       "jujutsu"
       "lazygit"
+      {
+        git = {
+          hook = args.enabled;
+        };
+      }
       # keep-sorted end
     ];
   }
