@@ -36,6 +36,7 @@ args.module (
         "git-graph"
         "git-instafix"
         "git-quick-stats"
+        "git-sizer"
         "git-upstream"
         "gitleaks"
         "gitmoji-cli"
