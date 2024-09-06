@@ -16,7 +16,23 @@ rec {
     enable = true;
   };
 
-  enabledList = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = enabled; }) { } opts;
+  enabledList =
+    opts:
+    let
+      handle =
+        acc: opt:
+        if (builtins.isString opt) then
+          acc // { ${opt} = enabled; }
+        else if (builtins.isAttrs opt) then
+          acc
+          // (lib.attrsets.foldlAttrs (
+            _acc: n: v:
+            _acc // { ${n} = (enabled // v); }
+          ) { } opt)
+        else
+          builtins.throw "not supported type";
+    in
+    builtins.foldl' handle { } opts;
 
   enableOpt = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
 

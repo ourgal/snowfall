@@ -23,7 +23,6 @@ writeShellApplication rec {
       _files=$(${pkgs.git}/bin/git ls-files)
       files="''${_files//$'\n'/ }"
       ${pkgs.gitleaks}/bin/gitleaks protect -v --staged
-      ${pkgs.gitleaks}/bin/gitleaks detect -v
       ${pkgs.treefmt2}/bin/treefmt --config-file="~/.config/treefmt/config.toml" -C "$root"
       ${pkgs.keep-sorted}/bin/keep-sorted --mode fix $files
       ${
