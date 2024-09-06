@@ -5,7 +5,7 @@
   ...
 }:
 writeShellApplication rec {
-  name = "commit-msg";
+  name = "git-commit-msg";
 
   meta = {
     mainProgram = name;
