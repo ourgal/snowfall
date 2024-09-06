@@ -2,8 +2,8 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args) lib namespace pkgs;
       mimetypes = [
         "image/jpeg"
         "image/png"
@@ -47,6 +47,18 @@ args.module (
           associations.added = defaults;
           defaultApplications = defaults;
         };
+        systemd.user.timers.feh-wallsetter = {
+          Unit = {
+            Description = "feh wallsetter";
+            ConditionEnvironment = "XAUTHORITY";
+          };
+          Install = {
+            WantedBy = [ "graphical-session.target" ];
+          };
+          Timer = {
+            OnUnitActiveSec = "10m";
+          };
+        };
         systemd.user.services.feh-wallsetter = {
           Unit = {
             Description = "feh wallsetter";
@@ -57,8 +69,7 @@ args.module (
           };
           Service = {
             ExecStart = "${pkgs.${namespace}.feh-wallsetter}/bin/feh-wallsetter";
-            Restart = "always";
-            RestartSec = 10;
+            Type = "oneshot";
           };
         };
       };
