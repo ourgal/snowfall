@@ -90,8 +90,8 @@ args.module (
               gpg.format = "ssh";
             };
             hooks = lib.mkIf cfg.hook.enable {
-              commit-msg = "${pkgs.${namespace}.commit-msg}/bin/commit-msg";
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit.py";
+              commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
             };
             aliases = {
               bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
