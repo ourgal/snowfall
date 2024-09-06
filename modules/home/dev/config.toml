@@ -1,0 +1,48 @@
+# One CLI to format the code tree - https://git.numtide.com/numtide/treefmt
+
+[formatter.toml]
+command = "taplo"
+options = ["fmt"]
+includes = ["*.toml"]
+
+[formatter.json]
+command = "fixjson"
+options = ["-w"]
+includes = ["*.json"]
+
+[formatter.yaml]
+command = "yamlfmt"
+includes = ["*.yaml", "*.yml"]
+
+[formatter.nix]
+command = "nixfmt"
+includes = ["*.nix"]
+
+[formatter.python]
+command = "ruff"
+options = ["format"]
+includes = ["*.py"]
+
+[formatter.lua]
+command = "stylua"
+includes = ["*.lua"]
+
+[formatter.fennel]
+command = "fnlfmt"
+options = ["--fix"]
+includes = ["*.fnl"]
+
+[formatter.markdown]
+command = "mdformat"
+includes = ["*.md"]
+
+# shfmt second
+[formatter.shfmt]
+command = "shfmt"
+options = ["-s", "-w"]
+includes = ["*.sh"]
+
+[formatter.go]
+command = "gofmt"
+options = ["-w"]
+includes = ["*.go"]
