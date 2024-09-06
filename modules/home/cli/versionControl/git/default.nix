@@ -18,6 +18,7 @@ args.module (
       ];
       nixPkgs = [
         # keep-sorted start
+        "bfg-repo-cleaner"
         "bit"
         "commitizen"
         "fac"
