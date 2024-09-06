@@ -1,4 +1,9 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  yt-dlp,
+  ...
+}:
 writeShellApplication rec {
   name = "ytm";
 
@@ -9,7 +14,7 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [ yt-dlp ];
 
   text = builtins.readFile ./ytm.sh;
 }

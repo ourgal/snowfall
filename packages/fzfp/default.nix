@@ -1,10 +1,20 @@
-{ writeShellApplication, ... }:
+{
+  writeShellApplication,
+  fzf,
+  tmux,
+  gawk,
+  ...
+}:
 writeShellApplication {
   name = "fzfp";
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [
+    fzf
+    tmux
+    gawk
+  ];
 
   text = builtins.readFile ./fzfp.sh;
 }

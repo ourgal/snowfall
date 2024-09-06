@@ -3,6 +3,10 @@
   lib,
   broot,
   gnumake,
+  tmux,
+  lf,
+  git,
+  ov,
   ...
 }:
 writeShellApplication rec {
@@ -16,6 +20,10 @@ writeShellApplication rec {
   checkPhase = "";
 
   runtimeInputs = [
+    ov
+    git
+    lf
+    tmux
     broot
     gnumake
   ];

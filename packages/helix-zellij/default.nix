@@ -5,6 +5,10 @@
   gnumake,
   pkgs,
   namespace,
+  zellij,
+  lazygit,
+  ov,
+  lf,
   ...
 }:
 let
@@ -21,6 +25,10 @@ writeShellApplication rec {
   checkPhase = "";
 
   runtimeInputs = [
+    lf
+    ov
+    lazygit
+    zellij
     broot
     gnumake
   ];

@@ -1,7 +1,8 @@
 {
   writeShellApplication,
   lib,
-  pkgs,
+  git-fame,
+  git,
   ...
 }:
 writeShellApplication rec {
@@ -14,9 +15,12 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [
+    git-fame
+    git
+  ];
 
   text = ''
-    ${pkgs.git-fame}/bin/git-fame --branch=$(${pkgs.git}/bin/git rev-parse --abbrev-ref HEAD) $@
+    git-fame --branch=$(git rev-parse --abbrev-ref HEAD) $@
   '';
 }

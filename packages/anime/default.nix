@@ -1,4 +1,10 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  viddy,
+  transmission_4,
+  ...
+}:
 writeShellApplication rec {
   name = "anime";
 
@@ -9,7 +15,10 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [
+    viddy
+    transmission_4
+  ];
 
   text = builtins.readFile ./anime.sh;
 }
