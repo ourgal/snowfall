@@ -34,6 +34,7 @@ args.module (
     ];
     myPkgs = [
       # keep-sorted start
+      "lobtui"
       "play"
       "reader"
       "zfind"
