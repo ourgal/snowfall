@@ -35,15 +35,6 @@ writeShellApplication rec {
       chown -R zxc:users "$wallpaperDir"
     fi
     WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
-    PREVIOUS=$WALLPAPER
-    while true; do
-      if [ "$WALLPAPER" == "$PREVIOUS" ]; then
-        WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
-      else
-        PREVIOUS=$WALLPAPER
-        feh --bg-center "$WALLPAPER"
-        sleep $TIMEOUT
-      fi
-    done
+    feh --bg-center "$WALLPAPER"
   '';
 }
