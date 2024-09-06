@@ -19,6 +19,9 @@ args.module (
       "watchman"
       # keep-sorted end
     ];
+    confs = {
+      treefmt = ./config.toml;
+    };
     progs = {
       direnv = {
         nix-direnv.enable = true;
