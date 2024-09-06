@@ -3,7 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "lego";
-    enable = "mkcert";
+    nixPkgs = [
+      # keep-sorted start
+      "lego"
+      "mkcert"
+      # keep-sorted end
+    ];
   }
 )
