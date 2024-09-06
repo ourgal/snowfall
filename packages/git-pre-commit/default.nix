@@ -19,11 +19,9 @@ writeShellApplication rec {
 
   text = # bash
     ''
-      root=$(${pkgs.git}/bin/git rev-parse --show-toplevel)
       _files=$(${pkgs.git}/bin/git ls-files)
       files="''${_files//$'\n'/ }"
       ${pkgs.gitleaks}/bin/gitleaks protect -v --staged
-      ${pkgs.treefmt2}/bin/treefmt --config-file="~/.config/treefmt/config.toml" -C "$root"
       ${pkgs.keep-sorted}/bin/keep-sorted --mode fix $files
       ${
         pkgs.${namespace}.whitespace-format
