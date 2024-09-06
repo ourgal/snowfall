@@ -1,4 +1,9 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  pulseaudio,
+  ...
+}:
 writeShellApplication rec {
   name = "roc-switch";
 
@@ -9,7 +14,7 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [ pulseaudio ];
 
   text = ''
     function get_sink_id() {

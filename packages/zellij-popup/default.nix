@@ -1,4 +1,9 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  zellij,
+  ...
+}:
 writeShellApplication rec {
   name = "zellij-popup";
 
@@ -9,7 +14,7 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [ zellij ];
 
   text = builtins.readFile ./zellij-popup.sh;
 }

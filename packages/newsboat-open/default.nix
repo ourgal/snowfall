@@ -1,4 +1,13 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  feh,
+  yt-dlp,
+  mpv,
+  firefox,
+  qutebrowser,
+  ...
+}:
 writeShellApplication rec {
   name = "newsboat-open";
 
@@ -9,7 +18,13 @@ writeShellApplication rec {
 
   checkPhase = "";
 
-  runtimeInputs = [ ];
+  runtimeInputs = [
+    feh
+    yt-dlp
+    mpv
+    firefox
+    qutebrowser
+  ];
 
   text = builtins.readFile ./newsboat-open.sh;
 }
