@@ -18,9 +18,6 @@ args.module (
             interactiveShellInit = ''
               bind \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
             '';
-            shellAbbrs = {
-              zg = "lazygit";
-            };
           };
         }
         {
