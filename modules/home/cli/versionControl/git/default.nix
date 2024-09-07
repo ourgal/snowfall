@@ -12,6 +12,8 @@ args.module (
         enabled
         disabled
         ;
+      inherit (lib) mkIf;
+      inherit (lib.${namespace}) switch;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
@@ -64,7 +66,7 @@ args.module (
           git = {
             userName = "ourgal";
             userEmail = "git@fairever.aleeas.com";
-            signing = lib.mkIf cfg.sign.enable {
+            signing = mkIf cfg.sign.enable {
               key = "${config.home.homeDirectory}/.ssh/id_ed25519.pub";
               signByDefault = true;
             };
@@ -96,8 +98,7 @@ args.module (
               push.useForceIfIncludes = true;
               gpg.format = "ssh";
             };
-            hooks = lib.mkIf cfg.hook.enable {
-              commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
+            hooks = mkIf cfg.hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
             };
             aliases = {
@@ -115,7 +116,7 @@ args.module (
           };
         }
       ];
-      extraOpts = with lib.${namespace}; {
+      extraOpts = {
         hook = switch;
         sign = switch;
       };
