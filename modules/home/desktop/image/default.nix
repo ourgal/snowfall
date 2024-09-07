@@ -12,6 +12,11 @@ args.module (
       "viewnior"
       # keep-sorted end
     ];
-    enable = "nitrogen";
+    enable = [
+      # keep-sorted start
+      "feh"
+      "nitrogen"
+      # keep-sorted end
+    ];
   }
 )

@@ -3,7 +3,15 @@ args.module (
   args
   // (
     let
-      inherit (args) lib namespace pkgs;
+      inherit (args)
+        lib
+        namespace
+        pkgs
+        config
+        cfgHome
+        ;
+      inherit (lib) mkIf;
+      cfg = cfgHome config.${namespace} ./.;
       mimetypes = [
         "image/jpeg"
         "image/png"
@@ -47,7 +55,7 @@ args.module (
           associations.added = defaults;
           defaultApplications = defaults;
         };
-        systemd.user.timers.feh-wallsetter = {
+        systemd.user.timers.feh-wallsetter = mkIf cfg.wallpaper.enable {
           Unit = {
             Description = "feh wallsetter";
             ConditionEnvironment = "XAUTHORITY";
@@ -59,7 +67,7 @@ args.module (
             OnUnitActiveSec = "10m";
           };
         };
-        systemd.user.services.feh-wallsetter = {
+        systemd.user.services.feh-wallsetter = mkIf cfg.wallpaper.enable {
           Unit = {
             Description = "feh wallsetter";
             ConditionEnvironment = "XAUTHORITY";
@@ -72,6 +80,9 @@ args.module (
             Type = "oneshot";
           };
         };
+      };
+      extraOpts = with lib.${namespace}; {
+        wallpaper = switch;
       };
     }
   )
