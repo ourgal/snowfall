@@ -27,7 +27,7 @@ writeShellApplication rec {
 
   text = # bash
     ''
-      _files=$(git ls-files)
+      _files=$(git diff --name-only --cached)
       files="''${_files//$'\n'/ }"
       gitleaks protect -v --staged
       keep-sorted --mode fix $files
