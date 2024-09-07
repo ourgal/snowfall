@@ -32,5 +32,8 @@ writeShellApplication rec {
       gitleaks protect -v --staged
       keep-sorted --mode fix $files
       whitespace-format --remove-trailing-whitespace --remove-trailing-empty-lines --exclude "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico|.xcf)$" $files
+      if test -f .git/hooks/pre-commit; then
+         .git/hooks/pre-commit "$@"
+      fi
     '';
 }
