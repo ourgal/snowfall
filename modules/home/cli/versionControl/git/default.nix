@@ -2,8 +2,16 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        cfgHome
+        lib
+        pkgs
+        enabled
+        disabled
+        ;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
@@ -64,8 +72,6 @@ args.module (
             delta = enabled // {
               catppuccin = disabled;
               options = {
-                plus-style = "green #26342c";
-                plus-emph-style = "green #2b4134";
                 true-color = "always";
                 decorations = {
                   commit-decoration-style = "bold yellow box ul";
