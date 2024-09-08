@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "bottom-rs"
       "git-agecrypt"
       "git-credential-gopass"
       "git-crypt"
