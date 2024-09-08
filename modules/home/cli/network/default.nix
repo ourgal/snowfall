@@ -23,5 +23,6 @@ args.module (
       "wirelesstools"
       # keep-sorted end
     ];
+    enable = "bottom";
   }
 )
