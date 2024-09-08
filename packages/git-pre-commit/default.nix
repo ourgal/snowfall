@@ -27,7 +27,7 @@ writeShellApplication rec {
 
   text = # bash
     ''
-      _files=$(git diff --name-only --cached)
+      _files=$(git diff --name-only --cached --diff-filter=ACMRT)
       files="''${_files//$'\n'/ }"
       gitleaks protect -v --staged
       if test -n "$files"; then
