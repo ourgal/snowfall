@@ -100,6 +100,7 @@ args.module (
             };
             hooks = mkIf cfg.hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
+              commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
             };
             aliases = {
               bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
