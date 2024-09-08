@@ -139,6 +139,7 @@ args.module (
                   Z = ":xa";
                   Q = ":qa!";
                 };
+                "C-c" = { };
                 g = {
                   "/" =
                     if tmuxEnabled then
@@ -176,6 +177,10 @@ args.module (
                   P = { };
                   y = { };
                   Y = { };
+                  F = { };
+                  b = { };
+                  g = { };
+                  j = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
                     if (tmuxEnabled && cfg.broot.enable) then
@@ -183,7 +188,12 @@ args.module (
                     else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      "file_picker";
+                      {
+                        f = "file_picker";
+                        b = "buffer_picker";
+                        g = "changed_file_picker";
+                        j = "jumplist_picker";
+                      };
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
@@ -301,6 +311,10 @@ args.module (
                   P = { };
                   y = { };
                   Y = { };
+                  F = { };
+                  b = { };
+                  g = { };
+                  j = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
                     if (tmuxEnabled && cfg.broot.enable) then
@@ -308,7 +322,12 @@ args.module (
                     else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      "file_picker";
+                      {
+                        f = "file_picker";
+                        b = "buffer_picker";
+                        g = "changed_file_picker";
+                        j = "jumplist_picker";
+                      };
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
