@@ -93,6 +93,7 @@
         mkOpt' = lib.mkOpt';
         cfgHome = lib.cfgHome;
         tomlFile = lib.tomlFile;
+        switch = lib.switch;
       };
       homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;
     in
