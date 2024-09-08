@@ -2,14 +2,24 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        pkgs
+        enabled
+        disabled
+        enableOpt
+        cfgHome
+        switch
+        ;
       tmuxEnabled = config.${namespace}.cli.shell.tmux.enable;
       zellijEnabled = config.${namespace}.cli.shell.zellij.enable;
       helix-tmux = "${pkgs.${namespace}.helix-tmux}/bin/helix-tmux";
       helix-zellij = "${pkgs.${namespace}.helix-zellij}/bin/helix-zellij";
       tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";
       zellij-popup = "${pkgs.${namespace}.zellij-popup}/bin/zellij-popup";
+      cfg = cfgHome config.${namespace} ./.;
 
       zellijEnter = "zellij action write 13";
     in
@@ -168,12 +178,12 @@ args.module (
                   Y = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
-                    if tmuxEnabled then
+                    if (tmuxEnabled && cfg.broot.enable) then
                       ":sh ${helix-tmux} broot"
-                    else if zellijEnabled then
+                    else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      "";
+                      "file_picker";
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
@@ -184,12 +194,12 @@ args.module (
                   o = "symbol_picker";
                   O = "workspace_symbol_picker";
                   "/" =
-                    if tmuxEnabled then
+                    if (tmuxEnabled && cfg.live_grep.enable) then
                       ":sh ${tmux-popup} '${helix-tmux} livegrep'"
-                    else if zellijEnabled then
+                    else if (zellijEnabled && cfg.live_grep.enable) then
                       ":sh ${zellij-popup} '${helix-zellij} livegrep'"
                     else
-                      "";
+                      "global_search";
                   "*" = [
                     "search_selection"
                     "global_search"
@@ -293,12 +303,12 @@ args.module (
                   Y = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
-                    if tmuxEnabled then
+                    if (tmuxEnabled && cfg.broot.enable) then
                       ":sh ${helix-tmux} broot"
-                    else if zellijEnabled then
+                    else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      "";
+                      "file_picker";
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
@@ -309,12 +319,12 @@ args.module (
                   o = "symbol_picker";
                   O = "workspace_symbol_picker";
                   "/" =
-                    if tmuxEnabled then
+                    if (tmuxEnabled && cfg.live_grep.enable) then
                       ":sh ${tmux-popup} ${helix-tmux} livegrep'"
-                    else if zellijEnabled then
+                    else if (zellijEnabled && cfg.live_grep.enable) then
                       ":sh ${zellij-popup} '${helix-zellij} livegrep'"
                     else
-                      "";
+                      "global_search";
                   "*" = [
                     "search_selection"
                     "global_search"
@@ -632,6 +642,10 @@ args.module (
         "simple-completion-language-server"
         "live-grep"
       ];
+      extraOpts = {
+        broot = switch;
+        live_grep = switch;
+      };
     }
   )
 )
