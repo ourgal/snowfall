@@ -36,6 +36,7 @@ args.module (
                     }
                   else
                     { externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off"; };
+                parseEmoji = true;
               };
               customCommands = [
                 {
