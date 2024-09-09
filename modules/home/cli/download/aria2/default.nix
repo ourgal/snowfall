@@ -2,11 +2,16 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        enableOpt
+        pkgs
+        namespace
+        disableOpt
+        ;
       sessionFile = "${config.xdg.dataHome}/aria2/session";
       configFile = "${config.xdg.configHome}/aria2/aria2.conf";
-      aria2ptui = pkgs.python3.withPackages (ps: with ps; [ aria2p ] ++ aria2p.optional-dependencies.tui);
       rpcPass = "P3TERX";
     in
     {
@@ -148,7 +153,6 @@ args.module (
             WantedBy = [ "default.target" ];
           };
         };
-        home.packages = [ aria2ptui ];
       };
     }
   )

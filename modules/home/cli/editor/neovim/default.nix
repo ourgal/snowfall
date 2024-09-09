@@ -1,56 +1,63 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    nixPkgs = [
-      "fd"
-      "ripgrep"
-      "tree-sitter"
-      "ueberzugpp"
-    ];
-    nodePkgs = "neovim";
-    pyPkgs = "pynvim";
-    progs = [
-      {
-        neovim = {
-          extraLuaPackages = ps: [ ps.magick ];
-          catppuccin.enable = false;
-        };
-      }
-      {
-        fish = {
-          shellAbbrs = {
-            v = "lvim";
+  // (
+    let
+      inherit (args) namespace;
+    in
+    {
+      path = ./.;
+      nixPkgs = [
+        "fd"
+        "ripgrep"
+        "tree-sitter"
+        "ueberzugpp"
+      ];
+      nodePkgs = "neovim";
+      progs = [
+        {
+          neovim = {
+            extraLuaPackages = ps: [ ps.magick ];
+            catppuccin.enable = false;
           };
-          functions = {
-            vn = {
-              body = # fish
-                ''
-                  set -x NVIM_APPNAME nvchad
-                  nvim $argv
-                '';
-              description = "nvchad";
+        }
+        {
+          fish = {
+            shellAbbrs = {
+              v = "lvim";
             };
-            vl = {
-              body = # fish
-                ''
-                  set -x NVIM_APPNAME lazyvim
-                  nvim $argv
-                '';
-              description = "lazyvim";
-            };
-            va = {
-              body = # fish
-                ''
-                  set -x NVIM_APPNAME astrovim
-                  nvim $argv
-                '';
-              description = "astrovim";
+            functions = {
+              vn = {
+                body = # fish
+                  ''
+                    set -x NVIM_APPNAME nvchad
+                    nvim $argv
+                  '';
+                description = "nvchad";
+              };
+              vl = {
+                body = # fish
+                  ''
+                    set -x NVIM_APPNAME lazyvim
+                    nvim $argv
+                  '';
+                description = "lazyvim";
+              };
+              va = {
+                body = # fish
+                  ''
+                    set -x NVIM_APPNAME astrovim
+                    nvim $argv
+                  '';
+                description = "astrovim";
+              };
             };
           };
-        };
-      }
-    ];
-  }
+        }
+      ];
+      value = {
+        ${namespace}.dev.python.pkgs = [ "pynvim" ];
+      };
+    }
+  )
 )
