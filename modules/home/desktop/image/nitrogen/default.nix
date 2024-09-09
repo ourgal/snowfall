@@ -30,7 +30,7 @@ args.module (
             WantedBy = [ "graphical-session.target" ];
           };
           Service = {
-            ExecStart = "${pkgs.nitrogen}/bin/nitrogen --set-zoom-fill --random $HOME/Pictures/wallpapers/";
+            ExecStart = "${pkgs.nitrogen}/bin/nitrogen --set-zoom-fill --random %h/Pictures/wallpapers/";
             Type = "oneshot";
           };
         };
