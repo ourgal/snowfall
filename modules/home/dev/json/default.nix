@@ -8,6 +8,7 @@ args.module (
       "biome"
       "faq"
       "fx"
+      "jd-diff-patch"
       "jid"
       "jiq"
       "jnv"
