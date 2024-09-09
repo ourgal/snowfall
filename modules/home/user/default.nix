@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   namespace,
   ...
 }:
@@ -58,17 +57,16 @@ in
     home.file = {
       ".mailcap".text = ''
         # media
-        video/*; ${pkgs.mpv}/bin/mpv "%s"
-        audio/mpeg; ${pkgs.mpv}/bin/mpv --no-video "%s"
-        image/*; ${pkgs.feh}/bin/feh "%s"
+        video/*; mpv "%s"
+        audio/mpeg; mpv --no-video "%s"
+        image/*; feh "%s"
 
         # text
-        # text/html; ${pkgs.w3m}/bin/w3m "%s"
+        # text/html; w3m "%s"
         text/html; open -a Firefox "%s"
-        text/plain; ${pkgs.helix}/bin/hx "%s"
+        text/plain; hx "%s"
 
-        # fallback to vim
-        text/*; ${pkgs.helix}/bin/hx "%s"
+        text/*; hx "%s"
       '';
     };
   };
