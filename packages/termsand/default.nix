@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage {
   pname = "termsand";
   version = "unstable-2024-08-15";
 
@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage rec {
     description = "";
     homepage = "https://github.com/ourgal/termsand";
     license = licenses.unfree; # FIXME: nix-init did not found a license
-    maintainers = with maintainers; [ ];
+    maintainers = with maintainers; [ zxc ];
     mainProgram = "termsand";
   };
 }
