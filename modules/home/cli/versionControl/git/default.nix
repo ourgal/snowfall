@@ -20,7 +20,6 @@ args.module (
       path = ./.;
       myPkgs = [
         # keep-sorted start
-        "av"
         "git-fame"
         "git-toolbelt"
         "gitcs"
