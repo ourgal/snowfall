@@ -277,6 +277,7 @@ args.module (
         "gitmux"
         "sesh"
         "tmuxinator"
+        "tmuxp"
         # keep-sorted end
       ];
       myPkgs = [
