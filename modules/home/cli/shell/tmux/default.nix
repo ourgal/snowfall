@@ -115,7 +115,8 @@ args.module (
         # Kill pane/window/session shortcuts
         bind x kill-window
         bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
-        bind Q confirm-before -p "kill-session #S? (y/n)" kill-session
+        set -g detach-on-destroy off
+        bind X confirm-before -p "kill-session #S? (y/n)" kill-session
 
         # Detach from session
         bind d detach
@@ -225,7 +226,7 @@ args.module (
         {
           plugin = pkgs.${namespace}.tmux-tea;
           extraConfig = ''
-            set -g @tea-bind o;
+            set -g @tea-bind t;
           '';
         }
         jump
@@ -245,7 +246,6 @@ args.module (
           plugin = session-wizard;
           extraConfig = "set -g @session-wizard 'k'";
         }
-        sessionist
         {
           plugin = yank;
           extraConfig = "set -g @yank_action 'copy-pipe'";
@@ -862,7 +862,7 @@ args.module (
                   { separator = true; }
                   {
                     name = "Tea";
-                    key = "o";
+                    key = "t";
                     command = ''run-shell -b ${pkgs.${namespace}.tmux-tea}/share/tmux-plugins/tmux-tea/bin/tea.sh'';
                   }
                   { separator = true; }
