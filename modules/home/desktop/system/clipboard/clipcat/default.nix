@@ -1,25 +1,75 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    nixPkgs = "clipcat";
-    confs = {
-      clipcat = ./clipcatd.toml;
-    };
-    value = with args; {
-      systemd.user.services.clipcat = {
-        Unit = {
-          Description = "Clipcat daemon";
-        };
-        Install = {
-          WantedBy = [ "graphical-session.target" ];
-        };
-        Service = {
-          ExecStartPre = "${pkgs.coreutils-full}/bin/rm -f %t/clipcat/grpc.sock";
-          ExecStart = "${pkgs.clipcat}/bin/clipcatd --no-daemon --replace";
+  // (
+    let
+      inherit (args) inputs config;
+    in
+    {
+      path = ./.;
+      nixPkgs = "clipcat";
+      confs = {
+        "clipcat/clipcatd.toml" = inputs.nix-std.lib.serde.toTOML {
+          daemonize = true;
+          pid_file = "/run/user/1000/clipcatd.pid";
+          max_history = 50;
+          synchronize_selection_with_clipboard = true;
+          history_file_path = "${config.home.homeDirectory}/.cache/clipcat/clipcatd-history";
+          snippets = [ ];
+          log = {
+            emit_journald = true;
+            emit_stdout = false;
+            emit_stderr = false;
+            level = "INFO";
+          };
+          watcher = {
+            enable_clipboard = true;
+            enable_primary = true;
+            enable_secondary = false;
+            sensitive_x11_atoms = [ "x-kde-passwordManagerHint" ];
+            filter_text_min_length = 1;
+            filter_text_max_length = 20000000;
+            denied_text_regex_patterns = [ ];
+            capture_image = true;
+            filter_image_max_size = 5242880;
+          };
+          grpc = {
+            enable_http = true;
+            enable_local_socket = true;
+            host = "127.0.0.1";
+            port = 45045;
+            local_socket = "/run/user/1000/clipcat/grpc.sock";
+          };
+          dbus = {
+            enable = true;
+          };
+          metrics = {
+            enable = true;
+            host = "127.0.0.1";
+            port = 45047;
+          };
+          desktop_notification = {
+            enable = true;
+            icon = "accessories-clipboard";
+            timeout_ms = 2000;
+            long_plaintext_length = 2000;
+          };
         };
       };
-    };
-  }
+      value = with args; {
+        systemd.user.services.clipcat = {
+          Unit = {
+            Description = "Clipcat daemon";
+          };
+          Install = {
+            WantedBy = [ "graphical-session.target" ];
+          };
+          Service = {
+            ExecStartPre = "${pkgs.coreutils-full}/bin/rm -f %t/clipcat/grpc.sock";
+            ExecStart = "${pkgs.clipcat}/bin/clipcatd --no-daemon --replace";
+          };
+        };
+      };
+    }
+  )
 )

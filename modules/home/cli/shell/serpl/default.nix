@@ -1,11 +1,20 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    myPkgs = "serpl";
-    confs = {
-      serpl = ./config.toml;
-    };
-  }
+  // (
+    let
+      inherit (args) inputs;
+    in
+    {
+      path = ./.;
+      myPkgs = "serpl";
+      confs = {
+        "serpl/config.toml" = inputs.nix-std.lib.serde.toTOML {
+          keybindings = {
+            "<Ctrl-q>" = "Quit";
+          };
+        };
+      };
+    }
+  )
 )
