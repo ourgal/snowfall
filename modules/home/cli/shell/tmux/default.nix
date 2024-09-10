@@ -276,6 +276,7 @@ args.module (
         # keep-sorted start
         "gitmux"
         "sesh"
+        "smug"
         "tmuxinator"
         "tmuxp"
         # keep-sorted end
