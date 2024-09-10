@@ -85,10 +85,11 @@ args.module (
         unbind M-Right # resize 5 rows right
         unbind M-Left # resize 5 rows left
         unbind b
-        unbind s
-        unbind w
-        unbind .
-        unbind i
+        unbind s # choose session
+        unbind w # choose window
+        unbind . # move window
+        unbind i # display window information
+        unbind f # search for a pane
 
         # new window and retain cwd
         bind n new-session
