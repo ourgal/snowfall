@@ -224,6 +224,7 @@ args.module (
         fuzzback
         pkgs.${namespace}.tmux-edgelord
         pkgs.${namespace}.tmux-fzf-url
+        pkgs.${namespace}.tmux-power-zoom
         {
           plugin = pkgs.${namespace}.tmux-tea;
           extraConfig = ''
@@ -872,6 +873,14 @@ args.module (
                     name = "Fpp";
                     key = "f";
                     command = ''run-shell -b ${pkgs.tmuxPlugins.fpp}/share/tmux-plugins/fpp/scripts/fpp.tmux'';
+                  }
+                  { separator = true; }
+                  {
+                    name = "Zoom";
+                    key = "Z";
+                    command = ''run-shell -b ${
+                      pkgs.${namespace}.tmux-power-zoom
+                    }/share/tmux-plugins/tmux-power-zoom/scripts/power_zoom.sh'';
                   }
                 ];
               }
