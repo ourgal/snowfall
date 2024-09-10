@@ -144,7 +144,7 @@ args.module (
 
         bind E run-shell ${termsand}
 
-        bind-key "T" run-shell ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh
+        bind-key "t" run-shell ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh
       '';
       themeType = lib.types.enum [
         "tmux2k"
@@ -226,7 +226,7 @@ args.module (
         {
           plugin = pkgs.${namespace}.tmux-tea;
           extraConfig = ''
-            set -g @tea-bind t;
+            set -g @tea-bind T;
           '';
         }
         jump
@@ -276,6 +276,7 @@ args.module (
         # keep-sorted start
         "gitmux"
         "sesh"
+        "tmuxinator"
         # keep-sorted end
       ];
       myPkgs = [
@@ -862,7 +863,7 @@ args.module (
                   { separator = true; }
                   {
                     name = "Tea";
-                    key = "t";
+                    key = "T";
                     command = ''run-shell -b ${pkgs.${namespace}.tmux-tea}/share/tmux-plugins/tmux-tea/bin/tea.sh'';
                   }
                   { separator = true; }
@@ -893,7 +894,7 @@ args.module (
                   { separator = true; }
                   {
                     name = "Sesh";
-                    key = "T";
+                    key = "t";
                     command = "run-shell -b ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh";
                   }
                 ];
