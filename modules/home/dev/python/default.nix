@@ -10,7 +10,9 @@ args.module (
         lib
         mkOpt'
         cfgHome
+        inputs
         ;
+      inherit (inputs.nix-std.lib.serde) toTOML;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
@@ -51,12 +53,14 @@ args.module (
       };
       files = [
         {
-          ".rye/config.toml" = # toml
-            ''
-              [[sources]]
-              name = "default"
-              url = "https://mirrors.aliyun.com/pypi/simple/"
-            '';
+          ".rye/config.toml" = toTOML {
+            sources = [
+              {
+                name = "default";
+                url = "https://mirrors.aliyun.com/pypi/simple/";
+              }
+            ];
+          };
         }
         {
           ".pip/pip.conf" = # toml
