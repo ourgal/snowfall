@@ -215,6 +215,7 @@ args.module (
           extraConfig = baseConf;
         }
         open
+        fpp
         tmux-fzf
         {
           plugin = extrakto;
@@ -865,6 +866,12 @@ args.module (
                     name = "Tea";
                     key = "o";
                     command = ''run-shell -b ${pkgs.${namespace}.tmux-tea}/share/tmux-plugins/tmux-tea/bin/tea.sh'';
+                  }
+                  { separator = true; }
+                  {
+                    name = "Fpp";
+                    key = "f";
+                    command = ''run-shell -b ${pkgs.tmuxPlugins.fpp}/share/tmux-plugins/fpp/scripts/fpp.tmux'';
                   }
                 ];
               }
