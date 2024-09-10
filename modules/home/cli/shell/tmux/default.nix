@@ -88,6 +88,7 @@ args.module (
         unbind s
         unbind w
         unbind .
+        unbind i
 
         # new window and retain cwd
         bind n new-session
@@ -214,7 +215,10 @@ args.module (
         }
         open
         tmux-fzf
-        extrakto
+        {
+          plugin = extrakto;
+          extraConfig = "set -g @extrakto_key i;";
+        }
         fuzzback
         pkgs.${namespace}.tmux-edgelord
         pkgs.${namespace}.tmux-fzf-url
@@ -822,7 +826,7 @@ args.module (
                   { separator = true; }
                   {
                     name = "Extrakto";
-                    key = "tab";
+                    key = "i";
                     command = ''run-shell ${pkgs.tmuxPlugins.extrakto}/share/tmux-plugins/extrakto/scripts/helpers.sh #{pane_id}'';
                   }
                   { separator = true; }
