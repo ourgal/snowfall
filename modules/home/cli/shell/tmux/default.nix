@@ -11,6 +11,7 @@ args.module (
         lib
         switch
         mkOpt'
+        inputs
         ;
       inherit (pkgs) tmuxPlugins fetchFromGitHub;
       cfg = cfgHome config.${namespace} ./.;
@@ -375,6 +376,11 @@ args.module (
         };
         xdg.configFile = {
           "gitmux/config.yaml".source = ./gitmux.yaml;
+          "sesh/sesh.toml".text = inputs.nix-std.lib.serde.toTOML {
+            default_session = {
+              startup_command = "tmuxinator local";
+            };
+          };
           "tmux/plugins/tmux-which-key/config.yaml".text = lib.generators.toYAML { } {
             command_alias_start_index = 200;
             keybindings = {
