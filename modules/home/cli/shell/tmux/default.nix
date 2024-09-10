@@ -226,6 +226,14 @@ args.module (
         pkgs.${namespace}.tmux-fzf-url
         pkgs.${namespace}.tmux-power-zoom
         {
+          plugin = pkgs.${namespace}.tmux-tome;
+          extraConfig = ''
+            set -g @tome_key a;
+            set -g @tome_scratch-key a;
+            set -g @tome_playbook .playbook.fish;
+          '';
+        }
+        {
           plugin = pkgs.${namespace}.tmux-tea;
           extraConfig = ''
             set -g @tea-bind o;
@@ -881,6 +889,17 @@ args.module (
                     command = ''run-shell -b ${
                       pkgs.${namespace}.tmux-power-zoom
                     }/share/tmux-plugins/tmux-power-zoom/scripts/power_zoom.sh'';
+                  }
+                  { separator = true; }
+                  {
+                    name = "Tome Playbook";
+                    key = "a";
+                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tome}/share/tmux-plugins/tmux-tome/tome-open-playbook'';
+                  }
+                  {
+                    name = "Tome Scratch Playbook";
+                    key = "A";
+                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tome}/share/tmux-plugins/tmux-tome/tome-open-playbook -s'';
                   }
                 ];
               }
