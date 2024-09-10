@@ -218,6 +218,12 @@ args.module (
         fuzzback
         pkgs.${namespace}.tmux-edgelord
         pkgs.${namespace}.tmux-fzf-url
+        {
+          plugin = pkgs.${namespace}.tmux-tea;
+          extraConfig = ''
+            set -g @tea-bind o;
+          '';
+        }
         jump
         {
           plugin = tmux-thumbs;
@@ -848,6 +854,12 @@ args.module (
                     name = "Termsand";
                     key = "E";
                     command = "run-shell ${termsand}";
+                  }
+                  { separator = true; }
+                  {
+                    name = "Tea";
+                    key = "o";
+                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tea}/share/tmux-plugins/tmux-tea/bin/tea.sh'';
                   }
                 ];
               }
