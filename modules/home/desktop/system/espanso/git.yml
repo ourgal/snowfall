@@ -270,3 +270,9 @@ matches:
   # Git Clean
   - trigger: "gitcln."
     replace: "git clean -f"
+
+  # Git Switch
+  - trigger: "gitsw."
+    replace: "git switch "
+  - trigger: "gitswm."
+    replace: "git switch main"
