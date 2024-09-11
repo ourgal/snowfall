@@ -9,6 +9,7 @@ args.module (
       "gimp"
       "nomacs"
       "qview"
+      "sxiv"
       "viewnior"
       # keep-sorted end
     ];
