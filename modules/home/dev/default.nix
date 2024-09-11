@@ -7,7 +7,12 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "whitespace-format";
+      myPkgs = [
+        # keep-sorted start
+        "treegen"
+        "whitespace-format"
+        # keep-sorted end
+      ];
       nixPkgs = [
         # keep-sorted start
         "cachix"
