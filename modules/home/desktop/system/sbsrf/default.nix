@@ -1,19 +1,73 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    dataFiles = {
-      "fcitx5/rime" = [
-        ./default.custom.yaml
-        ./sbfm.custom.yaml
-      ];
-    };
-    value = with args; {
-      i18n.inputMethod = {
-        enabled = "fcitx5";
-        fcitx5.addons = [ pkgs.fcitx5-rime ];
+  // (
+    let
+      inherit (args) pkgs;
+    in
+    {
+      path = ./.;
+      dataFiles = {
+        "fcitx5/rime/default.custom.yaml" = builtins.toJSON {
+          patch = {
+            schema_list = [ { schema = "sbfm"; } ];
+            "key_binder/bindings" = [
+              {
+                accept = "Shift+space";
+                toggle = "ascii_mode";
+                when = "always";
+              }
+            ];
+            ascii_composer = {
+              good_old_caps_lock = false;
+              switch_key = {
+                Caps_Lock = "noop";
+                Control_L = "noop";
+                Control_R = "noop";
+                Shift_L = "noop";
+                Shift_R = "noop";
+              };
+            };
+          };
+        };
+        "fcitx5/rime/sbfm.custom.yaml" = builtins.toJSON {
+          patch = {
+            switches = [
+              {
+                name = "ascii_mode";
+                reset = 1;
+                states = [
+                  "中文"
+                  "西文"
+                ];
+              }
+            ];
+            "key_binder/bindings" = [
+              {
+                accept = "Shift+space";
+                toggle = "ascii_mode";
+                when = "always";
+              }
+            ];
+            ascii_composer = {
+              good_old_caps_lock = false;
+              switch_key = {
+                Caps_Lock = "noop";
+                Control_L = "noop";
+                Control_R = "noop";
+                Shift_L = "noop";
+                Shift_R = "noop";
+              };
+            };
+          };
+        };
       };
-    };
-  }
+      value = {
+        i18n.inputMethod = {
+          enabled = "fcitx5";
+          fcitx5.addons = [ pkgs.fcitx5-rime ];
+        };
+      };
+    }
+  )
 )

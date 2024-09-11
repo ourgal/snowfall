@@ -8,6 +8,7 @@ args.module (
         config
         namespace
         cfgHome
+        pkgs
         ;
       inherit (lib) mkIf;
       inherit (lib.${namespace}) switch;
@@ -27,7 +28,7 @@ args.module (
           ];
         }
       ];
-      value = with args; {
+      value = {
         systemd.user.services.espanso = {
           Unit = {
             Description = "Espanso: cross platform text expander in Rust";
