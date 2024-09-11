@@ -19,6 +19,7 @@ args.module (
       "manga-tui"
       "pik"
       "rimage"
+      "svgshift"
       # keep-sorted end
     ];
   }
