@@ -136,8 +136,9 @@ args.module (
                 "A-." = { };
                 ";" = "repeat_last_motion";
                 "Z" = {
-                  Z = ":xa";
-                  Q = ":qa!";
+                  Z = ":x";
+                  X = ":xa";
+                  Q = ":q!";
                 };
                 "C-c" = { };
                 g = {
