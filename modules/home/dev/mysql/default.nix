@@ -6,6 +6,7 @@ args.module (
     myPkgs = "dblab";
     nixPkgs = [
       # keep-sorted start
+      "beekeeper-studio"
       "gobang"
       "mycli"
       "usql"
