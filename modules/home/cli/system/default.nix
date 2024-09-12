@@ -36,6 +36,7 @@ args.module (
       "clipboard"
       "disk"
       "file-manager"
+      "i3lock-color"
       "monitor"
       "notification"
       "share"
