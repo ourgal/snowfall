@@ -38,6 +38,7 @@ args.module (
       "lobtui"
       "play"
       "reader"
+      "wush"
       "zfind"
       # keep-sorted end
     ];
