@@ -22,6 +22,7 @@ args.module (
         "keep-sorted"
         "nap"
         "process-compose"
+        "reuse"
         "treefmt2"
         "universal-ctags"
         "watchexec"
