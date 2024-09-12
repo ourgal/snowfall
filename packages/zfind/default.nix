@@ -22,6 +22,8 @@ buildGoModule rec {
     "main.appVersion=${version}"
   ];
 
+  postInstall = "rm $out/bin/scripts";
+
   meta = with lib; {
     description = "CLI for file search with SQL like syntax.";
     longDescription = ''

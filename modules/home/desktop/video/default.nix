@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       "freetube"
+      "ytui"
       "mpv"
     ];
   }
