@@ -5,13 +5,13 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
-      "chezmoi"
       "clifm"
       "sfm"
       # keep-sorted end
     ];
     enable = [
       # keep-sorted start
+      "chezmoi"
       "lf"
       "nnn"
       "ranger"
