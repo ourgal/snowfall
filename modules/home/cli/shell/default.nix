@@ -27,6 +27,7 @@ args.module (
       "skim"
       "tmate"
       "tsukae"
+      "vhs"
       "vtm"
       "wtf"
       "yank"
