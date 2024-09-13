@@ -4,7 +4,7 @@ let
 in
 {
   dot = {
-    awesome.minimal = enabled;
+    awesome.minimalFnl = enabled;
     hyprland.minimal = enabled;
     sway.minimal = enabled;
     qtile.Cozytile = enabled;
