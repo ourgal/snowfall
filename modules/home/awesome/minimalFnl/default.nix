@@ -3,48 +3,41 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace;
-      inherit (args.config.${namespace}.user) terminal browser browserS;
-      hostConfig =
-        if (args.host == "home") then # lua
-          ''
-            local awful = require("awful")
-            awful.spawn("${terminal}", { screen = 1, tag = "1" })
-            awful.spawn("${browser}", { screen = 1, tag = "2" })
-            awful.spawn("${terminal}", { screen = 2, tag = "1" })
-            awful.spawn("${browserS}", { screen = 2, tag = "2" })
-          ''
-        # lua
-        else
-          ''
-            local awful = require("awful")
-            awful.spawn("${terminal}")
-          '';
-      finalConfig = hostConfig;
+      inherit (args) pkgs lib config;
     in
     {
       path = ./.;
-      confs = [
-        { "awesome/autostart.lua" = finalConfig; }
-        {
-          awesome = [
-            # keep-sorted start
-            ./error_handing.lua
-            ./keys
-            ./layouts.lua
-            ./menu.lua
-            ./mouse.lua
-            ./rc.lua
-            ./rules
-            ./screen.lua
-            ./settings.lua
-            ./signals.lua
-            ./themes
-            ./wallpaper.lua
-            # keep-sorted end
-          ];
-        }
-      ];
+      confs = {
+        awesome = [
+          # keep-sorted start
+          ./Makefile
+          ./autostart.fnl
+          ./error_handing.fnl
+          ./keys
+          ./layouts.fnl
+          ./menu.fnl
+          ./mouse.fnl
+          ./rc.fnl
+          ./rules
+          ./screen.fnl
+          ./settings.fnl
+          ./signals.fnl
+          ./themes
+          ./wallpaper.fnl
+          # keep-sorted end
+        ];
+      };
+      value = {
+        home.activation.aweome_minimalFnl = config.lib.dag.entryAfter [ "reloadSystemd" ] ''
+          PATH=$PATH:${
+            lib.makeBinPath [
+              pkgs.gnumake
+              pkgs.fennel
+            ]
+          }
+          make -C ${config.xdg.configHome}/awesome
+        '';
+      };
     }
   )
 )

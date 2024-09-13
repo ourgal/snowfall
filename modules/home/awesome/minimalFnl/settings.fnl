@@ -1,9 +1,5 @@
-(var host nil)
-(with-open [f (io.open :/etc/hostname)]
-  (set host (f:read)))
-
 (let [awful (require :awful)
-      terminal :wezterm
+      terminal :kitty
       editor (-> (os.getenv :EDITOR) (or :vim))
       browser :firefox
       browserS :brave
@@ -16,7 +12,8 @@
       tag_num 9
       suit awful.layout.suit
       left_click 1
-      right_click 3]
+      right_click 3
+      host _G.awesome.hostname]
   {: tag_num
    : host
    : terminal
