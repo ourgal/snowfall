@@ -14,31 +14,36 @@ let
         Restart = "always";
       };
     };
-    environment.etc."mosdns-cn/config.yaml".text = # yaml
-      ''
-        server_addr: ":25353"
-        cache_size: 0
-        lazy_cache_ttl: 86400
-        lazy_cache_reply_ttl: 30
-        redis_cache: "redis://localhost:6379"
-        min_ttl: 0
-        max_ttl: 0
-        hosts: ["hosts"]
-        blacklist_domain: []
-        insecure: false
-        ca: []
-        debug: false
-        log_file: ""
-        upstream: []
-        local_upstream: ["https://223.5.5.5/dns-query", "https://doh.apad.pro/dns-query"]
-        local_ip: ["geoip.dat:cn"]
-        local_domain: ["geosite.dat:cn"]
-        local_latency: 50
-        remote_upstream: ["https://8.8.4.4/dns-query", "https://doh.apad.pro/dns-query"]
-        remote_domain: ["geosite.dat:geolocation-!cn"]
-        working_dir: "/etc/mosdns-cn"
-        cd2exe: false
-      '';
+    environment.etc."mosdns-cn/config.yaml".text = builtins.toJSON {
+      server_addr = ":25353";
+      cache_size = 0;
+      lazy_cache_ttl = 86400;
+      lazy_cache_reply_ttl = 30;
+      redis_cache = "redis://localhost:6379";
+      min_ttl = 0;
+      max_ttl = 0;
+      hosts = [ "hosts" ];
+      blacklist_domain = [ ];
+      insecure = false;
+      ca = [ ];
+      debug = false;
+      log_file = "";
+      upstream = [ ];
+      local_upstream = [
+        "https://223.5.5.5/dns-query"
+        "https://doh.apad.pro/dns-query"
+      ];
+      local_ip = [ "geoip.dat:cn" ];
+      local_domain = [ "geosite.dat:cn" ];
+      local_latency = 50;
+      remote_upstream = [
+        "https://8.8.4.4/dns-query"
+        "https://doh.apad.pro/dns-query"
+      ];
+      remote_domain = [ "geosite.dat:geolocation-!cn" ];
+      working_dir = "/etc/mosdns-cn";
+      cd2exe = false;
+    };
     environment.etc."mosdns-cn/hosts".text = "domain:zxc.cn 192.168.123.206";
     environment.etc."mosdns-cn/geoip.dat".source = builtins.fetchurl {
       url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202408052210/geoip.dat";

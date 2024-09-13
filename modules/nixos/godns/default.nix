@@ -14,25 +14,22 @@ let
         Restart = "always";
       };
     };
-    environment.etc."godns/config.json".text = # json
-      ''
+    environment.etc."godns/config.json".text = builtins.toJSON {
+      provider = "DuckDNS";
+      password = "";
+      login_token = "${lib.strings.fileContents ./token.key}";
+      domains = [
         {
-          "provider": "DuckDNS",
-          "password": "",
-          "login_token": "${lib.strings.fileContents ./token.key}",
-          "domains": [
-            {
-              "domain_name": "www.duckdns.org",
-              "sub_domains": ["${lib.strings.fileContents ./domain.key}"]
-            }
-          ],
-          "resolver": "8.8.8.8",
-          "ip_urls": ["https://api.ip.sb/ip"],
-          "ip_type": "IPv6",
-          "interval": 300,
-          "socks5_proxy": ""
+          domain_name = "www.duckdns.org";
+          sub_domains = [ "${lib.strings.fileContents ./domain.key}" ];
         }
-      '';
+      ];
+      resolver = "8.8.8.8";
+      ip_urls = [ "https://api.ip.sb/ip" ];
+      ip_type = "IPv6";
+      interval = 300;
+      socks5_proxy = "";
+    };
   };
   path = ./.;
   _args = {
