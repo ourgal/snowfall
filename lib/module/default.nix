@@ -207,6 +207,7 @@ rec {
                     "${nameFinal}${filename}" = {
                       source = value;
                       inherit executable;
+                      recursive = true;
                     };
                   }
                 else if (builtins.isList value) then
