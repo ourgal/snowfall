@@ -145,7 +145,7 @@ args.module (
 
         bind E run-shell ${termsand}
 
-        bind-key "t" run-shell ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh
+        bind t run-shell ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh
       '';
       themeType = lib.types.enum [
         "tmux2k"
