@@ -3,12 +3,18 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "htop";
-    nixPkgs = [
+    enable = [
+      # keep-sorted start
       "btop"
+      "htop"
+      # keep-sorted end
+    ];
+    nixPkgs = [
+      # keep-sorted start
       "glances"
       "nvtop"
       "zenith"
+      # keep-sorted end
     ];
   }
 )
