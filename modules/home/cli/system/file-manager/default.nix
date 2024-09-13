@@ -8,7 +8,6 @@ args.module (
       "chezmoi"
       "clifm"
       "sfm"
-      "superfile"
       # keep-sorted end
     ];
     enable = [
@@ -16,6 +15,7 @@ args.module (
       "lf"
       "nnn"
       "ranger"
+      "superfile"
       "yazi"
       # keep-sorted end
     ];
