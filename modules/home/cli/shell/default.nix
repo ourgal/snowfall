@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "asciinema"
       "choose"
       "circumflex"
       "didyoumean"
