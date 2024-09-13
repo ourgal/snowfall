@@ -27,22 +27,20 @@ args.module (
           };
         };
       };
+      files = {
+        ".vim" = ln "${sync}/vim";
+      };
+      confs = {
+        layzvim = ln "${sync}/lazyvim";
+        doom = ln "${sync}/doom";
+        todo = ln "${sync}/todo";
+        lvim = ln "${sync}/lvim";
+      };
+      dataFiles = {
+        task = ln "${sync}/task";
+        nap = ln "${sync}/nap";
+      };
       value = {
-        home.file = {
-          ".vim".source = ln "${sync}/vim";
-        };
-        xdg = {
-          configFile = {
-            lazyvim.source = ln "${sync}/lazyvim";
-            doom.source = ln "${sync}/doom";
-            todo.source = ln "${sync}/todo";
-            lvim.source = ln "${sync}/lvim";
-          };
-          dataFile = {
-            task.source = ln "${sync}/task";
-            nap.source = ln "${sync}/nap";
-          };
-        };
         services.syncthing = {
           enable = cfg.service.enable;
           extraOptions = [ "--no-default-folder" ];
