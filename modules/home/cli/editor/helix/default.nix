@@ -478,7 +478,7 @@ args.module (
                 name = "nix";
                 language-servers = [
                   "scls"
-                  "nil"
+                  "nixd"
                 ];
                 formatter = {
                   command = "nixfmt";
@@ -652,6 +652,20 @@ args.module (
               };
               typst-lsp = {
                 command = "typst-lsp";
+              };
+              nixd = {
+                command = "nixd";
+                config = {
+                  formatting = {
+                    command = [
+                      "nixfmt"
+                      "-"
+                    ];
+                  };
+                  nixpkgs = {
+                    expr = "import <nixpkgs> {}";
+                  };
+                };
               };
             };
           };
