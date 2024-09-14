@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
@@ -30,7 +30,7 @@ args.module (
         # keep-sorted end
       ];
       confs = {
-        "treefmt/config.toml" = inputs.nix-std.lib.serde.toTOML {
+        "treefmt/config.toml" = toTOML {
           formatter = {
             toml = {
               command = "taplo";

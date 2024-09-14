@@ -11,7 +11,7 @@ args.module (
         lib
         switch
         mkOpt'
-        inputs
+        toTOML
         ;
       inherit (pkgs) tmuxPlugins fetchFromGitHub;
       cfg = cfgHome config.${namespace} ./.;
@@ -424,7 +424,7 @@ args.module (
         };
         xdg.configFile = {
           "gitmux/config.yaml".text = gitmuxConf;
-          "sesh/sesh.toml".text = inputs.nix-std.lib.serde.toTOML {
+          "sesh/sesh.toml".text = toTOML {
             default_session = {
               startup_command = "tmuxinator local";
             };

@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
       bind = key: [
         key
         ""
@@ -13,7 +13,7 @@ args.module (
       path = ./.;
       nixPkgs = "superfile";
       # confs = {
-      #   "superfile/config.toml" = inputs.nix-std.lib.serde.toTOML {
+      #   "superfile/config.toml" = toTOML {
       #     theme = "catppuccin";
       #     auto_check_update = false;
       #     cd_on_quit = false;
@@ -27,7 +27,7 @@ args.module (
       #     metadata = false;
       #     enable_md5_checksum = false;
       #   };
-      #   "superfile/hotkeys.toml" = inputs.nix-std.lib.serde.toTOML {
+      #   "superfile/hotkeys.toml" = toTOML {
       #     confirm = bind "enter";
       #     quit = bind "ctrl+c";
       #     list_up = bind "k";

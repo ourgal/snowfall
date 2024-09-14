@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
@@ -15,7 +15,7 @@ args.module (
         # keep-sorted end
       ];
       files = {
-        ".cargo/config.toml" = inputs.nix-std.lib.serde.toTOML {
+        ".cargo/config.toml" = toTOML {
           source = {
             crates-io = {
               replace-with = "rsproxy-sparse";

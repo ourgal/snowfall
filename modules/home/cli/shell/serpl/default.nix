@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
       myPkgs = "serpl";
       confs = {
-        "serpl/config.toml" = inputs.nix-std.lib.serde.toTOML {
+        "serpl/config.toml" = toTOML {
           keybindings = {
             "<Ctrl-q>" = "Quit";
           };

@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs config;
+      inherit (args) toTOML config;
     in
     {
       path = ./.;
       nixPkgs = "clipcat";
       confs = {
-        "clipcat/clipcatd.toml" = inputs.nix-std.lib.serde.toTOML {
+        "clipcat/clipcatd.toml" = toTOML {
           daemonize = true;
           pid_file = "/run/user/1000/clipcatd.pid";
           max_history = 50;

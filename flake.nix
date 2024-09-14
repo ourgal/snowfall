@@ -94,6 +94,7 @@
         mkOpt' = lib.mkOpt';
         cfgHome = lib.cfgHome;
         tomlFile = lib.tomlFile;
+        toTOML = inputs.nix-std.lib.serde.toTOML;
         switch = lib.switch;
       };
       homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;

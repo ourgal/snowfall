@@ -10,9 +10,8 @@ args.module (
         lib
         mkOpt'
         cfgHome
-        inputs
+        toTOML
         ;
-      inherit (inputs.nix-std.lib.serde) toTOML;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
