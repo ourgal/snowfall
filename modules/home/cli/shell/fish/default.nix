@@ -192,8 +192,8 @@ args.module (
               src = fetchFromGitHub {
                 owner = "kpbaks";
                 repo = "ctrl-z.fish";
-                rev = "bf597fc4d0187ff9011e3abe4f7932339244c438";
-                sha256 = "109ibx0d306sqkyp52ywmk7xhmbv8pj5yc84qq704lawx0jnszmy";
+                rev = "689d60cb9706d2a19cb65286c2dea488b3293807";
+                sha256 = "0yczlpalydz870ii0jimx4pi3q8lfl2ak380rqdhpsqgq8d8r81r";
               };
             }
             {
