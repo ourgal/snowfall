@@ -35,7 +35,7 @@ args.module (
               pkgs.fennel
             ]
           }
-          make -C ${config.xdg.configHome}/awesome
+          make -C ${config.xdg.configHome}/awesome -B
         '';
       };
     }
