@@ -9,6 +9,7 @@ args.module (
       "openssl"
       "sshpass"
       "sshs"
+      "sshx"
       "termscp"
       "wishlist"
       # keep-sorted end
