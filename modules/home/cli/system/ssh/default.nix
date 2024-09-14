@@ -10,6 +10,7 @@ args.module (
       "sshpass"
       "sshs"
       "termscp"
+      "wishlist"
       # keep-sorted end
     ];
     enable = "ssh-tpm-agent";
