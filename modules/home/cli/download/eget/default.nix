@@ -3,14 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
       nixPkgs = "eget";
       files = [
         {
-          ".eget.toml" = inputs.nix-std.lib.serde.toTOML {
+          ".eget.toml" = toTOML {
             global = {
               target = "~/.local/bin";
             };

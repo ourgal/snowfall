@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
       nixPkgs = "ttdl";
       confs = {
-        "ttdl/ttdl.toml" = inputs.nix-std.lib.serde.toTOML {
+        "ttdl/ttdl.toml" = toTOML {
           colors = {
             color_term = "ansi";
             overdue = "bright red";
