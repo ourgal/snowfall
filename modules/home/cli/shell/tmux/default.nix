@@ -216,6 +216,7 @@ args.module (
         pkgs.${namespace}.tmux-edgelord
         pkgs.${namespace}.tmux-fzf-url
         pkgs.${namespace}.tmux-power-zoom
+        pkgs.${namespace}.tmux-auto-renumber-session
         {
           plugin = pkgs.${namespace}.tmux-tome;
           extraConfig = ''
