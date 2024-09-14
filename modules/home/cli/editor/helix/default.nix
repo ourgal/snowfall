@@ -478,7 +478,7 @@ args.module (
                 name = "nix";
                 language-servers = [
                   "scls"
-                  "nixd"
+                  "nil"
                 ];
                 formatter = {
                   command = "nixfmt";
