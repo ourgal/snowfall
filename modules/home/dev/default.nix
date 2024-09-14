@@ -97,6 +97,7 @@ args.module (
         "android"
         "ansible"
         "cookiecutter"
+        "cpp"
         "dhall"
         "editorconfig"
         "fennel"
