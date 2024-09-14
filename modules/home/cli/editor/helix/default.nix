@@ -190,7 +190,7 @@ args.module (
                       ":sh ${helix-zellij} broot"
                     else
                       {
-                        f = "file_picker";
+                        f = ":sh ${helix-tmux} broot";
                         b = "buffer_picker";
                         g = "changed_file_picker";
                         j = "jumplist_picker";
@@ -324,7 +324,7 @@ args.module (
                       ":sh ${helix-zellij} broot"
                     else
                       {
-                        f = "file_picker";
+                        f = ":sh ${helix-tmux} broot";
                         b = "buffer_picker";
                         g = "changed_file_picker";
                         j = "jumplist_picker";
