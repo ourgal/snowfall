@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "pnut";
     nixPkgs = [
       # keep-sorted start
       "jc"
