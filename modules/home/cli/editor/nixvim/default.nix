@@ -111,7 +111,7 @@ args.module (
       ];
       value = {
         ${namespace} = {
-          dev.python.pkgs = [ "pynvim" ];
+          dev.python.global.pkgs = [ "pynvim" ];
           cli.editor.nixvim = {
             colorschemes.tokyonight = enabled;
           };
