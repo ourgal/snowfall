@@ -34,7 +34,7 @@ python3.pkgs.buildPythonApplication rec {
   pythonRelaxDeps = true;
 
   preBuild = ''
-    sed -i 's/{{VERSION}}/v2.5.0/' setup.py
+    substituteInPlace setup.py --replace-fail {{VERSION}} v2.5.0
   '';
 
   pythonImportsCheck = [ "lookatme" ];
