@@ -23,6 +23,7 @@ args.module (
         "git-fame"
         "git-toolbelt"
         "gitcs"
+        "repoblame"
         # keep-sorted end
       ];
       nixPkgs = [
