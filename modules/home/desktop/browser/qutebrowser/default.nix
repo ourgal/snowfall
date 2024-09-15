@@ -76,7 +76,7 @@ args.module (
         };
       };
       value = {
-        ${namespace}.dev.python.pkgs = [ "adblock" ];
+        ${namespace}.dev.python.global.pkgs = [ "adblock" ];
       };
     }
   )

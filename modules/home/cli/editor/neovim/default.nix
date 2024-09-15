@@ -56,7 +56,7 @@ args.module (
         }
       ];
       value = {
-        ${namespace}.dev.python.pkgs = [ "pynvim" ];
+        ${namespace}.dev.python.global.pkgs = [ "pynvim" ];
       };
     }
   )

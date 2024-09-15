@@ -3,21 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        pkgs
-        config
-        namespace
-        lib
-        mkOpt'
-        cfgHome
-        toTOML
-        ;
-      cfg = cfgHome config.${namespace} ./.;
+      inherit (args) toTOML;
     in
     {
       path = ./.;
       pyPkgs = [
         # keep-sorted start
+        "black"
         "ipython"
         "ptpython"
         # keep-sorted end
@@ -71,24 +63,7 @@ args.module (
             '';
         }
       ];
-      value = {
-        home.packages = [
-          (pkgs.python3.withPackages (
-            ps:
-            [
-              ps.black
-              ps.websockets
-            ]
-            ++ lib.${namespace}.with' ps cfg.pkgs
-            ++ lib.optionals config.${namespace}.cli.download.aria2.enable (
-              [ ps.aria2p ] ++ ps.aria2p.optional-dependencies.tui
-            )
-          ))
-        ];
-      };
-      extraOpts = {
-        pkgs = mkOpt' (lib.types.listOf lib.types.str) [ ];
-      };
+      enable = "global";
     }
   )
 )
