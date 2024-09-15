@@ -15,7 +15,7 @@ args.module (
       };
       value = {
         home.activation.chezmoi = config.lib.dag.entryAfter [ "reloadSystemd" ] ''
-          ${pkgs.chezmoi}/bin/chezmoi apply
+          ${pkgs.chezmoi}/bin/chezmoi apply --force
         '';
       };
     }
