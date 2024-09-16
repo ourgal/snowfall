@@ -19,6 +19,7 @@ args.module (
       "rm"
       "sed"
       "time"
+      "tree"
       "watch"
       # keep-sorted end
     ];
