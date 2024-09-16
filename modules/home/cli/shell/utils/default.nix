@@ -12,6 +12,7 @@ args.module (
       "du"
       "find"
       "grep"
+      "kill"
       "ls"
       "mv"
       "ps"
