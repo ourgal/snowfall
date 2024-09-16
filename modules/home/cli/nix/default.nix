@@ -9,6 +9,7 @@ args.module (
       "nix-du"
       "nix-generate-from-cpan"
       "nix-info"
+      "nix-melt"
       "nix-output-monitor"
       "nix-search-cli"
       "nix-template"
