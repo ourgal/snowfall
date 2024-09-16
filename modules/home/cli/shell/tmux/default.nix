@@ -218,6 +218,14 @@ args.module (
         pkgs.${namespace}.tmux-power-zoom
         pkgs.${namespace}.tmux-auto-renumber-session
         {
+          plugin = pkgs.${namespace}.tmux-pane-focus;
+          extraConfig = ''
+            set -g @pane-focus-size on
+            set -g @pane-focus-size '80'
+            set -g @pane-focus-direction '+'
+          '';
+        }
+        {
           plugin = pkgs.${namespace}.tmux-tome;
           extraConfig = ''
             set -g @tome_key a;
