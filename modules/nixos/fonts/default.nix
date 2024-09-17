@@ -21,19 +21,19 @@ let
         defaultFonts = {
           emoji = [ "Noto Color Emoji" ];
           monospace = [
+            "DejaVu Sans Mono"
             "Source Han Sans SC"
             "Sarasa Mono SC"
-            "DejaVu Sans Mono"
           ];
           sansSerif = [
+            "DejaVu Sans"
             "Source Han Sans SC"
             "Noto Sans CJK SC"
-            "DejaVu Sans"
           ];
           serif = [
+            "DejaVu Serif"
             "Source Han Serif SC"
             "Noto Serif CJK SC"
-            "DejaVu Serif"
           ];
         };
       };
