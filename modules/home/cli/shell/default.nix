@@ -49,6 +49,7 @@ args.module (
       "asciiart"
       "atuin"
       "broot"
+      "buku"
       "carapace"
       "cod"
       "fish"
