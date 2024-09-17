@@ -2,8 +2,16 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        cfgHome
+        config
+        namespace
+        lib
+        pkgs
+        mkOpt'
+        enabled
+        ;
       cfg = cfgHome config.${namespace} ./.;
       diffType = lib.types.enum [
         "delta"
@@ -22,6 +30,7 @@ args.module (
         }
         {
           lazygit = {
+            catppuccin = enabled;
             settings = {
               gui = {
                 nerdFontsVersion = "3";

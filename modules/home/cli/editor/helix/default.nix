@@ -8,7 +8,6 @@ args.module (
         namespace
         pkgs
         enabled
-        disabled
         enableOpt
         cfgHome
         switch
@@ -27,9 +26,11 @@ args.module (
       path = ./.;
       progs = {
         helix = {
-          catppuccin = disabled;
+          catppuccin = enabled // {
+            flavor = "mocha";
+            useItalics = true;
+          };
           settings = {
-            theme = "catppuccin_mocha";
             editor =
               enableOpt [
                 "true-color"

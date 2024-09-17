@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     progs = {
       kitty = {
+        catppuccin.enable = true;
         font = {
           name = "FiraCode Nerd Font Mono";
           size = 14;
