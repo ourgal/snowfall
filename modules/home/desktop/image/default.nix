@@ -16,6 +16,7 @@ args.module (
     enable = [
       # keep-sorted start
       "feh"
+      "imv"
       "nitrogen"
       # keep-sorted end
     ];
