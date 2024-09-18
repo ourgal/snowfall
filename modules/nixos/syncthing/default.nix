@@ -48,6 +48,7 @@ let
       todo = desktops ++ syncthing;
       vim = desktops ++ syncthing;
       buku = desktops ++ syncthing;
+      jrnl = desktops ++ syncthing;
       books = [ "home" ] ++ syncthing;
       wenku = [ "home" ] ++ syncthing;
       linovel = [ "home" ] ++ syncthing;
