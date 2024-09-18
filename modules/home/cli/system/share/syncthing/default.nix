@@ -40,6 +40,7 @@ args.module (
         task = ln "${sync}/task";
         nap = ln "${sync}/nap";
         buku = ln "${sync}/buku";
+        jrnl = ln "${sync}/jrnl";
       };
       value = {
         services.syncthing = {
