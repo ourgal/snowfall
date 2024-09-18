@@ -10,6 +10,7 @@ args.module (
       "goaccess" # web log viewer
       "htmlq"
       "httpie"
+      "restish"
       "slumber"
       "trurl"
       "xh"
