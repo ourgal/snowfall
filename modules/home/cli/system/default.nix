@@ -13,6 +13,7 @@ args.module (
       "kmon"
       "neofetch"
       "onefetch"
+      "owofetch"
       "screenkey"
       "sysz"
       "toolbox"
@@ -31,7 +32,6 @@ args.module (
       "c"
       # keep-sorted end
     ];
-    # nvtop = "full";
     enable = [
       # keep-sorted start
       "clipboard"
