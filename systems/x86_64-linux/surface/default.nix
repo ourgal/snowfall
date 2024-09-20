@@ -44,6 +44,7 @@ in
       "location"
       "logrotate"
       "nh"
+      "pcscd"
       "power"
       "sops-nix"
       "syncthing"

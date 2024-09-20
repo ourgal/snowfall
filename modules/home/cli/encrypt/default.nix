@@ -10,6 +10,8 @@ args.module (
       "git-credential-gopass"
       "git-crypt"
       "gopass"
+      "opensc"
+      "pcsc-tools"
       "ssh-to-age"
       # keep-sorted end
     ];
