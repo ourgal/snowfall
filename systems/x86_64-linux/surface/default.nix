@@ -29,7 +29,6 @@ in
     }
     // enabledList [
       # keep-sorted start
-      "adb"
       "appimage"
       "audio"
       "bandwhich"
@@ -50,6 +49,7 @@ in
       "syncthing"
       "tpm"
       "transmission"
+      "udev"
       "udisks2"
       # keep-sorted end
     ];
