@@ -43,8 +43,10 @@ args.module (
                       colorArg = "always";
                       pager = "${pkgs.delta}/bin/delta --paging=never";
                     }
+                  else if cfg.diff == "difftastic" then
+                    { externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off"; }
                   else
-                    { externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off"; };
+                    "";
                 parseEmoji = true;
               };
               customCommands = [

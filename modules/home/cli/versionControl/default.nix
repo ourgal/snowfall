@@ -16,7 +16,11 @@ args.module (
       "git"
       "gitui"
       "jujutsu"
-      "lazygit"
+      {
+        lazygit = {
+          diff = "difftastic";
+        };
+      }
       # keep-sorted end
     ];
   }
