@@ -46,6 +46,7 @@ in
       "logrotate"
       "nfsMount"
       "nh"
+      "pcscd"
       "power"
       "sops-nix"
       "syncthing"
