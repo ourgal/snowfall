@@ -38,6 +38,7 @@ in
       "bluetooth"
       "common"
       "desktop"
+      "flatpak"
       "fonts"
       "harmonia"
       "kmonad"
