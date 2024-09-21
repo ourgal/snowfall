@@ -9,6 +9,7 @@ args.module (
       "blanket"
       "netease-cloud-music-gtk"
       "qpwgraph"
+      "shortwave"
       # keep-sorted end
     ];
     enable = "easyeffects";
