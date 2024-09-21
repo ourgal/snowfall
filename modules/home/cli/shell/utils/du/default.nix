@@ -11,6 +11,7 @@ args.module (
       "dua"
       "duc"
       "gdu"
+      "ncdu"
       # keep-sorted end
     ];
   }
