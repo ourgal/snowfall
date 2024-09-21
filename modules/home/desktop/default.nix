@@ -10,6 +10,7 @@ args.module (
       "browser"
       "chat"
       "document"
+      "flatpak"
       "game"
       "image"
       "math"
