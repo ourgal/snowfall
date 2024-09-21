@@ -2,28 +2,20 @@
 args.module (
   args
   // (
-    with args;
     let
-      inherit (inputs.nix-colors.lib-contrib { inherit pkgs; }) gtkThemeFromScheme;
+      inherit (args) enabled pkgs;
     in
     {
       path = ./.;
       value = {
         # Theme GTK
         gtk = enabled // {
+          catppuccin = enabled;
           font = {
             name = "Ubuntu";
             size = 12;
             package = pkgs.ubuntu_font_family;
           };
-          theme = {
-            name = "${config.colorScheme.slug}";
-            package = gtkThemeFromScheme { scheme = config.colorScheme; };
-          };
-          # iconTheme = {
-          #   name = "Papirus-Dark";
-          #   package = pkgs.papirus-icon-theme;
-          # };
           gtk3.extraConfig = {
             gtk-application-prefer-dark-theme = 1;
           };
