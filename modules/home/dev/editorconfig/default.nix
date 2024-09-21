@@ -19,6 +19,10 @@ args.module (
           "Makefile" = {
             indent_style = "tab";
           };
+          "*.py" = {
+            indent_style = "space";
+            indent_size = 4;
+          };
         };
       };
     };
