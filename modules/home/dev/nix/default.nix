@@ -10,6 +10,7 @@ args.module (
       "nix-init"
       "nixd"
       "nixfmt-rfc-style"
+      "prefetch-npm-deps"
       "statix"
       "update-nix-fetchgit"
       # keep-sorted end
