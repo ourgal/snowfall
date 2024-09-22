@@ -6,7 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "bluetuith"
-      "brotab"
       "charm-freeze"
       "fastfetch"
       "geekbench"
