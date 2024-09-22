@@ -23,5 +23,6 @@ args.module (
       # keep-sorted end
     ];
     xorgPkgs = "xev";
+    enable = "brotab";
   }
 )
