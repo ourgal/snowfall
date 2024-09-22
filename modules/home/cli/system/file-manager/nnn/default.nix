@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs config namespace;
     in
     {
       path = ./.;
@@ -97,7 +97,7 @@ args.module (
       ];
       env = {
         NNN_ARCHIVE = "\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)$";
-        NNN_TERMINAL = "wezterm";
+        NNN_TERMINAL = config.${namespace}.user.terminal;
         NNN_PREVIEWIMGPROG = "ueberzug";
       };
     }
