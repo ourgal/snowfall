@@ -16,6 +16,7 @@ args.module (
       "jqp"
       "jsonfmt"
       "miller"
+      "remarshal"
       "visidata"
       "yj"
       "yq-go"

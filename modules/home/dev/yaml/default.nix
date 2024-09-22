@@ -7,6 +7,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "faq"
+      "remarshal"
       "yaml-language-server"
       "yamlfmt"
       # keep-sorted end
