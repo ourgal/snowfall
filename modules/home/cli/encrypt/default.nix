@@ -7,9 +7,7 @@ args.module (
       # keep-sorted start
       "bottom-rs"
       "git-agecrypt"
-      "git-credential-gopass"
       "git-crypt"
-      "gopass"
       "opensc"
       "pcsc-tools"
       "ssh-to-age"
@@ -18,6 +16,7 @@ args.module (
     pyPkgs = "names";
     enable = [
       # keep-sorted start
+      "gopass"
       "gpg"
       "sops"
       # keep-sorted end
