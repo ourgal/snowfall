@@ -1,12 +1,17 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    progs = with args; {
-      nixvim = {
-        extraPlugins = with pkgs.vimPlugins; [ persisted-nvim ];
+  // (
+    let
+      inherit (args) pkgs;
+    in
+    {
+      path = ./.;
+      progs = {
+        nixvim = {
+          extraPlugins = [ pkgs.vimPlugins.persisted-nvim ];
+        };
       };
-    };
-  }
+    }
+  )
 )

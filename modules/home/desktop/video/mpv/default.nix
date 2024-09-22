@@ -2,8 +2,17 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        cfgHome
+        lib
+        pkgs
+        disabled
+        enabled
+        switch
+        ;
       cfg = cfgHome config.${namespace} ./.;
       fileTypes = [
         "video/mp4"
@@ -129,7 +138,7 @@ args.module (
           defaultApplications = defaults;
         };
       };
-      extraOpts = with lib.${namespace}; {
+      extraOpts = {
         yt-subs = switch;
       };
     }

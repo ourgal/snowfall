@@ -2,8 +2,14 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        cfgHome
+        switch
+        lib
+        ;
       cfg = cfgHome config.${namespace} ./.;
       palette = config.colorScheme.palette;
     in
@@ -197,7 +203,7 @@ args.module (
               };
             }
           ];
-          style = concatStrings [
+          style = lib.concatStrings [
             ''
                     * {
               	font-size: 16px;
@@ -498,7 +504,7 @@ args.module (
           ];
         };
       };
-      extraOpts = with lib.${namespace}; {
+      extraOpts = {
         simplebar = switch;
         clock24h = switch;
         slickbar = switch;

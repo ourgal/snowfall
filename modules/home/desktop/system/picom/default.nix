@@ -2,8 +2,13 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        enabled
+        disabled
+        ;
       awesome = config.${namespace}.awesome;
       conf =
         if (awesome.alphaTechnolog == enabled) then

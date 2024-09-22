@@ -1,17 +1,22 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    progs = with args; {
-      emacs = {
-        extraPackages = epkgs: [ epkgs.vterm ];
-        package = pkgs.emacs-gtk;
+  // (
+    let
+      inherit (args) pkgs;
+    in
+    {
+      path = ./.;
+      progs = {
+        emacs = {
+          extraPackages = epkgs: [ epkgs.vterm ];
+          package = pkgs.emacs-gtk;
+        };
       };
-    };
-    servs = "emacs";
-    value = with args; {
-      systemd.user.services.emacs.Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
-    };
-  }
+      servs = "emacs";
+      value = {
+        systemd.user.services.emacs.Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
+      };
+    }
+  )
 )

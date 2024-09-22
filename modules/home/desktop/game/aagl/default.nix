@@ -1,13 +1,25 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    inputPkgs = with args.inputs.aagl.packages."${args.pkgs.system}"; [
-      anime-borb-launcher
-      anime-game-launcher
-      honkers-launcher
-      honkers-railway-launcher
-    ];
-  }
+  // (
+    let
+      inherit (args)
+        pkgs
+        inputs
+        lib
+        namespace
+        ;
+      inherit (lib.${namespace}) with';
+      aagl = inputs.aagl.packages."${pkgs.system}";
+    in
+    {
+      path = ./.;
+      inputPkgs = with' aagl [
+        "anime-borb-launcher"
+        "anime-game-launcher"
+        "honkers-launcher"
+        "honkers-railway-launcher"
+      ];
+    }
+  )
 )

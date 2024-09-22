@@ -2,8 +2,15 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        lib
+        namespace
+        cfgHome
+        mkOpt'
+        tomlFile
+        ;
       cfg = cfgHome config.${namespace} ./.;
       styleOpt = lib.types.enum [
         "minimal"

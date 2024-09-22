@@ -2,8 +2,8 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args) pkgs namespace;
       chromeLikeBrowser = "${pkgs.chromium}/bin/chromium";
       singleton = "${pkgs.${namespace}.singleton}/bin/singleton";
       webapp_common = ''
@@ -47,14 +47,17 @@ args.module (
     {
       path = ./.;
       value = {
-        home.packages = with pkgs; [
-          xdotool
-          chromium
-          singleton
-          webapp
-          webapp_no_cors
-          yacd
-        ];
+        home.packages =
+          [
+            pkgs.xdotool
+            pkgs.chromium
+          ]
+          ++ [
+            singleton
+            webapp
+            webapp_no_cors
+            yacd
+          ];
       };
     }
   )

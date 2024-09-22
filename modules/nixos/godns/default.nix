@@ -3,7 +3,7 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule;
   value = {
-    environment.systemPackages = with pkgs; [ godns ];
+    environment.systemPackages = [ pkgs.godns ];
     systemd.services.godns = {
       description = "godns";
       after = [ "network.target" ];

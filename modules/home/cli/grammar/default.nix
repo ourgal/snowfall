@@ -1,26 +1,31 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    value = with args; {
-      home.packages = with pkgs; [
-        # keep-sorted start
-        enchant
-        hunspell
-        languagetool
-        wordnet
-        # keep-sorted end
-        (aspellWithDicts (
-          dicts: with dicts; [
-            # keep-sorted start
-            en
-            en-computers
-            en-science
-            # keep-sorted end
-          ]
-        ))
-      ];
-    };
-  }
+  // (
+    let
+      inherit (args) pkgs;
+    in
+    {
+      path = ./.;
+      value = {
+        home.packages = [
+          # keep-sorted start
+          pkgs.enchant
+          pkgs.hunspell
+          pkgs.languagetool
+          pkgs.wordnet
+          # keep-sorted end
+          (pkgs.aspellWithDicts (
+            dicts: with dicts; [
+              # keep-sorted start
+              en
+              en-computers
+              en-science
+              # keep-sorted end
+            ]
+          ))
+        ];
+      };
+    }
+  )
 )
