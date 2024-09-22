@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) toTOML config;
+      inherit (args) toTOML config pkgs;
     in
     {
       path = ./.;
@@ -56,7 +56,7 @@ args.module (
           };
         };
       };
-      value = with args; {
+      value = {
         systemd.user.services.clipcat = {
           Unit = {
             Description = "Clipcat daemon";

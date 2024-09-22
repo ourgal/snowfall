@@ -1,21 +1,29 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    progs = with args; {
-      gh = {
-        extensions = with pkgs; [
-          gh-dash
-          gh-eco
-          gh-f
-          gh-s
-          pkgs.${namespace}.gh-branch
-          pkgs.${namespace}.gh-cp
-          pkgs.${namespace}.gh-screensaver
-          pkgs.${namespace}.gh-stars
-        ];
+  // (
+    let
+      inherit (args) pkgs namespace;
+    in
+    {
+      path = ./.;
+      progs = {
+        gh = {
+          extensions =
+            [
+              pkgs.gh-dash
+              pkgs.gh-eco
+              pkgs.gh-f
+              pkgs.gh-s
+            ]
+            ++ [
+              pkgs.${namespace}.gh-branch
+              pkgs.${namespace}.gh-cp
+              pkgs.${namespace}.gh-screensaver
+              pkgs.${namespace}.gh-stars
+            ];
+        };
       };
-    };
-  }
+    }
+  )
 )

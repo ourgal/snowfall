@@ -2,13 +2,13 @@
 args.module (
   args
   // (
-    with args;
     let
       inherit (args)
         lib
         config
         namespace
         cfgHome
+        pkgs
         ;
       inherit (lib) mkIf;
       inherit (lib.${namespace}) switch;

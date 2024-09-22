@@ -2,8 +2,8 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args) host lib pkgs;
       isClient = (host != "home");
       serverHost = "home.local";
       isServer = (host == "home");

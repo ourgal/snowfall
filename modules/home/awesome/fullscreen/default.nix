@@ -2,8 +2,13 @@
 args.module (
   args
   // (
-    with args;
     let
+      inherit (args)
+        config
+        namespace
+        host
+        pkgs
+        ;
       baseConfig = builtins.readFile ./rc.lua;
       hostConfig =
         if (host == "home") then # lua
