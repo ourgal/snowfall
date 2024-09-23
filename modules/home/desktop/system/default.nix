@@ -12,6 +12,7 @@ args.module (
     in
     {
       path = ./.;
+      gnomePkgs = "zenity";
       myPkgs = "blobdrop";
       nixPkgs = [
         # keep-sorted start

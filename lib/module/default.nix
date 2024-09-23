@@ -167,6 +167,7 @@ rec {
       perlPkgs ? [ ],
       luaPkgs ? [ ],
       xfcePkgs ? [ ],
+      gnomePkgs ? [ ],
       inputPkgs ? [ ],
       extraOpts ? { },
       confs ? [ ],
@@ -261,6 +262,7 @@ rec {
             ++ (pkgHandle pkgs.luaPackages luaPkgs)
             ++ (pkgHandle pkgs.xorg xorgPkgs)
             ++ (pkgHandle pkgs.xfce xfcePkgs)
+            ++ (pkgHandle pkgs.gnome gnomePkgs)
             ++ (pkgHandle pkgs.snowfallorg snowPkgs)
             ++ (inputPkgs);
           xdg.configFile = (confHandle confs);
