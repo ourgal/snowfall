@@ -18,7 +18,7 @@ args.module (
         ".cargo/config.toml" = toTOML {
           source = {
             crates-io = {
-              replace-with = "rsproxy-sparse";
+              replace-with = "cernet-sparse";
             };
             rsproxy = {
               registry = "https://rsproxy.cn/crates.io-index";
@@ -26,10 +26,19 @@ args.module (
             rsproxy-sparse = {
               registry = "sparse+https://rsproxy.cn/index/";
             };
+            cernet = {
+              registry = "https://mirrors.cernet.edu.cn/crates.io-index.git";
+            };
+            cernet-sparse = {
+              registry = "sparse+https://mirrors.cernet.edu.cn/crates.io-index/";
+            };
           };
           registries = {
             rsproxy = {
               index = "https://rsproxy.cn/crates.io-index";
+            };
+            cernet = {
+              index = "https://mirrors.cernet.edu.cn/crates.io-index.git";
             };
           };
           net = {
@@ -39,8 +48,8 @@ args.module (
       };
       env = {
         # run rustup default stable
-        RUSTUP_UPDATE_ROOT = "https://mirror.nju.edu.cn/rustup/rustup";
-        RUSTUP_DIST_SERVER = "https://mirror.nju.edu.cn/rustu";
+        RUSTUP_UPDATE_ROOT = "https://mirrors.cernet.edu.cn/rustup/rustup";
+        RUSTUP_DIST_SERVER = "https://mirrors.cernet.edu.cn/rustup";
       };
     }
   )
