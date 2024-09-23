@@ -20,6 +20,7 @@ args.module (
       "ugm"
       "ventoy-bin-full"
       "wget"
+      "wmctrl"
       "xdotool"
       # keep-sorted end
     ];
