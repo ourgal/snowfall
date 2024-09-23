@@ -11,6 +11,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "dig"
+      "dnspeep"
       "dogdns"
       "dstp"
       "gping"
