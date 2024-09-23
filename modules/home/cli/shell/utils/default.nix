@@ -13,6 +13,7 @@ args.module (
       "find"
       "grep"
       "kill"
+      "less"
       "ls"
       "mv"
       "ps"
