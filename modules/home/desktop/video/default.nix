@@ -3,11 +3,18 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "stremio";
+    nixPkgs = [
+      # keep-sorted start
+      "gifski"
+      "stremio"
+      # keep-sorted end
+    ];
     enable = [
+      # keep-sorted start
       "freetube"
-      "ytui"
       "mpv"
+      "ytui"
+      # keep-sorted end
     ];
   }
 )
