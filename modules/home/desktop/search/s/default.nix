@@ -4,8 +4,5 @@ args.module (
   // {
     path = ./.;
     myPkgs = "s";
-    confs = {
-      "fish/completions" = ./s.fish;
-    };
   }
 )
