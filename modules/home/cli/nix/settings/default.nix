@@ -14,7 +14,7 @@ args.module (
         xdg.configFile = {
           "nix/nix.conf".text =
             let
-              mirrorUrls = "https://mirror.sjtu.edu.cn/nix-channels/store https://mirrors.nju.edu.cn/nix-channels/store";
+              mirrorUrls = "https://mirrors.cernet.edu.cn/nix-channels/store";
               aaglUrls = "https://ezkea.cachix.org";
               aaglKeys = "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=";
             in

@@ -48,7 +48,7 @@ args.module (
             sources = [
               {
                 name = "default";
-                url = "https://mirrors.aliyun.com/pypi/simple/";
+                url = "https://mirrors.cernet.edu.cn/pypi/web/simple/";
               }
             ];
           };
@@ -57,9 +57,9 @@ args.module (
           ".pip/pip.conf" = # toml
             ''
               [global]
-              index-url = https://mirrors.aliyun.com/pypi/simple/
+              index-url = https://mirrors.cernet.edu.cn/pypi/web/simple/
               [install]
-              trusted-host = mirror.aliyun.com
+              trusted-host = mirrors.cernet.edu.cn
             '';
         }
       ];

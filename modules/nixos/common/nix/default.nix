@@ -17,8 +17,7 @@ let
       let
         mirrors = [
           "http://home.local:50000"
-          "https://mirror.sjtu.edu.cn/nix-channels/store"
-          "https://mirror.nju.edu.cn/nix-channels/store"
+          "https://mirrors.cernet.edu.cn/nix-channels/store"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org"
         ];
