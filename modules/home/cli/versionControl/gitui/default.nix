@@ -14,6 +14,7 @@ args.module (
               stage_unstage_item: Some(( code: Char(' '), modifiers: "")),
 
               open_help: Some(( code: F(1), modifiers: "")),
+              exit_popup: Some(( code: Char('q'), modifiers: "")),
           )
         '';
       };
