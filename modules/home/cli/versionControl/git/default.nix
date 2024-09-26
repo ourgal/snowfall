@@ -20,6 +20,7 @@ args.module (
       path = ./.;
       myPkgs = [
         # keep-sorted start
+        "diffnav"
         "git-fame"
         "git-toolbelt"
         "gitcs"
@@ -113,6 +114,10 @@ args.module (
           fish = {
             shellAbbrs = {
               gr = "cd (git root)";
+            };
+            functions.diffnav = {
+              body = "git diff | command diffnav";
+              description = "Diffnav";
             };
           };
         }
