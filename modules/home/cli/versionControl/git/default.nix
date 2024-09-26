@@ -88,7 +88,7 @@ args.module (
               credential.helper = "gopass";
               init.defaultBranch = "main";
               pull.rebase = true;
-              core.editor = "hx";
+              core.editor = config.${namespace}.user.editor;
               git-extras = {
                 defualt-branch = "main";
                 get = {
