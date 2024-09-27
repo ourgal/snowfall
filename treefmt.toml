@@ -33,7 +33,8 @@ options = ["--fix"]
 includes = ["*.fnl"]
 
 [formatter.markdown]
-command = "mdformat"
+command = "prettier"
+options = ["--parser", "markdown"]
 includes = ["*.md"]
 
 # shfmt second
