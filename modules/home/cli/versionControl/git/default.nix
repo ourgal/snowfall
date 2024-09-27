@@ -23,6 +23,7 @@ args.module (
         "diffnav"
         "git-cal"
         "git-fame"
+        "git-heatgrid"
         "git-ink"
         "git-issue"
         "git-my"
@@ -113,8 +114,6 @@ args.module (
             };
             aliases = {
               bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
-              heat = "!${pkgs.${namespace}.git-heatgrid}/bin/git-heatgrid";
-              fame = "!${pkgs.${namespace}.git-fame}/bin/git-fame";
             };
           };
         }
