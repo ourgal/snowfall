@@ -35,6 +35,8 @@ args.module (
         "fac"
         "gex"
         "git-absorb"
+        "git-annex"
+        "git-annex-remote-rclone"
         "git-backdate"
         "git-bars"
         "git-big-picture"
