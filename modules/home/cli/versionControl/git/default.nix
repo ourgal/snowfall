@@ -23,6 +23,7 @@ args.module (
         "diffnav"
         "git-cal"
         "git-fame"
+        "git-ink"
         "git-issue"
         "git-my"
         "git-playback"
