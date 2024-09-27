@@ -68,6 +68,7 @@ args.module (
         "license-cli"
         "mob"
         "pre-commit"
+        "riffdiff"
         "tig"
         # keep-sorted end
       ];
