@@ -14,6 +14,11 @@ writeShellApplication rec {
 
   checkPhase = "";
 
+  bashOptions = [
+    "nounset"
+    "pipefail"
+  ];
+
   runtimeInputs = [ git ];
 
   text = builtins.readFile (fetchurl {
