@@ -21,6 +21,7 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "diffnav"
+        "git-cal"
         "git-fame"
         "git-issue"
         "git-toolbelt"
