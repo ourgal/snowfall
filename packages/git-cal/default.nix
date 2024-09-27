@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
 
     install -m755 -D git-cal $out/bin/git-cal
     substituteInPlace $out/bin/git-cal \
-      --replace /usr/bin/perl "${perl}/bin/perl"
+      --replace-fail /usr/bin/perl "${perl}/bin/perl"
 
     runHook postInstall
   '';
