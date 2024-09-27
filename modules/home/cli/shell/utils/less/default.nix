@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "moar"
+      "most"
       "peep"
       # keep-sorted end
     ];
