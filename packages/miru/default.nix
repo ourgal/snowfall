@@ -26,6 +26,6 @@ appimageTools.wrapType2 {
     install -Dm444 ${appimageContents}/${pname}.desktop $out/share/applications/${pnameCap}.desktop
     install -Dm444 ${appimageContents}/usr/share/icons/hicolor/256x256/apps/${pname}.png $out/share/pixmaps/${pnameCap}.png
     substituteInPlace $out/share/applications/${pnameCap}.desktop \
-      --replace 'Exec=AppRun --no-sandbox %U' 'Exec=${pname}'
+      --replace-fail 'Exec=AppRun --no-sandbox %U' 'Exec=${pname}'
   '';
 }
