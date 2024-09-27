@@ -49,6 +49,7 @@ args.module (
         "git-graph"
         "git-instafix"
         "git-quick-stats"
+        "git-secret"
         "git-sizer"
         "git-upstream"
         "gitleaks"
