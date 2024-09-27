@@ -24,6 +24,7 @@ args.module (
         "git-cal"
         "git-fame"
         "git-issue"
+        "git-playback"
         "git-toolbelt"
         "gitcs"
         "repoblame"

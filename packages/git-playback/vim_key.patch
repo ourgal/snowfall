@@ -1,0 +1,144 @@
+diff --git a/playback/__init__.py b/playback/__init__.py
+index 8f4b94f..8e973b2 100755
+--- a/playback/__init__.py
++++ b/playback/__init__.py
+@@ -9,19 +9,18 @@ import time
+
+ def get_text(repo, sha1, file_path):
+     try:
+-        return repo.git.show('%s:%s' % (sha1, file_path)).replace(
+-            '\r', '').split('\n')
++        return repo.git.show("%s:%s" % (sha1, file_path)).replace("\r", "").split("\n")
+     except git.exc.GitCommandError:
+         return []  # Assuming that the file was deleted here.
+
+
+ def get_message(repo, sha1, file_path):
+     short_sha1 = sha1[:7]
+-    author = '(%s)' % repo.git.log(sha1, n=1, format='%ae').replace(
+-        '\r', '').split('\n')[0]
+-    message = repo.git.log(sha1, n=1, oneline=True, color='never').replace(
+-        '\r', '').split('\n')[0][8:]
+-    return ' '.join((short_sha1, file_path, author, message))
++    author = "(%s)" % repo.git.log(sha1, n=1, format="%ae").replace("\r", "").split("\n")[0]
++    message = (
++        repo.git.log(sha1, n=1, oneline=True, color="never").replace("\r", "").split("\n")[0][8:]
++    )
++    return " ".join((short_sha1, file_path, author, message))
+
+
+ def display_line(window, row, line, color, col_width=82):
+@@ -33,13 +32,12 @@ def display_line(window, row, line, color, col_width=82):
+     if display_column > 0 and (display_column + 1) * col_width > max_x:
+         # Don't display additional columns if they don't completely fit.
+         return False
+-    window.addstr(
+-        display_row, display_column * col_width, line[:col_width], color)
++    window.addstr(display_row, display_column * col_width, line[:col_width], color)
+
+
+ def display_prompt(window, message):
+     max_y, max_x = window.getmaxyx()
+-    window.addstr(max_y - 1, 0, message[:max_x - 1], curses.A_REVERSE)
++    window.addstr(max_y - 1, 0, message[: max_x - 1], curses.A_REVERSE)
+
+
+ def function(window):
+@@ -49,16 +47,16 @@ def function(window):
+
+     repo = git.Repo(os.getcwd())
+     top_level = repo.git.rev_parse(show_toplevel=True)
+-    file_path = os.path.relpath(
+-        os.path.join(os.getcwd(), sys.argv[1]), top_level)
++    file_path = os.path.relpath(os.path.join(os.getcwd(), sys.argv[1]), top_level)
+
+     # `commits` is a list of `(sha1, file_path)` tuples where `file_path` is
+     # variable because we are following files renames. Adding the '!' into the
+     # format is a hack to help us delimit sha1s in the git output.
+     commits = [
+-        log.split('\t') for log in
+-        repo.git.log(file_path, name_only=True, follow=True, format='%H!')
+-        .replace('!\n\n', '\t').split('\n')
++        log.split("\t")
++        for log in repo.git.log(file_path, name_only=True, follow=True, format="%H!")
++        .replace("!\n\n", "\t")
++        .split("\n")
+     ]
+     commits.reverse()  # Since `git log --reverse --follow` doesn't work
+
+@@ -86,50 +84,47 @@ def function(window):
+
+         # Change state parameters based on keyboard input
+         first_row_delta = 0
+-        if key == ord('r'):
++        if key == ord("r"):
+             rewinding = True
+-        elif key == ord('p'):
++        elif key == ord("p"):
+             playing = True
+-        elif key in (curses.KEY_LEFT, ord('b')):
++        elif key in (curses.KEY_LEFT, ord("h"), ord("b")):
+             if 0 <= position - 1 < len(commits):
+                 position -= 1
+             else:
+                 rewinding = False
+-        elif key in (curses.KEY_RIGHT, ord('f')):
++        elif key in (curses.KEY_RIGHT, ord("l"), ord("f")):
+             if 0 <= position + 1 < len(commits):
+                 position += 1
+             else:
+                 playing = False
+-        elif key in (curses.KEY_DOWN, ord('n') - 96):  # ctrl + n
++        elif key in (curses.KEY_DOWN, ord("j"), ord("n") - 96):  # ctrl + n
+             if first_row < len(diff) - 1:
+                 first_row_delta = 1
+-        elif key in (curses.KEY_UP, ord('p') - 96):  # ctrl + p
++        elif key in (curses.KEY_UP, ord("k"), ord("p") - 96):  # ctrl + p
+             if first_row > 0:
+                 first_row_delta = -1
+-        elif key == ord('q'):
++        elif key == ord("q"):
+             return
+
+         if commit == commits[position] and not first_row_delta:
+-            time.sleep(.01)
++            time.sleep(0.01)
+             continue
+
+         commit = commits[position]
+         first_row += first_row_delta
+         window.clear()
+
+-        old_text = get_text(repo, *commits[position - 1]) \
+-            if position - 1 >= 0 else []
++        old_text = get_text(repo, *commits[position - 1]) if position - 1 >= 0 else []
+         text = get_text(repo, *commit)
+-        diff = [
+-            line for line in list(difflib.ndiff(old_text, text))
+-            if line[:2] != '? ']
++        diff = [line for line in list(difflib.ndiff(old_text, text)) if line[:2] != "? "]
+
+         # `row` is the line number and `line` is the line text.
+-        for row, line in enumerate(diff[min(first_row, len(diff) - 1):]):
++        for row, line in enumerate(diff[min(first_row, len(diff) - 1) :]):
+             code = line[:2]
+-            if code == '+ ':
++            if code == "+ ":
+                 color = curses.color_pair(2)
+-            elif code == '- ':
++            elif code == "- ":
+                 color = curses.color_pair(1)
+             else:
+                 color = curses.color_pair(0)
+@@ -144,9 +139,9 @@ def playback():
+     try:
+         curses.wrapper(function)
+     except git.exc.GitCommandError as err:
+-        print >> sys.stderr, '%s: %s' % (type(err).__name__, err)
++        print >> sys.stderr, "%s: %s" % (type(err).__name__, err)
+         return 1
+
+
+-if __name__ == '__main__':
++if __name__ == "__main__":
+     sys.exit(playback())
