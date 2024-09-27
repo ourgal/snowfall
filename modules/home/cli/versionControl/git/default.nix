@@ -22,6 +22,7 @@ args.module (
         # keep-sorted start
         "diffnav"
         "git-fame"
+        "git-issue"
         "git-toolbelt"
         "gitcs"
         "repoblame"
