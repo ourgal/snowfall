@@ -28,6 +28,7 @@ args.module (
         "git-issue"
         "git-my"
         "git-playback"
+        "git-spend"
         "git-toolbelt"
         "gitcs"
         "repoblame"
