@@ -35,6 +35,7 @@ in
     terminal = mkOpt' str "kitty";
     browserS = mkOpt' str "brave";
     browserSS = mkOpt' str "qutebrowser";
+    pager = mkOpt' str "moar";
   };
 
   config = mkIf (isString cfg.name) {
@@ -51,6 +52,7 @@ in
       homeDirectory = "/home/${config.home.username}";
       sessionVariables = {
         EDITOR = cfg.editor;
+        PAGER = cfg.pager;
       };
       stateVersion = "23.11";
     };
