@@ -3,13 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = [
       # keep-sorted start
-      "gh"
-      "git"
-      "gitui"
-      "jujutsu"
-      { lazygit.diff = "difftastic"; }
+      "gex"
+      "gitu"
+      "tig"
       # keep-sorted end
     ];
   }
