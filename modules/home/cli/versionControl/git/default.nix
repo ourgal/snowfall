@@ -20,60 +20,36 @@ args.module (
       path = ./.;
       myPkgs = [
         # keep-sorted start
-        "diffnav"
-        "git-cal"
-        "git-fame"
-        "git-heatgrid"
-        "git-ink"
-        "git-issue"
-        "git-my"
-        "git-playback"
-        "git-spend"
         "git-toolbelt"
-        "gitcs"
-        "gtm"
-        "repoblame"
         # keep-sorted end
       ];
       nixPkgs = [
         # keep-sorted start
-        "bfg-repo-cleaner"
-        "bit"
-        "commitizen"
-        "fac"
-        "gex"
-        "git-absorb"
-        "git-annex"
-        "git-annex-remote-rclone"
-        "git-backdate"
-        "git-bars"
-        "git-big-picture"
-        "git-branchless"
-        "git-bug"
-        "git-cliff"
-        "git-dive"
         "git-extras"
-        "git-filter-repo"
-        "git-graph"
-        "git-instafix"
-        "git-quick-stats"
-        "git-secret"
-        "git-sizer"
-        "git-upstream"
-        "gitleaks"
-        "gitmoji-cli"
-        "gitnr"
-        "gitstats"
-        "hub"
-        "lefthook"
-        "license-cli"
-        "mob"
-        "pre-commit"
-        "riffdiff"
-        "tig"
         # keep-sorted end
       ];
-      enable = "geminicommit";
+      enable = [
+        # keep-sorted start
+        "amend"
+        "blame"
+        "branch"
+        "changelog"
+        "cli"
+        "commit"
+        "diff"
+        "github"
+        "hook"
+        "ignore"
+        "issue"
+        "license"
+        "security"
+        "stats"
+        "sync"
+        "time-tracking"
+        "tui"
+        "undo"
+        # keep-sorted end
+      ];
       progs = [
         {
           git = {
@@ -111,12 +87,9 @@ args.module (
               push.useForceIfIncludes = true;
               gpg.format = "ssh";
             };
-            hooks = mkIf cfg.hook.enable {
+            hooks = mkIf cfg.global_hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
               commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
-            };
-            aliases = {
-              bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
             };
           };
         }
@@ -125,15 +98,11 @@ args.module (
             shellAbbrs = {
               gr = "cd (git root)";
             };
-            functions.diffnav = {
-              body = "git diff | command diffnav";
-              description = "Diffnav";
-            };
           };
         }
       ];
       extraOpts = {
-        hook = switch;
+        global_hook = switch;
         sign = switch;
       };
     }

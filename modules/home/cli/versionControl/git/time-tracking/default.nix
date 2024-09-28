@@ -3,13 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    myPkgs = [
       # keep-sorted start
-      "gh"
-      "git"
-      "gitui"
-      "jujutsu"
-      { lazygit.diff = "difftastic"; }
+      "git-spend"
+      "gtm"
       # keep-sorted end
     ];
   }
