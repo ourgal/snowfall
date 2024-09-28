@@ -6,8 +6,8 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "git-spend"
-      "gtm"
       # keep-sorted end
     ];
+    enable = "gtm";
   }
 )
