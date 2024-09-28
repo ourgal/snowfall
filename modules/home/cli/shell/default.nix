@@ -48,6 +48,7 @@ args.module (
         "fzf-kill"
         "lobtui"
         "play"
+        "rat"
         "reader"
         "wush"
         "zfind"
