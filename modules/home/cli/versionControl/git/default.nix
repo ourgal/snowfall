@@ -31,6 +31,7 @@ args.module (
         "git-spend"
         "git-toolbelt"
         "gitcs"
+        "gtm"
         "repoblame"
         # keep-sorted end
       ];
