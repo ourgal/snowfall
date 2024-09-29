@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "fetch"
+      "fgit"
       "github-dlr"
       # keep-sorted end
     ];
