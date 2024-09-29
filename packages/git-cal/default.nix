@@ -17,13 +17,12 @@ stdenv.mkDerivation rec {
   };
 
   dontBuild = true;
+
+  buildInputs = [ perl ];
+
   installPhase = ''
     runHook preInstall
-
     install -m755 -D git-cal $out/bin/git-cal
-    substituteInPlace $out/bin/git-cal \
-      --replace-fail /usr/bin/perl "${perl}/bin/perl"
-
     runHook postInstall
   '';
 
