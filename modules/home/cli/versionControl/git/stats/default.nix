@@ -8,6 +8,7 @@ args.module (
       "git-cal"
       "git-fame"
       "git-heatgrid"
+      "git-of-theseus"
       "gitcs"
       "repoblame"
       # keep-sorted end
