@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "gogitmoji";
+    myPkgs = [
+      # keep-sorted start
+      "gogitmoji"
+      "goji"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "commitizen"
