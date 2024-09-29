@@ -5,5 +5,9 @@ args.module (
     path = ./.;
     progs = "go";
     nixPkgs = "gopls";
+    env = {
+      GO111MODULE = "on";
+      GOPROXY = "https://goproxy.cn";
+    };
   }
 )
