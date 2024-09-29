@@ -7,7 +7,6 @@ args.module (
       # keep-sorted start
       "baidupcs-go"
       "dra"
-      "github-dir"
       # keep-sorted end
     ];
     pyPkgs = "downloader-cli";
