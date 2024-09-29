@@ -63,6 +63,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-std.url = "github:chessai/nix-std";
+    gitwatch = {
+      url = "github:gitwatch/gitwatch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
