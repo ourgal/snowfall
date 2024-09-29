@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "git-sumi"
       "gogitmoji"
       "goji"
       "koji"
