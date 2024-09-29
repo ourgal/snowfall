@@ -168,6 +168,7 @@ rec {
       luaPkgs ? [ ],
       xfcePkgs ? [ ],
       gnomePkgs ? [ ],
+      batPkgs ? [ ],
       inputPkgs ? [ ],
       extraOpts ? { },
       confs ? [ ],
@@ -263,6 +264,7 @@ rec {
             ++ (pkgHandle pkgs.xorg xorgPkgs)
             ++ (pkgHandle pkgs.xfce xfcePkgs)
             ++ (pkgHandle pkgs.gnome gnomePkgs)
+            ++ (pkgHandle pkgs.bat-extras batPkgs)
             ++ (pkgHandle pkgs.snowfallorg snowPkgs)
             ++ (inputPkgs);
           xdg.configFile = (confHandle confs);
