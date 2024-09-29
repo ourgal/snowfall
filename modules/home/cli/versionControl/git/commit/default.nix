@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "gogitmoji"
       "goji"
+      "koji"
       # keep-sorted end
     ];
     nixPkgs = [
