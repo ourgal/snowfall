@@ -8,6 +8,7 @@ args.module (
       "fetch"
       "fgit"
       "github-dlr"
+      "gitty"
       # keep-sorted end
     ];
   }
