@@ -10,6 +10,7 @@ args.module (
       "git-crypt"
       "opensc"
       "pcsc-tools"
+      "prs"
       "ssh-to-age"
       # keep-sorted end
     ];
