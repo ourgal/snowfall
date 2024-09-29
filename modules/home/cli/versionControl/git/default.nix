@@ -37,6 +37,7 @@ args.module (
         "cli"
         "commit"
         "diff"
+        "download"
         "github"
         "hook"
         "ignore"
