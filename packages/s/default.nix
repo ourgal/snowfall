@@ -26,10 +26,10 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = ''
-    $out/bin/s --completion bash > s.bash
-    $out/bin/s --completion zsh > s.zsh
-    $out/bin/s --completion fish > s.fish
-    installShellCompletion s.{bash,fish,zsh}
+    installShellCompletion --cmd s \
+      --bash <($out/bin/s --completion bash) \
+      --fish <($out/bin/s --completion fish) \
+      --zsh <($out/bin/s --completion zsh)
   '';
 
   meta = with lib; {

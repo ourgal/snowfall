@@ -28,10 +28,10 @@ buildGoModule rec {
   doCheck = false;
 
   postInstall = ''
-    $out/bin/gogitmoji completion bash > gogitmoji.bash
-    $out/bin/gogitmoji completion zsh > gogitmoji.zsh
-    $out/bin/gogitmoji completion fish > gogitmoji.fish
-    installShellCompletion gogitmoji.{bash,fish,zsh}
+    installShellCompletion --cmd gogitmoji \
+      --bash <($out/bin/gogitmoji completion bash) \
+      --fish <($out/bin/gogitmoji completion fish) \
+      --zsh <($out/bin/gogitmoji completion zsh)
   '';
 
   meta = with lib; {
