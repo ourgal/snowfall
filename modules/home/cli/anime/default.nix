@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "adl"
       "animdl"
+      "curd"
       "lobster"
       # keep-sorted end
     ];
