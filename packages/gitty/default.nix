@@ -26,10 +26,10 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall = ''
-    $out/bin/gitty completion bash > gitty.bash
-    $out/bin/gitty completion zsh > gitty.zsh
-    $out/bin/gitty completion fish > gitty.fish
-    installShellCompletion gitty.{bash,fish,zsh}
+    installShellCompletion --cmd gitty \
+      --bash <($out/bin/gitty completion bash) \
+      --fish <($out/bin/gitty completion fish) \
+      --zsh <($out/bin/gitty completion zsh)
   '';
 
   doCheck = false;
