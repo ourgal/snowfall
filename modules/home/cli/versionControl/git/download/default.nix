@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "github-dlr";
+    myPkgs = [
+      # keep-sorted start
+      "fetch"
+      "github-dlr"
+      # keep-sorted end
+    ];
   }
 )
