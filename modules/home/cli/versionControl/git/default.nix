@@ -43,6 +43,7 @@ args.module (
         "ignore"
         "issue"
         "license"
+        "rebase"
         "security"
         "stats"
         "sync"
@@ -87,6 +88,7 @@ args.module (
               };
               push.useForceIfIncludes = true;
               gpg.format = "ssh";
+              sequence.editor = mkIf cfg.rebase.enable "git-interactive-rebase-tool";
             };
             hooks = mkIf cfg.global_hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
