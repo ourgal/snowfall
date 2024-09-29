@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "gickup"
       "git-upstream"
       "mob"
       # keep-sorted end
