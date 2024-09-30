@@ -6,8 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "bottom-rs"
-      "git-agecrypt"
-      "git-crypt"
       "opensc"
       "pcsc-tools"
       "prs"
