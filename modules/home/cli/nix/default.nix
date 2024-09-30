@@ -35,6 +35,7 @@ args.module (
       # keep-sorted start
       "comma"
       "home-manager"
+      "manix"
       "settings"
       # keep-sorted end
     ];
