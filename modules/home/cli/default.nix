@@ -33,7 +33,6 @@ args.module (
       "nix"
       "note"
       "presentation"
-      "proxy"
       "rss"
       "shell"
       "system"
