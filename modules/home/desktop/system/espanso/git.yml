@@ -15,7 +15,7 @@ matches:
 
   # Git Init
   - trigger: "giti."
-    replace: "git init"
+    replace: "git init "
   # Git Clone
   - trigger: "gitcl."
     replace: "git clone "
