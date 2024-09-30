@@ -7,6 +7,7 @@ args.module (
     in
     {
       path = ./.;
+      myPkgs = "gg";
       progs = [
         "scmpuff"
         {
