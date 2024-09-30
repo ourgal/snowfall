@@ -25,6 +25,7 @@ args.module (
         "zsh-forgit"
         # keep-sorted end
       ];
+      enable = "gut";
     }
   )
 )
