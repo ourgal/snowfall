@@ -31,6 +31,7 @@ args.module (
       enable = [
         # keep-sorted start
         "amend"
+        "batch"
         "blame"
         "branch"
         "changelog"
