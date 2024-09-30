@@ -30,6 +30,7 @@ args.module (
       ];
       enable = [
         # keep-sorted start
+        "add"
         "amend"
         "batch"
         "blame"
