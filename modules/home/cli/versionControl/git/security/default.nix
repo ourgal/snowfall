@@ -9,6 +9,7 @@ args.module (
       "git-crypt"
       "git-secret"
       "gitleaks"
+      "transcrypt"
       # keep-sorted end
     ];
   }
