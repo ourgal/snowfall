@@ -138,7 +138,7 @@ matches:
     replace: "git merge "
   # Git Branch Main
   - trigger: "gitbm."
-    replace: "git branch -m master"
+    replace: "git branch -m main"
   # Git Merge Develop
   - trigger: "gitmd."
     replace: "git merge develop"
@@ -218,11 +218,9 @@ matches:
     replace: 'git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
   # Git Rebase
   - trigger: "gitrb."
-    ###--------------------------
-    ### Revert | Rebase | Reset
-    ###--------------------------
-
-    replace: "git rebase master"
+    replace: "git rebase main"
+  - trigger: "gitrba."
+    replace: "git rebase -i --autosquash main"
   # Git Reset
   - trigger: "gitrs."
     replace: "git reset"
