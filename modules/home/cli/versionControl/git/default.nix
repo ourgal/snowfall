@@ -37,6 +37,7 @@ args.module (
         "branch"
         "changelog"
         "cli"
+        "clone"
         "commit"
         "diff"
         "download"
