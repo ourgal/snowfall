@@ -18,6 +18,7 @@ args.module (
       "system"
       "terminal"
       "translate"
+      "versionControl"
       "video"
       "xprofile"
       # keep-sorted end
