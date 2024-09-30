@@ -10,6 +10,7 @@ args.module (
       inputPkgs = [ inputs.gitwatch.packages."${pkgs.system}".default ];
       myPkgs = [
         # keep-sorted start
+        "gac"
         "git-sumi"
         "gogitmoji"
         "goji"
