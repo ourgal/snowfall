@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "sig";
+    myPkgs = [
+      # keep-sorted start
+      "hypergrep"
+      "sig"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "ast-grep"
