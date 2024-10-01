@@ -11,6 +11,7 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "gac"
+        "gace"
         "git-sumi"
         "gogitmoji"
         "goji"

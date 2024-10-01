@@ -4,7 +4,7 @@
   git,
 }:
 writeShellApplication rec {
-  name = "gac";
+  name = "gace";
 
   meta = {
     description = "One simple command to format and faster your git add and git commit actions.";
@@ -17,5 +17,5 @@ writeShellApplication rec {
 
   runtimeInputs = [ git ];
 
-  text = builtins.readFile ./gac.sh;
+  text = builtins.readFile ./gace.sh;
 }
