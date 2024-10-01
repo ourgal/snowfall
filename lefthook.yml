@@ -1,5 +1,45 @@
 pre-commit:
   commands:
+    toml:
+      glob: "*.toml"
+      run: taplo fmt {staged_files}
+      stage_fixed: true
+    json:
+      glob: "*.json"
+      run: fixjson -w {staged_files}
+      stage_fixed: true
+    yaml:
+      glob: "*.{yaml,yml}"
+      run: yamlfmt {staged_files}
+      stage_fixed: true
+    nix:
+      glob: "*.nix"
+      run: nixfmt {staged_files}
+      stage_fixed: true
+    python:
+      glob: "*.py"
+      run: ruff format {staged_files}
+      stage_fixed: true
+    lua:
+      glob: "*.lua"
+      run: stylua {staged_files}
+      stage_fixed: true
+    fennel:
+      glob: "*.fnl"
+      run: fnlfmt --fix {staged_files}
+      stage_fixed: true
+    markdown:
+      glob: "*.md"
+      run: mdformat {staged_files}
+      stage_fixed: true
+    sh:
+      glob: "*.sh"
+      run: shfmt -s -w {staged_files}
+      stage_fixed: true
+    go:
+      glob: "*.go"
+      run: gofmt -w {staged_files}
+      stage_fixed: true
     keep-sorted:
       run: keep-sorted --mode fix {staged_files}
       stage_fixed: true
