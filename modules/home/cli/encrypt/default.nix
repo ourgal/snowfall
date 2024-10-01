@@ -9,6 +9,7 @@ args.module (
       "opensc"
       "pcsc-tools"
       "prs"
+      "pwgen"
       "ssh-to-age"
       # keep-sorted end
     ];
