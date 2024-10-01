@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "git-grab";
+    myPkgs = [
+      # keep-sorted start
+      "git-grab"
+      "soba"
+      # keep-sorted end
+    ];
   }
 )
