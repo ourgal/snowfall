@@ -84,7 +84,7 @@ args.module (
               pull.rebase = true;
               core.editor = config.${namespace}.user.editor;
               git-extras = {
-                defualt-branch = "main";
+                defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
                 get = {
                   clone-path = "${config.home.homeDirectory}/workspace";
                 };
