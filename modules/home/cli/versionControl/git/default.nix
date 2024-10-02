@@ -93,6 +93,7 @@ args.module (
               gpg.format = "ssh";
               sequence.editor = mkIf cfg.rebase.enable "interactive-rebase-tool";
               absorb.autoStageIfNothingStaged = true;
+              rebase.autosquash = true;
             };
             hooks = mkIf cfg.global_hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
