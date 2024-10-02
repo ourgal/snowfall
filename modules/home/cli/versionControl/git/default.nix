@@ -86,7 +86,7 @@ args.module (
               git-extras = {
                 defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
                 get = {
-                  clone-path = "${config.home.homeDirectory}/workspace";
+                  clone-path = "${config.home.homeDirectory}/src";
                 };
               };
               push.useForceIfIncludes = true;
