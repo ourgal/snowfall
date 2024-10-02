@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "eleventy";
     nixPkgs = [
       # keep-sorted start
       "antora"
