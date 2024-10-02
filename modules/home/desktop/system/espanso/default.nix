@@ -3,16 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        lib
-        config
-        namespace
-        cfgHome
-        pkgs
-        ;
-      inherit (lib) mkIf;
-      inherit (lib.${namespace}) switch;
-      cfg = cfgHome config.${namespace} ./.;
+      inherit (args) namespace pkgs;
     in
     {
       path = ./.;
@@ -43,17 +34,6 @@ args.module (
             WantedBy = [ "default.target" ];
           };
         };
-        sops = mkIf cfg.sops.enable {
-          secrets = {
-            "espanso/mail.yml" = {
-              mode = "0600";
-              path = "${config.xdg.configHome}/espanso/match/mail.yml";
-            };
-          };
-        };
-      };
-      extraOpts = {
-        sops = switch;
       };
     }
   )

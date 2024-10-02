@@ -19,5 +19,6 @@ args.module (
         description = "Diffnav";
       };
     };
+    enable = "delta";
   }
 )

@@ -50,6 +50,9 @@ args.module (
         "gopass-jsonapi"
         # keep-sorted end
       ];
+      progs = {
+        git.extraConfig.credential.helper = "gopass";
+      };
       confs = {
         "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;
         "google-chrome/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;

@@ -3,15 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        lib
-        namespace
-        pkgs
-        config
-        cfgHome
-        ;
-      inherit (lib) mkIf;
-      cfg = cfgHome config.${namespace} ./.;
+      inherit (args) lib namespace;
       mimetypes = [
         "image/jpeg"
         "image/png"
@@ -55,34 +47,6 @@ args.module (
           associations.added = defaults;
           defaultApplications = defaults;
         };
-        systemd.user.timers.feh-wallsetter = mkIf cfg.wallpaper.enable {
-          Unit = {
-            Description = "feh wallsetter";
-            ConditionEnvironment = "XAUTHORITY";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Timer = {
-            OnUnitActiveSec = "10m";
-          };
-        };
-        systemd.user.services.feh-wallsetter = mkIf cfg.wallpaper.enable {
-          Unit = {
-            Description = "feh wallsetter";
-            ConditionEnvironment = "XAUTHORITY";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStart = "${pkgs.${namespace}.feh-wallsetter}/bin/feh-wallsetter";
-            Type = "oneshot";
-          };
-        };
-      };
-      extraOpts = with lib.${namespace}; {
-        wallpaper = switch;
       };
     }
   )
