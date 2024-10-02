@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "riffdiff"
+      "ydiff"
       # keep-sorted end
     ];
     myPkgs = [
@@ -19,6 +20,6 @@ args.module (
         description = "Diffnav";
       };
     };
-    enable = "delta";
+    enable = "diff-so-fancy";
   }
 )
