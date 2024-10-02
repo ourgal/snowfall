@@ -10,7 +10,7 @@ args.module (
       progs = {
         lazygit.settings.git.paging = {
           colorArg = "always";
-          pager = "${pkgs.delta}/bin/delta --paging=never";
+          pager = "${pkgs.diff-so-fancy}/bin/diff-so-fancy";
         };
       };
     }

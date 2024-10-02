@@ -201,7 +201,7 @@ args.module (
           };
         }
       ];
-      enable = "difftastic";
+      enable = "diff-so-fancy";
     }
   )
 )

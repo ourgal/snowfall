@@ -8,14 +8,8 @@ args.module (
     {
       path = ./.;
       progs = {
-        lazygit = {
-          settings = {
-            git = {
-              paging = {
-                externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off";
-              };
-            };
-          };
+        lazygit.settings.git.paging = {
+          externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off";
         };
       };
     }
