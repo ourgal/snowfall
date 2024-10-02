@@ -94,6 +94,14 @@ args.module (
               sequence.editor = mkIf cfg.rebase.enable "interactive-rebase-tool";
               absorb.autoStageIfNothingStaged = true;
               rebase.autosquash = true;
+              interactive-rebase-tool = {
+                inputMoveDown = "Down j";
+                inputMoveUp = "Up k";
+                inputMoveSelectionDown = "l";
+                inputMoveSelectionUp = "h";
+                inputUndo = "u";
+                inputRedo = "Control+r";
+              };
             };
             hooks = mkIf cfg.global_hook.enable {
               pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
