@@ -7,12 +7,8 @@ args.module (
         lib
         config
         namespace
-        cfgHome
         pkgs
         ;
-      inherit (lib) mkIf;
-      inherit (lib.${namespace}) switch;
-      cfg = cfgHome config.${namespace} ./.;
       dir = "${config.home.homeDirectory}/mnt/alist";
       name = "alist";
     in
@@ -25,17 +21,6 @@ args.module (
       value = {
         systemd.user.tmpfiles.rules = [ "d ${dir} - - - -" ];
         systemd.user.services.rclone-alist = lib.${namespace}.mkRcloneService { inherit name dir pkgs; };
-        sops = {
-          secrets = mkIf cfg.sops.enable {
-            "rclone" = {
-              mode = "0600";
-              path = "${config.xdg.configHome}/rclone/rclone.conf";
-            };
-          };
-        };
-      };
-      extraOpts = {
-        sops = switch;
       };
     }
   )

@@ -3,20 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        cfgHome
-        config
-        namespace
-        lib
-        pkgs
-        mkOpt'
-        enabled
-        ;
-      cfg = cfgHome config.${namespace} ./.;
-      diffType = lib.types.enum [
-        "delta"
-        "difftastic"
-      ];
+      inherit (args) pkgs enabled;
     in
     {
       path = ./.;
@@ -37,16 +24,6 @@ args.module (
               };
               promptToReturnFromSubprocess = false;
               git = {
-                paging =
-                  if cfg.diff == "delta" then
-                    {
-                      colorArg = "always";
-                      pager = "${pkgs.delta}/bin/delta --paging=never";
-                    }
-                  else if cfg.diff == "difftastic" then
-                    { externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off"; }
-                  else
-                    "";
                 parseEmoji = true;
               };
               customCommands = [
@@ -224,9 +201,7 @@ args.module (
           };
         }
       ];
-      extraOpts = {
-        diff = mkOpt' diffType "delta";
-      };
+      enable = "difftastic";
     }
   )
 )

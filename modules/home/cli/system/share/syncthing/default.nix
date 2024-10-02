@@ -3,18 +3,11 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        config
-        lib
-        pkgs
-        namespace
-        ;
+      inherit (args) config pkgs;
       inherit (pkgs) stc-cli;
-      inherit (lib.${namespace}) switch cfgHome;
       inherit (config.xdg) configHome dataHome;
       ln = config.lib.file.mkOutOfStoreSymlink;
       sync = "${dataHome}/syncthing";
-      cfg = cfgHome config.${namespace} ./.;
     in
     {
       path = ./.;
@@ -41,15 +34,6 @@ args.module (
         nap = ln "${sync}/nap";
         buku = ln "${sync}/buku";
         jrnl = ln "${sync}/jrnl";
-      };
-      value = {
-        services.syncthing = {
-          enable = cfg.service.enable;
-          extraOptions = [ "--no-default-folder" ];
-        };
-      };
-      extraOpts = {
-        service = switch;
       };
     }
   )
