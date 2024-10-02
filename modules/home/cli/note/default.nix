@@ -6,7 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "emanote"
-      "hledger"
       "hledger-ui"
       "hledger-web"
       "jrnl"
@@ -14,5 +13,6 @@ args.module (
       "pandoc"
       # keep-sorted end
     ];
+    enable = "hledger";
   }
 )
