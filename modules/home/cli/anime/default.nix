@@ -9,6 +9,7 @@ args.module (
       "animdl"
       "curd"
       "lobster"
+      "toru"
       # keep-sorted end
     ];
     enable = "trackma";
