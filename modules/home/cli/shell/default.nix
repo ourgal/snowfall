@@ -47,6 +47,7 @@ args.module (
         # keep-sorted start
         "fzf-kill"
         "lobtui"
+        "machma"
         "play"
         "rat"
         "reader"
