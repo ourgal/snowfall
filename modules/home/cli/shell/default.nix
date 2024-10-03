@@ -71,7 +71,6 @@ args.module (
         "rbw"
         "serpl"
         "starship"
-        "string"
         "tealdeer"
         "tere"
         "tmux"
