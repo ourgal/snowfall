@@ -3,28 +3,28 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
+  cmake,
+  python3,
 }:
 
 rustPlatform.buildRustPackage rec {
   pname = "hex-patch";
-  version = "1.7.4";
+  version = "1.9.0";
 
   src = fetchFromGitHub {
     owner = "Etto48";
     repo = "HexPatch";
     rev = "v${version}";
-    hash = "sha256-i4NWFeNvkj+UKOdC+UkTOlVbJNTk0+Co/4Ev9gpJ+t8=";
+    hash = "sha256-yyYxRJ+o+Z5z7PmjcFCsahRXZ9JHFmGmituzGTxY6ec=";
   };
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-  };
+  cargoHash = "sha256-6IaSKVPEen4aI977rv8jv/M8FCe7ABr7qSHgisWieVM=";
 
-  postPatch = ''
-    ln -s ${./Cargo.lock} Cargo.lock
-  '';
-
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    cmake
+    python3
+  ];
 
   meta = with lib; {
     description = "HexPatch: a binary patcher and editor written in Rust with terminal user interface (TUI";
