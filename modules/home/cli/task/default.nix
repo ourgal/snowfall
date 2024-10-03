@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "klog-time-tracker";
     myPkgs = [
       # keep-sorted start
       "focus-timer"
