@@ -51,6 +51,7 @@ args.module (
         "play"
         "rat"
         "reader"
+        "sunbeam"
         "wush"
         "zfind"
         # keep-sorted end
