@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "clifm"
+      "fm-go"
       "sfm"
       # keep-sorted end
     ];
