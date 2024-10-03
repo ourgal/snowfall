@@ -15,6 +15,7 @@ args.module (
               pkgs.gh-eco
               pkgs.gh-f
               pkgs.gh-s
+              pkgs.gh-markdown-preview
             ]
             ++ [
               pkgs.${namespace}.gh-branch
