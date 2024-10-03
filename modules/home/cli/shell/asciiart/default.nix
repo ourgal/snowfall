@@ -7,6 +7,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "boxes"
+      "confetty"
       "figlet"
       "figurine"
       "genact"
