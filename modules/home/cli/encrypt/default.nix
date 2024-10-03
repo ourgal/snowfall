@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "bottom-rs"
+      "enc"
       "opensc"
       "pcsc-tools"
       "prs"
