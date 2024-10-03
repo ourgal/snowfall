@@ -1,13 +1,17 @@
 { ... }@args:
 args.module (
   args
-  // {
-    path = ./.;
-    progs = "go";
-    nixPkgs = "gopls";
-    env = {
-      GO111MODULE = "on";
-      GOPROXY = "https://goproxy.cn";
-    };
-  }
+  // (
+    let
+      inherit (args) lib namespace;
+    in
+    {
+      path = ./.;
+      progs = "go";
+      nixPkgs = "gopls";
+      env = {
+        GO111MODULE = "on";
+      } // lib.${namespace}.proxy.go;
+    }
+  )
 )
