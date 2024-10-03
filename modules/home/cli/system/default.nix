@@ -30,6 +30,7 @@ args.module (
       "blendr"
       "bluetui"
       "c"
+      "sake"
       # keep-sorted end
     ];
     enable = [
