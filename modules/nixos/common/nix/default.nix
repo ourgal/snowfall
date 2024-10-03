@@ -70,6 +70,7 @@ let
         zlib
       ];
     };
+    systemd.services.nix-daemon.environment = lib.${namespace}.proxy.go // lib.${namespace}.proxy.rust;
   };
   path = ./.;
   _args = {
