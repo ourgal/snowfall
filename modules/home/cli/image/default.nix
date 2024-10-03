@@ -12,6 +12,7 @@ args.module (
       "menyoki"
       "termshot"
       "viu"
+      "yeetgif"
       # keep-sorted end
     ];
     myPkgs = [
