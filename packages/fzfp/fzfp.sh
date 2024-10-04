@@ -64,4 +64,4 @@ else
   cat <&0 >"$pstdin" &
 fi
 cat "$pstdout" &
-tmux popup -d '#{pane_current_path}' -xC -yC -w$width -h$height -E "$envs bash $cmd_file"
+tmux popup -d '#{pane_current_path}' -xC -yC -w"$width" -h"$height" -E "$envs bash $cmd_file"

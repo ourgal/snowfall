@@ -1,4 +1,8 @@
-{ writeShellApplication, lib, ... }:
+{
+  writeShellApplication,
+  lib,
+  tmux,
+}:
 writeShellApplication rec {
   name = "tmux-popup";
 
@@ -7,9 +11,7 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
-  runtimeInputs = [ ];
+  runtimeInputs = [ tmux ];
 
   text = builtins.readFile ./tmux-popup.sh;
 }

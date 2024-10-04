@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # Colors
 CATPPUCCIN_GREEN='#a6da95'
 CATPPUCCIN_MAUVE='#c6a0f6'

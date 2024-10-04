@@ -12,13 +12,11 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ ];
 
   text = # bash
     ''
-      if test -z ''${WAYLAND_DISPLAY:-""} ; then
+      if test -z "''${WAYLAND_DISPLAY:-""}" ; then
         ${pkgs.espanso}/bin/espanso "$@"
       else
         ${pkgs.espanso-wayland}/bin/espanso "$@"

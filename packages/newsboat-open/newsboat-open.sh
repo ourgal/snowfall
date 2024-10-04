@@ -20,7 +20,7 @@ function youtube() {
     yt-dlp -P "$path" "$@"
   fi
 
-  latest_file=$(ls -t --time=creation $path/*.mp4 | head -n 1)
+  latest_file=$(find "$path" -type f -name "*.mp4" -printf "%T@ %P\n" | sort -nr | cut -d' ' -f2- | head -n 1)
   mpv --speed=3 "$latest_file"
 }
 

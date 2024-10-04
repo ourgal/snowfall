@@ -8,8 +8,6 @@
 writeShellApplication {
   name = "fzfp";
 
-  checkPhase = "";
-
   runtimeInputs = [
     fzf
     tmux

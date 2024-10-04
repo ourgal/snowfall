@@ -13,14 +13,12 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [
     git-fame
     git
   ];
 
   text = ''
-    git-fame --branch=$(git rev-parse --abbrev-ref HEAD) $@
+    git-fame --branch="$(git rev-parse --abbrev-ref HEAD)" "$@"
   '';
 }
