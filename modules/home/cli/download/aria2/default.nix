@@ -93,8 +93,6 @@ args.module (
                 user-agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.47";
                 peer-agent = "Deluge 1.3.15";
                 peer-id-prefix = "-DE13F0-";
-                on-download-stop = "${config.xdg.configHome}/aria2/delete.sh";
-                on-download-complete = "${config.xdg.configHome}/aria2/clean.sh";
                 rpc-listen-port = 6800;
                 rpc-secret = rpcPass;
                 rpc-max-request-size = "10M";
@@ -145,7 +143,7 @@ args.module (
           };
           Service = {
             ExecStartPre = "${pkgs.${namespace}.aria2-session}/bin/aria2-session";
-            ExecStart = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile}";
+            ExecStart = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete = '${config.xdg.configHome}/aria2/clean.sh'";
             ExecReload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
             Restart = "on-abort";
           };
