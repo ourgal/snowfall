@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "git-crecord";
+    nixPkgs = "git-crecord";
   }
 )
