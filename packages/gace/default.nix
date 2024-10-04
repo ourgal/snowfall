@@ -13,8 +13,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ git ];
 
   text = builtins.readFile ./gace.sh;

@@ -20,7 +20,7 @@ function gac() {
 
   SHORTCUT=$1
   shift
-  COMMENT=$@
+  COMMENT=("$@")
 
   # Fix a bug
   if [ "$SHORTCUT" = "x" ]; then
@@ -64,7 +64,7 @@ function gac() {
   fi
 
   # res with or without semantic
-  git add -A && git commit -m "$SHORTCUT $COMMENT"
+  git add -A && git commit -m "$SHORTCUT ${COMMENT[*]}"
   return 1
 }
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 if [[ $# -lt 2 || $1 == "-h" ]]; then
   echo "Usage: ''${0##*/} <window> <command and its args>"
   echo "  Only start a app once, if the app is running"
@@ -13,7 +12,7 @@ else
 fi
 
 if [[ -z $WID ]]; then
-  eval "${@:2}"
+  "${@:2}"
 else
   for WIN in $WID; do
     CURDESK=$(xdotool get_desktop)

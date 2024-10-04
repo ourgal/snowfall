@@ -12,8 +12,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ yt-dlp ];
 
   text = builtins.readFile ./ytm.sh;

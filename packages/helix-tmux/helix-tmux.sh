@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 status_line=$(tmux capture-pane -p | rg -e "(?:NORMAL|INSERT|SELECT)\s+[\x{2800}-\x{28FF}]*\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
 filename=$(echo "$status_line" | awk '{ print $1}')
 folder=$(dirname "$filename")

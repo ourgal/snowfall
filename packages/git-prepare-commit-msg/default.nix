@@ -12,14 +12,12 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ gitmoji-cli ];
 
   text = # bash
     ''
-      COMMIT_MSG_FILE=''${1:-""}
-      COMMIT_SOURCE=''${2:-""}
+      COMMIT_MSG_FILE="''${1:-""}"
+      COMMIT_SOURCE="''${2:-""}"
       exec < /dev/tty
       gitmoji --hook $COMMIT_MSG_FILE $COMMIT_SOURCE'';
 }

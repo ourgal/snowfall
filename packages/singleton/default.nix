@@ -12,8 +12,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ xdotool ];
 
   text = builtins.readFile ./singleton.sh;

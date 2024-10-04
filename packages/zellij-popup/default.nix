@@ -12,8 +12,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ zellij ];
 
   text = builtins.readFile ./zellij-popup.sh;

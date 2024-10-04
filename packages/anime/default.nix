@@ -13,8 +13,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [
     viddy
     transmission_4

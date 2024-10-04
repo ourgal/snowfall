@@ -16,8 +16,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [
     swww
     git
@@ -40,14 +38,14 @@ writeShellApplication rec {
       git clone $wallpaperGit "$wallpaperDir"
       chown -R zxc:users "$wallpaperDir"
     fi
-    WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
+    WALLPAPER="$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)"
     PREVIOUS=$WALLPAPER
     while true; do
       if [ "$WALLPAPER" == "$PREVIOUS" ]; then
-        WALLPAPER=$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)
+        WALLPAPER="$(find "$wallpaperDir" -name '*' | awk '!/.git/' | tail -n +2 | shuf -n 1)"
       else
         PREVIOUS=$WALLPAPER
-        NUM=$(shuf -e 1 2 3 4 5 -n 1)
+        NUM="$(shuf -e 1 2 3 4 5 -n 1)"
         case $NUM in
         1)
           TRANSITION=$TRANSITION1

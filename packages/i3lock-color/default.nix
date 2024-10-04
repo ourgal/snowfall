@@ -12,8 +12,6 @@ writeShellApplication rec {
     platforms = lib.platforms.linux;
   };
 
-  checkPhase = "";
-
   runtimeInputs = [ i3lock-color ];
 
   text = builtins.readFile ./i3lock-color.sh;
