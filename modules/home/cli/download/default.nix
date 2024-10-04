@@ -8,6 +8,7 @@ args.module (
       "baidupcs-go"
       "dra"
       "goodls"
+      "imgboxdwl"
       # keep-sorted end
     ];
     pyPkgs = "downloader-cli";
