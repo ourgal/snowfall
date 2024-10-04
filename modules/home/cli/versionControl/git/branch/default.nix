@@ -10,12 +10,12 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "git-ink"
-        "git-my"
         # keep-sorted end
       ];
       nixPkgs = [
         # keep-sorted start
         "git-branchless"
+        "git-my"
         # keep-sorted end
       ];
       progs = {
