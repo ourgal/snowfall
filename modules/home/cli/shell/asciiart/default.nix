@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     myPkgs = "tuime";
+    pyPkgs = "tqdm";
     nixPkgs = [
       # keep-sorted start
       "boxes"
