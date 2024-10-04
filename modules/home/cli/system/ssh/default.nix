@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "fast-ssh"
       "openssl"
+      "ssh-tools"
       "sshpass"
       "sshs"
       "sshx"
