@@ -10,13 +10,6 @@ let
       # useDHCP = false;
       # useNetworkd = true;
       enableIPv6 = true;
-      stevenblack = enabled // {
-        block = [
-          "fakenews"
-          "gambling"
-          "porn"
-        ];
-      };
     };
 
     services.resolved = enabled;
