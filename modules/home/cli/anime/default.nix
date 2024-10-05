@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "ani-cli";
     myPkgs = [
       # keep-sorted start
       "adl"
