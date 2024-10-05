@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "bottom-rs"
       "enc"
+      "hashcat"
       "opensc"
       "pcsc-tools"
       "prs"
