@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "chepy";
     nixPkgs = [
       # keep-sorted start
       "gotemplate"
