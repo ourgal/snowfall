@@ -29,6 +29,7 @@ args.module (
       # keep-sorted start
       "nix-auto-follow"
       "nix-repl"
+      "nix-searchc"
       # keep-sorted end
     ];
     enable = [
