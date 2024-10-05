@@ -11,6 +11,7 @@ args.module (
       "pcsc-tools"
       "prs"
       "pwgen"
+      "rage"
       "ssh-to-age"
       # keep-sorted end
     ];
