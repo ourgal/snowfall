@@ -51,6 +51,7 @@ rec {
   with' = prefix: pkgs: builtins.map (p: prefix.${p}) pkgs;
 
   tomlFile = file: builtins.fromTOML (builtins.readFile file);
+  jsonFile = file: builtins.fromJSON (builtins.readFile file);
   # }}}
 
   mkModuleCfg =
