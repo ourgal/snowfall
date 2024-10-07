@@ -634,3 +634,7 @@ fetch.docker = "flaresolverr/flaresolverr"
 [docker-qd]
 src.container = "qdtoday/qd"
 fetch.docker = "qdtoday/qd"
+
+[tp]
+src.github = "minefuto/tp"
+fetch.github = "minefuto/tp"
