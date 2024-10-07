@@ -5,5 +5,6 @@ args.module (
     path = ./.;
     nixPkgs = "transmission_4";
     myPkgs = "anime";
+    enable = "service";
   }
 )

@@ -49,7 +49,6 @@ in
       "sops-nix"
       "syncthing"
       "tpm"
-      "transmission"
       "udev"
       "udisks2"
       # keep-sorted end
