@@ -9,6 +9,7 @@ args.module (
       "adl"
       "animdl"
       "curd"
+      "fast-anime"
       "lobster"
       "toru"
       # keep-sorted end

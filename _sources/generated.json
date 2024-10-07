@@ -554,6 +554,27 @@
         },
         "version": "v2.4.0"
     },
+    "fast-anime": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fast-anime",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Benex254",
+            "repo": "FastAnime",
+            "rev": "v2.6.6",
+            "sha256": "sha256-Q7SXE4GElmbhxqgo7y0b+B8DzaF98i2v//pBbdw1Cis=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.6.6"
+    },
     "fetch": {
         "cargoLocks": null,
         "date": null,

@@ -309,6 +309,17 @@
       sha256 = "sha256-KR6CfafNuO9prjDvYwGyCigPvy7hFm4EQrcOn4Q333Q=";
     };
   };
+  fast-anime = {
+    pname = "fast-anime";
+    version = "v2.6.6";
+    src = fetchFromGitHub {
+      owner = "Benex254";
+      repo = "FastAnime";
+      rev = "v2.6.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-Q7SXE4GElmbhxqgo7y0b+B8DzaF98i2v//pBbdw1Cis=";
+    };
+  };
   fetch = {
     pname = "fetch";
     version = "v0.4.6";
