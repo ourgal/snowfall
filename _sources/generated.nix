@@ -215,13 +215,13 @@
   };
   curd = {
     pname = "curd";
-    version = "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4";
+    version = "13f5cbef1e3d9cbe7ee1808919e4688f6d021534";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4";
+      rev = "13f5cbef1e3d9cbe7ee1808919e4688f6d021534";
       fetchSubmodules = false;
-      sha256 = "sha256-uIf1+epbysSUaNhZVR6hNCpVQNPc5ysmbDj48wxvd0w=";
+      sha256 = "sha256-QIhOMbpJgX8lKmX231+CiIibTOx0WpLHvXhYl0S3rPg=";
     };
     date = "2024-10-07";
   };
@@ -245,6 +245,46 @@
       rev = "v0.2.8";
       fetchSubmodules = false;
       sha256 = "sha256-xZAi/Ky1RjOxjhQKHvozaPTqDPcrGfhMemGWzi7WyW4=";
+    };
+  };
+  docker-alist = {
+    pname = "docker-alist";
+    version = "v3.37.4";
+    src = dockerTools.pullImage {
+      imageName = "xhofe/alist-aria2";
+      imageDigest = "sha256:543df1ceb6aed6c603f8c64c855d6bf6b22ecaa114cca6251dff9a477894fc7a";
+      sha256 = "sha256-BVQoBiPNnVbcP3K8wBacXzCrC2C3BkAmemA5I5pn7L8=";
+      finalImageTag = "v3.37.4";
+    };
+  };
+  docker-flaresolverr = {
+    pname = "docker-flaresolverr";
+    version = "v3.3.21";
+    src = dockerTools.pullImage {
+      imageName = "flaresolverr/flaresolverr";
+      imageDigest = "sha256:f104ee51e5124d83cf3be9b37480649355d223f7d8f9e453d0d5ef06c6e3b31b";
+      sha256 = "sha256-unGzkgDG5RvVPz+cHdNqizBjEf9FCHSMwi7PbRgjETI=";
+      finalImageTag = "v3.3.21";
+    };
+  };
+  docker-qd = {
+    pname = "docker-qd";
+    version = "20240210";
+    src = dockerTools.pullImage {
+      imageName = "qdtoday/qd";
+      imageDigest = "sha256:7d9a54588876203720d7638cd0ca5e25897d3c8993fcfa9f9c0c59a91cf8ed9f";
+      sha256 = "sha256-vxZHuExbVwA4HyXzrXgogomxRg3EaHaEwBG1BH/gvnI=";
+      finalImageTag = "20240210";
+    };
+  };
+  docker-subconverter = {
+    pname = "docker-subconverter";
+    version = "0.9.0";
+    src = dockerTools.pullImage {
+      imageName = "tindy2013/subconverter";
+      imageDigest = "sha256:41899af10188ce83f6359eacc3d12f33c74b423c35b37bcd09b686575e9e10ad";
+      sha256 = "sha256-PiCD+jyQRhzbHKQeJxJiyUd+TZRG3OZHRkV97ITlI9w=";
+      finalImageTag = "0.9.0";
     };
   };
   done = {
