@@ -5,7 +5,12 @@
   ...
 }:
 let
-  inherit (lib.${namespace}) enabled disabled enabledList;
+  inherit (lib.${namespace})
+    enabled
+    disabled
+    enabledList
+    sources
+    ;
   user = (config.${namespace}.user).name;
 in
 {
@@ -45,7 +50,7 @@ in
         subconverter = enabled // {
           ports = 25500;
           inherit nfs;
-          version = "0.9.0";
+          inherit (sources.docker-subconverter) version;
         };
         e5 = enabled // {
           ports = 1066;
@@ -55,17 +60,17 @@ in
         alist = enabled // {
           ports = 5244;
           inherit nfs;
-          version = "v3.35.0";
+          inherit (sources.docker-alist) version;
           duckdns = enabled;
         };
         flaresolverr = enabled // {
           ports = 8191;
-          version = "v3.3.21";
+          inherit (sources.docker-flaresolverr) version;
         };
         qd = enabled // {
           ports = 8923;
           inherit nfs;
-          version = "20240210";
+          inherit (sources.docker-qd) version;
         };
       };
   };
