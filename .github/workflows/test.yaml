@@ -8,4 +8,4 @@ jobs:
       - uses: cachix/install-nix-action@v30
         with:
           nix_path: nixpkgs=channel:nixos-24.05
-      - run: nix run github:berberman/nvfetcher
+      - run: nix run github:berberman/nvfetcher -j 1
