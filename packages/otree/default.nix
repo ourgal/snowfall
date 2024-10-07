@@ -4,17 +4,23 @@
   fetchFromGitHub,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "otree";
-  version = "0.2.0";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "fioncat";
-    repo = "otree";
-    rev = "v${version}";
-    hash = "sha256-M6xmz7aK+NNZUDN8NJCUEODwotJ9VeY3bsueFpwjjjs=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoLock = {

@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "fgit";
-  version = "1.2.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "fastgh";
-    repo = "fgit";
-    rev = "v${version}";
-    hash = "sha256-27GZp1qd0pJg9usIxj8wl1Dz+4ZC0273bb1tJ4Hhc9s=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-vCi04OruIuJ0w29TpqTf17GaWvoeJQjCTNQZp1ZqLgs=";

@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "dblab";
-  version = "0.26.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "danvergara";
-    repo = "dblab";
-    rev = "v${version}";
-    hash = "sha256-3v9L1mV+DZ6FlrBoGSg8tewKJVyeqqacVj3yGVtYVHc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-3vtk4pJE/zRLCbIN+UFvxF/KdH4J5IiCsQ0Wu585wnM=";

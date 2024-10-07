@@ -4,17 +4,23 @@
   fetchFromGitHub,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "wiper";
-  version = "0.2.1";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "ikebastuz";
-    repo = "wiper";
-    rev = "v${version}";
-    hash = "sha256-IheSAPk1l6wJ2v4RLPIPvY/5XMfh+vJLyQ/Lc7RrCJQ=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-gYWTv0AXOmpx9Nc8akBMVWkESI0AtnGgvfH9hQZ0peo=";
@@ -25,7 +31,7 @@ rustPlatform.buildRustPackage rec {
     description = "Disk analyser and cleanup tool";
     homepage = "https://github.com/ikebastuz/wiper";
     license = licenses.mit;
-    maintainers = with maintainers; [ ];
+    maintainers = with maintainers; [ zxc ];
     mainProgram = "wiper";
   };
 }

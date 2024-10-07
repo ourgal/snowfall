@@ -2,17 +2,23 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage {
+let
   pname = "termsand";
-  version = "unstable-2024-08-15";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "ourgal";
-    repo = "termsand";
-    rev = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
-    hash = "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb/wroGpj0=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-E7EjEw8AmxqjbLrKuoRnVhiFPPDKrKGJiS3lfE9Psdk=";
@@ -20,7 +26,7 @@ rustPlatform.buildRustPackage {
   meta = with lib; {
     description = "";
     homepage = "https://github.com/ourgal/termsand";
-    license = licenses.unfree; # FIXME: nix-init did not found a license
+    license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "termsand";
   };

@@ -1,28 +1,40 @@
 {
-  stdenv,
   lib,
-  fetchzip,
-  ...
+  buildGoModule,
+  fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation rec {
+let
   pname = "baidupcs-go";
-  version = "3.9.5";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
-  src = fetchzip {
-    url = "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v${version}/BaiduPCS-Go-v${version}-linux-amd64.zip";
-    hash = "sha256-ctLbvW93rHyFOY5M1Wmz0ZtIk+ZGtdCna3FaovWs31k=";
+  src = fetchFromGitHub {
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  installPhase = ''
-    runHook preInstall
-    install -m755 -D BaiduPCS-Go $out/bin/baidupcs
-    runHook postInstall
-  '';
+  vendorHash = "sha256-msTlXtidxLTe3xjxTOWCqx/epFT0XPdwGPantDJUGpc=";
+
+  ldflags = [
+    "-s"
+    "-w"
+  ];
+
+  doCheck = false;
 
   meta = with lib; {
+    description = "Iikira/BaiduPCS-Go原版基础上集成了分享链接/秒传链接转存功能";
     homepage = "https://github.com/qjfoidnh/BaiduPCS-Go";
-    description = "iikira/BaiduPCS-Go原版基础上集成了分享链接/秒传链接转存功能";
-    platforms = platforms.linux;
+    license = licenses.asl20;
+    maintainers = with maintainers; [ zxc ];
+    mainProgram = "baidu-pcs-go";
   };
 }

@@ -17,6 +17,7 @@ args.module (
       "nixos-anywhere"
       "nurl"
       "nvd"
+      "nvfetcher"
       # keep-sorted end
     ];
     snowPkgs = [

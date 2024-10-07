@@ -3,24 +3,31 @@
   stdenv,
   fetchFromGitHub,
   pkgs,
+  namespace,
 }:
 let
   quartz = pkgs.fetchFromGitHub {
-    owner = "vimpostor";
-    repo = "quartz";
-    rev = "9f1ac6cce6b338c6613aa195cffe6f0bb5c965df";
-    hash = "sha256-UacYQ5c+MGUK4saLohnZs4691CBGI59JpkdgCaYbPUk=";
+    inherit (lib.${namespace}.sources.quartz.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
-in
-stdenv.mkDerivation rec {
   pname = "blobdrop";
-  version = "2.1";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "vimpostor";
-    repo = "blobdrop";
-    rev = "v${version}";
-    hash = "sha256-o2+qtkyu2qcwXpum3KiogyO8D6aY7bRJ6y4FWQKQY/o=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = with pkgs; [

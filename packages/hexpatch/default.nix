@@ -5,17 +5,23 @@
   pkg-config,
   cmake,
   python3,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
-  pname = "hex-patch";
-  version = "1.9.0";
+let
+  pname = "hexpatch";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "Etto48";
-    repo = "HexPatch";
-    rev = "v${version}";
-    hash = "sha256-yyYxRJ+o+Z5z7PmjcFCsahRXZ9JHFmGmituzGTxY6ec=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-6IaSKVPEen4aI977rv8jv/M8FCe7ABr7qSHgisWieVM=";

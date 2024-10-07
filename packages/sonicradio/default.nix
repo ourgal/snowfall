@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "sonicradio";
-  version = "0.3.2";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "dancnb";
-    repo = "sonicradio";
-    rev = "v${version}";
-    hash = "sha256-i9IBe5jcCCzWRxu+dbx3neu5jakZe/Zzi3+FgtYNynk=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-m4QIGiuk8SbuwLI+Lp+NHgEZOvtwo7rbUiVmm7jwJ24=";

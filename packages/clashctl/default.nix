@@ -2,17 +2,23 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "clashctl";
-  version = "0.3.3";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "George-Miao";
-    repo = "clashctl";
-    rev = version;
-    hash = "sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-G0mAcB80D7/s9kwkNhJkGLkVYpXMwqpLq/T9gLuYj4E=";

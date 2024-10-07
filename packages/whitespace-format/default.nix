@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "whitespace-format";
-  version = "0.0.2";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  inherit (source) version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "DavidPal";
-    repo = "whitespace-format";
-    rev = version;
-    hash = "sha256-UscDx0cQ7YqZc6k42ww9Pi9g5nxJCRr+fcETneG0zHc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [ python3.pkgs.poetry-core ];

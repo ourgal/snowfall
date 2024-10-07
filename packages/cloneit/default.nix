@@ -6,20 +6,26 @@
   openssl,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "cloneit";
-  version = "0.1.0";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "alok8bb";
-    repo = "cloneit";
-    rev = version;
-    hash = "sha256-CyR/vdg6xqlxmv8jOXka3JIBhi8zafHiBOL67XLf5KM=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoHash = "sha256-zhsFIU7gmP4gR5NhrFslFSvYIXH1fxJLZU8nV67PluQ=";
+  cargoHash = "sha256-nX/G5m6hdjfsC3YrCvqOfT3LQYrRnQ5/lNLS1Lv5f24=";
 
   nativeBuildInputs = [ pkg-config ];
 

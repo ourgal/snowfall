@@ -2,18 +2,23 @@
   buildGoModule,
   lib,
   fetchFromGitHub,
-  ...
+  namespace,
 }:
-
-buildGoModule {
+let
   pname = "autocrop";
-  version = "2021-06-03";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "mandykoh";
-    repo = "autocrop";
-    rev = "2afe00ed87fb10a6d368d0d4140307dc99b1a545";
-    hash = "sha256-oxvu0P0LmusFQ5qX557pgyiq+eslWwfCaoEAkxJnqOA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-qX4sPNq3qjPuwFkGd5Hxb4udLF9GRVfAWTF6M26QRqk=";

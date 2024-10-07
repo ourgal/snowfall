@@ -12,15 +12,18 @@ args.module (
         switch
         mkOpt'
         toTOML
+        sources
         ;
       inherit (pkgs) tmuxPlugins fetchFromGitHub;
       cfg = cfgHome config.${namespace} ./.;
       termsand =
         (fetchFromGitHub {
-          owner = "ourgal";
-          repo = "termsand";
-          rev = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
-          hash = "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb/wroGpj0=";
+          inherit (sources.termsand.src)
+            owner
+            repo
+            rev
+            sha256
+            ;
         })
         + "/sand.sh";
       baseConf = ''
@@ -391,13 +394,15 @@ args.module (
         {
           fish = {
             plugins = lib.mkIf cfg.autostart.enable [
-              {
+              rec {
                 name = "tmux.fish";
                 src = fetchFromGitHub {
-                  owner = "budimanjojo";
-                  repo = "tmux.fish";
-                  rev = "f36b077b2d5ebd577240679cd0adf5cff11380b4";
-                  sha256 = "0i1pngs2sa5qczxl0dd1b33i4l3qfixpqisx50g63d5wx4yihbxd";
+                  inherit (sources.${name}.src)
+                    owner
+                    repo
+                    rev
+                    sha256
+                    ;
                 };
               }
             ];

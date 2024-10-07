@@ -11,17 +11,22 @@
   ueberzugpp,
   pkgs,
   namespace,
-  ...
 }:
-stdenvNoCC.mkDerivation rec {
+let
   pname = "adl";
-  version = "3.2.8";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenvNoCC.mkDerivation rec {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "RaitaroH";
-    repo = "adl";
-    rev = "a40f31454de856d9e9235d6216eaf8f4296111c4";
-    hash = "sha256-Kg/iGyEdWJyoPn5lVqRCJX2eqdP1xwZqNU2RvTrhZko=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [ makeWrapper ];

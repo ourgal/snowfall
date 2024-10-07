@@ -8,7 +8,8 @@
 let
   pname = "pot";
   pnameCap = lib.${namespace}.capitalize pname;
-  version = "3.0.5";
+  source = lib.${namespace}.sources.${pname};
+  inherit (source) version;
 
   src = fetchurl {
     url = "https://github.com/pot-app/pot-desktop/releases/download/${version}/pot_${version}_amd64.AppImage";

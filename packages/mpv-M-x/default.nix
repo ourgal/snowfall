@@ -1,19 +1,24 @@
 {
-  namespace,
+  lib,
   fetchFromGitHub,
-  unstableGitUpdater,
   pkgs,
-  ...
+  namespace,
 }:
-pkgs.${namespace}.mkMpvPlugin {
+let
   pname = "mpv-M-x";
+  source = lib.${namespace}.sources.${pname};
+in
+pkgs.${namespace}.mkMpvPlugin {
+  inherit pname;
+  version = "unstable-${source.date}";
 
-  version = "unstable-2024-06-28";
   src = fetchFromGitHub {
-    owner = "Seme4eg";
-    repo = "mpv-scripts";
-    rev = "98cc63757654e7ede2533af2b0921afbc4165dc1";
-    hash = "sha256-iF4pY+DYnL4DJk4j2DhsUUwmt7KFfj1dWfobzBt9qHI=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   scriptPath = "M-x.lua";
@@ -23,6 +28,4 @@ pkgs.${namespace}.mkMpvPlugin {
     substituteInPlace M-x.lua \
       --replace-fail '~~/script-modules/?.lua' "$out/share/mpv/scripts/extended-menu.lua"
   '';
-
-  passthru.updateScript = unstableGitUpdater { };
 }

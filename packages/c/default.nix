@@ -1,14 +1,24 @@
-{ stdenv, fetchFromGitHub, ... }:
-
-stdenv.mkDerivation {
+{
+  stdenv,
+  fetchFromGitHub,
+  namespace,
+  lib,
+}:
+let
   pname = "c";
-  version = "unstable-2023-11-24";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "ryanmjacobs";
-    repo = "c";
-    rev = "7cdc09e69d2f7fc49f70c80c565aa09b19e666db";
-    sha256 = "0il12b5b2sdr3y8j2pwiikpb8d8qy5bzr6q50wp4p81k0kvlrqbl";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;
@@ -18,4 +28,13 @@ stdenv.mkDerivation {
     install -m755 -D ./c $out/bin/c
     runHook postInstall
   '';
+
+  meta = with lib; {
+    description = "Compile and execute C \"scripts\" in one go";
+    homepage = "https://github.com/ryanmjacobs/c";
+    license = licenses.mit;
+    maintainers = with maintainers; [ zxc ];
+    mainProgram = "c";
+    platforms = platforms.all;
+  };
 }

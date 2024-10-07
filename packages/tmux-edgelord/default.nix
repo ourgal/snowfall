@@ -1,12 +1,22 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  namespace,
+}:
+let
+  pluginName = "tmux-edgelord";
+  source = lib.${namespace}.sources.${pluginName};
+in
 pkgs.tmuxPlugins.mkTmuxPlugin {
-  pluginName = "edgelord";
-  version = "unstable-2024-07-08";
+  inherit pluginName;
+  version = "unstable-${source.date}";
   rtpFilePath = "setup.tmux";
   src = pkgs.fetchFromGitHub {
-    owner = "ourgal";
-    repo = "tmux-edgelord";
-    rev = "a390528534bf8e0f050daa1776db555eba4fadd9";
-    sha256 = "03pdqb2qj0lp0k93flv7m2wg4l0pki92a0hlvhrxb4awljnydsld";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 }

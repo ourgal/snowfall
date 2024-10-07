@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication {
+let
   pname = "git-playback";
-  version = "unstable-2016-03-23";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  version = "unstable-${source.date}";
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "jianli";
-    repo = "git-playback";
-    rev = "0d4a51993b8a1b58579964e883fd344f6b92763b";
-    hash = "sha256-lHqr+4dFFbktTI1J4Qu3t3BmV6xA32H2o5yOgaJJcNs=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

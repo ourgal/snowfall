@@ -2,20 +2,26 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "diffnav";
-  version = "0.1.1";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "dlvhdr";
-    repo = "diffnav";
-    rev = "v${version}";
-    hash = "sha256-BJkF74Q8o9ck7fo/0nZR7xK52ZObdTqaD+xayZW+GtA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  vendorHash = "sha256-2EzhXGrtitG7yON9IgPbqxf0yJHWaPQtvzVoL8C6Jao=";
+  vendorHash = "sha256-2JjQF+fwl8+Xoq9T3jCvngRAOa3935zpi9qbF4w4hEI=";
 
   ldflags = [
     "-s"

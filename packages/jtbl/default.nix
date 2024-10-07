@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "jtbl";
-  version = "1.6.0";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "kellyjonbrazil";
-    repo = "jtbl";
-    rev = "v${version}";
-    hash = "sha256-ILQwUpjNueaYR5hxOWd5kZSPhVoFnnS2FcttyKSTPr8=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

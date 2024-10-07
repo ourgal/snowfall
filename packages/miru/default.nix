@@ -8,7 +8,8 @@
 let
   pname = "miru";
   pnameCap = lib.${namespace}.capitalize pname;
-  version = "5.5.6";
+  source = lib.${namespace}.sources.${pname};
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchurl {
     url = "https://github.com/ThaUnknown/miru/releases/download/v${version}/linux-Miru-${version}.AppImage";

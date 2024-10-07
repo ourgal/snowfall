@@ -2,17 +2,23 @@
   lib,
   buildNpmPackage,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildNpmPackage rec {
+let
   pname = "git-stats";
-  version = "3.2.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildNpmPackage {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "IonicaBizau";
-    repo = "git-stats";
-    rev = version;
-    hash = "sha256-LhsesKHPggV7asOcJCPS/o4O5jP4WVlSiDXIWlyj8Yc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   npmDepsHash = "sha256-2Bg/VeJYo6Esm/TgfH/1c3/HU1Tl47xJtGxKyNYbEeo=";

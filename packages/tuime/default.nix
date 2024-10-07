@@ -2,17 +2,23 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "tuime";
-  version = "1.0.1";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "nate-sys";
-    repo = "tuime";
-    rev = "v${version}";
-    hash = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-0Y/fE1ydvVg/oOwbZ/49zUDD/84FYq8BQ3mfgbtTrSE=";

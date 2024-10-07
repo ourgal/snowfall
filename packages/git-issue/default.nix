@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "git-issue";
-  version = "unstable-2024-05-16";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "dspinellis";
-    repo = "git-issue";
-    rev = "d056998566d30235072b97982756ff607e9ecce9";
-    hash = "sha256-VYMIgJRcXKlhX05tfILA8dB8x3lcR6nX6vdls79cAgA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   makeFlags = [ "PREFIX=$(out)" ];

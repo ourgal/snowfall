@@ -3,17 +3,23 @@
   stdenv,
   fetchFromGitHub,
   installShellFiles,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "gg";
-  version = "unstable-2022-12-28";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "qw3rtman";
-    repo = "gg";
-    rev = "14e45a8e946eb7a04ebacc07e3a1f1f4235b1cd8";
-    hash = "sha256-+8WpnY9oBdDQ4fUj/xtsrx2w6LCfZIQjex+6BEk5qlk=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;

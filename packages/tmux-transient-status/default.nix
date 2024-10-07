@@ -1,12 +1,22 @@
-{ pkgs, ... }:
-pkgs.tmuxPlugins.mkTmuxPlugin {
+{
+  pkgs,
+  lib,
+  namespace,
+}:
+let
   pluginName = "tmux-transient-status";
-  version = "unstable-2023-12-26";
+  source = lib.${namespace}.sources.${pluginName};
+in
+pkgs.tmuxPlugins.mkTmuxPlugin {
+  inherit pluginName;
+  version = "unstable-${source.date}";
   rtpFilePath = "main.tmux";
   src = pkgs.fetchFromGitHub {
-    owner = "TheSast";
-    repo = "tmux-transient-status";
-    rev = "c3fcd5180999a7afc075d2dd37d37d1b1b82f7e8";
-    sha256 = "04fwmzf0zn4550kw11mz3irxrz85zs9kvrhc5xak212m2pr2gqkw";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 }

@@ -2,20 +2,26 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage {
+let
   pname = "repoblame";
-  version = "unstable-2024-09-14";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "martinn";
-    repo = "repoblame";
-    rev = "c8468ed7393463d4f9e5a1451f96b3266fae72e1";
-    hash = "sha256-K/iU45x6EOPPqNTog29bqz4BkN6MgedVl2LON6r+DBg=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoHash = "sha256-1+24VYT6Ks/FsV7+bp4ZW8yvXwRpzVnRziD9U4yYo08=";
+  cargoHash = "sha256-/8DyiWX2s0Dx0OQJnaQPCym0jp66pQ1KnOwXTtlPjwk=";
 
   meta = with lib; {
     description = "Aggregate git blame stats across any git repository. Find out top contributors by Lines of Code";

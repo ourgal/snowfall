@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "lssh";
-  version = "0.6.11";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "blacknon";
-    repo = "lssh";
-    rev = "v${version}";
-    hash = "sha256-SzucNPXJHwIZ6cWBLzbMLHJUdnVKdHie7kyoRCF+u4U=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = null;

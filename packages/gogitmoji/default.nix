@@ -3,17 +3,23 @@
   buildGoModule,
   fetchFromGitHub,
   installShellFiles,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "gogitmoji";
-  version = "1.1.5";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "jamesdobson";
-    repo = "gogitmoji";
-    rev = "v${version}";
-    hash = "sha256-mXJga9Y1ZA7htzCEyMIuyj2oMjyFOj/Z/2U/yzLfQPw=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-OjYhqYscuybA3BiaoJMdVQpV+m1MLFDZC+F6xB2+g4Y=";

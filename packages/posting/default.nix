@@ -6,16 +6,17 @@
   cargo,
   rustPlatform,
   rustc,
+  namespace,
 }:
 let
   textual = python3.pkgs.buildPythonApplication rec {
     pname = "textual";
-    version = "0.73.0";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       inherit pname version;
-      hash = "sha256-zNHoczcFd/VX398rNBHypPaLV9Q2X52DoA0ISvsV9aY=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
@@ -24,6 +25,7 @@ let
       markdown-it-py
       rich
       typing-extensions
+      platformdirs
     ];
 
     passthru.optional-dependencies = with python3.pkgs; {
@@ -37,13 +39,13 @@ let
   };
   textual-autocomplete = python3.pkgs.buildPythonApplication rec {
     pname = "textual-autocomplete";
-    version = "3.0.0a9";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       pname = "textual_autocomplete";
       inherit version;
-      hash = "sha256-tfPjFIt5Pxcq/mQ6WyGIxewU/LQrY5uYsjExwn5S3oU=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
@@ -57,17 +59,18 @@ let
   };
   pydantic = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic";
-    version = "2.7.3";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       inherit pname version;
-      hash = "sha256-xGx2pAuxKWco16i5mqc91wpIw1EBEf8pADT4YMmcQZ4=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
-    nativeBuildInputs = [
-      python3.pkgs.hatch-fancy-pypi-readme
-      python3.pkgs.hatchling
+    nativeBuildInputs = with python3.pkgs; [
+      hatch-fancy-pypi-readme
+      hatchling
+      pythonRelaxDepsHook
     ];
 
     propagatedBuildInputs = with python3.pkgs; [
@@ -75,6 +78,8 @@ let
       pydantic-core
       typing-extensions
     ];
+
+    pythonRelaxDeps = [ "pydantic-core" ];
 
     passthru.optional-dependencies = with python3.pkgs; {
       email = [ email-validator ];
@@ -84,13 +89,13 @@ let
   };
   pydantic-settings = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic-settings";
-    version = "2.3.4";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       pname = "pydantic_settings";
       inherit version;
-      hash = "sha256-xYAuPWK3joJSIxm7ybj4/7KK0cmIqZMR0E8qYFH8oKc=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
     nativeBuildInputs = [ python3.pkgs.hatchling ];
@@ -109,19 +114,19 @@ let
   };
   pydantic-core = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic-core";
-    version = "2.18.4";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       pname = "pydantic_core";
       inherit version;
-      hash = "sha256-7DvuraCf+GXDRP87wvQn9ebCZAHMYRPXfjcsP9rHOGQ=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
     cargoDeps = rustPlatform.fetchCargoTarball {
       inherit src;
       name = "${pname}-${version}";
-      hash = "sha256-m0xP4fIFgInkUeAy4HqfTKHEiqmWpYO8CgKzxg+WXiU=";
+      hash = "sha256-qTQ23hFhIYQSioz791kDG2fdIMlCsIvm29TB0KqocGY=";
     };
 
     nativeBuildInputs = [
@@ -136,20 +141,27 @@ let
 
     pythonImportsCheck = [ "pydantic_core" ];
   };
-in
-python3.pkgs.buildPythonApplication rec {
   pname = "posting";
-  version = "1.9.0";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  inherit (source) version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "darrenburns";
-    repo = "posting";
-    rev = version;
-    hash = "sha256-PDJYM/VW5Xhfj+OnOSrWSl47V0somjucjrggdVz+4bs=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  nativeBuildInputs = [ python3.pkgs.hatchling ];
+  nativeBuildInputs = with python3.pkgs; [
+    hatchling
+    pythonRelaxDepsHook
+  ];
 
   propagatedBuildInputs = with python3.pkgs; [
     click
@@ -163,7 +175,10 @@ python3.pkgs.buildPythonApplication rec {
     textual
     textual-autocomplete
     xdg-base-dirs
+    watchfiles
   ];
+
+  pythonRelaxDeps = true;
 
   pythonImportsCheck = [ "posting" ];
 

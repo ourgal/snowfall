@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "fetch";
-  version = "0.4.6";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "gruntwork-io";
-    repo = "fetch";
-    rev = "v${version}";
-    hash = "sha256-otHsP3Y8FZqB9omNYuM7gZfolqFiDwlXLEXeJB3pefI=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-WS1DZqExyXYRs+4PsXzgMa+wUx1L+Y8KEaK7P5JVMOk=";

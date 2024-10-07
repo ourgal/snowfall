@@ -8,20 +8,26 @@
   zlib,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "dra";
-  version = "0.5.4";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage rec {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "devmatteini";
-    repo = "dra";
-    rev = version;
-    hash = "sha256-DRDAWskWejkLDwY9ClgIxkXCuC6VrqvofOQpqZv2m58=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoHash = "sha256-CMUMPSHa3RnCo6gP4an4KK7FtqJCLkKtCThFrBKLzNU=";
+  cargoHash = "sha256-RJXAy+OSfZXVDbCSSbHuL/87tmkUoUJfJ6bK5XvXN5A=";
 
   nativeBuildInputs = [ pkg-config ];
 

@@ -3,17 +3,23 @@
   stdenvNoCC,
   fetchFromGitHub,
   gitUpdater,
+  namespace,
 }:
-
-stdenvNoCC.mkDerivation (finalAttrs: {
+let
   pname = "nrf-udev";
-  version = "1.0.1";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenvNoCC.mkDerivation (finalAttrs: {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "NordicSemiconductor";
-    repo = "nrf-udev";
-    rev = "v${finalAttrs.version}";
-    hash = "sha256-bEIAsz9ZwX6RTzhv5/waFZ5a3KlnwX4kQs29+475zN0=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontConfigure = true;

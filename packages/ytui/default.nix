@@ -2,20 +2,26 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "ytui";
-  version = "0.0.3";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "Banh-Canh";
-    repo = "ytui";
-    rev = "v${version}";
-    hash = "sha256-uyCAJAw11EOjah4cGiivY6r8yvTc/Lzx+wr4R1HCbwc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  vendorHash = "sha256-k478/jGbqD2sKOqfxQ4Xl8vvKkLLThh0xo3LowuWutQ=";
+  vendorHash = "sha256-/Xit/WU/MB3imK0eR1QSvtjIZz32/rhLMeWD7OxPalQ=";
 
   ldflags = [
     "-s"

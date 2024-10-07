@@ -4,17 +4,23 @@
   fetchFromGitHub,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "lobtui";
-  version = "0.3";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "pythops";
-    repo = "lobtui";
-    rev = "v${version}";
-    hash = "sha256-Vc6fh0XbSYNCQWosP7cOfphJin6Z5AJdcfSNdd38cKs=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-DUDERnhvnnGhjFH5KpIKmx1XNNAu2sDsf8DVhVfcd60=";
@@ -25,7 +31,7 @@ rustPlatform.buildRustPackage rec {
     description = "TUI for lobste.rs website";
     homepage = "https://github.com/pythops/lobtui";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ ];
+    maintainers = with maintainers; [ zxc ];
     mainProgram = "lobtui";
   };
 }

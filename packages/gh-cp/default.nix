@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "gh-cp";
-  version = "unstable-2021-11-08";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "mislav";
-    repo = "gh-cp";
-    rev = "58afdf5b5e1acfe71fce2390f6431003505ae0aa";
-    hash = "sha256-Ih3Wit0nnB8PrgbeZEuhTNVPCrwMWBmKMJSGmgLIrVY=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;

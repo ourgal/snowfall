@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs sources;
     in
     {
       path = ./.;
@@ -16,19 +16,23 @@ args.module (
             {
               name = "zoxide";
               src = pkgs.fetchFromGitHub {
-                owner = "jchook";
-                repo = "ranger-zoxide";
-                rev = "281828de060299f73fe0b02fcabf4f2f2bd78ab3";
-                hash = "sha256-JEuyYSVa1NS3aftezEJx/k19lwwzf7XhqBCL0jH6VT4=";
+                inherit (sources.ranger-zoxide.src)
+                  owner
+                  repo
+                  rev
+                  sha256
+                  ;
               };
             }
             {
               name = "devicons2";
               src = pkgs.fetchFromGitHub {
-                owner = "cdump";
-                repo = "ranger-devicons2";
-                rev = "9606009aa01743768b0f27de0a841f7d8fe196c5";
-                hash = "sha256-T96+7dX/7B0BKOJgVDg55+Zonp9sSt6SvmLGknhL8Gg=";
+                inherit (sources.ranger-devicons2.src)
+                  owner
+                  repo
+                  rev
+                  sha256
+                  ;
               };
             }
           ];

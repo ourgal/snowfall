@@ -3,17 +3,18 @@
   python3,
   fetchFromGitHub,
   fetchPypi,
+  namespace,
 }:
 
 let
   argparse = python3.pkgs.buildPythonApplication rec {
     pname = "argparse";
-    version = "1.4.0";
+    inherit (lib.${namespace}.sources.${pname}) version;
     pyproject = true;
 
     src = fetchPypi {
       inherit pname version;
-      hash = "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=";
+      inherit (lib.${namespace}.sources.${pname}.src) sha256;
     };
 
     nativeBuildInputs = [
@@ -31,17 +32,21 @@ let
       mainProgram = "argparse";
     };
   };
-in
-python3.pkgs.buildPythonApplication rec {
   pname = "github-dlr";
-  version = "0.1.2";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  inherit (source) version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "rocktimsaikia";
-    repo = "github-dlr";
-    rev = version;
-    hash = "sha256-vXLrX3gWx1K77TA79dOxaC2U59ZWpS0PGQnUHIb+BxI=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = with python3.pkgs; [

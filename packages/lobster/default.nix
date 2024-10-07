@@ -13,16 +13,23 @@
   mpv,
   openssl,
   fetchFromGitHub,
+  namespace,
 }:
-stdenvNoCC.mkDerivation {
+let
   pname = "lobster";
-  version = "4.3.0";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenvNoCC.mkDerivation {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "justchokingaround";
-    repo = "lobster";
-    rev = "v4.3.0";
-    hash = "sha256-ch91LYKs6MswTC08Xi8VcIxooWvDprGuIn0B2Yo3ufo=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [ makeWrapper ];

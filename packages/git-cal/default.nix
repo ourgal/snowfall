@@ -3,17 +3,23 @@
   stdenv,
   fetchFromGitHub,
   perl,
+  namespace,
 }:
-
-stdenv.mkDerivation rec {
+let
   pname = "git-cal";
-  version = "0.9.1";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "k4rthik";
-    repo = "git-cal";
-    rev = "v${version}";
-    hash = "sha256-fzzcxGre3YebvFrSRrul2L73mfQF/4ubsGVSPFzUSSM=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;

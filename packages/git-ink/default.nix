@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation rec {
+let
   pname = "git-ink";
-  version = "1.0.1";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "davidosomething";
-    repo = "git-ink";
-    rev = version;
-    hash = "sha256-OiAajjMXyLezEXNxmHnwZZBP0lZEYmRGUkxh6xEoThw=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   installPhase = ''
@@ -24,7 +30,7 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     description = "Annotate your git branches";
     homepage = "https://github.com/davidosomething/git-ink";
-    license = licenses.unfree; # FIXME: nix-init did not found a license
+    license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "git-ink";
     platforms = platforms.all;

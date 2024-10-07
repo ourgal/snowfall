@@ -3,17 +3,23 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "rimage";
-  version = "0.10.3";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "SalOne22";
-    repo = "rimage";
-    rev = "v${version}";
-    hash = "sha256-GfxnZ9fuok4/6BGrCZHD+hslCaHYUv16/8jreK+9JEI=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-OAMZOpxGlYfJkSRXhDXiZ3eYdDiXU1g7bEUNOJ6Zf/M=";

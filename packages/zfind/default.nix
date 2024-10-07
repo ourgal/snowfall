@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "zfind";
-  version = "0.4.4";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "laktak";
-    repo = "zfind";
-    rev = "v${version}";
-    hash = "sha256-CHudSfvl+YnKjvvuSH0RgIqF2bDEO1KW3oAiNN2mLro=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-blq0/pRppdf2jcuhIqYeNhcazFNZOGeEjPTSLgHqhrU=";

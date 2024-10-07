@@ -1,22 +1,25 @@
 {
-  namespace,
+  lib,
   fetchFromGitHub,
-  unstableGitUpdater,
   pkgs,
-  ...
+  namespace,
 }:
-pkgs.${namespace}.mkMpvPlugin {
+let
   pname = "mpv-autoloop";
+  source = lib.${namespace}.sources.${pname};
+in
+pkgs.${namespace}.mkMpvPlugin {
+  inherit pname;
+  version = "unstable-${source.date}";
 
-  version = "unstable-2020-08-28";
   src = fetchFromGitHub {
-    owner = "zc62";
-    repo = "mpv-scripts";
-    rev = "a8920592a4dbda574b51ddc6c2000851a13549a5";
-    hash = "sha256-pot53UjIJjzehLGxku16dNG1DBwXuOZ7FXQtmnezhwY=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   scriptPath = "autoloop.lua";
-
-  passthru.updateScript = unstableGitUpdater { };
 }

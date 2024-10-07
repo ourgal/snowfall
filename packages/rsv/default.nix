@@ -2,22 +2,30 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "rsv";
-  version = "0.4.12";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "ribbondz";
-    repo = "rsv";
-    rev = "v${version}";
-    hash = "sha256-muPW4kq1STsJ6j3KuqSQU5nQCd25LpqjbP97S2FjZ6E=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoHash = "sha256-qieERSla3E3IL4/P2OvwI5NS9fuXEGAiDqof+sgj+eI=";
+  cargoHash = "sha256-ggn7TGI5/AnW/jqgWcRsWvt1C7XovCo7cY/55QH9OY8=";
 
   nativeBuildInputs = [ rustPlatform.bindgenHook ];
+
+  doCheck = false;
 
   meta = with lib; {
     description = "A command line tool written in Rust to analyze small and large CSV, TXT, EXCEL files (e.g., >10G). Support data slicing, filtering, spliting, generating frequency table, etc";

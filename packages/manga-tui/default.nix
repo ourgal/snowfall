@@ -7,32 +7,41 @@
   sqlite,
   stdenv,
   darwin,
+  namespace,
+  bzip2,
+  zstd,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "manga-tui";
-  version = "0.2.0";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "josueBarretogit";
-    repo = "manga-tui";
-    rev = "v${version}";
-    hash = "sha256-rGdncPEHbjA86RB0NjWgmci3Dz2c92o3mgC3eCt8Nxs=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "ratatui-image-1.0.5" = "sha256-bUPKCK3AKO5fnv7a8PApZTI0LPBShNBsvgyunLMdIqg=";
-    };
-  };
+  cargoHash = "sha256-yf0hISz/jHtrO1clTSIKfxFiwI+W0Mu3mY+XW6+ynJU=";
 
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [
+    bzip2
     openssl
     sqlite
+    zstd
   ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
+
+  env = {
+    ZSTD_SYS_USE_PKG_CONFIG = true;
+  };
 
   meta = with lib; {
     description = "Terminal-based manga reader and downloader with image support";

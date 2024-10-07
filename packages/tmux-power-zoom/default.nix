@@ -1,12 +1,22 @@
-{ pkgs, ... }:
-pkgs.tmuxPlugins.mkTmuxPlugin {
+{
+  pkgs,
+  lib,
+  namespace,
+}:
+let
   pluginName = "tmux-power-zoom";
-  version = "unstable-2024-08-25";
+  source = lib.${namespace}.sources.${pluginName};
+in
+pkgs.tmuxPlugins.mkTmuxPlugin {
+  inherit pluginName;
+  version = "unstable-${source.date}";
   rtpFilePath = "power-zoom.tmux";
   src = pkgs.fetchFromGitHub {
-    owner = "jaclu";
-    repo = "tmux-power-zoom";
-    rev = "2297919bce52d45ba5bf0483942553b35909bca0";
-    hash = "sha256-ZWXwMDJW5MXcKw5aV70TXybPD5tkEJqomO4TX2Z0D6o=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 }
