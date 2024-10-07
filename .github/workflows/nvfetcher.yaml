@@ -17,7 +17,10 @@ jobs:
       - uses: cachix/install-nix-action@v30
         with:
           nix_path: nixpkgs=channel:nixos-24.05
-      - run: nix run github:berberman/nvfetcher -j 1
+      - run: echo '[keys]' >> keyfile.toml
+      - run: echo 'github = "${{ secrets.GITHUB_TOKEN }}"' >> keyfile.toml
+      - run: nix run github:berberman/nvfetcher -- -k keyfile.toml
+      - run: rm keyfile.toml
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto update nix hash"
