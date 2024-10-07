@@ -400,12 +400,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4",
-            "sha256": "sha256-uIf1+epbysSUaNhZVR6hNCpVQNPc5ysmbDj48wxvd0w=",
+            "rev": "13f5cbef1e3d9cbe7ee1808919e4688f6d021534",
+            "sha256": "sha256-QIhOMbpJgX8lKmX231+CiIibTOx0WpLHvXhYl0S3rPg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4"
+        "version": "13f5cbef1e3d9cbe7ee1808919e4688f6d021534"
     },
     "dblab": {
         "cargoLocks": null,
@@ -448,6 +448,86 @@
             "type": "github"
         },
         "version": "v0.2.8"
+    },
+    "docker-alist": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-alist",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:543df1ceb6aed6c603f8c64c855d6bf6b22ecaa114cca6251dff9a477894fc7a",
+            "imageName": "xhofe/alist-aria2",
+            "imageTag": "v3.37.4",
+            "os": null,
+            "sha256": "sha256-BVQoBiPNnVbcP3K8wBacXzCrC2C3BkAmemA5I5pn7L8=",
+            "tlsVerify": null
+        },
+        "version": "v3.37.4"
+    },
+    "docker-flaresolverr": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-flaresolverr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:f104ee51e5124d83cf3be9b37480649355d223f7d8f9e453d0d5ef06c6e3b31b",
+            "imageName": "flaresolverr/flaresolverr",
+            "imageTag": "v3.3.21",
+            "os": null,
+            "sha256": "sha256-unGzkgDG5RvVPz+cHdNqizBjEf9FCHSMwi7PbRgjETI=",
+            "tlsVerify": null
+        },
+        "version": "v3.3.21"
+    },
+    "docker-qd": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-qd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:7d9a54588876203720d7638cd0ca5e25897d3c8993fcfa9f9c0c59a91cf8ed9f",
+            "imageName": "qdtoday/qd",
+            "imageTag": "20240210",
+            "os": null,
+            "sha256": "sha256-vxZHuExbVwA4HyXzrXgogomxRg3EaHaEwBG1BH/gvnI=",
+            "tlsVerify": null
+        },
+        "version": "20240210"
+    },
+    "docker-subconverter": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-subconverter",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:41899af10188ce83f6359eacc3d12f33c74b423c35b37bcd09b686575e9e10ad",
+            "imageName": "tindy2013/subconverter",
+            "imageTag": "0.9.0",
+            "os": null,
+            "sha256": "sha256-PiCD+jyQRhzbHKQeJxJiyUd+TZRG3OZHRkV97ITlI9w=",
+            "tlsVerify": null
+        },
+        "version": "0.9.0"
     },
     "done": {
         "cargoLocks": null,
