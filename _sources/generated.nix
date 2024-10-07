@@ -335,13 +335,13 @@
   };
   facad = {
     pname = "facad";
-    version = "v2.4.0";
+    version = "v2.11.0";
     src = fetchFromGitHub {
       owner = "yellow-footed-honeyguide";
       repo = "facad";
-      rev = "v2.4.0";
+      rev = "v2.11.0";
       fetchSubmodules = false;
-      sha256 = "sha256-KR6CfafNuO9prjDvYwGyCigPvy7hFm4EQrcOn4Q333Q=";
+      sha256 = "sha256-D2cGCSJ6MAFU/K8jP1NI4mbL1fnlV+0cEK434tZndPo=";
     };
   };
   fast-anime = {
@@ -1088,15 +1088,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "b3737238e77613e8c6e1833c0349d7a542fe793d";
+    version = "af1ef4254b6a1c2ccc0d70b52e52c69df29b0cf2";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "b3737238e77613e8c6e1833c0349d7a542fe793d";
+      rev = "af1ef4254b6a1c2ccc0d70b52e52c69df29b0cf2";
       fetchSubmodules = false;
-      sha256 = "sha256-JBwWq6kf+xujw8osTE/XGPWErbB7EloU7HpuVqILSCM=";
+      sha256 = "sha256-Ofi9JhocHTwF4J6g1KmzD1vocQK2jCPhZ0E9ucOv/VI=";
     };
-    date = "2024-10-06";
+    date = "2024-10-07";
   };
   posting = {
     pname = "posting";
@@ -1704,6 +1704,17 @@
       rev = "v0.3.1";
       fetchSubmodules = false;
       sha256 = "sha256-SA5DXHKqUslUImoyzGQ9GmoO8RD5UJt6SB03bTTGjaE=";
+    };
+  };
+  tp = {
+    pname = "tp";
+    version = "v1.0.0";
+    src = fetchFromGitHub {
+      owner = "minefuto";
+      repo = "tp";
+      rev = "v1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-e/G0cN0HKzpgBRajztp/DucgO0JWW/jqi/omvLWsVyQ=";
     };
   };
   treegen = {
