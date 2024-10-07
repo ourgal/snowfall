@@ -618,3 +618,7 @@ fetch.github = "bornova/numara-calculator"
 [fast-anime]
 src.github = "Benex254/FastAnime"
 fetch.github = "Benex254/FastAnime"
+
+[docker-alist]
+src.container = "xhofe/alist-aria2"
+fetch.docker = "xhofe/alist-aria2"
