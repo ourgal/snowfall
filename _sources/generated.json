@@ -388,7 +388,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-06",
+        "date": "2024-10-07",
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -400,12 +400,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "224934754b89e6de6260df29dc716311fa0341dd",
-            "sha256": "sha256-0Dv1DzEvYkUzRQQtVSYuF75qssUcFaO/GoOusOnlqlM=",
+            "rev": "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4",
+            "sha256": "sha256-uIf1+epbysSUaNhZVR6hNCpVQNPc5ysmbDj48wxvd0w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "224934754b89e6de6260df29dc716311fa0341dd"
+        "version": "2dbaee655ac7a79b7563b4e562cf9b94ee5708e4"
     },
     "dblab": {
         "cargoLocks": null,
@@ -1648,7 +1648,7 @@
     },
     "minimal-tmux-status": {
         "cargoLocks": null,
-        "date": "2024-07-16",
+        "date": "2024-10-07",
         "extract": null,
         "name": "minimal-tmux-status",
         "passthru": null,
@@ -1660,12 +1660,12 @@
             "name": null,
             "owner": "niksingh710",
             "repo": "minimal-tmux-status",
-            "rev": "86de1697b6b0522ebd36b5fe83c5fd9b7e30f15f",
-            "sha256": "sha256-lDPT3XRH14Z5WTdtWhgiYa8FjQHeYFCY7Dpy9xU8vyM=",
+            "rev": "3bcfbc350ce4c652c7d4b0f7aeb77400962f4bbc",
+            "sha256": "sha256-UfOpuc/gW42i95MztUj6mDbNCdtK/pbO0Lgvzv+b448=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "86de1697b6b0522ebd36b5fe83c5fd9b7e30f15f"
+        "version": "3bcfbc350ce4c652c7d4b0f7aeb77400962f4bbc"
     },
     "miru": {
         "cargoLocks": null,
