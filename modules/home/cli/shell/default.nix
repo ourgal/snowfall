@@ -52,6 +52,7 @@ args.module (
         "rat"
         "reader"
         "sunbeam"
+        "tp"
         "wush"
         "zfind"
         # keep-sorted end
