@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) config namespace enabled;
+      inherit (args)
+        config
+        namespace
+        enabled
+        pkgs
+        ;
     in
     {
       path = ./.;
@@ -62,6 +67,7 @@ args.module (
               };
               push.useForceIfIncludes = true;
               rebase.autosquash = true;
+              maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
             };
           };
         }
