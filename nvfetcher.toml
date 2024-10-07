@@ -614,3 +614,7 @@ fetch.github = "pot-app/pot-desktop"
 [numara]
 src.github = "bornova/numara-calculator"
 fetch.github = "bornova/numara-calculator"
+
+[fast-anime]
+src.github = "Benex254/FastAnime"
+fetch.github = "Benex254/FastAnime"
