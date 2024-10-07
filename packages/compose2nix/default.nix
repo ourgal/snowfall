@@ -2,20 +2,26 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "compose2nix";
-  version = "0.2.2";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "aksiksi";
-    repo = "compose2nix";
-    rev = "v${version}";
-    hash = "sha256-2t4pXTzd5TDpAOzNS8MfnE9p8Rm55OPLaEpSPF4/UbE=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  vendorHash = "sha256-SwJzyOXE23BLoJ+efFuSIhDTMjirEUmBhGGmgrnKhXw=";
+  vendorHash = "sha256-pJX73toLWacc1Tz7gbqOIN2CZOu4O2/Usv5lUtjxFRA=";
 
   ldflags = [
     "-s"

@@ -4,17 +4,23 @@
   fetchFromGitHub,
   pkg-config,
   dbus,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "bluetui";
-  version = "0.5.1";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "pythops";
-    repo = "bluetui";
-    rev = "v${version}";
-    hash = "sha256-9svPIZzKuI4XBlxBsKucGLdX2dkfAy9ERT5oj8Su9TM=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-w6rrZQNu5kLKEWSXFa/vSqwm76zWZug/ZqztMDY7buE=";

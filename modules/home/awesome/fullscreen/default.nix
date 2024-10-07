@@ -8,6 +8,7 @@ args.module (
         namespace
         host
         pkgs
+        sources
         ;
       baseConfig = builtins.readFile ./rc.lua;
       hostConfig =
@@ -42,16 +43,20 @@ args.module (
           "awesome/background.jpg".source = ./background.jpg;
           "awesome/themes".source = ./themes;
           "awesome/lain".source = pkgs.fetchFromGitHub {
-            owner = "lcpz";
-            repo = "lain";
-            rev = "88f5a8abd2649b348ffec433a24a263b37f122c0";
-            hash = "sha256-MH/aiYfcO3lrcuNbnIu4QHqPq25LwzTprOhEJUJBJ7I=";
+            inherit (sources.lain.src)
+              owner
+              repo
+              rev
+              sha256
+              ;
           };
           "awesome/freedesktop".source = pkgs.fetchFromGitHub {
-            owner = "lcpz";
-            repo = "awesome-freedesktop";
-            rev = "c82ad2960c5f0c84e765df68554c266ea7e9464d";
-            hash = "sha256-lQstCcTPUYUt5hzAJIyQ16crPngeOnUla7I4QiG6gEs=";
+            inherit (sources.awesome-freedesktop.src)
+              owner
+              repo
+              rev
+              sha256
+              ;
           };
         };
       };

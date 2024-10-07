@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "svgshift";
-  version = "unstable-2024-08-20";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "10xJSChad";
-    repo = "svgshift";
-    rev = "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada";
-    hash = "sha256-je9ZbXTFKq3tA3aE0QTu70Sco45rQyLW+lS6//zNCmw=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   buildPhase = "gcc svgshift.c -o svgshift";

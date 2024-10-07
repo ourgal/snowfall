@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "flatpak-compose";
-  version = "0.4.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "faan11";
-    repo = "flatpak-compose";
-    rev = version;
-    hash = "sha256-BpsEelrtb5yWRiP70/wIsrYWS2aFl6tUFbQ8ChTrj+s=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-1TyFfRL6HTOa+M4CEcHeiReRcPlPNKMneq2AVXS0kX0=";

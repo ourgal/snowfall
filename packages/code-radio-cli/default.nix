@@ -7,17 +7,23 @@
   stdenv,
   darwin,
   alsa-lib,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "code-radio-cli";
-  version = "1.0.5";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "JasonWei512";
-    repo = "code-radio-cli";
-    rev = "v${version}";
-    hash = "sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N/ycu4g2W7187E3A=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-W2c63beCqEIB0SxrpC0ptxsoKrHSt+TId98LcX7RNBg=";

@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "treegen";
-  version = "1.0.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "bilbilak";
-    repo = "treegen";
-    rev = "v${version}";
-    hash = "sha256-z6CHr89fC9UVQgPmugOctB82XQ8yP6K5Ap2qsMLSnyk=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = null;

@@ -8,17 +8,23 @@
   stdenv,
   darwin,
   wayland,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "blendr";
-  version = "1.3.3";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "dmtrKovalenko";
-    repo = "blendr";
-    rev = "v${version}";
-    hash = "sha256-6QRI1MQnoppzlVfRV/bfqfTnBjC0/haFm52Ez9nltzw=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-2LbHEXLyrWIbWhCzbhB0rS2olBhueTl9cucaz92iYTk=";

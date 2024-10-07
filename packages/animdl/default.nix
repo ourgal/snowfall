@@ -2,19 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
-  ...
+  namespace,
 }:
-python3.pkgs.buildPythonApplication {
+let
   pname = "animdl";
-  version = "1.7.27";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  version = "unstable-${source.date}";
   format = "pyproject";
 
   src = fetchFromGitHub {
-    owner = "justfoolingaround";
-    repo = "animdl";
-    # Using the commit hash because upstream does not have releases. https://github.com/justfoolingaround/animdl/issues/277
-    rev = "c7c3b79198e66695e0bbbc576f9d9b788616957f";
-    hash = "sha256-kn6vCCFhJNlruxoO+PTHVIwTf1E5j1aSdBhrFuGzUq4=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = with python3.pkgs; [

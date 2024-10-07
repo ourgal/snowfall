@@ -3,17 +3,23 @@
   buildGoModule,
   fetchFromGitHub,
   openssl,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "ssh-tpm-agent";
-  version = "0.6.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "Foxboron";
-    repo = "ssh-tpm-agent";
-    rev = "v${version}";
-    hash = "sha256-gO9qVAVCvaiLrC/GiTJ0NghiXVRXXRBlvOIVSAOftR8=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   proxyVendor = true;

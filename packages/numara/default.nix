@@ -8,11 +8,12 @@
 let
   pname = "numara";
   pnameCap = lib.${namespace}.capitalize pname;
-  version = "5.1.3";
+  source = lib.${namespace}.sources.${pname};
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchurl {
     url = "https://github.com/bornova/numara-calculator/releases/download/v${version}/Numara-${version}-x86_64.AppImage";
-    hash = "sha256-ejGTYWhBmUAo2KiChvx0hClTXt5sqV7LMACKOS05kTI=";
+    hash = "sha256-yy/O4FY4gYddGbyCUrolzenOBvS2COlXoszjy3VNEQE=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };

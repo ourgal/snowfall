@@ -4,17 +4,23 @@
   fetchFromGitHub,
   alsa-lib,
   pkg-config,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "focus";
-  version = "1.4.3";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "ayoisaiah";
-    repo = "focus";
-    rev = "v${version}";
-    hash = "sha256-p9gTFUYHdyOY2EFT/ZmBHT7dRNm64s/3ExUXG7bfQ70=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-wWTDo4zbvQjosI+fsBwEq5wKhJX2gw9VAbih1urRTO8=";

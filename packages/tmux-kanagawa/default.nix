@@ -1,12 +1,22 @@
-{ pkgs, ... }:
-pkgs.tmuxPlugins.mkTmuxPlugin {
+{
+  pkgs,
+  lib,
+  namespace,
+}:
+let
   pluginName = "tmux-kanagawa";
-  version = "unstable-2023-12-23";
+  source = lib.${namespace}.sources.${pluginName};
+in
+pkgs.tmuxPlugins.mkTmuxPlugin {
+  inherit pluginName;
+  version = "unstable-${source.date}";
   rtpFilePath = "kanagawa.tmux";
   src = pkgs.fetchFromGitHub {
-    owner = "Nybkox";
-    repo = "tmux-kanagawa";
-    rev = "d1dc78128778f1e958e3e2eface0f48456810e81";
-    sha256 = "1hcg6faanlps79bs43almyah33vjagfli0wy2x7vm1kfiydgq40r";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 }

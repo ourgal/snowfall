@@ -3,17 +3,23 @@
   stdenv,
   fetchFromGitHub,
   lua,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "bling";
-  version = "unstable-2024-06-02";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "BlingCorp";
-    repo = "bling";
-    rev = "19ccfc0daf5edda8bbc508487616d00277a9d954";
-    hash = "sha256-6NZSUb7sSBUegSIPIubQUOZG3knzXfnyfEbCoEyggtc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   buildInputs = [ lua ];

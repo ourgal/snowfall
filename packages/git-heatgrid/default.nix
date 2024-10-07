@@ -2,10 +2,14 @@
   writeShellApplication,
   lib,
   fetchFromGitHub,
-  ...
+  namespace,
 }:
-writeShellApplication rec {
+let
   name = "git-heatgrid";
+  inherit (lib.${namespace}.sources.${name}) src;
+in
+writeShellApplication rec {
+  inherit name;
 
   meta = {
     mainProgram = name;
@@ -18,10 +22,12 @@ writeShellApplication rec {
 
   text = builtins.readFile (
     fetchFromGitHub {
-      owner = "denshakhov";
-      repo = "git-heatgrid";
-      rev = "2263ce34d2929652e6cfe31fe076577dfcefd168";
-      hash = "sha256-nBiZfwiWmwM0a839NaDsCouJtL2d0HYHIZ+FFGrmzjM=";
+      inherit (src)
+        owner
+        repo
+        rev
+        sha256
+        ;
     }
     + /git-heatgrid
   );

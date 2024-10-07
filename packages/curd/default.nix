@@ -4,17 +4,23 @@
   fetchFromGitHub,
   python3,
   socat,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "curd";
-  version = "unstable-2024-09-25";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "Wraient";
-    repo = "curd";
-    rev = "a719d64a39c552e6497b3f962450092edcfe9a00";
-    hash = "sha256-yqLS2Z7OO/x5X2oP2+nslVIw18/c+1zeaCXa4dVqp6o=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;

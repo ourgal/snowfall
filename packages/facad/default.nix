@@ -4,17 +4,23 @@
   fetchFromGitHub,
   meson,
   ninja,
+  namespace,
 }:
-
-stdenv.mkDerivation rec {
+let
   pname = "facad";
-  version = "1.4.0";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "yellow-footed-honeyguide";
-    repo = "facad";
-    rev = "v${version}";
-    hash = "sha256-u6UIed6a2J6dJYlN6b4adnVJHaiRvRK7Afpl4o2IMeM=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

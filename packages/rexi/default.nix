@@ -2,17 +2,23 @@
   lib,
   fetchFromGitHub,
   python3,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "rexi";
-  version = "1.1.3";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "royreznik";
-    repo = pname;
-    rev = "v${version}";
-    hash = "sha256-i1iHFnvuxLwMqokuJD0K8pKTJJgGbI0NT5WQ1+6lK0E=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   format = "pyproject";

@@ -22,6 +22,8 @@ buildGoModule rec {
 
   nativeBuildInputs = [ git ];
 
+  postInstall = "rm $out/bin/docs";
+
   meta = with lib; {
     description = "A command line tool to manage stacked PRs with Aviator";
     homepage = "https://github.com/aviator-co/av";

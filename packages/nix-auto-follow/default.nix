@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication {
+let
   pname = "nix-auto-follow";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
   version = "0.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "fzakaria";
-    repo = "nix-auto-follow";
-    rev = "8994bf9d68e37352fe3eb2d8d506f3b5418fdc9f";
-    hash = "sha256-FCKSd8Sunogt3wM/d+Zaz9R1wXPmTsNS2ctJy+s2uDA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

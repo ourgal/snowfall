@@ -2,20 +2,26 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "impala";
-  version = "0.2.1";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "pythops";
-    repo = "impala";
-    rev = "v${version}";
-    hash = "sha256-0ULcknkZKYEvuqlcY8E1kZtpA0lPxxjRV2/zfak+FKU=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
-  cargoHash = "sha256-1jFUfpinqXBu8eTFAA1dRDk1F1IhNjcA7CkJmaIjkFQ=";
+  cargoHash = "sha256-IMvlGAD9DB00luu9F4UKxwSYt0sV+IU8Pb7r10VtyYg=";
 
   meta = with lib; {
     description = "TUI for managing wifi on Linux";

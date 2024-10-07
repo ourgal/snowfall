@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "machma";
-  version = "unstable-2021-01-02";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "fd0";
-    repo = "machma";
-    rev = "9ab93d72e36fe2cbb15af37c914605212ac28642";
-    hash = "sha256-VmyWAsWIe6dhLq7UEit389v3fnQqRwZYk5gY6gj6Q3M=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-mu80QFccIHGqzHfj5zueO+P74p4irFfmU+cDgmn8URQ=";

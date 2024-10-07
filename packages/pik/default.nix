@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
+let
+  pname = "pik";
+  source = lib.${namespace}.sources.${pname};
+in
 buildGoModule {
   pname = "pik";
-  version = "unstable-2024-07-03";
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "immanelg";
-    repo = "pik";
-    rev = "c01a25e48a6896cd45861dd2e2c0c713d21c1c2e";
-    hash = "sha256-uyevpohiDqlKU+ZCjs6hwviLxnUQMPk/ZxclMFkBSCo=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   vendorHash = "sha256-8UprJXRLFO3giWAm8k+vbNz7HPYwKW7cD36qc3hEkzE=";

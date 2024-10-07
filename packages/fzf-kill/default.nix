@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation rec {
+let
   pname = "fzf-kill";
-  version = "1.0.0";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "Zeioth";
-    repo = "fzf-kill";
-    rev = "v${version}";
-    hash = "sha256-Aa+jqcavFber+tAWUqPgV87sKKZS+5rGeJLS7RoYGLA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   dontBuild = true;

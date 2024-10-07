@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "toolong";
-  version = "1.4.0";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "Textualize";
-    repo = "toolong";
-    rev = "v${version}";
-    hash = "sha256-Zd6j1BIrsLJqptg7BXb67qY3DaeHRHieWJoYYCDHaoc=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

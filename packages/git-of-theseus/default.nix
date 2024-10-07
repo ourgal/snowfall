@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication {
+let
   pname = "git-of-theseus";
-  version = "unstable-2024-11-26";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  version = "unstable-${source.date}";
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "erikbern";
-    repo = "git-of-theseus";
-    rev = "961bda027ffa9fcd8bbe99d5b8809cc0eaa86464";
-    hash = "sha256-FZXLJbximJWrDyuRril6whlOYWppGLns3k8sDNRmOuI=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [

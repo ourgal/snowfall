@@ -6,17 +6,23 @@
   openssl,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "rust-kanban";
-  version = "0.10.4";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "yashs662";
-    repo = "rust_kanban";
-    rev = "v${version}";
-    hash = "sha256-1sCc5ChDTYEo+WYsyYvmxJJ/JXtd/uPtUeKBjYjXcHU=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-5AXVl2yqpVoMlK2WP0mZL6vn+Xy6fdVi7oCOh8LaaFE=";

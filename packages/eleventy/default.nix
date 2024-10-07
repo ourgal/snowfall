@@ -2,17 +2,23 @@
   lib,
   buildNpmPackage,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildNpmPackage rec {
+let
   pname = "eleventy";
-  version = "3.0.0";
+  source = lib.${namespace}.sources.${pname};
+in
+buildNpmPackage {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "11ty";
-    repo = "eleventy";
-    rev = "v${version}";
-    hash = "sha256-0xyVski+WTfTdYfNUBMKX4fnorGSsbi95WMR8ocSU2Q=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   npmDepsHash = "sha256-yB111+LFq5DA6MQAMo0EwUNibZUVZUBpVnrZj6u/Xlg=";

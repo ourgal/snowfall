@@ -67,6 +67,10 @@
       url = "github:gitwatch/gitwatch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvfetcher = {
+      url = "github:berberman/nvfetcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -89,17 +93,20 @@
       };
       homeSpecialArgs = {
         module = lib.homeModule;
-        enabledList = lib.enabledList;
-        disabledList = lib.disabledList;
-        enabled = lib.enabled;
-        disabled = lib.disabled;
-        enableOpt = lib.enableOpt;
-        disableOpt = lib.disableOpt;
-        mkOpt' = lib.mkOpt';
-        cfgHome = lib.cfgHome;
-        tomlFile = lib.tomlFile;
-        toTOML = inputs.nix-std.lib.serde.toTOML;
-        switch = lib.switch;
+        inherit (lib)
+          enabledList
+          disabledList
+          enabled
+          disabled
+          enableOpt
+          disableOpt
+          mkOpt'
+          cfgHome
+          tomlFile
+          switch
+          sources
+          toTOML
+          ;
       };
       homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;
     in
@@ -117,6 +124,7 @@
         snowfall-flake.overlays."package/flake"
         snowfall-thaw.overlays."package/thaw"
         nixpkgs-f2k.overlays.window-managers
+        nvfetcher.overlays.default
       ];
 
       # Add modules to all NixOS systems.

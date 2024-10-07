@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 rec {
 
   # misc {{{
@@ -52,7 +52,11 @@ rec {
 
   tomlFile = file: builtins.fromTOML (builtins.readFile file);
   jsonFile = file: builtins.fromJSON (builtins.readFile file);
+
+  toTOML = inputs.nix-std.lib.serde.toTOML;
   # }}}
+
+  sources = jsonFile ../../_sources/generated.json;
 
   mkModuleCfg =
     root: path: prefix:

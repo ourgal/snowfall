@@ -2,18 +2,24 @@
   lib,
   python3,
   fetchFromGitHub,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "fingerpaint";
-  version = "1.2.7";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "Wazzaps";
-    repo = "fingerpaint";
-    rev = "v${version}";
-    hash = "sha256-BPpSAaWLmF0JkMijx7pI87tzO/rcjTryxdI2ekTavRY=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = with python3.pkgs; [

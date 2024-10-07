@@ -2,16 +2,20 @@
   lib,
   python3,
   fetchPypi,
+  namespace,
 }:
-
-python3.pkgs.buildPythonApplication rec {
+let
   pname = "advance-touch";
-  version = "1.0.2";
+  source = lib.${namespace}.sources.${pname};
+in
+python3.pkgs.buildPythonApplication rec {
+  inherit pname;
+  inherit (source) version;
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-I4wF4PuhDUnM7YluERJzMWysUODtfUTPOo4nvNSGZ8U=";
+    inherit (source.src) sha256;
   };
 
   nativeBuildInputs = [
@@ -26,7 +30,7 @@ python3.pkgs.buildPythonApplication rec {
   meta = with lib; {
     description = "Fast creation of files and directories. Mimics the operation of AdvancedNewFile (Vim plugin";
     homepage = "https://pypi.org/project/advance-touch/";
-    license = licenses.unfree; # FIXME: nix-init did not found a license
+    license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "advance-touch";
   };

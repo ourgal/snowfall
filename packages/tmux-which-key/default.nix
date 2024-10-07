@@ -1,12 +1,22 @@
-{ pkgs, ... }:
-pkgs.tmuxPlugins.mkTmuxPlugin {
+{
+  pkgs,
+  lib,
+  namespace,
+}:
+let
   pluginName = "tmux-which-key";
-  version = "unstable-2024-09-09";
+  source = lib.${namespace}.sources.${pluginName};
+in
+pkgs.tmuxPlugins.mkTmuxPlugin {
+  inherit pluginName;
+  version = "unstable-${source.date}";
   rtpFilePath = "plugin.sh.tmux";
   src = pkgs.fetchFromGitHub {
-    owner = "ourgal";
-    repo = "tmux-which-key";
-    rev = "b7283f4ccece66dd4a49fd6badd55b43262c6ae6";
-    hash = "sha256-zJlQ+3945xrfI5BpywpB5J79m5j2y3vtLUHsZgUaCJ0=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 }

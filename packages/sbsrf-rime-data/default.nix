@@ -1,11 +1,20 @@
-{ fetchzip, stdenv, ... }:
-stdenv.mkDerivation rec {
+{
+  fetchzip,
+  stdenv,
+  lib,
+  namespace,
+}:
+let
   name = "sbsrf-rime-data";
-  version = "20240809";
+  source = lib.${namespace}.sources.${name};
+in
+stdenv.mkDerivation rec {
+  inherit name;
+  inherit (source) version;
 
   src = fetchzip {
     url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";
-    hash = "sha256-6XRCQP7cvK25BZdv37Yi9o+/O62Eovw7TeU7PHq225Q=";
+    hash = "sha256-YjYUB5LNpzXCtU9cX4pDp5mJ+0Pd17r98LslaK2E4y4=";
     stripRoot = false;
   };
 

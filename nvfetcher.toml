@@ -1,0 +1,616 @@
+[to-fish]
+src.git = "https://github.com/joehillen/to-fish"
+fetch.github = "joehillen/to-fish"
+
+[fish-color-scheme-switcher]
+src.git = "https://github.com/h-matsuo/fish-color-scheme-switcher"
+fetch.github = "h-matsuo/fish-color-scheme-switcher"
+
+[fish-abbreviation-tips]
+src.git = "https://github.com/gazorby/fish-abbreviation-tips"
+fetch.github = "gazorby/fish-abbreviation-tips"
+
+[fish-bd]
+src.git = "https://github.com/0rax/fish-bd"
+fetch.github = "0rax/fish-bd"
+
+[done]
+src.git = "https://github.com/franciscolourenco/done"
+fetch.github = "franciscolourenco/done"
+
+["autopair.fish"]
+src.git = "https://github.com/ourgal/autopair.fish"
+fetch.github = "ourgal/autopair.fish"
+
+[puffer-fish]
+src.git = "https://github.com/nickeb96/puffer-fish"
+fetch.github = "nickeb96/puffer-fish"
+
+[fishbang]
+src.git = "https://github.com/brewingweasel/fishbang"
+fetch.github = "brewingweasel/fishbang"
+
+[sponge]
+src.git = "https://github.com/meaningful-ooo/sponge"
+fetch.github = "meaningful-ooo/sponge"
+
+[fzf]
+src.git = "https://github.com/jethrokuan/fzf"
+fetch.github = "jethrokuan/fzf"
+
+[gitnow]
+src.git = "https://github.com/joseluisq/gitnow"
+fetch.github = "joseluisq/gitnow"
+
+[ctrl-z]
+src.git = "https://github.com/kpbaks/ctrl-z.fish"
+fetch.github = "kpbaks/ctrl-z.fish"
+
+["todo-comments.fish"]
+src.git = "https://github.com/kpbaks/todo-comments.fish"
+fetch.github = "kpbaks/todo-comments.fish"
+
+["rgg.fish"]
+src.git = "https://github.com/soraxas/rgg.fish"
+fetch.github = "soraxas/rgg.fish"
+
+[fifc]
+src.git = "https://github.com/gazorby/fifc"
+fetch.github = "gazorby/fifc"
+
+["web-search.fish"]
+src.git = "https://github.com/veirt/web-search.fish"
+fetch.github = "veirt/web-search.fish"
+
+[f]
+src.git = "https://github.com/gokulsoumya/f"
+fetch.github = "gokulsoumya/f"
+
+[fish-colored-man]
+src.git = "https://github.com/decors/fish-colored-man"
+fetch.github = "decors/fish-colored-man"
+
+[lite-xl-vibe]
+src.git = "https://github.com/eugenpt/lite-xl-vibe"
+fetch.github = "eugenpt/lite-xl-vibe"
+
+[ranger-zoxide]
+src.git = "https://github.com/jchook/ranger-zoxide"
+fetch.github = "jchook/ranger-zoxide"
+
+[ranger-devicons2]
+src.git = "https://github.com/cdump/ranger-devicons2"
+fetch.github = "cdump/ranger-devicons2"
+
+[termsand]
+src.git = "https://github.com/ourgal/termsand"
+fetch.github = "ourgal/termsand"
+
+["tmux.fish"]
+src.git = "https://github.com/budimanjojo/tmux.fish"
+fetch.github = "budimanjojo/tmux.fish"
+
+[lain]
+src.git = "https://github.com/lcpz/lain"
+fetch.github = "lcpz/lain"
+
+[awesome-freedesktop]
+src.git = "https://github.com/lcpz/awesome-freedesktop"
+fetch.github = "lcpz/awesome-freedesktop"
+
+[taskwarrior-better-recur]
+src.git = "https://github.com/scottyob/taskwarrior-better-recur"
+fetch.github = "scottyob/taskwarrior-better-recur"
+
+[task-relative-recur]
+src.git = "https://github.com/mlaradji/task-relative-recur"
+fetch.github = "mlaradji/task-relative-recur"
+
+[git-heatgrid]
+src.git = "https://github.com/denshakhov/git-heatgrid"
+fetch.github = "denshakhov/git-heatgrid"
+
+[adl]
+src.git = "https://github.com/RaitaroH/adl"
+fetch.github = "RaitaroH/adl"
+
+[animdl]
+src.git = "https://github.com/justfoolingaround/animdl"
+fetch.github = "justfoolingaround/animdl"
+
+[advance-touch]
+src.pypi = "advance-touch"
+fetch.pypi = "advance-touch"
+
+[bling]
+src.git = "https://github.com/BlingCorp/bling"
+fetch.github = "BlingCorp/bling"
+
+[quartz]
+src.git = "https://github.com/vimpostor/quartz"
+fetch.github = "vimpostor/quartz"
+
+[blobdrop]
+src.github = "vimpostor/blobdrop"
+fetch.github = "vimpostor/blobdrop"
+
+[c]
+src.git = "https://github.com/ryanmjacobs/c"
+fetch.github = "ryanmjacobs/c"
+
+[curd]
+src.git = "https://github.com/Wraient/curd"
+fetch.github = "Wraient/curd"
+
+[facad]
+src.github = "yellow-footed-honeyguide/facad"
+fetch.github = "yellow-footed-honeyguide/facad"
+
+[fingerpaint]
+src.github = "Wazzaps/fingerpaint"
+fetch.github = "Wazzaps/fingerpaint"
+
+[fzf-kill]
+src.github = "Zeioth/fzf-kill"
+fetch.github = "Zeioth/fzf-kill"
+
+[autocrop]
+src.git = "https://github.com/mandykoh/autocrop"
+fetch.github = "mandykoh/autocrop"
+
+[av]
+src.github = "aviator-co/av"
+fetch.github = "aviator-co/av"
+
+[baidupcs-go]
+src.github = "qjfoidnh/BaiduPCS-Go"
+fetch.github = "qjfoidnh/BaiduPCS-Go"
+
+[blendr]
+src.github = "dmtrKovalenko/blendr"
+fetch.github = "dmtrKovalenko/blendr"
+
+[bluetui]
+src.github = "pythops/bluetui"
+fetch.github = "pythops/bluetui"
+
+[clashctl]
+src.github = "George-Miao/clashctl"
+fetch.github = "George-Miao/clashctl"
+
+[cloneit]
+src.git = "https://github.com/alok8bb/cloneit"
+fetch.github = "alok8bb/cloneit"
+
+[code-radio-cli]
+src.github = "JasonWei512/code-radio-cli"
+fetch.github = "JasonWei512/code-radio-cli"
+
+[compose2nix]
+src.github = "aksiksi/compose2nix"
+fetch.github = "aksiksi/compose2nix"
+
+[dblab]
+src.github = "danvergara/dblab"
+fetch.github = "danvergara/dblab"
+
+[diffnav]
+src.github = "dlvhdr/diffnav"
+fetch.github = "dlvhdr/diffnav"
+
+[dra]
+src.github = "devmatteini/dra"
+fetch.github = "devmatteini/dra"
+
+[eleventy]
+src.github = "11ty/eleventy"
+fetch.github = "11ty/eleventy"
+
+[fetch]
+src.github = "gruntwork-io/fetch"
+fetch.github = "gruntwork-io/fetch"
+
+[fgit]
+src.github = "fastgh/fgit"
+fetch.github = "fastgh/fgit"
+
+[flatpak-compose]
+src.github = "faan11/flatpak-compose"
+fetch.github = "faan11/flatpak-compose"
+
+[focus]
+src.github = "ayoisaiah/focus"
+fetch.github = "ayoisaiah/focus"
+
+[geminicommit]
+src.github = "tfkhdyt/geminicommit"
+fetch.github = "tfkhdyt/geminicommit"
+
+[gg]
+src.git = "https://github.com/qw3rtman/gg"
+fetch.github = "qw3rtman/gg"
+
+[gh-branch]
+src.git = "https://github.com/mislav/gh-branch"
+fetch.github = "mislav/gh-branch"
+
+[gh-cp]
+src.git = "https://github.com/mislav/gh-cp"
+fetch.github = "mislav/gh-cp"
+
+[gh-screensaver]
+src.github = "vilmibm/gh-screensaver"
+fetch.github = "vilmibm/gh-screensaver"
+
+[gh-stars]
+src.github = "aymanbagabas/gh-stars"
+fetch.github = "aymanbagabas/gh-stars"
+
+[gitcs]
+src.github = "knbr13/gitcs"
+fetch.github = "knbr13/gitcs"
+
+[argparse]
+src.pypi = "argparse"
+fetch.pypi = "argparse"
+
+[github-dlr]
+src.github = "rocktimsaikia/github-dlr"
+fetch.github = "rocktimsaikia/github-dlr"
+
+[gitty]
+src.github = "worlpaker/gitty"
+fetch.github = "worlpaker/gitty"
+
+[git-cal]
+src.github = "k4rthik/git-cal"
+fetch.github = "k4rthik/git-cal"
+
+[git-grab]
+src.github = "wezm/git-grab"
+fetch.github = "wezm/git-grab"
+
+[git-ink]
+src.github_tag = "davidosomething/git-ink"
+fetch.github = "davidosomething/git-ink"
+
+[git-issue]
+src.git = "https://github.com/dspinellis/git-issue"
+fetch.github = "dspinellis/git-issue"
+
+[git-of-theseus]
+src.git = "https://github.com/erikbern/git-of-theseus"
+fetch.github = "erikbern/git-of-theseus"
+
+[git-playback]
+src.git = "https://github.com/jianli/git-playback"
+fetch.github = "jianli/git-playback"
+
+[git-spend]
+src.github = "Goutte/git-spend"
+fetch.github = "Goutte/git-spend"
+git.fetchSubmodules = true
+
+[git-stats]
+src.github = "IonicaBizau/git-stats"
+fetch.github = "IonicaBizau/git-stats"
+
+[git-sumi]
+src.github = "welpo/git-sumi"
+fetch.github = "welpo/git-sumi"
+
+[git-toolbelt]
+src.github = "nvie/git-toolbelt"
+fetch.github = "nvie/git-toolbelt"
+
+[gogitmoji]
+src.github = "jamesdobson/gogitmoji"
+fetch.github = "jamesdobson/gogitmoji"
+
+[goji]
+src.github = "muandane/goji"
+fetch.github = "muandane/goji"
+
+[goodls]
+src.github = "tanaikech/goodls"
+fetch.github = "tanaikech/goodls"
+
+[gw]
+src.github = "daniel7grant/gw"
+fetch.github = "daniel7grant/gw"
+
+[hexpatch]
+src.github = "Etto48/HexPatch"
+fetch.github = "Etto48/HexPatch"
+
+[impala]
+src.github = "pythops/Impala"
+fetch.github = "pythops/Impala"
+
+[jerry]
+src.git = "https://github.com/justchokingaround/jerry"
+fetch.github = "justchokingaround/Jerry"
+
+[jtbl]
+src.github = "kellyjonbrazil/Jtbl"
+fetch.github = "kellyjonbrazil/Jtbl"
+
+[koji]
+src.github = "cococonscious/Koji"
+fetch.github = "cococonscious/Koji"
+
+[lobster]
+src.github = "justchokingaround/Lobster"
+fetch.github = "justchokingaround/Lobster"
+
+[lobtui]
+src.github = "pythops/lobtui"
+fetch.github = "pythops/lobtui"
+
+[lookatme]
+src.github = "d0c-s4vage/lookatme"
+fetch.github = "d0c-s4vage/lookatme"
+
+[lssh]
+src.github = "blacknon/lssh"
+fetch.github = "blacknon/lssh"
+
+[machma]
+src.git = "https://github.com/fd0/machma"
+fetch.github = "fd0/machma"
+
+[manga-tui]
+src.github = "josueBarretogit/manga-tui"
+fetch.github = "josueBarretogit/manga-tui"
+
+[minimal-tmux-status]
+src.git = "https://github.com/niksingh710/minimal-tmux-status"
+fetch.github = "niksingh710/minimal-tmux-status"
+
+[mpv-M-x]
+src.git = "https://github.com/Seme4eg/mpv-scripts"
+fetch.github = "Seme4eg/mpv-scripts"
+
+[mpv-autoloop]
+src.git = "https://github.com/zc62/mpv-scripts"
+fetch.github = "zc62/mpv-scripts"
+
+[mpv-blur-edges]
+src.git = "https://github.com/occivink/mpv-scripts"
+fetch.github = "occivink/mpv-scripts"
+
+[mpv-smartcopypaste_ii]
+src.git = "https://github.com/Eisa01/mpv-scripts"
+fetch.github = "Eisa01/mpv-scripts"
+
+[mpv-smartskip]
+src.git = "https://github.com/Eisa01/mpv-scripts"
+fetch.github = "Eisa01/mpv-scripts"
+
+[nix-auto-follow]
+src.git = "https://github.com/fzakaria/nix-auto-follow"
+fetch.github = "fzakaria/nix-auto-follow"
+
+[nrf-udev]
+src.github = "NordicSemiconductor/nrf-udev"
+fetch.github = "NordicSemiconductor/nrf-udev"
+
+[otree]
+src.github = "fioncat/otree"
+fetch.github = "fioncat/otree"
+
+[pik]
+src.git = "https://github.com/immanelg/pik"
+fetch.github = "immanelg/pik"
+
+[play]
+src.github = "paololazzari/play"
+fetch.github = "paololazzari/play"
+
+[pnut]
+src.git = "https://github.com/udem-dlteam/pnut"
+fetch.github = "udem-dlteam/pnut"
+
+[textual]
+src.pypi = "textual"
+fetch.pypi = "textual"
+
+[textual-autocomplete]
+src.pypi = "textual-autocomplete"
+fetch.pypi = "textual_autocomplete"
+
+[pydantic]
+src.pypi = "pydantic"
+fetch.pypi = "pydantic"
+
+[pydantic-settings]
+src.pypi = "pydantic-settings"
+fetch.pypi = "pydantic_settings"
+
+[pydantic-core]
+src.pypi = "pydantic-core"
+fetch.pypi = "pydantic_core"
+
+[posting]
+src.github = "darrenburns/posting"
+fetch.github = "darrenburns/posting"
+
+[radio-go-go]
+src.github = "matteo-pacini/RadioGoGo"
+fetch.github = "matteo-pacini/RadioGoGo"
+
+[rat]
+src.git = "https://github.com/ericfreese/rat"
+fetch.github = "ericfreese/rat"
+
+[reader]
+src.github = "mrusme/reader"
+fetch.github = "mrusme/reader"
+
+[repoblame]
+src.git = "https://github.com/martinn/repoblame"
+fetch.github = "martinn/repoblame"
+
+[rexi]
+src.github = "royreznik/rexi"
+fetch.github = "royreznik/rexi"
+
+[rimage]
+src.github = "SalOne22/rimage"
+fetch.github = "SalOne22/rimage"
+
+[rsv]
+src.github = "ribbondz/rsv"
+fetch.github = "ribbondz/rsv"
+
+[rust-kanban]
+src.github_tag = "yashs662/rust_kanban"
+fetch.github = "yashs662/rust_kanban"
+
+[s]
+src.github = "zquestz/s"
+fetch.github = "zquestz/s"
+
+[sake]
+src.github = "alajmo/sake"
+fetch.github = "alajmo/sake"
+
+[sbsrf-rime-data]
+src.github = "sbsrf/sbsrf"
+fetch.github = "sbsrf/sbsrf"
+
+[serie]
+src.github = "lusingander/serie"
+fetch.github = "lusingander/serie"
+
+[serpl]
+src.github = "yassinebridi/serpl"
+fetch.github = "yassinebridi/serpl"
+
+[sig]
+src.github = "ynqa/sig"
+fetch.github = "ynqa/sig"
+
+[simple-completion-language-server]
+src.git = "https://github.com/estin/simple-completion-language-server"
+fetch.github = "estin/simple-completion-language-server"
+
+[soba]
+src.github = "jonhadfield/soba"
+fetch.github = "jonhadfield/soba"
+
+[sonicradio]
+src.github = "dancnb/sonicradio"
+fetch.github = "dancnb/sonicradio"
+
+[ssh-tpm-agent]
+src.github = "Foxboron/ssh-tpm-agent"
+fetch.github = "Foxboron/ssh-tpm-agent"
+
+[sunbeam]
+src.github = "pomdtr/sunbeam"
+fetch.github = "pomdtr/sunbeam"
+
+[svgshift]
+src.git = "https://github.com/10xJSChad/svgshift"
+fetch.github = "10xJSChad/svgshift"
+
+[tmux2k]
+src.git = "https://github.com/2KAbhishek/tmux2k"
+fetch.github = "2KAbhishek/tmux2k"
+
+[tmux-auto-renumber-session]
+src.git = "https://github.com/T1erno/tmux-auto-renumber-session"
+fetch.github = "T1erno/tmux-auto-renumber-session"
+
+[tmux-continuum]
+src.git = "https://github.com/ourgal/tmux-continuum"
+fetch.github = "ourgal/tmux-continuum"
+
+[tmux-edgelord]
+src.git = "https://github.com/ourgal/tmux-edgelord"
+fetch.github = "ourgal/tmux-edgelord"
+
+[tmux-fzf-url]
+src.git = "https://github.com/wfxr/tmux-fzf-url"
+fetch.github = "wfxr/tmux-fzf-url"
+
+[tmux-kanagawa]
+src.git = "https://github.com/Nybkox/tmux-kanagawa"
+fetch.github = "Nybkox/tmux-kanagawa"
+
+[tmux-loadavg]
+src.git = "https://github.com/jamesoff/tmux-loadavg"
+fetch.github = "jamesoff/tmux-loadavg"
+
+[tmux-pane-focus]
+src.git = "https://github.com/graemedavidson/tmux-pane-focus"
+fetch.github = "graemedavidson/tmux-pane-focus"
+
+[tmux-power-zoom]
+src.git = "https://github.com/jaclu/tmux-power-zoom"
+fetch.github = "jaclu/tmux-power-zoom"
+
+[tmux-tea]
+src.git = "https://github.com/ourgal/tmux-tea"
+fetch.github = "ourgal/tmux-tea"
+
+[tmux-tome]
+src.git = "https://github.com/laktak/tome"
+fetch.github = "laktak/tome"
+
+[tmux-transient-status]
+src.git = "https://github.com/TheSast/tmux-transient-status"
+fetch.github = "TheSast/tmux-transient-status"
+
+[tmux-which-key]
+src.git = "https://github.com/ourgal/tmux-which-key"
+fetch.github = "ourgal/tmux-which-key"
+
+[toolong]
+src.github = "Textualize/toolong"
+fetch.github = "Textualize/toolong"
+
+[toru]
+src.github = "sweetbbak/toru"
+fetch.github = "sweetbbak/toru"
+
+[treegen]
+src.github = "bilbilak/treegen"
+fetch.github = "bilbilak/treegen"
+
+[tuime]
+src.github = "nate-sys/tuime"
+fetch.github = "nate-sys/tuime"
+
+[whitespace-format]
+src.github = "DavidPal/whitespace-format"
+fetch.github = "DavidPal/whitespace-format"
+
+[wiper]
+src.github = "ikebastuz/wiper"
+fetch.github = "ikebastuz/wiper"
+
+[wush]
+src.github = "coder/wush"
+fetch.github = "coder/wush"
+
+[ytui]
+src.github = "Banh-Canh/ytui"
+fetch.github = "Banh-Canh/ytui"
+
+[zfind]
+src.github = "laktak/zfind"
+fetch.github = "laktak/zfind"
+
+[miru]
+src.github = "ThaUnknown/miru"
+fetch.github = "ThaUnknown/miru"
+
+[pot]
+src.github = "pot-app/pot-desktop"
+fetch.github = "pot-app/pot-desktop"
+
+[numara]
+src.github = "bornova/numara-calculator"
+fetch.github = "bornova/numara-calculator"

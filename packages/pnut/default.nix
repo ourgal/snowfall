@@ -2,17 +2,23 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "pnut";
-  version = "unstable-2024-09-13";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit pname;
+  version = "unstable-${source.date}";
 
   src = fetchFromGitHub {
-    owner = "udem-dlteam";
-    repo = "pnut";
-    rev = "96f42c91bfa9f2186cfc56220b19d87727b334dd";
-    hash = "sha256-YreKS8ESctkwBhQzQuFU1PHxQyqu6y8h/plr4biQaL4=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   preBuild = ''

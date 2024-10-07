@@ -2,17 +2,23 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
+  namespace,
 }:
-
-buildGoModule rec {
+let
   pname = "git-spend";
-  version = "1.2.1";
+  source = lib.${namespace}.sources.${pname};
+in
+buildGoModule {
+  inherit pname;
+  inherit (source) version;
 
   src = fetchFromGitHub {
-    owner = "Goutte";
-    repo = "git-spend";
-    rev = version;
-    hash = "sha256-4bR5CVM1zTSdLiHyigYgmvpO1VDM6rteeBHuADXq2pk=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
     fetchSubmodules = true;
   };
 

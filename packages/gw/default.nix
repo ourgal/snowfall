@@ -8,17 +8,23 @@
   zlib,
   stdenv,
   darwin,
+  namespace,
 }:
-
-rustPlatform.buildRustPackage rec {
+let
   pname = "gw";
-  version = "0.3.2";
+  source = lib.${namespace}.sources.${pname};
+in
+rustPlatform.buildRustPackage rec {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "daniel7grant";
-    repo = "gw";
-    rev = "v${version}";
-    hash = "sha256-oexh8/iPVdJoU5PzEypho4+LSsAkHHByz0ZNCWYtHNA=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   cargoHash = "sha256-p4E3c7vBqSb4d7Ki9jLA1mI8u7rHyFA78T30oSgq+Uc=";

@@ -5,17 +5,23 @@
   makeWrapper,
   git,
   fzf,
+  namespace,
 }:
-
-stdenvNoCC.mkDerivation (finalAttrs: {
+let
   pname = "git-toolbelt";
-  version = "1.9.3";
+  source = lib.${namespace}.sources.${pname};
+in
+stdenvNoCC.mkDerivation (finalAttrs: {
+  inherit pname;
+  version = lib.substring 1 (-1) source.version;
 
   src = fetchFromGitHub {
-    owner = "nvie";
-    repo = "git-toolbelt";
-    rev = "v${finalAttrs.version}";
-    hash = "sha256-ANqv/iIDUyy2G4pKSw+2sutMEA0WhPN3OKfPTm5lwDU=";
+    inherit (source.src)
+      owner
+      repo
+      rev
+      sha256
+      ;
   };
 
   nativeBuildInputs = [ makeWrapper ];
