@@ -17,6 +17,7 @@ args.module (
         "asciinema"
         "choose"
         "circumflex"
+        "cmd-wrapped"
         "didyoumean"
         "doge"
         "fpp"
