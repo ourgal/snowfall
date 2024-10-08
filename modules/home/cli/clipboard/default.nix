@@ -3,11 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    enable = "clipmenu";
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "clipboard-jh"
+      "yank"
       # keep-sorted end
     ];
   }

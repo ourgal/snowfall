@@ -10,12 +10,14 @@ args.module (
       "docker-compose"
       "lazydocker"
       "oxker"
+      "podman"
+      "podman-compose"
       # keep-sorted end
     ];
     progs = {
       fish = {
         shellAbbrs = {
-          ad = "lazydocker";
+          zd = "lazydocker";
         };
       };
     };

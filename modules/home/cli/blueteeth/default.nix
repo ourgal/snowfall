@@ -3,11 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = "bluetuith";
+    myPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "blendr"
+      "bluetui"
       # keep-sorted end
     ];
   }

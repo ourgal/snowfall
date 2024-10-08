@@ -5,9 +5,8 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "carapace"
+      "cod"
       # keep-sorted end
     ];
   }

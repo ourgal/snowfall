@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "lobtui";
     nixPkgs = [
       # keep-sorted start
       "amfora"
@@ -10,5 +11,6 @@ args.module (
       "w3m"
       # keep-sorted end
     ];
+    enable = "brotab";
   }
 )

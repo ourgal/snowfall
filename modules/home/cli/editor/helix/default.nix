@@ -12,8 +12,8 @@ args.module (
         cfgHome
         switch
         ;
-      tmuxEnabled = config.${namespace}.cli.shell.tmux.enable;
-      zellijEnabled = config.${namespace}.cli.shell.zellij.enable;
+      tmuxEnabled = config.${namespace}.cli.multiplexer.tmux.enable;
+      zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
       helix-tmux = "${pkgs.${namespace}.helix-tmux}/bin/helix-tmux";
       helix-zellij = "${pkgs.${namespace}.helix-zellij}/bin/helix-zellij";
       tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";

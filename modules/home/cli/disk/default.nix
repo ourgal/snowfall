@@ -3,11 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    enable = "udiskie";
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "compsize"
+      "ventoy-bin-full"
       # keep-sorted end
     ];
   }

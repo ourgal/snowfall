@@ -10,7 +10,9 @@ args.module (
       "graphviz"
       "imagemagick"
       "menyoki"
+      "qrscan"
       "termshot"
+      "vhs"
       "viu"
       "yeetgif"
       # keep-sorted end

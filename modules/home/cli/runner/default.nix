@@ -3,12 +3,13 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = "mprocs";
+    myPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "machma"
+      "sake"
       # keep-sorted end
     ];
+    enable = "pueue";
   }
 )

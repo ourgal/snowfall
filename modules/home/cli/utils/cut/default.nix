@@ -3,11 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "choose"
+      "hck"
       # keep-sorted end
     ];
   }
