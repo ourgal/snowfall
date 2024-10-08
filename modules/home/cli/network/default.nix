@@ -20,6 +20,7 @@ args.module (
       "nali"
       "q"
       "tcping-go"
+      "wget"
       "whois"
       "wirelesstools"
       # keep-sorted end

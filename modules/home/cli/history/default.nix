@@ -3,12 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "cmd-wrapped"
+      "tsukae"
       # keep-sorted end
     ];
+    enable = "atuin";
   }
 )

@@ -3,11 +3,9 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    myPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "tp"
       # keep-sorted end
     ];
   }

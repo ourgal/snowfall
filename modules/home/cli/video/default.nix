@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "asciinema"
       "ffmpeg-full"
       "mediainfo"
       # keep-sorted end

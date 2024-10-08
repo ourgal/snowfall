@@ -3,12 +3,14 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    myPkgs = "play";
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "ruplacer"
+      "sad"
+      "sd"
       # keep-sorted end
     ];
+    enable = "serpl";
   }
 )

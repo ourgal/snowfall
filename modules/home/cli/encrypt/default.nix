@@ -21,6 +21,7 @@ args.module (
       # keep-sorted start
       "gopass"
       "gpg"
+      "rbw"
       "sops"
       # keep-sorted end
     ];

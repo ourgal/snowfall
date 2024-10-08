@@ -3,12 +3,13 @@ args.module (
   args
   // {
     path = ./.;
-    enable = [
+    nixPkgs = [
       # keep-sorted start
-      "fish"
-      "nushell"
-      "zsh"
+      "moar"
+      "most"
+      "peep"
       # keep-sorted end
     ];
+    progs = "lesspipe";
   }
 )
