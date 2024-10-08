@@ -71,6 +71,10 @@
       url = "github:berberman/nvfetcher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvchad4nix = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -145,6 +149,7 @@
         catppuccin.homeManagerModules.catppuccin
         nixvim.homeManagerModules.nixvim
         nyaa.homeManagerModule
+        nvchad4nix.homeManagerModule
       ];
 
       homes.users = homeSpecialArgsFinal;
