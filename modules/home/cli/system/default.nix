@@ -7,7 +7,7 @@ args.module (
       # keep-sorted start
       "charm-freeze"
       "geekbench"
-      "handlr"
+      "handlr-regex"
       "kmon"
       "pinentry-all"
       "screenkey"
