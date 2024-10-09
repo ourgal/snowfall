@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage {
       ;
   };
 
-  cargoHash = "sha256-CXTP8JltZEwsa9v7uI1Nr0+fCVyt+Hai0crCUowTb6A=";
+  cargoHash = "sha256-6klrz3qNmIHRKnA0pDAqdOK8f6sdTw5EbbO7tHwjxAc=";
 
   checkFlags = [ "--skip=citations" ];
 
