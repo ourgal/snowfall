@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "gifski"
+      "memento"
       "mpvc"
       "peek"
       "stremio"
