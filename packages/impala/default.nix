@@ -1,25 +1,15 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "impala";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-IMvlGAD9DB00luu9F4UKxwSYt0sV+IU8Pb7r10VtyYg=";
 

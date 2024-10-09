@@ -1,25 +1,15 @@
 {
   lib,
-  fetchFromGitHub,
   python3,
   namespace,
+  pkgs,
 }:
 let
   pname = "rexi";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   format = "pyproject";
 

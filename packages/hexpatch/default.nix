@@ -1,28 +1,18 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   cmake,
   python3,
   namespace,
+  pkgs,
 }:
 let
   pname = "hexpatch";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-6IaSKVPEen4aI977rv8jv/M8FCe7ABr7qSHgisWieVM=";
 

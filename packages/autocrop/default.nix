@@ -1,25 +1,15 @@
 {
   buildGoModule,
   lib,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "autocrop";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   vendorHash = "sha256-qX4sPNq3qjPuwFkGd5Hxb4udLF9GRVfAWTF6M26QRqk=";
 

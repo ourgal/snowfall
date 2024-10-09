@@ -1,26 +1,16 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
   installShellFiles,
   namespace,
+  pkgs,
 }:
 let
   pname = "gitty";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   vendorHash = "sha256-jaJwsFhZzUEz8pG8frkOviNdqgPvvJBFLBsr7BVHNlY=";
 

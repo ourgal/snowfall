@@ -1,22 +1,10 @@
-{
-  pkgs,
-  lib,
-  namespace,
-}:
+{ pkgs, namespace }:
 let
   pluginName = "tmux2k";
-  source = lib.${namespace}.sources.${pluginName};
+  source = pkgs.${namespace}.sources.${pluginName};
 in
 pkgs.tmuxPlugins.mkTmuxPlugin {
   inherit pluginName;
-  version = "unstable-${source.date}";
+  inherit (source) version src;
   rtpFilePath = "2k.tmux";
-  src = pkgs.fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 }

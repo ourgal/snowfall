@@ -1,7 +1,6 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   namespace,
 }:
 let
@@ -9,17 +8,7 @@ let
   source = lib.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-G0mAcB80D7/s9kwkNhJkGLkVYpXMwqpLq/T9gLuYj4E=";
 

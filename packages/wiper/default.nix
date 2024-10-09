@@ -1,27 +1,17 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   stdenv,
   darwin,
   namespace,
+  pkgs,
 }:
 let
   pname = "wiper";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-gYWTv0AXOmpx9Nc8akBMVWkESI0AtnGgvfH9hQZ0peo=";
 

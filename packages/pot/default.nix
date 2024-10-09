@@ -3,12 +3,13 @@
   namespace,
   fetchurl,
   appimageTools,
+  pkgs,
 }:
 
 let
   pname = "pot";
   pnameCap = lib.${namespace}.capitalize pname;
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
   inherit (source) version;
 
   src = fetchurl {

@@ -1,25 +1,15 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "serpl";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-8XYEZQfoizVmOuh0hymzMj2UDiXNkSeHqBAWOqaMY84=";
 

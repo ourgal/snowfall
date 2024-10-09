@@ -1,34 +1,16 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   pkgs,
   namespace,
 }:
 let
-  quartz = pkgs.fetchFromGitHub {
-    inherit (lib.${namespace}.sources.quartz.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  quartz = pkgs.${namespace}.sources.quartz.src;
   pname = "blobdrop";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   nativeBuildInputs = with pkgs; [
     cmake

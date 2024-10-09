@@ -1,30 +1,20 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   openssl,
   stdenv,
   darwin,
   alsa-lib,
   namespace,
+  pkgs,
 }:
 let
   pname = "code-radio-cli";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   cargoHash = "sha256-W2c63beCqEIB0SxrpC0ptxsoKrHSt+TId98LcX7RNBg=";
 

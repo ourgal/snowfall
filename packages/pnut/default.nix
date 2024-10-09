@@ -1,25 +1,15 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "pnut";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   preBuild = ''
     substituteInPlace Makefile --replace-fail /usr/local/bin $out/bin

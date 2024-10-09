@@ -1,25 +1,15 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "git-issue";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   makeFlags = [ "PREFIX=$(out)" ];
 

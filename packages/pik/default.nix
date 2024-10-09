@@ -1,25 +1,15 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "pik";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule {
-  pname = "pik";
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   vendorHash = "sha256-8UprJXRLFO3giWAm8k+vbNz7HPYwKW7cD36qc3hEkzE=";
 

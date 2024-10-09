@@ -1,29 +1,19 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   openssl,
   stdenv,
   darwin,
   namespace,
+  pkgs,
 }:
 let
   pname = "rust-kanban";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage rec {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-5AXVl2yqpVoMlK2WP0mZL6vn+Xy6fdVi7oCOh8LaaFE=";
 

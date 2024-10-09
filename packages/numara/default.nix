@@ -3,13 +3,14 @@
   namespace,
   fetchurl,
   appimageTools,
+  pkgs,
 }:
 
 let
   pname = "numara";
   pnameCap = lib.${namespace}.capitalize pname;
-  source = lib.${namespace}.sources.${pname};
-  version = lib.substring 1 (-1) source.version;
+  source = pkgs.${namespace}.sources.${pname};
+  inherit (source) version;
 
   src = fetchurl {
     url = "https://github.com/bornova/numara-calculator/releases/download/v${version}/Numara-${version}-x86_64.AppImage";

@@ -1,7 +1,6 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   libgit2,
   openssl,
@@ -9,23 +8,14 @@
   stdenv,
   darwin,
   namespace,
+  pkgs,
 }:
 let
   pname = "koji";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage rec {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-owppYDt0YdWoDvfmzVfiIPjLgTAT9eTI1LpRr4Y3XQA=";
 

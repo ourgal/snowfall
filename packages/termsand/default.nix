@@ -1,25 +1,15 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "termsand";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-E7EjEw8AmxqjbLrKuoRnVhiFPPDKrKGJiS3lfE9Psdk=";
 

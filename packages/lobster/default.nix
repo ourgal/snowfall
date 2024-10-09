@@ -12,25 +12,15 @@
   makeWrapper,
   mpv,
   openssl,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "lobster";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenvNoCC.mkDerivation {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 

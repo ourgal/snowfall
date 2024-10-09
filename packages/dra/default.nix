@@ -1,7 +1,6 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   bzip2,
   xz,
@@ -9,23 +8,14 @@
   stdenv,
   darwin,
   namespace,
+  pkgs,
 }:
 let
   pname = "dra";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage rec {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-RJXAy+OSfZXVDbCSSbHuL/87tmkUoUJfJ6bK5XvXN5A=";
 

@@ -3,14 +3,14 @@
   stdenv,
   fetchzip,
   namespace,
+  pkgs,
 }:
 let
   pname = "serie";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation rec {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
+  inherit (source) pname version;
 
   src = fetchzip {
     url = "https://github.com/lusingander/serie/releases/download/v${version}/serie-${version}-x86_64-unknown-linux-gnu.tar.gz";

@@ -1,7 +1,6 @@
 {
   lib,
   stdenvNoCC,
-  fetchFromGitHub,
   makeWrapper,
   frece,
   fzf,
@@ -14,20 +13,10 @@
 }:
 let
   pname = "adl";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenvNoCC.mkDerivation rec {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   nativeBuildInputs = [ makeWrapper ];
 

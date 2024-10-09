@@ -1,16 +1,15 @@
 {
   fetchzip,
   stdenv,
-  lib,
   namespace,
+  pkgs,
 }:
 let
   name = "sbsrf-rime-data";
-  source = lib.${namespace}.sources.${name};
+  source = pkgs.${namespace}.sources.${name};
 in
 stdenv.mkDerivation rec {
-  inherit name;
-  inherit (source) version;
+  inherit (source) pname version;
 
   src = fetchzip {
     url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";

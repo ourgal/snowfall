@@ -1,7 +1,6 @@
 {
   lib,
   rustPlatform,
-  fetchFromGitHub,
   pkg-config,
   openssl,
   sqlite,
@@ -10,23 +9,14 @@
   namespace,
   bzip2,
   zstd,
+  pkgs,
 }:
 let
   pname = "manga-tui";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   cargoHash = "sha256-yf0hISz/jHtrO1clTSIKfxFiwI+W0Mu3mY+XW6+ynJU=";
 

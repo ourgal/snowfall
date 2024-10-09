@@ -1,25 +1,15 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "git-ink";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   installPhase = ''
     runHook preInstall

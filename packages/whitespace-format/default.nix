@@ -1,26 +1,16 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "whitespace-format";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
-  inherit (source) version;
+  inherit (source) pname version src;
   pyproject = true;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 
   nativeBuildInputs = [ python3.pkgs.poetry-core ];
 

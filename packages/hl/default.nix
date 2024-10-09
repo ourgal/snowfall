@@ -3,14 +3,14 @@
   fetchzip,
   stdenv,
   namespace,
+  pkgs,
 }:
 let
   pname = "hl";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation rec {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
+  inherit (source) pname version;
 
   src = fetchzip {
     url = "https://github.com/pamburus/hl/releases/download/v${version}/hl-linux-x86_64-gnu.tar.gz";
