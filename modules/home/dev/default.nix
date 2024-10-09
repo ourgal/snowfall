@@ -9,6 +9,7 @@ args.module (
       path = ./.;
       myPkgs = [
         # keep-sorted start
+        "envset"
         "treegen"
         "whitespace-format"
         # keep-sorted end
