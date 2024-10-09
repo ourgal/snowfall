@@ -799,6 +799,17 @@
       sha256 = "sha256-yyYxRJ+o+Z5z7PmjcFCsahRXZ9JHFmGmituzGTxY6ec=";
     };
   };
+  hl = {
+    pname = "hl";
+    version = "v0.29.8";
+    src = fetchFromGitHub {
+      owner = "pamburus";
+      repo = "hl";
+      rev = "v0.29.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-YL9DWVArUf+ZdldTyTY4Y2rDMofwZJ8o6PsVECkr2q0=";
+    };
+  };
   impala = {
     pname = "impala";
     version = "v0.2.3";
