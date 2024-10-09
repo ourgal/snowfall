@@ -1305,6 +1305,17 @@
       sha256 = "sha256-1sCc5ChDTYEo+WYsyYvmxJJ/JXtd/uPtUeKBjYjXcHU=";
     };
   };
+  rustywatch = {
+    pname = "rustywatch";
+    version = "v0.2.11";
+    src = fetchFromGitHub {
+      owner = "ak9024";
+      repo = "rustywatch";
+      rev = "v0.2.11";
+      fetchSubmodules = false;
+      sha256 = "sha256-UzMLSPBH/ElpEWnPV2zD1+2Pt6pO4cG7CmgJvy1MawM=";
+    };
+  };
   s = {
     pname = "s";
     version = "v0.7.1";
@@ -1649,15 +1660,15 @@
   };
   "tmux.fish" = {
     pname = "tmux.fish";
-    version = "69b07ff43a97fb7b22192c1b5264217078842ad0";
+    version = "fa143c43f30e49c69fec908330f378cdc7152ab2";
     src = fetchFromGitHub {
       owner = "budimanjojo";
       repo = "tmux.fish";
-      rev = "69b07ff43a97fb7b22192c1b5264217078842ad0";
+      rev = "fa143c43f30e49c69fec908330f378cdc7152ab2";
       fetchSubmodules = false;
-      sha256 = "sha256-6NXZKeYefpnSOBB87zQ0xQxiTRt1TGo8DzZIeytR2cM=";
+      sha256 = "sha256-rIMMU7gLNYVgFH3/ZtDCqxLx2TBYgJ29S7YcHO25AIg=";
     };
-    date = "2024-08-31";
+    date = "2024-10-09";
   };
   tmux2k = {
     pname = "tmux2k";

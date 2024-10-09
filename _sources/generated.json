@@ -2401,6 +2401,27 @@
         },
         "version": "v0.10.4"
     },
+    "rustywatch": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "rustywatch",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ak9024",
+            "repo": "rustywatch",
+            "rev": "v0.2.11",
+            "sha256": "sha256-UzMLSPBH/ElpEWnPV2zD1+2Pt6pO4cG7CmgJvy1MawM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.2.11"
+    },
     "s": {
         "cargoLocks": null,
         "date": null,
@@ -3021,7 +3042,7 @@
     },
     "tmux.fish": {
         "cargoLocks": null,
-        "date": "2024-08-31",
+        "date": "2024-10-09",
         "extract": null,
         "name": "tmux.fish",
         "passthru": null,
@@ -3033,12 +3054,12 @@
             "name": null,
             "owner": "budimanjojo",
             "repo": "tmux.fish",
-            "rev": "69b07ff43a97fb7b22192c1b5264217078842ad0",
-            "sha256": "sha256-6NXZKeYefpnSOBB87zQ0xQxiTRt1TGo8DzZIeytR2cM=",
+            "rev": "fa143c43f30e49c69fec908330f378cdc7152ab2",
+            "sha256": "sha256-rIMMU7gLNYVgFH3/ZtDCqxLx2TBYgJ29S7YcHO25AIg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "69b07ff43a97fb7b22192c1b5264217078842ad0"
+        "version": "fa143c43f30e49c69fec908330f378cdc7152ab2"
     },
     "tmux2k": {
         "cargoLocks": null,
