@@ -650,3 +650,7 @@ fetch.github = "ak9024/rustywatch"
 [images-upload-cli]
 src.github = "DeadNews/images-upload-cli"
 fetch.github = "DeadNews/images-upload-cli"
+
+[envset]
+src.github = "schpet/envset"
+fetch.github = "schpet/envset"
