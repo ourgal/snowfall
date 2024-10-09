@@ -592,6 +592,27 @@
         },
         "version": "v3.0.0"
     },
+    "envset": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "envset",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "schpet",
+            "repo": "envset",
+            "rev": "v0.1.17",
+            "sha256": "sha256-d2cStBjI2heQyP0cODRYQPvZJ4frFw7w5lsSdyvi5y8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.17"
+    },
     "f": {
         "cargoLocks": null,
         "date": "2021-05-09",
