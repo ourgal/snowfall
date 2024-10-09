@@ -9,11 +9,6 @@ args.module (
       "wush"
       # keep-sorted end
     ];
-    pyPkgs = [
-      # keep-sorted start
-      "qrcode"
-      # keep-sorted end
-    ];
     nixPkgs = [
       # keep-sorted start
       "croc"
@@ -24,7 +19,6 @@ args.module (
       "nfs-utils"
       "pcp"
       "portal"
-      "qrcp"
       "rsync"
       "sshfs"
       "tmate"

@@ -10,7 +10,6 @@ args.module (
       "graphviz"
       "imagemagick"
       "menyoki"
-      "qrscan"
       "termshot"
       "vhs"
       "viu"
