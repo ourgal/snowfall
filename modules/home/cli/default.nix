@@ -37,6 +37,7 @@ args.module (
       "image"
       "mail"
       "math"
+      "meme"
       "multiplexer"
       "network"
       "nix"
