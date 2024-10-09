@@ -321,6 +321,17 @@
       sha256 = "sha256-0xyVski+WTfTdYfNUBMKX4fnorGSsbi95WMR8ocSU2Q=";
     };
   };
+  envset = {
+    pname = "envset";
+    version = "v0.1.17";
+    src = fetchFromGitHub {
+      owner = "schpet";
+      repo = "envset";
+      rev = "v0.1.17";
+      fetchSubmodules = false;
+      sha256 = "sha256-d2cStBjI2heQyP0cODRYQPvZJ4frFw7w5lsSdyvi5y8=";
+    };
+  };
   f = {
     pname = "f";
     version = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
