@@ -42,6 +42,7 @@ args.module (
         audio-pitch-correction = "yes";
         hwdec = "auto";
         audio-device = "alsa";
+        input-ipc-server = "/tmp/mpvsocket";
       };
       yt_subs_config = {
         osd-bar-align-y = 0.92;
