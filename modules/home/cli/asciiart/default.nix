@@ -13,6 +13,7 @@ args.module (
       "figlet"
       "figurine"
       "genact"
+      "krabby"
       "lolcat"
       "neo"
       "nyancat"
