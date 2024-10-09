@@ -1,26 +1,22 @@
 {
   lib,
   stdenv,
-  fetchFromSourcehut,
   luajit,
+  pkgs,
+  namespace,
 }:
-
-stdenv.mkDerivation {
+let
   pname = "antifennel";
-  version = "unstable";
-
-  src = fetchFromSourcehut {
-    owner = "~technomancy";
-    repo = "antifennel";
-    rev = "7cf2a2ec4e2d92e82a396e5b1208454eac0b98ed";
-    hash = "sha256-kqKjBk5zzvnA5QcSqegrZULmrDol4eT7Roqxi2TC/8c=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit (source) pname version src;
 
   buildInputs = [ luajit ];
 
   installPhase = ''
     runHook preInstall
-    install -D ./antifennel $out/bin/antifennel
+    install -D -m755 antifennel $out/bin/antifennel
     runHook postInstall
   '';
 
