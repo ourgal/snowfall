@@ -1,26 +1,17 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "nix-auto-follow";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
+  inherit (source) pname src;
   version = "0.1.0";
   pyproject = true;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 
   nativeBuildInputs = [
     python3.pkgs.setuptools

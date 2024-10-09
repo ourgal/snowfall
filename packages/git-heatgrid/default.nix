@@ -1,12 +1,12 @@
 {
   writeShellApplication,
   lib,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   name = "git-heatgrid";
-  inherit (lib.${namespace}.sources.${name}) src;
+  inherit (pkgs.${namespace}.sources.${name}) src;
 in
 writeShellApplication rec {
   inherit name;
@@ -20,15 +20,5 @@ writeShellApplication rec {
 
   runtimeInputs = [ ];
 
-  text = builtins.readFile (
-    fetchFromGitHub {
-      inherit (src)
-        owner
-        repo
-        rev
-        sha256
-        ;
-    }
-    + /git-heatgrid
-  );
+  text = builtins.readFile (src + /git-heatgrid);
 }

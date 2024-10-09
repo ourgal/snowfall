@@ -3,14 +3,14 @@
   stdenv,
   fetchzip,
   namespace,
+  pkgs,
 }:
 let
   pname = "tp";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation rec {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
+  inherit (source) pname version;
 
   src = fetchzip {
     url = "https://github.com/minefuto/tp/releases/download/v${version}/tp_Linux_x86_64.tar.gz";

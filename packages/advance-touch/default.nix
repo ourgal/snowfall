@@ -1,22 +1,16 @@
 {
   lib,
   python3,
-  fetchPypi,
   namespace,
+  pkgs,
 }:
 let
   pname = "advance-touch";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
-python3.pkgs.buildPythonApplication rec {
-  inherit pname;
-  inherit (source) version;
+python3.pkgs.buildPythonApplication {
+  inherit (source) pname version src;
   pyproject = true;
-
-  src = fetchPypi {
-    inherit pname version;
-    inherit (source.src) sha256;
-  };
 
   nativeBuildInputs = [
     python3.pkgs.setuptools

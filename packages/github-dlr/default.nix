@@ -1,21 +1,15 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
-  fetchPypi,
   namespace,
+  pkgs,
 }:
 
 let
   argparse = python3.pkgs.buildPythonApplication rec {
     pname = "argparse";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      inherit pname version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     nativeBuildInputs = [
       python3.pkgs.setuptools
@@ -33,21 +27,11 @@ let
     };
   };
   pname = "github-dlr";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
-  inherit (source) version;
+  inherit (source) pname version src;
   pyproject = true;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 
   nativeBuildInputs = with python3.pkgs; [
     poetry-core

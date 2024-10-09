@@ -1,25 +1,15 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "flatpak-compose";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   vendorHash = "sha256-1TyFfRL6HTOa+M4CEcHeiReRcPlPNKMneq2AVXS0kX0=";
 

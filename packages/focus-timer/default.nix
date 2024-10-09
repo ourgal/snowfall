@@ -1,27 +1,17 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
   alsa-lib,
   pkg-config,
   namespace,
+  pkgs,
 }:
 let
   pname = "focus";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule rec {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   vendorHash = "sha256-wWTDo4zbvQjosI+fsBwEq5wKhJX2gw9VAbih1urRTO8=";
 

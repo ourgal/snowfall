@@ -58,6 +58,8 @@ rec {
 
   sources = jsonFile ../../_sources/generated.json;
 
+  _sources = import ../../_sources/generated.nix;
+
   mkModuleCfg =
     root: path: prefix:
     let

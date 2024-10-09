@@ -1,28 +1,18 @@
 {
   lib,
   stdenvNoCC,
-  fetchFromGitHub,
   makeWrapper,
   git,
   fzf,
   namespace,
+  pkgs,
 }:
 let
   pname = "git-toolbelt";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 

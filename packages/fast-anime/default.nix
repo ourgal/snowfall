@@ -1,26 +1,16 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "fast-anime";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
-  version = "2.6.6";
+  inherit (source) pname src version;
   pyproject = true;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 
   nativeBuildInputs = with python3.pkgs; [
     poetry-core

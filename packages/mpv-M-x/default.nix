@@ -1,25 +1,10 @@
-{
-  lib,
-  fetchFromGitHub,
-  pkgs,
-  namespace,
-}:
+{ pkgs, namespace }:
 let
   pname = "mpv-M-x";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 pkgs.${namespace}.mkMpvPlugin {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   scriptPath = "M-x.lua";
   extraScripts = [ "script-modules/extended-menu.lua" ];

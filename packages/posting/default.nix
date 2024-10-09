@@ -7,17 +7,13 @@
   rustPlatform,
   rustc,
   namespace,
+  pkgs,
 }:
 let
   textual = python3.pkgs.buildPythonApplication rec {
     pname = "textual";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      inherit pname version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
 
@@ -39,14 +35,8 @@ let
   };
   textual-autocomplete = python3.pkgs.buildPythonApplication rec {
     pname = "textual-autocomplete";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      pname = "textual_autocomplete";
-      inherit version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
 
@@ -59,13 +49,8 @@ let
   };
   pydantic = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      inherit pname version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     nativeBuildInputs = with python3.pkgs; [
       hatch-fancy-pypi-readme
@@ -89,14 +74,8 @@ let
   };
   pydantic-settings = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic-settings";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      pname = "pydantic_settings";
-      inherit version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     nativeBuildInputs = [ python3.pkgs.hatchling ];
 
@@ -114,14 +93,8 @@ let
   };
   pydantic-core = python3.pkgs.buildPythonApplication rec {
     pname = "pydantic-core";
-    inherit (lib.${namespace}.sources.${pname}) version;
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
     pyproject = true;
-
-    src = fetchPypi {
-      pname = "pydantic_core";
-      inherit version;
-      inherit (lib.${namespace}.sources.${pname}.src) sha256;
-    };
 
     cargoDeps = rustPlatform.fetchCargoTarball {
       inherit src;
@@ -142,21 +115,11 @@ let
     pythonImportsCheck = [ "pydantic_core" ];
   };
   pname = "posting";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit pname;
-  inherit (source) version;
+  inherit (source) pname version src;
   pyproject = true;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
 
   nativeBuildInputs = with python3.pkgs; [
     hatchling

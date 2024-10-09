@@ -1,25 +1,10 @@
-{
-  lib,
-  pkgs,
-  fetchFromGitHub,
-  namespace,
-}:
+{ pkgs, namespace }:
 let
   pname = "mpv-smartskip";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 pkgs.${namespace}.mkMpvPlugin {
-  inherit pname;
-  version = "unstable-${source.date}";
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   scriptPath = "scripts/SmartSkip.lua";
 }

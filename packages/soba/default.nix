@@ -1,25 +1,15 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "soba";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 buildGoModule rec {
-  inherit pname;
-  inherit (source) version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname version src;
 
   vendorHash = "sha256-AFpuMuRb8abSjFb7Yp9F6RZM5TjD2Ik7lsoYb7JKejg=";
 

@@ -1,25 +1,15 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
   namespace,
+  pkgs,
 }:
 let
   pname = "fzf-kill";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit pname;
-  version = lib.substring 1 (-1) source.version;
-
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
-  };
+  inherit (source) pname src version;
 
   dontBuild = true;
 
