@@ -46,6 +46,7 @@ args.module (
       "prompt"
       "qrcode"
       "reader"
+      "recording"
       "rss"
       "runner"
       "search"

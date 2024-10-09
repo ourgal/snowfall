@@ -11,7 +11,6 @@ args.module (
       "imagemagick"
       "menyoki"
       "termshot"
-      "vhs"
       "viu"
       "yeetgif"
       # keep-sorted end
