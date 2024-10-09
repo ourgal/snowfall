@@ -56,6 +56,26 @@
         },
         "version": "c7c3b79198e66695e0bbbc576f9d9b788616957f"
     },
+    "antifennel": {
+        "cargoLocks": null,
+        "date": "2024-09-25",
+        "extract": null,
+        "name": "antifennel",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "a135f016414517ecb624bad26b39ed56d256beaa",
+            "sha256": "sha256-XynKKDyykyPM4z2ZLp9Oy8KFlEZG2iHXKMkajaS/DaE=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://git.sr.ht/~technomancy/antifennel"
+        },
+        "version": "a135f016414517ecb624bad26b39ed56d256beaa"
+    },
     "argparse": {
         "cargoLocks": null,
         "date": null,
@@ -388,7 +408,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-08",
+        "date": "2024-10-09",
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -400,12 +420,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d",
-            "sha256": "sha256-ZZNJmC2uT6CR575uk6B451jfzJTCnngQgXCd1ZiAb60=",
+            "rev": "2ccc8b057f03f474f3337dc34c33d7ab39837327",
+            "sha256": "sha256-fCHW5l6Bt4GKaJrllXDzI26vUBKVFXlwrixScfoFtLY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d"
+        "version": "2ccc8b057f03f474f3337dc34c33d7ab39837327"
     },
     "dblab": {
         "cargoLocks": null,

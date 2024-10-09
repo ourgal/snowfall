@@ -33,6 +33,20 @@
     };
     date = "2023-10-17";
   };
+  antifennel = {
+    pname = "antifennel";
+    version = "a135f016414517ecb624bad26b39ed56d256beaa";
+    src = fetchgit {
+      url = "https://git.sr.ht/~technomancy/antifennel";
+      rev = "a135f016414517ecb624bad26b39ed56d256beaa";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-XynKKDyykyPM4z2ZLp9Oy8KFlEZG2iHXKMkajaS/DaE=";
+    };
+    date = "2024-09-25";
+  };
   argparse = {
     pname = "argparse";
     version = "1.4.0";
@@ -215,15 +229,15 @@
   };
   curd = {
     pname = "curd";
-    version = "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d";
+    version = "2ccc8b057f03f474f3337dc34c33d7ab39837327";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d";
+      rev = "2ccc8b057f03f474f3337dc34c33d7ab39837327";
       fetchSubmodules = false;
-      sha256 = "sha256-ZZNJmC2uT6CR575uk6B451jfzJTCnngQgXCd1ZiAb60=";
+      sha256 = "sha256-fCHW5l6Bt4GKaJrllXDzI26vUBKVFXlwrixScfoFtLY=";
     };
-    date = "2024-10-08";
+    date = "2024-10-09";
   };
   dblab = {
     pname = "dblab";
