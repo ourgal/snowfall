@@ -1,37 +1,30 @@
 {
   lib,
-  rustPlatform,
-  fetchFromGitHub,
-  pkg-config,
   stdenv,
-  darwin,
+  fetchzip,
   namespace,
 }:
 let
   pname = "serie";
   source = lib.${namespace}.sources.${pname};
 in
-rustPlatform.buildRustPackage {
+stdenv.mkDerivation rec {
   inherit pname;
   version = lib.substring 1 (-1) source.version;
 
-  src = fetchFromGitHub {
-    inherit (source.src)
-      owner
-      repo
-      rev
-      sha256
-      ;
+  src = fetchzip {
+    url = "https://github.com/lusingander/serie/releases/download/v${version}/serie-${version}-x86_64-unknown-linux-gnu.tar.gz";
+    hash = "sha256-Phj+DJbB8x3UOKNFQOfejbdtAj9Fnj+ROAe4imPs/Rw=";
+    stripRoot = false;
   };
 
-  cargoHash = "sha256-HxIyWlFKDRod5nSENZguNYz/vn+E9Ux0K3dMhX7I/zQ=";
+  dontBuild = true;
 
-  nativeBuildInputs = [ pkg-config ];
-
-  buildInputs = lib.optionals stdenv.isDarwin [
-    darwin.apple_sdk.frameworks.AppKit
-    darwin.apple_sdk.frameworks.CoreGraphics
-  ];
+  installPhase = ''
+    runHook preInstall
+    install -m755 -D serie $out/bin/serie
+    runHook postInstall
+  '';
 
   meta = with lib; {
     description = "A rich git commit graph in your terminal, like magic";
