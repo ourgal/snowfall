@@ -13,6 +13,11 @@ args.module (
       "wifi-qr"
       # keep-sorted end
     ];
-    pyPkgs = "qrcode";
+    pyPkgs = [
+      # keep-sorted start
+      "qrcode"
+      "segno"
+      # keep-sorted end
+    ];
   }
 )
