@@ -810,6 +810,17 @@
       sha256 = "sha256-YL9DWVArUf+ZdldTyTY4Y2rDMofwZJ8o6PsVECkr2q0=";
     };
   };
+  images-upload-cli = {
+    pname = "images-upload-cli";
+    version = "v3.0.3";
+    src = fetchFromGitHub {
+      owner = "DeadNews";
+      repo = "images-upload-cli";
+      rev = "v3.0.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-D45+46iKLShHJvcPfKNRqAv4LbxD0D96hAwSEFXSs/o=";
+    };
+  };
   impala = {
     pname = "impala";
     version = "v0.2.3";
