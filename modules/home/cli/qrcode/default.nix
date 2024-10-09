@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "clipqr"
+      "qrcode"
       "qrcp"
       "qrscan"
       "qrtool"
