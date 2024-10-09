@@ -8,6 +8,7 @@ args.module (
       "clipqr"
       "qrcp"
       "qrscan"
+      "qrtool"
       "wifi-qr"
       # keep-sorted end
     ];
