@@ -642,3 +642,7 @@ fetch.github = "minefuto/tp"
 [hl]
 src.github = "pamburus/hl"
 fetch.github = "pamburus/hl"
+
+[rustywatch]
+src.github = "ak9024/rustywatch"
+fetch.github = "ak9024/rustywatch"
