@@ -18,7 +18,6 @@ args.module (
         # keep-sorted start
         "brightnessctl"
         "clash-verge"
-        "clipqr"
         "fuzzel"
         "libnotify"
         "polkit"

@@ -44,6 +44,7 @@ args.module (
       "notification"
       "presentation"
       "prompt"
+      "qrcode"
       "reader"
       "rss"
       "runner"
