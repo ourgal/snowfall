@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "wush";
+    myPkgs = [
+      # keep-sorted start
+      "images-upload-cli"
+      "wush"
+      # keep-sorted end
+    ];
     pyPkgs = [
       # keep-sorted start
       "qrcode"
