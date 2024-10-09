@@ -638,3 +638,7 @@ fetch.docker = "qdtoday/qd"
 [tp]
 src.github = "minefuto/tp"
 fetch.github = "minefuto/tp"
+
+[hl]
+src.github = "pamburus/hl"
+fetch.github = "pamburus/hl"
