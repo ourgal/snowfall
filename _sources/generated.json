@@ -1495,6 +1495,27 @@
         },
         "version": "v0.29.8"
     },
+    "images-upload-cli": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "images-upload-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "DeadNews",
+            "repo": "images-upload-cli",
+            "rev": "v3.0.3",
+            "sha256": "sha256-D45+46iKLShHJvcPfKNRqAv4LbxD0D96hAwSEFXSs/o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v3.0.3"
+    },
     "impala": {
         "cargoLocks": null,
         "date": null,
