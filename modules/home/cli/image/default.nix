@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "exiftool"
+      "gifsicle"
       "graphicsmagick"
       "graphviz"
       "imagemagick"
