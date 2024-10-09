@@ -215,15 +215,15 @@
   };
   curd = {
     pname = "curd";
-    version = "13f5cbef1e3d9cbe7ee1808919e4688f6d021534";
+    version = "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "13f5cbef1e3d9cbe7ee1808919e4688f6d021534";
+      rev = "4444a251c946b6ede40f4b3bd707adb5a5b0cf2d";
       fetchSubmodules = false;
-      sha256 = "sha256-QIhOMbpJgX8lKmX231+CiIibTOx0WpLHvXhYl0S3rPg=";
+      sha256 = "sha256-ZZNJmC2uT6CR575uk6B451jfzJTCnngQgXCd1ZiAb60=";
     };
-    date = "2024-10-07";
+    date = "2024-10-08";
   };
   dblab = {
     pname = "dblab";
@@ -335,13 +335,13 @@
   };
   facad = {
     pname = "facad";
-    version = "v2.11.0";
+    version = "v2.14.0";
     src = fetchFromGitHub {
       owner = "yellow-footed-honeyguide";
       repo = "facad";
-      rev = "v2.11.0";
+      rev = "v2.14.0";
       fetchSubmodules = false;
-      sha256 = "sha256-D2cGCSJ6MAFU/K8jP1NI4mbL1fnlV+0cEK434tZndPo=";
+      sha256 = "sha256-YMqXR4cqA6WqU68q/1c40b4YdL2NE0ODjCVlDE9sHnk=";
     };
   };
   fast-anime = {
@@ -1088,15 +1088,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "af1ef4254b6a1c2ccc0d70b52e52c69df29b0cf2";
+    version = "00bcf82f6ff17208333bf5a93929f7dc6fab154e";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "af1ef4254b6a1c2ccc0d70b52e52c69df29b0cf2";
+      rev = "00bcf82f6ff17208333bf5a93929f7dc6fab154e";
       fetchSubmodules = false;
-      sha256 = "sha256-Ofi9JhocHTwF4J6g1KmzD1vocQK2jCPhZ0E9ucOv/VI=";
+      sha256 = "sha256-JqP9F96+sZmGmUsFpkAODAvagN1HI6xxTyx2vEkyBxc=";
     };
-    date = "2024-10-07";
+    date = "2024-10-08";
   };
   posting = {
     pname = "posting";
@@ -1274,13 +1274,13 @@
   };
   rsv = {
     pname = "rsv";
-    version = "0.4.13";
+    version = "v0.4.14";
     src = fetchFromGitHub {
       owner = "ribbondz";
       repo = "rsv";
-      rev = "0.4.13";
+      rev = "v0.4.14";
       fetchSubmodules = false;
-      sha256 = "sha256-ZsELzabWT63y2V1qLgQdtbdVX1+AIiYxLnQpS6I/bCY=";
+      sha256 = "sha256-LKom7cLu4P95Vg9m/cP/CfWjeU5tcenejgNQhKPs8uM=";
     };
   };
   rust-kanban = {
@@ -1362,25 +1362,25 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "40db0768e8b0b580a8e894fcd95158bd25f28735";
+    version = "b1d39467ef2780266e5fe5ee9b7b49083adf08b3";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "40db0768e8b0b580a8e894fcd95158bd25f28735";
+      rev = "b1d39467ef2780266e5fe5ee9b7b49083adf08b3";
       fetchSubmodules = false;
-      sha256 = "sha256-4wceSbjDvzr2dcaYq5I/KRBTFgvolvnF8sECpKe/UYE=";
+      sha256 = "sha256-SESiYrdPruQg4gV92OTcrKSClh3xyo5wkQ3NdN7e30M=";
     };
-    date = "2024-09-17";
+    date = "2024-10-08";
   };
   soba = {
     pname = "soba";
-    version = "1.2.19";
+    version = "1.2.20";
     src = fetchFromGitHub {
       owner = "jonhadfield";
       repo = "soba";
-      rev = "1.2.19";
+      rev = "1.2.20";
       fetchSubmodules = false;
-      sha256 = "sha256-Jsmn/H4b0hU6vIg5uGS20SHC/SP7ULMfjmrq8MY25Bo=";
+      sha256 = "sha256-DOAdhTEVwjV0uhG2jo35lp66W5znoyM0K36pSkW8clE=";
     };
   };
   sonicradio = {
