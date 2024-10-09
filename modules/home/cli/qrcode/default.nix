@@ -8,6 +8,7 @@ args.module (
       "clipqr"
       "qrcp"
       "qrscan"
+      "wifi-qr"
       # keep-sorted end
     ];
     pyPkgs = "qrcode";
