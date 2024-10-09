@@ -654,3 +654,7 @@ fetch.github = "DeadNews/images-upload-cli"
 [envset]
 src.github = "schpet/envset"
 fetch.github = "schpet/envset"
+
+[antifennel]
+src.git = "https://git.sr.ht/~technomancy/antifennel"
+fetch.git = "https://git.sr.ht/~technomancy/antifennel"
