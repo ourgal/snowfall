@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "mprocs";
+    nixPkgs = [
+      # keep-sorted start
+      "await"
+      "mprocs"
+      # keep-sorted end
+    ];
     myPkgs = [
       # keep-sorted start
       "machma"
