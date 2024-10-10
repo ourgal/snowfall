@@ -12,6 +12,7 @@ args.module (
       "jid"
       "jiq"
       "jnv"
+      "jo"
       "jq"
       "jqp"
       "jsonfmt"
