@@ -8,5 +8,6 @@ args.module (
       "tp"
       # keep-sorted end
     ];
+    nixPkgs = "up";
   }
 )
