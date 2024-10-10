@@ -666,3 +666,7 @@ fetch.github = "oriontvv/convfmt"
 [boilr]
 src.github = "tmrts/boilr"
 fetch.github = "tmrts/boilr"
+
+[eg]
+src.pypi = "eg"
+fetch.pypi = "eg"
