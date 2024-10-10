@@ -682,3 +682,11 @@ fetch.github = "ellisonleao/vl"
 [grip-grab]
 src.github = "alexpasmantier/grip-grab"
 fetch.github = "alexpasmantier/grip-grab"
+
+[hypergrep]
+src.github = "p-ranav/hypergrep"
+fetch.github = "p-ranav/hypergrep"
+
+[gtm]
+src.github = "git-time-metric/gtm"
+fetch.github = "git-time-metric/gtm"
