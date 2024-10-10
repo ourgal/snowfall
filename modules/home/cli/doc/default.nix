@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "archwiki";
+    myPkgs = [
+      # keep-sorted start
+      "archwiki"
+      "eg"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "bk"
