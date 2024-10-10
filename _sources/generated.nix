@@ -1838,6 +1838,17 @@
       sha256 = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
     };
   };
+  vl = {
+    pname = "vl";
+    version = "v0.1.0";
+    src = fetchFromGitHub {
+      owner = "ellisonleao";
+      repo = "vl";
+      rev = "v0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-zmSwlZwbPNafe2PyvFHMeQuJNJvs/c3zsMfVagcVXlU=";
+    };
+  };
   "web-search.fish" = {
     pname = "web-search.fish";
     version = "6c489c1b0369ebbf8d26505129fe74aa22cd0f03";
