@@ -1437,6 +1437,17 @@
       sha256 = "sha256-koD5aFqL+XVxc5Iq3reTYIHiPm0z7hAQ4K59IfbY4Hg=";
     };
   };
+  shipit = {
+    pname = "shipit";
+    version = "0.4.0";
+    src = fetchFromGitHub {
+      owner = "sapegin";
+      repo = "shipit";
+      rev = "0.4.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-gT+4b1D4kfy39CuFIR/eF316Ep8E1Ef74wuebljfhI4=";
+    };
+  };
   sig = {
     pname = "sig";
     version = "v0.1.3";
