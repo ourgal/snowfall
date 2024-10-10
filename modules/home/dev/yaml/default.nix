@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "otree";
+    myPkgs = [
+      # keep-sorted start
+      "convfmt"
+      "otree"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "dyff"
