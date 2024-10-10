@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "lssh";
+    myPkgs = [
+      # keep-sorted start
+      "lssh"
+      "shipit"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "fast-ssh"

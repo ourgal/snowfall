@@ -670,3 +670,7 @@ fetch.github = "tmrts/boilr"
 [eg]
 src.pypi = "eg"
 fetch.pypi = "eg"
+
+[shipit]
+src.github = "sapegin/shipit"
+fetch.github = "sapegin/shipit"
