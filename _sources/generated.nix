@@ -251,13 +251,13 @@
   };
   curd = {
     pname = "curd";
-    version = "cd4f38a7c73f53f840dc4019e3654afdc0770c1e";
+    version = "d2c2c155cdc15c6da7d9f69c7651a3fe0e66adac";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "cd4f38a7c73f53f840dc4019e3654afdc0770c1e";
+      rev = "d2c2c155cdc15c6da7d9f69c7651a3fe0e66adac";
       fetchSubmodules = false;
-      sha256 = "sha256-DBv3WmzxQadn7qQKDliRAn/4XCvInttW+Nf+8aUjqdg=";
+      sha256 = "sha256-OcXx0Qd8eHz1O9/e9PDD9eDw3iLxWLadMJy8dAWhJtA=";
     };
     date = "2024-10-10";
   };
@@ -344,6 +344,14 @@
       rev = "0.6.2";
       fetchSubmodules = false;
       sha256 = "sha256-9Ts9xipEacb+704BDVoOPGKlYKbuSdso1WYsFspNJTY=";
+    };
+  };
+  eg = {
+    pname = "eg";
+    version = "1.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/e/eg/eg-1.2.2.tar.gz";
+      sha256 = "sha256-jTdF7OsqTJFQexkjGTdHt66IiI5iV+uKrM996uKjAKc=";
     };
   };
   eleventy = {

@@ -462,12 +462,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "cd4f38a7c73f53f840dc4019e3654afdc0770c1e",
-            "sha256": "sha256-DBv3WmzxQadn7qQKDliRAn/4XCvInttW+Nf+8aUjqdg=",
+            "rev": "d2c2c155cdc15c6da7d9f69c7651a3fe0e66adac",
+            "sha256": "sha256-OcXx0Qd8eHz1O9/e9PDD9eDw3iLxWLadMJy8dAWhJtA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "cd4f38a7c73f53f840dc4019e3654afdc0770c1e"
+        "version": "d2c2c155cdc15c6da7d9f69c7651a3fe0e66adac"
     },
     "dblab": {
         "cargoLocks": null,
@@ -632,6 +632,21 @@
             "type": "github"
         },
         "version": "0.6.2"
+    },
+    "eg": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "eg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-jTdF7OsqTJFQexkjGTdHt66IiI5iV+uKrM996uKjAKc=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/e/eg/eg-1.2.2.tar.gz"
+        },
+        "version": "1.2.2"
     },
     "eleventy": {
         "cargoLocks": null,
