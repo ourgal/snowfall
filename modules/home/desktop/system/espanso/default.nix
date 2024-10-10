@@ -16,6 +16,7 @@ args.module (
             ./github.yml
             ./git.yml
             ./translate.yml
+            ./markdown.yml
           ];
         }
       ];
