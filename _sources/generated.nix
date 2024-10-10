@@ -215,6 +215,17 @@
       sha256 = "sha256-CWO1iNHl0SFwWp9GeTNnUyEJ9eD8HClp3nSF3pxHxP8=";
     };
   };
+  convfmt = {
+    pname = "convfmt";
+    version = "0.1.6";
+    src = fetchFromGitHub {
+      owner = "oriontvv";
+      repo = "convfmt";
+      rev = "0.1.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-k2Qj6/dllArP6jIDyiHA7luudsdQgipZMYY6Hm5hqEs=";
+    };
+  };
   ctrl-z = {
     pname = "ctrl-z";
     version = "689d60cb9706d2a19cb65286c2dea488b3293807";
@@ -229,15 +240,15 @@
   };
   curd = {
     pname = "curd";
-    version = "2ccc8b057f03f474f3337dc34c33d7ab39837327";
+    version = "cd4f38a7c73f53f840dc4019e3654afdc0770c1e";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "2ccc8b057f03f474f3337dc34c33d7ab39837327";
+      rev = "cd4f38a7c73f53f840dc4019e3654afdc0770c1e";
       fetchSubmodules = false;
-      sha256 = "sha256-fCHW5l6Bt4GKaJrllXDzI26vUBKVFXlwrixScfoFtLY=";
+      sha256 = "sha256-DBv3WmzxQadn7qQKDliRAn/4XCvInttW+Nf+8aUjqdg=";
     };
-    date = "2024-10-09";
+    date = "2024-10-10";
   };
   dblab = {
     pname = "dblab";

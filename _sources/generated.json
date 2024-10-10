@@ -385,6 +385,27 @@
         },
         "version": "v0.3.0"
     },
+    "convfmt": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "convfmt",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "oriontvv",
+            "repo": "convfmt",
+            "rev": "0.1.6",
+            "sha256": "sha256-k2Qj6/dllArP6jIDyiHA7luudsdQgipZMYY6Hm5hqEs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.1.6"
+    },
     "ctrl-z": {
         "cargoLocks": null,
         "date": "2024-08-14",
@@ -408,7 +429,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-09",
+        "date": "2024-10-10",
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -420,12 +441,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "2ccc8b057f03f474f3337dc34c33d7ab39837327",
-            "sha256": "sha256-fCHW5l6Bt4GKaJrllXDzI26vUBKVFXlwrixScfoFtLY=",
+            "rev": "cd4f38a7c73f53f840dc4019e3654afdc0770c1e",
+            "sha256": "sha256-DBv3WmzxQadn7qQKDliRAn/4XCvInttW+Nf+8aUjqdg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2ccc8b057f03f474f3337dc34c33d7ab39837327"
+        "version": "cd4f38a7c73f53f840dc4019e3654afdc0770c1e"
     },
     "dblab": {
         "cargoLocks": null,
