@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "impala"
+      "vl"
       # keep-sorted end
     ];
     nixPkgs = [
