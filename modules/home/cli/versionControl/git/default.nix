@@ -3,12 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        config
-        namespace
-        enabled
-        pkgs
-        ;
+      inherit (args) config namespace enabled;
     in
     {
       path = ./.;
