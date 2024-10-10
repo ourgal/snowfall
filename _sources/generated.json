@@ -1551,6 +1551,27 @@
         },
         "version": "v0.5.5"
     },
+    "gtm": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "gtm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "git-time-metric",
+            "repo": "gtm",
+            "rev": "v1.3.5",
+            "sha256": "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.3.5"
+    },
     "gw": {
         "cargoLocks": null,
         "date": null,
@@ -1613,6 +1634,27 @@
             "type": "github"
         },
         "version": "v0.29.8"
+    },
+    "hypergrep": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "hypergrep",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p-ranav",
+            "repo": "hypergrep",
+            "rev": "v0.1.1",
+            "sha256": "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.1"
     },
     "images-upload-cli": {
         "cargoLocks": null,
@@ -2928,11 +2970,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-25Oiuzup/bKlNics1cgUTJyWgt8DcKmTYbZwxhkbCk0=",
+            "sha256": "sha256-/DuXeWCS2cfmheU5Lzjz6yAH/+GzsThN7m0/ENJWur0=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.82.0.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-0.83.0.tar.gz"
         },
-        "version": "0.82.0"
+        "version": "0.83.0"
     },
     "textual-autocomplete": {
         "cargoLocks": null,

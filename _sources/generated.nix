@@ -843,6 +843,17 @@
       sha256 = "sha256-T3tla6Gf9lUQ+F8D57glzmfsmuX5FV806zuKQxYt2lw=";
     };
   };
+  gtm = {
+    pname = "gtm";
+    version = "v1.3.5";
+    src = fetchFromGitHub {
+      owner = "git-time-metric";
+      repo = "gtm";
+      rev = "v1.3.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=";
+    };
+  };
   gw = {
     pname = "gw";
     version = "v0.3.2";
@@ -874,6 +885,17 @@
       rev = "v0.29.8";
       fetchSubmodules = false;
       sha256 = "sha256-YL9DWVArUf+ZdldTyTY4Y2rDMofwZJ8o6PsVECkr2q0=";
+    };
+  };
+  hypergrep = {
+    pname = "hypergrep";
+    version = "v0.1.1";
+    src = fetchFromGitHub {
+      owner = "p-ranav";
+      repo = "hypergrep";
+      rev = "v0.1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=";
     };
   };
   images-upload-cli = {
@@ -1588,10 +1610,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.82.0";
+    version = "0.83.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.82.0.tar.gz";
-      sha256 = "sha256-25Oiuzup/bKlNics1cgUTJyWgt8DcKmTYbZwxhkbCk0=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.83.0.tar.gz";
+      sha256 = "sha256-/DuXeWCS2cfmheU5Lzjz6yAH/+GzsThN7m0/ENJWur0=";
     };
   };
   textual-autocomplete = {
