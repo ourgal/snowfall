@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "coreutils-full"
+      "loop"
       "moreutils"
       "progress"
       # keep-sorted end
