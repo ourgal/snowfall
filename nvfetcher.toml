@@ -674,3 +674,7 @@ fetch.pypi = "eg"
 [shipit]
 src.github = "sapegin/shipit"
 fetch.github = "sapegin/shipit"
+
+[vl]
+src.github = "ellisonleao/vl"
+fetch.github = "ellisonleao/vl"
