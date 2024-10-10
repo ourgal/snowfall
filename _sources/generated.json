@@ -280,6 +280,27 @@
         },
         "version": "v0.5.1"
     },
+    "boilr": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "boilr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tmrts",
+            "repo": "boilr",
+            "rev": "0.3.0",
+            "sha256": "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.3.0"
+    },
     "c": {
         "cargoLocks": null,
         "date": "2023-11-24",

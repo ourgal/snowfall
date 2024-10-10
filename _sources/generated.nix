@@ -158,6 +158,17 @@
       sha256 = "sha256-9svPIZzKuI4XBlxBsKucGLdX2dkfAy9ERT5oj8Su9TM=";
     };
   };
+  boilr = {
+    pname = "boilr";
+    version = "0.3.0";
+    src = fetchFromGitHub {
+      owner = "tmrts";
+      repo = "boilr";
+      rev = "0.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=";
+    };
+  };
   c = {
     pname = "c";
     version = "7cdc09e69d2f7fc49f70c80c565aa09b19e666db";
