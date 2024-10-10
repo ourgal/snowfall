@@ -662,3 +662,7 @@ fetch.git = "https://git.sr.ht/~technomancy/antifennel"
 [convfmt]
 src.github = "oriontvv/convfmt"
 fetch.github = "oriontvv/convfmt"
+
+[boilr]
+src.github = "tmrts/boilr"
+fetch.github = "tmrts/boilr"
