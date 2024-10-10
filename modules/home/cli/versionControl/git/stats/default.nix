@@ -15,6 +15,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "cloc"
       "git-bars"
       "git-quick-stats"
       "git-sizer"
