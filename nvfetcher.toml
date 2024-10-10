@@ -678,3 +678,7 @@ fetch.github = "sapegin/shipit"
 [vl]
 src.github = "ellisonleao/vl"
 fetch.github = "ellisonleao/vl"
+
+[grip-grab]
+src.github = "alexpasmantier/grip-grab"
+fetch.github = "alexpasmantier/grip-grab"
