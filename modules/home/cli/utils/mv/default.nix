@@ -3,7 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    perlPkgs = "vidir";
     nixPkgs = [
       # keep-sorted start
       "edir"
