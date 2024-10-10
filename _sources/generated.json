@@ -1530,6 +1530,27 @@
         },
         "version": "v2.0.5"
     },
+    "grip-grab": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "grip-grab",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "alexpasmantier",
+            "repo": "grip-grab",
+            "rev": "v0.5.5",
+            "sha256": "sha256-T3tla6Gf9lUQ+F8D57glzmfsmuX5FV806zuKQxYt2lw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.5.5"
+    },
     "gw": {
         "cargoLocks": null,
         "date": null,

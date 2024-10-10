@@ -832,6 +832,17 @@
       sha256 = "sha256-SrDDRQvogsYtdp8El/NOeeTOg0RKqaR3m7dq4Lhqrps=";
     };
   };
+  grip-grab = {
+    pname = "grip-grab";
+    version = "v0.5.5";
+    src = fetchFromGitHub {
+      owner = "alexpasmantier";
+      repo = "grip-grab";
+      rev = "v0.5.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-T3tla6Gf9lUQ+F8D57glzmfsmuX5FV806zuKQxYt2lw=";
+    };
+  };
   gw = {
     pname = "gw";
     version = "v0.3.2";
