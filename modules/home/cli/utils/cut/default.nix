@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    pyPkgs = "percol";
     nixPkgs = [
       # keep-sorted start
       "choose"
