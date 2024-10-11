@@ -237,6 +237,17 @@
       sha256 = "sha256-k2Qj6/dllArP6jIDyiHA7luudsdQgipZMYY6Hm5hqEs=";
     };
   };
+  corgi = {
+    pname = "corgi";
+    version = "v0.2.4";
+    src = fetchFromGitHub {
+      owner = "junyu-w";
+      repo = "corgi";
+      rev = "v0.2.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=";
+    };
+  };
   ctrl-z = {
     pname = "ctrl-z";
     version = "689d60cb9706d2a19cb65286c2dea488b3293807";
