@@ -27,6 +27,7 @@ args.module (
         "variety"
         "xclip"
         "xcolor"
+        "xdragon"
         # keep-sorted end
       ];
       enable = [
