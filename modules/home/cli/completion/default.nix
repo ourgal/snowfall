@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "carapace"
       "cod"
+      "tabry"
       # keep-sorted end
     ];
   }
