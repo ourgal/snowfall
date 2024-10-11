@@ -390,13 +390,13 @@
   };
   facad = {
     pname = "facad";
-    version = "v2.14.0";
+    version = "v2.16.0";
     src = fetchFromGitHub {
       owner = "yellow-footed-honeyguide";
       repo = "facad";
-      rev = "v2.14.0";
+      rev = "v2.16.0";
       fetchSubmodules = false;
-      sha256 = "sha256-YMqXR4cqA6WqU68q/1c40b4YdL2NE0ODjCVlDE9sHnk=";
+      sha256 = "sha256-78D1MLWejJpavf0h9qr1XKuAuz6CFYzH+dmMx0cBsBg=";
     };
   };
   fast-anime = {
