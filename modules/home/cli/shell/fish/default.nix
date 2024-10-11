@@ -19,6 +19,7 @@ args.module (
             ''
               set fish_greeting
               scheme set tokyonight
+              set -g fish_key_bindings fish_vi_key_bindings
             '';
           shellAbbrs = {
             md = "mkdir -p";
