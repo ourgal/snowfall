@@ -698,3 +698,7 @@ fetch.github = "evanbattaglia/tabry-rs"
 [corgi]
 src.github = "junyu-w/corgi"
 fetch.github = "junyu-w/corgi"
+
+[jalm]
+src.git = "https://github.com/neelkarma/jalm"
+fetch.github = "neelkarma/jalm"
