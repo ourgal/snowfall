@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     myPkgs = "rat";
+    nixPkgs = "smenu";
     enable = "lazycli";
   }
 )
