@@ -12,9 +12,10 @@ python3.pkgs.buildPythonApplication rec {
   inherit (source) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = [
-    python3.pkgs.poetry-core
-    python3.pkgs.poetry-dynamic-versioning
+  nativeBuildInputs = with python3.pkgs; [
+    poetry-core
+    poetry-dynamic-versioning
+    pythonRelaxDepsHook
   ];
 
   propagatedBuildInputs = with python3.pkgs; [
@@ -26,6 +27,8 @@ python3.pkgs.buildPythonApplication rec {
     python-dotenv
     rich
   ];
+
+  pythonRelaxDeps = true;
 
   pythonImportsCheck = [ "images_upload_cli" ];
 
