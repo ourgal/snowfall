@@ -11,7 +11,7 @@ args.module (
         {
           fish = {
             interactiveShellInit = ''
-              bind \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
+              bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
             '';
           };
         }
