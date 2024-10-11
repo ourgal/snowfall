@@ -1,5 +1,5 @@
 (let [awful (require :awful)
-      terminal :wezterm
+      terminal :kitty
       editor (-> (os.getenv :EDITOR) (or :vim))
       browser :firefox
       browserS :brave
