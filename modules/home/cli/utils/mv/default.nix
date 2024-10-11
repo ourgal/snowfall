@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "edir"
       "mmv-go"
+      "rnr"
       # keep-sorted end
     ];
   }
