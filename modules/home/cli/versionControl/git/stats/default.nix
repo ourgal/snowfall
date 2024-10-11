@@ -20,6 +20,7 @@ args.module (
       "git-quick-stats"
       "git-sizer"
       "gitstats"
+      "scc"
       "tokei"
       # keep-sorted end
     ];
