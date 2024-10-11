@@ -49,7 +49,7 @@ args.module (
               "W" = "scroll-to-perc 0";
               "u" = "navigate up";
               # "p" = "tab-focus last";
-              "pp" = "open -t {clipboard}";
+              "p" = "open -t {clipboard}";
               "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
               "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
             };
