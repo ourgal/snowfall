@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "tuime";
+    myPkgs = [
+      # keep-sorted start
+      "jalm"
+      "tuime"
+      # keep-sorted end
+    ];
     pyPkgs = "tqdm";
     nixPkgs = [
       # keep-sorted start
