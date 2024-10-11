@@ -694,3 +694,7 @@ fetch.github = "git-time-metric/gtm"
 [tabry-rs]
 src.git = "https://github.com/evanbattaglia/tabry-rs"
 fetch.github = "evanbattaglia/tabry-rs"
+
+[corgi]
+src.github = "junyu-w/corgi"
+fetch.github = "junyu-w/corgi"
