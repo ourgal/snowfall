@@ -11,7 +11,7 @@ in
 rustPlatform.buildRustPackage {
   inherit (source) pname version src;
 
-  cargoHash = "sha256-SSwMsIG+l69p7ce0FxqSK/Xn5335RWlbN6VSIOZYAh0=";
+  cargoHash = "sha256-aDqO8BCQKB4/Qtatw9q5zgKPqUfRYS4M5VIyAhkCVcg=";
 
   meta = with lib; {
     description = "Shell (tab) completion engine";
