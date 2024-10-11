@@ -427,6 +427,27 @@
         },
         "version": "0.1.6"
     },
+    "corgi": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "corgi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "junyu-w",
+            "repo": "corgi",
+            "rev": "v0.2.4",
+            "sha256": "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.2.4"
+    },
     "ctrl-z": {
         "cargoLocks": null,
         "date": "2024-08-14",
