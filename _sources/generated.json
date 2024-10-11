@@ -2898,6 +2898,27 @@
         },
         "version": "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada"
     },
+    "tabry-rs": {
+        "cargoLocks": null,
+        "date": "2024-10-10",
+        "extract": null,
+        "name": "tabry-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "evanbattaglia",
+            "repo": "tabry-rs",
+            "rev": "ad60532ab73c767b30ebcc5cc286a38ade86a973",
+            "sha256": "sha256-NUOGSFDfnv5U68R5UjU9S+eVRWc5JbU9gahXSaEkLjk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "ad60532ab73c767b30ebcc5cc286a38ade86a973"
+    },
     "task-relative-recur": {
         "cargoLocks": null,
         "date": "2023-02-06",
