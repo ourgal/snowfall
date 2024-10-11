@@ -690,3 +690,7 @@ fetch.github = "p-ranav/hypergrep"
 [gtm]
 src.github = "git-time-metric/gtm"
 fetch.github = "git-time-metric/gtm"
+
+[tabry-rs]
+src.git = "https://github.com/evanbattaglia/tabry-rs"
+fetch.github = "evanbattaglia/tabry-rs"
