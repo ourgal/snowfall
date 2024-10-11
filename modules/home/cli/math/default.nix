@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "libqalculate";
+    nixPkgs = [
+      # keep-sorted start
+      "bitwise"
+      "libqalculate"
+      # keep-sorted end
+    ];
   }
 )
