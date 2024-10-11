@@ -11,6 +11,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "dasel"
       "dyff"
       "faq"
       "remarshal"
