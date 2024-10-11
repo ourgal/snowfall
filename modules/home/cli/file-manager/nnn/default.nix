@@ -90,6 +90,7 @@ args.module (
                 F = "fixname";
                 r = "gitroot";
                 O = "organize";
+                D = "dragdrop";
               };
             };
           };
