@@ -8,6 +8,7 @@ args.module (
       "edir"
       "f2"
       "mmv-go"
+      "nomino"
       "rnr"
       # keep-sorted end
     ];
