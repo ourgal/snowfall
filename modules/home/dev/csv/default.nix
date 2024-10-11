@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "csview"
       "csvquote"
+      "dasel"
       "miller"
       "tidy-viewer"
       "usql"

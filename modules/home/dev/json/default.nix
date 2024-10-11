@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "biome"
+      "dasel"
       "faq"
       "fx"
       "gjo"
