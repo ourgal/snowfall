@@ -1572,6 +1572,18 @@
     };
     date = "2024-08-20";
   };
+  tabry-rs = {
+    pname = "tabry-rs";
+    version = "ad60532ab73c767b30ebcc5cc286a38ade86a973";
+    src = fetchFromGitHub {
+      owner = "evanbattaglia";
+      repo = "tabry-rs";
+      rev = "ad60532ab73c767b30ebcc5cc286a38ade86a973";
+      fetchSubmodules = false;
+      sha256 = "sha256-NUOGSFDfnv5U68R5UjU9S+eVRWc5JbU9gahXSaEkLjk=";
+    };
+    date = "2024-10-10";
+  };
   task-relative-recur = {
     pname = "task-relative-recur";
     version = "5d4ab7d0a5e3f697fb2a00790972e6f3f705fe42";
