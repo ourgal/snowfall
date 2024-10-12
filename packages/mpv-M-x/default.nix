@@ -3,7 +3,7 @@ let
   pname = "mpv-M-x";
   source = pkgs.${namespace}.sources.${pname};
 in
-pkgs.${namespace}.mkMpvPlugin {
+pkgs.mpvScripts.buildLua {
   inherit (source) pname version src;
 
   scriptPath = "M-x.lua";

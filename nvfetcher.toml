@@ -14,7 +14,7 @@ fetch.github = "gazorby/fish-abbreviation-tips"
 src.git = "https://github.com/0rax/fish-bd"
 fetch.github = "0rax/fish-bd"
 
-[done]
+[fish-done]
 src.git = "https://github.com/franciscolourenco/done"
 fetch.github = "franciscolourenco/done"
 
@@ -30,19 +30,19 @@ fetch.github = "nickeb96/puffer-fish"
 src.git = "https://github.com/brewingweasel/fishbang"
 fetch.github = "brewingweasel/fishbang"
 
-[sponge]
+[fish-sponge]
 src.git = "https://github.com/meaningful-ooo/sponge"
 fetch.github = "meaningful-ooo/sponge"
 
-[fzf]
+[fish-fzf]
 src.git = "https://github.com/jethrokuan/fzf"
 fetch.github = "jethrokuan/fzf"
 
-[gitnow]
+[fish-gitnow]
 src.git = "https://github.com/joseluisq/gitnow"
 fetch.github = "joseluisq/gitnow"
 
-[ctrl-z]
+["ctrl-z.fish"]
 src.git = "https://github.com/kpbaks/ctrl-z.fish"
 fetch.github = "kpbaks/ctrl-z.fish"
 

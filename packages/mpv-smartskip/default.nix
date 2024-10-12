@@ -3,7 +3,7 @@ let
   pname = "mpv-smartskip";
   source = pkgs.${namespace}.sources.${pname};
 in
-pkgs.${namespace}.mkMpvPlugin {
+pkgs.mpvScripts.buildLua {
   inherit (source) pname version src;
 
   scriptPath = "scripts/SmartSkip.lua";
