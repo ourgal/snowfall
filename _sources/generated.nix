@@ -528,13 +528,13 @@
   };
   fish-gitnow = {
     pname = "fish-gitnow";
-    version = "8b7bd8b13d804fe9cc1e813f83baad10d1780de9";
+    version = "539ad63de8660ec142d3db4309648284a9b770b0";
     src = fetchFromGitHub {
       owner = "ourgal";
       repo = "gitnow";
-      rev = "8b7bd8b13d804fe9cc1e813f83baad10d1780de9";
+      rev = "539ad63de8660ec142d3db4309648284a9b770b0";
       fetchSubmodules = false;
-      sha256 = "sha256-1YEZ4F51e443L37eIBhZx6LHX5DK94n/m+4MSqDPCGY=";
+      sha256 = "sha256-q22xeXUdv5B3rBeO9Mc2k8w/0NliCwIUlKivj2T0+Bw=";
     };
     date = "2024-10-12";
   };
