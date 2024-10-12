@@ -62,6 +62,7 @@ args.module (
             lib.${namespace}.mkFishPlugins [
               # keep-sorted start
               "autopair.fish"
+              "clownfish"
               "ctrl-z.fish"
               "fish-abbreviation-tips"
               "fish-bd"
