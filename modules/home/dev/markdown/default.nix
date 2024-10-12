@@ -3,7 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = "zk";
     myPkgs = "mdtt";
     pyPkgs = "mdformat";
     nodePkgs = "prettier";
@@ -11,5 +10,6 @@ args.module (
       "autocorrect"
       "marksman"
     ];
+    enable = "zk";
   }
 )
