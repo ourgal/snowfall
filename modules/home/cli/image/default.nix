@@ -10,6 +10,7 @@ args.module (
       "graphicsmagick"
       "graphviz"
       "imagemagick"
+      "imgp"
       "menyoki"
       "termshot"
       "viu"
