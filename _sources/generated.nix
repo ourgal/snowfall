@@ -528,15 +528,15 @@
   };
   fish-gitnow = {
     pname = "fish-gitnow";
-    version = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
+    version = "8b7bd8b13d804fe9cc1e813f83baad10d1780de9";
     src = fetchFromGitHub {
-      owner = "joseluisq";
+      owner = "ourgal";
       repo = "gitnow";
-      rev = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
+      rev = "8b7bd8b13d804fe9cc1e813f83baad10d1780de9";
       fetchSubmodules = false;
-      sha256 = "sha256-PuorwmaZAeG6aNWX4sUTBIE+NMdn1iWeea3rJ2RhqRQ=";
+      sha256 = "sha256-1YEZ4F51e443L37eIBhZx6LHX5DK94n/m+4MSqDPCGY=";
     };
-    date = "2023-11-25";
+    date = "2024-10-12";
   };
   fish-sponge = {
     pname = "fish-sponge";
