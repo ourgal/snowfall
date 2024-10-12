@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs sources;
+      inherit (args)
+        pkgs
+        sources
+        namespace
+        lib
+        ;
       inherit (pkgs) fetchFromGitHub;
     in
     {
@@ -59,162 +64,26 @@ args.module (
               description = "live wallpaper";
             };
           };
-          plugins = [
-            rec {
-              name = "to-fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fish-color-scheme-switcher";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fish-abbreviation-tips";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fish-bd";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "done";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "autopair.fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "puffer-fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fishbang";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "sponge";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fzf";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "gitnow";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "ctrl-z";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "todo-comments.fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "rgg.fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-          ];
+          plugins = (
+            lib.${namespace}.mkFishPlugins [
+              # keep-sorted start
+              "autopair.fish"
+              "ctrl-z.fish"
+              "fish-abbreviation-tips"
+              "fish-bd"
+              "fish-color-scheme-switcher"
+              "fish-done"
+              "fish-fzf"
+              "fish-gitnow"
+              "fish-sponge"
+              "fishbang"
+              "puffer-fish"
+              "rgg.fish"
+              "to-fish"
+              "todo-comments.fish"
+              # keep-sorted end
+            ] pkgs
+          );
         };
       };
       env = {

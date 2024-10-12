@@ -3,7 +3,7 @@ let
   pname = "mpv-autoloop";
   source = pkgs.${namespace}.sources.${pname};
 in
-pkgs.${namespace}.mkMpvPlugin {
+pkgs.mpvScripts.buildLua {
   inherit (source) pname version src;
 
   scriptPath = "autoloop.lua";
