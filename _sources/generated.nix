@@ -248,8 +248,8 @@
       sha256 = "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=";
     };
   };
-  ctrl-z = {
-    pname = "ctrl-z";
+  "ctrl-z.fish" = {
+    pname = "ctrl-z.fish";
     version = "689d60cb9706d2a19cb65286c2dea488b3293807";
     src = fetchFromGitHub {
       owner = "kpbaks";
@@ -333,18 +333,6 @@
       sha256 = "sha256-PiCD+jyQRhzbHKQeJxJiyUd+TZRG3OZHRkV97ITlI9w=";
       finalImageTag = "0.9.0";
     };
-  };
-  done = {
-    pname = "done";
-    version = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
-    src = fetchFromGitHub {
-      owner = "franciscolourenco";
-      repo = "done";
-      rev = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
-      fetchSubmodules = false;
-      sha256 = "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=";
-    };
-    date = "2024-04-11";
   };
   dra = {
     pname = "dra";
@@ -514,6 +502,54 @@
     };
     date = "2021-07-16";
   };
+  fish-done = {
+    pname = "fish-done";
+    version = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
+    src = fetchFromGitHub {
+      owner = "franciscolourenco";
+      repo = "done";
+      rev = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
+      fetchSubmodules = false;
+      sha256 = "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=";
+    };
+    date = "2024-04-11";
+  };
+  fish-fzf = {
+    pname = "fish-fzf";
+    version = "479fa67d7439b23095e01b64987ae79a91a4e283";
+    src = fetchFromGitHub {
+      owner = "jethrokuan";
+      repo = "fzf";
+      rev = "479fa67d7439b23095e01b64987ae79a91a4e283";
+      fetchSubmodules = false;
+      sha256 = "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=";
+    };
+    date = "2021-05-12";
+  };
+  fish-gitnow = {
+    pname = "fish-gitnow";
+    version = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
+    src = fetchFromGitHub {
+      owner = "joseluisq";
+      repo = "gitnow";
+      rev = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
+      fetchSubmodules = false;
+      sha256 = "sha256-PuorwmaZAeG6aNWX4sUTBIE+NMdn1iWeea3rJ2RhqRQ=";
+    };
+    date = "2023-11-25";
+  };
+  fish-sponge = {
+    pname = "fish-sponge";
+    version = "384299545104d5256648cee9d8b117aaa9a6d7be";
+    src = fetchFromGitHub {
+      owner = "meaningful-ooo";
+      repo = "sponge";
+      rev = "384299545104d5256648cee9d8b117aaa9a6d7be";
+      fetchSubmodules = false;
+      sha256 = "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=";
+    };
+    date = "2022-10-05";
+  };
   fishbang = {
     pname = "fishbang";
     version = "0b5ef82ead524a7dd0da5760d8f677b02b35f654";
@@ -547,18 +583,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-p9gTFUYHdyOY2EFT/ZmBHT7dRNm64s/3ExUXG7bfQ70=";
     };
-  };
-  fzf = {
-    pname = "fzf";
-    version = "479fa67d7439b23095e01b64987ae79a91a4e283";
-    src = fetchFromGitHub {
-      owner = "jethrokuan";
-      repo = "fzf";
-      rev = "479fa67d7439b23095e01b64987ae79a91a4e283";
-      fetchSubmodules = false;
-      sha256 = "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=";
-    };
-    date = "2021-05-12";
   };
   fzf-kill = {
     pname = "fzf-kill";
@@ -786,18 +810,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-vXLrX3gWx1K77TA79dOxaC2U59ZWpS0PGQnUHIb+BxI=";
     };
-  };
-  gitnow = {
-    pname = "gitnow";
-    version = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
-    src = fetchFromGitHub {
-      owner = "joseluisq";
-      repo = "gitnow";
-      rev = "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35";
-      fetchSubmodules = false;
-      sha256 = "sha256-PuorwmaZAeG6aNWX4sUTBIE+NMdn1iWeea3rJ2RhqRQ=";
-    };
-    date = "2023-11-25";
   };
   gitty = {
     pname = "gitty";
@@ -1559,18 +1571,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-i9IBe5jcCCzWRxu+dbx3neu5jakZe/Zzi3+FgtYNynk=";
     };
-  };
-  sponge = {
-    pname = "sponge";
-    version = "384299545104d5256648cee9d8b117aaa9a6d7be";
-    src = fetchFromGitHub {
-      owner = "meaningful-ooo";
-      repo = "sponge";
-      rev = "384299545104d5256648cee9d8b117aaa9a6d7be";
-      fetchSubmodules = false;
-      sha256 = "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=";
-    };
-    date = "2022-10-05";
   };
   ssh-tpm-agent = {
     pname = "ssh-tpm-agent";

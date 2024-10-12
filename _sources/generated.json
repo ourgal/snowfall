@@ -448,11 +448,11 @@
         },
         "version": "v0.2.4"
     },
-    "ctrl-z": {
+    "ctrl-z.fish": {
         "cargoLocks": null,
         "date": "2024-08-14",
         "extract": null,
-        "name": "ctrl-z",
+        "name": "ctrl-z.fish",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -611,27 +611,6 @@
             "tlsVerify": null
         },
         "version": "0.9.0"
-    },
-    "done": {
-        "cargoLocks": null,
-        "date": "2024-04-11",
-        "extract": null,
-        "name": "done",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "franciscolourenco",
-            "repo": "done",
-            "rev": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366",
-            "sha256": "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366"
     },
     "dra": {
         "cargoLocks": null,
@@ -942,6 +921,90 @@
         },
         "version": "1ad8fff696d48c8bf173aa98f9dff39d7916de0e"
     },
+    "fish-done": {
+        "cargoLocks": null,
+        "date": "2024-04-11",
+        "extract": null,
+        "name": "fish-done",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "franciscolourenco",
+            "repo": "done",
+            "rev": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366",
+            "sha256": "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366"
+    },
+    "fish-fzf": {
+        "cargoLocks": null,
+        "date": "2021-05-12",
+        "extract": null,
+        "name": "fish-fzf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jethrokuan",
+            "repo": "fzf",
+            "rev": "479fa67d7439b23095e01b64987ae79a91a4e283",
+            "sha256": "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "479fa67d7439b23095e01b64987ae79a91a4e283"
+    },
+    "fish-gitnow": {
+        "cargoLocks": null,
+        "date": "2023-11-25",
+        "extract": null,
+        "name": "fish-gitnow",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "joseluisq",
+            "repo": "gitnow",
+            "rev": "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35",
+            "sha256": "sha256-PuorwmaZAeG6aNWX4sUTBIE+NMdn1iWeea3rJ2RhqRQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35"
+    },
+    "fish-sponge": {
+        "cargoLocks": null,
+        "date": "2022-10-05",
+        "extract": null,
+        "name": "fish-sponge",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "meaningful-ooo",
+            "repo": "sponge",
+            "rev": "384299545104d5256648cee9d8b117aaa9a6d7be",
+            "sha256": "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "384299545104d5256648cee9d8b117aaa9a6d7be"
+    },
     "fishbang": {
         "cargoLocks": null,
         "date": "2023-08-04",
@@ -1004,27 +1067,6 @@
             "type": "github"
         },
         "version": "v1.4.3"
-    },
-    "fzf": {
-        "cargoLocks": null,
-        "date": "2021-05-12",
-        "extract": null,
-        "name": "fzf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "jethrokuan",
-            "repo": "fzf",
-            "rev": "479fa67d7439b23095e01b64987ae79a91a4e283",
-            "sha256": "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "479fa67d7439b23095e01b64987ae79a91a4e283"
     },
     "fzf-kill": {
         "cargoLocks": null,
@@ -1445,27 +1487,6 @@
             "type": "github"
         },
         "version": "0.1.2"
-    },
-    "gitnow": {
-        "cargoLocks": null,
-        "date": "2023-11-25",
-        "extract": null,
-        "name": "gitnow",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "joseluisq",
-            "repo": "gitnow",
-            "rev": "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35",
-            "sha256": "sha256-PuorwmaZAeG6aNWX4sUTBIE+NMdn1iWeea3rJ2RhqRQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "91bda1d0ffad2d68b21a1349f9b55a8cb5b54f35"
     },
     "gitty": {
         "cargoLocks": null,
@@ -2876,27 +2897,6 @@
             "type": "github"
         },
         "version": "v0.3.2"
-    },
-    "sponge": {
-        "cargoLocks": null,
-        "date": "2022-10-05",
-        "extract": null,
-        "name": "sponge",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "meaningful-ooo",
-            "repo": "sponge",
-            "rev": "384299545104d5256648cee9d8b117aaa9a6d7be",
-            "sha256": "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "384299545104d5256648cee9d8b117aaa9a6d7be"
     },
     "ssh-tpm-agent": {
         "cargoLocks": null,
