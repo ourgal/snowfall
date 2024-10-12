@@ -5,7 +5,7 @@
   namespace,
 }:
 let
-  pname = "todo-comments-fish";
+  pname = "todo-comments.fish";
   source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {

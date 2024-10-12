@@ -3,13 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        pkgs
-        sources
-        namespace
-        lib
-        ;
-      inherit (pkgs) fetchFromGitHub;
+      inherit (args) pkgs namespace lib;
     in
     {
       path = ./.;
