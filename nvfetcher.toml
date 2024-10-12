@@ -702,3 +702,7 @@ fetch.github = "junyu-w/corgi"
 [jalm]
 src.git = "https://github.com/neelkarma/jalm"
 fetch.github = "neelkarma/jalm"
+
+[mdtt]
+src.github = "szktkfm/mdtt"
+fetch.github = "szktkfm/mdtt"
