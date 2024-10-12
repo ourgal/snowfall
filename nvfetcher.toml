@@ -39,8 +39,8 @@ src.git = "https://github.com/jethrokuan/fzf"
 fetch.github = "jethrokuan/fzf"
 
 [fish-gitnow]
-src.git = "https://github.com/joseluisq/gitnow"
-fetch.github = "joseluisq/gitnow"
+src.git = "https://github.com/ourgal/gitnow"
+fetch.github = "ourgal/gitnow"
 
 ["ctrl-z.fish"]
 src.git = "https://github.com/kpbaks/ctrl-z.fish"
