@@ -1068,6 +1068,17 @@
       sha256 = "sha256-672AuQWviwihnUS3G0xSn4IAMHy0fPE1VLDfu8wrPGg=";
     };
   };
+  mdtt = {
+    pname = "mdtt";
+    version = "v0.2.1";
+    src = fetchFromGitHub {
+      owner = "szktkfm";
+      repo = "mdtt";
+      rev = "v0.2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-OFS/ZhXdvdmlpfCNutsvlhMv1krFlx4Xju8RSl3GS2s=";
+    };
+  };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
     version = "3bcfbc350ce4c652c7d4b0f7aeb77400962f4bbc";
