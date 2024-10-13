@@ -22,7 +22,7 @@ stdenvNoCC.mkDerivation rec {
 
   # https://github.com/RaitaroH/adl#requirements
   buildInputs = [
-    pkgs.${namespace}.animdl
+    pkgs.animdl
     frece
     fzf
     mpv
