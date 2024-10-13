@@ -1,8 +1,6 @@
 {
   lib,
   python3,
-  fetchFromGitHub,
-  fetchPypi,
   cargo,
   rustPlatform,
   rustc,
