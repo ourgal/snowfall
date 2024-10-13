@@ -262,15 +262,15 @@
   };
   curd = {
     pname = "curd";
-    version = "2c2f26208856a7b79b31a8c92196b20b053b7fa7";
+    version = "bd98e60b56b7595b99729c45ef1ba397bf29761c";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "2c2f26208856a7b79b31a8c92196b20b053b7fa7";
+      rev = "bd98e60b56b7595b99729c45ef1ba397bf29761c";
       fetchSubmodules = false;
-      sha256 = "sha256-4BbPKZjtz4lhkYJ5Mhm/konNH/vYyb4Huz/dGIX+bVY=";
+      sha256 = "sha256-kKp20vtySDyaQfAdmsdu90h9dv55SdFwREd/8Nb5IZM=";
     };
-    date = "2024-10-11";
+    date = "2024-10-13";
   };
   dblab = {
     pname = "dblab";
@@ -1664,10 +1664,10 @@
   };
   textual-autocomplete = {
     pname = "textual-autocomplete";
-    version = "3.0.0a10";
+    version = "3.0.0a12";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual_autocomplete/textual_autocomplete-3.0.0a10.tar.gz";
-      sha256 = "sha256-6py0Cotd4OaRzTYNKRKvMMAr+xf8ljBhz4NQgotny2Q=";
+      url = "https://pypi.org/packages/source/t/textual_autocomplete/textual_autocomplete-3.0.0a12.tar.gz";
+      sha256 = "sha256-HSyeTSTH9XWryMYSy2q//0cG9qqrm5OVBrldroRUkwk=";
     };
   };
   tmux-auto-renumber-session = {
@@ -1780,15 +1780,15 @@
   };
   tmux-tome = {
     pname = "tmux-tome";
-    version = "a9afdbe6490ecd5d2d66bc024b7d53a3b616f137";
+    version = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "a9afdbe6490ecd5d2d66bc024b7d53a3b616f137";
+      rev = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
       fetchSubmodules = false;
-      sha256 = "sha256-ShBTFwOBRyybpLNmtx5/juTnssPjiXqBzH6sYYsVvnE=";
+      sha256 = "sha256-y1zcfXwaMpORAcSNtwskJwx1DpIJu4XE81m4utBcusY=";
     };
-    date = "2024-05-09";
+    date = "2024-10-12";
   };
   tmux-transient-status = {
     pname = "tmux-transient-status";
