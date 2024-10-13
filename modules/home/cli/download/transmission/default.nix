@@ -4,7 +4,12 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "transmission_4";
-    myPkgs = "anime";
+    myPkgs = [
+      # keep-sorted start
+      "anime"
+      "tewi"
+      # keep-sorted end
+    ];
     enable = "service";
   }
 )

@@ -706,3 +706,7 @@ fetch.github = "neelkarma/jalm"
 [mdtt]
 src.github = "szktkfm/mdtt"
 fetch.github = "szktkfm/mdtt"
+
+[tewi]
+src.github = "anlar/tewi"
+fetch.github = "anlar/tewi"
