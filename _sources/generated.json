@@ -301,6 +301,27 @@
         },
         "version": "0.3.0"
     },
+    "bt": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "bt",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LeperGnome",
+            "repo": "bt",
+            "rev": "v1.0.0",
+            "sha256": "sha256-6hNdAmAflPcky1QxQvZCo+ffprRuIn2NPZYlS4wurww=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0"
+    },
     "c": {
         "cargoLocks": null,
         "date": "2023-11-24",

@@ -169,6 +169,17 @@
       sha256 = "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=";
     };
   };
+  bt = {
+    pname = "bt";
+    version = "v1.0.0";
+    src = fetchFromGitHub {
+      owner = "LeperGnome";
+      repo = "bt";
+      rev = "v1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-6hNdAmAflPcky1QxQvZCo+ffprRuIn2NPZYlS4wurww=";
+    };
+  };
   c = {
     pname = "c";
     version = "7cdc09e69d2f7fc49f70c80c565aa09b19e666db";
