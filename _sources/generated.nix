@@ -1654,6 +1654,17 @@
     };
     date = "2024-08-15";
   };
+  tewi = {
+    pname = "tewi";
+    version = "v0.1.0";
+    src = fetchFromGitHub {
+      owner = "anlar";
+      repo = "tewi";
+      rev = "v0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-Icee4od3tPJ5zASxlJ4bFLv/5dz7UjaTHY11QTObbEg=";
+    };
+  };
   textual = {
     pname = "textual";
     version = "0.83.0";
