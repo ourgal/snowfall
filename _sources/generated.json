@@ -3045,6 +3045,27 @@
         },
         "version": "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8"
     },
+    "tewi": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "tewi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "anlar",
+            "repo": "tewi",
+            "rev": "v0.1.0",
+            "sha256": "sha256-Icee4od3tPJ5zASxlJ4bFLv/5dz7UjaTHY11QTObbEg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.0"
+    },
     "textual": {
         "cargoLocks": null,
         "date": null,
