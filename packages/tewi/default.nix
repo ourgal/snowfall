@@ -28,7 +28,7 @@ let
 
     pythonImportsCheck = [ "textual" ];
   };
-  pname = "twei";
+  pname = "tewi";
   source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication rec {
