@@ -1,11 +1,12 @@
 {
   lib,
   rustPlatform,
+  pkgs,
   namespace,
 }:
 let
   pname = "clashctl";
-  source = lib.${namespace}.sources.${pname};
+  source = pkgs.${namespace}.sources.${pname};
 in
 rustPlatform.buildRustPackage {
   inherit (source) pname version src;
