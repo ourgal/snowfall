@@ -14,19 +14,7 @@ in
       user.host = "air";
       boot.systemd = enabled;
       gpu.amd = enabled;
-      firewall = enabledList [
-        # keep-sorted start
-        "aria2"
-        "barrier"
-        "dufs"
-        "harmonia"
-        "kdeconnect"
-        "mdns"
-        "roc"
-        "scream"
-        "transmission"
-        # keep-sorted end
-      ];
+      firewall.disable = enabled;
     }
     // enabledList [
       # keep-sorted start

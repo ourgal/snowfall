@@ -14,18 +14,7 @@ in
       user.host = "surface";
       boot.systemd = enabled;
       gpu.intel = enabled;
-      firewall = enabledList [
-        # keep-sorted start
-        "aria2"
-        "barrier"
-        "dufs"
-        "harmonia"
-        "kdeconnect"
-        "mdns"
-        "roc"
-        "scream"
-        # keep-sorted end
-      ];
+      firewall.disable = enabled;
     }
     // enabledList [
       # keep-sorted start
