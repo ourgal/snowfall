@@ -710,3 +710,7 @@ fetch.github = "szktkfm/mdtt"
 [tewi]
 src.github = "anlar/tewi"
 fetch.github = "anlar/tewi"
+
+[bt]
+src.github = "LeperGnome/bt"
+fetch.github = "LeperGnome/bt"
