@@ -1,49 +1,53 @@
-function removeAllDownloads() {
+removeAllDownloads() {
   ids=$(transmission-remote --list | awk 'NR > 1 && $1 != "Sum:" && $2 == "100%" {print $1}' | sed 's/\*//')
   for id in $ids; do
     transmission-remote -t "$id" -r
   done
 }
 
-function removeDownload() {
+removeDownload() {
   transmission-remote -t "$1" -r
 }
 
-function download() {
+download() {
   transmission-remote -w ~/Videos/anime --trash-torrent --add "$1"
 }
 
-function watch() {
+watch_tewi() {
+  tewi
+}
+
+watch() {
   viddy transmission-remote --list
 }
 
-function help() {
+help() {
   echo "\
+  anime
+    tewi
   anime <URL>
     download
-  anime clear
+  anime w | watch
+    watch cli stats
+  anime c | clear
     remove all downloads
   anime <ID>
-    remove the download by id"
+    remove the download by id
+  anime h | -h | help | --help
+    show help"
 }
 
 if [ "$#" -eq 0 ]; then
-  watch
+  watch_tewi
 else
   case "$1" in
-  "clear")
+  c | clear)
     removeAllDownloads
     ;;
-  "")
-    viddy transmission-remote --list
+  w | watch)
+    watch
     ;;
-  "-h")
-    help
-    ;;
-  "--help")
-    help
-    ;;
-  "help")
+  -h | h | --help | help)
     help
     ;;
   *[!0-9]*)

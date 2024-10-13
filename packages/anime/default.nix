@@ -3,7 +3,8 @@
   lib,
   viddy,
   transmission_4,
-  ...
+  pkgs,
+  namespace,
 }:
 writeShellApplication rec {
   name = "anime";
@@ -16,6 +17,7 @@ writeShellApplication rec {
   runtimeInputs = [
     viddy
     transmission_4
+    pkgs.${namespace}.tewi
   ];
 
   text = builtins.readFile ./anime.sh;
