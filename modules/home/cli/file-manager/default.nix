@@ -17,6 +17,7 @@ args.module (
       "nnn"
       "ranger"
       "superfile"
+      "xplr"
       "yazi"
       # keep-sorted end
     ];
