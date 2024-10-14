@@ -16,6 +16,7 @@ args.module (
       # keep-sorted start
       "libgen-cli"
       "tdl"
+      "tremc"
       # keep-sorted end
     ];
     enable = [
