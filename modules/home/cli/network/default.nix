@@ -18,6 +18,7 @@ args.module (
       "gping"
       "httping"
       "ipinfo"
+      "lychee"
       "nali"
       "q"
       "tcping-go"
