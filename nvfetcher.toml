@@ -714,3 +714,7 @@ fetch.github = "anlar/tewi"
 [bt]
 src.github = "LeperGnome/bt"
 fetch.github = "LeperGnome/bt"
+
+[neonmodem]
+src.github = "mrusme/neonmodem"
+fetch.github = "mrusme/neonmodem"
