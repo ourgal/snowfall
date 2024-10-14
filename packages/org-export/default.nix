@@ -1,0 +1,37 @@
+{
+  lib,
+  stdenv,
+  emacs,
+  pkgs,
+  namespace,
+}:
+let
+  pname = "org-export";
+  source = pkgs.${namespace}.sources.${pname};
+in
+stdenv.mkDerivation {
+  inherit (source) pname version src;
+
+  dontBuild = true;
+
+  runtimeInputs = [ emacs ];
+
+  installPhase = ''
+    runHook preInstall
+    install -m755 -D org-export $out/bin/org-export
+    mkdir -p $out/lib
+    cp *.el $out/lib/
+    substituteInPlace $out/bin/org-export \
+      --replace-fail '$(dirname $0)' $out/lib
+    runHook postInstall
+  '';
+
+  meta = with lib; {
+    description = "Batch export of org-mode files from the command line";
+    homepage = "https://github.com/nhoffman/org-export";
+    license = licenses.mit;
+    maintainers = with maintainers; [ zxc ];
+    mainProgram = "org-export";
+    platforms = platforms.all;
+  };
+}

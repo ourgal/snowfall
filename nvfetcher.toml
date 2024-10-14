@@ -726,3 +726,7 @@ fetch.github = "WanderHuang/game-2048-tui"
 [cmdx]
 src.github = "suzuki-shunsuke/cmdx"
 fetch.github = "suzuki-shunsuke/cmdx"
+
+[org-export]
+src.git = "https://github.com/nhoffman/org-export"
+fetch.github = "nhoffman/org-export"

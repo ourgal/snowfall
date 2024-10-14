@@ -106,6 +106,7 @@ args.module (
         "markdown"
         "nix"
         "nodejs"
+        "org-mode"
         "perl"
         "python"
         "regex"
