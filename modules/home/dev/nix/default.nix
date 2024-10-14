@@ -6,6 +6,7 @@ args.module (
     servs = "lorri";
     nixPkgs = [
       # keep-sorted start
+      "deadnix"
       "nil"
       "nix-init"
       "nixd"
