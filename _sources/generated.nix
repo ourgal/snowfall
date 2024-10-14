@@ -215,6 +215,17 @@
     };
     date = "2024-07-28";
   };
+  cmdx = {
+    pname = "cmdx";
+    version = "v1.7.4";
+    src = fetchFromGitHub {
+      owner = "suzuki-shunsuke";
+      repo = "cmdx";
+      rev = "v1.7.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-UzAtDTs9KGcImQVU6ve80j68you900ag+aJaVZXF3Dw=";
+    };
+  };
   code-radio-cli = {
     pname = "code-radio-cli";
     version = "v1.0.5";
@@ -1919,13 +1930,13 @@
   };
   toru = {
     pname = "toru";
-    version = "v0.3.1";
+    version = "v0.3.2";
     src = fetchFromGitHub {
       owner = "sweetbbak";
       repo = "toru";
-      rev = "v0.3.1";
+      rev = "v0.3.2";
       fetchSubmodules = false;
-      sha256 = "sha256-SA5DXHKqUslUImoyzGQ9GmoO8RD5UJt6SB03bTTGjaE=";
+      sha256 = "sha256-rfnZvo1O46EW794T0/JaV9Wb8JxnTrbo/aD7EgeHcFc=";
     };
   };
   tp = {

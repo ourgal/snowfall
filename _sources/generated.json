@@ -385,6 +385,27 @@
         },
         "version": "6198556e810d964cc5938c446ef42fc21b55fe0b"
     },
+    "cmdx": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cmdx",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "suzuki-shunsuke",
+            "repo": "cmdx",
+            "rev": "v1.7.4",
+            "sha256": "sha256-UzAtDTs9KGcImQVU6ve80j68you900ag+aJaVZXF3Dw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.7.4"
+    },
     "code-radio-cli": {
         "cargoLocks": null,
         "date": null,
@@ -3530,12 +3551,12 @@
             "name": null,
             "owner": "sweetbbak",
             "repo": "toru",
-            "rev": "v0.3.1",
-            "sha256": "sha256-SA5DXHKqUslUImoyzGQ9GmoO8RD5UJt6SB03bTTGjaE=",
+            "rev": "v0.3.2",
+            "sha256": "sha256-rfnZvo1O46EW794T0/JaV9Wb8JxnTrbo/aD7EgeHcFc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.1"
+        "version": "v0.3.2"
     },
     "tp": {
         "cargoLocks": null,
