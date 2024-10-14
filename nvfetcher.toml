@@ -722,3 +722,7 @@ fetch.github = "mrusme/neonmodem"
 [game_2048_tui]
 src.github = "WanderHuang/game-2048-tui"
 fetch.github = "WanderHuang/game-2048-tui"
+
+[cmdx]
+src.github = "suzuki-shunsuke/cmdx"
+fetch.github = "suzuki-shunsuke/cmdx"
