@@ -1252,6 +1252,18 @@
       sha256 = "sha256-QswpzH+T+eAR9ObvrQwlwtvtczIcER6fzrWzw944MO4=";
     };
   };
+  org-export = {
+    pname = "org-export";
+    version = "64ac299c041877620c2cadba83ded44f46c4e124";
+    src = fetchFromGitHub {
+      owner = "nhoffman";
+      repo = "org-export";
+      rev = "64ac299c041877620c2cadba83ded44f46c4e124";
+      fetchSubmodules = false;
+      sha256 = "sha256-GIkkYary9R3mf9r9QW0fgmnutMlhIp7PhM9KX7kXiuQ=";
+    };
+    date = "2023-10-25";
+  };
   otree = {
     pname = "otree";
     version = "v0.2.0";
@@ -1811,15 +1823,15 @@
   };
   tmux-power-zoom = {
     pname = "tmux-power-zoom";
-    version = "2297919bce52d45ba5bf0483942553b35909bca0";
+    version = "30eb97c090ff07c8e957b2e761f25931c1d49133";
     src = fetchFromGitHub {
       owner = "jaclu";
       repo = "tmux-power-zoom";
-      rev = "2297919bce52d45ba5bf0483942553b35909bca0";
+      rev = "30eb97c090ff07c8e957b2e761f25931c1d49133";
       fetchSubmodules = false;
-      sha256 = "sha256-ZWXwMDJW5MXcKw5aV70TXybPD5tkEJqomO4TX2Z0D6o=";
+      sha256 = "sha256-FMzdN+xEejjZfmQ65q7sK9sRbSoK/bZYtcaEPgeDGBc=";
     };
-    date = "2024-08-24";
+    date = "2024-10-14";
   };
   tmux-tea = {
     pname = "tmux-tea";

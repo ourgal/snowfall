@@ -2307,6 +2307,27 @@
         },
         "version": "v5.4.2"
     },
+    "org-export": {
+        "cargoLocks": null,
+        "date": "2023-10-25",
+        "extract": null,
+        "name": "org-export",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nhoffman",
+            "repo": "org-export",
+            "rev": "64ac299c041877620c2cadba83ded44f46c4e124",
+            "sha256": "sha256-GIkkYary9R3mf9r9QW0fgmnutMlhIp7PhM9KX7kXiuQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "64ac299c041877620c2cadba83ded44f46c4e124"
+    },
     "otree": {
         "cargoLocks": null,
         "date": null,
@@ -3329,7 +3350,7 @@
     },
     "tmux-power-zoom": {
         "cargoLocks": null,
-        "date": "2024-08-24",
+        "date": "2024-10-14",
         "extract": null,
         "name": "tmux-power-zoom",
         "passthru": null,
@@ -3341,12 +3362,12 @@
             "name": null,
             "owner": "jaclu",
             "repo": "tmux-power-zoom",
-            "rev": "2297919bce52d45ba5bf0483942553b35909bca0",
-            "sha256": "sha256-ZWXwMDJW5MXcKw5aV70TXybPD5tkEJqomO4TX2Z0D6o=",
+            "rev": "30eb97c090ff07c8e957b2e761f25931c1d49133",
+            "sha256": "sha256-FMzdN+xEejjZfmQ65q7sK9sRbSoK/bZYtcaEPgeDGBc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2297919bce52d45ba5bf0483942553b35909bca0"
+        "version": "30eb97c090ff07c8e957b2e761f25931c1d49133"
     },
     "tmux-tea": {
         "cargoLocks": null,
