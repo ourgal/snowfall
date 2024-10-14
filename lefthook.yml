@@ -16,6 +16,10 @@ pre-commit:
       glob: "*.nix"
       run: nixfmt {staged_files}
       stage_fixed: true
+    deadnix:
+      glob: "*.nix"
+      run: deadnix -eq {staged_files}
+      stage_fixed: true
     python:
       glob: "*.py"
       run: ruff format {staged_files}
