@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    gnomePkgs = "gnome-mahjongg";
     nixPkgs = [
       # keep-sorted start
       "bottles"
