@@ -2181,6 +2181,27 @@
         },
         "version": "48d68283cea47ff8e904decc9003b3abc3e2123e"
     },
+    "neonmodem": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "neonmodem",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mrusme",
+            "repo": "neonmodem",
+            "rev": "v1.0.6",
+            "sha256": "sha256-VLR6eicffA0IXVwEZMvgpm1kVmrLYVZOtq7MSy+vIw8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.6"
+    },
     "nix-auto-follow": {
         "cargoLocks": null,
         "date": "2024-08-20",

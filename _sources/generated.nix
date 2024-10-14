@@ -1185,6 +1185,17 @@
     };
     date = "2023-11-25";
   };
+  neonmodem = {
+    pname = "neonmodem";
+    version = "v1.0.6";
+    src = fetchFromGitHub {
+      owner = "mrusme";
+      repo = "neonmodem";
+      rev = "v1.0.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-VLR6eicffA0IXVwEZMvgpm1kVmrLYVZOtq7MSy+vIw8=";
+    };
+  };
   nix-auto-follow = {
     pname = "nix-auto-follow";
     version = "a76c20cd36fb2b6fa4a58be4c5edf4ae6e143648";
