@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "cmdx";
     nixPkgs = [
       # keep-sorted start
       "gnumake"
