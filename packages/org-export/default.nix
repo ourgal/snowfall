@@ -21,6 +21,7 @@ stdenv.mkDerivation {
     install -m755 -D org-export $out/bin/org-export
     mkdir -p $out/lib
     cp *.el $out/lib/
+    cp ${./org-export-markdown.el} $out/lib/org-export-markdown.el
     substituteInPlace $out/bin/org-export \
       --replace-fail '$(dirname $0)' $out/lib
     runHook postInstall
