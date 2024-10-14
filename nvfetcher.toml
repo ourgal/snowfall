@@ -718,3 +718,7 @@ fetch.github = "LeperGnome/bt"
 [neonmodem]
 src.github = "mrusme/neonmodem"
 fetch.github = "mrusme/neonmodem"
+
+[game_2048_tui]
+src.github = "WanderHuang/game-2048-tui"
+fetch.github = "WanderHuang/game-2048-tui"
