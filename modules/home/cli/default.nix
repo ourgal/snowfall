@@ -32,6 +32,7 @@ args.module (
       "encrypt"
       "file-manager"
       "font"
+      "game"
       "grammar"
       "history"
       "image"
