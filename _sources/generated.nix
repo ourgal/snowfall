@@ -228,13 +228,13 @@
   };
   compose2nix = {
     pname = "compose2nix";
-    version = "v0.3.0";
+    version = "v0.3.1";
     src = fetchFromGitHub {
       owner = "aksiksi";
       repo = "compose2nix";
-      rev = "v0.3.0";
+      rev = "v0.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-CWO1iNHl0SFwWp9GeTNnUyEJ9eD8HClp3nSF3pxHxP8=";
+      sha256 = "sha256-rFnnbRVVv/N5021Al3vmjFAui1cTp8NBZDBNQo8CsXM=";
     };
   };
   convfmt = {
@@ -604,6 +604,17 @@
       rev = "v1.0.0";
       fetchSubmodules = false;
       sha256 = "sha256-Aa+jqcavFber+tAWUqPgV87sKKZS+5rGeJLS7RoYGLA=";
+    };
+  };
+  game_2048_tui = {
+    pname = "game_2048_tui";
+    version = "v0.0.2";
+    src = fetchFromGitHub {
+      owner = "WanderHuang";
+      repo = "game-2048-tui";
+      rev = "v0.0.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-/O548IEhGYSOSIG/xTGCi+P75poM5KY2AYW6lXRCtF0=";
     };
   };
   geminicommit = {
@@ -1849,15 +1860,15 @@
   };
   "tmux.fish" = {
     pname = "tmux.fish";
-    version = "fa143c43f30e49c69fec908330f378cdc7152ab2";
+    version = "7e820cb45c6784df71cbaf6dca0d17e39a9d59d4";
     src = fetchFromGitHub {
       owner = "budimanjojo";
       repo = "tmux.fish";
-      rev = "fa143c43f30e49c69fec908330f378cdc7152ab2";
+      rev = "7e820cb45c6784df71cbaf6dca0d17e39a9d59d4";
       fetchSubmodules = false;
-      sha256 = "sha256-rIMMU7gLNYVgFH3/ZtDCqxLx2TBYgJ29S7YcHO25AIg=";
+      sha256 = "sha256-ynhEhrdXQfE1dcYsSk2M2BFScNXWPh3aws0U7eDFtv4=";
     };
-    date = "2024-10-09";
+    date = "2024-10-14";
   };
   tmux2k = {
     pname = "tmux2k";
