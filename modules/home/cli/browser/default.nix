@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "lobtui";
+    myPkgs = [
+      # keep-sorted start
+      "lobtui"
+      "neonmodem"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "amfora"
