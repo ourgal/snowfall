@@ -1997,15 +1997,15 @@
   };
   "web-search.fish" = {
     pname = "web-search.fish";
-    version = "6c489c1b0369ebbf8d26505129fe74aa22cd0f03";
+    version = "29d3027685cdc7f8ed857e3888733c6d5b5458fb";
     src = fetchFromGitHub {
       owner = "veirt";
       repo = "web-search.fish";
-      rev = "6c489c1b0369ebbf8d26505129fe74aa22cd0f03";
+      rev = "29d3027685cdc7f8ed857e3888733c6d5b5458fb";
       fetchSubmodules = false;
-      sha256 = "sha256-4ijcjBj5EErlP5AW6pERIRZFZlTL5v1bTotH9bG9Izw=";
+      sha256 = "sha256-bGgdO3jS+kYaTQBhfw9bGke1S6egg9S4fmEe0buf684=";
     };
-    date = "2024-02-17";
+    date = "2024-10-14";
   };
   whitespace-format = {
     pname = "whitespace-format";
