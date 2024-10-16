@@ -27,7 +27,7 @@ rec {
           acc
           // (lib.attrsets.foldlAttrs (
             _acc: n: v:
-            _acc // { ${n} = (enabled // v); }
+            _acc // { ${n} = enabled // v; }
           ) { } opt)
         else
           builtins.throw "not supported type";
@@ -53,7 +53,7 @@ rec {
   tomlFile = file: builtins.fromTOML (builtins.readFile file);
   jsonFile = file: builtins.fromJSON (builtins.readFile file);
 
-  toTOML = inputs.nix-std.lib.serde.toTOML;
+  inherit (inputs.nix-std.lib.serde) toTOML;
   # }}}
 
   sources = jsonFile ../../_sources/generated.json;
@@ -110,7 +110,7 @@ rec {
     let
       type = builtins.typeOf subModule;
     in
-    (mkModuleOpt {
+    mkModuleOpt {
       inherit path;
       value =
         if (type == "list") then
@@ -120,7 +120,7 @@ rec {
         else
           builtins.throw "not supported type";
       prefix = "modules/home/";
-    });
+    };
 
   enableNixosSubModule =
     {
@@ -131,7 +131,7 @@ rec {
     let
       type = builtins.typeOf subModule;
     in
-    (mkModuleOpt {
+    mkModuleOpt {
       inherit path;
       value =
         if (type == "list") then
@@ -141,7 +141,7 @@ rec {
         else
           builtins.throw "not supported type";
       prefix = "modules/nixos/";
-    });
+    };
 
   # cfgNixos config.${namespace} ./. => config.${namespace}.cli.anime.adl
   cfgNixos = root: path: (mkModuleCfg root path "modules/nixos/");
@@ -246,7 +246,7 @@ rec {
         else if (builtins.isAttrs progs) then
           lib.attrsets.foldlAttrs (
             acc: n: v:
-            acc // { ${n} = (enabled // v); }
+            acc // { ${n} = enabled // v; }
           ) { } progs
         else if (builtins.isList progs) then
           builtins.foldl' (acc: p: acc // (progsHandle p)) { } progs
@@ -259,32 +259,34 @@ rec {
       options.${namespace} = optHome { inherit path extraOpts; };
 
       config = mkIf cfg.enable (
-        lib.attrsets.recursiveUpdate ({
-          home.packages =
-            (pkgHandle pkgs.${namespace} myPkgs)
-            ++ (pkgHandle pkgs nixPkgs)
-            ++ (pkgHandle pkgs.nodePackages nodePkgs)
-            ++ (pkgHandle pkgs.python3Packages pyPkgs)
-            ++ (pkgHandle pkgs.dotnetPackages dotnetPkgs)
-            ++ (pkgHandle pkgs.perlPackages perlPkgs)
-            ++ (pkgHandle pkgs.luaPackages luaPkgs)
-            ++ (pkgHandle pkgs.xorg xorgPkgs)
-            ++ (pkgHandle pkgs.xfce xfcePkgs)
-            ++ (pkgHandle pkgs.gnome gnomePkgs)
-            ++ (pkgHandle pkgs.bat-extras batPkgs)
-            ++ (pkgHandle pkgs.snowfallorg snowPkgs)
-            ++ (inputPkgs);
-          xdg.configFile = (confHandle confs);
-          xdg.dataFile = (confHandle dataFiles);
-          home.file = (confHandle files);
-          programs = (progsHandle progs);
-          services = (progsHandle servs);
-          home.sessionVariables = env;
+        lib.attrsets.recursiveUpdate {
+          home = {
+            packages =
+              (pkgHandle pkgs.${namespace} myPkgs)
+              ++ (pkgHandle pkgs nixPkgs)
+              ++ (pkgHandle pkgs.nodePackages nodePkgs)
+              ++ (pkgHandle pkgs.python3Packages pyPkgs)
+              ++ (pkgHandle pkgs.dotnetPackages dotnetPkgs)
+              ++ (pkgHandle pkgs.perlPackages perlPkgs)
+              ++ (pkgHandle pkgs.luaPackages luaPkgs)
+              ++ (pkgHandle pkgs.xorg xorgPkgs)
+              ++ (pkgHandle pkgs.xfce xfcePkgs)
+              ++ (pkgHandle pkgs.gnome gnomePkgs)
+              ++ (pkgHandle pkgs.bat-extras batPkgs)
+              ++ (pkgHandle pkgs.snowfallorg snowPkgs)
+              ++ inputPkgs;
+            file = confHandle files;
+            sessionVariables = env;
+          };
+          xdg.configFile = confHandle confs;
+          xdg.dataFile = confHandle dataFiles;
+          programs = progsHandle progs;
+          services = progsHandle servs;
           ${namespace} = enableHomeSubModule {
             inherit path;
             subModule = enable;
           };
-        }) value
+        } value
       );
     };
   # }}}
@@ -307,7 +309,7 @@ rec {
     {
       options.${namespace} = optNixos { inherit path extraOpts; };
 
-      config = mkIf cfg.enable (value);
+      config = mkIf cfg.enable value;
     };
   # }}}
 }

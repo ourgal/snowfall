@@ -1,0 +1,13 @@
+diff --git a/autoload/floaterm/wrapper/broot.vim b/autoload/floaterm/wrapper/broot.vim
+index f52b0ed..2bb0823 100644
+--- a/autoload/floaterm/wrapper/broot.vim
++++ b/autoload/floaterm/wrapper/broot.vim
+@@ -6,7 +6,7 @@
+ " ============================================================================
+
+ let s:broot_default_confpath = fnamemodify('~/.config/broot/conf.hjson', ':p')
+-let s:broot_wrapper_confpath = fnamemodify(expand('<sfile>'), ':h') . '/broot.hjson'
++let s:broot_wrapper_confpath = fnamemodify('~/.config/broot/broot.hjson', ':p')
+ let s:broot_confpath = s:broot_wrapper_confpath . ';' . s:broot_default_confpath
+
+ let s:broot_wrapper_config = [
