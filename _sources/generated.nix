@@ -1354,10 +1354,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.24.1";
+    version = "2.24.2";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.1.tar.gz";
-      sha256 = "sha256-GZf4CZ0oIutFSY++SYBKzqEguwrKgntCfquOXbcGtgI=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.2.tar.gz";
+      sha256 = "sha256-RJcpj8Y4Hj4aYcdP7DCI2BObmWmBd/vC3Ke3/rWuHCA=";
     };
   };
   pydantic-settings = {
@@ -1541,13 +1541,13 @@
   };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
-    version = "20240915";
+    version = "20241016";
     src = fetchFromGitHub {
       owner = "sbsrf";
       repo = "sbsrf";
-      rev = "20240915";
+      rev = "20241016";
       fetchSubmodules = false;
-      sha256 = "sha256-PbGUGVLI9/vmYkbK63UXbPTUAYzxwBtmHqrwEHN7SCg=";
+      sha256 = "sha256-5tZT4syf6MPBOmIjZjnjsoFWuXwtdhsvFF8/vULJs6w=";
     };
   };
   serie = {

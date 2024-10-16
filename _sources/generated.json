@@ -2499,11 +2499,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-GZf4CZ0oIutFSY++SYBKzqEguwrKgntCfquOXbcGtgI=",
+            "sha256": "sha256-RJcpj8Y4Hj4aYcdP7DCI2BObmWmBd/vC3Ke3/rWuHCA=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.2.tar.gz"
         },
-        "version": "2.24.1"
+        "version": "2.24.2"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -2849,12 +2849,12 @@
             "name": null,
             "owner": "sbsrf",
             "repo": "sbsrf",
-            "rev": "20240915",
-            "sha256": "sha256-PbGUGVLI9/vmYkbK63UXbPTUAYzxwBtmHqrwEHN7SCg=",
+            "rev": "20241016",
+            "sha256": "sha256-5tZT4syf6MPBOmIjZjnjsoFWuXwtdhsvFF8/vULJs6w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "20240915"
+        "version": "20241016"
     },
     "serie": {
         "cargoLocks": null,
