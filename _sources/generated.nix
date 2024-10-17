@@ -237,6 +237,17 @@
       sha256 = "sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N/ycu4g2W7187E3A=";
     };
   };
+  comigo = {
+    pname = "comigo";
+    version = "v0.9.11.1";
+    src = fetchFromGitHub {
+      owner = "yumenaka";
+      repo = "comigo";
+      rev = "v0.9.11.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-+SyHeJkGh9G3tklqLCF5oBL8H6XAGSEo+hVDa5Zpdhw=";
+    };
+  };
   compose2nix = {
     pname = "compose2nix";
     version = "v0.3.1";
