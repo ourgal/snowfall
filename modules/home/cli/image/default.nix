@@ -11,6 +11,7 @@ args.module (
       "graphviz"
       "imagemagick"
       "imgp"
+      "lutgen"
       "menyoki"
       "termshot"
       "viu"
