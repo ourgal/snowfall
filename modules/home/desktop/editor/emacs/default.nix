@@ -7,6 +7,7 @@ args.module (
     in
     {
       path = ./.;
+      nixPkgs = "gnuplot";
       progs = {
         emacs = {
           extraPackages = epkgs: [ epkgs.vterm ];
