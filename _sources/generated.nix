@@ -284,15 +284,15 @@
   };
   curd = {
     pname = "curd";
-    version = "bd98e60b56b7595b99729c45ef1ba397bf29761c";
+    version = "bb64b3bb3407d965e0ec17c232871dec6fcc8457";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "bd98e60b56b7595b99729c45ef1ba397bf29761c";
+      rev = "bb64b3bb3407d965e0ec17c232871dec6fcc8457";
       fetchSubmodules = false;
-      sha256 = "sha256-kKp20vtySDyaQfAdmsdu90h9dv55SdFwREd/8Nb5IZM=";
+      sha256 = "sha256-AzoEAd6WMV1ROoiKVghQReSg4dL9Z75xacmwgOGG/To=";
     };
-    date = "2024-10-13";
+    date = "2024-10-16";
   };
   dblab = {
     pname = "dblab";
@@ -455,15 +455,15 @@
   };
   fifc = {
     pname = "fifc";
-    version = "1bc301453f674ed21fac4979c65a9a4cb7f2af61";
+    version = "e953fcd521f34651d4eabedcc08cfdef7945b31d";
     src = fetchFromGitHub {
       owner = "gazorby";
       repo = "fifc";
-      rev = "1bc301453f674ed21fac4979c65a9a4cb7f2af61";
+      rev = "e953fcd521f34651d4eabedcc08cfdef7945b31d";
       fetchSubmodules = false;
-      sha256 = "sha256-14ORfbl18UOB6UszBHx7NKxnLdiJxUG7gzrtt0ZriCg=";
+      sha256 = "sha256-VmeVVwX5/rPZr98vaitvw6bqcZgaBNc+mEYkDRjFBXA=";
     };
-    date = "2024-04-07";
+    date = "2024-10-16";
   };
   fingerpaint = {
     pname = "fingerpaint";
