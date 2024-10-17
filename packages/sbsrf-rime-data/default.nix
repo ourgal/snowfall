@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   src = fetchzip {
     url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";
-    hash = "sha256-YjYUB5LNpzXCtU9cX4pDp5mJ+0Pd17r98LslaK2E4y4=";
+    hash = "sha256-XIz53/6XGrnnE0qOQzsl9Q9zFvDpi5aOt1xB2pqRU/c=";
     stripRoot = false;
   };
 
