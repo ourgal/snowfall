@@ -19,6 +19,7 @@ args.module (
       "figurine"
       "genact"
       "hr"
+      "kittysay"
       "krabby"
       "lolcat"
       "neo"
