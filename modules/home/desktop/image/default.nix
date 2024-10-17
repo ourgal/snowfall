@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "fingerpaint";
+    myPkgs = [
+      # keep-sorted start
+      "comigo"
+      "fingerpaint"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "gimp"
