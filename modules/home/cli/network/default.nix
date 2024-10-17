@@ -22,6 +22,7 @@ args.module (
       "nali"
       "q"
       "tcping-go"
+      "trippy"
       "wget"
       "whois"
       "wirelesstools"
