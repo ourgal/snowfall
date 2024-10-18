@@ -1113,6 +1113,18 @@
     };
     date = "2021-01-02";
   };
+  makedown = {
+    pname = "makedown";
+    version = "4418bd111b4f86d0e35038d45332153c263c2d06";
+    src = fetchFromGitHub {
+      owner = "tzador";
+      repo = "makedown";
+      rev = "4418bd111b4f86d0e35038d45332153c263c2d06";
+      fetchSubmodules = false;
+      sha256 = "sha256-6oZawRzQ/Q++ydqDZ2CfYyxLz9xQO8IdB/qR5JgmD8A=";
+    };
+    date = "2024-10-18";
+  };
   manga-tui = {
     pname = "manga-tui";
     version = "v0.3.1";
@@ -1254,13 +1266,13 @@
   };
   numara = {
     pname = "numara";
-    version = "v5.4.2";
+    version = "v5.5.0";
     src = fetchFromGitHub {
       owner = "bornova";
       repo = "numara-calculator";
-      rev = "v5.4.2";
+      rev = "v5.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-QswpzH+T+eAR9ObvrQwlwtvtczIcER6fzrWzw944MO4=";
+      sha256 = "sha256-JumAFKIp2Q56FdhDagjoqPlIQAzHB1SP+yBt1yW+5N4=";
     };
   };
   org-export = {

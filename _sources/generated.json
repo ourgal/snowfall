@@ -2055,6 +2055,27 @@
         },
         "version": "9ab93d72e36fe2cbb15af37c914605212ac28642"
     },
+    "makedown": {
+        "cargoLocks": null,
+        "date": "2024-10-18",
+        "extract": null,
+        "name": "makedown",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tzador",
+            "repo": "makedown",
+            "rev": "4418bd111b4f86d0e35038d45332153c263c2d06",
+            "sha256": "sha256-6oZawRzQ/Q++ydqDZ2CfYyxLz9xQO8IdB/qR5JgmD8A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4418bd111b4f86d0e35038d45332153c263c2d06"
+    },
     "manga-tui": {
         "cargoLocks": null,
         "date": null,
@@ -2321,12 +2342,12 @@
             "name": null,
             "owner": "bornova",
             "repo": "numara-calculator",
-            "rev": "v5.4.2",
-            "sha256": "sha256-QswpzH+T+eAR9ObvrQwlwtvtczIcER6fzrWzw944MO4=",
+            "rev": "v5.5.0",
+            "sha256": "sha256-JumAFKIp2Q56FdhDagjoqPlIQAzHB1SP+yBt1yW+5N4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v5.4.2"
+        "version": "v5.5.0"
     },
     "org-export": {
         "cargoLocks": null,
