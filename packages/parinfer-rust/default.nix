@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin rec {
+let
   pname = "parinfer-rust";
-  version = "0.4.3";
-
-  src = fetchFromGitHub {
-    owner = "eraserhd";
-    repo = "parinfer-rust";
-    rev = "v${version}";
-    hash = "sha256-7cnhR+11j/pxIMNp2hEuBroRyrMRoKdIFUfeA4uNRUI=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin rec {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "A Rust port of parinfer";

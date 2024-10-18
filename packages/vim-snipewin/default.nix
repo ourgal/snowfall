@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-snipewin";
-  version = "unstable-2024-03-28";
-
-  src = fetchFromGitHub {
-    owner = "4513ECHO";
-    repo = "vim-snipewin";
-    rev = "9616fd4564d61c78947e3dda53ef9ac61cce032c";
-    hash = "sha256-dUOP8/NBwAhie0DUdkjyCUuoQ9q1UD1PJm02zzz9BNg=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Manipulate windows most quickly like sniper";

@@ -7,13 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ vim-snipewin ];
-          extraConfig = ''
-            nnoremap <leader><space> <Plug>(snipewin)
-          '';
-        };
+      progs.vim = {
+        plugins = with pkgs.${namespace}; [ vim-snipewin ];
+        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )

@@ -3,12 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "vim-full";
     enable = [
       # keep-sorted start
       "helix"
       "kakoune"
       "nixvim"
+      "vim"
       # keep-sorted end
     ];
   }

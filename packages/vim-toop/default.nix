@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-toop";
-  version = "unstable-2022-11-30";
-
-  src = fetchFromGitHub {
-    owner = "ourgal";
-    repo = "vim-toop";
-    rev = "836c043756b57770068186886b72cbb2fef0d0eb";
-    hash = "sha256-+z/4uAIUMqaoXxzqF9qVZsPIWh04zkfybZT+opeJOXg=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Add custom behaviour to your text objects";

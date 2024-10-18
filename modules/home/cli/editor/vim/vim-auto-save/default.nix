@@ -7,14 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ vim-auto-save ];
-          extraConfig = ''
-            let g:auto_save = v:true
-            let g:auto_save_silent = v:true
-          '';
-        };
+      progs.vim = {
+        plugins = with pkgs.${namespace}; [ vim-auto-save ];
+        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )

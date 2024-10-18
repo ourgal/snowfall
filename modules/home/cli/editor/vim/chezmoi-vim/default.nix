@@ -7,11 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ chezmoi-vim ];
-        };
-      };
+      progs.vim.plugins = with pkgs.${namespace}; [ chezmoi-vim ];
     }
   )
 )

@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-workspace";
-  version = "unstable-2023-05-29";
-
-  src = fetchFromGitHub {
-    owner = "thaerkh";
-    repo = "vim-workspace";
-    rev = "c0d1e4332a378f58bfdf363b4957168fa78e79b4";
-    hash = "sha256-2Brx098dk5THiieBiW71FG9mUUwS1CSY9mpOPWA/Tq4=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Automated Vim session management with file auto-save and persistent undo history";

@@ -1,20 +1,12 @@
 { ... }@args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.vimPlugins; [ catppuccin-vim ];
-          extraConfig = ''
-            colorscheme catppuccin_mocha
-          '';
-        };
-      };
-    }
-  )
+  // {
+    path = ./.;
+    progs.vim = {
+      plugins = with args.pkgs.vimPlugins; [ catppuccin-vim ];
+      extraConfig = builtins.readFile ./config.vim;
+    };
+  }
+
 )

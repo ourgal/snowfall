@@ -1,17 +1,8 @@
 { ... }@args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.vimPlugins; [ vim-polyglot ];
-        };
-      };
-    }
-  )
+  // {
+    path = ./.;
+    progs.vim.plugins = with args.pkgs.vimPlugins; [ vim-polyglot ];
+  }
 )
