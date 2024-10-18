@@ -2535,11 +2535,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-+QsTloK+5NIGUnPVGF1x036kbP5X4bWuGE/GoLJITKA=",
+            "sha256": "sha256-RKGASr/6yeajA3K7RfbK+rlF71ryXmaxxjTAHdOeAYg=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.5.2.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.0.tar.gz"
         },
-        "version": "2.5.2"
+        "version": "2.6.0"
     },
     "quartz": {
         "cargoLocks": null,
@@ -3185,12 +3185,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v0.1.0",
-            "sha256": "sha256-Icee4od3tPJ5zASxlJ4bFLv/5dz7UjaTHY11QTObbEg=",
+            "rev": "v0.2.0",
+            "sha256": "sha256-tCbfpuiV/Conxf1SoRc014+55eLSMEaxfbXecrrqEHU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.0"
+        "version": "v0.2.0"
     },
     "textual": {
         "cargoLocks": null,
