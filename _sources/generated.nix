@@ -2189,15 +2189,15 @@
   };
   vim-toop = {
     pname = "vim-toop";
-    version = "a054d54f2fde69958cb652a7a81f7e38865dd0c5";
+    version = "836c043756b57770068186886b72cbb2fef0d0eb";
     src = fetchFromGitHub {
-      owner = "jeanCarloMachado";
+      owner = "ourgal";
       repo = "vim-toop";
-      rev = "a054d54f2fde69958cb652a7a81f7e38865dd0c5";
+      rev = "836c043756b57770068186886b72cbb2fef0d0eb";
       fetchSubmodules = false;
-      sha256 = "sha256-aTkYyZWWYVJdZjxoL5qyci2OrjR3g3vY4q0hgCRrXSs=";
+      sha256 = "sha256-+z/4uAIUMqaoXxzqF9qVZsPIWh04zkfybZT+opeJOXg=";
     };
-    date = "2022-11-30";
+    date = "2024-10-16";
   };
   vim-visual-star-search = {
     pname = "vim-visual-star-search";
