@@ -734,3 +734,7 @@ fetch.github = "nhoffman/org-export"
 [comigo]
 src.github = "yumenaka/comigo"
 fetch.github = "yumenaka/comigo"
+
+[makedown]
+src.git = "https://github.com/tzador/makedown"
+fetch.github = "tzador/makedown"
