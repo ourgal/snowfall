@@ -7,14 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ git-messager-vim ];
-          extraConfig = ''
-            let g:git_messenger_no_default_mappings = v:true
-            nmap <Leader>gm <Plug>(git-messenger)
-          '';
-        };
+      progs.vim = {
+        plugins = with pkgs.${namespace}; [ git-messager-vim ];
+        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )

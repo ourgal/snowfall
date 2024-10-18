@@ -1,19 +1,15 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
 
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-templates";
-  version = "unstable-2024-04-25";
-
-  src = fetchFromGitHub {
-    owner = "tibabit";
-    repo = "vim-templates";
-    rev = "c4ce1903fc458688bc421f0cb4572af8a8977cdb";
-    hash = "sha256-p0TEJr/2TBoOk48xgtrqwnAtQlYRkz/NEKcadLAJoCA=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Create files from templates";

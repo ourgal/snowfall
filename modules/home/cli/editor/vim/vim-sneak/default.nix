@@ -1,25 +1,11 @@
 { ... }@args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.vimPlugins; [ vim-sneak ];
-          extraConfig = ''
-            map s <Plug>Sneak_s
-            map S <Plug>Sneak_S
-            map f <Plug>Sneak_f
-            map F <Plug>Sneak_F
-            map t <Plug>Sneak_t
-            map T <Plug>Sneak_T
-          '';
-        };
-      };
-    }
-  )
+  // {
+    path = ./.;
+    progs.vim = {
+      plugins = with args.pkgs.vimPlugins; [ vim-sneak ];
+      extraConfig = builtins.readFile ./config.vim;
+    };
+  }
 )

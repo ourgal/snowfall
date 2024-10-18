@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vimsuggest";
-  version = "unstable-2024-10-15";
-
-  src = fetchFromGitHub {
-    owner = "girishji";
-    repo = "vimsuggest";
-    rev = "5cec83b18ece712e88178dccf77eed68c7d627dc";
-    hash = "sha256-iYEKZFKPxhJDooyXXLb/sTRNifFRe3lQqGjAjyqe4sU=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Auto-completion for Vim's command-line";

@@ -7,10 +7,8 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ vim-silicon ];
-        };
+      progs.vim = {
+        plugins = with pkgs.${namespace}; [ vim-silicon ];
       };
     }
   )

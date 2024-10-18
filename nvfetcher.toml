@@ -738,3 +738,91 @@ fetch.github = "yumenaka/comigo"
 [makedown]
 src.git = "https://github.com/tzador/makedown"
 fetch.github = "tzador/makedown"
+
+[vim-auto-save]
+src.git = "https://github.com/ourgal/vim-auto-save"
+fetch.github = "ourgal/vim-auto-save"
+
+[vimsuggest]
+src.git = "https://github.com/girishji/vimsuggest"
+fetch.github = "girishji/vimsuggest"
+
+[vim-cycle]
+src.git = "https://github.com/zef/vim-cycle"
+fetch.github = "zef/vim-cycle"
+
+[vim-floaterm]
+src.git = "https://github.com/voldikss/vim-floaterm"
+fetch.github = "voldikss/vim-floaterm"
+
+[vim-github-link]
+src.git = "https://github.com/knsh14/vim-github-link"
+fetch.github = "knsh14/vim-github-link"
+
+[vim-mkdir]
+src.git = "https://github.com/pbrisbin/vim-mkdir"
+fetch.github = "pbrisbin/vim-mkdir"
+
+[vim-silicon]
+src.git = "https://github.com/segeljakt/vim-silicon"
+fetch.github = "segeljakt/vim-silicon"
+
+[vim-snipewin]
+src.git = "https://github.com/4513ECHO/vim-snipewin"
+fetch.github = "4513ECHO/vim-snipewin"
+
+[vim-templates]
+src.git = "https://github.com/tibabit/vim-templates"
+fetch.github = "tibabit/vim-templates"
+
+[vim-toop]
+src.git = "https://github.com/jeanCarloMachado/vim-toop"
+fetch.github = "jeanCarloMachado/vim-toop"
+
+[vim-visual-star-search]
+src.git = "https://github.com/ourgal/vim-visual-star-search"
+fetch.github = "ourgal/vim-visual-star-search"
+
+[vim-zoom]
+src.git = "https://github.com/ourgal/vim-zoom"
+fetch.github = "ourgal/vim-zoom"
+
+[vim-workspace]
+src.git = "https://github.com/thaerkh/vim-workspace"
+fetch.github = "thaerkh/vim-workspace"
+
+[visual-split-vim]
+src.git = "https://github.com/wellle/visual-split.vim"
+fetch.github = "wellle/visual-split.vim"
+
+[vlime]
+src.git = "https://github.com/vlime/vlime"
+fetch.github = "vlime/vlime"
+
+[chezmoi-vim]
+src.git = "https://github.com/alker0/chezmoi.vim"
+fetch.github = "alker0/chezmoi.vim"
+
+[devdocs-vim]
+src.git = "https://github.com/girishji/devdocs.vim"
+fetch.github = "girishji/devdocs.vim"
+
+[easyjump-vim]
+src.git = "https://github.com/girishji/easyjump.vim"
+fetch.github = "girishji/easyjump.vim"
+
+[gtm-vim-plugin]
+src.git = "https://github.com/git-time-metric/gtm-vim-plugin"
+fetch.github = "git-time-metric/gtm-vim-plugin"
+
+[pangu-vim]
+src.git = "https://github.com/hotoo/pangu.vim"
+fetch.github = "hotoo/pangu.vim"
+
+[parinfer-rust]
+src.git = "https://github.com/eraserhd/parinfer-rust"
+fetch.github = "eraserhd/parinfer-rust"
+
+[vim-tome]
+src.git = "https://github.com/laktak/tome"
+fetch.github = "laktak/tome"

@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-zoom";
-  version = "unstable-2024-07-16";
-
-  src = fetchFromGitHub {
-    owner = "ourgal";
-    repo = "vim-zoom";
-    rev = "65145acd49c62e042502e6f9a5b9b468006c768f";
-    hash = "sha256-mTcqxP9mr9P14d7fCUWhIY7Zu4ehjwLJbjMrBsNBUHc=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Toggle zoom in / out individual windows (splits";

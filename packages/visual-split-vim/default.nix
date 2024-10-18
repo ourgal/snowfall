@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "visual-split-vim";
-  version = "unstable-2017-01-29";
-
-  src = fetchFromGitHub {
-    owner = "wellle";
-    repo = "visual-split.vim";
-    rev = "423a25911b3e8da04a28d29f205e1059a06e6afa";
-    hash = "sha256-v0j6AExrOJIgde/Aphr7lvonZptMwYQLCB6E+2YsiVg=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Vim plugin to control splits with visual selections or text objects";

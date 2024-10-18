@@ -7,10 +7,8 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.${namespace}; [ vim-visual-star-search ];
-        };
+      progs.vim = {
+        plugins = with pkgs.${namespace}; [ vim-visual-star-search ];
       };
     }
   )

@@ -1,20 +1,11 @@
 { ... }@args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.vimPlugins; [ undotree ];
-          extraConfig = ''
-            let g:undotree_SetFocusWhenToggle = 1
-          '';
-        };
-      };
-    }
-  )
+  // {
+    path = ./.;
+    progs.vim = {
+      plugins = with args.pkgs.vimPlugins; [ undotree ];
+      extraConfig = builtins.readFile ./config.vim;
+    };
+  }
 )

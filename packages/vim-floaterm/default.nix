@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-floaterm";
-  version = "unstable-2024-04-08";
-
-  src = fetchFromGitHub {
-    owner = "voldikss";
-    repo = "vim-floaterm";
-    rev = "4e28c8dd0271e10a5f55142fb6fe9b1599ee6160";
-    hash = "sha256-wIgcBcdxJsT+qrsC5Boj6hp0xpp5gFeQFhK7yyC5a1o=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   patches = [ ./broot.patch ];
 
@@ -22,7 +17,6 @@ pkgs.vimUtils.buildVimPlugin {
     homepage = "https://github.com/voldikss/vim-floaterm";
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "vim-floaterm";
     platforms = platforms.all;
   };
 }

@@ -7,13 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        vim = {
-          plugins = with pkgs.vimPlugins; [ wiki-vim ];
-          extraConfig = ''
-            let g:wiki_root = '~/workspace/wiki'
-          '';
-        };
+      progs.vim = {
+        plugins = with pkgs.vimPlugins; [ wiki-vim ];
+        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )

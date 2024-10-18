@@ -1,19 +1,14 @@
 {
   lib,
   pkgs,
-  fetchFromGitHub,
+  namespace,
 }:
-
-pkgs.vimUtils.buildVimPlugin {
+let
   pname = "vim-visual-star-search";
-  version = "unstable-2024-07-16";
-
-  src = fetchFromGitHub {
-    owner = "ourgal";
-    repo = "vim-visual-star-search";
-    rev = "3ea07a973a8f3cb2b714c50ac0adca35da157631";
-    hash = "sha256-hiL9DuvQl4wUSZWCLJjGZYWLzIRXqbVCtZ1GLJTKFp4=";
-  };
+  source = pkgs.${namespace}.sources.${pname};
+in
+pkgs.vimUtils.buildVimPlugin {
+  inherit (source) pname version src;
 
   meta = with lib; {
     description = "Start a * or # search from a visual block";
