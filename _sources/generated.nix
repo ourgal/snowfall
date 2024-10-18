@@ -1373,10 +1373,10 @@
   };
   pydantic-settings = {
     pname = "pydantic-settings";
-    version = "2.5.2";
+    version = "2.6.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.5.2.tar.gz";
-      sha256 = "sha256-+QsTloK+5NIGUnPVGF1x036kbP5X4bWuGE/GoLJITKA=";
+      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.0.tar.gz";
+      sha256 = "sha256-RKGASr/6yeajA3K7RfbK+rlF71ryXmaxxjTAHdOeAYg=";
     };
   };
   quartz = {
@@ -1723,13 +1723,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.1.0";
+    version = "v0.2.0";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.1.0";
+      rev = "v0.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Icee4od3tPJ5zASxlJ4bFLv/5dz7UjaTHY11QTObbEg=";
+      sha256 = "sha256-tCbfpuiV/Conxf1SoRc014+55eLSMEaxfbXecrrqEHU=";
     };
   };
   textual = {
