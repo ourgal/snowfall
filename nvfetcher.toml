@@ -776,8 +776,8 @@ src.git = "https://github.com/tibabit/vim-templates"
 fetch.github = "tibabit/vim-templates"
 
 [vim-toop]
-src.git = "https://github.com/jeanCarloMachado/vim-toop"
-fetch.github = "jeanCarloMachado/vim-toop"
+src.git = "https://github.com/ourgal/vim-toop"
+fetch.github = "ourgal/vim-toop"
 
 [vim-visual-star-search]
 src.git = "https://github.com/ourgal/vim-visual-star-search"
