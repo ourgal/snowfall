@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -40,7 +40,7 @@ args.module (
             };
           };
           tool = {
-            editor = config.${namespace}.user.editor;
+            inherit (config.${namespace}.user) editor;
             shell = "${pkgs.bash}/bin/bash";
             pager = "less -FIRX";
             fzf-preview = "bat -p --color always {-1}";

@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -49,7 +49,7 @@ let
     users.users = lib.mkIf (user == defaultUser) {
       ${defaultUser} = {
         description = "kavita service user";
-        group = group;
+        inherit group;
       };
     };
 

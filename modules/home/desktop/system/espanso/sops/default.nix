@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,15 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      value = {
-        sops = {
-          secrets = {
-            "espanso/mail.yml" = {
-              mode = "0600";
-              path = "${config.xdg.configHome}/espanso/match/mail.yml";
-            };
-          };
-        };
+      value.sops.secrets."espanso/mail.yml" = {
+        mode = "0600";
+        path = "${config.xdg.configHome}/espanso/match/mail.yml";
       };
     }
   )

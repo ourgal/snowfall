@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -11,7 +11,7 @@ args.module (
         lib
         ;
       cfg = cfgHome config.${namespace} ./.;
-      palette = config.colorScheme.palette;
+      inherit (config.colorScheme) palette;
     in
     {
       path = ./.;
@@ -23,7 +23,7 @@ args.module (
               position = "top";
 
               modules-center =
-                if cfg.simplebar == true then
+                if cfg.simplebar then
                   [ "hyprland/window" ]
                 else
                   [
@@ -36,7 +36,7 @@ args.module (
                     "clock"
                   ];
               modules-left =
-                if cfg.simplebar == true then
+                if cfg.simplebar then
                   [
                     "custom/startmenu"
                     "hyprland/workspaces"
@@ -50,7 +50,7 @@ args.module (
                     "hyprland/window"
                   ];
               modules-right =
-                if cfg.simplebar == true then
+                if cfg.simplebar then
                   [
                     "idle_inhibitor"
                     "custom/themeselector"
@@ -69,7 +69,7 @@ args.module (
                   ];
 
               "hyprland/workspaces" = {
-                format = if cfg.simplebar == true then "{name}" else "{icon}";
+                format = if cfg.simplebar then "{name}" else "{icon}";
                 format-icons = {
                   default = " ";
                   active = " ";
@@ -79,7 +79,7 @@ args.module (
                 on-scroll-down = "hyprctl dispatch workspace e-1";
               };
               "clock" = {
-                format = if cfg.clock24h == true then "{: %H:%M}" else "{: %I:%M %p}";
+                format = if cfg.clock24h then "{: %H:%M}" else "{: %I:%M %p}";
                 tooltip = true;
                 tooltip-format = "<big>{:%A, %d.%B %Y }</big><tt><small>{calendar}</small></tt>";
               };
@@ -212,9 +212,9 @@ args.module (
                     }
                     window#waybar {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background-color: rgba(26,27,38,0);\n  border-bottom: 1px solid rgba(26,27,38,0);\n  border-radius: 0px;\n  color: #${palette.base0F};\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    "  color: #${config.colorScheme.colors.base05};\n  background-color: #${palette.base00};\n  border-radius: 0px;\n  border-bottom: 1px solid rgba(26,27,38,0);\n"
                  else
                    "  background-color: #${palette.base00};\n  border-bottom: 1px solid #${palette.base00};\n  border-radius: 0px;\n  color: #${palette.base0F};\n"
@@ -222,9 +222,9 @@ args.module (
                     }
                     #workspaces {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: linear-gradient(180deg, #${palette.base00}, #${palette.base01});\n  margin: 5px;\n  padding: 0px 1px;\n  border-radius: 15px;\n  border: 0px;\n  font-style: normal;\n  color: #${palette.base00};\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -238,9 +238,9 @@ args.module (
                     }
                     #workspaces button {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  padding: 0px 5px;\n  margin: 4px 3px;\n  border-radius: 15px;\n  border: 0px;\n  color: #${palette.base00};\n  background: linear-gradient(45deg, #${palette.base0D}, #${palette.base0E});\n  opacity: 0.5;\n  transition: all 0.3s ease-in-out;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -254,9 +254,9 @@ args.module (
                     }
                     #workspaces button.active {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  padding: 0px 5px;\n  margin: 4px 3px;\n  border-radius: 15px;\n  border: 0px;\n  color: #${palette.base00};\n  background: linear-gradient(45deg, #${palette.base0D}, #${palette.base0E});\n  opacity: 1.0;\n  min-width: 40px;\n  transition: all 0.3s ease-in-out;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -270,9 +270,9 @@ args.module (
                     }
                     #workspaces button:hover {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  border-radius: 15px;\n  color: #${palette.base00};\n  background: linear-gradient(45deg, #${palette.base0D}, #${palette.base0E});\n  opacity: 0.8;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -294,9 +294,9 @@ args.module (
                     }
                     #window {
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  color: #${palette.base05};\n  background: #${palette.base00};\n  border-radius: 50px 15px 50px 15px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -309,9 +309,9 @@ args.module (
                     #memory {
                  	color: #${palette.base0F};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -324,9 +324,9 @@ args.module (
                     #clock {
                   	color: #${palette.base0B};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -339,9 +339,9 @@ args.module (
                     #idle_inhibitor {
                   	color: #${palette.base0A};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 50px 15px 50px 15px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -354,9 +354,9 @@ args.module (
                     #cpu {
                   	color: #${palette.base07};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 50px 15px 50px 15px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -369,9 +369,9 @@ args.module (
                     #disk {
                   	color: #${palette.base03};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -384,9 +384,9 @@ args.module (
                     #battery {
                   	color: #${palette.base08};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -399,9 +399,9 @@ args.module (
                     #network {
                   	color: #${palette.base09};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 50px 15px 50px 15px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -414,9 +414,9 @@ args.module (
                     #tray {
                   	color: #${palette.base05};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 0px 0px 50px;\n  margin: 5px 0px 5px 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -429,9 +429,9 @@ args.module (
                     #pulseaudio {
                   	color: #${palette.base0D};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 50px 15px 50px 15px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -444,9 +444,9 @@ args.module (
                     #custom-notification {
                   	color: #${palette.base0C};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -459,9 +459,9 @@ args.module (
                     #custom-themeselector {
                   	color: #${palette.base0D};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -474,9 +474,9 @@ args.module (
                     #custom-startmenu {
                   	color: #${palette.base03};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 0px 15px 50px 0px;\n  margin: 5px 5px 5px 0px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;
@@ -489,9 +489,9 @@ args.module (
                     #idle_inhibitor {
                   	color: #${palette.base09};
               	${
-                 if cfg.slickbar == true then
+                 if cfg.slickbar then
                    "  background: #${palette.base00};\n  border-radius: 15px 50px 15px 50px;\n  margin: 5px;\n  padding: 2px 20px;\n"
-                 else if cfg.simplebar == true then
+                 else if cfg.simplebar then
                    ''
                      	  color: #${config.colorScheme.colors.base05};
                                background: transparent;

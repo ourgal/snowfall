@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -11,14 +11,8 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        fish = {
-          functions = {
-            stc = {
-              body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
-            };
-          };
-        };
+      progs.fish.functions.stc = {
+        body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
       };
       files = {
         ".vim" = ln "${sync}/vim";

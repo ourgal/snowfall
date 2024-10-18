@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -8,18 +8,10 @@ args.module (
     {
       path = ./.;
       nixPkgs = "rustypaste-cli";
-      confs = {
-        "rustypaste/config.toml" = toTOML {
-          server = {
-            address = "http://rustypaste.zxc.cn";
-          };
-          paste = {
-            oneshot = false;
-          };
-          style = {
-            prettify = true;
-          };
-        };
+      confs."rustypaste/config.toml" = toTOML {
+        server.address = "http://rustypaste.zxc.cn";
+        paste.oneshot = false;
+        style.prettify = true;
       };
     }
   )

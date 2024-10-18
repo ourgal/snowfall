@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -8,18 +8,14 @@ args.module (
     {
       path = ./.;
       nixPkgs = "ov";
-      progs = {
-        git = {
-          extraConfig = {
-            delta = enableOpt [
-              "navigate"
-              "side-by-side"
-              "file-yellow"
-            ];
-            # paper.log = "ov -F --section-delimiter '^commit' --section-header-num 3"; # 0.33.0
-            paper.log = "ov -F --section-delimiter '^commit'";
-          };
-        };
+      progs.git.extraConfig = {
+        delta = enableOpt [
+          "navigate"
+          "side-by-side"
+          "file-yellow"
+        ];
+        # paper.log = "ov -F --section-delimiter '^commit' --section-header-num 3"; # 0.33.0
+        paper.log = "ov -F --section-delimiter '^commit'";
       };
       confs = {
         "ov/config.yaml" = builtins.toJSON {
@@ -198,9 +194,7 @@ args.module (
           };
         };
       };
-      env = {
-        DELTA_PAGER = "ov --section-delimiter '^(commit|added:|removed:|renamed:|Δ)' --section-header --pattern '•'";
-      };
+      env.DELTA_PAGER = "ov --section-delimiter '^(commit|added:|removed:|renamed:|Δ)' --section-header --pattern '•'";
     }
   )
 )

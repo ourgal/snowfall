@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -8,9 +8,7 @@ args.module (
     {
       path = ./.;
       nixPkgs = "jellyfin-mpv-shim";
-      confs = {
-        jellyfin-mpv-shim = ./mpv.conf;
-      };
+      confs.jellyfin-mpv-shim = ./mpv.conf;
       value = {
         systemd.user.services.jellyfin-mpv-shim = {
           Unit = {

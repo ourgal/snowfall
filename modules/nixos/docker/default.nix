@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -9,15 +9,17 @@ let
   inherit (lib.${namespace}) nixosModule enabled;
   user = config.${namespace}.user.name;
   value = {
-    virtualisation.docker = enabled // {
-      autoPrune = enabled // {
-        dates = "weekly";
+    virtualisation = {
+      docker = enabled // {
+        autoPrune = enabled // {
+          dates = "weekly";
+        };
       };
+      oci-containers.backend = "docker";
+      arion.backend = "docker";
     };
     users.users.${user}.extraGroups = [ "docker" ];
 
-    virtualisation.oci-containers.backend = "docker";
-    virtualisation.arion.backend = "docker";
     environment.systemPackages = with pkgs; [ docker-compose ];
   };
   path = ./.;

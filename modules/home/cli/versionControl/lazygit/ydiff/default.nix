@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,13 +7,11 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        lazygit.settings = {
-          gui.sidePanelWidth = 0.2;
-          git.paging = {
-            colorArg = "never";
-            pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}";
-          };
+      progs.lazygit.settings = {
+        gui.sidePanelWidth = 0.2;
+        git.paging = {
+          colorArg = "never";
+          pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}";
         };
       };
     }

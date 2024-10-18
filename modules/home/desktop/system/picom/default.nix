@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -9,7 +9,7 @@ args.module (
         enabled
         disabled
         ;
-      awesome = config.${namespace}.awesome;
+      inherit (config.${namespace}) awesome;
       conf =
         if (awesome.alphaTechnolog == enabled) then
           { alphaTechnolog = enabled; }

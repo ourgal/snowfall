@@ -1,8 +1,8 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled;
-  host = config.${namespace}.user.host;
+  inherit (config.${namespace}.user) host;
   value = {
     services.soft-serve = enabled // {
       settings = {

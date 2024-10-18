@@ -1,8 +1,8 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;
-  host = (config.${namespace}.user).host;
+  inherit (config.${namespace}.user) host;
   value = {
     disko.devices = {
       disk.disk1 = {

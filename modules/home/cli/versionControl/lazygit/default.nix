@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -9,23 +9,17 @@ args.module (
       path = ./.;
       progs = [
         {
-          fish = {
-            interactiveShellInit = ''
-              bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
-            '';
-          };
+          fish.interactiveShellInit = ''
+            bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
+          '';
         }
         {
           lazygit = {
             catppuccin = enabled;
             settings = {
-              gui = {
-                nerdFontsVersion = "3";
-              };
+              gui.nerdFontsVersion = "3";
               promptToReturnFromSubprocess = false;
-              git = {
-                parseEmoji = true;
-              };
+              git.parseEmoji = true;
               customCommands = [
                 {
                   key = "a";

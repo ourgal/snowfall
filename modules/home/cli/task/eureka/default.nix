@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -14,13 +14,7 @@ args.module (
             {"repo":"${config.xdg.dataHome}/eureka/ideas"}
           '';
       };
-      progs = {
-        fish = {
-          shellAbbrs = {
-            ideas = "eureka";
-          };
-        };
-      };
+      progs.fish.shellAbbrs.ideas = "eureka";
     }
   )
 )

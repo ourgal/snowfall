@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -65,9 +65,11 @@ args.module (
                     "file-type"
                   ];
                   separator = "│";
-                  mode.normal = "NORMAL";
-                  mode.insert = "INSERT";
-                  mode.select = "SELECT";
+                  mode = {
+                    normal = "NORMAL";
+                    insert = "INSERT";
+                    select = "SELECT";
+                  };
                 };
                 lsp = {
                   display-messages = true;

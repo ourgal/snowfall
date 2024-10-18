@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -346,7 +346,7 @@ args.module (
             historyLimit = 20000;
             newSession = true;
             baseIndex = 1;
-            catppuccin.extraConfig = lib.mkIf (config.catppuccin.enable == true) ''
+            catppuccin.extraConfig = lib.mkIf config.catppuccin.enable ''
               set -g @catppuccin_window_left_separator ""
               set -g @catppuccin_window_right_separator " "
               set -g @catppuccin_window_middle_separator " █"
@@ -379,7 +379,7 @@ args.module (
                   [ kanagawa ]
                 else if (cfg.theme == "minimal") then
                   [ minimal ]
-                else if (config.catppuccin.enable == true) then
+                else if config.catppuccin.enable then
                   [
                     pkgs.${namespace}.tmux-loadavg
                     tmuxPlugins.battery
@@ -387,7 +387,7 @@ args.module (
                 else
                   [ ]
               )
-              ++ (if (cfg.transient.enable) then [ transient ] else [ ])
+              ++ (if cfg.transient.enable then [ transient ] else [ ])
               ++ (if cfg.resurrect.enable then pluginsResurrect else [ ]);
           };
         }

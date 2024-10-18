@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled;

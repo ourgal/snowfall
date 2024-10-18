@@ -1,10 +1,10 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;
   user = config.${namespace}.user.name;
-  host = config.${namespace}.user.host;
-  desktops = lib.${namespace}.settings.desktops;
+  inherit (config.${namespace}.user) host;
+  inherit (lib.${namespace}.settings) desktops;
   value = {
     sops = {
       age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];

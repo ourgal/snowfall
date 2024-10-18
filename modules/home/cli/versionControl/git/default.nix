@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -66,13 +66,7 @@ args.module (
             };
           };
         }
-        {
-          fish = {
-            shellAbbrs = {
-              gr = "cd (git root)";
-            };
-          };
-        }
+        { fish.shellAbbrs.gr = "cd (git root)"; }
       ];
     }
   )

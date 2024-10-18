@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -24,14 +24,14 @@ let
       ];
     };
 
-    programs.hyprland = enabled // {
-      xwayland = enabled;
-    };
-
-    programs.sway = enabled;
-
-    programs.niri = enabled // {
-      package = pkgs.niri;
+    programs = {
+      hyprland = enabled // {
+        xwayland = enabled;
+      };
+      sway = enabled;
+      niri = enabled // {
+        package = pkgs.niri;
+      };
     };
 
     # for swaylock

@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -18,15 +18,11 @@ args.module (
       "ugrep"
       # keep-sorted end
     ];
-    progs = {
-      fish.functions = {
-        sg = {
-          body = ''
-            ast-grep $argv
-          '';
-          description = "ast-grep alias";
-        };
-      };
+    progs.fish.functions.sg = {
+      body = ''
+        ast-grep $argv
+      '';
+      description = "ast-grep alias";
     };
   }
 )

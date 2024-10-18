@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,18 +7,12 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        fish = {
-          functions = {
-            tere = {
-              body = # fish
-                ''
-                  set --local result (${pkgs.tere}/bin/tere $argv)
-                  test -n "$result" && cd -- "$result"
-                '';
-            };
-          };
-        };
+      progs.fish.functions.tere = {
+        body = # fish
+          ''
+            set --local result (${pkgs.tere}/bin/tere $argv)
+            test -n "$result" && cd -- "$result"
+          '';
       };
     }
   )

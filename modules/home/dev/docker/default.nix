@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -14,12 +14,6 @@ args.module (
       "podman-compose"
       # keep-sorted end
     ];
-    progs = {
-      fish = {
-        shellAbbrs = {
-          zd = "lazydocker";
-        };
-      };
-    };
+    progs.fish.shellAbbrs.zd = "lazydocker";
   }
 )

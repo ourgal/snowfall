@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -8,7 +8,7 @@ let
     ;
   inherit (lib.${namespace}) nixosModule enabled mkSyncthingFolders;
   user = config.${namespace}.user.name;
-  host = config.${namespace}.user.host;
+  inherit (config.${namespace}.user) host;
   dataDir = "~/.local/share/syncthing";
   guiAddress = "0.0.0.0:8384";
   devices = {
@@ -76,7 +76,7 @@ let
           localAnnouncePort = 21027;
           urAccepted = -1;
         };
-        devices = lib.attrsets.filterAttrs (n: v: n != host) devices;
+        devices = lib.attrsets.filterAttrs (n: _: n != host) devices;
         folders = mkSyncthingFolders { inherit dataDir host folders; };
       };
     };

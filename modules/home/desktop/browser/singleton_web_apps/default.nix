@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -41,7 +41,6 @@ args.module (
         ${singleton} "$1" ${chromeLikeBrowser} --start-fullscreen --user-data-dir=~/.chrome_no_cors --disable-web-security --app="$URL"
       '';
       webapp_sh = "${webapp}/bin/webapp.sh";
-      webapp_no_cors_sh = "${webapp_no_cors}/bin/webapp_no_cors.sh";
       yacd = pkgs.writeShellScriptBin "yacd" ''${webapp_sh} "yacd" "http://192.168.123.1:9999/ui/#/proxies"'';
     in
     {

@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -13,5 +13,4 @@ args.module (
       # keep-sorted end
     ];
   }
-
 )

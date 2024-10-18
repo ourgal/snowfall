@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,11 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        git.hooks = {
-          pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
-          commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
-        };
+      progs.git.hooks = {
+        pre-commit = "${pkgs.${namespace}.git-pre-commit}/bin/git-pre-commit";
+        commit-msg = "${pkgs.${namespace}.git-commit-msg}/bin/git-commit-msg";
       };
     }
   )

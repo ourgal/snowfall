@@ -6,7 +6,7 @@
 }:
 let
   inherit (lib.${namespace}) enabled disabled enabledList;
-  user = (config.${namespace}.user).name;
+  user = config.${namespace}.user.name;
 in
 {
   dot =

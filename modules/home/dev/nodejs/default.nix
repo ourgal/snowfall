@@ -1,13 +1,15 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "nodejs"
+      "pnpm"
       "yarn"
+      # keep-sorted end
     ];
-    nodePkgs = "pnpm";
     files = [
       {
         ".npmrc" = ''
@@ -16,13 +18,9 @@ args.module (
       }
       { ".local/share/pnpm/.keep" = ""; }
     ];
-    progs = {
-      fish = {
-        shellInit = ''
-          set -x PNPM_HOME "$HOME/.local/share/pnpm"
-          fish_add_path ~/.local/share/pnpm
-        '';
-      };
-    };
+    progs.fish.shellInit = ''
+      set -x PNPM_HOME "$HOME/.local/share/pnpm"
+      fish_add_path ~/.local/share/pnpm
+    '';
   }
 )

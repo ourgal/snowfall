@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -8,11 +8,9 @@ args.module (
     {
       path = ./.;
       myPkgs = "serpl";
-      confs = {
-        "serpl/config.toml" = toTOML {
-          keybindings = {
-            "<Ctrl-q>" = "Quit";
-          };
+      confs."serpl/config.toml" = toTOML {
+        keybindings = {
+          "<Ctrl-q>" = "Quit";
         };
       };
     }

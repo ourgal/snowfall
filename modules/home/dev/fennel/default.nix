@@ -1,14 +1,16 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
     path = ./.;
     myPkgs = "antifennel";
     nixPkgs = [
+      # keep-sorted start
       "fennel"
-      "parinfer-rust-emacs"
       "fennel-ls"
       "fnlfmt"
+      "parinfer-rust-emacs"
+      # keep-sorted end
     ];
   }
 )
