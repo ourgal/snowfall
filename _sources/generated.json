@@ -4001,7 +4001,7 @@
     },
     "vim-toop": {
         "cargoLocks": null,
-        "date": "2022-11-30",
+        "date": "2024-10-16",
         "extract": null,
         "name": "vim-toop",
         "passthru": null,
@@ -4011,14 +4011,14 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "jeanCarloMachado",
+            "owner": "ourgal",
             "repo": "vim-toop",
-            "rev": "a054d54f2fde69958cb652a7a81f7e38865dd0c5",
-            "sha256": "sha256-aTkYyZWWYVJdZjxoL5qyci2OrjR3g3vY4q0hgCRrXSs=",
+            "rev": "836c043756b57770068186886b72cbb2fef0d0eb",
+            "sha256": "sha256-+z/4uAIUMqaoXxzqF9qVZsPIWh04zkfybZT+opeJOXg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a054d54f2fde69958cb652a7a81f7e38865dd0c5"
+        "version": "836c043756b57770068186886b72cbb2fef0d0eb"
     },
     "vim-visual-star-search": {
         "cargoLocks": null,
