@@ -11,7 +11,7 @@ let
     enabledList
     sources
     ;
-  user = (config.${namespace}.user).name;
+  user = config.${namespace}.user.name;
 in
 {
   imports = [ ./hardware-configuration.nix ];

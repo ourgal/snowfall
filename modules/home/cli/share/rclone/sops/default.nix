@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,15 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      value = {
-        sops = {
-          secrets = {
-            "rclone" = {
-              mode = "0600";
-              path = "${config.xdg.configHome}/rclone/rclone.conf";
-            };
-          };
-        };
+      value.sops.secrets.rclone = {
+        mode = "0600";
+        path = "${config.xdg.configHome}/rclone/rclone.conf";
       };
     }
   )

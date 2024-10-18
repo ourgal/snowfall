@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -15,7 +15,7 @@ let
   cfg = cfgNixos config.${namespace} ./.;
   value = {
     programs.steam = {
-      enable = cfg.steam.enable;
+      inherit (cfg.steam) enable;
       gamescopeSession = enabled;
     };
 
@@ -37,7 +37,7 @@ let
     '';
 
     services.minecraft-server = {
-      enable = cfg.minecraft.enable;
+      inherit (cfg.minecraft) enable;
       eula = true;
       package = pkgs.papermc;
     };

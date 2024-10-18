@@ -15,9 +15,9 @@ rec {
   dockerOpenFirewall =
     docker:
     let
-      containerEnabled = lib.attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
+      containerEnabled = lib.attrsets.filterAttrs (n: v: (n != "enable") && v.enable) docker;
       ports = lib.attrsets.foldlAttrs (
-        acc: name: value:
+        acc: _: value:
         let
           port =
             if builtins.isInt value.ports then
@@ -166,8 +166,8 @@ rec {
           image = "${imageHost}/${image}:${version}";
           ports = dockerPorts ports containerPorts;
           environment = _env;
-          command = (convert2List cmd);
-          depends_on = (convert2List depends);
+          command = convert2List cmd;
+          depends_on = convert2List depends;
           healthcheck = _healthcheck;
           restart = "unless-stopped";
           networks = [ networks ];
@@ -190,12 +190,13 @@ rec {
       mount ? "",
     }:
     let
-      mkOpt' = lib.${namespace}.mkOpt';
-      str = lib.types.str;
-      port = lib.types.port;
-      either = lib.types.either;
-      listOf = lib.types.listOf;
-      switch = lib.${namespace}.switch;
+      inherit (lib.${namespace}) mkOpt' switch;
+      inherit (lib.types)
+        str
+        port
+        either
+        listOf
+        ;
     in
     {
       name = mkOpt' str name;

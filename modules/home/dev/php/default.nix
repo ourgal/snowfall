@@ -1,9 +1,13 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "php";
-    nodePkgs = "intelephense";
+    nixPkgs = [
+      # keep-sorted start
+      "intelephense"
+      "php"
+      # keep-sorted end
+    ];
   }
 )

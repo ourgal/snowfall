@@ -1,14 +1,16 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled;
   value = {
-    programs.fish = enabled;
-    programs.vim.defaultEditor = true;
-    security.doas = enabled;
-    programs.light = enabled // {
-      brightnessKeys = enabled;
+    programs = {
+      fish = enabled;
+      light = enabled // {
+        brightnessKeys = enabled;
+      };
+      vim.defaultEditor = true;
     };
+    security.doas = enabled;
   };
   path = ./.;
   _args = {

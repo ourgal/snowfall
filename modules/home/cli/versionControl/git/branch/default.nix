@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -19,9 +19,7 @@ args.module (
         "git-my"
         # keep-sorted end
       ];
-      progs = {
-        git.aliases.bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
-      };
+      progs.git.aliases.bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
     }
   )
 )

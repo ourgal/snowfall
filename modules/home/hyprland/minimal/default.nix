@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -81,7 +81,7 @@ args.module (
                 animation = windowsMove, 1, 5, wind, slide
                 animation = border, 1, 1, liner
                 ${
-                  if borderAnim == true then
+                  if borderAnim then
                     ''
                       animation = borderangle, 1, 30, liner, loop
                     ''

@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -28,29 +28,17 @@ args.module (
         "timewarrior"
       ];
       progs = [
-        {
-          taskwarrior = {
-            package = pkgs.taskwarrior3;
-          };
-        }
-        {
-          fish = {
-            shellAbbrs = {
-              t = "taskwarrior-tui";
-            };
-          };
-        }
+        { taskwarrior.package = pkgs.taskwarrior3; }
+        { fish.shellAbbrs.t = "taskwarrior-tui"; }
       ];
       value = {
         home.file = {
           ".local/share/task/hooks/on-modify.timewarrior".source = ./on-modify.timewarrior;
-          ".local/share/task/hooks/on-modify.relative-recur".source = (
-            relative-recur + "/on-modify.relative-recur"
-          );
-          ".local/share/task/hooks/on-modify-complete-recur".source = (
-            better-recur + "/on-modify-complete-recur"
-          );
-          ".local/share/task/hooks/on-add-expire".source = (better-recur + "/on-add-expire");
+          ".local/share/task/hooks/on-modify.relative-recur".source =
+            relative-recur + "/on-modify.relative-recur";
+          ".local/share/task/hooks/on-modify-complete-recur".source =
+            better-recur + "/on-modify-complete-recur";
+          ".local/share/task/hooks/on-add-expire".source = better-recur + "/on-add-expire";
         };
       };
     }

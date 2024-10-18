@@ -1,9 +1,9 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
     let
-      inherit (args) toTOML;
+      inherit (args) toTOML enabled;
     in
     {
       path = ./.;
@@ -89,11 +89,7 @@ args.module (
           };
         };
       };
-      progs = {
-        direnv = {
-          nix-direnv.enable = true;
-        };
-      };
+      progs.direnv.nix-direnv = enabled;
       enable = [
         # keep-sorted start
         "android"

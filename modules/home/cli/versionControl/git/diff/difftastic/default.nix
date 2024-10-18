@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,9 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        git.difftastic = enabled;
-      };
+      progs.git.difftastic = enabled;
     }
   )
 )

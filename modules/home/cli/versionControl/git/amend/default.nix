@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -9,8 +9,6 @@ args.module (
       "git-instafix"
       # keep-sorted end
     ];
-    progs = {
-      git.extraConfig.absorb.autoStageIfNothingStaged = true;
-    };
+    progs.git.extraConfig.absorb.autoStageIfNothingStaged = true;
   }
 )

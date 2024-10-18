@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule;
@@ -10,18 +10,12 @@ let
   ];
   value = {
     networking.firewall = {
-      allowedTCPPorts = (
-        ports
-        ++ [
-          36789 # nlockmgr
-        ]
-      );
-      allowedUDPPorts = (
-        ports
-        ++ [
-          54598 # nlockmgr
-        ]
-      );
+      allowedTCPPorts = ports ++ [
+        36789 # nlockmgr
+      ];
+      allowedUDPPorts = ports ++ [
+        54598 # nlockmgr
+      ];
     };
   };
   path = ./.;

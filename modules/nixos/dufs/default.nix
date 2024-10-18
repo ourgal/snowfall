@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -7,7 +7,7 @@ let
     config
     ;
   inherit (lib.${namespace}) nixosModule enabled;
-  user = (config.${namespace}.user).name;
+  user = config.${namespace}.user.name;
   port = 5001;
   User = "zxc";
   ExecStart = pkgs.writers.writeBash "dufs-start" ''

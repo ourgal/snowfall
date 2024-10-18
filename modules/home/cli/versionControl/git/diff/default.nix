@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -15,11 +15,9 @@ args.module (
       "diffnav"
       # keep-sorted end
     ];
-    progs = {
-      fish.functions.diffnav = {
-        body = "git diff | command diffnav";
-        description = "Diffnav";
-      };
+    progs.fish.functions.diffnav = {
+      body = "git diff | command diffnav";
+      description = "Diffnav";
     };
     enable = "diff-so-fancy";
   }

@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;

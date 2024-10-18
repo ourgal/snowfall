@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,11 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      servs = {
-        screen-locker = {
-          lockCmd = "${pkgs.${namespace}.i3lock-color}/bin/i3lock-color";
-        };
-      };
+      servs.screen-locker.lockCmd = "${pkgs.${namespace}.i3lock-color}/bin/i3lock-color";
     }
   )
 )

@@ -1,11 +1,13 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
       "inotify-tools"
       "trackma-curses"
+      # keep-sorted end
     ];
     confs = {
       "trackma/config.json" = builtins.toJSON {
@@ -54,12 +56,6 @@ args.module (
         use_hooks = true;
       };
     };
-    progs = {
-      fish = {
-        shellAbbrs = {
-          tmc = "trackma-curses";
-        };
-      };
-    };
+    progs.fish.shellAbbrs.tmc = "trackma-curses";
   }
 )

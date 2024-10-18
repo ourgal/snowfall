@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -40,19 +40,15 @@ args.module (
             default_linemode devicons2
           '';
         };
-        fish = {
-          functions = {
-            ra = {
-              body = ''
-                set dir (mktemp -t ranger_cd.XXX)
-                ranger --choosedir=$dir
-                cd (cat $dir) $argv
-                rm $dir
-                commandline -f repaint
-              '';
-              description = "ranger cd on exit";
-            };
-          };
+        fish.functions.ra = {
+          body = ''
+            set dir (mktemp -t ranger_cd.XXX)
+            ranger --choosedir=$dir
+            cd (cat $dir) $argv
+            rm $dir
+            commandline -f repaint
+          '';
+          description = "ranger cd on exit";
         };
       };
     }

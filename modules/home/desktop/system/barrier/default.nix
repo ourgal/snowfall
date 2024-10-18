@@ -1,12 +1,12 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
     let
       inherit (args) host lib pkgs;
-      isClient = (host != "home");
+      isClient = host != "home";
       serverHost = "home.local";
-      isServer = (host == "home");
+      isServer = host == "home";
     in
     {
       path = ./.;

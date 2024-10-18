@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -26,7 +26,7 @@ args.module (
             awful.spawn(terminal)
           '';
       dcnntConfig =
-        if (config.${namespace}.desktop.system.dcnnt.enable) then # lua
+        if config.${namespace}.desktop.system.dcnnt.enable then # lua
           ''
             awful.spawn("dcnnt start")
           ''

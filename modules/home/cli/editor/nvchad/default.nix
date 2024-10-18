@@ -1,13 +1,11 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nvchad = {
-        hm-activation = true;
-        backup = true;
-      };
+    progs.nvchad = {
+      hm-activation = true;
+      backup = true;
     };
   }
 )

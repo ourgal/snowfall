@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // {
@@ -8,5 +8,4 @@ args.module (
       extraConfig = builtins.readFile ./config.vim;
     };
   }
-
 )

@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   proxy = {
     go = {
       GOPROXY = "https://goproxy.cn";

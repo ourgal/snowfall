@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 let
   inherit (args)
     namespace
@@ -15,7 +15,7 @@ let
     mkDockerProxyDuckdns
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  docker = config.${namespace}.docker;
+  inherit (config.${namespace}) docker;
   host = "brix.local";
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =

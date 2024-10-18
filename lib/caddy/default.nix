@@ -16,7 +16,7 @@ with lib;
   mkDockerProxy =
     { docker, host }:
     let
-      containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && (v.enable == true)) docker;
+      containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && v.enable) docker;
       configs = attrsets.foldlAttrs (
         acc: name: value:
         let
@@ -42,7 +42,7 @@ with lib;
     }:
     let
       containerEnabled = attrsets.filterAttrs (
-        n: v: (n != "enable") && (v.enable == true) && (v.duckdns.enable == true)
+        n: v: (n != "enable") && v.enable && v.duckdns.enable
       ) docker;
       configs = attrsets.foldlAttrs (
         acc: name: value:

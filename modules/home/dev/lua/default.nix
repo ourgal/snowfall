@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -8,10 +8,12 @@ args.module (
     {
       path = ./.;
       nixPkgs = [
+        # keep-sorted start
         "lua"
         "lua-language-server"
         "selene"
         "stylua"
+        # keep-sorted end
       ];
       luaPkgs = "luarocks-nix";
       value = {

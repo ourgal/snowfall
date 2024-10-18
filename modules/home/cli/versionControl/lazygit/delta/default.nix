@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -7,11 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        lazygit.settings.git.paging = {
-          colorArg = "always";
-          pager = "${pkgs.delta}/bin/delta --paging=never";
-        };
+      progs.lazygit.settings.git.paging = {
+        colorArg = "always";
+        pager = "${pkgs.delta}/bin/delta --paging=never";
       };
     }
   )

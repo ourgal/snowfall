@@ -1,4 +1,4 @@
-{ ... }@args:
+args:
 args.module (
   args
   // (
@@ -9,14 +9,12 @@ args.module (
     {
       path = ./.;
       myPkgs = "s";
-      progs = {
-        fish.functions.sp = {
-          body = ''
-            s -b ${browser} -p $argv[1] $argv[2..-1]
-            ${pkgs.wmctrl}/bin/wmctrl -a ${browser}
-          '';
-          description = "alias of s -p";
-        };
+      progs.fish.functions.sp = {
+        body = ''
+          s -b ${browser} -p $argv[1] $argv[2..-1]
+          ${pkgs.wmctrl}/bin/wmctrl -a ${browser}
+        '';
+        description = "alias of s -p";
       };
       confs = {
         "s/config" = ''
