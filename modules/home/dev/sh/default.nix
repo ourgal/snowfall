@@ -9,6 +9,7 @@ args.module (
       "jc"
       "shellcheck"
       "shfmt"
+      "zx"
       # keep-sorted end
     ];
     nodePkgs = "bash-language-server";
