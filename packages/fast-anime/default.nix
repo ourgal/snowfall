@@ -13,7 +13,7 @@ python3.pkgs.buildPythonApplication {
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [
-    poetry-core
+    hatchling
     pythonRelaxDepsHook
   ];
 
@@ -39,7 +39,7 @@ python3.pkgs.buildPythonApplication {
 
   pythonImportsCheck = [ "fastanime" ];
 
-  pythonRelaxDeps = [ "requests" ];
+  pythonRelaxDeps = true;
 
   meta = with lib; {
     description = "Your browser anime experience from the terminal";
