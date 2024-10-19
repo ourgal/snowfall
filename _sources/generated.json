@@ -597,7 +597,7 @@
     },
     "devdocs-vim": {
         "cargoLocks": null,
-        "date": "2024-09-20",
+        "date": "2024-10-18",
         "extract": null,
         "name": "devdocs-vim",
         "passthru": null,
@@ -609,12 +609,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "devdocs.vim",
-            "rev": "4cce13ad1b0e5d845334f9cb58a2271ae72b20d8",
-            "sha256": "sha256-zcbENLeOVcScjenw5vqqTnqg7ZD44/cLDkZg9qxkeJQ=",
+            "rev": "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271",
+            "sha256": "sha256-Q+e9pwvmNfBPewT3mfAHH5fZh+VVY7mXELbMI41WkqY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4cce13ad1b0e5d845334f9cb58a2271ae72b20d8"
+        "version": "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271"
     },
     "diffnav": {
         "cargoLocks": null,
@@ -872,12 +872,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.6.7",
-            "sha256": "sha256-p10rSk+ciy4nDX8Mmg+qLFqHPvPKbaMPLhGjUEDN2RA=",
+            "rev": "v2.6.8",
+            "sha256": "sha256-4pVZXcYRxFL5Y17dlw4kD6DWK8FLKlUET71c/kYWbsc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.6.7"
+        "version": "v2.6.8"
     },
     "fetch": {
         "cargoLocks": null,
@@ -2561,7 +2561,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2024-10-11",
+        "date": "2024-10-18",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -2573,12 +2573,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "063917e0c6fbb37d4899d9ac0aa33ba18d946366",
-            "sha256": "sha256-rrtER6iVvZw0TLM4Go4u2h7bLWxLYbSGYKs7zxHLetw=",
+            "rev": "885bbb401c2b2b8bf4b788b3cbb055a81512d60d",
+            "sha256": "sha256-ctj0AS/BLIk20XjEqRgVUMJRpZ5ZN9KM8H7YBX7VhQw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "063917e0c6fbb37d4899d9ac0aa33ba18d946366"
+        "version": "885bbb401c2b2b8bf4b788b3cbb055a81512d60d"
     },
     "posting": {
         "cargoLocks": null,
@@ -3185,12 +3185,12 @@
             "name": null,
             "owner": "Foxboron",
             "repo": "ssh-tpm-agent",
-            "rev": "v0.6.0",
-            "sha256": "sha256-gO9qVAVCvaiLrC/GiTJ0NghiXVRXXRBlvOIVSAOftR8=",
+            "rev": "v0.7.0",
+            "sha256": "sha256-yK7G+wZIn+kJazKOFOs8EYlRWZkCQuT0qZfmdqbcOnM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.0"
+        "version": "v0.7.0"
     },
     "sunbeam": {
         "cargoLocks": null,
