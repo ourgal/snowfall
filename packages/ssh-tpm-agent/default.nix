@@ -14,7 +14,7 @@ buildGoModule {
 
   proxyVendor = true;
 
-  vendorHash = "sha256-Upq8u5Ip0HQW5FGyqhVUT6rINXz2BpCE7lbtk9fPaWs=";
+  vendorHash = "sha256-VOEJ5lpYaX2Br7hA6k+MWmF5LHLrBbOGPByyjQ6PhG4=";
 
   buildInputs = [ openssl ];
 
