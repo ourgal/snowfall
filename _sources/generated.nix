@@ -330,15 +330,15 @@
   };
   devdocs-vim = {
     pname = "devdocs-vim";
-    version = "4cce13ad1b0e5d845334f9cb58a2271ae72b20d8";
+    version = "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "devdocs.vim";
-      rev = "4cce13ad1b0e5d845334f9cb58a2271ae72b20d8";
+      rev = "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271";
       fetchSubmodules = false;
-      sha256 = "sha256-zcbENLeOVcScjenw5vqqTnqg7ZD44/cLDkZg9qxkeJQ=";
+      sha256 = "sha256-Q+e9pwvmNfBPewT3mfAHH5fZh+VVY7mXELbMI41WkqY=";
     };
-    date = "2024-09-20";
+    date = "2024-10-18";
   };
   diffnav = {
     pname = "diffnav";
@@ -469,13 +469,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.6.7";
+    version = "v2.6.8";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.6.7";
+      rev = "v2.6.8";
       fetchSubmodules = false;
-      sha256 = "sha256-p10rSk+ciy4nDX8Mmg+qLFqHPvPKbaMPLhGjUEDN2RA=";
+      sha256 = "sha256-4pVZXcYRxFL5Y17dlw4kD6DWK8FLKlUET71c/kYWbsc=";
     };
   };
   fetch = {
@@ -1395,15 +1395,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "063917e0c6fbb37d4899d9ac0aa33ba18d946366";
+    version = "885bbb401c2b2b8bf4b788b3cbb055a81512d60d";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "063917e0c6fbb37d4899d9ac0aa33ba18d946366";
+      rev = "885bbb401c2b2b8bf4b788b3cbb055a81512d60d";
       fetchSubmodules = false;
-      sha256 = "sha256-rrtER6iVvZw0TLM4Go4u2h7bLWxLYbSGYKs7zxHLetw=";
+      sha256 = "sha256-ctj0AS/BLIk20XjEqRgVUMJRpZ5ZN9KM8H7YBX7VhQw=";
     };
-    date = "2024-10-11";
+    date = "2024-10-18";
   };
   posting = {
     pname = "posting";
@@ -1725,13 +1725,13 @@
   };
   ssh-tpm-agent = {
     pname = "ssh-tpm-agent";
-    version = "v0.6.0";
+    version = "v0.7.0";
     src = fetchFromGitHub {
       owner = "Foxboron";
       repo = "ssh-tpm-agent";
-      rev = "v0.6.0";
+      rev = "v0.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-gO9qVAVCvaiLrC/GiTJ0NghiXVRXXRBlvOIVSAOftR8=";
+      sha256 = "sha256-yK7G+wZIn+kJazKOFOs8EYlRWZkCQuT0qZfmdqbcOnM=";
     };
   };
   sunbeam = {
