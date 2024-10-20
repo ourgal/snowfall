@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs disabled;
     in
     {
       path = ./.;
@@ -65,7 +65,10 @@ args.module (
       value = {
         i18n.inputMethod = {
           enabled = "fcitx5";
-          fcitx5.addons = [ pkgs.fcitx5-rime ];
+          fcitx5 = {
+            addons = [ pkgs.fcitx5-rime ];
+            catppuccin = disabled;
+          };
         };
       };
     }
