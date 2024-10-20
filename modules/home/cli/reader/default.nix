@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "glow";
+    nixPkgs = [
+      # keep-sorted start
+      "glow"
+      "mdcat"
+      # keep-sorted end
+    ];
     myPkgs = "reader";
     enable = "ov";
   }
