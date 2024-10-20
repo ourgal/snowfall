@@ -816,27 +816,6 @@
         },
         "version": "v0.1.17"
     },
-    "f": {
-        "cargoLocks": null,
-        "date": "2021-05-09",
-        "extract": null,
-        "name": "f",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "gokulsoumya",
-            "repo": "f",
-            "rev": "6099f3a4b5d148674106a264fffc84dd5a4dfe35",
-            "sha256": "sha256-NSp4TCWjsVboT0xI+5zbWx2xr+S4go4zbR6nyxbUz8g=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "6099f3a4b5d148674106a264fffc84dd5a4dfe35"
-    },
     "facad": {
         "cargoLocks": null,
         "date": null,
@@ -1067,6 +1046,27 @@
             "type": "github"
         },
         "version": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366"
+    },
+    "fish-f": {
+        "cargoLocks": null,
+        "date": "2021-05-09",
+        "extract": null,
+        "name": "fish-f",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "gokulsoumya",
+            "repo": "f",
+            "rev": "6099f3a4b5d148674106a264fffc84dd5a4dfe35",
+            "sha256": "sha256-NSp4TCWjsVboT0xI+5zbWx2xr+S4go4zbR6nyxbUz8g=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6099f3a4b5d148674106a264fffc84dd5a4dfe35"
     },
     "fish-fzf": {
         "cargoLocks": null,
@@ -2561,7 +2561,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2024-10-18",
+        "date": "2024-10-19",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -2573,12 +2573,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "885bbb401c2b2b8bf4b788b3cbb055a81512d60d",
-            "sha256": "sha256-ctj0AS/BLIk20XjEqRgVUMJRpZ5ZN9KM8H7YBX7VhQw=",
+            "rev": "f30d6fda77339ae57f480c0086660a01fde003f6",
+            "sha256": "sha256-UQ+6MbTrxMgL5h2kK19X5wxhFQ3FSBvtCWA/RQw8CvU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "885bbb401c2b2b8bf4b788b3cbb055a81512d60d"
+        "version": "f30d6fda77339ae57f480c0086660a01fde003f6"
     },
     "posting": {
         "cargoLocks": null,
