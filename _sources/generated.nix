@@ -444,18 +444,6 @@
       sha256 = "sha256-d2cStBjI2heQyP0cODRYQPvZJ4frFw7w5lsSdyvi5y8=";
     };
   };
-  f = {
-    pname = "f";
-    version = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
-    src = fetchFromGitHub {
-      owner = "gokulsoumya";
-      repo = "f";
-      rev = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
-      fetchSubmodules = false;
-      sha256 = "sha256-NSp4TCWjsVboT0xI+5zbWx2xr+S4go4zbR6nyxbUz8g=";
-    };
-    date = "2021-05-09";
-  };
   facad = {
     pname = "facad";
     version = "v2.18.0";
@@ -582,6 +570,18 @@
       sha256 = "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=";
     };
     date = "2024-04-11";
+  };
+  fish-f = {
+    pname = "fish-f";
+    version = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
+    src = fetchFromGitHub {
+      owner = "gokulsoumya";
+      repo = "f";
+      rev = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
+      fetchSubmodules = false;
+      sha256 = "sha256-NSp4TCWjsVboT0xI+5zbWx2xr+S4go4zbR6nyxbUz8g=";
+    };
+    date = "2021-05-09";
   };
   fish-fzf = {
     pname = "fish-fzf";
@@ -1395,15 +1395,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "885bbb401c2b2b8bf4b788b3cbb055a81512d60d";
+    version = "f30d6fda77339ae57f480c0086660a01fde003f6";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "885bbb401c2b2b8bf4b788b3cbb055a81512d60d";
+      rev = "f30d6fda77339ae57f480c0086660a01fde003f6";
       fetchSubmodules = false;
-      sha256 = "sha256-ctj0AS/BLIk20XjEqRgVUMJRpZ5ZN9KM8H7YBX7VhQw=";
+      sha256 = "sha256-UQ+6MbTrxMgL5h2kK19X5wxhFQ3FSBvtCWA/RQw8CvU=";
     };
-    date = "2024-10-18";
+    date = "2024-10-19";
   };
   posting = {
     pname = "posting";
