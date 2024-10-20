@@ -826,3 +826,7 @@ fetch.github = "eraserhd/parinfer-rust"
 [vim-tome]
 src.git = "https://github.com/laktak/tome"
 fetch.github = "laktak/tome"
+
+[fc-fish]
+src.git = "https://github.com/lengyijun/fc-fish"
+fetch.github = "lengyijun/fc-fish"
