@@ -4,18 +4,17 @@
   namespace,
 }:
 let
-  pname = "fish-fzf";
+  pname = "web-search-fish";
   source = pkgs.${namespace}.sources.${pname};
 in
 pkgs.fishPlugins.buildFishPlugin {
   inherit (source) pname version src;
 
   meta = with lib; {
-    description = "Ef-🐟-ient fish keybindings for fzf";
-    homepage = "https://github.com/jethrokuan/fzf";
-    license = licenses.mit;
+    description = "A plugin to do a web search via fish. Inspired by oh-my-zsh/web-search";
+    homepage = "https://github.com/veirt/web-search.fish";
+    license = licenses.gpl3Only;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "fzf";
     platforms = platforms.all;
   };
 }

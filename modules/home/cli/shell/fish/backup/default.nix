@@ -3,61 +3,18 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs sources;
-      inherit (pkgs) fetchFromGitHub;
+      inherit (args) lib namespace;
     in
     {
       path = ./.;
-      progs = {
-        fish = {
-          plugins = [
-            rec {
-              name = "fifc";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "web-search.fish";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "f";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-            rec {
-              name = "fish-colored-man";
-              src = fetchFromGitHub {
-                inherit (sources.${name}.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
-            }
-          ];
-        };
-      };
+      progs.fish.plugins = lib.${namespace}.mkFishPlugins [
+        # keep-sorted start
+        "fifc"
+        "fish-colored-man"
+        "fish-f"
+        "web-search.fish"
+        # keep-sorted end
+      ];
     }
   )
 )

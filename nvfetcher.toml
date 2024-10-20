@@ -62,7 +62,7 @@ fetch.github = "gazorby/fifc"
 src.git = "https://github.com/veirt/web-search.fish"
 fetch.github = "veirt/web-search.fish"
 
-[f]
+[fish-f]
 src.git = "https://github.com/gokulsoumya/f"
 fetch.github = "gokulsoumya/f"
 

@@ -4,18 +4,18 @@
   namespace,
 }:
 let
-  pname = "fish-fzf";
+  pname = "fifc";
   source = pkgs.${namespace}.sources.${pname};
 in
 pkgs.fishPlugins.buildFishPlugin {
   inherit (source) pname version src;
 
   meta = with lib; {
-    description = "Ef-🐟-ient fish keybindings for fzf";
-    homepage = "https://github.com/jethrokuan/fzf";
+    description = "Configurable fzf completions for fish shell";
+    homepage = "https://github.com/gazorby/fifc";
+    changelog = "https://github.com/gazorby/fifc/blob/${src.rev}/CHANGELOG.md";
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "fzf";
     platforms = platforms.all;
   };
 }
