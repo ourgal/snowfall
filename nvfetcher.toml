@@ -830,3 +830,7 @@ fetch.github = "laktak/tome"
 [fc-fish]
 src.git = "https://github.com/lengyijun/fc-fish"
 fetch.github = "lengyijun/fc-fish"
+
+[mdformat-config]
+src.github = "hukkin/mdformat-config"
+fetch.github = "hukkin/mdformat-config"

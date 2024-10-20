@@ -4,7 +4,6 @@ args.module (
   // {
     path = ./.;
     myPkgs = "mdtt";
-    pyPkgs = "mdformat";
     nodePkgs = "prettier";
     nixPkgs = [
       # keep-sorted start
@@ -12,6 +11,11 @@ args.module (
       "marksman"
       # keep-sorted end
     ];
-    enable = "zk";
+    enable = [
+      # keep-sorted start
+      "mdformat"
+      "zk"
+      # keep-sorted end
+    ];
   }
 )
