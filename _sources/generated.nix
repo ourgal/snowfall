@@ -295,15 +295,15 @@
   };
   "ctrl-z.fish" = {
     pname = "ctrl-z.fish";
-    version = "689d60cb9706d2a19cb65286c2dea488b3293807";
+    version = "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a";
     src = fetchFromGitHub {
-      owner = "kpbaks";
+      owner = "ourgal";
       repo = "ctrl-z.fish";
-      rev = "689d60cb9706d2a19cb65286c2dea488b3293807";
+      rev = "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a";
       fetchSubmodules = false;
-      sha256 = "sha256-OaCMGsIP6wsbzgCNqQR1FOERL+k1ShAjOOg3T9Wln3k=";
+      sha256 = "sha256-63jMGHKj+eB9eDzhWho5c7+4sESxGDEBkFHjA6KILbk=";
     };
-    date = "2024-08-14";
+    date = "2024-10-20";
   };
   curd = {
     pname = "curd";
