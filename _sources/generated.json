@@ -546,12 +546,12 @@
             "name": null,
             "owner": "ourgal",
             "repo": "ctrl-z.fish",
-            "rev": "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a",
-            "sha256": "sha256-63jMGHKj+eB9eDzhWho5c7+4sESxGDEBkFHjA6KILbk=",
+            "rev": "82448a44c9ba8e2d8a5c7394184e977f5f76e0b8",
+            "sha256": "sha256-JXy5y0FXLvgdqgkwqGFkv2aqV40AHWRq9mq/EhsTEyo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a"
+        "version": "82448a44c9ba8e2d8a5c7394184e977f5f76e0b8"
     },
     "curd": {
         "cargoLocks": null,
@@ -851,12 +851,33 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.6.8",
-            "sha256": "sha256-4pVZXcYRxFL5Y17dlw4kD6DWK8FLKlUET71c/kYWbsc=",
+            "rev": "v2.6.9",
+            "sha256": "sha256-gQrNedNJ+joGhWtVub6im/74xIW1wgiOFeMgB+pSbH4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.6.8"
+        "version": "v2.6.9"
+    },
+    "fc-fish": {
+        "cargoLocks": null,
+        "date": "2023-04-07",
+        "extract": null,
+        "name": "fc-fish",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lengyijun",
+            "repo": "fc-fish",
+            "rev": "9457a9c47391ff712696bbef0e4a109de2a653d1",
+            "sha256": "sha256-DQQofY5FPdy5kWctlKmi2SRTH7zL9ZpBdrdMx+iX+dA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9457a9c47391ff712696bbef0e4a109de2a653d1"
     },
     "fetch": {
         "cargoLocks": null,

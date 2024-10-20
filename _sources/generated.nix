@@ -295,13 +295,13 @@
   };
   "ctrl-z.fish" = {
     pname = "ctrl-z.fish";
-    version = "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a";
+    version = "82448a44c9ba8e2d8a5c7394184e977f5f76e0b8";
     src = fetchFromGitHub {
       owner = "ourgal";
       repo = "ctrl-z.fish";
-      rev = "6cb855b68d2bee567d6f0e7c68cb2c0f7d78137a";
+      rev = "82448a44c9ba8e2d8a5c7394184e977f5f76e0b8";
       fetchSubmodules = false;
-      sha256 = "sha256-63jMGHKj+eB9eDzhWho5c7+4sESxGDEBkFHjA6KILbk=";
+      sha256 = "sha256-JXy5y0FXLvgdqgkwqGFkv2aqV40AHWRq9mq/EhsTEyo=";
     };
     date = "2024-10-20";
   };
@@ -457,14 +457,26 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.6.8";
+    version = "v2.6.9";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.6.8";
+      rev = "v2.6.9";
       fetchSubmodules = false;
-      sha256 = "sha256-4pVZXcYRxFL5Y17dlw4kD6DWK8FLKlUET71c/kYWbsc=";
+      sha256 = "sha256-gQrNedNJ+joGhWtVub6im/74xIW1wgiOFeMgB+pSbH4=";
     };
+  };
+  fc-fish = {
+    pname = "fc-fish";
+    version = "9457a9c47391ff712696bbef0e4a109de2a653d1";
+    src = fetchFromGitHub {
+      owner = "lengyijun";
+      repo = "fc-fish";
+      rev = "9457a9c47391ff712696bbef0e4a109de2a653d1";
+      fetchSubmodules = false;
+      sha256 = "sha256-DQQofY5FPdy5kWctlKmi2SRTH7zL9ZpBdrdMx+iX+dA=";
+    };
+    date = "2023-04-07";
   };
   fetch = {
     pname = "fetch";
