@@ -62,6 +62,7 @@ args.module (
           "autopair.fish"
           "clownfish"
           "ctrl-z.fish"
+          "fc-fish"
           "fish-abbreviation-tips"
           "fish-bd"
           "fish-color-scheme-switcher"
