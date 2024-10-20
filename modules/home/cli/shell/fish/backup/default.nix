@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) lib namespace;
+      inherit (args) lib namespace pkgs;
     in
     {
       path = ./.;
@@ -14,7 +14,7 @@ args.module (
         "fish-f"
         "web-search.fish"
         # keep-sorted end
-      ];
+      ] pkgs;
     }
   )
 )

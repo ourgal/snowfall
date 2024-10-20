@@ -15,7 +15,6 @@ pkgs.fishPlugins.buildFishPlugin {
     homepage = "https://github.com/kpbaks/ctrl-z.fish";
     license = licenses.unfree; # FIXME: nix-init did not found a license
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "ctrl-z-fish";
     platforms = platforms.all;
   };
 }
