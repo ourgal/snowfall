@@ -1197,15 +1197,15 @@
   };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
-    version = "3bcfbc350ce4c652c7d4b0f7aeb77400962f4bbc";
+    version = "672b230313fa238e569c672eb30a0677982156bf";
     src = fetchFromGitHub {
       owner = "niksingh710";
       repo = "minimal-tmux-status";
-      rev = "3bcfbc350ce4c652c7d4b0f7aeb77400962f4bbc";
+      rev = "672b230313fa238e569c672eb30a0677982156bf";
       fetchSubmodules = false;
-      sha256 = "sha256-UfOpuc/gW42i95MztUj6mDbNCdtK/pbO0Lgvzv+b448=";
+      sha256 = "sha256-0PROCM7iirKywY4SYjVkAgUio+NxjsCM+4TdiXjcuaw=";
     };
-    date = "2024-10-07";
+    date = "2024-10-19";
   };
   miru = {
     pname = "miru";
@@ -1407,13 +1407,13 @@
   };
   posting = {
     pname = "posting";
-    version = "1.13.0";
+    version = "2.0.0";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "1.13.0";
+      rev = "2.0.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Jny5ChlHLVUmQ84LFI95foVQeBzZuOYU5T8JP9jLYXc=";
+      sha256 = "sha256-zxSLZGkc/svEgMmhKxuAZDwWf5S4RtOn9BYMDuToa3M=";
     };
   };
   pot = {
@@ -2237,15 +2237,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "78a72b09de9ad70d3e9e8e7719855ac263d8e2d8";
+    version = "8ab1d69c387c9f088103d349e92240e6f934adb1";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "78a72b09de9ad70d3e9e8e7719855ac263d8e2d8";
+      rev = "8ab1d69c387c9f088103d349e92240e6f934adb1";
       fetchSubmodules = false;
-      sha256 = "sha256-8dxjZLpGd2/yzw9rr/C6W7/juZEIBDztz/2N/moyCIM=";
+      sha256 = "sha256-BbGkPtqhNHBadwwyNGbCNlcv52hxn/oMAA0oc1jy6bk=";
     };
-    date = "2024-10-17";
+    date = "2024-10-19";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
