@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "emacs"
       "lite-xl"
+      "vscode"
       # keep-sorted end
     ];
   }

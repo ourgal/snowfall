@@ -75,6 +75,10 @@
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -129,6 +133,7 @@
         snowfall-thaw.overlays."package/thaw"
         nixpkgs-f2k.overlays.window-managers
         nvfetcher.overlays.default
+        nix-vscode-extensions.overlays.default
       ];
 
       # Add modules to all NixOS systems.
