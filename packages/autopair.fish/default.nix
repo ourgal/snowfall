@@ -1,6 +1,5 @@
 {
   lib,
-  stdenv,
   pkgs,
   namespace,
 }:
@@ -8,7 +7,7 @@ let
   pname = "autopair.fish";
   source = pkgs.${namespace}.sources.${pname};
 in
-stdenv.mkDerivation {
+pkgs.fishPlugins.buildFishPlugin {
   inherit (source) pname version src;
 
   meta = with lib; {
