@@ -832,5 +832,5 @@ src.git = "https://github.com/lengyijun/fc-fish"
 fetch.github = "lengyijun/fc-fish"
 
 [mdformat-config]
-src.github = "hukkin/mdformat-config"
+src.github_tag = "hukkin/mdformat-config"
 fetch.github = "hukkin/mdformat-config"
