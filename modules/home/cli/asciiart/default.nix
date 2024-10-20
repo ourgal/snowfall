@@ -26,6 +26,7 @@ args.module (
       "nyancat"
       "peaclock"
       "pipes"
+      "pipes-rs"
       "tmatrix"
       # keep-sorted end
     ];
