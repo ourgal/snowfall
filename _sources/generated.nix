@@ -1196,6 +1196,17 @@
       sha256 = "sha256-672AuQWviwihnUS3G0xSn4IAMHy0fPE1VLDfu8wrPGg=";
     };
   };
+  mdformat-config = {
+    pname = "mdformat-config";
+    version = "0.2.1";
+    src = fetchFromGitHub {
+      owner = "hukkin";
+      repo = "mdformat-config";
+      rev = "0.2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-v6xtU6qZMhUnWFcCJOm9CcmLe6nKxmV9qGDM8o8MPe4=";
+    };
+  };
   mdtt = {
     pname = "mdtt";
     version = "v0.2.1";
