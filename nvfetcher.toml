@@ -43,8 +43,8 @@ src.git = "https://github.com/ourgal/gitnow"
 fetch.github = "ourgal/gitnow"
 
 ["ctrl-z.fish"]
-src.git = "https://github.com/kpbaks/ctrl-z.fish"
-fetch.github = "kpbaks/ctrl-z.fish"
+src.git = "https://github.com/ourgal/ctrl-z.fish"
+fetch.github = "ourgal/ctrl-z.fish"
 
 ["todo-comments.fish"]
 src.git = "https://github.com/kpbaks/todo-comments.fish"
