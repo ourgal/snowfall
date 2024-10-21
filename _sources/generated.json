@@ -406,6 +406,27 @@
         },
         "version": "0.3.3"
     },
+    "classifier": {
+        "cargoLocks": null,
+        "date": "2017-05-23",
+        "extract": null,
+        "name": "classifier",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bhrigu123",
+            "repo": "classifier",
+            "rev": "09e958baeedeb6eed0fb1e048ed820888c5dbb84",
+            "sha256": "sha256-nj+PlZpz8M2lvxsEa8RulWEb+aGN7ez7uF+iM9IhGKQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "09e958baeedeb6eed0fb1e048ed820888c5dbb84"
+    },
     "cloneit": {
         "cargoLocks": null,
         "date": "2024-07-28",
