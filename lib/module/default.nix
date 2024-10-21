@@ -176,7 +176,7 @@ rec {
       xfcePkgs ? [ ],
       gnomePkgs ? [ ],
       batPkgs ? [ ],
-      inputPkgs ? [ ],
+      inputPkgs ? _p: [ ],
       extraOpts ? { },
       confs ? [ ],
       files ? [ ],
@@ -253,7 +253,15 @@ rec {
         else
           builtins.throw "not supported type";
       pkgHandle =
-        prefix: pkgs: if (builtins.isString pkgs) then [ prefix.${pkgs} ] else (with' prefix pkgs);
+        prefix: pkgs:
+        if (builtins.isString pkgs) then
+          [ prefix.${pkgs} ]
+        else if (builtins.isFunction pkgs) then
+          (pkgs prefix)
+        else if (builtins.isList pkgs) then
+          (with' prefix pkgs)
+        else
+          builtins.throw "not support type";
     in
     {
       options.${namespace} = optHome { inherit path extraOpts; };
@@ -274,7 +282,7 @@ rec {
               ++ (pkgHandle pkgs.gnome gnomePkgs)
               ++ (pkgHandle pkgs.bat-extras batPkgs)
               ++ (pkgHandle pkgs.snowfallorg snowPkgs)
-              ++ inputPkgs;
+              ++ (inputPkgs inputs);
             file = confHandle files;
             sessionVariables = env;
           };

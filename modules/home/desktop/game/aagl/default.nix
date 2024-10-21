@@ -3,23 +3,18 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        pkgs
-        inputs
-        lib
-        namespace
-        ;
-      inherit (lib.${namespace}) with';
-      aagl = inputs.aagl.packages."${pkgs.system}";
+      inherit (args) pkgs;
     in
     {
       path = ./.;
-      inputPkgs = with' aagl [
-        "anime-borb-launcher"
-        "anime-game-launcher"
-        "honkers-launcher"
-        "honkers-railway-launcher"
-      ];
+      inputPkgs = (
+        p: with p.aagl.packages."${pkgs.system}"; [
+          anime-borb-launcher
+          anime-game-launcher
+          honkers-launcher
+          honkers-railway-launcher
+        ]
+      );
     }
   )
 )

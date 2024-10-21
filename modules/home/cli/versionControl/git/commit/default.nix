@@ -3,11 +3,11 @@ args.module (
   args
   // (
     let
-      inherit (args) inputs pkgs;
+      inherit (args) pkgs;
     in
     {
       path = ./.;
-      inputPkgs = [ inputs.gitwatch.packages."${pkgs.system}".default ];
+      inputPkgs = (p: [ p.gitwatch.packages."${pkgs.system}".default ]);
       myPkgs = [
         # keep-sorted start
         "gac"

@@ -988,7 +988,7 @@ args.module (
             ];
           };
         };
-        ${namespace}.dev.python.global.pkgs = [ "pyyaml" ];
+        ${namespace}.dev.python.global.pkgs = (p: [ p.pyyaml ]);
       };
       extraOpts = {
         autostart = switch;
