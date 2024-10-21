@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "rsv";
+    myPkgs = [
+      # keep-sorted start
+      "bafi"
+      "rsv"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "csview"

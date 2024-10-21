@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "bafi"
       "convfmt"
       "otree"
       # keep-sorted end
