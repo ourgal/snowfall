@@ -23,12 +23,12 @@ args.module (
               ps.PerlLanguageServer
               ps.PerlTidy
             ]
-            ++ lib.${namespace}.with' ps cfg.pkgs
+            ++ (cfg.pkgs ps)
           ))
         ];
       };
       extraOpts = {
-        pkgs = mkOpt' (lib.types.listOf lib.types.str) [ ];
+        pkgs = mkOpt' (lib.types.functionTo (lib.types.listOf lib.types.package)) (_p: [ ]);
       };
     }
   )

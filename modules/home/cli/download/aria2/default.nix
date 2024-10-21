@@ -129,6 +129,7 @@ args.module (
         }
       ];
       value = {
+        ${namespace}.dev.python.global.pkgs = (p: with p; [ aria2p ] ++ aria2p.optional-dependencies.tui);
         systemd.user.services.aria2 = {
           Unit = {
             Description = "Aria2 Service";
