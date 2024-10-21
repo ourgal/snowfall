@@ -87,6 +87,7 @@ args.module (
         { "" = ./.gitnow; }
         { "Downloads/youtube/.keep" = ""; }
       ];
+      enable = "fzf-help";
     }
   )
 )

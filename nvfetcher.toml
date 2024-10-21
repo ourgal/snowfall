@@ -858,3 +858,7 @@ fetch.github = "wtetsu/gaze"
 [ehh]
 src.github = "lennardv2/ehh"
 fetch.github = "lennardv2/ehh"
+
+[fzf-help]
+src.github_tag = "BartSte/fzf-help"
+fetch.github = "BartSte/fzf-help"
