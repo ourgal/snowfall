@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "classifier";
+    myPkgs = [
+      # keep-sorted start
+      "classifier"
+      "dext"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "detox"
