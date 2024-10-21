@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "corgi";
+    myPkgs = [
+      # keep-sorted start
+      "corgi"
+      "ehh"
+      # keep-sorted end
+    ];
     nixPkgs = "pet";
     enable = "navi";
   }
