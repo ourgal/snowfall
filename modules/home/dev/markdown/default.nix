@@ -9,6 +9,7 @@ args.module (
       # keep-sorted start
       "autocorrect"
       "marksman"
+      "md-tangle"
       # keep-sorted end
     ];
     enable = [
