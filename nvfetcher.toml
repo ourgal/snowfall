@@ -838,3 +838,7 @@ fetch.github = "hukkin/mdformat-config"
 [cat_win]
 src.github_tag = "SilenZcience/cat_win"
 fetch.github = "SilenZcience/cat_win"
+
+[hledger-fmt]
+src.github = "mondeja/hledger-fmt"
+fetch.github = "mondeja/hledger-fmt"
