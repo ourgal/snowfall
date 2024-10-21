@@ -4127,7 +4127,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-10-19",
+        "date": "2024-10-20",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4139,12 +4139,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "8ab1d69c387c9f088103d349e92240e6f934adb1",
-            "sha256": "sha256-BbGkPtqhNHBadwwyNGbCNlcv52hxn/oMAA0oc1jy6bk=",
+            "rev": "549b36f0f8f7e7c87bea829554f39220e2b66577",
+            "sha256": "sha256-BxFJq1u7K6eEtWDhnIwdYeYAcP7+QlszlZgnKppFuyI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8ab1d69c387c9f088103d349e92240e6f934adb1"
+        "version": "549b36f0f8f7e7c87bea829554f39220e2b66577"
     },
     "visual-split-vim": {
         "cargoLocks": null,
