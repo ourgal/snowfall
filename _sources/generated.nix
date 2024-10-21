@@ -722,6 +722,17 @@
       sha256 = "sha256-/O548IEhGYSOSIG/xTGCi+P75poM5KY2AYW6lXRCtF0=";
     };
   };
+  gaze = {
+    pname = "gaze";
+    version = "v1.1.6";
+    src = fetchFromGitHub {
+      owner = "wtetsu";
+      repo = "gaze";
+      rev = "v1.1.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-5i61kaonTCVHCYwJ0C+bihxNTNNwyQ2XWSI85RMm2Hk=";
+    };
+  };
   geminicommit = {
     pname = "geminicommit";
     version = "v0.1.0";
