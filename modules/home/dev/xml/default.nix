@@ -3,10 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = [
-      # keep-sorted start
-      "faq"
-      # keep-sorted end
-    ];
+    myPkgs = "bafi";
+    nixPkgs = "faq";
   }
 )
