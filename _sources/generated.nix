@@ -711,6 +711,17 @@
       sha256 = "sha256-p9gTFUYHdyOY2EFT/ZmBHT7dRNm64s/3ExUXG7bfQ70=";
     };
   };
+  fzf-help = {
+    pname = "fzf-help";
+    version = "v2.3.0";
+    src = fetchFromGitHub {
+      owner = "BartSte";
+      repo = "fzf-help";
+      rev = "v2.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-gM+5TQYJp69OOusM+6CO4EXtjexGlfx4rzZFo/+8vv0=";
+    };
+  };
   fzf-kill = {
     pname = "fzf-kill";
     version = "v1.0.0";
