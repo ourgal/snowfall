@@ -4,7 +4,7 @@
   namespace,
 }:
 let
-  pname = "web-search-fish";
+  pname = "web-search.fish";
   source = pkgs.${namespace}.sources.${pname};
 in
 pkgs.fishPlugins.buildFishPlugin {
