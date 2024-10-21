@@ -8,7 +8,6 @@ args.module (
       # keep-sorted start
       "deadnix"
       "nil"
-      "nix-init"
       "nixd"
       "nixfmt-rfc-style"
       "prefetch-npm-deps"
@@ -16,5 +15,6 @@ args.module (
       "update-nix-fetchgit"
       # keep-sorted end
     ];
+    enable = "nix-init";
   }
 )

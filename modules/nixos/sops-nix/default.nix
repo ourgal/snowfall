@@ -2,7 +2,8 @@ args:
 let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;
-  user = config.${namespace}.user.name;
+  owner = config.${namespace}.user.name;
+  mode = "0400";
   inherit (config.${namespace}.user) host;
   inherit (lib.${namespace}.settings) desktops;
   value = {
@@ -10,35 +11,33 @@ let
       age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
       defaultSopsFile = lib.snowfall.fs.get-file "secrets/${config.${namespace}.user.name}/default.yaml";
       secrets = lib.mkIf (builtins.elem host desktops) {
-        "jerry/token" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.local/share/jerry/anilist_token.txt";
+        "jerry/token" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.local/share/jerry/anilist_token.txt";
         };
-        "jerry/id" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.local/share/jerry/anilist_user_id.txt";
+        "jerry/id" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.local/share/jerry/anilist_user_id.txt";
         };
-        "tg" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.config/tg/conf.py";
+        "tg" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/tg/conf.py";
         };
-        "espanso/mail.yml" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.config/espanso/match/mail.yml";
+        "espanso/mail.yml" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/espanso/match/mail.yml";
         };
-        "geminicommit" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.config/geminicommit/config.toml";
+        "geminicommit" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/geminicommit/config.toml";
         };
-        "aichat" = {
-          owner = user;
-          mode = "0600";
-          path = "/home/${user}/.config/aichat/config.yaml";
+        "aichat" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/aichat/config.yaml";
+        };
+        "github/token" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/github/token";
         };
       };
     };
