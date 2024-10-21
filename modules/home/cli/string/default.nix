@@ -3,7 +3,17 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "chepy";
+    myPkgs = (
+      p:
+      with p;
+      [
+        # keep-sorted start
+        cat_win
+        chepy
+        # keep-sorted end
+      ]
+      ++ cat_win.optional-dependencies.clip
+    );
     nixPkgs = [
       # keep-sorted start
       "gotemplate"
