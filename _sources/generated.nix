@@ -457,6 +457,17 @@
       sha256 = "sha256-jTdF7OsqTJFQexkjGTdHt66IiI5iV+uKrM996uKjAKc=";
     };
   };
+  ehh = {
+    pname = "ehh";
+    version = "v1.1.1";
+    src = fetchFromGitHub {
+      owner = "lennardv2";
+      repo = "ehh";
+      rev = "v1.1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-mXDive5yHac2MdAsDrMsp0QzcrhnIS805yt7AkpXnwM=";
+    };
+  };
   eleventy = {
     pname = "eleventy";
     version = "v3.0.0";
@@ -1394,13 +1405,13 @@
   };
   numara = {
     pname = "numara";
-    version = "v5.5.0";
+    version = "v5.5.1";
     src = fetchFromGitHub {
       owner = "bornova";
       repo = "numara-calculator";
-      rev = "v5.5.0";
+      rev = "v5.5.1";
       fetchSubmodules = false;
-      sha256 = "sha256-JumAFKIp2Q56FdhDagjoqPlIQAzHB1SP+yBt1yW+5N4=";
+      sha256 = "sha256-5dY46bAYuh0nvjH1UoML+QQj0s8sPPUUWDSJh77DfpA=";
     };
   };
   org-export = {

@@ -837,6 +837,27 @@
         },
         "version": "1.2.2"
     },
+    "ehh": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ehh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lennardv2",
+            "repo": "ehh",
+            "rev": "v1.1.1",
+            "sha256": "sha256-mXDive5yHac2MdAsDrMsp0QzcrhnIS805yt7AkpXnwM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.1.1"
+    },
     "eleventy": {
         "cargoLocks": null,
         "date": null,
@@ -2573,12 +2594,12 @@
             "name": null,
             "owner": "bornova",
             "repo": "numara-calculator",
-            "rev": "v5.5.0",
-            "sha256": "sha256-JumAFKIp2Q56FdhDagjoqPlIQAzHB1SP+yBt1yW+5N4=",
+            "rev": "v5.5.1",
+            "sha256": "sha256-5dY46bAYuh0nvjH1UoML+QQj0s8sPPUUWDSJh77DfpA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v5.5.0"
+        "version": "v5.5.1"
     },
     "org-export": {
         "cargoLocks": null,
