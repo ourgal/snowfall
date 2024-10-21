@@ -175,6 +175,27 @@
         },
         "version": "c82ad2960c5f0c84e765df68554c266ea7e9464d"
     },
+    "bafi": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "bafi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mmalcek",
+            "repo": "bafi",
+            "rev": "v1.2.0",
+            "sha256": "sha256-mYfnHb6Gin2e+Zjvo87ZzTp1/mnDG42UDl99zncB3O0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.2.0"
+    },
     "baidupcs-go": {
         "cargoLocks": null,
         "date": null,
