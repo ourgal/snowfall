@@ -846,3 +846,7 @@ fetch.github = "mondeja/hledger-fmt"
 [classifier]
 src.git = "https://github.com/bhrigu123/classifier"
 fetch.github = "bhrigu123/classifier"
+
+[dext]
+src.git = "https://github.com/AfzGit/dext"
+fetch.github = "AfzGit/dext"
