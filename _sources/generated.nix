@@ -192,6 +192,17 @@
     };
     date = "2023-11-24";
   };
+  cat_win = {
+    pname = "cat_win";
+    version = "v1.9.2";
+    src = fetchFromGitHub {
+      owner = "SilenZcience";
+      repo = "cat_win";
+      rev = "v1.9.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-PfGhd8mI3vccUg9XykR3NRHS6GKd1P4tfLqEmEizUkU=";
+    };
+  };
   chezmoi-vim = {
     pname = "chezmoi-vim";
     version = "abf37336437867cbd99ce2f8849b717415391cc3";
@@ -1012,6 +1023,17 @@
       rev = "v0.29.8";
       fetchSubmodules = false;
       sha256 = "sha256-YL9DWVArUf+ZdldTyTY4Y2rDMofwZJ8o6PsVECkr2q0=";
+    };
+  };
+  hledger-fmt = {
+    pname = "hledger-fmt";
+    version = "v0.2.0";
+    src = fetchFromGitHub {
+      owner = "mondeja";
+      repo = "hledger-fmt";
+      rev = "v0.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-LAlI/QFrKJTB1fDuNSOrf1u5nB1w3vNAYixYiUnYg0o=";
     };
   };
   hypergrep = {
@@ -2001,15 +2023,15 @@
   };
   "tmux.fish" = {
     pname = "tmux.fish";
-    version = "7e820cb45c6784df71cbaf6dca0d17e39a9d59d4";
+    version = "0e0fc8052c7523a96d3c12313a51ba9921c59406";
     src = fetchFromGitHub {
       owner = "budimanjojo";
       repo = "tmux.fish";
-      rev = "7e820cb45c6784df71cbaf6dca0d17e39a9d59d4";
+      rev = "0e0fc8052c7523a96d3c12313a51ba9921c59406";
       fetchSubmodules = false;
-      sha256 = "sha256-ynhEhrdXQfE1dcYsSk2M2BFScNXWPh3aws0U7eDFtv4=";
+      sha256 = "sha256-HBu0SSFejZRSMIAK+5J8Ao8EPj4hpkIuWkI3gSJCn5c=";
     };
-    date = "2024-10-14";
+    date = "2024-10-21";
   };
   tmux2k = {
     pname = "tmux2k";
