@@ -226,6 +226,18 @@
       sha256 = "sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=";
     };
   };
+  classifier = {
+    pname = "classifier";
+    version = "09e958baeedeb6eed0fb1e048ed820888c5dbb84";
+    src = fetchFromGitHub {
+      owner = "bhrigu123";
+      repo = "classifier";
+      rev = "09e958baeedeb6eed0fb1e048ed820888c5dbb84";
+      fetchSubmodules = false;
+      sha256 = "sha256-nj+PlZpz8M2lvxsEa8RulWEb+aGN7ez7uF+iM9IhGKQ=";
+    };
+    date = "2017-05-23";
+  };
   cloneit = {
     pname = "cloneit";
     version = "6198556e810d964cc5938c446ef42fc21b55fe0b";
