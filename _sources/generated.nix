@@ -102,6 +102,17 @@
     };
     date = "2022-06-23";
   };
+  bafi = {
+    pname = "bafi";
+    version = "v1.2.0";
+    src = fetchFromGitHub {
+      owner = "mmalcek";
+      repo = "bafi";
+      rev = "v1.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-mYfnHb6Gin2e+Zjvo87ZzTp1/mnDG42UDl99zncB3O0=";
+    };
+  };
   baidupcs-go = {
     pname = "baidupcs-go";
     version = "v3.9.5";
