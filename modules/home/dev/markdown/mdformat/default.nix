@@ -12,6 +12,8 @@ args.module (
           (pkgs.mdformat.withPlugins (ps: [
             ps.mdformat-toc
             ps.mdformat-tables
+            ps.mdformat-footnote
+            ps.mdformat-frontmatter
             ps.mdformat-simple-breaks
             pkgs.${namespace}.mdformat-config
           ]))
