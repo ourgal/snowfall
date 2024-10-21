@@ -363,6 +363,18 @@
     };
     date = "2024-10-18";
   };
+  dext = {
+    pname = "dext";
+    version = "03691dfc96c99a5dddc7171bae5d19739aac2b82";
+    src = fetchFromGitHub {
+      owner = "AfzGit";
+      repo = "dext";
+      rev = "03691dfc96c99a5dddc7171bae5d19739aac2b82";
+      fetchSubmodules = false;
+      sha256 = "sha256-xR6r+zAGDcmwBDPu/euni9qzYtugq8HxSfBoXuu7qnM=";
+    };
+    date = "2023-04-23";
+  };
   diffnav = {
     pname = "diffnav";
     version = "v0.2.8";
