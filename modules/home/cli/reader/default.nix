@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "antiword"
+      "catdoc"
       "glow"
       "mdcat"
       # keep-sorted end
