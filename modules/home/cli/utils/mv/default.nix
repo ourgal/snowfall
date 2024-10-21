@@ -6,6 +6,7 @@ args.module (
     myPkgs = "classifier";
     nixPkgs = [
       # keep-sorted start
+      "detox"
       "edir"
       "f2"
       "mmv-go"
