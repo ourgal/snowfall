@@ -4,7 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
-      "anki"
+      # keep-sorted start
       "calibre"
       "evince"
       "goldendict-ng"
@@ -12,10 +12,13 @@ args.module (
       "libreoffice"
       "onlyoffice-bin"
       "zeal"
+      # keep-sorted end
     ];
     enable = [
+      # keep-sorted start
       "sioyek"
       "zathura"
+      # keep-sorted end
     ];
   }
 )
