@@ -834,3 +834,7 @@ fetch.github = "lengyijun/fc-fish"
 [mdformat-config]
 src.github_tag = "hukkin/mdformat-config"
 fetch.github = "hukkin/mdformat-config"
+
+[cat_win]
+src.github_tag = "SilenZcience/cat_win"
+fetch.github = "SilenZcience/cat_win"
