@@ -842,3 +842,7 @@ fetch.github = "SilenZcience/cat_win"
 [hledger-fmt]
 src.github = "mondeja/hledger-fmt"
 fetch.github = "mondeja/hledger-fmt"
+
+[classifier]
+src.git = "https://github.com/bhrigu123/classifier"
+fetch.github = "bhrigu123/classifier"
