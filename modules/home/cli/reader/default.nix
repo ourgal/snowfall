@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "antiword"
       "glow"
       "mdcat"
       # keep-sorted end
