@@ -850,3 +850,7 @@ fetch.github = "bhrigu123/classifier"
 [dext]
 src.git = "https://github.com/AfzGit/dext"
 fetch.github = "AfzGit/dext"
+
+[gaze]
+src.github = "wtetsu/gaze"
+fetch.github = "wtetsu/gaze"

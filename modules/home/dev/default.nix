@@ -11,6 +11,7 @@ args.module (
         # keep-sorted start
         "boilr"
         "envset"
+        "gaze"
         "treegen"
         "whitespace-format"
         # keep-sorted end
