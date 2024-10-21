@@ -14,7 +14,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/bornova/numara-calculator/releases/download/v${version}/Numara-${version}-x86_64.AppImage";
-    hash = "sha256-wNJBe/l3+dbZwQmF7Aw7khMePV/61cXELIskoRAYBRU=";
+    hash = "sha256-Uatg7RVUE7Jx0xUwldKH8Cys7kdws7C7/Xogp302JH4=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
