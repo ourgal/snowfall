@@ -854,3 +854,7 @@ fetch.github = "AfzGit/dext"
 [gaze]
 src.github = "wtetsu/gaze"
 fetch.github = "wtetsu/gaze"
+
+[ehh]
+src.github = "lennardv2/ehh"
+fetch.github = "lennardv2/ehh"
