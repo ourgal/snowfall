@@ -874,3 +874,7 @@ fetch.github = "keithknott26/datadash"
 [dlorg]
 src.git = "https://github.com/deepspeccode/dlorg"
 fetch.github = "deepspeccode/dlorg"
+
+[paclear]
+src.github = "orangekame3/paclear"
+fetch.github = "orangekame3/paclear"
