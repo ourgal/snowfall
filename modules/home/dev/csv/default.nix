@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "csview"
       "csvkit"
+      "csvlens"
       "csvquote"
       "dasel"
       "miller"
