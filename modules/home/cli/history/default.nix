@@ -9,6 +9,6 @@ args.module (
       "tsukae"
       # keep-sorted end
     ];
-    enable = "atuin";
+    enable = "hishtory";
   }
 )
