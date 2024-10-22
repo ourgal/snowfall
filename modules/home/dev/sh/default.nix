@@ -12,6 +12,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "argbash"
+      "bashly"
       "jc"
       "shellcheck"
       "shfmt"
