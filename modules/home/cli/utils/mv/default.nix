@@ -15,6 +15,7 @@ args.module (
       "detox"
       "edir"
       "f2"
+      "massren"
       "mmv-go"
       "nomino"
       "rnr"
