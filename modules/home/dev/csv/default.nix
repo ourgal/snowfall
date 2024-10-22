@@ -20,6 +20,7 @@ args.module (
       "miller"
       "q-text-as-data"
       "sq"
+      "tabiew"
       "tidy-viewer"
       "usql"
       "visidata"
