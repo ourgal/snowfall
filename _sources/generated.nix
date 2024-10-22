@@ -1610,6 +1610,17 @@
       sha256 = "sha256-RKGASr/6yeajA3K7RfbK+rlF71ryXmaxxjTAHdOeAYg=";
     };
   };
+  pyjokes = {
+    pname = "pyjokes";
+    version = "v0.6.0";
+    src = fetchFromGitHub {
+      owner = "pyjokes";
+      repo = "pyjokes";
+      rev = "v0.6.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-HJlzGI7OPjAeLvriWi2ieflP2LIKxRYRaPOG1hXn8qg=";
+    };
+  };
   quartz = {
     pname = "quartz";
     version = "64686482cb9e8a24a53d44134497a600eaa5d275";
