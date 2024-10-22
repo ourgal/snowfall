@@ -8,6 +8,7 @@ args.module (
     {
       path = ./.;
       nixPkgs = "perlnavigator";
+      perlPkgs = "Appcpanminus";
       files = {
         ".cpan/CPAN/MyConfig.pm" = ''
 
