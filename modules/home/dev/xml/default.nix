@@ -4,6 +4,11 @@ args.module (
   // {
     path = ./.;
     myPkgs = "bafi";
-    nixPkgs = "faq";
+    nixPkgs = [
+      # keep-sorted start
+      "dasel"
+      "faq"
+      # keep-sorted end
+    ];
   }
 )
