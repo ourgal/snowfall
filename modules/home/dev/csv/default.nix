@@ -12,6 +12,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "csview"
+      "csvkit"
       "csvquote"
       "dasel"
       "miller"
