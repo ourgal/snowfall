@@ -1574,6 +1574,17 @@
       sha256 = "sha256-Y0/N5xunEXOG+FuZE23xsSwFd6PL1XClV5UIckTYNPs=";
     };
   };
+  proji = {
+    pname = "proji";
+    version = "v0.20.0";
+    src = fetchFromGitHub {
+      owner = "proji-rocks";
+      repo = "proji";
+      rev = "v0.20.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-6nclWKouYp6ENGK23DQ6Wq9gpIQQjXHyLSOxyKV1i8A=";
+    };
+  };
   puffer-fish = {
     pname = "puffer-fish";
     version = "12d062eae0ad24f4ec20593be845ac30cd4b5923";
@@ -1976,10 +1987,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.83.0";
+    version = "0.84.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.83.0.tar.gz";
-      sha256 = "sha256-/DuXeWCS2cfmheU5Lzjz6yAH/+GzsThN7m0/ENJWur0=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.84.0.tar.gz";
+      sha256 = "sha256-+4lxeWD+p6U5gj+iZCUve+HISETkuNJzYObU7bNoRqg=";
     };
   };
   textual-autocomplete = {
@@ -2395,13 +2406,13 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "12652bfa7840b619cc10069d1cc835073d2a2f6c";
+    version = "677741bb19fac4b7978a102fea6c0e1d4751cef9";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "12652bfa7840b619cc10069d1cc835073d2a2f6c";
+      rev = "677741bb19fac4b7978a102fea6c0e1d4751cef9";
       fetchSubmodules = false;
-      sha256 = "sha256-npaiyqaX39WP3phAoQOL2MBD3A15pL000ldbzldCm78=";
+      sha256 = "sha256-2N5K+fKCdBjb9POUFNu5koT3qgtvyDDGK3cABMYb0ds=";
     };
     date = "2024-10-22";
   };

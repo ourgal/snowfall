@@ -2895,6 +2895,27 @@
         },
         "version": "3.0.5"
     },
+    "proji": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "proji",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "proji-rocks",
+            "repo": "proji",
+            "rev": "v0.20.0",
+            "sha256": "sha256-6nclWKouYp6ENGK23DQ6Wq9gpIQQjXHyLSOxyKV1i8A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.20.0"
+    },
     "puffer-fish": {
         "cargoLocks": null,
         "date": "2024-03-03",
@@ -3642,11 +3663,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-/DuXeWCS2cfmheU5Lzjz6yAH/+GzsThN7m0/ENJWur0=",
+            "sha256": "sha256-+4lxeWD+p6U5gj+iZCUve+HISETkuNJzYObU7bNoRqg=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.83.0.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-0.84.0.tar.gz"
         },
-        "version": "0.83.0"
+        "version": "0.84.0"
     },
     "textual-autocomplete": {
         "cargoLocks": null,
@@ -4391,12 +4412,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "12652bfa7840b619cc10069d1cc835073d2a2f6c",
-            "sha256": "sha256-npaiyqaX39WP3phAoQOL2MBD3A15pL000ldbzldCm78=",
+            "rev": "677741bb19fac4b7978a102fea6c0e1d4751cef9",
+            "sha256": "sha256-2N5K+fKCdBjb9POUFNu5koT3qgtvyDDGK3cABMYb0ds=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "12652bfa7840b619cc10069d1cc835073d2a2f6c"
+        "version": "677741bb19fac4b7978a102fea6c0e1d4751cef9"
     },
     "visual-split-vim": {
         "cargoLocks": null,
