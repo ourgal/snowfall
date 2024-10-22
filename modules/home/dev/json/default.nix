@@ -11,6 +11,7 @@ args.module (
       "fastgron"
       "fx"
       "gjo"
+      "jaq"
       "jd-diff-patch"
       "jid"
       "jiq"
