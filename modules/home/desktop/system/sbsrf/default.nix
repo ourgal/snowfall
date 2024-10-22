@@ -66,7 +66,12 @@ args.module (
         i18n.inputMethod = {
           enabled = "fcitx5";
           fcitx5 = {
-            addons = [ pkgs.fcitx5-rime ];
+            addons = with pkgs; [
+              fcitx5-rime
+              fcitx5-nord
+              fcitx5-configtool
+              fcitx5-material-color
+            ];
             catppuccin = disabled;
           };
         };
