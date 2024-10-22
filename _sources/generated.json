@@ -637,6 +637,27 @@
         },
         "version": "bb64b3bb3407d965e0ec17c232871dec6fcc8457"
     },
+    "datadash": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "datadash",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "keithknott26",
+            "repo": "datadash",
+            "rev": "v0.1.0",
+            "sha256": "sha256-WEB1MVG2aGvKnkMAgF7nxKHgA05VRJONoNdsBpXM2Wk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.0"
+    },
     "dblab": {
         "cargoLocks": null,
         "date": null,

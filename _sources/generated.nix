@@ -351,6 +351,17 @@
     };
     date = "2024-10-16";
   };
+  datadash = {
+    pname = "datadash";
+    version = "v0.1.0";
+    src = fetchFromGitHub {
+      owner = "keithknott26";
+      repo = "datadash";
+      rev = "v0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-WEB1MVG2aGvKnkMAgF7nxKHgA05VRJONoNdsBpXM2Wk=";
+    };
+  };
   dblab = {
     pname = "dblab";
     version = "v0.26.0";
