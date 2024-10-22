@@ -24,6 +24,7 @@ args.module (
       "jq"
       "jqp"
       "jsonfmt"
+      "jtc"
       "miller"
       "remarshal"
       "visidata"
