@@ -12,7 +12,6 @@ args.module (
         "boilr"
         "envset"
         "gaze"
-        "treegen"
         "whitespace-format"
         # keep-sorted end
       ];
@@ -23,13 +22,10 @@ args.module (
         "devenv"
         "honcho"
         "keep-sorted"
-        "nap"
         "process-compose"
         "reuse"
         "treefmt2"
         "universal-ctags"
-        "watchexec"
-        "watchman"
         # keep-sorted end
       ];
       confs = {

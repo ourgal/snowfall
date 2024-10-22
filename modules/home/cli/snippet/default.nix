@@ -9,7 +9,12 @@ args.module (
       "ehh"
       # keep-sorted end
     ];
-    nixPkgs = "pet";
+    nixPkgs = [
+      # keep-sorted start
+      "nap"
+      "pet"
+      # keep-sorted end
+    ];
     enable = "navi";
   }
 )
