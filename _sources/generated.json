@@ -2961,6 +2961,27 @@
         },
         "version": "2.6.0"
     },
+    "pyjokes": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "pyjokes",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pyjokes",
+            "repo": "pyjokes",
+            "rev": "v0.6.0",
+            "sha256": "sha256-HJlzGI7OPjAeLvriWi2ieflP2LIKxRYRaPOG1hXn8qg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.6.0"
+    },
     "quartz": {
         "cargoLocks": null,
         "date": "2024-10-03",
