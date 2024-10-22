@@ -20,6 +20,7 @@ args.module (
         "cachix"
         "devbox"
         "devenv"
+        "dtool"
         "honcho"
         "keep-sorted"
         "process-compose"
