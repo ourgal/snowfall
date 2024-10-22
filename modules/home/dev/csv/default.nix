@@ -14,6 +14,7 @@ args.module (
       "csview"
       "csvkit"
       "csvlens"
+      "csvq"
       "csvquote"
       "dasel"
       "miller"
