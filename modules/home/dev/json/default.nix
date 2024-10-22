@@ -8,6 +8,7 @@ args.module (
       "biome"
       "dasel"
       "faq"
+      "fastgron"
       "fx"
       "gjo"
       "jd-diff-patch"
