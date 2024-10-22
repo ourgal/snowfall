@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "datadash"
       "jalm"
+      "paclear"
       "tuime"
       # keep-sorted end
     ];
