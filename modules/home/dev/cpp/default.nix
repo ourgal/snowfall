@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "gcc";
+    nixPkgs = [
+      # keep-sorted start
+      "cppcheck"
+      "gcc"
+      # keep-sorted end
+    ];
   }
 )
