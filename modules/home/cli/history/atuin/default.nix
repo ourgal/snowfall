@@ -7,6 +7,7 @@ args.module (
       enter_accept = true;
       sync_address = "http://atuin.zxc.cn";
       sync_frequency = "15m";
+      dotfiles.enabled = true;
     };
   }
 )
