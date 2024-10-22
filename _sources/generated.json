@@ -2727,6 +2727,27 @@
         },
         "version": "v0.2.0"
     },
+    "paclear": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "paclear",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "orangekame3",
+            "repo": "paclear",
+            "rev": "v0.0.13",
+            "sha256": "sha256-Q4uY5aEcQKKLxhBGzmLdOy/bLG0/hpFRkF10wA68Ic0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.13"
+    },
     "pangu-vim": {
         "cargoLocks": null,
         "date": "2023-02-19",

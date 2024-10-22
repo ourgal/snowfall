@@ -1482,6 +1482,17 @@
       sha256 = "sha256-M6xmz7aK+NNZUDN8NJCUEODwotJ9VeY3bsueFpwjjjs=";
     };
   };
+  paclear = {
+    pname = "paclear";
+    version = "v0.0.13";
+    src = fetchFromGitHub {
+      owner = "orangekame3";
+      repo = "paclear";
+      rev = "v0.0.13";
+      fetchSubmodules = false;
+      sha256 = "sha256-Q4uY5aEcQKKLxhBGzmLdOy/bLG0/hpFRkF10wA68Ic0=";
+    };
+  };
   pangu-vim = {
     pname = "pangu-vim";
     version = "b7210117695dca05d94de1ac2108401f8eff0a2d";
