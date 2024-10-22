@@ -8,6 +8,7 @@ args.module (
       "micro"
       "ox"
       "vim-full"
+      "vis"
       # keep-sorted end
     ];
     enable = [
