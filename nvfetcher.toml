@@ -868,5 +868,5 @@ src.github = "mmalcek/bafi"
 fetch.github = "mmalcek/bafi"
 
 [datadash]
-src.github = "keithknott26/datadash"
+src.github_tag = "keithknott26/datadash"
 fetch.github = "keithknott26/datadash"
