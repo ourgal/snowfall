@@ -878,3 +878,7 @@ fetch.github = "deepspeccode/dlorg"
 [paclear]
 src.github = "orangekame3/paclear"
 fetch.github = "orangekame3/paclear"
+
+[pyjokes]
+src.github_tag = "pyjokes/pyjokes"
+fetch.github = "pyjokes/pyjokes"
