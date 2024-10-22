@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "funzzy"
       "hwatch"
+      "reflex"
       "viddy"
       "watchexec"
       "watchman"
