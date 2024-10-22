@@ -20,6 +20,7 @@ args.module (
       "jless"
       "jnv"
       "jo"
+      "jp"
       "jq"
       "jqp"
       "jsonfmt"
