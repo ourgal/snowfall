@@ -19,6 +19,7 @@ args.module (
       "dasel"
       "miller"
       "q-text-as-data"
+      "sq"
       "tidy-viewer"
       "usql"
       "visidata"
