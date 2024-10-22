@@ -18,7 +18,6 @@ args.module (
       # keep-sorted start
       "AI"
       "anime"
-      "asciiart"
       "audio"
       "blueteeth"
       "bookmark"
@@ -34,6 +33,7 @@ args.module (
       "encrypt"
       "file-manager"
       "font"
+      "fun"
       "game"
       "grammar"
       "history"
