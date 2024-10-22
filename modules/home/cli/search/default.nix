@@ -19,6 +19,5 @@ args.module (
       "zfind"
       # keep-sorted end
     ];
-    enable = "broot";
   }
 )
