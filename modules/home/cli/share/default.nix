@@ -22,6 +22,7 @@ args.module (
       "rsync"
       "sshfs"
       "tmate"
+      "tran"
       "webwormhole"
       # keep-sorted end
     ];
