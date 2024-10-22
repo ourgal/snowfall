@@ -1,0 +1,4 @@
+% perl
+
+# configure cpan mirror
+set PERL_MM_USE_DEFAULT 1; perl -MCPAN -e 'CPAN::HandleConfig->edit("pushy_https", 0); CPAN::HandleConfig->edit("urllist", "unshift", "https://mirrors.cernet.edu.cn/CPAN/"); mkmyconfig'
