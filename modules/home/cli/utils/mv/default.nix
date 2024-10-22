@@ -18,6 +18,7 @@ args.module (
       "massren"
       "mmv-go"
       "nomino"
+      "ren-find"
       "rnr"
       # keep-sorted end
     ];
