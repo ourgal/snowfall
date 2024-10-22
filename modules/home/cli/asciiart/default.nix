@@ -8,6 +8,7 @@ args.module (
       "datadash"
       "jalm"
       "paclear"
+      "pyjokes"
       "tuime"
       # keep-sorted end
     ];
@@ -30,6 +31,7 @@ args.module (
       "peaclock"
       "pipes"
       "pipes-rs"
+      "ponysay"
       "tmatrix"
       "toilet"
       # keep-sorted end
