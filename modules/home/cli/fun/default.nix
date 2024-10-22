@@ -21,6 +21,7 @@ args.module (
       "doge"
       "figlet"
       "figurine"
+      "fortune"
       "genact"
       "hr"
       "kittysay"
