@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "micro"
       "ox"
       "vim-full"
       # keep-sorted end
