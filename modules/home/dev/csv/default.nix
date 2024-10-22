@@ -18,6 +18,7 @@ args.module (
       "csvquote"
       "dasel"
       "miller"
+      "q-text-as-data"
       "tidy-viewer"
       "usql"
       "visidata"
