@@ -15,6 +15,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "libgen-cli"
+      "lux"
       "tdl"
       "tremc"
       # keep-sorted end
