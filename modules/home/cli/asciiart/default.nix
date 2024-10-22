@@ -14,6 +14,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "boxes"
+      "cfonts"
       "confetty"
       "doge"
       "figlet"
