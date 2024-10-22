@@ -16,6 +16,7 @@ args.module (
     );
     nixPkgs = [
       # keep-sorted start
+      "chars"
       "gotemplate"
       "pyp"
       "sttr"
