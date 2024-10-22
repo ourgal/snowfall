@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "bk"
       "cheat"
+      "dasht"
       "halp"
       # keep-sorted end
     ];
