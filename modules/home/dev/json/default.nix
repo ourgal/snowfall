@@ -13,6 +13,7 @@ args.module (
       "gjo"
       "jaq"
       "jd-diff-patch"
+      "jello"
       "jid"
       "jiq"
       "jnv"
