@@ -870,3 +870,7 @@ fetch.github = "mmalcek/bafi"
 [datadash]
 src.github_tag = "keithknott26/datadash"
 fetch.github = "keithknott26/datadash"
+
+[dlorg]
+src.git = "https://github.com/deepspeccode/dlorg"
+fetch.github = "deepspeccode/dlorg"
