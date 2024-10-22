@@ -2,7 +2,7 @@
   description = "SnowFall config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     snowfall-lib = {
       url = "github:snowfallorg/lib";
