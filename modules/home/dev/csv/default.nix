@@ -21,6 +21,7 @@ args.module (
       "q-text-as-data"
       "sq"
       "tabiew"
+      "textql"
       "tidy-viewer"
       "usql"
       "visidata"
