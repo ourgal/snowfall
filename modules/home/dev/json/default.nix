@@ -27,6 +27,7 @@ args.module (
       "jtc"
       "miller"
       "remarshal"
+      "rq"
       "visidata"
       "yj"
       "yq-go"
