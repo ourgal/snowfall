@@ -9,6 +9,8 @@ args.module (
       "funzzy"
       "hwatch"
       "viddy"
+      "watchexec"
+      "watchman"
       # keep-sorted end
     ];
   }
