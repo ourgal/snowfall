@@ -408,6 +408,18 @@
       sha256 = "sha256-xZAi/Ky1RjOxjhQKHvozaPTqDPcrGfhMemGWzi7WyW4=";
     };
   };
+  dlorg = {
+    pname = "dlorg";
+    version = "d4966d6d1e4384e8f6c7f33b473a24cf6cdd0617";
+    src = fetchFromGitHub {
+      owner = "deepspeccode";
+      repo = "dlorg";
+      rev = "d4966d6d1e4384e8f6c7f33b473a24cf6cdd0617";
+      fetchSubmodules = false;
+      sha256 = "sha256-yu+m1HGFSex/S1ik47ee8tGCFjTDkgfHqMmVNW2lQgY=";
+    };
+    date = "2024-08-18";
+  };
   docker-alist = {
     pname = "docker-alist";
     version = "v3.38.0";
@@ -1815,15 +1827,15 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "b1d39467ef2780266e5fe5ee9b7b49083adf08b3";
+    version = "4121f6e0ae20f3ed3af87b382072dd84804c333f";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "b1d39467ef2780266e5fe5ee9b7b49083adf08b3";
+      rev = "4121f6e0ae20f3ed3af87b382072dd84804c333f";
       fetchSubmodules = false;
-      sha256 = "sha256-SESiYrdPruQg4gV92OTcrKSClh3xyo5wkQ3NdN7e30M=";
+      sha256 = "sha256-I57BVz5VI4+ECQr3e0evZTgsAXAs1bmCT9iqxjABdhI=";
     };
-    date = "2024-10-08";
+    date = "2024-10-22";
   };
   soba = {
     pname = "soba";
@@ -2361,15 +2373,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "549b36f0f8f7e7c87bea829554f39220e2b66577";
+    version = "12652bfa7840b619cc10069d1cc835073d2a2f6c";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "549b36f0f8f7e7c87bea829554f39220e2b66577";
+      rev = "12652bfa7840b619cc10069d1cc835073d2a2f6c";
       fetchSubmodules = false;
-      sha256 = "sha256-BxFJq1u7K6eEtWDhnIwdYeYAcP7+QlszlZgnKppFuyI=";
+      sha256 = "sha256-npaiyqaX39WP3phAoQOL2MBD3A15pL000ldbzldCm78=";
     };
-    date = "2024-10-20";
+    date = "2024-10-22";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
@@ -2453,13 +2465,13 @@
   };
   ytui = {
     pname = "ytui";
-    version = "v0.1.8";
+    version = "v0.2.0";
     src = fetchFromGitHub {
       owner = "Banh-Canh";
       repo = "ytui";
-      rev = "v0.1.8";
+      rev = "v0.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-+sfkqz2LZCImWQrt3p4jx/i3jj7yJuH8F3fQ9raE9D4=";
+      sha256 = "sha256-M3BdfM/3iKe2b3aiOmClVWIgGOrYnRZZ6XpQQFmBNXA=";
     };
   };
   zfind = {
