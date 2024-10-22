@@ -29,6 +29,7 @@ args.module (
       "pipes"
       "pipes-rs"
       "tmatrix"
+      "toilet"
       # keep-sorted end
     ];
   }
