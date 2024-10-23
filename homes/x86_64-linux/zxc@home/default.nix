@@ -12,6 +12,7 @@ in
     cli = enabled;
     desktop = enabled // {
       editor = enabled;
+      flatpak = enabled;
     };
     dev = enabled;
   };

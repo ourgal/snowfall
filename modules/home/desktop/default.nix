@@ -11,7 +11,6 @@ args.module (
       "chat"
       "document"
       "flashcard"
-      "flatpak"
       "game"
       "image"
       "math"
