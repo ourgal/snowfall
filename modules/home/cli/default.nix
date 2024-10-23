@@ -60,6 +60,7 @@ args.module (
       "stats"
       "system"
       "task"
+      "timezone"
       "translate"
       "tui"
       "utils"
