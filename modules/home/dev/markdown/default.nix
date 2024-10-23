@@ -11,6 +11,7 @@ args.module (
       "lowdown"
       "marksman"
       "md-tangle"
+      "mdbook"
       # keep-sorted end
     ];
     enable = [
