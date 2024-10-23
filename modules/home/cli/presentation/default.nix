@@ -9,6 +9,7 @@ args.module (
       "doitlive"
       "mdp"
       "presenterm"
+      "pysentation"
       "slides"
       # keep-sorted end
     ];
