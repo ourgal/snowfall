@@ -9,6 +9,7 @@ args.module (
       "amber"
       "anew"
       "rep-grep"
+      "repgrep"
       "ruplacer"
       "sad"
       "sd"
