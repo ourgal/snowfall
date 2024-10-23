@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     myPkgs = "lookatme";
+    haskellPkgs = "patat";
     nixPkgs = [
       # keep-sorted start
       "doitlive"
