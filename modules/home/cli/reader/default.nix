@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "antiword"
       "catdoc"
+      "frogmouth"
       "glow"
       "mdcat"
       # keep-sorted end
