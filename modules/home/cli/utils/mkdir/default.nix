@@ -4,6 +4,11 @@ args.module (
   // {
     path = ./.;
     myPkgs = "treegen";
-    nixPkgs = "makejinja";
+    nixPkgs = [
+      # keep-sorted start
+      "gtree"
+      "makejinja"
+      # keep-sorted end
+    ];
   }
 )
