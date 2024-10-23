@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "asciinema"
+      "t-rec"
       "ttygif"
       "vhs"
       # keep-sorted end
