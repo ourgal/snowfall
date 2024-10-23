@@ -886,3 +886,7 @@ fetch.github = "pyjokes/pyjokes"
 [proji]
 src.github = "proji-rocks/proji"
 fetch.github = "proji-rocks/proji"
+
+[config-file-validator]
+src.github = "Boeing/config-file-validator"
+fetch.github = "Boeing/config-file-validator"

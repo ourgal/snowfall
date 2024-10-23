@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "config-file-validator"
       "convfmt"
       "otree"
       # keep-sorted end
