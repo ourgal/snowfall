@@ -26,6 +26,7 @@ args.module (
       "wget"
       "whois"
       "wirelesstools"
+      "wuzz"
       # keep-sorted end
     ];
     enable = "bottom";
