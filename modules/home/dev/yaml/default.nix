@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "bafi"
+      "config-file-validator"
       "convfmt"
       "otree"
       # keep-sorted end
