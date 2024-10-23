@@ -12,7 +12,6 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "adl"
-      "curd"
       "fast-anime"
       "lobster"
       "sauce"
