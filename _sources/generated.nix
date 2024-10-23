@@ -305,6 +305,17 @@
       sha256 = "sha256-rFnnbRVVv/N5021Al3vmjFAui1cTp8NBZDBNQo8CsXM=";
     };
   };
+  config-file-validator = {
+    pname = "config-file-validator";
+    version = "v1.7.1";
+    src = fetchFromGitHub {
+      owner = "Boeing";
+      repo = "config-file-validator";
+      rev = "v1.7.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-WloMMnSxJUKfRHodLYEbxD2adOfRcu7aOud1ziZaUfY=";
+    };
+  };
   convfmt = {
     pname = "convfmt";
     version = "0.1.6";
@@ -1333,15 +1344,15 @@
   };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
-    version = "672b230313fa238e569c672eb30a0677982156bf";
+    version = "40108961c064241455c180b2533f64f3b196eeca";
     src = fetchFromGitHub {
       owner = "niksingh710";
       repo = "minimal-tmux-status";
-      rev = "672b230313fa238e569c672eb30a0677982156bf";
+      rev = "40108961c064241455c180b2533f64f3b196eeca";
       fetchSubmodules = false;
-      sha256 = "sha256-0PROCM7iirKywY4SYjVkAgUio+NxjsCM+4TdiXjcuaw=";
+      sha256 = "sha256-XlI4EN8HkgWqv5M83BBIY0TA78wgDPKvXxP7eFgVBqE=";
     };
-    date = "2024-10-19";
+    date = "2024-10-23";
   };
   miru = {
     pname = "miru";
@@ -2406,15 +2417,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "848ececc6036efbffe9566b4de1516f414d60941";
+    version = "5c6323230dab394c7373ba4f711685d46890f9e1";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "848ececc6036efbffe9566b4de1516f414d60941";
+      rev = "5c6323230dab394c7373ba4f711685d46890f9e1";
       fetchSubmodules = false;
-      sha256 = "sha256-4sddRXlCVBtehuyBa+SJ2+NU5LusEfUZn3f13Qfs4SU=";
+      sha256 = "sha256-PXCikfDY7cuNnpMSYiY5CQs5lO08UHZc5htbkZ2KXiQ=";
     };
-    date = "2024-10-22";
+    date = "2024-10-23";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
