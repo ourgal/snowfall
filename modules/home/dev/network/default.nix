@@ -25,6 +25,7 @@ args.module (
       "tcping-go"
       "termshark"
       "trippy"
+      "trurl"
       "wget"
       "whois"
       "wirelesstools"
