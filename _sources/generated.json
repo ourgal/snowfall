@@ -553,6 +553,27 @@
         },
         "version": "v0.3.1"
     },
+    "config-file-validator": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "config-file-validator",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Boeing",
+            "repo": "config-file-validator",
+            "rev": "v1.7.1",
+            "sha256": "sha256-WloMMnSxJUKfRHodLYEbxD2adOfRcu7aOud1ziZaUfY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.7.1"
+    },
     "convfmt": {
         "cargoLocks": null,
         "date": null,
@@ -2456,7 +2477,7 @@
     },
     "minimal-tmux-status": {
         "cargoLocks": null,
-        "date": "2024-10-19",
+        "date": "2024-10-23",
         "extract": null,
         "name": "minimal-tmux-status",
         "passthru": null,
@@ -2468,12 +2489,12 @@
             "name": null,
             "owner": "niksingh710",
             "repo": "minimal-tmux-status",
-            "rev": "672b230313fa238e569c672eb30a0677982156bf",
-            "sha256": "sha256-0PROCM7iirKywY4SYjVkAgUio+NxjsCM+4TdiXjcuaw=",
+            "rev": "40108961c064241455c180b2533f64f3b196eeca",
+            "sha256": "sha256-XlI4EN8HkgWqv5M83BBIY0TA78wgDPKvXxP7eFgVBqE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "672b230313fa238e569c672eb30a0677982156bf"
+        "version": "40108961c064241455c180b2533f64f3b196eeca"
     },
     "miru": {
         "cargoLocks": null,
@@ -4400,7 +4421,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-10-22",
+        "date": "2024-10-23",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4412,12 +4433,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "848ececc6036efbffe9566b4de1516f414d60941",
-            "sha256": "sha256-4sddRXlCVBtehuyBa+SJ2+NU5LusEfUZn3f13Qfs4SU=",
+            "rev": "5c6323230dab394c7373ba4f711685d46890f9e1",
+            "sha256": "sha256-PXCikfDY7cuNnpMSYiY5CQs5lO08UHZc5htbkZ2KXiQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "848ececc6036efbffe9566b4de1516f414d60941"
+        "version": "5c6323230dab394c7373ba4f711685d46890f9e1"
     },
     "visual-split-vim": {
         "cargoLocks": null,
