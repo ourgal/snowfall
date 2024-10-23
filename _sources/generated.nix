@@ -1814,6 +1814,17 @@
       sha256 = "sha256-aTbom8J4S0ZCiHPfAPeFKZ+15PxG64dGqQtOKXuEBo8=";
     };
   };
+  sauce = {
+    pname = "sauce";
+    version = "v1.0.0";
+    src = fetchFromGitHub {
+      owner = "cadecuddy";
+      repo = "sauce";
+      rev = "v1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-DqJirsbNl8bJuuYZN9nKHMDCgs6agkdx7s0o7h90So8=";
+    };
+  };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
     version = "20241016";
