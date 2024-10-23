@@ -894,3 +894,15 @@ fetch.github = "Boeing/config-file-validator"
 [sauce]
 src.github_tag = "cadecuddy/sauce"
 fetch.github = "cadecuddy/sauce"
+
+[kdtree]
+src.pypi = "kdtree"
+fetch.pypi = "kdtree"
+
+[climage]
+src.pypi = "climage"
+fetch.pypi = "climage"
+
+[baca]
+src.github_tag = "wustho/baca"
+fetch.github = "wustho/baca"

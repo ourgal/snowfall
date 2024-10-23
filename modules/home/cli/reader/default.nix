@@ -12,7 +12,12 @@ args.module (
       "mdcat"
       # keep-sorted end
     ];
-    myPkgs = "reader";
+    myPkgs = [
+      # keep-sorted start
+      "baca"
+      "reader"
+      # keep-sorted end
+    ];
     enable = "ov";
   }
 )
