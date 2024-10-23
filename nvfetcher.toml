@@ -890,3 +890,7 @@ fetch.github = "proji-rocks/proji"
 [config-file-validator]
 src.github = "Boeing/config-file-validator"
 fetch.github = "Boeing/config-file-validator"
+
+[sauce]
+src.github_tag = "cadecuddy/sauce"
+fetch.github = "cadecuddy/sauce"
