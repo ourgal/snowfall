@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "amber"
       "anew"
+      "rep-grep"
       "ruplacer"
       "sad"
       "sd"
