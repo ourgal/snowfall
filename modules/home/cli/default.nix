@@ -42,7 +42,6 @@ args.module (
       "math"
       "meme"
       "multiplexer"
-      "network"
       "nix"
       "note"
       "notification"
