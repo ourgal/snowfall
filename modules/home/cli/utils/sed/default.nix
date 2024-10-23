@@ -6,6 +6,7 @@ args.module (
     myPkgs = "play";
     nixPkgs = [
       # keep-sorted start
+      "amber"
       "anew"
       "ruplacer"
       "sad"
