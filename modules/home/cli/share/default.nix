@@ -23,6 +23,7 @@ args.module (
       "sshfs"
       "tmate"
       "tran"
+      "tty-share"
       "webwormhole"
       # keep-sorted end
     ];
