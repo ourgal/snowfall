@@ -13,6 +13,7 @@ args.module (
       "ruplacer"
       "sad"
       "sd"
+      "teip"
       # keep-sorted end
     ];
     enable = "serpl";
