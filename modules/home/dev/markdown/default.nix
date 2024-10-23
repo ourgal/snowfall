@@ -8,6 +8,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "autocorrect"
+      "lowdown"
       "marksman"
       "md-tangle"
       # keep-sorted end
