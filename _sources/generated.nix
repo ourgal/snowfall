@@ -102,6 +102,17 @@
     };
     date = "2022-06-23";
   };
+  baca = {
+    pname = "baca";
+    version = "v0.1.17";
+    src = fetchFromGitHub {
+      owner = "wustho";
+      repo = "baca";
+      rev = "v0.1.17";
+      fetchSubmodules = false;
+      sha256 = "sha256-uiMzXqA52atees5tHC5Vqk3ALojkJZ8ouivo+omBnlM=";
+    };
+  };
   bafi = {
     pname = "bafi";
     version = "v1.2.0";
@@ -248,6 +259,14 @@
       sha256 = "sha256-nj+PlZpz8M2lvxsEa8RulWEb+aGN7ez7uF+iM9IhGKQ=";
     };
     date = "2017-05-23";
+  };
+  climage = {
+    pname = "climage";
+    version = "0.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz";
+      sha256 = "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=";
+    };
   };
   cloneit = {
     pname = "cloneit";
@@ -1204,6 +1223,14 @@
       rev = "v1.6.0";
       fetchSubmodules = false;
       sha256 = "sha256-ILQwUpjNueaYR5hxOWd5kZSPhVoFnnS2FcttyKSTPr8=";
+    };
+  };
+  kdtree = {
+    pname = "kdtree";
+    version = "0.16";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz";
+      sha256 = "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=";
     };
   };
   koji = {

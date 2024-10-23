@@ -175,6 +175,27 @@
         },
         "version": "c82ad2960c5f0c84e765df68554c266ea7e9464d"
     },
+    "baca": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "baca",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "wustho",
+            "repo": "baca",
+            "rev": "v0.1.17",
+            "sha256": "sha256-uiMzXqA52atees5tHC5Vqk3ALojkJZ8ouivo+omBnlM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.17"
+    },
     "bafi": {
         "cargoLocks": null,
         "date": null,
@@ -447,6 +468,21 @@
             "type": "github"
         },
         "version": "09e958baeedeb6eed0fb1e048ed820888c5dbb84"
+    },
+    "climage": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "climage",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz"
+        },
+        "version": "0.2.2"
     },
     "cloneit": {
         "cargoLocks": null,
@@ -2222,6 +2258,21 @@
             "type": "github"
         },
         "version": "v1.6.0"
+    },
+    "kdtree": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kdtree",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz"
+        },
+        "version": "0.16"
     },
     "koji": {
         "cargoLocks": null,
