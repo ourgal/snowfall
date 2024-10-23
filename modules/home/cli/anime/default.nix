@@ -15,6 +15,7 @@ args.module (
       "curd"
       "fast-anime"
       "lobster"
+      "sauce"
       "toru"
       # keep-sorted end
     ];
