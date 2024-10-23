@@ -2406,13 +2406,13 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "677741bb19fac4b7978a102fea6c0e1d4751cef9";
+    version = "848ececc6036efbffe9566b4de1516f414d60941";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "677741bb19fac4b7978a102fea6c0e1d4751cef9";
+      rev = "848ececc6036efbffe9566b4de1516f414d60941";
       fetchSubmodules = false;
-      sha256 = "sha256-2N5K+fKCdBjb9POUFNu5koT3qgtvyDDGK3cABMYb0ds=";
+      sha256 = "sha256-4sddRXlCVBtehuyBa+SJ2+NU5LusEfUZn3f13Qfs4SU=";
     };
     date = "2024-10-22";
   };
