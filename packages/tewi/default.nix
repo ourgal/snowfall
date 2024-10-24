@@ -5,6 +5,18 @@
   namespace,
 }:
 let
+  geoip2fast = python3.pkgs.buildPythonApplication rec {
+    pname = "geoip2fast";
+    inherit (pkgs.${namespace}.sources.${pname}) version src;
+    pyproject = true;
+
+    nativeBuildInputs = [
+      python3.pkgs.setuptools
+      python3.pkgs.wheel
+    ];
+
+    pythonImportsCheck = [ "geoip2fast" ];
+  };
   textual = python3.pkgs.buildPythonApplication rec {
     pname = "textual";
     inherit (pkgs.${namespace}.sources.${pname}) version src;
@@ -44,6 +56,8 @@ python3.pkgs.buildPythonApplication rec {
   propagatedBuildInputs = with python3.pkgs; [
     textual
     transmission-rpc
+    pyperclip
+    geoip2fast
   ];
 
   pythonRelaxDeps = true;

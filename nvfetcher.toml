@@ -906,3 +906,7 @@ fetch.pypi = "climage"
 [baca]
 src.github_tag = "wustho/baca"
 fetch.github = "wustho/baca"
+
+[geoip2fast]
+src.pypi = "geoip2fast"
+fetch.pypi = "geoip2fast"
