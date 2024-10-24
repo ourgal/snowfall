@@ -1524,6 +1524,21 @@
         },
         "version": "v0.1.0"
     },
+    "geoip2fast": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "geoip2fast",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz"
+        },
+        "version": "1.2.2"
+    },
     "gg": {
         "cargoLocks": null,
         "date": "2022-12-27",
@@ -4493,7 +4508,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-10-23",
+        "date": "2024-10-24",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4505,12 +4520,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "14b2683b7d99e6c0e547f936fe0c121b834e45ab",
-            "sha256": "sha256-s5Eyalk/WpQQDn1cdjnH/okfIKnKwJNuO+4E9bTOVSU=",
+            "rev": "37a1e42c030f9a85cda66c8d34c1a5ddc4696220",
+            "sha256": "sha256-0YzioZYfS6CINy04ORa1YLHnBulmG0cituKfMflHGD8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "14b2683b7d99e6c0e547f936fe0c121b834e45ab"
+        "version": "37a1e42c030f9a85cda66c8d34c1a5ddc4696220"
     },
     "visual-split-vim": {
         "cargoLocks": null,
