@@ -371,15 +371,15 @@
   };
   curd = {
     pname = "curd";
-    version = "bb64b3bb3407d965e0ec17c232871dec6fcc8457";
+    version = "0e7540de52998c867a0f3f0aa27fb68b72df039d";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "bb64b3bb3407d965e0ec17c232871dec6fcc8457";
+      rev = "0e7540de52998c867a0f3f0aa27fb68b72df039d";
       fetchSubmodules = false;
-      sha256 = "sha256-AzoEAd6WMV1ROoiKVghQReSg4dL9Z75xacmwgOGG/To=";
+      sha256 = "sha256-8bkygFBnY75EiMfq2z6Ohpqxny7P4jpPZJhVnw0P0W4=";
     };
-    date = "2024-10-16";
+    date = "2024-10-23";
   };
   datadash = {
     pname = "datadash";
@@ -1115,24 +1115,24 @@
   };
   gw = {
     pname = "gw";
-    version = "v0.3.2";
+    version = "v0.4.0";
     src = fetchFromGitHub {
       owner = "daniel7grant";
       repo = "gw";
-      rev = "v0.3.2";
+      rev = "v0.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-oexh8/iPVdJoU5PzEypho4+LSsAkHHByz0ZNCWYtHNA=";
+      sha256 = "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=";
     };
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.9.0";
+    version = "v1.9.1";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.9.0";
+      rev = "v1.9.1";
       fetchSubmodules = false;
-      sha256 = "sha256-yyYxRJ+o+Z5z7PmjcFCsahRXZ9JHFmGmituzGTxY6ec=";
+      sha256 = "sha256-Z5LeHI3CChSw2gtLeEm91Kcp51j0rGrrZ4K/5CN9ZwU=";
     };
   };
   hl = {
@@ -1645,10 +1645,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.24.2";
+    version = "2.25.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.2.tar.gz";
-      sha256 = "sha256-RJcpj8Y4Hj4aYcdP7DCI2BObmWmBd/vC3Ke3/rWuHCA=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.0.tar.gz";
+      sha256 = "sha256-8Z06HYmYzCvauRkM6ta+y7PIjRC9+tlHJmEy8HfONJ4=";
     };
   };
   pydantic-settings = {
@@ -2025,13 +2025,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.2.0";
+    version = "v0.3.0";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.2.0";
+      rev = "v0.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-tCbfpuiV/Conxf1SoRc014+55eLSMEaxfbXecrrqEHU=";
+      sha256 = "sha256-VyqaLpWGi8lLvGRZeR1IfBhlWBXX+3aoUDIMHhGyr/c=";
     };
   };
   textual = {
@@ -2455,13 +2455,13 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "5c6323230dab394c7373ba4f711685d46890f9e1";
+    version = "14b2683b7d99e6c0e547f936fe0c121b834e45ab";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "5c6323230dab394c7373ba4f711685d46890f9e1";
+      rev = "14b2683b7d99e6c0e547f936fe0c121b834e45ab";
       fetchSubmodules = false;
-      sha256 = "sha256-PXCikfDY7cuNnpMSYiY5CQs5lO08UHZc5htbkZ2KXiQ=";
+      sha256 = "sha256-s5Eyalk/WpQQDn1cdjnH/okfIKnKwJNuO+4E9bTOVSU=";
     };
     date = "2024-10-23";
   };

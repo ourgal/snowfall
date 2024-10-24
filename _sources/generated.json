@@ -675,7 +675,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-16",
+        "date": "2024-10-23",
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -687,12 +687,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "bb64b3bb3407d965e0ec17c232871dec6fcc8457",
-            "sha256": "sha256-AzoEAd6WMV1ROoiKVghQReSg4dL9Z75xacmwgOGG/To=",
+            "rev": "0e7540de52998c867a0f3f0aa27fb68b72df039d",
+            "sha256": "sha256-8bkygFBnY75EiMfq2z6Ohpqxny7P4jpPZJhVnw0P0W4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bb64b3bb3407d965e0ec17c232871dec6fcc8457"
+        "version": "0e7540de52998c867a0f3f0aa27fb68b72df039d"
     },
     "datadash": {
         "cargoLocks": null,
@@ -2063,12 +2063,12 @@
             "name": null,
             "owner": "daniel7grant",
             "repo": "gw",
-            "rev": "v0.3.2",
-            "sha256": "sha256-oexh8/iPVdJoU5PzEypho4+LSsAkHHByz0ZNCWYtHNA=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.2"
+        "version": "v0.4.0"
     },
     "hexpatch": {
         "cargoLocks": null,
@@ -2084,12 +2084,12 @@
             "name": null,
             "owner": "Etto48",
             "repo": "HexPatch",
-            "rev": "v1.9.0",
-            "sha256": "sha256-yyYxRJ+o+Z5z7PmjcFCsahRXZ9JHFmGmituzGTxY6ec=",
+            "rev": "v1.9.1",
+            "sha256": "sha256-Z5LeHI3CChSw2gtLeEm91Kcp51j0rGrrZ4K/5CN9ZwU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.9.0"
+        "version": "v1.9.1"
     },
     "hl": {
         "cargoLocks": null,
@@ -3033,11 +3033,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-RJcpj8Y4Hj4aYcdP7DCI2BObmWmBd/vC3Ke3/rWuHCA=",
+            "sha256": "sha256-8Z06HYmYzCvauRkM6ta+y7PIjRC9+tlHJmEy8HfONJ4=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.24.2.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.0.tar.gz"
         },
-        "version": "2.24.2"
+        "version": "2.25.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -3740,12 +3740,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v0.2.0",
-            "sha256": "sha256-tCbfpuiV/Conxf1SoRc014+55eLSMEaxfbXecrrqEHU=",
+            "rev": "v0.3.0",
+            "sha256": "sha256-VyqaLpWGi8lLvGRZeR1IfBhlWBXX+3aoUDIMHhGyr/c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.0"
+        "version": "v0.3.0"
     },
     "textual": {
         "cargoLocks": null,
@@ -4505,12 +4505,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "5c6323230dab394c7373ba4f711685d46890f9e1",
-            "sha256": "sha256-PXCikfDY7cuNnpMSYiY5CQs5lO08UHZc5htbkZ2KXiQ=",
+            "rev": "14b2683b7d99e6c0e547f936fe0c121b834e45ab",
+            "sha256": "sha256-s5Eyalk/WpQQDn1cdjnH/okfIKnKwJNuO+4E9bTOVSU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5c6323230dab394c7373ba4f711685d46890f9e1"
+        "version": "14b2683b7d99e6c0e547f936fe0c121b834e45ab"
     },
     "visual-split-vim": {
         "cargoLocks": null,
