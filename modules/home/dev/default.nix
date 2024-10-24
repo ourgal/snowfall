@@ -21,6 +21,7 @@ args.module (
         "devbox"
         "devenv"
         "dtool"
+        "exercism"
         "honcho"
         "keep-sorted"
         "process-compose"
