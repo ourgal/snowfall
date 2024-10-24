@@ -830,6 +830,14 @@
       sha256 = "sha256-wfSYR458uK47JtsiNrD3f6bD5HcfFf5WxlKdx8oLidY=";
     };
   };
+  geoip2fast = {
+    pname = "geoip2fast";
+    version = "1.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz";
+      sha256 = "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=";
+    };
+  };
   gg = {
     pname = "gg";
     version = "14e45a8e946eb7a04ebacc07e3a1f1f4235b1cd8";
@@ -2455,15 +2463,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "14b2683b7d99e6c0e547f936fe0c121b834e45ab";
+    version = "37a1e42c030f9a85cda66c8d34c1a5ddc4696220";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "14b2683b7d99e6c0e547f936fe0c121b834e45ab";
+      rev = "37a1e42c030f9a85cda66c8d34c1a5ddc4696220";
       fetchSubmodules = false;
-      sha256 = "sha256-s5Eyalk/WpQQDn1cdjnH/okfIKnKwJNuO+4E9bTOVSU=";
+      sha256 = "sha256-0YzioZYfS6CINy04ORa1YLHnBulmG0cituKfMflHGD8=";
     };
-    date = "2024-10-23";
+    date = "2024-10-24";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
