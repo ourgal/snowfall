@@ -4520,12 +4520,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "37a1e42c030f9a85cda66c8d34c1a5ddc4696220",
-            "sha256": "sha256-0YzioZYfS6CINy04ORa1YLHnBulmG0cituKfMflHGD8=",
+            "rev": "17802696cf4cbfd17680e9bbb7e3ded7c3127c08",
+            "sha256": "sha256-qz2Kv79Ir9m4ZAGmeTGXUtW5OClSO28cwEyzNkmE8bM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "37a1e42c030f9a85cda66c8d34c1a5ddc4696220"
+        "version": "17802696cf4cbfd17680e9bbb7e3ded7c3127c08"
     },
     "visual-split-vim": {
         "cargoLocks": null,
