@@ -12,10 +12,14 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "nap"
-      "pet"
       "the-way"
       # keep-sorted end
     ];
-    enable = "navi";
+    enable = [
+      # keep-sorted start
+      "navi"
+      "pet"
+      # keep-sorted end
+    ];
   }
 )
