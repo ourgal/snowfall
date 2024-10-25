@@ -1588,15 +1588,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "f30d6fda77339ae57f480c0086660a01fde003f6";
+    version = "74664dcb933dd80b5fa25e58ab511c910d8fff7e";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "f30d6fda77339ae57f480c0086660a01fde003f6";
+      rev = "74664dcb933dd80b5fa25e58ab511c910d8fff7e";
       fetchSubmodules = false;
-      sha256 = "sha256-UQ+6MbTrxMgL5h2kK19X5wxhFQ3FSBvtCWA/RQw8CvU=";
+      sha256 = "sha256-QsybDNmhE9nPbXg84uxxFq9hd9BI89cNm/ktqBg0K2k=";
     };
-    date = "2024-10-19";
+    date = "2024-10-24";
   };
   posting = {
     pname = "posting";
@@ -2263,13 +2263,13 @@
   };
   toru = {
     pname = "toru";
-    version = "v0.3.2";
+    version = "v0.3.3";
     src = fetchFromGitHub {
       owner = "sweetbbak";
       repo = "toru";
-      rev = "v0.3.2";
+      rev = "v0.3.3";
       fetchSubmodules = false;
-      sha256 = "sha256-rfnZvo1O46EW794T0/JaV9Wb8JxnTrbo/aD7EgeHcFc=";
+      sha256 = "sha256-hFs/CJHWgfy/KCp7lC8u8YrclQk0RWhrSe4IXbsJL3I=";
     };
   };
   tp = {
@@ -2463,13 +2463,13 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "17802696cf4cbfd17680e9bbb7e3ded7c3127c08";
+    version = "47b76db76e5cf27de02d8b54072a2cce767c1e12";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "17802696cf4cbfd17680e9bbb7e3ded7c3127c08";
+      rev = "47b76db76e5cf27de02d8b54072a2cce767c1e12";
       fetchSubmodules = false;
-      sha256 = "sha256-qz2Kv79Ir9m4ZAGmeTGXUtW5OClSO28cwEyzNkmE8bM=";
+      sha256 = "sha256-Fg+RmujK7V4W2Tk4qtmStPibmfKuKSGeN3zRZ23DPi0=";
     };
     date = "2024-10-24";
   };

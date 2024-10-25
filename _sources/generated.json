@@ -2921,7 +2921,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2024-10-19",
+        "date": "2024-10-24",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -2933,12 +2933,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "f30d6fda77339ae57f480c0086660a01fde003f6",
-            "sha256": "sha256-UQ+6MbTrxMgL5h2kK19X5wxhFQ3FSBvtCWA/RQw8CvU=",
+            "rev": "74664dcb933dd80b5fa25e58ab511c910d8fff7e",
+            "sha256": "sha256-QsybDNmhE9nPbXg84uxxFq9hd9BI89cNm/ktqBg0K2k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f30d6fda77339ae57f480c0086660a01fde003f6"
+        "version": "74664dcb933dd80b5fa25e58ab511c910d8fff7e"
     },
     "posting": {
         "cargoLocks": null,
@@ -4163,12 +4163,12 @@
             "name": null,
             "owner": "sweetbbak",
             "repo": "toru",
-            "rev": "v0.3.2",
-            "sha256": "sha256-rfnZvo1O46EW794T0/JaV9Wb8JxnTrbo/aD7EgeHcFc=",
+            "rev": "v0.3.3",
+            "sha256": "sha256-hFs/CJHWgfy/KCp7lC8u8YrclQk0RWhrSe4IXbsJL3I=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.2"
+        "version": "v0.3.3"
     },
     "tp": {
         "cargoLocks": null,
@@ -4520,12 +4520,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "17802696cf4cbfd17680e9bbb7e3ded7c3127c08",
-            "sha256": "sha256-qz2Kv79Ir9m4ZAGmeTGXUtW5OClSO28cwEyzNkmE8bM=",
+            "rev": "47b76db76e5cf27de02d8b54072a2cce767c1e12",
+            "sha256": "sha256-Fg+RmujK7V4W2Tk4qtmStPibmfKuKSGeN3zRZ23DPi0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "17802696cf4cbfd17680e9bbb7e3ded7c3127c08"
+        "version": "47b76db76e5cf27de02d8b54072a2cce767c1e12"
     },
     "visual-split-vim": {
         "cargoLocks": null,
