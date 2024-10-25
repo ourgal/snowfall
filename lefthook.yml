@@ -1,3 +1,4 @@
+output: false
 pre-commit:
   commands:
     toml:
