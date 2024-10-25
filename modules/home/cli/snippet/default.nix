@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "nap"
       "pet"
+      "the-way"
       # keep-sorted end
     ];
     enable = "navi";
