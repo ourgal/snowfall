@@ -7,7 +7,12 @@ args.module (
     in
     {
       path = ./.;
-      nixPkgs = "gnuplot";
+      nixPkgs = [
+        # keep-sorted start
+        "emacs-lsp-booster"
+        "gnuplot"
+        # keep-sorted end
+      ];
       progs.emacs = {
         extraPackages = epkgs: [ epkgs.vterm ];
         package = pkgs.emacs-gtk;
