@@ -9,6 +9,7 @@ args.module (
       "htop"
       # keep-sorted end
     ];
+    nvtopPkgs = "full";
     nixPkgs = [
       # keep-sorted start
       "acpi"
@@ -22,7 +23,6 @@ args.module (
       "glxinfo"
       "libva-utils"
       "neofetch"
-      "nvtop"
       "onefetch"
       "owofetch"
       "pciutils"

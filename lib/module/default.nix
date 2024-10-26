@@ -178,6 +178,7 @@ rec {
       gnomePkgs ? [ ],
       batPkgs ? [ ],
       inputPkgs ? _p: [ ],
+      nvtopPkgs ? [ ],
       extraOpts ? { },
       confs ? [ ],
       files ? [ ],
@@ -284,6 +285,7 @@ rec {
               ++ (pkgHandle pkgs.gnome gnomePkgs)
               ++ (pkgHandle pkgs.bat-extras batPkgs)
               ++ (pkgHandle pkgs.snowfallorg snowPkgs)
+              ++ (pkgHandle pkgs.nvtopPackages nvtopPkgs)
               ++ (inputPkgs inputs);
             file = confHandle files;
             sessionVariables = env;
