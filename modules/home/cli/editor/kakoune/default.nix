@@ -3,31 +3,40 @@ args.module (
   args
   // {
     path = ./.;
-    progs.kakoune.config = {
-      autoComplete = [
-        "insert"
-        "prompt"
-      ];
-      autoInfo = [
-        "command"
-        "onkey"
-      ];
-      colorScheme = "tomorrow-night";
-      autoReload = "yes";
-      wrapLines = {
-        enable = true;
-        marker = "⏎";
-        word = true;
-      };
-      numberLines = {
-        enable = true;
-        highlightCursor = true;
-        relative = true;
-      };
-      ui = {
-        enableMouse = true;
-        assistant = "none";
+    progs.kakoune = {
+      config = {
+        autoComplete = [
+          "insert"
+          "prompt"
+        ];
+        autoInfo = [
+          "command"
+          "onkey"
+        ];
+        colorScheme = "tomorrow-night";
+        autoReload = "yes";
+        wrapLines = {
+          enable = true;
+          marker = "⏎";
+          word = true;
+        };
+        numberLines = {
+          enable = true;
+          highlightCursor = true;
+          relative = true;
+        };
+        ui = {
+          enableMouse = true;
+          assistant = "none";
+        };
+        keyMappings = [ ];
       };
     };
+    enable = [
+      # keep-sorted start
+      "auto-pairs-kak"
+      "fzf-kak"
+      # keep-sorted end
+    ];
   }
 )
