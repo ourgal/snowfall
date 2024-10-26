@@ -1600,13 +1600,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.0.0";
+    version = "2.0.1";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.0.0";
+      rev = "2.0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-zxSLZGkc/svEgMmhKxuAZDwWf5S4RtOn9BYMDuToa3M=";
+      sha256 = "sha256-6KtC5VuG3x07VTenpyDAJr9KO4jdTCFk1u/pSoyYPsc=";
     };
   };
   pot = {
@@ -2044,10 +2044,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.84.0";
+    version = "0.85.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.84.0.tar.gz";
-      sha256 = "sha256-+4lxeWD+p6U5gj+iZCUve+HISETkuNJzYObU7bNoRqg=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.85.0.tar.gz";
+      sha256 = "sha256-ZFwP0LT2HNGTg994oazU87VV4sUUz6L0VOIGkt/8EKA=";
     };
   };
   textual-autocomplete = {
@@ -2463,15 +2463,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "47b76db76e5cf27de02d8b54072a2cce767c1e12";
+    version = "adc3d887ccb1872b92b5d4bf3446973f2f82f3fa";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "47b76db76e5cf27de02d8b54072a2cce767c1e12";
+      rev = "adc3d887ccb1872b92b5d4bf3446973f2f82f3fa";
       fetchSubmodules = false;
-      sha256 = "sha256-Fg+RmujK7V4W2Tk4qtmStPibmfKuKSGeN3zRZ23DPi0=";
+      sha256 = "sha256-O1hkAh3lKEgnDfYjknvHpsW1wjvw7F8ss/qN9zGMjX4=";
     };
-    date = "2024-10-24";
+    date = "2024-10-25";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
