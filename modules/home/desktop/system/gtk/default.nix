@@ -11,8 +11,8 @@ args.module (
         # Theme GTK
         gtk = enabled // {
           theme = {
-            name = "Adwaita";
-            package = pkgs.gnome.gnome-themes-extra;
+            name = "catppuccin-frappe-blue-standard";
+            package = pkgs.catppuccin-gtk;
           };
           font = {
             name = "Ubuntu";
