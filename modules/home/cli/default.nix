@@ -58,6 +58,7 @@ args.module (
       "snippet"
       "ssh"
       "stats"
+      "string"
       "system"
       "task"
       "timezone"
