@@ -18,6 +18,7 @@ args.module (
       "faq"
       "remarshal"
       "yaml-language-server"
+      "yamlfix"
       "yamlfmt"
       "yamllint"
       # keep-sorted end
