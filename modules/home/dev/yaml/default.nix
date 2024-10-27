@@ -17,6 +17,7 @@ args.module (
       "dyff"
       "faq"
       "remarshal"
+      "yamale"
       "yaml-language-server"
       "yamlfix"
       "yamlfmt"
