@@ -19,6 +19,7 @@ args.module (
       "remarshal"
       "yaml-language-server"
       "yamlfmt"
+      "yamllint"
       # keep-sorted end
     ];
   }
