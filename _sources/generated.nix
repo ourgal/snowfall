@@ -371,15 +371,15 @@
   };
   curd = {
     pname = "curd";
-    version = "0e7540de52998c867a0f3f0aa27fb68b72df039d";
+    version = "c3fa51fd5f8c51e7fcfd275a51d270a40462485a";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "0e7540de52998c867a0f3f0aa27fb68b72df039d";
+      rev = "c3fa51fd5f8c51e7fcfd275a51d270a40462485a";
       fetchSubmodules = false;
-      sha256 = "sha256-8bkygFBnY75EiMfq2z6Ohpqxny7P4jpPZJhVnw0P0W4=";
+      sha256 = "sha256-K37Hu76hrNym/5vlo7OYEvWZPrU3UejigAhrzTA1fd4=";
     };
-    date = "2024-10-23";
+    date = "2024-10-27";
   };
   datadash = {
     pname = "datadash";
@@ -1045,13 +1045,13 @@
   };
   gitty = {
     pname = "gitty";
-    version = "v0.1.2";
+    version = "v0.1.3";
     src = fetchFromGitHub {
       owner = "worlpaker";
       repo = "gitty";
-      rev = "v0.1.2";
+      rev = "v0.1.3";
       fetchSubmodules = false;
-      sha256 = "sha256-+jKMp13EVbsJ67Uklg/XjULbHTpscfLSfRTjhjzKnHw=";
+      sha256 = "sha256-TVNZSKg/BiQAOy3Natw3WrvDUdv7SwpG+I4P/i5O/WA=";
     };
   };
   gogitmoji = {
@@ -2044,10 +2044,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.85.0";
+    version = "0.85.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.85.0.tar.gz";
-      sha256 = "sha256-ZFwP0LT2HNGTg994oazU87VV4sUUz6L0VOIGkt/8EKA=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.85.1.tar.gz";
+      sha256 = "sha256-mWYhQ5D62ahMP2nUk5hIeJdXf1+niIOBBt13vXuryc0=";
     };
   };
   textual-autocomplete = {
@@ -2463,15 +2463,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "adc3d887ccb1872b92b5d4bf3446973f2f82f3fa";
+    version = "39a6cd6f32d707943f608c6c8819005a975eb747";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "adc3d887ccb1872b92b5d4bf3446973f2f82f3fa";
+      rev = "39a6cd6f32d707943f608c6c8819005a975eb747";
       fetchSubmodules = false;
-      sha256 = "sha256-O1hkAh3lKEgnDfYjknvHpsW1wjvw7F8ss/qN9zGMjX4=";
+      sha256 = "sha256-HN6dXnUfjT+uY3k0w+CkBM5vCRKEvx61blOFeFS7Bnc=";
     };
-    date = "2024-10-25";
+    date = "2024-10-26";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
