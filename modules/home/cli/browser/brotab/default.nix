@@ -4,13 +4,15 @@ args.module (
   // (
     let
       inherit (args) pkgs;
-      firefoxNative = {
-        name = "brotab_mediator";
-        description = "This mediator exposes interface over TCP to control browser's tabs";
-        path = "${pkgs.brotab}bin/bt_mediator";
-        type = "stdio";
-        allowed_extensions = [ "brotab_mediator@example.org" ];
-      };
+      firefoxText = ''
+        {
+          "name": "brotab_mediator",
+          "description": "This mediator exposes interface over TCP to control browser's tabs",
+          "path": "${pkgs.brotab}/bin/bt_mediator",
+          "type": "stdio",
+          "allowed_extensions": [ "brotab_mediator@example.org" ]
+        }
+      '';
       chromiumNative = {
         name = "brotab_mediator";
         description = "This mediator exposes interface over TCP to control browser's tabs";
@@ -30,8 +32,8 @@ args.module (
         "vivaldi/NativeMessagingHosts/brotab_mediator.json" = builtins.toJSON chromiumNative;
       };
       files = {
-        ".mozilla/native-messaging-hosts/brotab_mediator.json" = builtins.toJSON firefoxNative;
-        ".librewolf/native-messaging-hosts/brotab_mediator.json" = builtins.toJSON firefoxNative;
+        ".mozilla/native-messaging-hosts/brotab_mediator.json" = firefoxText;
+        ".librewolf/native-messaging-hosts/brotab_mediator.json" = firefoxText;
       };
     }
   )
