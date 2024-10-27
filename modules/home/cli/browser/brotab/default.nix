@@ -16,7 +16,7 @@ args.module (
       chromiumNative = {
         name = "brotab_mediator";
         description = "This mediator exposes interface over TCP to control browser's tabs";
-        path = "/nix/store/m607xc81cjqzjlmdq21pkna3lzbgssvm-brotab-1.4.2/bin/bt_mediator";
+        path = "${pkgs.brotab}/bin/bt_mediator";
         type = "stdio";
         allowed_extensions = [ "brotab_mediator@example.org" ];
         allowed_origins = [ "chrome-extension://mhpeahbikehnfkfnmopaigggliclhmnc/" ];
