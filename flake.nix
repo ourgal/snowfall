@@ -157,6 +157,10 @@
         nvchad4nix.homeManagerModule
       ];
 
+      templates = {
+        base.description = "base template";
+      };
+
       homes.users = homeSpecialArgsFinal;
 
       deploy = lib.mkDeploy { inherit (inputs) self; };
