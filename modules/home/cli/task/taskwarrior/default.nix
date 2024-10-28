@@ -30,10 +30,7 @@ args.module (
         "timewarrior"
         # keep-sorted end
       ];
-      progs = [
-        { taskwarrior.package = pkgs.taskwarrior3; }
-        { fish.shellAbbrs.t = "taskwarrior-tui"; }
-      ];
+      progs.taskwarrior.package = pkgs.taskwarrior3;
       value = {
         home.file = {
           ".local/share/task/hooks/on-modify.timewarrior".source = ./on-modify.timewarrior;
