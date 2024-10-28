@@ -1,0 +1,4 @@
+% system
+
+# motherboard
+sudo dmidecode -t 2

@@ -28,6 +28,14 @@ args.module (
             "hook"
           ];
         }
+        {
+          command = "sudo dmidecode -t 2";
+          description = "motherboard";
+          tag = [
+            "sys"
+            "motherboard"
+          ];
+        }
       ];
     };
   }
