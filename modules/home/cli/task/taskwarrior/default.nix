@@ -38,7 +38,7 @@ args.module (
             relative-recur + "/on-modify.relative-recur";
           ".local/share/task/hooks/on-modify-complete-recur".source =
             better-recur + "/on-modify-complete-recur";
-          ".local/share/task/hooks/on-add-expire".source = better-recur + "/on-add-expire";
+          ".local/share/task/hooks/on-add-expire".source = ./on-add-expire;
         };
       };
     }
