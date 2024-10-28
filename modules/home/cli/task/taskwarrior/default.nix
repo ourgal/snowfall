@@ -24,8 +24,11 @@ args.module (
     {
       path = ./.;
       nixPkgs = [
+        # keep-sorted start
+        "tasksh"
         "taskwarrior-tui"
         "timewarrior"
+        # keep-sorted end
       ];
       progs = [
         { taskwarrior.package = pkgs.taskwarrior3; }
