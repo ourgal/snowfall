@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Read the new task JSON object from standard input
+read new_task
+
+# Extract the status and the 'expires' attribute from the new task
+status=$(echo "$new_task" | jq -r '.status')
+due=$(echo "$new_task" | jq -r '.due // empty')
+expires=$(echo "$new_task" | jq -r '.expires // empty')
+
+# Check if the status is not 'recurring' and the 'expires' attribute is set
+if [[ "$status" != "recurring" && -n "$expires" ]]; then
+  # Update the 'until' attribute with the value of 'expires'
+  new_expire_date=$(task calc "$due + $expires")
+  new_task=$(echo "$new_task" | jq -r -c --arg expires "$new_expire_date" '. + {until: $expires}')
+fi
+
+# Output the new task
+echo "$new_task"
