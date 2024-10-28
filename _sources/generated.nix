@@ -371,13 +371,13 @@
   };
   curd = {
     pname = "curd";
-    version = "c3fa51fd5f8c51e7fcfd275a51d270a40462485a";
+    version = "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "c3fa51fd5f8c51e7fcfd275a51d270a40462485a";
+      rev = "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a";
       fetchSubmodules = false;
-      sha256 = "sha256-K37Hu76hrNym/5vlo7OYEvWZPrU3UejigAhrzTA1fd4=";
+      sha256 = "sha256-KL8Nhhz3VgktcEHvnHzk/Ey5lObRon0tDceDCa2y61I=";
     };
     date = "2024-10-27";
   };
@@ -394,13 +394,13 @@
   };
   dblab = {
     pname = "dblab";
-    version = "v0.26.0";
+    version = "v0.27.0";
     src = fetchFromGitHub {
       owner = "danvergara";
       repo = "dblab";
-      rev = "v0.26.0";
+      rev = "v0.27.0";
       fetchSubmodules = false;
-      sha256 = "sha256-3v9L1mV+DZ6FlrBoGSg8tewKJVyeqqacVj3yGVtYVHc=";
+      sha256 = "sha256-/bvNyfyLqlWwLR1+fWnW4/xkxpF+7u/0nX4QpuzV6XY=";
     };
   };
   devdocs-vim = {
@@ -492,13 +492,13 @@
   };
   dra = {
     pname = "dra";
-    version = "0.6.2";
+    version = "0.6.3";
     src = fetchFromGitHub {
       owner = "devmatteini";
       repo = "dra";
-      rev = "0.6.2";
+      rev = "0.6.3";
       fetchSubmodules = false;
-      sha256 = "sha256-9Ts9xipEacb+704BDVoOPGKlYKbuSdso1WYsFspNJTY=";
+      sha256 = "sha256-C+BEvRBm8f9rtcNQi86x4RHZiMsPl8dZNJToxG7MUxM=";
     };
   };
   easyjump-vim = {
@@ -2033,13 +2033,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.3.0";
+    version = "v0.4.1";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.3.0";
+      rev = "v0.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-VyqaLpWGi8lLvGRZeR1IfBhlWBXX+3aoUDIMHhGyr/c=";
+      sha256 = "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=";
     };
   };
   textual = {

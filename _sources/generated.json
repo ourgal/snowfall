@@ -687,12 +687,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "c3fa51fd5f8c51e7fcfd275a51d270a40462485a",
-            "sha256": "sha256-K37Hu76hrNym/5vlo7OYEvWZPrU3UejigAhrzTA1fd4=",
+            "rev": "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a",
+            "sha256": "sha256-KL8Nhhz3VgktcEHvnHzk/Ey5lObRon0tDceDCa2y61I=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c3fa51fd5f8c51e7fcfd275a51d270a40462485a"
+        "version": "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a"
     },
     "datadash": {
         "cargoLocks": null,
@@ -729,12 +729,12 @@
             "name": null,
             "owner": "danvergara",
             "repo": "dblab",
-            "rev": "v0.26.0",
-            "sha256": "sha256-3v9L1mV+DZ6FlrBoGSg8tewKJVyeqqacVj3yGVtYVHc=",
+            "rev": "v0.27.0",
+            "sha256": "sha256-/bvNyfyLqlWwLR1+fWnW4/xkxpF+7u/0nX4QpuzV6XY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.26.0"
+        "version": "v0.27.0"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -914,12 +914,12 @@
             "name": null,
             "owner": "devmatteini",
             "repo": "dra",
-            "rev": "0.6.2",
-            "sha256": "sha256-9Ts9xipEacb+704BDVoOPGKlYKbuSdso1WYsFspNJTY=",
+            "rev": "0.6.3",
+            "sha256": "sha256-C+BEvRBm8f9rtcNQi86x4RHZiMsPl8dZNJToxG7MUxM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.6.2"
+        "version": "0.6.3"
     },
     "easyjump-vim": {
         "cargoLocks": null,
@@ -3755,12 +3755,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v0.3.0",
-            "sha256": "sha256-VyqaLpWGi8lLvGRZeR1IfBhlWBXX+3aoUDIMHhGyr/c=",
+            "rev": "v0.4.1",
+            "sha256": "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.0"
+        "version": "v0.4.1"
     },
     "textual": {
         "cargoLocks": null,
