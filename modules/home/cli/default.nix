@@ -3,12 +3,9 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "cmdx";
     nixPkgs = [
       # keep-sorted start
-      "gnumake"
       "pipx"
-      "runme" # https://github.com/stateful/runme/issues/647#issuecomment-2327538200
       # keep-sorted end
     ];
     files = {

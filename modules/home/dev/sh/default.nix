@@ -5,7 +5,6 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
-      "makedown"
       "pnut"
       # keep-sorted end
     ];
