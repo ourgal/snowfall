@@ -13,12 +13,7 @@ in
 rustPlatform.buildRustPackage {
   inherit (source) pname version src;
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "tui-tree-widget-0.20.0" = "sha256-/uLp63J4FoMT1rMC9cv49JAX3SuPvFWPtvdS8pspsck=";
-    };
-  };
+  cargoHash = "sha256-qwH/qUOG+MIrctnPQVhCeumYmCDQB9iv1NZEdMhcdFY=";
 
   buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.IOKit ];
 
