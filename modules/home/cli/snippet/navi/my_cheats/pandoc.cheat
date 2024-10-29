@@ -1,0 +1,6 @@
+% pandoc
+
+# epub to markdown
+pandoc -f epub <epub> -t markdown -o temp.md
+
+$ epub: ls *.epub
