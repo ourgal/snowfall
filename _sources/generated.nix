@@ -2030,6 +2030,17 @@
     };
     date = "2024-07-04";
   };
+  templify = {
+    pname = "templify";
+    version = "1.0.0";
+    src = fetchFromGitHub {
+      owner = "cophilot";
+      repo = "templify";
+      rev = "1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-sIZuFxnBo7+oS9GW/1WbwVPik3EBj7zWWlQFNa0Qfr0=";
+    };
+  };
   termsand = {
     pname = "termsand";
     version = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
