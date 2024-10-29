@@ -10,7 +10,11 @@ args.module (
       progs = [
         {
           fish.interactiveShellInit = ''
-            bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
+            if test $fish_key_bindings = fish_vi_key_bindings
+              bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
+            else
+              bind \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
+            end
           '';
         }
         {
