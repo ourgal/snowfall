@@ -109,6 +109,7 @@ args.module (
         "sh"
         "share"
         "spell"
+        "template"
         "toml"
         "vim"
         "yaml"
