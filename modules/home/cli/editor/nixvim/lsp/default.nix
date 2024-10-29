@@ -7,30 +7,24 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        nixvim = {
-          plugins = {
-            lsp = enabled // {
-              servers =
-                enabledList [
-                  "pyright"
-                  "marksman"
-                  "nil-ls"
-                  "bashls"
-                  "csharp-ls"
-                  "lua-ls"
-                  "html"
-                  "rust-analyzer"
-                ]
-                // {
-                  rust-analyzer = enabled // {
-                    installCargo = true;
-                    installRustc = true;
-                  };
-                };
+      progs.nixvim.plugins.lsp = enabled // {
+        servers =
+          enabledList [
+            "pyright"
+            "marksman"
+            "nil-ls"
+            "bashls"
+            "csharp-ls"
+            "lua-ls"
+            "html"
+            "rust-analyzer"
+          ]
+          // {
+            rust-analyzer = enabled // {
+              installCargo = true;
+              installRustc = true;
             };
           };
-        };
       };
     }
   )

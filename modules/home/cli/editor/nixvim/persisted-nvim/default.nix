@@ -7,11 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      progs = {
-        nixvim = {
-          extraPlugins = [ pkgs.vimPlugins.persisted-nvim ];
-        };
-      };
+      progs.nixvim.extraPlugins = [ pkgs.vimPlugins.persisted-nvim ];
     }
   )
 )

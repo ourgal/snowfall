@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          treesitter.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.treesitter.enable = true;
   }
 )

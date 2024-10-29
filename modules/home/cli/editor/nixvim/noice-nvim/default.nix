@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          noice.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.noice.enable = true;
   }
 )
