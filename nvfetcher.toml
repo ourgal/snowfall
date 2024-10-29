@@ -914,3 +914,7 @@ fetch.pypi = "geoip2fast"
 [textpod]
 src.github = "freetonik/textpod"
 fetch.github = "freetonik/textpod"
+
+[tach]
+src.github = "gauge-sh/tach"
+fetch.github = "gauge-sh/tach"
