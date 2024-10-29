@@ -918,3 +918,7 @@ fetch.github = "freetonik/textpod"
 [tach]
 src.github = "gauge-sh/tach"
 fetch.github = "gauge-sh/tach"
+
+[templify]
+src.github = "cophilot/templify"
+fetch.github = "cophilot/templify"
