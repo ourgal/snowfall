@@ -3678,6 +3678,27 @@
         },
         "version": "58bf619e2f90102d0678de056d9b9088ad7d179a"
     },
+    "tach": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "tach",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "gauge-sh",
+            "repo": "tach",
+            "rev": "v0.14.1",
+            "sha256": "sha256-xOlbILvNCWD09fCUBcLf+oo+Y29ViuPdVM3p+9xo6og=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.14.1"
+    },
     "task-relative-recur": {
         "cargoLocks": null,
         "date": "2023-02-06",

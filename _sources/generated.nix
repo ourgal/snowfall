@@ -1995,6 +1995,17 @@
     };
     date = "2024-10-11";
   };
+  tach = {
+    pname = "tach";
+    version = "v0.14.1";
+    src = fetchFromGitHub {
+      owner = "gauge-sh";
+      repo = "tach";
+      rev = "v0.14.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-xOlbILvNCWD09fCUBcLf+oo+Y29ViuPdVM3p+9xo6og=";
+    };
+  };
   task-relative-recur = {
     pname = "task-relative-recur";
     version = "5d4ab7d0a5e3f697fb2a00790972e6f3f705fe42";
