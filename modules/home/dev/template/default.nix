@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "proji";
+    myPkgs = [
+      # keep-sorted start
+      "proji"
+      "templify"
+      # keep-sorted end
+    ];
     enable = "cookiecutter";
   }
 )
