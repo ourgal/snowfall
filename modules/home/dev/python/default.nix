@@ -7,6 +7,7 @@ args.module (
     in
     {
       path = ./.;
+      myPkgs = "tach";
       pyPkgs = [
         # keep-sorted start
         "black"
