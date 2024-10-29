@@ -371,15 +371,15 @@
   };
   curd = {
     pname = "curd";
-    version = "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a";
+    version = "b089dcd6b3571b3692ef66339c805ed9c5c89171";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a";
+      rev = "b089dcd6b3571b3692ef66339c805ed9c5c89171";
       fetchSubmodules = false;
-      sha256 = "sha256-KL8Nhhz3VgktcEHvnHzk/Ey5lObRon0tDceDCa2y61I=";
+      sha256 = "sha256-Qq/GfvU0qzA6p4BbfskAxK71f+LNEcDOLeigA5TDcqc=";
     };
-    date = "2024-10-27";
+    date = "2024-10-29";
   };
   datadash = {
     pname = "datadash";
@@ -1519,13 +1519,13 @@
   };
   otree = {
     pname = "otree";
-    version = "v0.2.0";
+    version = "v0.3.0";
     src = fetchFromGitHub {
       owner = "fioncat";
       repo = "otree";
-      rev = "v0.2.0";
+      rev = "v0.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-M6xmz7aK+NNZUDN8NJCUEODwotJ9VeY3bsueFpwjjjs=";
+      sha256 = "sha256-WvoiTu6erNI5Cb9PSoHgL6+coIGWLe46pJVXBZHOLTE=";
     };
   };
   paclear = {
@@ -1929,13 +1929,13 @@
   };
   soba = {
     pname = "soba";
-    version = "1.2.20";
+    version = "1.2.21";
     src = fetchFromGitHub {
       owner = "jonhadfield";
       repo = "soba";
-      rev = "1.2.20";
+      rev = "1.2.21";
       fetchSubmodules = false;
-      sha256 = "sha256-DOAdhTEVwjV0uhG2jo35lp66W5znoyM0K36pSkW8clE=";
+      sha256 = "sha256-QWo5POFYlWJOLfW3arayY2gTgjTCqDs701NpZZV098o=";
     };
   };
   sonicradio = {
@@ -2040,6 +2040,17 @@
       rev = "v0.4.1";
       fetchSubmodules = false;
       sha256 = "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=";
+    };
+  };
+  textpod = {
+    pname = "textpod";
+    version = "0.1.0";
+    src = fetchFromGitHub {
+      owner = "freetonik";
+      repo = "textpod";
+      rev = "0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-lHdQsPhkhFVehGWVAOahVws1b2I2zAYUWA4lfFzfW+I=";
     };
   };
   textual = {
