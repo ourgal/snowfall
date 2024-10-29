@@ -3741,6 +3741,27 @@
         },
         "version": "2731e1c441d81a3b2217b132e1f40ce4ea49ec5f"
     },
+    "templify": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "templify",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "cophilot",
+            "repo": "templify",
+            "rev": "1.0.0",
+            "sha256": "sha256-sIZuFxnBo7+oS9GW/1WbwVPik3EBj7zWWlQFNa0Qfr0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.0.0"
+    },
     "termsand": {
         "cargoLocks": null,
         "date": "2024-08-15",
