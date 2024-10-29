@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          luasnip.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.luasnip.enable = true;
   }
 )

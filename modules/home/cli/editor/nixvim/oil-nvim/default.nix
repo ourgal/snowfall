@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          oil.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.oil.enable = true;
   }
 )

@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          ts-autotag.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.ts-autotag.enable = true;
   }
 )

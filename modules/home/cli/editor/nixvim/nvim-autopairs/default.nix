@@ -3,12 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    progs = {
-      nixvim = {
-        plugins = {
-          nvim-autopairs.enable = true;
-        };
-      };
-    };
+    progs.nixvim.plugins.nvim-autopairs.enable = true;
   }
 )
