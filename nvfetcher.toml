@@ -910,3 +910,7 @@ fetch.github = "wustho/baca"
 [geoip2fast]
 src.pypi = "geoip2fast"
 fetch.pypi = "geoip2fast"
+
+[textpod]
+src.github = "freetonik/textpod"
+fetch.github = "freetonik/textpod"
