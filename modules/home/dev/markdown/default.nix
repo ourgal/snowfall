@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "mdtt";
+    myPkgs = [
+      # keep-sorted start
+      "mdtt"
+      "textpod"
+      # keep-sorted end
+    ];
     nodePkgs = "prettier";
     nixPkgs = [
       # keep-sorted start
