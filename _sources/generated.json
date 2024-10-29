@@ -675,7 +675,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-27",
+        "date": "2024-10-29",
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -687,12 +687,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a",
-            "sha256": "sha256-KL8Nhhz3VgktcEHvnHzk/Ey5lObRon0tDceDCa2y61I=",
+            "rev": "b089dcd6b3571b3692ef66339c805ed9c5c89171",
+            "sha256": "sha256-Qq/GfvU0qzA6p4BbfskAxK71f+LNEcDOLeigA5TDcqc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ca97ec24f150e3a234b113786c4e2e6cfdc4d65a"
+        "version": "b089dcd6b3571b3692ef66339c805ed9c5c89171"
     },
     "datadash": {
         "cargoLocks": null,
@@ -2807,12 +2807,12 @@
             "name": null,
             "owner": "fioncat",
             "repo": "otree",
-            "rev": "v0.2.0",
-            "sha256": "sha256-M6xmz7aK+NNZUDN8NJCUEODwotJ9VeY3bsueFpwjjjs=",
+            "rev": "v0.3.0",
+            "sha256": "sha256-WvoiTu6erNI5Cb9PSoHgL6+coIGWLe46pJVXBZHOLTE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.0"
+        "version": "v0.3.0"
     },
     "paclear": {
         "cargoLocks": null,
@@ -3566,12 +3566,12 @@
             "name": null,
             "owner": "jonhadfield",
             "repo": "soba",
-            "rev": "1.2.20",
-            "sha256": "sha256-DOAdhTEVwjV0uhG2jo35lp66W5znoyM0K36pSkW8clE=",
+            "rev": "1.2.21",
+            "sha256": "sha256-QWo5POFYlWJOLfW3arayY2gTgjTCqDs701NpZZV098o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.2.20"
+        "version": "1.2.21"
     },
     "sonicradio": {
         "cargoLocks": null,
@@ -3761,6 +3761,27 @@
             "type": "github"
         },
         "version": "v0.4.1"
+    },
+    "textpod": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "textpod",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "freetonik",
+            "repo": "textpod",
+            "rev": "0.1.0",
+            "sha256": "sha256-lHdQsPhkhFVehGWVAOahVws1b2I2zAYUWA4lfFzfW+I=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.1.0"
     },
     "textual": {
         "cargoLocks": null,
