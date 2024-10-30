@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "clifm"
       "fm-go"
+      "mc"
       "sfm"
       # keep-sorted end
     ];
