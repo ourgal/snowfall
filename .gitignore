@@ -1,2 +1,4 @@
 .direnv/pull-date
 /.gtm/
+keyfile.toml
+.playbook.fish

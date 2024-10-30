@@ -675,7 +675,7 @@
     },
     "curd": {
         "cargoLocks": null,
-        "date": "2024-10-29",
+        "date": null,
         "extract": null,
         "name": "curd",
         "passthru": null,
@@ -687,12 +687,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "b089dcd6b3571b3692ef66339c805ed9c5c89171",
-            "sha256": "sha256-Qq/GfvU0qzA6p4BbfskAxK71f+LNEcDOLeigA5TDcqc=",
+            "rev": "v0.0.9",
+            "sha256": "sha256-fvHs77DjZRWbeMV0SuroGaJzqjGbQ0vVJ0cdPdPnL7c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b089dcd6b3571b3692ef66339c805ed9c5c89171"
+        "version": "v0.0.9"
     },
     "datadash": {
         "cargoLocks": null,
@@ -998,6 +998,27 @@
             "type": "github"
         },
         "version": "v3.0.0"
+    },
+    "enhancd": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "enhancd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "babarot",
+            "repo": "enhancd",
+            "rev": "v2.5.1",
+            "sha256": "sha256-kaintLXSfLH7zdLtcoZfVNobCJCap0S/Ldq85wd3krI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.5.1"
     },
     "envset": {
         "cargoLocks": null,
@@ -2120,12 +2141,12 @@
             "name": null,
             "owner": "pamburus",
             "repo": "hl",
-            "rev": "v0.29.8",
-            "sha256": "sha256-YL9DWVArUf+ZdldTyTY4Y2rDMofwZJ8o6PsVECkr2q0=",
+            "rev": "v0.29.9",
+            "sha256": "sha256-HVfbUw3kUgWA1MUV9Df3FZeRykXMEei+tEGx+tqWNWw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.29.8"
+        "version": "v0.29.9"
     },
     "hledger-fmt": {
         "cargoLocks": null,
@@ -2975,12 +2996,12 @@
             "name": null,
             "owner": "pot-app",
             "repo": "pot-desktop",
-            "rev": "3.0.5",
-            "sha256": "sha256-Y0/N5xunEXOG+FuZE23xsSwFd6PL1XClV5UIckTYNPs=",
+            "rev": "3.0.6",
+            "sha256": "sha256-PUXZT1kiInM/CXUoRko/5qlrRurGpQ4ym5YMTgFwuxE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3.0.5"
+        "version": "3.0.6"
     },
     "proji": {
         "cargoLocks": null,
@@ -3533,7 +3554,7 @@
     },
     "simple-completion-language-server": {
         "cargoLocks": null,
-        "date": "2024-10-22",
+        "date": "2024-10-29",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -3545,12 +3566,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "4121f6e0ae20f3ed3af87b382072dd84804c333f",
-            "sha256": "sha256-I57BVz5VI4+ECQr3e0evZTgsAXAs1bmCT9iqxjABdhI=",
+            "rev": "76b59167ab2d350af4cb085fdbef687c8ee824c6",
+            "sha256": "sha256-ugzdHDWMqc3Pl9maIlQnMLRTUGC+HqgaxDGzu70crTs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4121f6e0ae20f3ed3af87b382072dd84804c333f"
+        "version": "76b59167ab2d350af4cb085fdbef687c8ee824c6"
     },
     "soba": {
         "cargoLocks": null,
@@ -3806,7 +3827,7 @@
     },
     "textpod": {
         "cargoLocks": null,
-        "date": null,
+        "date": "2024-10-29",
         "extract": null,
         "name": "textpod",
         "passthru": null,
@@ -3818,12 +3839,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "0.1.0",
-            "sha256": "sha256-lHdQsPhkhFVehGWVAOahVws1b2I2zAYUWA4lfFzfW+I=",
+            "rev": "49afd931c75eee3bf328cb0666de2adcc6c60319",
+            "sha256": "sha256-1u8U1oZBOR6DtpOhbbwsMN/svKC1tbo9noRgi6mXo1I=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.1.0"
+        "version": "49afd931c75eee3bf328cb0666de2adcc6c60319"
     },
     "textual": {
         "cargoLocks": null,
@@ -4571,7 +4592,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-10-26",
+        "date": "2024-10-29",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4583,12 +4604,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "39a6cd6f32d707943f608c6c8819005a975eb747",
-            "sha256": "sha256-HN6dXnUfjT+uY3k0w+CkBM5vCRKEvx61blOFeFS7Bnc=",
+            "rev": "03463163291219e05f77f70eb5a5c0bfa9a51316",
+            "sha256": "sha256-ys/h/PVcP5s8MxgvodPc1oJbEzPZse98gOnDaIl1GZ0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "39a6cd6f32d707943f608c6c8819005a975eb747"
+        "version": "03463163291219e05f77f70eb5a5c0bfa9a51316"
     },
     "visual-split-vim": {
         "cargoLocks": null,

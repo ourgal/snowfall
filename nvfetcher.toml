@@ -912,7 +912,7 @@ src.pypi = "geoip2fast"
 fetch.pypi = "geoip2fast"
 
 [textpod]
-src.github = "freetonik/textpod"
+src.git = "https://github.com/freetonik/textpod"
 fetch.github = "freetonik/textpod"
 
 [tach]
