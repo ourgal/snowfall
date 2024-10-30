@@ -922,3 +922,7 @@ fetch.github = "gauge-sh/tach"
 [templify]
 src.github = "cophilot/templify"
 fetch.github = "cophilot/templify"
+
+[enhancd]
+src.github = "babarot/enhancd"
+fetch.github = "babarot/enhancd"
