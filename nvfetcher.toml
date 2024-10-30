@@ -139,7 +139,7 @@ src.git = "https://github.com/ryanmjacobs/c"
 fetch.github = "ryanmjacobs/c"
 
 [curd]
-src.git = "https://github.com/Wraient/curd"
+src.github = "Wraient/curd"
 fetch.github = "Wraient/curd"
 
 [facad]
