@@ -62,6 +62,7 @@ args.module (
           "autopair.fish"
           "clownfish"
           "ctrl-z.fish"
+          "enhancd"
           "fc-fish"
           "fish-abbreviation-tips"
           "fish-bd"
@@ -82,6 +83,7 @@ args.module (
         FZF_LEGACY_KEYBINDINGS = "0";
         FZF_COMPLETE = "2";
         fifc_keybinding = "\\cx";
+        ENHANCD_COMMAND = "ecd";
       };
       files = [
         { "" = ./.gitnow; }
