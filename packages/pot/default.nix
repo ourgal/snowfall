@@ -14,7 +14,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/pot-app/pot-desktop/releases/download/${version}/pot_${version}_amd64.AppImage";
-    hash = "sha256-anBEMfVyiiLtXd24/sNUV7luoPPXb5gFJctDx95PFRA=";
+    hash = "sha256-KZU6kVD7m3unfSscm4uHWG3JLWnd0pGzl0PHtNKaRu0=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
