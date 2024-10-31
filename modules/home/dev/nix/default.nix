@@ -11,6 +11,7 @@ args.module (
       "niv"
       "nixd"
       "nixfmt-rfc-style"
+      "nixpkgs-lint-community"
       "npins"
       "prefetch-npm-deps"
       "statix"
