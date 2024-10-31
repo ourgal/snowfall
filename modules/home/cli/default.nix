@@ -16,6 +16,7 @@ args.module (
       "AI"
       "anime"
       "audio"
+      "binary"
       "blueteeth"
       "bookmark"
       "browser"
