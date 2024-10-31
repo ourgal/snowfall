@@ -15,6 +15,7 @@ args.module (
       "jc"
       "shellcheck"
       "shfmt"
+      "usage"
       "zx"
       # keep-sorted end
     ];
