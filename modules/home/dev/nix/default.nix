@@ -11,6 +11,7 @@ args.module (
       "niv"
       "nixd"
       "nixfmt-rfc-style"
+      "npins"
       "prefetch-npm-deps"
       "statix"
       "update-nix-fetchgit"
