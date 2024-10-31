@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "batwhich";
     batPkgs = [
       # keep-sorted start
       "batdiff"
