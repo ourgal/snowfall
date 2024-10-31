@@ -9,6 +9,7 @@ args.module (
       "fm-go"
       "mc"
       "sfm"
+      "vifm-full"
       # keep-sorted end
     ];
     enable = [
