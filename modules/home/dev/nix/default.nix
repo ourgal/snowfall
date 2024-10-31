@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "deadnix"
       "nil"
+      "niv"
       "nixd"
       "nixfmt-rfc-style"
       "prefetch-npm-deps"
