@@ -1511,13 +1511,13 @@
   };
   numara = {
     pname = "numara";
-    version = "v5.5.1";
+    version = "v5.6.0";
     src = fetchFromGitHub {
       owner = "bornova";
       repo = "numara-calculator";
-      rev = "v5.5.1";
+      rev = "v5.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-5dY46bAYuh0nvjH1UoML+QQj0s8sPPUUWDSJh77DfpA=";
+      sha256 = "sha256-Pn2h9Z+PDEyvhtZemfUeCW6zx0E6Ccam9GCELdHsgBs=";
     };
   };
   org-export = {
@@ -1668,10 +1668,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.25.0";
+    version = "2.25.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.0.tar.gz";
-      sha256 = "sha256-8Z06HYmYzCvauRkM6ta+y7PIjRC9+tlHJmEy8HfONJ4=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.1.tar.gz";
+      sha256 = "sha256-osb4cpArZ5uMpfEhyAKit0vCTxt9Yt30JHTxZS0yFbE=";
     };
   };
   pydantic-settings = {
@@ -2265,15 +2265,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "74c6c25a28111345cb9af1fd85e4c0b84236b242";
+    version = "97c1e28a528c621fbd197e38fb21db5b720db4ee";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "74c6c25a28111345cb9af1fd85e4c0b84236b242";
+      rev = "97c1e28a528c621fbd197e38fb21db5b720db4ee";
       fetchSubmodules = false;
-      sha256 = "sha256-KWoZkob1anemfv2mNJoIzlgAYnzo4HN8cU+Szm7DfjI=";
+      sha256 = "sha256-2tNjYKaxoBkpABMRHtuFm7SXT87i/3NC6KnwnbCWoMc=";
     };
-    date = "2024-07-29";
+    date = "2024-10-31";
   };
   to-fish = {
     pname = "to-fish";
