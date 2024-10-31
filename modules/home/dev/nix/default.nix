@@ -13,6 +13,7 @@ args.module (
       "nixfmt-rfc-style"
       "nixpkgs-lint-community"
       "npins"
+      "patsh"
       "prefetch-npm-deps"
       "statix"
       "update-nix-fetchgit"
