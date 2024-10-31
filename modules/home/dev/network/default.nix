@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "get_cert"
       "impala"
       "vl"
       # keep-sorted end
