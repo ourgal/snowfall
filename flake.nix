@@ -79,6 +79,10 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pog = {
+      url = "github:jpetrucciani/pog";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -117,6 +121,7 @@
           ;
       };
       homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;
+      system = "x86_64-linux";
     in
     lib.mkFlake {
       channels-config = {
@@ -134,6 +139,7 @@
         nixpkgs-f2k.overlays.window-managers
         nvfetcher.overlays.default
         nix-vscode-extensions.overlays.default
+        pog.overlays.${system}.default
       ];
 
       # Add modules to all NixOS systems.
