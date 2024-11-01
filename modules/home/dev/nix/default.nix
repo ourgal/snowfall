@@ -15,6 +15,7 @@ args.module (
       "npins"
       "patsh"
       "prefetch-npm-deps"
+      "shellharden"
       "shellify"
       "statix"
       "update-nix-fetchgit"
