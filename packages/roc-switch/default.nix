@@ -1,49 +1,40 @@
-{
-  writeShellApplication,
-  lib,
-  pulseaudio,
-  ...
-}:
-writeShellApplication rec {
+{ pulseaudio, pog, ... }:
+pog.pog {
   name = "roc-switch";
-
-  meta = {
-    mainProgram = name;
-    platforms = lib.platforms.linux;
-  };
+  version = "0.1.0";
+  description = "A script for roc";
 
   runtimeInputs = [ pulseaudio ];
 
-  text = ''
-    function get_sink_id() {
-      id="$(pactl list sinks short | grep "$1" | cut -f 1)"
-      echo "$id"
+  flags = [
+    {
+      name = "on";
+      description = "turn roc on";
+      bool = true;
     }
-
-    function speak_on() {
-      speak="$(get_sink_id analog-stereo)"
-      pactl set-default-sink "$speak"
+    {
+      name = "off";
+      short = "f";
+      description = "turn roc off";
+      bool = true;
     }
+  ];
 
-    function roc_on() {
-      roc="$(get_sink_id roc-sink)"
-      pactl set-default-sink "$roc"
-    }
+  script =
+    helpers: with helpers; ''
+      get_sink_id() {
+        id="$(pactl list sinks short | grep "$1" | cut -f 1)"
+        echo "$id"
+      }
 
-    function help() {
-      echo "use roc-switch on or roc-switch off"
-    }
-
-    case "$1" in
-    "on")
-      roc_on
-      ;;
-    "off")
-      speak_on
-      ;;
-    *)
-      help
-      ;;
-    esac
-  '';
+      if ${flag "on"}; then
+        roc="$(get_sink_id roc-sink)"
+        pactl set-default-sink "$roc"
+      elif ${flag "off"}; then
+        speak="$(get_sink_id analog-stereo)"
+        pactl set-default-sink "$speak"
+      else
+        help
+      fi
+    '';
 }
