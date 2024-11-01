@@ -934,3 +934,7 @@ fetch.github = "pcrockett/kbgrep"
 [pls]
 src.git = "https://github.com/codevogel/pls"
 fetch.github = "codevogel/pls"
+
+[akuse]
+src.github = "akuse-app/akuse"
+fetch.github = "akuse-app/akuse"

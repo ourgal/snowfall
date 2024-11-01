@@ -26,6 +26,17 @@
       sha256 = "sha256-I4wF4PuhDUnM7YluERJzMWysUODtfUTPOo4nvNSGZ8U=";
     };
   };
+  akuse = {
+    pname = "akuse";
+    version = "1.9.0";
+    src = fetchFromGitHub {
+      owner = "akuse-app";
+      repo = "akuse";
+      rev = "1.9.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-+d2OjkzQspwcEaacIOxN07V4H3vXJyrKmDM0y8WCBlc=";
+    };
+  };
   animdl = {
     pname = "animdl";
     version = "c7c3b79198e66695e0bbbc576f9d9b788616957f";

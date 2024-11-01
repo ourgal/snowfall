@@ -35,6 +35,27 @@
         },
         "version": "1.0.2"
     },
+    "akuse": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "akuse",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "akuse-app",
+            "repo": "akuse",
+            "rev": "1.9.0",
+            "sha256": "sha256-+d2OjkzQspwcEaacIOxN07V4H3vXJyrKmDM0y8WCBlc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.9.0"
+    },
     "animdl": {
         "cargoLocks": null,
         "date": "2023-10-17",
