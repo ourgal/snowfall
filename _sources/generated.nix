@@ -2512,15 +2512,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "03463163291219e05f77f70eb5a5c0bfa9a51316";
+    version = "34ad876a48584e0eb912356e43b745aa52b2962a";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "03463163291219e05f77f70eb5a5c0bfa9a51316";
+      rev = "34ad876a48584e0eb912356e43b745aa52b2962a";
       fetchSubmodules = false;
-      sha256 = "sha256-ys/h/PVcP5s8MxgvodPc1oJbEzPZse98gOnDaIl1GZ0=";
+      sha256 = "sha256-EuJBdoikwYQKTryaaeMyZePXHVLiIgos5Nxux//EROA=";
     };
-    date = "2024-10-29";
+    date = "2024-10-31";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
