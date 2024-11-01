@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "miru";
-    enable = "jerry";
+    enable = [
+      # keep-sorted start
+      "akuse"
+      "jerry"
+      "miru"
+      # keep-sorted end
+    ];
   }
 )
