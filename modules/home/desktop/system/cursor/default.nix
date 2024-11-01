@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) enabled pkgs disabled;
+      inherit (args)
+        enabled
+        pkgs
+        disabled
+        namespace
+        ;
     in
     {
       path = ./.;
@@ -11,8 +16,8 @@ args.module (
         home.pointerCursor = {
           gtk = enabled;
           x11 = enabled;
-          package = pkgs.bibata-cursors;
-          name = "Bibata-Modern-Ice";
+          package = pkgs.${namespace}.hatsune-miku-windows-linux-cursors;
+          name = "miku-cursor-linux";
           size = 24;
         };
         catppuccin.pointerCursor = disabled;
