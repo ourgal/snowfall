@@ -1612,6 +1612,18 @@
       sha256 = "sha256-l6nYyfNqm3hunNQqteQWAVJSdeJG2O2FPb6IypHw6CA=";
     };
   };
+  pls = {
+    pname = "pls";
+    version = "a1adfd5dce13d7467f389074fd23b1d3748b7ae0";
+    src = fetchFromGitHub {
+      owner = "codevogel";
+      repo = "pls";
+      rev = "a1adfd5dce13d7467f389074fd23b1d3748b7ae0";
+      fetchSubmodules = false;
+      sha256 = "sha256-g/ZYf8t7NtRLsCZJaFMWNPjqoCKkw8jIydC56+90G1E=";
+    };
+    date = "2024-08-06";
+  };
   pnut = {
     pname = "pnut";
     version = "74664dcb933dd80b5fa25e58ab511c910d8fff7e";

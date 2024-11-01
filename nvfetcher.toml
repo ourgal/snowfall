@@ -930,3 +930,7 @@ fetch.github = "babarot/enhancd"
 [kbgrep]
 src.github = "pcrockett/kbgrep"
 fetch.github = "pcrockett/kbgrep"
+
+[pls]
+src.git = "https://github.com/codevogel/pls"
+fetch.github = "codevogel/pls"
