@@ -926,3 +926,7 @@ fetch.github = "cophilot/templify"
 [enhancd]
 src.github = "babarot/enhancd"
 fetch.github = "babarot/enhancd"
+
+[kbgrep]
+src.github = "pcrockett/kbgrep"
+fetch.github = "pcrockett/kbgrep"
