@@ -1,18 +1,45 @@
 {
-  writeShellApplication,
-  lib,
   viddy,
   transmission_4,
   pkgs,
   namespace,
+  pog,
 }:
-writeShellApplication rec {
+pog.pog {
   name = "anime";
+  version = "0.1.0";
+  description = "A script for transmission cli";
 
-  meta = {
-    mainProgram = name;
-    platforms = lib.platforms.linux;
-  };
+  flags = [
+    {
+      name = "watch";
+      description = "watch downloads";
+      bool = true;
+    }
+    {
+      name = "clear";
+      description = "clear all downloads";
+      bool = true;
+    }
+    {
+      name = "delete";
+      argument = "id";
+      description = "delete download";
+    }
+    {
+      name = "add";
+      argument = "url";
+      description = "add urls";
+    }
+    {
+      name = "download_dir";
+      short = "";
+      default = "$HOME/Videos/anime";
+      envVar = "ANIME_DOWNLOAD_DIR";
+      argument = "dir";
+      description = "download dir";
+    }
+  ];
 
   runtimeInputs = [
     viddy
@@ -20,5 +47,21 @@ writeShellApplication rec {
     pkgs.${namespace}.tewi
   ];
 
-  text = builtins.readFile ./anime.sh;
+  script =
+    helpers: with helpers; ''
+      if ${flag "watch"}; then
+        viddy transmission-remote --list
+      elif ${flag "clear"}; then
+        ids=$(transmission-remote --list | awk 'NR > 1 && $1 != "Sum:" && $2 == "100%" {print $1}' | sed 's/\*//')
+        for id in $ids; do
+          transmission-remote -t "$id" -r
+        done
+      elif ${flag "delete"}; then
+        transmission-remote -t "$delete" -r
+      elif ${flag "add"}; then
+        transmission-remote -w "$download_dir" --trash-torrent --add "$add"
+      else
+        tewi
+      fi
+    '';
 }
