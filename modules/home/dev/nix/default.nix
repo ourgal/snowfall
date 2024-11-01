@@ -15,6 +15,7 @@ args.module (
       "npins"
       "patsh"
       "prefetch-npm-deps"
+      "shellify"
       "statix"
       "update-nix-fetchgit"
       # keep-sorted end
