@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "grip-grab"
       "hypergrep"
+      "kbgrep"
       "play"
       "sig"
       # keep-sorted end

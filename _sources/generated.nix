@@ -1248,6 +1248,17 @@
       sha256 = "sha256-ILQwUpjNueaYR5hxOWd5kZSPhVoFnnS2FcttyKSTPr8=";
     };
   };
+  kbgrep = {
+    pname = "kbgrep";
+    version = "v0.2.1";
+    src = fetchFromGitHub {
+      owner = "pcrockett";
+      repo = "kbgrep";
+      rev = "v0.2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-dDGOrfEiihFtHeAkVaeMr9rzVqBvwtSE6KqWHjVrEWg=";
+    };
+  };
   kdtree = {
     pname = "kdtree";
     version = "0.16";
@@ -2392,15 +2403,15 @@
   };
   vim-github-link = {
     pname = "vim-github-link";
-    version = "0612c180d699c5d298e5181befa1830980e8e083";
+    version = "9df238dbf150417772f2a1b7748750cfeda3d167";
     src = fetchFromGitHub {
       owner = "knsh14";
       repo = "vim-github-link";
-      rev = "0612c180d699c5d298e5181befa1830980e8e083";
+      rev = "9df238dbf150417772f2a1b7748750cfeda3d167";
       fetchSubmodules = false;
-      sha256 = "sha256-C0XU351KCm/Og0I7jl5PH+yOydOJ91WdPTcA6068GgI=";
+      sha256 = "sha256-FGPtU+/sEULde5G2xwqVqf9kIWwUE426/Ot7uZoW8Pk=";
     };
-    date = "2024-01-04";
+    date = "2024-11-01";
   };
   vim-mkdir = {
     pname = "vim-mkdir";
