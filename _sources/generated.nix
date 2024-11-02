@@ -2388,6 +2388,17 @@
       sha256 = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
     };
   };
+  v = {
+    pname = "v";
+    version = "v1.1";
+    src = fetchFromGitHub {
+      owner = "rupa";
+      repo = "v";
+      rev = "v1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-pFa2t2Svl0f1uIYfYBR9h9zMT80TJAIUHh3Q8r1BaXo=";
+    };
+  };
   vim-auto-save = {
     pname = "vim-auto-save";
     version = "6697e84b25f6a56c36d0c5ae9004b8b9247662ea";

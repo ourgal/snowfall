@@ -938,3 +938,7 @@ fetch.github = "codevogel/pls"
 [akuse]
 src.github = "akuse-app/akuse"
 fetch.github = "akuse-app/akuse"
+
+[v]
+src.github_tag = "rupa/v"
+fetch.github = "rupa/v"
