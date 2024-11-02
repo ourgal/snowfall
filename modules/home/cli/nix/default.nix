@@ -42,6 +42,7 @@ args.module (
       "comma"
       "home-manager"
       "manix"
+      "nix-your-shell"
       "settings"
       # keep-sorted end
     ];
