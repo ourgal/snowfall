@@ -14,6 +14,7 @@ args.module (
       "argc"
       "bashly"
       "jc"
+      "shc"
       "shellcheck"
       "shfmt"
       "usage"
