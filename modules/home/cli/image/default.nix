@@ -17,6 +17,7 @@ args.module (
       "qiv"
       "termshot"
       "viu"
+      "xv"
       "yeetgif"
       # keep-sorted end
     ];
