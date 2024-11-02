@@ -11,3 +11,12 @@ nix flake lock --update-input <input>
 
 # update all flake
 nix flake update
+
+# toml to nix
+xclip -o | toml2nix | xclip
+
+# yaml to nix
+xclip -o | yaml2toml | toml2nix | xclip
+
+# json to nix
+xclip -o | json2toml | toml2nix | xclip

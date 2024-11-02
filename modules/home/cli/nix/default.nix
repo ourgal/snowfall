@@ -20,6 +20,7 @@ args.module (
       "nurl"
       "nvd"
       "nvfetcher"
+      "toml2nix"
       # keep-sorted end
     ];
     snowPkgs = [
