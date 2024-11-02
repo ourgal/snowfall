@@ -11,6 +11,7 @@ args.module (
       "nix-info"
       "nix-melt"
       "nix-output-monitor"
+      "nix-prefetch"
       "nix-search-cli"
       "nix-template"
       "nix-tree"
