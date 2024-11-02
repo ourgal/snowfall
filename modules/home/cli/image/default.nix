@@ -13,6 +13,7 @@ args.module (
       "imgp"
       "lutgen"
       "menyoki"
+      "qiv"
       "termshot"
       "viu"
       "yeetgif"
