@@ -28,6 +28,7 @@ args.module (
         "tasksh"
         "taskwarrior-tui"
         "timewarrior"
+        "vit"
         # keep-sorted end
       ];
       progs.taskwarrior.package = pkgs.taskwarrior3;
