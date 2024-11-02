@@ -27,6 +27,7 @@ args.module (
       "usql"
       "visidata"
       "xsv"
+      "zsv"
       # keep-sorted end
     ];
   }
