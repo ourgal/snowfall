@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "cached-nix-shell"
       "deploy-rs"
       "nix-du"
       "nix-generate-from-cpan"
