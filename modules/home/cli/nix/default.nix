@@ -15,6 +15,7 @@ args.module (
       "nix-search-cli"
       "nix-template"
       "nix-tree"
+      "nix-update"
       "nixos-anywhere"
       "nurl"
       "nvd"
