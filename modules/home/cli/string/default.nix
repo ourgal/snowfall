@@ -18,6 +18,7 @@ args.module (
       # keep-sorted start
       "chars"
       "gotemplate"
+      "mustache-go"
       "pyp"
       "sttr"
       "teip"
