@@ -9,6 +9,7 @@ args.module (
       "micro"
       "ox"
       "vim-full"
+      "vimer"
       "vis"
       # keep-sorted end
     ];
