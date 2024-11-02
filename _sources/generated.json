@@ -708,12 +708,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v0.0.9",
-            "sha256": "sha256-fvHs77DjZRWbeMV0SuroGaJzqjGbQ0vVJ0cdPdPnL7c=",
+            "rev": "v0.1",
+            "sha256": "sha256-v1OaY50BXNDmV1NesuWlT6GQCSv9uRm8ZxLGbg64Rug=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.0.9"
+        "version": "v0.1"
     },
     "datadash": {
         "cargoLocks": null,
@@ -852,14 +852,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:f5dba0ff984ef218284334f073b3d97a6c56919de2bd02b1d8127e5313282197",
+            "imageDigest": "sha256:f903235f7bcde4389e1d5dbe5adf85cc6cbf805b8176dd2a3914d2a5a93eee12",
             "imageName": "xhofe/alist-aria2",
-            "imageTag": "v3.38.0",
+            "imageTag": "v3.39.0",
             "os": null,
-            "sha256": "sha256-mXXtKqbz3hNxzLeJuf+A3+eX5RsC6d8sx7rDfoqoRnw=",
+            "sha256": "sha256-Hc5Q4XaKvhAFyopRSs3wOP1h5QzkX/dZzzcaAUx3x8Y=",
             "tlsVerify": null
         },
-        "version": "v3.38.0"
+        "version": "v3.39.0"
     },
     "docker-flaresolverr": {
         "cargoLocks": null,
@@ -3147,11 +3147,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-RKGASr/6yeajA3K7RfbK+rlF71ryXmaxxjTAHdOeAYg=",
+            "sha256": "sha256-4PklRtipkjy4lBaJq/hdZgGowZoj6Xo0spZKLj+BPKA=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.1.tar.gz"
         },
-        "version": "2.6.0"
+        "version": "2.6.1"
     },
     "pyjokes": {
         "cargoLocks": null,
@@ -3776,12 +3776,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.14.1",
-            "sha256": "sha256-xOlbILvNCWD09fCUBcLf+oo+Y29ViuPdVM3p+9xo6og=",
+            "rev": "v0.14.2",
+            "sha256": "sha256-/8tHu6wZLYnv9LWvJf++wqKo/b+Ynkxs3XQGFF1Vdr4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.14.1"
+        "version": "v0.14.2"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -3890,7 +3890,7 @@
     },
     "textpod": {
         "cargoLocks": null,
-        "date": "2024-10-29",
+        "date": "2024-11-01",
         "extract": null,
         "name": "textpod",
         "passthru": null,
@@ -3902,12 +3902,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "49afd931c75eee3bf328cb0666de2adcc6c60319",
-            "sha256": "sha256-1u8U1oZBOR6DtpOhbbwsMN/svKC1tbo9noRgi6mXo1I=",
+            "rev": "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42",
+            "sha256": "sha256-9gaCoTEJVZpbVPiPMIRYpE+jjWHMkccr9hTwEoEYxxs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "49afd931c75eee3bf328cb0666de2adcc6c60319"
+        "version": "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42"
     },
     "textual": {
         "cargoLocks": null,
@@ -4655,7 +4655,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-10-31",
+        "date": "2024-11-01",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4667,12 +4667,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "34ad876a48584e0eb912356e43b745aa52b2962a",
-            "sha256": "sha256-EuJBdoikwYQKTryaaeMyZePXHVLiIgos5Nxux//EROA=",
+            "rev": "52a7dcdb94921aa25fcd4294e9dac580613032ff",
+            "sha256": "sha256-Zs0wBA6QR5tNomL0VNiD2LMf2uXjU31T3MmeoQn+cpM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "34ad876a48584e0eb912356e43b745aa52b2962a"
+        "version": "52a7dcdb94921aa25fcd4294e9dac580613032ff"
     },
     "visual-split-vim": {
         "cargoLocks": null,

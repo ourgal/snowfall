@@ -387,13 +387,13 @@
   };
   curd = {
     pname = "curd";
-    version = "v0.0.9";
+    version = "v0.1";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "v0.0.9";
+      rev = "v0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-fvHs77DjZRWbeMV0SuroGaJzqjGbQ0vVJ0cdPdPnL7c=";
+      sha256 = "sha256-v1OaY50BXNDmV1NesuWlT6GQCSv9uRm8ZxLGbg64Rug=";
     };
   };
   datadash = {
@@ -467,12 +467,12 @@
   };
   docker-alist = {
     pname = "docker-alist";
-    version = "v3.38.0";
+    version = "v3.39.0";
     src = dockerTools.pullImage {
       imageName = "xhofe/alist-aria2";
-      imageDigest = "sha256:f5dba0ff984ef218284334f073b3d97a6c56919de2bd02b1d8127e5313282197";
-      sha256 = "sha256-mXXtKqbz3hNxzLeJuf+A3+eX5RsC6d8sx7rDfoqoRnw=";
-      finalImageTag = "v3.38.0";
+      imageDigest = "sha256:f903235f7bcde4389e1d5dbe5adf85cc6cbf805b8176dd2a3914d2a5a93eee12";
+      sha256 = "sha256-Hc5Q4XaKvhAFyopRSs3wOP1h5QzkX/dZzzcaAUx3x8Y=";
+      finalImageTag = "v3.39.0";
     };
   };
   docker-flaresolverr = {
@@ -1710,10 +1710,10 @@
   };
   pydantic-settings = {
     pname = "pydantic-settings";
-    version = "2.6.0";
+    version = "2.6.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.0.tar.gz";
-      sha256 = "sha256-RKGASr/6yeajA3K7RfbK+rlF71ryXmaxxjTAHdOeAYg=";
+      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.1.tar.gz";
+      sha256 = "sha256-4PklRtipkjy4lBaJq/hdZgGowZoj6Xo0spZKLj+BPKA=";
     };
   };
   pyjokes = {
@@ -2046,13 +2046,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.14.1";
+    version = "v0.14.2";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.14.1";
+      rev = "v0.14.2";
       fetchSubmodules = false;
-      sha256 = "sha256-xOlbILvNCWD09fCUBcLf+oo+Y29ViuPdVM3p+9xo6og=";
+      sha256 = "sha256-/8tHu6wZLYnv9LWvJf++wqKo/b+Ynkxs3XQGFF1Vdr4=";
     };
   };
   task-relative-recur = {
@@ -2115,15 +2115,15 @@
   };
   textpod = {
     pname = "textpod";
-    version = "49afd931c75eee3bf328cb0666de2adcc6c60319";
+    version = "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42";
     src = fetchFromGitHub {
       owner = "freetonik";
       repo = "textpod";
-      rev = "49afd931c75eee3bf328cb0666de2adcc6c60319";
+      rev = "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42";
       fetchSubmodules = false;
-      sha256 = "sha256-1u8U1oZBOR6DtpOhbbwsMN/svKC1tbo9noRgi6mXo1I=";
+      sha256 = "sha256-9gaCoTEJVZpbVPiPMIRYpE+jjWHMkccr9hTwEoEYxxs=";
     };
-    date = "2024-10-29";
+    date = "2024-11-01";
   };
   textual = {
     pname = "textual";
@@ -2546,15 +2546,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "34ad876a48584e0eb912356e43b745aa52b2962a";
+    version = "52a7dcdb94921aa25fcd4294e9dac580613032ff";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "34ad876a48584e0eb912356e43b745aa52b2962a";
+      rev = "52a7dcdb94921aa25fcd4294e9dac580613032ff";
       fetchSubmodules = false;
-      sha256 = "sha256-EuJBdoikwYQKTryaaeMyZePXHVLiIgos5Nxux//EROA=";
+      sha256 = "sha256-Zs0wBA6QR5tNomL0VNiD2LMf2uXjU31T3MmeoQn+cpM=";
     };
-    date = "2024-10-31";
+    date = "2024-11-01";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
