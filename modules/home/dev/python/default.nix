@@ -21,6 +21,7 @@ args.module (
         "pyright"
         "rye"
         "uv"
+        "zxpy"
         # keep-sorted end
       ];
       progs = {
