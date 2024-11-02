@@ -31,6 +31,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "nix-auto-follow"
+      "nix-prefetch-go"
       "nix-repl"
       "nix-searchc"
       # keep-sorted end
