@@ -942,3 +942,11 @@ fetch.github = "akuse-app/akuse"
 [v]
 src.github_tag = "rupa/v"
 fetch.github = "rupa/v"
+
+[trzsz-ssh]
+src.github = "trzsz/trzsz-ssh"
+fetch.github = "trzsz/trzsz-ssh"
+
+[trzsz-go]
+src.github = "trzsz/trzsz-go"
+fetch.github = "trzsz/trzsz-go"

@@ -2377,6 +2377,28 @@
       sha256 = "sha256-z6CHr89fC9UVQgPmugOctB82XQ8yP6K5Ap2qsMLSnyk=";
     };
   };
+  trzsz-go = {
+    pname = "trzsz-go";
+    version = "v1.1.8";
+    src = fetchFromGitHub {
+      owner = "trzsz";
+      repo = "trzsz-go";
+      rev = "v1.1.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-g1fbgKTFS9aPAmnTeFYoymrDEoZ6BtzUhA2Z9SNYbsU=";
+    };
+  };
+  trzsz-ssh = {
+    pname = "trzsz-ssh";
+    version = "v0.1.22";
+    src = fetchFromGitHub {
+      owner = "trzsz";
+      repo = "trzsz-ssh";
+      rev = "v0.1.22";
+      fetchSubmodules = false;
+      sha256 = "sha256-VvPdWRP+lrhho+Bk5rT9pktEvKe01512WoDfAu5d868=";
+    };
+  };
   tuime = {
     pname = "tuime";
     version = "v1.0.1";

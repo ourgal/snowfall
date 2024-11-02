@@ -4359,6 +4359,48 @@
         },
         "version": "v1.0.0"
     },
+    "trzsz-go": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "trzsz-go",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "trzsz",
+            "repo": "trzsz-go",
+            "rev": "v1.1.8",
+            "sha256": "sha256-g1fbgKTFS9aPAmnTeFYoymrDEoZ6BtzUhA2Z9SNYbsU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.1.8"
+    },
+    "trzsz-ssh": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "trzsz-ssh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "trzsz",
+            "repo": "trzsz-ssh",
+            "rev": "v0.1.22",
+            "sha256": "sha256-VvPdWRP+lrhho+Bk5rT9pktEvKe01512WoDfAu5d868=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.22"
+    },
     "tuime": {
         "cargoLocks": null,
         "date": null,

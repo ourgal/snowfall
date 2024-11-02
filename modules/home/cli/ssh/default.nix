@@ -12,6 +12,7 @@ args.module (
         # keep-sorted start
         "lssh"
         "shipit"
+        "trzsz-ssh"
         # keep-sorted end
       ];
       nixPkgs = [
