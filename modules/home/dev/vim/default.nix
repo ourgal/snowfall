@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     nodePkgs = "vim-language-server";
+    nixPkgs = "vim-vint";
   }
 )
