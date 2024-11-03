@@ -42,6 +42,7 @@ args.module (
         "kdeconnect"
         "kmonad"
         "maim"
+        "mouse-actions"
         "picom"
         "playerctl"
         "qt"
