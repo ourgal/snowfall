@@ -940,8 +940,8 @@ src.github = "akuse-app/akuse"
 fetch.github = "akuse-app/akuse"
 
 [v]
-src.github_tag = "rupa/v"
-fetch.github = "rupa/v"
+src.git = "https://github.com/ourgal/v"
+fetch.github = "ourgal/v"
 
 [trzsz-ssh]
 src.github = "trzsz/trzsz-ssh"

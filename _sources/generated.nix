@@ -2412,14 +2412,15 @@
   };
   v = {
     pname = "v";
-    version = "v1.1";
+    version = "353a0e7620294d840bdffcf0e7c5e287625a9709";
     src = fetchFromGitHub {
-      owner = "rupa";
+      owner = "ourgal";
       repo = "v";
-      rev = "v1.1";
+      rev = "353a0e7620294d840bdffcf0e7c5e287625a9709";
       fetchSubmodules = false;
-      sha256 = "sha256-pFa2t2Svl0f1uIYfYBR9h9zMT80TJAIUHh3Q8r1BaXo=";
+      sha256 = "sha256-urXj1+UTwc6yFxThSm/05HQ2A+N9xuiZHfyDA2BhQ/w=";
     };
+    date = "2024-11-03";
   };
   vim-auto-save = {
     pname = "vim-auto-save";
