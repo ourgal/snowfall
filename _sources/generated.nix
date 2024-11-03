@@ -467,12 +467,12 @@
   };
   docker-alist = {
     pname = "docker-alist";
-    version = "v3.39.0";
+    version = "v3.39.1";
     src = dockerTools.pullImage {
       imageName = "xhofe/alist-aria2";
-      imageDigest = "sha256:f903235f7bcde4389e1d5dbe5adf85cc6cbf805b8176dd2a3914d2a5a93eee12";
-      sha256 = "sha256-Hc5Q4XaKvhAFyopRSs3wOP1h5QzkX/dZzzcaAUx3x8Y=";
-      finalImageTag = "v3.39.0";
+      imageDigest = "sha256:2d547feef90c6e944c71d34fa6065c534ca8853eed750dbbbbbb0b477b5e1b51";
+      sha256 = "sha256-Va6Ufelujtv7J2l5tIse+vwlDuom/zUblS2QuJt1J2A=";
+      finalImageTag = "v3.39.1";
     };
   };
   docker-flaresolverr = {
@@ -1383,13 +1383,13 @@
   };
   manga-tui = {
     pname = "manga-tui";
-    version = "v0.3.1";
+    version = "v0.4.0";
     src = fetchFromGitHub {
       owner = "josueBarretogit";
       repo = "manga-tui";
-      rev = "v0.3.1";
+      rev = "v0.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-672AuQWviwihnUS3G0xSn4IAMHy0fPE1VLDfu8wrPGg=";
+      sha256 = "sha256-Se0f5jfYBmvemrYRKduDr1yT3fB2wfQP1fDpa/qrYlI=";
     };
   };
   mdformat-config = {
@@ -2115,22 +2115,22 @@
   };
   textpod = {
     pname = "textpod";
-    version = "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42";
+    version = "c1b117c706936bcd2c61ced301be798bf66eb613";
     src = fetchFromGitHub {
       owner = "freetonik";
       repo = "textpod";
-      rev = "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42";
+      rev = "c1b117c706936bcd2c61ced301be798bf66eb613";
       fetchSubmodules = false;
-      sha256 = "sha256-9gaCoTEJVZpbVPiPMIRYpE+jjWHMkccr9hTwEoEYxxs=";
+      sha256 = "sha256-fvup4diE+iedWpvGHZsjxUWCZGic/yh0FYvD0ByBnuM=";
     };
-    date = "2024-11-01";
+    date = "2024-11-02";
   };
   textual = {
     pname = "textual";
-    version = "0.85.1";
+    version = "0.85.2";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.85.1.tar.gz";
-      sha256 = "sha256-mWYhQ5D62ahMP2nUk5hIeJdXf1+niIOBBt13vXuryc0=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.85.2.tar.gz";
+      sha256 = "sha256-KkFplcSdU4GoHQpv0jklyw4/FLTyOe0F81+jyYG7HfI=";
     };
   };
   textual-autocomplete = {
