@@ -11,7 +11,6 @@ args.module (
         # keep-sorted start
         "fifc"
         "fish-colored-man"
-        "fish-f"
         "web-search.fish"
         # keep-sorted end
       ] pkgs;

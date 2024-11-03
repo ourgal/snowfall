@@ -68,6 +68,7 @@ args.module (
           "fish-bd"
           "fish-color-scheme-switcher"
           "fish-done"
+          "fish-f"
           "fish-fzf"
           "fish-gitnow"
           "fish-sponge"
