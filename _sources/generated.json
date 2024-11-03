@@ -852,14 +852,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:f903235f7bcde4389e1d5dbe5adf85cc6cbf805b8176dd2a3914d2a5a93eee12",
+            "imageDigest": "sha256:2d547feef90c6e944c71d34fa6065c534ca8853eed750dbbbbbb0b477b5e1b51",
             "imageName": "xhofe/alist-aria2",
-            "imageTag": "v3.39.0",
+            "imageTag": "v3.39.1",
             "os": null,
-            "sha256": "sha256-Hc5Q4XaKvhAFyopRSs3wOP1h5QzkX/dZzzcaAUx3x8Y=",
+            "sha256": "sha256-Va6Ufelujtv7J2l5tIse+vwlDuom/zUblS2QuJt1J2A=",
             "tlsVerify": null
         },
-        "version": "v3.39.0"
+        "version": "v3.39.1"
     },
     "docker-flaresolverr": {
         "cargoLocks": null,
@@ -2555,12 +2555,12 @@
             "name": null,
             "owner": "josueBarretogit",
             "repo": "manga-tui",
-            "rev": "v0.3.1",
-            "sha256": "sha256-672AuQWviwihnUS3G0xSn4IAMHy0fPE1VLDfu8wrPGg=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-Se0f5jfYBmvemrYRKduDr1yT3fB2wfQP1fDpa/qrYlI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.1"
+        "version": "v0.4.0"
     },
     "mdformat-config": {
         "cargoLocks": null,
@@ -3890,7 +3890,7 @@
     },
     "textpod": {
         "cargoLocks": null,
-        "date": "2024-11-01",
+        "date": "2024-11-02",
         "extract": null,
         "name": "textpod",
         "passthru": null,
@@ -3902,12 +3902,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42",
-            "sha256": "sha256-9gaCoTEJVZpbVPiPMIRYpE+jjWHMkccr9hTwEoEYxxs=",
+            "rev": "c1b117c706936bcd2c61ced301be798bf66eb613",
+            "sha256": "sha256-fvup4diE+iedWpvGHZsjxUWCZGic/yh0FYvD0ByBnuM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "eb0b02be0ed4e0bbdea9d2a44c0fdbb532387e42"
+        "version": "c1b117c706936bcd2c61ced301be798bf66eb613"
     },
     "textual": {
         "cargoLocks": null,
@@ -3918,11 +3918,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-mWYhQ5D62ahMP2nUk5hIeJdXf1+niIOBBt13vXuryc0=",
+            "sha256": "sha256-KkFplcSdU4GoHQpv0jklyw4/FLTyOe0F81+jyYG7HfI=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.85.1.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-0.85.2.tar.gz"
         },
-        "version": "0.85.1"
+        "version": "0.85.2"
     },
     "textual-autocomplete": {
         "cargoLocks": null,

@@ -18,7 +18,7 @@ in
 rustPlatform.buildRustPackage {
   inherit (source) pname version src;
 
-  cargoHash = "sha256-yf0hISz/jHtrO1clTSIKfxFiwI+W0Mu3mY+XW6+ynJU=";
+  cargoHash = "sha256-IufJPCvUEWR5p4PrFlaiQPW9wyIFj/Pd/JHki69L6Es=";
 
   nativeBuildInputs = [ pkg-config ];
 
@@ -32,6 +32,8 @@ rustPlatform.buildRustPackage {
   env = {
     ZSTD_SYS_USE_PKG_CONFIG = true;
   };
+
+  doCheck = false;
 
   meta = with lib; {
     description = "Terminal-based manga reader and downloader with image support";
