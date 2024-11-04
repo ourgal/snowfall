@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "cache";
     nixPkgs = [
       # keep-sorted start
       "charm-freeze"

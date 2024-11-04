@@ -406,6 +406,27 @@
         },
         "version": "7cdc09e69d2f7fc49f70c80c565aa09b19e666db"
     },
+    "cache": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cache",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Hejsil",
+            "repo": "cache",
+            "rev": "0.2.0",
+            "sha256": "sha256-9SvKw096yvLG4eYnNfIgHpgc5VceXqKkALSEBVuqfi0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.2.0"
+    },
     "cat_win": {
         "cargoLocks": null,
         "date": null,

@@ -950,3 +950,7 @@ fetch.github = "trzsz/trzsz-ssh"
 [trzsz-go]
 src.github = "trzsz/trzsz-go"
 fetch.github = "trzsz/trzsz-go"
+
+[cache]
+src.github = "Hejsil/cache"
+fetch.github = "Hejsil/cache"

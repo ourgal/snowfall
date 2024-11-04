@@ -230,6 +230,17 @@
     };
     date = "2023-11-24";
   };
+  cache = {
+    pname = "cache";
+    version = "0.2.0";
+    src = fetchFromGitHub {
+      owner = "Hejsil";
+      repo = "cache";
+      rev = "0.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-9SvKw096yvLG4eYnNfIgHpgc5VceXqKkALSEBVuqfi0=";
+    };
+  };
   cat_win = {
     pname = "cat_win";
     version = "v1.9.2";
