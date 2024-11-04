@@ -427,11 +427,10 @@ args.module (
                   unit = "    ";
                 };
                 formatter = {
-                  command = "ruff";
-                  args = [
-                    "format"
-                    "-"
-                  ];
+                  command = pkgs.writeShellScript "helix-ruff-format" ''
+                    ruff check --fix - | ruff format -
+                  '';
+                  args = [ "-" ];
                 };
               }
               {
