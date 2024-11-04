@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     progs = "gh";
+    nixPkgs = "gh2md";
   }
 )
