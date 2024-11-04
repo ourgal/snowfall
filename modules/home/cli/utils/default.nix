@@ -33,6 +33,7 @@ args.module (
       "touch"
       "tree"
       "watch"
+      "which"
       # keep-sorted end
     ];
   }

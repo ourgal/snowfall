@@ -2031,6 +2031,17 @@
       sha256 = "sha256-X5LPRrI5VVCLnZLrjLyocexmReS5RdmQyJbbAvwFxs0=";
     };
   };
+  superwhich = {
+    pname = "superwhich";
+    version = "v1.0.1";
+    src = fetchFromGitHub {
+      owner = "DarkCeptor44";
+      repo = "superwhich";
+      rev = "v1.0.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-mRdfulh1o4YBAcyQmFr0ydqIgk6GrorClJhp6Z7sz6U=";
+    };
+  };
   svgshift = {
     pname = "svgshift";
     version = "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada";
