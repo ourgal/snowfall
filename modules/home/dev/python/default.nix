@@ -28,10 +28,10 @@ args.module (
         ruff = {
           settings = {
             line-length = 100;
-            per-file-ignores = {
-              "__init__.py" = [ "F401" ];
-            };
             lint = {
+              per-file-ignores = {
+                "__init__.py" = [ "F401" ];
+              };
               select = [
                 "E4"
                 "E7"
