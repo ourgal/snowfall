@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "bottom-rs"
       "enc"
+      "genpass"
       "hashcat"
       "opensc"
       "pcsc-tools"
