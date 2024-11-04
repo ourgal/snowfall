@@ -4,11 +4,11 @@
 
 .PHONY: home
 home: ##@ home manager switch
-	nh home switch
+	@nh home switch
 
 .PHONY: update
 update: ##@ nvfetcher update
-	nvfetcher -j 1
+	@nvfetcher --keyfile keyfile.toml
 
 ##@
 ##@ misc
