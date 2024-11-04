@@ -2141,12 +2141,12 @@
             "name": null,
             "owner": "Etto48",
             "repo": "HexPatch",
-            "rev": "v1.9.1",
-            "sha256": "sha256-Z5LeHI3CChSw2gtLeEm91Kcp51j0rGrrZ4K/5CN9ZwU=",
+            "rev": "v1.9.2",
+            "sha256": "sha256-g20p2RaRXw0vPgsTPPnG9MDwiZJfNS4NtMIrjALNGf0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.9.1"
+        "version": "v1.9.2"
     },
     "hl": {
         "cargoLocks": null,
@@ -2774,7 +2774,7 @@
     },
     "nix-auto-follow": {
         "cargoLocks": null,
-        "date": "2024-08-20",
+        "date": "2024-11-03",
         "extract": null,
         "name": "nix-auto-follow",
         "passthru": null,
@@ -2786,12 +2786,12 @@
             "name": null,
             "owner": "fzakaria",
             "repo": "nix-auto-follow",
-            "rev": "a76c20cd36fb2b6fa4a58be4c5edf4ae6e143648",
-            "sha256": "sha256-pK8hV2W7MkgBgY0g+LwhlaWJH79lCHfZQInT6s/mZp4=",
+            "rev": "b6b221222552c7301a1242430d83317a20a5e5f8",
+            "sha256": "sha256-B5OB97AujLCBah0c1vYAUq4IGDtWRR0DwBqrXS8XJlU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a76c20cd36fb2b6fa4a58be4c5edf4ae6e143648"
+        "version": "b6b221222552c7301a1242430d83317a20a5e5f8"
     },
     "nrf-udev": {
         "cargoLocks": null,
@@ -3890,7 +3890,7 @@
     },
     "textpod": {
         "cargoLocks": null,
-        "date": "2024-11-02",
+        "date": null,
         "extract": null,
         "name": "textpod",
         "passthru": null,
@@ -3902,12 +3902,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "c1b117c706936bcd2c61ced301be798bf66eb613",
-            "sha256": "sha256-fvup4diE+iedWpvGHZsjxUWCZGic/yh0FYvD0ByBnuM=",
+            "rev": "0.1.2",
+            "sha256": "sha256-pTon0BXq/scjQtTwHzvzrcSpuPwuK+omWSJInvAnC3A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c1b117c706936bcd2c61ced301be798bf66eb613"
+        "version": "0.1.2"
     },
     "textual": {
         "cargoLocks": null,
@@ -4025,7 +4025,7 @@
     },
     "tmux-kanagawa": {
         "cargoLocks": null,
-        "date": "2024-07-17",
+        "date": "2024-11-03",
         "extract": null,
         "name": "tmux-kanagawa",
         "passthru": null,
@@ -4037,12 +4037,12 @@
             "name": null,
             "owner": "Nybkox",
             "repo": "tmux-kanagawa",
-            "rev": "fc95d797ba24536bffe3f2b2101e7d7ec3e5aaa1",
-            "sha256": "sha256-vCgqXrT7qukAmx/DUu4H6CT997pdiKOKA0CjLTWEALQ=",
+            "rev": "d177855dcc580e730b96690b56451b4f0431a85b",
+            "sha256": "sha256-u0btTdWd5b8Ad76nDt5BXFW35VUVrrP2R6FiwYPuzgQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fc95d797ba24536bffe3f2b2101e7d7ec3e5aaa1"
+        "version": "d177855dcc580e730b96690b56451b4f0431a85b"
     },
     "tmux-loadavg": {
         "cargoLocks": null,
@@ -4214,7 +4214,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2024-10-31",
+        "date": "2024-11-04",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -4226,12 +4226,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "97c1e28a528c621fbd197e38fb21db5b720db4ee",
-            "sha256": "sha256-2tNjYKaxoBkpABMRHtuFm7SXT87i/3NC6KnwnbCWoMc=",
+            "rev": "be70e2e352135f41f8665ddd8729f2ef47d60089",
+            "sha256": "sha256-UshHfSEvzJMK3G1bolwStdza9oiYWNFLC4xsKZlU/TI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "97c1e28a528c621fbd197e38fb21db5b720db4ee"
+        "version": "be70e2e352135f41f8665ddd8729f2ef47d60089"
     },
     "to-fish": {
         "cargoLocks": null,

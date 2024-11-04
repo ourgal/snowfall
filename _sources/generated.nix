@@ -1160,13 +1160,13 @@
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.9.1";
+    version = "v1.9.2";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.9.1";
+      rev = "v1.9.2";
       fetchSubmodules = false;
-      sha256 = "sha256-Z5LeHI3CChSw2gtLeEm91Kcp51j0rGrrZ4K/5CN9ZwU=";
+      sha256 = "sha256-g20p2RaRXw0vPgsTPPnG9MDwiZJfNS4NtMIrjALNGf0=";
     };
   };
   hl = {
@@ -1510,15 +1510,15 @@
   };
   nix-auto-follow = {
     pname = "nix-auto-follow";
-    version = "a76c20cd36fb2b6fa4a58be4c5edf4ae6e143648";
+    version = "b6b221222552c7301a1242430d83317a20a5e5f8";
     src = fetchFromGitHub {
       owner = "fzakaria";
       repo = "nix-auto-follow";
-      rev = "a76c20cd36fb2b6fa4a58be4c5edf4ae6e143648";
+      rev = "b6b221222552c7301a1242430d83317a20a5e5f8";
       fetchSubmodules = false;
-      sha256 = "sha256-pK8hV2W7MkgBgY0g+LwhlaWJH79lCHfZQInT6s/mZp4=";
+      sha256 = "sha256-B5OB97AujLCBah0c1vYAUq4IGDtWRR0DwBqrXS8XJlU=";
     };
-    date = "2024-08-20";
+    date = "2024-11-03";
   };
   nrf-udev = {
     pname = "nrf-udev";
@@ -2115,15 +2115,14 @@
   };
   textpod = {
     pname = "textpod";
-    version = "c1b117c706936bcd2c61ced301be798bf66eb613";
+    version = "0.1.2";
     src = fetchFromGitHub {
       owner = "freetonik";
       repo = "textpod";
-      rev = "c1b117c706936bcd2c61ced301be798bf66eb613";
+      rev = "0.1.2";
       fetchSubmodules = false;
-      sha256 = "sha256-fvup4diE+iedWpvGHZsjxUWCZGic/yh0FYvD0ByBnuM=";
+      sha256 = "sha256-pTon0BXq/scjQtTwHzvzrcSpuPwuK+omWSJInvAnC3A=";
     };
-    date = "2024-11-02";
   };
   textual = {
     pname = "textual";
@@ -2191,15 +2190,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "fc95d797ba24536bffe3f2b2101e7d7ec3e5aaa1";
+    version = "d177855dcc580e730b96690b56451b4f0431a85b";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "fc95d797ba24536bffe3f2b2101e7d7ec3e5aaa1";
+      rev = "d177855dcc580e730b96690b56451b4f0431a85b";
       fetchSubmodules = false;
-      sha256 = "sha256-vCgqXrT7qukAmx/DUu4H6CT997pdiKOKA0CjLTWEALQ=";
+      sha256 = "sha256-u0btTdWd5b8Ad76nDt5BXFW35VUVrrP2R6FiwYPuzgQ=";
     };
-    date = "2024-07-17";
+    date = "2024-11-03";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
@@ -2299,15 +2298,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "97c1e28a528c621fbd197e38fb21db5b720db4ee";
+    version = "be70e2e352135f41f8665ddd8729f2ef47d60089";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "97c1e28a528c621fbd197e38fb21db5b720db4ee";
+      rev = "be70e2e352135f41f8665ddd8729f2ef47d60089";
       fetchSubmodules = false;
-      sha256 = "sha256-2tNjYKaxoBkpABMRHtuFm7SXT87i/3NC6KnwnbCWoMc=";
+      sha256 = "sha256-UshHfSEvzJMK3G1bolwStdza9oiYWNFLC4xsKZlU/TI=";
     };
-    date = "2024-10-31";
+    date = "2024-11-04";
   };
   to-fish = {
     pname = "to-fish";
