@@ -14,6 +14,7 @@ args.module (
       "croc"
       "dufs"
       "ffsend"
+      "gossa"
       "imgurbash2"
       "magic-wormhole-rs"
       "miniserve"
