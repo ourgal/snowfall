@@ -22,6 +22,7 @@ args.module (
         # keep-sorted start
         "commitizen"
         "gitmoji-cli"
+        "glitter"
         # keep-sorted end
       ];
       enable = "geminicommit";
