@@ -23,7 +23,7 @@ pre-commit:
       stage_fixed: true
     python:
       glob: "*.py"
-      run: ruff format {staged_files}
+      run: ruff check --fix {staged_files} && ruff format {staged_files}
       stage_fixed: true
     lua:
       glob: "*.lua"
