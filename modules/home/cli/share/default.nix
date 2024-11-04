@@ -22,6 +22,7 @@ args.module (
       "pcp"
       "portal"
       "rsync"
+      "sharing"
       "sshfs"
       "tmate"
       "tran"
