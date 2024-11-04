@@ -4,6 +4,7 @@
 
 .PHONY: home
 home: ##@ home manager switch
+	@git add .
 	@nh home switch
 
 .PHONY: update

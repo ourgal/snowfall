@@ -1,6 +1,7 @@
 default: home
 
 home:
+    @git add .
     @nh home switch
 
 update:
