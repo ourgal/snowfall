@@ -954,3 +954,7 @@ fetch.github = "trzsz/trzsz-go"
 [cache]
 src.github = "Hejsil/cache"
 fetch.github = "Hejsil/cache"
+
+[superwhich]
+src.github = "DarkCeptor44/superwhich"
+fetch.github = "DarkCeptor44/superwhich"

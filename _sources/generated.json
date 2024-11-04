@@ -3741,6 +3741,27 @@
         },
         "version": "v1.0.0"
     },
+    "superwhich": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "superwhich",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "DarkCeptor44",
+            "repo": "superwhich",
+            "rev": "v1.0.1",
+            "sha256": "sha256-mRdfulh1o4YBAcyQmFr0ydqIgk6GrorClJhp6Z7sz6U=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.1"
+    },
     "svgshift": {
         "cargoLocks": null,
         "date": "2024-08-20",
