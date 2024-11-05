@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs disabled;
+      inherit (args) pkgs enabled;
     in
     {
       path = ./.;
@@ -72,7 +72,7 @@ args.module (
               fcitx5-configtool
               fcitx5-material-color
             ];
-            catppuccin = disabled;
+            catppuccin = enabled;
           };
         };
       };
