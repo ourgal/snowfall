@@ -2627,7 +2627,7 @@
     },
     "minimal-tmux-status": {
         "cargoLocks": null,
-        "date": "2024-10-23",
+        "date": "2024-11-04",
         "extract": null,
         "name": "minimal-tmux-status",
         "passthru": null,
@@ -2639,12 +2639,12 @@
             "name": null,
             "owner": "niksingh710",
             "repo": "minimal-tmux-status",
-            "rev": "40108961c064241455c180b2533f64f3b196eeca",
-            "sha256": "sha256-XlI4EN8HkgWqv5M83BBIY0TA78wgDPKvXxP7eFgVBqE=",
+            "rev": "d7188c1aeb1c7dd03230982445b7360f5e230131",
+            "sha256": "sha256-JtbuSxWFR94HiUdQL9uIm2V/kwGz0gbVbqvYWmEncbc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "40108961c064241455c180b2533f64f3b196eeca"
+        "version": "d7188c1aeb1c7dd03230982445b7360f5e230131"
     },
     "miru": {
         "cargoLocks": null,
@@ -2669,7 +2669,7 @@
     },
     "mpv-M-x": {
         "cargoLocks": null,
-        "date": "2024-08-16",
+        "date": "2024-11-04",
         "extract": null,
         "name": "mpv-M-x",
         "passthru": null,
@@ -2681,12 +2681,12 @@
             "name": null,
             "owner": "Seme4eg",
             "repo": "mpv-scripts",
-            "rev": "229cb615e701fafa8d7c3077286053243b252525",
-            "sha256": "sha256-xekWIjqVkan1XS7dIqt5iZzI+CgByb9OjYE+GULYgMs=",
+            "rev": "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b",
+            "sha256": "sha256-hxodo/40Ipj7pSHowDxywCdMo/wTzWLnJU+zhgjYqlc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "229cb615e701fafa8d7c3077286053243b252525"
+        "version": "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b"
     },
     "mpv-autoloop": {
         "cargoLocks": null,
@@ -3026,7 +3026,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2024-10-24",
+        "date": "2024-11-04",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3038,12 +3038,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "74664dcb933dd80b5fa25e58ab511c910d8fff7e",
-            "sha256": "sha256-QsybDNmhE9nPbXg84uxxFq9hd9BI89cNm/ktqBg0K2k=",
+            "rev": "44ddd5e976a826aa6e974d8a35f6bd440aea1888",
+            "sha256": "sha256-DeJNk3BLyHhngZRQbjPRLm8kxXRyFl354to6W36IZWI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "74664dcb933dd80b5fa25e58ab511c910d8fff7e"
+        "version": "44ddd5e976a826aa6e974d8a35f6bd440aea1888"
     },
     "posting": {
         "cargoLocks": null,
@@ -3153,11 +3153,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-osb4cpArZ5uMpfEhyAKit0vCTxt9Yt30JHTxZS0yFbE=",
+            "sha256": "sha256-RXjUkUvbvRiWO0xhH6OdkS0Nvu/++CEftUbkUXanLR0=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.26.0.tar.gz"
         },
-        "version": "2.25.1"
+        "version": "2.26.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -4760,7 +4760,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-11-01",
+        "date": "2024-11-04",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4772,12 +4772,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "52a7dcdb94921aa25fcd4294e9dac580613032ff",
-            "sha256": "sha256-Zs0wBA6QR5tNomL0VNiD2LMf2uXjU31T3MmeoQn+cpM=",
+            "rev": "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a",
+            "sha256": "sha256-uVpWFZjf/6pri/DBGwcdpzBcV57RuOYf4i6sByp6I/A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "52a7dcdb94921aa25fcd4294e9dac580613032ff"
+        "version": "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a"
     },
     "visual-split-vim": {
         "cargoLocks": null,

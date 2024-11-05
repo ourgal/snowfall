@@ -1427,15 +1427,15 @@
   };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
-    version = "40108961c064241455c180b2533f64f3b196eeca";
+    version = "d7188c1aeb1c7dd03230982445b7360f5e230131";
     src = fetchFromGitHub {
       owner = "niksingh710";
       repo = "minimal-tmux-status";
-      rev = "40108961c064241455c180b2533f64f3b196eeca";
+      rev = "d7188c1aeb1c7dd03230982445b7360f5e230131";
       fetchSubmodules = false;
-      sha256 = "sha256-XlI4EN8HkgWqv5M83BBIY0TA78wgDPKvXxP7eFgVBqE=";
+      sha256 = "sha256-JtbuSxWFR94HiUdQL9uIm2V/kwGz0gbVbqvYWmEncbc=";
     };
-    date = "2024-10-23";
+    date = "2024-11-04";
   };
   miru = {
     pname = "miru";
@@ -1450,15 +1450,15 @@
   };
   mpv-M-x = {
     pname = "mpv-M-x";
-    version = "229cb615e701fafa8d7c3077286053243b252525";
+    version = "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b";
     src = fetchFromGitHub {
       owner = "Seme4eg";
       repo = "mpv-scripts";
-      rev = "229cb615e701fafa8d7c3077286053243b252525";
+      rev = "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b";
       fetchSubmodules = false;
-      sha256 = "sha256-xekWIjqVkan1XS7dIqt5iZzI+CgByb9OjYE+GULYgMs=";
+      sha256 = "sha256-hxodo/40Ipj7pSHowDxywCdMo/wTzWLnJU+zhgjYqlc=";
     };
-    date = "2024-08-16";
+    date = "2024-11-04";
   };
   mpv-autoloop = {
     pname = "mpv-autoloop";
@@ -1648,15 +1648,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "74664dcb933dd80b5fa25e58ab511c910d8fff7e";
+    version = "44ddd5e976a826aa6e974d8a35f6bd440aea1888";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "74664dcb933dd80b5fa25e58ab511c910d8fff7e";
+      rev = "44ddd5e976a826aa6e974d8a35f6bd440aea1888";
       fetchSubmodules = false;
-      sha256 = "sha256-QsybDNmhE9nPbXg84uxxFq9hd9BI89cNm/ktqBg0K2k=";
+      sha256 = "sha256-DeJNk3BLyHhngZRQbjPRLm8kxXRyFl354to6W36IZWI=";
     };
-    date = "2024-10-24";
+    date = "2024-11-04";
   };
   posting = {
     pname = "posting";
@@ -1713,10 +1713,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.25.1";
+    version = "2.26.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.25.1.tar.gz";
-      sha256 = "sha256-osb4cpArZ5uMpfEhyAKit0vCTxt9Yt30JHTxZS0yFbE=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.26.0.tar.gz";
+      sha256 = "sha256-RXjUkUvbvRiWO0xhH6OdkS0Nvu/++CEftUbkUXanLR0=";
     };
   };
   pydantic-settings = {
@@ -2601,15 +2601,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "52a7dcdb94921aa25fcd4294e9dac580613032ff";
+    version = "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "52a7dcdb94921aa25fcd4294e9dac580613032ff";
+      rev = "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a";
       fetchSubmodules = false;
-      sha256 = "sha256-Zs0wBA6QR5tNomL0VNiD2LMf2uXjU31T3MmeoQn+cpM=";
+      sha256 = "sha256-uVpWFZjf/6pri/DBGwcdpzBcV57RuOYf4i6sByp6I/A=";
     };
-    date = "2024-11-01";
+    date = "2024-11-04";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
