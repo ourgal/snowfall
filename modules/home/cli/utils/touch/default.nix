@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     myPkgs = "advance-touch";
+    nixPkgs = "bonk";
   }
 )
