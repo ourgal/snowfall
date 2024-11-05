@@ -11,6 +11,8 @@ args.module (
         enableOpt
         cfgHome
         switch
+        toTOML
+        sources
         ;
       tmuxEnabled = config.${namespace}.cli.multiplexer.tmux.enable;
       zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
@@ -602,6 +604,10 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "git-commit";
+                language-servers = [ "scls" ];
+              }
             ];
             language-server = {
               pyright = {
@@ -638,6 +644,7 @@ args.module (
                     "feature_words" # enable completion by word
                     "feature_snippets" # enable snippets
                     "feature_unicode_input" # enable "unicode input"
+                    "feature_paths"
                   ]
                   // {
                     max_completion_items = 20; # set max completion results len for each group: words, snippets, unicode-input
@@ -677,6 +684,30 @@ args.module (
         "simple-completion-language-server"
         "live-grep"
       ];
+      confs = {
+        "helix/external-snippets.toml" = toTOML {
+          "sources" = [
+            {
+              "git" = "https://github.com/rafamadriz/friendly-snippets.git";
+              "name" = "friendly-snippets";
+              "paths" = [
+                {
+                  "path" = "snippets/python/python.json";
+                  "scope" = [ "python" ];
+                }
+              ];
+            }
+          ];
+        };
+        "helix/external-snippets/github.com/rafamadriz/friendly-snippets.git" = pkgs.fetchFromGitHub {
+          inherit (sources.friendly-snippets.src)
+            owner
+            repo
+            rev
+            sha256
+            ;
+        };
+      };
       extraOpts = {
         broot = switch;
         live_grep = switch;

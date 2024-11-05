@@ -812,6 +812,18 @@
       sha256 = "sha256-p9gTFUYHdyOY2EFT/ZmBHT7dRNm64s/3ExUXG7bfQ70=";
     };
   };
+  friendly-snippets = {
+    pname = "friendly-snippets";
+    version = "de8fce94985873666bd9712ea3e49ee17aadb1ed";
+    src = fetchFromGitHub {
+      owner = "rafamadriz";
+      repo = "friendly-snippets";
+      rev = "de8fce94985873666bd9712ea3e49ee17aadb1ed";
+      fetchSubmodules = false;
+      sha256 = "sha256-H94Ryad0ZsSg/gioUgW+7sowij7GgtEUMNFi1IOZAys=";
+    };
+    date = "2024-10-07";
+  };
   fzf-help = {
     pname = "fzf-help";
     version = "v2.3.0";
