@@ -5,7 +5,7 @@ home:
     @nh home switch
 
 update:
-    @nvfetcher --keyfile keyfile.toml
+	@cache -s "$(date +%Y-%m-%d)" -- nvfetcher --keyfile keyfile.toml
 
 init url:
     #!/usr/bin/env bash
