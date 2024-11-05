@@ -7,7 +7,6 @@ args.module (
       # keep-sorted start
       "await"
       "gnumake"
-      "just"
       "mask"
       "mmake"
       "mprocs"
@@ -23,6 +22,11 @@ args.module (
       "sake"
       # keep-sorted end
     ];
-    enable = "pueue";
+    enable = [
+      # keep-sorted start
+      "just"
+      "pueue"
+      # keep-sorted end
+    ];
   }
 )
