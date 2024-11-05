@@ -1482,6 +1482,27 @@
         },
         "version": "v1.4.3"
     },
+    "friendly-snippets": {
+        "cargoLocks": null,
+        "date": "2024-10-07",
+        "extract": null,
+        "name": "friendly-snippets",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rafamadriz",
+            "repo": "friendly-snippets",
+            "rev": "de8fce94985873666bd9712ea3e49ee17aadb1ed",
+            "sha256": "sha256-H94Ryad0ZsSg/gioUgW+7sowij7GgtEUMNFi1IOZAys=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "de8fce94985873666bd9712ea3e49ee17aadb1ed"
+    },
     "fzf-help": {
         "cargoLocks": null,
         "date": null,
