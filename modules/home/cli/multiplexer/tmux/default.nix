@@ -11,21 +11,11 @@ args.module (
         lib
         switch
         mkOpt'
-        toTOML
-        sources
+        host
         ;
-      inherit (pkgs) tmuxPlugins fetchFromGitHub;
+      inherit (pkgs) tmuxPlugins;
+      inherit (lib.${namespace}.settings) laptops;
       cfg = cfgHome config.${namespace} ./.;
-      termsand =
-        (fetchFromGitHub {
-          inherit (sources.termsand.src)
-            owner
-            repo
-            rev
-            sha256
-            ;
-        })
-        + "/sand.sh";
       baseConf = ''
         set -g default-terminal "tmux-256color"
         set -ag terminal-overrides ",xterm-256color:RGB"
@@ -145,10 +135,6 @@ args.module (
 
         # trigger copy mode by
         bind b copy-mode
-
-        bind E run-shell ${termsand}
-
-        bind t run-shell ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh
       '';
       themeType = lib.types.enum [
         "tmux2k"
@@ -157,7 +143,6 @@ args.module (
         "minimal"
         ""
       ];
-      ln = config.lib.file.mkOutOfStoreSymlink;
       dracula = {
         plugin = tmuxPlugins.dracula;
         extraConfig = ''
@@ -200,60 +185,10 @@ args.module (
           set -g @minimal-tmux-status "top"
         '';
       };
-      transient = {
-        plugin = pkgs.${namespace}.tmux-transient-status;
-      };
       pluginsBase = with tmuxPlugins; [
         {
           plugin = copycat;
           extraConfig = baseConf;
-        }
-        open
-        fpp
-        tmux-fzf
-        {
-          plugin = extrakto;
-          extraConfig = "set -g @extrakto_key i;";
-        }
-        fuzzback
-        pkgs.${namespace}.tmux-edgelord
-        pkgs.${namespace}.tmux-fzf-url
-        pkgs.${namespace}.tmux-power-zoom
-        pkgs.${namespace}.tmux-auto-renumber-session
-        {
-          plugin = pkgs.${namespace}.tmux-tome;
-          extraConfig = ''
-            set -g @tome_key a;
-            set -g @tome_scratch-key a;
-            set -g @tome_playbook .playbook.fish;
-          '';
-        }
-        {
-          plugin = pkgs.${namespace}.tmux-tea;
-          extraConfig = ''
-            set -g @tea-bind T;
-          '';
-        }
-        jump
-        {
-          plugin = tmux-thumbs;
-          extraConfig = ''
-            set -g @thumbs-key .;
-          '';
-        }
-        {
-          plugin = pkgs.${namespace}.tmux-which-key;
-          extraConfig = ''
-            set -g @tmux-which-key-xdg-enable 1;
-          '';
-        }
-        {
-          plugin = session-wizard;
-          extraConfig = "set -g @session-wizard 'k'";
-        }
-        {
-          plugin = yank;
-          extraConfig = "set -g @yank_action 'copy-pipe'";
         }
       ];
 
@@ -275,59 +210,11 @@ args.module (
         }
       ];
 
-      gitmuxConf = builtins.toJSON {
-        tmux = {
-          symbols = {
-            branch = "⎇ ";
-            hashprefix = ":";
-            ahead = "↑·";
-            behind = "↓·";
-            staged = "● ";
-            conflict = "✖ ";
-            modified = "✚ ";
-            untracked = "… ";
-            stashed = "⚑ ";
-            insertions = "Σ";
-            deletions = "Δ";
-            clean = "✔";
-          };
-          styles = {
-            clear = "#[none]";
-            state = "#[fg=red,bold]";
-            branch = "#[fg=white,bold]";
-            remote = "#[fg=cyan]";
-            divergence = "#[fg=yellow]";
-            staged = "#[fg=green,bold]";
-            conflict = "#[fg=red,bold]";
-            modified = "#[fg=red,bold]";
-            untracked = "#[fg=magenta,bold]";
-            stashed = "#[fg=cyan,bold]";
-            insertions = "#[fg=green]";
-            deletions = "#[fg=red]";
-            clean = "#[fg=green,bold]";
-          };
-          layout = [
-            "branch"
-            "divergence"
-            " - "
-            "flags"
-          ];
-          options = {
-            branch_max_len = 0;
-            branch_trim = "right";
-            ellipsis = "…";
-            hide_clean = false;
-            swap_divergence = false;
-          };
-        };
-      };
     in
     {
       path = ./.;
       nixPkgs = [
         # keep-sorted start
-        "gitmux"
-        "sesh"
         "smug"
         "tmuxinator"
         "tmuxp"
@@ -336,7 +223,6 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "fzfp"
-        "termsand"
         # keep-sorted end
       ];
       progs = [
@@ -346,27 +232,61 @@ args.module (
             historyLimit = 20000;
             newSession = true;
             baseIndex = 1;
-            catppuccin.extraConfig = lib.mkIf config.catppuccin.enable ''
-              set -g @catppuccin_window_left_separator ""
-              set -g @catppuccin_window_right_separator " "
-              set -g @catppuccin_window_middle_separator " █"
-              set -g @catppuccin_window_number_position "right"
+            catppuccin.extraConfig = lib.mkIf config.programs.tmux.catppuccin.enable ''
+              # Configure Catppuccin
+              set -g @catppuccin_flavor "macchiato"
+              set -g @catppuccin_status_background "none"
+              set -g @catppuccin_window_status_style "none"
+              set -g @catppuccin_pane_status_enabled "off"
+              set -g @catppuccin_pane_border_status "off"
 
-              set -g @catppuccin_window_default_fill "number"
-              set -g @catppuccin_window_default_text "#W"
+              # status left look and feel
+              set -g status-left-length 100
+              set -g status-left ""
+              set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_red},fg=#{@thm_bg},bold] #S },#{#[bg=#{@thm_bg},fg=#{@thm_blue}] #S }}"
+              set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_overlay_0},none]│"
+              set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_maroon}]#{E:@catppuccin_gitmux_text}"
+              set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_overlay_0},none]#{?window_zoomed_flag,│,}"
+              set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_yellow}]#{?window_zoomed_flag,  zoom ,}"
 
-              set -g @catppuccin_window_current_fill "number"
-              set -g @catppuccin_window_current_text "#W"
-              set -g @catppuccin_window_current_text "#{?#{==:#{pane_current_command},fish},#{b:pane_current_path},#{pane_current_command}}"
+              # status right look and feel
+              set -g status-right-length 100
+              set -g status-right ""
+              ${
+                if (builtins.elem host laptops) then
+                  ''
+                    set -ga status-right "#{?#{e|>=:10,#{battery_percentage}},#{#[bg=#{@thm_red},fg=#{@thm_bg}]},#{#[bg=#{@thm_bg},fg=#{@thm_pink}]}} #{battery_icon} #{battery_percentage} "
+                    set -ga status-right "#[bg=#{@thm_bg},fg=#{@thm_overlay_0}, none]│"
+                  ''
+                else
+                  ""
+              }
+              set -ga status-right "#[bg=#{@thm_bg}] #{load_full} "
 
-              set -g @catppuccin_status_modules_right "load battery"
-              set -g @catppuccin_status_modules_left "session gitmux"
-              set -g @catppuccin_status_justify "absolute-centre"
-              set -g @catppuccin_status_left_separator  " "
-              set -g @catppuccin_status_right_separator ""
-              set -g @catppuccin_status_fill "icon"
-              set -g @catppuccin_status_connect_separator "no"
-              set -g @catppuccin_gitmux_text "#(gitmux -cfg $HOME/.config/gitmux/config.yaml \"#{pane_current_path}\")"
+              # Configure Tmux
+              set -g status-position top
+              set -g status-style "bg=#{@thm_bg}"
+              set -g status-justify "absolute-centre"
+
+              # pane border look and feel
+              setw -g pane-border-format ""
+              setw -g pane-active-border-style "bg=#{@thm_bg},fg=#{@thm_overlay_0}"
+              setw -g pane-border-style "bg=#{@thm_bg},fg=#{@thm_surface_0}"
+              setw -g pane-border-lines single
+
+              # window look and feel
+              set -wg automatic-rename on
+              set -g automatic-rename-format "Window"
+
+              set -g window-status-format " #I#{?#{!=:#{window_name},Window},: #W,} "
+              set -g window-status-style "bg=#{@thm_bg},fg=#{@thm_rosewater}"
+              set -g window-status-last-style "bg=#{@thm_bg},fg=#{@thm_peach}"
+              set -g window-status-activity-style "bg=#{@thm_red},fg=#{@thm_bg}"
+              set -g window-status-bell-style "bg=#{@thm_red},fg=#{@thm_bg},bold"
+              set -gF window-status-separator "#[bg=#{@thm_bg},fg=#{@thm_overlay_0}]│"
+
+              set -g window-status-current-format " #I#{?#{!=:#{window_name},Window},: #W,} "
+              set -g window-status-current-style "bg=#{@thm_peach},fg=#{@thm_bg},bold"
             '';
             plugins =
               pluginsBase
@@ -379,7 +299,7 @@ args.module (
                   [ kanagawa ]
                 else if (cfg.theme == "minimal") then
                   [ minimal ]
-                else if config.catppuccin.enable then
+                else if config.programs.tmux.catppuccin.enable then
                   [
                     pkgs.${namespace}.tmux-loadavg
                     tmuxPlugins.battery
@@ -387,25 +307,11 @@ args.module (
                 else
                   [ ]
               )
-              ++ (if cfg.transient.enable then [ transient ] else [ ])
               ++ (if cfg.resurrect.enable then pluginsResurrect else [ ]);
           };
         }
         {
           fish = {
-            plugins = lib.mkIf cfg.autostart.enable [
-              rec {
-                name = "tmux.fish";
-                src = fetchFromGitHub {
-                  inherit (sources.${name}.src)
-                    owner
-                    repo
-                    rev
-                    sha256
-                    ;
-                };
-              }
-            ];
             interactiveShellInit =
               lib.mkIf cfg.resurrect.enable # fish
                 ''
@@ -431,569 +337,31 @@ args.module (
           };
         }
       ];
-      value = {
-        home.file = lib.mkIf cfg.autostart.enable {
-          ".tmux.conf".source = ln "${config.home.homeDirectory}/.config/tmux/tmux.conf";
-          ".gitmux.conf".text = gitmuxConf;
-        };
-        xdg.configFile = {
-          "gitmux/config.yaml".text = gitmuxConf;
-          "sesh/sesh.toml".text = toTOML {
-            default_session = {
-              startup_command = "tmuxinator local";
-            };
-          };
-          "tmux/plugins/tmux-which-key/config.yaml".text = builtins.toJSON {
-            command_alias_start_index = 200;
-            keybindings = {
-              prefix_table = "Space";
-              # root_table = "C-Space";
-            };
-            title = {
-              style = "align=centre,bold";
-              prefix = "tmux";
-              prefix_style = "fg=green,align=centre,bold";
-            };
-            position = {
-              x = "C";
-              y = "C";
-            };
-            custom_variables = [
-              {
-                name = "log_info";
-                value = "#[fg=green,italics] [info]#[default]#[italics]";
-              }
-            ];
-            macros = [
-              {
-                name = "reload-config";
-                commands = [
-                  "display \"#{log_info} Loading config... \""
-                  "source-file $HOME/.config/tmux/tmux.conf"
-                  "display -p \"\\n\\n... Press ENTER to continue\""
-                ];
-              }
-              {
-                name = "restart-pane";
-                commands = [
-                  "display \"#{log_info} Restarting pane\""
-                  "respawnp -k -c #{pane_current_path}"
-                ];
-              }
-            ];
-            items = [
-              {
-                name = "Run";
-                key = "space";
-                command = "command-prompt";
-              }
-              {
-                name = "Last window";
-                key = "tab";
-                command = "last-window";
-              }
-              {
-                name = "Last pane";
-                key = "`";
-                command = "last-pane";
-              }
-              { separator = true; }
-              {
-                name = "+Windows";
-                key = "w";
-                menu = [
-                  {
-                    name = "Last";
-                    key = "tab";
-                    command = "last-window";
-                  }
-                  {
-                    name = "Choose";
-                    key = "w";
-                    command = "choose-tree -Zw";
-                  }
-                  {
-                    name = "Previous";
-                    key = "p";
-                    command = "previous-window";
-                  }
-                  {
-                    name = "Next";
-                    key = "n";
-                    command = "next-window";
-                  }
-                  {
-                    name = "New";
-                    key = "c";
-                    command = "neww -c #{pane_current_path}";
-                  }
-                  { separator = true; }
-                  {
-                    name = "+Layout";
-                    key = "l";
-                    menu = [
-                      {
-                        name = "Next";
-                        key = "l";
-                        command = "nextl";
-                        transient = true;
-                      }
-                      {
-                        name = "Tiled";
-                        key = "t";
-                        command = "selectl tiled";
-                      }
-                      {
-                        name = "Horizontal";
-                        key = "h";
-                        command = "selectl even-horizontal";
-                      }
-                      {
-                        name = "Vertical";
-                        key = "v";
-                        command = "selectl even-vertical";
-                      }
-                      {
-                        name = "Horizontal main";
-                        key = "H";
-                        command = "selectl main-horizontal";
-                      }
-                      {
-                        name = "Vertical main";
-                        key = "V";
-                        command = "selectl main-vertical";
-                      }
-                    ];
-                  }
-                  {
-                    name = "Split horizontal";
-                    key = "s";
-                    command = "splitw -h -c #{pane_current_path}";
-                  }
-                  {
-                    name = "Split vertical";
-                    key = "v";
-                    command = "splitw -v -c #{pane_current_path}";
-                  }
-                  {
-                    name = "Rotate";
-                    key = "o";
-                    command = "rotatew";
-                    transient = true;
-                  }
-                  {
-                    name = "Rotate reverse";
-                    key = "O";
-                    command = "rotatew -D";
-                    transient = true;
-                  }
-                  { separator = true; }
-                  {
-                    name = "Rename";
-                    key = "r";
-                    command = "command-prompt -I \"#W\" \"renamew -- \\\"%%\\\"\"";
-                  }
-                  {
-                    name = "Kill";
-                    key = "x";
-                    command = "confirm -p \"Kill window #W? (y/n)\" killw";
-                  }
-                ];
-              }
-              {
-                name = "+Panes";
-                key = "p";
-                menu = [
-                  {
-                    name = "Last";
-                    key = "tab";
-                    command = "lastp";
-                  }
-                  {
-                    name = "Choose";
-                    key = "p";
-                    command = "displayp -d 0";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Left";
-                    key = "h";
-                    command = "selectp -L";
-                  }
-                  {
-                    name = "Down";
-                    key = "j";
-                    command = "selectp -D";
-                  }
-                  {
-                    name = "Up";
-                    key = "k";
-                    command = "selectp -U";
-                  }
-                  {
-                    name = "Right";
-                    key = "l";
-                    command = "selectp -R";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Zoom";
-                    key = "z";
-                    command = "resizep -Z";
-                  }
-                  {
-                    name = "+Resize";
-                    key = "r";
-                    menu = [
-                      {
-                        name = "Left";
-                        key = "h";
-                        command = "resizep -L";
-                        transient = true;
-                      }
-                      {
-                        name = "Down";
-                        key = "j";
-                        command = "resizep -D";
-                        transient = true;
-                      }
-                      {
-                        name = "Up";
-                        key = "k";
-                        command = "resizep -U";
-                        transient = true;
-                      }
-                      {
-                        name = "Right";
-                        key = "l";
-                        command = "resizep -R";
-                        transient = true;
-                      }
-                      {
-                        name = "Left more";
-                        key = "H";
-                        command = "resizep -L 10";
-                        transient = true;
-                      }
-                      {
-                        name = "Down more";
-                        key = "J";
-                        command = "resizep -D 10";
-                        transient = true;
-                      }
-                      {
-                        name = "Up more";
-                        key = "K";
-                        command = "resizep -U 10";
-                        transient = true;
-                      }
-                      {
-                        name = "Right more";
-                        key = "L";
-                        command = "resizep -R 10";
-                        transient = true;
-                      }
-                    ];
-                  }
-                  {
-                    name = "Swap left";
-                    key = "H";
-                    command = "swapp -t \"{left-of}\"";
-                  }
-                  {
-                    name = "Swap down";
-                    key = "J";
-                    command = "swapp -t \"{down-of}\"";
-                  }
-                  {
-                    name = "Swap up";
-                    key = "K";
-                    command = "swapp -t \"{up-of}\"";
-                  }
-                  {
-                    name = "Swap right";
-                    key = "L";
-                    command = "swapp -t \"{right-of}\"";
-                  }
-                  {
-                    name = "Break";
-                    key = "!";
-                    command = "break-pane";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Mark";
-                    key = "m";
-                    command = "selectp -m";
-                  }
-                  {
-                    name = "Unmark";
-                    key = "M";
-                    command = "selectp -M";
-                  }
-                  {
-                    name = "Capture";
-                    key = "C";
-                    command = "capture-pane";
-                  }
-                  {
-                    name = "Respawn pane";
-                    key = "R";
-                    macro = "restart-pane";
-                  }
-                  {
-                    name = "Kill";
-                    key = "X";
-                    command = "confirm -p \"Kill pane #P? (y/n)\" killp";
-                  }
-                ];
-              }
-              {
-                name = "+Buffers";
-                key = "b";
-                menu = [
-                  {
-                    name = "Choose";
-                    key = "b";
-                    command = "choose-buffer -Z";
-                  }
-                  {
-                    name = "List";
-                    key = "l";
-                    command = "lsb";
-                  }
-                  {
-                    name = "Paste";
-                    key = "p";
-                    command = "pasteb";
-                  }
-                ];
-              }
-              {
-                name = "+Sessions";
-                key = "s";
-                menu = [
-                  {
-                    name = "Choose";
-                    key = "s";
-                    command = "choose-tree -Zs";
-                  }
-                  {
-                    name = "New";
-                    key = "n";
-                    command = "new";
-                  }
-                  {
-                    name = "Rename";
-                    key = "r";
-                    command = "rename";
-                  }
-                ];
-              }
-              {
-                name = "+Client";
-                key = "c";
-                menu = [
-                  {
-                    name = "Choose";
-                    key = "c";
-                    command = "choose-client -Z";
-                  }
-                  {
-                    name = "Last";
-                    key = "l";
-                    command = "switchc -l";
-                  }
-                  {
-                    name = "Previous";
-                    key = "p";
-                    command = "switchc -p";
-                  }
-                  {
-                    name = "Next";
-                    key = "n";
-                    command = "switchc -n";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Refresh";
-                    key = "R";
-                    command = "refresh";
-                  }
-                  {
-                    name = "Detach";
-                    key = "D";
-                    command = "detach";
-                  }
-                  {
-                    name = "Suspend";
-                    key = "Z";
-                    command = "suspendc";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Reload config";
-                    key = "r";
-                    macro = "reload-config";
-                  }
-                  {
-                    name = "Customize";
-                    key = ",";
-                    command = "customize-mode -Z";
-                  }
-                ];
-              }
-              {
-                name = "+Extensions";
-                key = "e";
-                menu = [
-                  {
-                    name = "Copycat Search";
-                    key = "/";
-                    command = "run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_search.sh";
-                  }
-                  {
-                    name = "Copycat File Search";
-                    key = "C-f";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(^|^\.|[[:space:]]|[[:space:]]\.|[[:space:]]\.\.|^\.\.)[[:alnum:]~_-]*/[][[:alnum:]_.#$%&+=/@-]*"'';
-                  }
-                  {
-                    name = "Copycat Git Status Files";
-                    key = "C-g";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_git_special.sh #{pane_current_path}'';
-                  }
-                  {
-                    name = "Copycat Hash Search";
-                    key = "M-h";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "\b([0-9a-f]{7,40}|[[:alnum:]]{52}|[0-9a-f]{64})\b"'';
-                  }
-                  {
-                    name = "Copycat Url Search";
-                    key = "C-u";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(https?://|git@|git://|ssh://|ftp://|file:///)[[:alnum:]?=%/_.:,;~@!#$&()*+-]*"'';
-                  }
-                  {
-                    name = "Copycat Digit Search";
-                    key = "C-d";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]+"'';
-                  }
-                  {
-                    name = "Copycat IP Search";
-                    key = "M-i";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}"'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Session Wizard";
-                    key = "k";
-                    command = ''display-popup -w "80"% -h "40"% -E ${pkgs.tmuxPlugins.session-wizard}/share/tmux-plugins/session-wizard/session-wizard.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Tmux Fzf";
-                    key = "F";
-                    command = ''run-shell -b ${pkgs.tmuxPlugins.tmux-fzf}/share/tmux-plugins/tmux-fzf/main.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Extrakto";
-                    key = "i";
-                    command = ''run-shell ${pkgs.tmuxPlugins.extrakto}/share/tmux-plugins/extrakto/scripts/helpers.sh #{pane_id}'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Fuzzback";
-                    key = "?";
-                    command = ''run-shell -b ${pkgs.tmuxPlugins.fuzzback}/share/tmux-plugins/extrakto/scripts/fuzzback.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Thumbs";
-                    key = ".";
-                    command = ''run-shell -b ${pkgs.tmuxPlugins.tmux-thumbs}/share/tmux-plugins/tmux-thumbs/tmux-thumbs.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Fzf Url";
-                    key = "u";
-                    command = ''run-shell -b ${pkgs.${namespace}.tmux-fzf-url}/share/tmux-plugins/tmux-fzf-url/fzf-url.sh "" "screen" ""'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Jump";
-                    key = "j";
-                    command = ''run-shell -b ${pkgs.tmuxPlugins.jump}/share/tmux-plugins/jump/scripts/tmux-jump.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Termsand";
-                    key = "E";
-                    command = "run-shell ${termsand}";
-                  }
-                  { separator = true; }
-                  {
-                    name = "Tea";
-                    key = "T";
-                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tea}/share/tmux-plugins/tmux-tea/bin/tea.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Fpp";
-                    key = "f";
-                    command = ''run-shell -b ${pkgs.tmuxPlugins.fpp}/share/tmux-plugins/fpp/scripts/fpp.tmux'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Zoom";
-                    key = "Z";
-                    command = ''run-shell -b ${
-                      pkgs.${namespace}.tmux-power-zoom
-                    }/share/tmux-plugins/tmux-power-zoom/scripts/power_zoom.sh'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Tome Playbook";
-                    key = "a";
-                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tome}/share/tmux-plugins/tmux-tome/tome-open-playbook'';
-                  }
-                  {
-                    name = "Tome Scratch Playbook";
-                    key = "A";
-                    command = ''run-shell -b ${pkgs.${namespace}.tmux-tome}/share/tmux-plugins/tmux-tome/tome-open-playbook -s'';
-                  }
-                  { separator = true; }
-                  {
-                    name = "Sesh";
-                    key = "t";
-                    command = "run-shell -b ${pkgs.${namespace}.tmux-sesh}/bin/tmux-sesh";
-                  }
-                ];
-              }
-              { separator = true; }
-              {
-                name = "Time";
-                key = "T";
-                command = "clock-mode";
-              }
-              {
-                name = "Show messages";
-                key = "~";
-                command = "show-messages";
-              }
-              {
-                name = "+Keys";
-                key = "?";
-                command = "list-keys -N";
-              }
-            ];
-          };
-        };
-        ${namespace}.dev.python.global.pkgs = (p: [ p.pyyaml ]);
-      };
+      enable = [
+        # keep-sorted start
+        "auto-renumber-session"
+        "edgelord"
+        "extrakto"
+        "fpp"
+        "fuzzback"
+        "fzf"
+        "fzf-url"
+        "gitmux"
+        "jump"
+        "open"
+        "power-zoom"
+        "sesh"
+        "session-wizard"
+        "tea"
+        "termsand"
+        "thumbs"
+        "tome"
+        "which-key"
+        "yank"
+        # keep-sorted end
+      ];
       extraOpts = {
-        autostart = switch;
         resurrect = switch;
-        transient = switch;
         theme = mkOpt' themeType "";
       };
     }
