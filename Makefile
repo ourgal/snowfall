@@ -9,7 +9,7 @@ home: ##@ home manager switch
 
 .PHONY: update
 update: ##@ nvfetcher update
-	@nvfetcher --keyfile keyfile.toml
+	@cache -s "$(date +%Y-%m-%d)" -- nvfetcher --keyfile keyfile.toml
 
 ##@
 ##@ misc
