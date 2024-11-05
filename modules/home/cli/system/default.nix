@@ -6,6 +6,7 @@ args.module (
     myPkgs = "cache";
     nixPkgs = [
       # keep-sorted start
+      "bkt"
       "charm-freeze"
       "geekbench"
       "handlr-regex"
