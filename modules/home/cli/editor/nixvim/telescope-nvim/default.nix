@@ -12,10 +12,10 @@ args.module (
           extensions.fzf-native = enabled;
         };
         keymaps = [
-          {
-            key = "<leader>f";
-            action = "<cmd>Telescope find_files<cr>";
-          }
+          # {
+          #   key = "<leader>f";
+          #   action = "<cmd>Telescope find_files<cr>";
+          # }
           #   {
           #     action = "<cmd>Telescope live_grep<CR>";
           #     key = "<leader>fw";
@@ -40,6 +40,10 @@ args.module (
           #     action = "<cmd>Telescope man_pages<CR>";
           #     key = "<leader>fm";
           #   }
+          {
+            action = "<cmd>Telescope buffers<cr>";
+            key = "<leader>fb";
+          }
         ];
       };
     }
