@@ -8,7 +8,12 @@ args.module (
     {
       path = ./.;
       progs = "go";
-      nixPkgs = "gopls";
+      nixPkgs = [
+        # keep-sorted start
+        "golint"
+        "gopls"
+        # keep-sorted end
+      ];
       env = {
         GO111MODULE = "on";
       } // lib.${namespace}.proxy.go;
