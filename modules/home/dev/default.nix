@@ -18,6 +18,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "cachix"
+        "checkmake"
         "devbox"
         "devenv"
         "dtool"
