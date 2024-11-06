@@ -21,6 +21,7 @@ args.module (
         "devbox"
         "devenv"
         "dtool"
+        "eclint"
         "exercism"
         "honcho"
         "keep-sorted"
