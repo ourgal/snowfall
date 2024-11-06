@@ -17,6 +17,7 @@ args.module (
       ];
       nixPkgs = [
         # keep-sorted start
+        "actionlint"
         "cachix"
         "checkmake"
         "devbox"
