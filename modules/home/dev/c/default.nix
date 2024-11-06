@@ -4,6 +4,11 @@ args.module (
   // {
     path = ./.;
     myPkgs = "c";
-    nixPkgs = "clang-tools";
+    nixPkgs = [
+      # keep-sorted start
+      "clang-tools"
+      "splint"
+      # keep-sorted end
+    ];
   }
 )
