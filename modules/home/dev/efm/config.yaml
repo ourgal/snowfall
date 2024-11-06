@@ -1,0 +1,31 @@
+---
+version: 2
+root-markers:
+  - .git/
+lint-debounce: 1s
+tools:
+  gitcommit-gitlint: &gitcommit-gitlint
+    lint-command: "gitlint"
+    lint-stdin: true
+    lint-formats:
+      - '%l: %m: "%r"'
+      - "%l: %m"
+  make-checkmake: &make-checkmake
+    lint-command: "checkmake"
+    lint-stdin: true
+  perl-perlcritic: &perl-perlcritic
+    lint-command: 'perlcritic --nocolor -3 --verbose "%l:%c %m\n"'
+    lint-ignore-exit-code: true
+    lint-formats:
+      - "%l:%c %m"
+  perl-perltidy: &perl-perltidy
+    format-command: "perltidy -b"
+    format-stdin: true
+languages:
+  gitcommit:
+    - <<: *gitcommit-gitlint
+  make:
+    - <<: *make-checkmake
+  perl:
+    - <<: *perl-perltidy
+    - <<: *perl-perlcritic
