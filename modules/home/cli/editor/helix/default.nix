@@ -12,7 +12,6 @@ args.module (
         cfgHome
         switch
         toTOML
-        sources
         ;
       tmuxEnabled = config.${namespace}.cli.multiplexer.tmux.enable;
       zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
@@ -746,14 +745,8 @@ args.module (
             }
           ];
         };
-        "helix/external-snippets/github.com/rafamadriz/friendly-snippets.git" = pkgs.fetchFromGitHub {
-          inherit (sources.friendly-snippets.src)
-            owner
-            repo
-            rev
-            sha256
-            ;
-        };
+        "helix/external-snippets/github.com/rafamadriz/friendly-snippets.git" =
+          pkgs._sources.friendly-snippets.src;
       };
       extraOpts = {
         broot = switch;

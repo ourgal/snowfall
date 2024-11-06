@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs sources;
+      inherit (args) pkgs;
     in
     {
       path = ./.;
@@ -15,25 +15,11 @@ args.module (
           plugins = [
             {
               name = "zoxide";
-              src = pkgs.fetchFromGitHub {
-                inherit (sources.ranger-zoxide.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
+              inherit (pkgs._sources.ranger-zoxide) src;
             }
             {
               name = "devicons2";
-              src = pkgs.fetchFromGitHub {
-                inherit (sources.ranger-devicons2.src)
-                  owner
-                  repo
-                  rev
-                  sha256
-                  ;
-              };
+              inherit (pkgs._sources.ranger-devicons2) src;
             }
           ];
           extraConfig = ''

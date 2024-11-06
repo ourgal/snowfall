@@ -8,7 +8,6 @@ args.module (
         namespace
         host
         pkgs
-        sources
         ;
       baseConfig = builtins.readFile ./rc.lua;
       hostConfig =
@@ -42,22 +41,8 @@ args.module (
           "awesome/theme.lua".source = ./theme.lua;
           "awesome/background.jpg".source = ./background.jpg;
           "awesome/themes".source = ./themes;
-          "awesome/lain".source = pkgs.fetchFromGitHub {
-            inherit (sources.lain.src)
-              owner
-              repo
-              rev
-              sha256
-              ;
-          };
-          "awesome/freedesktop".source = pkgs.fetchFromGitHub {
-            inherit (sources.awesome-freedesktop.src)
-              owner
-              repo
-              rev
-              sha256
-              ;
-          };
+          "awesome/lain".source = pkgs._sources.lain.src;
+          "awesome/freedesktop".source = pkgs._sources.awesome-freedesktop.src;
         };
       };
     }

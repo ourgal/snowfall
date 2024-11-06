@@ -3,23 +3,9 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs sources;
-      better-recur = pkgs.fetchFromGitHub {
-        inherit (sources.taskwarrior-better-recur.src)
-          owner
-          repo
-          rev
-          sha256
-          ;
-      };
-      relative-recur = pkgs.fetchFromGitHub {
-        inherit (sources.task-relative-recur.src)
-          owner
-          repo
-          rev
-          sha256
-          ;
-      };
+      inherit (args) pkgs;
+      better-recur = pkgs._sources.taskwarrior-better-recur.src;
+      relative-recur = pkgs._sources.task-relative-recur.src;
     in
     {
       path = ./.;
