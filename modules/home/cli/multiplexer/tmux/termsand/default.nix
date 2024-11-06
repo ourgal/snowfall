@@ -10,19 +10,9 @@ args.module (
         lib
         cfgHome
         config
-        sources
         ;
       cfg = cfgHome config.${namespace} ./.;
-      source = (
-        pkgs.fetchFromGitHub {
-          inherit (sources.termsand.src)
-            owner
-            repo
-            rev
-            sha256
-            ;
-        }
-      );
+      source = pkgs._sources.termsand.src;
     in
     {
       path = ./.;

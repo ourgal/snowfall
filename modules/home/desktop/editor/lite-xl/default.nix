@@ -3,17 +3,9 @@ args.module (
   args
   // (
     let
-      inherit (args) sources;
-      inherit (args.pkgs) fetchFromGitHub fetchurl;
-      vibe = fetchFromGitHub {
-        inherit (sources.lite-xl-vibe.src)
-          owner
-          repo
-          rev
-          sha256
-          ;
-      };
-      fontconfig = fetchurl {
+      inherit (args) pkgs;
+      vibe = pkgs._sources.lite-xl-vibe.src;
+      fontconfig = pkgs.fetchurl {
         url = "https://raw.githubusercontent.com/lite-xl/lite-xl-plugins/master/plugins/fontconfig.lua";
         hash = "sha256-soSWafV94w+A+xSHvL3XQyNgPAFWW+hYPkEabTE820o=";
       };
