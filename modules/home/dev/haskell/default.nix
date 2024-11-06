@@ -8,6 +8,7 @@ args.module (
       "cabal-install"
       "ghc"
       "haskell-language-server"
+      "hlint"
       "stack"
       # keep-sorted end
     ];
