@@ -98,6 +98,7 @@ args.module (
         "android"
         "cpp"
         "editorconfig"
+        "efm"
         "fennel"
         "go"
         "json"
