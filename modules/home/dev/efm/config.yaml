@@ -4,6 +4,9 @@ root-markers:
   - .git/
 lint-debounce: 1s
 tools:
+  gitcommit-commitmsgfmt: &gitcommit-commitmsgfmt
+    format-command: "commitmsgfmt"
+    format-stdin: true
   gitcommit-gitlint: &gitcommit-gitlint
     lint-command: "gitlint"
     lint-stdin: true
@@ -24,6 +27,7 @@ tools:
 languages:
   gitcommit:
     - <<: *gitcommit-gitlint
+    - <<: *gitcommit-commitmsgfmt
   make:
     - <<: *make-checkmake
   perl:
