@@ -18,6 +18,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "poetry"
+        "pylint"
         "pyright"
         "rye"
         "uv"
