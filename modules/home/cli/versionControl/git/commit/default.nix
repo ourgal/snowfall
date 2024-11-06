@@ -21,6 +21,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "commitizen"
+        "gitlint"
         "gitmoji-cli"
         "glitter"
         # keep-sorted end
