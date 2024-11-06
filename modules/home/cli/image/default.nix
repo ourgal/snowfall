@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "dipc"
       "exiftool"
       "gifsicle"
       "graphicsmagick"
