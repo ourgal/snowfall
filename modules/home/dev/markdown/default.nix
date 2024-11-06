@@ -13,6 +13,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "autocorrect"
+      "cbfmt"
       "lowdown"
       "marksman"
       "md-tangle"
