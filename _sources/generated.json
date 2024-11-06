@@ -771,12 +771,12 @@
             "name": null,
             "owner": "danvergara",
             "repo": "dblab",
-            "rev": "v0.27.0",
-            "sha256": "sha256-/bvNyfyLqlWwLR1+fWnW4/xkxpF+7u/0nX4QpuzV6XY=",
+            "rev": "v0.28.0",
+            "sha256": "sha256-v6ozTlbjcGi+w3SWxJb3Ptg1jVBLyrT+a9PU7e1X6SU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.27.0"
+        "version": "v0.28.0"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -3659,7 +3659,7 @@
     },
     "simple-completion-language-server": {
         "cargoLocks": null,
-        "date": "2024-10-29",
+        "date": "2024-11-05",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -3671,12 +3671,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "76b59167ab2d350af4cb085fdbef687c8ee824c6",
-            "sha256": "sha256-ugzdHDWMqc3Pl9maIlQnMLRTUGC+HqgaxDGzu70crTs=",
+            "rev": "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b",
+            "sha256": "sha256-GfzdbCl4fOf5ORY8MXk6fxb0Hrv+L0zp2qceHPVKDTc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "76b59167ab2d350af4cb085fdbef687c8ee824c6"
+        "version": "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b"
     },
     "soba": {
         "cargoLocks": null,
@@ -3839,12 +3839,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.14.2",
-            "sha256": "sha256-/8tHu6wZLYnv9LWvJf++wqKo/b+Ynkxs3XQGFF1Vdr4=",
+            "rev": "v0.14.3",
+            "sha256": "sha256-tZN3GtjO6lcd6CGQQXfAe3lxP6v4q1ear3HLTdFYpr4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.14.2"
+        "version": "v0.14.3"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -4781,7 +4781,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-11-04",
+        "date": "2024-11-05",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4793,12 +4793,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a",
-            "sha256": "sha256-uVpWFZjf/6pri/DBGwcdpzBcV57RuOYf4i6sByp6I/A=",
+            "rev": "1fae0d5480165575ec4d63d2e29c059ff3e627a8",
+            "sha256": "sha256-VZ+4yGYinPS3dmHULN+0S6pWtHTrsQc/NFYCSpiB19g=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a"
+        "version": "1fae0d5480165575ec4d63d2e29c059ff3e627a8"
     },
     "visual-split-vim": {
         "cargoLocks": null,

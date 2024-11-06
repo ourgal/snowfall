@@ -190,10 +190,6 @@ fetch.github = "JasonWei512/code-radio-cli"
 src.github = "aksiksi/compose2nix"
 fetch.github = "aksiksi/compose2nix"
 
-[dblab]
-src.github = "danvergara/dblab"
-fetch.github = "danvergara/dblab"
-
 [diffnav]
 src.github = "dlvhdr/diffnav"
 fetch.github = "dlvhdr/diffnav"
