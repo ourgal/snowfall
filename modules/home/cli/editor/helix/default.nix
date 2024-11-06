@@ -532,10 +532,10 @@ args.module (
               }
               {
                 name = "perl";
-                formatter = {
-                  command = "perltidy";
-                  args = [ "-" ];
-                };
+                language-servers = [
+                  "scls"
+                  "pls"
+                ];
                 auto-format = true;
               }
               {
@@ -687,6 +687,9 @@ args.module (
               };
               efm = {
                 command = "efm-langserver";
+              };
+              pls = {
+                command = "pls";
               };
             };
           };
