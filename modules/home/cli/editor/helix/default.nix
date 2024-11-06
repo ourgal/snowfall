@@ -606,7 +606,17 @@ args.module (
               }
               {
                 name = "git-commit";
-                language-servers = [ "scls" ];
+                language-servers = [
+                  "scls"
+                  "efm"
+                ];
+              }
+              {
+                name = "make";
+                language-servers = [
+                  "scls"
+                  "efm"
+                ];
               }
             ];
             language-server = {
@@ -675,6 +685,9 @@ args.module (
                   };
                 };
               };
+              efm = {
+                command = "efm-langserver";
+              };
             };
           };
           package = pkgs.${namespace}.helix;
@@ -694,6 +707,26 @@ args.module (
                 {
                   "path" = "snippets/python/python.json";
                   "scope" = [ "python" ];
+                }
+                {
+                  "path" = "snippets/make.json";
+                  "scope" = [ "make" ];
+                }
+                {
+                  "path" = "snippets/nix.json";
+                  "scope" = [ "nix" ];
+                }
+                {
+                  "path" = "snippets/markdown.json";
+                  "scope" = [ "markdown" ];
+                }
+                {
+                  "path" = "snippets/fennel.json";
+                  "scope" = [ "fennel" ];
+                }
+                {
+                  "path" = "snippets/perl.json";
+                  "scope" = [ "perl" ];
                 }
               ];
             }
