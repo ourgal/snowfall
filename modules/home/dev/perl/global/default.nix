@@ -19,9 +19,11 @@ args.module (
         home.packages = [
           (pkgs.perl.withPackages (
             ps:
+            with ps;
             [
-              ps.PerlLanguageServer
-              ps.PerlTidy
+              PerlLanguageServer
+              PerlTidy
+              PerlCritic
             ]
             ++ (cfg.pkgs ps)
           ))
