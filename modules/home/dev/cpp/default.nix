@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "cppcheck"
+      "cpplint"
       "gcc"
       # keep-sorted end
     ];
