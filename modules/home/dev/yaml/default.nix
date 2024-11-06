@@ -20,9 +20,9 @@ args.module (
       "yamale"
       "yaml-language-server"
       "yamlfix"
-      "yamlfmt"
       "yamllint"
       # keep-sorted end
     ];
+    enable = "yamlfmt";
   }
 )
