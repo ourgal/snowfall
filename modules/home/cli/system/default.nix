@@ -10,6 +10,7 @@ args.module (
       "charm-freeze"
       "geekbench"
       "handlr-regex"
+      "inxi"
       "kmon"
       "pinentry-all"
       "screenkey"
