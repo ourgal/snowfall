@@ -20,6 +20,7 @@ args.module (
         "actionlint"
         "cachix"
         "checkmake"
+        "datefmt"
         "devbox"
         "devenv"
         "dtool"
