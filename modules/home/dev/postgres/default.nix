@@ -3,10 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "dblab";
     nixPkgs = [
       # keep-sorted start
       "beekeeper-studio"
+      "dblab"
       "gobang"
       "usql"
       # keep-sorted end

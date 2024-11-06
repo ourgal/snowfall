@@ -420,13 +420,13 @@
   };
   dblab = {
     pname = "dblab";
-    version = "v0.27.0";
+    version = "v0.28.0";
     src = fetchFromGitHub {
       owner = "danvergara";
       repo = "dblab";
-      rev = "v0.27.0";
+      rev = "v0.28.0";
       fetchSubmodules = false;
-      sha256 = "sha256-/bvNyfyLqlWwLR1+fWnW4/xkxpF+7u/0nX4QpuzV6XY=";
+      sha256 = "sha256-v6ozTlbjcGi+w3SWxJb3Ptg1jVBLyrT+a9PU7e1X6SU=";
     };
   };
   devdocs-vim = {
@@ -1989,15 +1989,15 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "76b59167ab2d350af4cb085fdbef687c8ee824c6";
+    version = "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "76b59167ab2d350af4cb085fdbef687c8ee824c6";
+      rev = "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b";
       fetchSubmodules = false;
-      sha256 = "sha256-ugzdHDWMqc3Pl9maIlQnMLRTUGC+HqgaxDGzu70crTs=";
+      sha256 = "sha256-GfzdbCl4fOf5ORY8MXk6fxb0Hrv+L0zp2qceHPVKDTc=";
     };
-    date = "2024-10-29";
+    date = "2024-11-05";
   };
   soba = {
     pname = "soba";
@@ -2080,13 +2080,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.14.2";
+    version = "v0.14.3";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.14.2";
+      rev = "v0.14.3";
       fetchSubmodules = false;
-      sha256 = "sha256-/8tHu6wZLYnv9LWvJf++wqKo/b+Ynkxs3XQGFF1Vdr4=";
+      sha256 = "sha256-tZN3GtjO6lcd6CGQQXfAe3lxP6v4q1ear3HLTdFYpr4=";
     };
   };
   task-relative-recur = {
@@ -2613,15 +2613,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a";
+    version = "1fae0d5480165575ec4d63d2e29c059ff3e627a8";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "c1e26be6cfa74f1c47f74a326dd7e0a45a8bd53a";
+      rev = "1fae0d5480165575ec4d63d2e29c059ff3e627a8";
       fetchSubmodules = false;
-      sha256 = "sha256-uVpWFZjf/6pri/DBGwcdpzBcV57RuOYf4i6sByp6I/A=";
+      sha256 = "sha256-VZ+4yGYinPS3dmHULN+0S6pWtHTrsQc/NFYCSpiB19g=";
     };
-    date = "2024-11-04";
+    date = "2024-11-05";
   };
   visual-split-vim = {
     pname = "visual-split-vim";

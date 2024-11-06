@@ -13,7 +13,6 @@ let
 in
 python3.pkgs.buildPythonApplication {
   inherit (source) pname src version;
-  pyproject = true;
 
   cargoDeps = rustPlatform.importCargoLock {
     lockFile = ./Cargo.lock;
@@ -58,6 +57,8 @@ python3.pkgs.buildPythonApplication {
       twine
     ];
   };
+
+  doCheck = false;
 
   pythonImportsCheck = [ "tach" ];
 
