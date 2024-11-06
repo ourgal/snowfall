@@ -24,6 +24,7 @@ args.module (
               PerlLanguageServer
               PerlTidy
               PerlCritic
+              PLS
             ]
             ++ (cfg.pkgs ps)
           ))

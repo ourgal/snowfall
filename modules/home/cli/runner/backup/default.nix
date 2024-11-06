@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "go-task";
+    myPkgs = "pls";
   }
 )
