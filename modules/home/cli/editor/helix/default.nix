@@ -691,6 +691,17 @@ args.module (
               pls = {
                 command = "pls";
               };
+              perlls = {
+                command = "perl";
+                args = [
+                  "-MPerl::LanguageServer"
+                  "-e"
+                  "Perl::LanguageServer::run"
+                  "--"
+                  "--port"
+                  "13603"
+                ];
+              };
             };
           };
           package = pkgs.${namespace}.helix;
