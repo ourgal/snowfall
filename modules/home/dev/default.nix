@@ -24,6 +24,7 @@ args.module (
         "exercism"
         "honcho"
         "keep-sorted"
+        "ls-lint"
         "process-compose"
         "reuse"
         "treefmt2"
