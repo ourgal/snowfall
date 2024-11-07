@@ -15,6 +15,7 @@ args.module (
           "files.autoSave" = "afterDelay";
           "files.autoSaveDelay" = 1000;
           "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Fira Code', monospace";
+          "editor.fontSize" = "18";
         };
         package = pkgs.vscodium;
       };
