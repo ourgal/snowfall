@@ -15,6 +15,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "as-tree"
       "bat"
       "gat"
       # keep-sorted end
