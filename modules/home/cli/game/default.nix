@@ -4,6 +4,11 @@ args.module (
   // {
     path = ./.;
     myPkgs = "game-2048-tui";
-    nixPkgs = "solitaire-tui";
+    nixPkgs = [
+      # keep-sorted start
+      "ludusavi"
+      "solitaire-tui"
+      # keep-sorted end
+    ];
   }
 )

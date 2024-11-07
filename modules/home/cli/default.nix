@@ -32,7 +32,6 @@ args.module (
       "file-manager"
       "font"
       "fun"
-      "game"
       "grammar"
       "history"
       "image"
