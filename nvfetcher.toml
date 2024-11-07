@@ -958,3 +958,7 @@ fetch.github = "DarkCeptor44/superwhich"
 [friendly-snippets]
 src.git = "https://github.com/rafamadriz/friendly-snippets"
 fetch.github = "rafamadriz/friendly-snippets"
+
+[x]
+src.github = "devhindo/x"
+fetch.github = "devhindo/x"

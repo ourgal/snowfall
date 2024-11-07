@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "sherlock";
+    myPkgs = "x";
   }
 )
