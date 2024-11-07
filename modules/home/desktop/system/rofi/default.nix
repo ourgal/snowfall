@@ -11,8 +11,9 @@ args.module (
         cycle = true;
         terminal = "${pkgs.kitty}/bin/kitty";
         theme = lib.mkIf (!config.catppuccin.enable) "spotlight";
+        plugins = [ pkgs.rofi-emoji ];
         extraConfig = {
-          modes = "drun,power:${pkgs.rofi-power-menu}/bin/rofi-power-menu";
+          modes = "drun,power:${pkgs.rofi-power-menu}/bin/rofi-power-menu,emoji";
           font = "FiraCode Mono 14";
           kb-element-next = "";
           kb-element-prev = "";
