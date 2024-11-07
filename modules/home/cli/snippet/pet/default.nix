@@ -29,12 +29,9 @@ args.module (
           ];
         }
         {
-          command = "sudo dmidecode -t 2";
-          description = "motherboard";
-          tag = [
-            "sys"
-            "motherboard"
-          ];
+          command = "inxi -b";
+          description = "system info";
+          tag = [ "system" ];
         }
         {
           command = "ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'";
