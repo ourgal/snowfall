@@ -22,6 +22,7 @@ args.module (
       "jo"
       "jp"
       "jq"
+      "jql"
       "jqp"
       "jsonfmt"
       "jtc"
