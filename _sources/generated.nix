@@ -398,13 +398,13 @@
   };
   curd = {
     pname = "curd";
-    version = "v0.1";
+    version = "v0.0.10";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "v0.1";
+      rev = "v0.0.10";
       fetchSubmodules = false;
-      sha256 = "sha256-v1OaY50BXNDmV1NesuWlT6GQCSv9uRm8ZxLGbg64Rug=";
+      sha256 = "sha256-5xPQb9dQhgJwZ05LH1qHkR8FSnVX/FPrCr6LvBFT8+w=";
     };
   };
   datadash = {
@@ -416,17 +416,6 @@
       rev = "v0.1.0";
       fetchSubmodules = false;
       sha256 = "sha256-WEB1MVG2aGvKnkMAgF7nxKHgA05VRJONoNdsBpXM2Wk=";
-    };
-  };
-  dblab = {
-    pname = "dblab";
-    version = "v0.28.0";
-    src = fetchFromGitHub {
-      owner = "danvergara";
-      repo = "dblab";
-      rev = "v0.28.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-v6ozTlbjcGi+w3SWxJb3Ptg1jVBLyrT+a9PU7e1X6SU=";
     };
   };
   devdocs-vim = {
@@ -1775,15 +1764,15 @@
   };
   ranger-devicons2 = {
     pname = "ranger-devicons2";
-    version = "9606009aa01743768b0f27de0a841f7d8fe196c5";
+    version = "94bdcc19218681debb252475fd9d11cfd274d9b1";
     src = fetchFromGitHub {
       owner = "cdump";
       repo = "ranger-devicons2";
-      rev = "9606009aa01743768b0f27de0a841f7d8fe196c5";
+      rev = "94bdcc19218681debb252475fd9d11cfd274d9b1";
       fetchSubmodules = false;
-      sha256 = "sha256-T96+7dX/7B0BKOJgVDg55+Zonp9sSt6SvmLGknhL8Gg=";
+      sha256 = "sha256-aJCIoDfzmOnzMLlbOe+dy6129n5Dc4OrefhHnPsgI8k=";
     };
-    date = "2024-07-29";
+    date = "2024-11-06";
   };
   ranger-zoxide = {
     pname = "ranger-zoxide";
@@ -2284,15 +2273,15 @@
   };
   tmux-tome = {
     pname = "tmux-tome";
-    version = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
+    version = "83fd5124d8770697093bd6f46eca5d0080b333e6";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
+      rev = "83fd5124d8770697093bd6f46eca5d0080b333e6";
       fetchSubmodules = false;
-      sha256 = "sha256-y1zcfXwaMpORAcSNtwskJwx1DpIJu4XE81m4utBcusY=";
+      sha256 = "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=";
     };
-    date = "2024-10-12";
+    date = "2024-11-06";
   };
   tmux-transient-status = {
     pname = "tmux-transient-status";
@@ -2553,15 +2542,15 @@
   };
   vim-tome = {
     pname = "vim-tome";
-    version = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
+    version = "83fd5124d8770697093bd6f46eca5d0080b333e6";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "4fa1f007007fee4f5d1e81339c38f69c70c70104";
+      rev = "83fd5124d8770697093bd6f46eca5d0080b333e6";
       fetchSubmodules = false;
-      sha256 = "sha256-y1zcfXwaMpORAcSNtwskJwx1DpIJu4XE81m4utBcusY=";
+      sha256 = "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=";
     };
-    date = "2024-10-12";
+    date = "2024-11-06";
   };
   vim-toop = {
     pname = "vim-toop";
@@ -2613,15 +2602,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "1fae0d5480165575ec4d63d2e29c059ff3e627a8";
+    version = "acf301f06703ca712574441720415b0fb28c38a0";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "1fae0d5480165575ec4d63d2e29c059ff3e627a8";
+      rev = "acf301f06703ca712574441720415b0fb28c38a0";
       fetchSubmodules = false;
-      sha256 = "sha256-VZ+4yGYinPS3dmHULN+0S6pWtHTrsQc/NFYCSpiB19g=";
+      sha256 = "sha256-DMxLykw3oBtCQHtMOIBLV15otxxHraydr1rGCtLG6HU=";
     };
-    date = "2024-11-05";
+    date = "2024-11-06";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
@@ -2716,13 +2705,13 @@
   };
   zfind = {
     pname = "zfind";
-    version = "v0.4.5";
+    version = "v0.4.6";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "zfind";
-      rev = "v0.4.5";
+      rev = "v0.4.6";
       fetchSubmodules = false;
-      sha256 = "sha256-sRZAsmh193K5HX7oC1UdCQccNpSc5QHtec+UpvpntKU=";
+      sha256 = "sha256-bbeS2x9HzrsOE5h1y07LoEBm9dinMCHX9GJftj5Md9s=";
     };
   };
 }

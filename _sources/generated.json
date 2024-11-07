@@ -729,12 +729,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v0.1",
-            "sha256": "sha256-v1OaY50BXNDmV1NesuWlT6GQCSv9uRm8ZxLGbg64Rug=",
+            "rev": "v0.0.10",
+            "sha256": "sha256-5xPQb9dQhgJwZ05LH1qHkR8FSnVX/FPrCr6LvBFT8+w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1"
+        "version": "v0.0.10"
     },
     "datadash": {
         "cargoLocks": null,
@@ -756,27 +756,6 @@
             "type": "github"
         },
         "version": "v0.1.0"
-    },
-    "dblab": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "dblab",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "danvergara",
-            "repo": "dblab",
-            "rev": "v0.28.0",
-            "sha256": "sha256-v6ozTlbjcGi+w3SWxJb3Ptg1jVBLyrT+a9PU7e1X6SU=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.28.0"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -3260,7 +3239,7 @@
     },
     "ranger-devicons2": {
         "cargoLocks": null,
-        "date": "2024-07-29",
+        "date": "2024-11-06",
         "extract": null,
         "name": "ranger-devicons2",
         "passthru": null,
@@ -3272,12 +3251,12 @@
             "name": null,
             "owner": "cdump",
             "repo": "ranger-devicons2",
-            "rev": "9606009aa01743768b0f27de0a841f7d8fe196c5",
-            "sha256": "sha256-T96+7dX/7B0BKOJgVDg55+Zonp9sSt6SvmLGknhL8Gg=",
+            "rev": "94bdcc19218681debb252475fd9d11cfd274d9b1",
+            "sha256": "sha256-aJCIoDfzmOnzMLlbOe+dy6129n5Dc4OrefhHnPsgI8k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9606009aa01743768b0f27de0a841f7d8fe196c5"
+        "version": "94bdcc19218681debb252475fd9d11cfd274d9b1"
     },
     "ranger-zoxide": {
         "cargoLocks": null,
@@ -4193,7 +4172,7 @@
     },
     "tmux-tome": {
         "cargoLocks": null,
-        "date": "2024-10-12",
+        "date": "2024-11-06",
         "extract": null,
         "name": "tmux-tome",
         "passthru": null,
@@ -4205,12 +4184,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "4fa1f007007fee4f5d1e81339c38f69c70c70104",
-            "sha256": "sha256-y1zcfXwaMpORAcSNtwskJwx1DpIJu4XE81m4utBcusY=",
+            "rev": "83fd5124d8770697093bd6f46eca5d0080b333e6",
+            "sha256": "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4fa1f007007fee4f5d1e81339c38f69c70c70104"
+        "version": "83fd5124d8770697093bd6f46eca5d0080b333e6"
     },
     "tmux-transient-status": {
         "cargoLocks": null,
@@ -4676,7 +4655,7 @@
     },
     "vim-tome": {
         "cargoLocks": null,
-        "date": "2024-10-12",
+        "date": "2024-11-06",
         "extract": null,
         "name": "vim-tome",
         "passthru": null,
@@ -4688,12 +4667,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "4fa1f007007fee4f5d1e81339c38f69c70c70104",
-            "sha256": "sha256-y1zcfXwaMpORAcSNtwskJwx1DpIJu4XE81m4utBcusY=",
+            "rev": "83fd5124d8770697093bd6f46eca5d0080b333e6",
+            "sha256": "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4fa1f007007fee4f5d1e81339c38f69c70c70104"
+        "version": "83fd5124d8770697093bd6f46eca5d0080b333e6"
     },
     "vim-toop": {
         "cargoLocks": null,
@@ -4781,7 +4760,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-11-05",
+        "date": "2024-11-06",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4793,12 +4772,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "1fae0d5480165575ec4d63d2e29c059ff3e627a8",
-            "sha256": "sha256-VZ+4yGYinPS3dmHULN+0S6pWtHTrsQc/NFYCSpiB19g=",
+            "rev": "acf301f06703ca712574441720415b0fb28c38a0",
+            "sha256": "sha256-DMxLykw3oBtCQHtMOIBLV15otxxHraydr1rGCtLG6HU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1fae0d5480165575ec4d63d2e29c059ff3e627a8"
+        "version": "acf301f06703ca712574441720415b0fb28c38a0"
     },
     "visual-split-vim": {
         "cargoLocks": null,
@@ -4982,11 +4961,11 @@
             "name": null,
             "owner": "laktak",
             "repo": "zfind",
-            "rev": "v0.4.5",
-            "sha256": "sha256-sRZAsmh193K5HX7oC1UdCQccNpSc5QHtec+UpvpntKU=",
+            "rev": "v0.4.6",
+            "sha256": "sha256-bbeS2x9HzrsOE5h1y07LoEBm9dinMCHX9GJftj5Md9s=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.5"
+        "version": "v0.4.6"
     }
 }
