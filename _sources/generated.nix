@@ -2692,6 +2692,17 @@
       sha256 = "sha256-2mFe1p15HRyy86pw5LoBtiW9lKrw/N9V81/jkiT4jo4=";
     };
   };
+  x = {
+    pname = "x";
+    version = "v1.1.4";
+    src = fetchFromGitHub {
+      owner = "devhindo";
+      repo = "x";
+      rev = "v1.1.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-sAmyZFX9lZ6UXVCt7st187Ie6aVW0dSUlQQQmLiHUlM=";
+    };
+  };
   ytui = {
     pname = "ytui";
     version = "v0.2.0";
