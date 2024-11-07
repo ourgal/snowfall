@@ -114,7 +114,7 @@ pog.pog {
       elif ${flag "bookmark"}; then
         shareFilesOrURL "$(getBookmark)"
       elif ${flag "password"}; then
-        shareText "$(getPassword "$text")"
+        shareText "$(getPassword "$password")"
       elif ${flag "clip"}; then
         sendClipboard
       else
