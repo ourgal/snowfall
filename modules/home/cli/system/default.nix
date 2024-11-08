@@ -13,6 +13,7 @@ args.module (
       "inxi"
       "kmon"
       "pinentry-all"
+      "pipx"
       "screenkey"
       "sysz"
       "toolbox"

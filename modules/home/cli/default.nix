@@ -3,11 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = [
-      # keep-sorted start
-      "pipx"
-      # keep-sorted end
-    ];
     files = {
       ".ssh./.keep" = "";
     };
