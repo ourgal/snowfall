@@ -2,15 +2,10 @@
   lib,
   stdenvNoCC,
   gitUpdater,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "nrf-udev";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit (source) pname version src;
+  inherit (_sources.nrf-udev) pname version src;
 
   dontConfigure = true;
   dontBuild = true;

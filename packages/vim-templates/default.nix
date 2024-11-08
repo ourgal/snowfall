@@ -1,15 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-
-let
-  pname = "vim-templates";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.vim-templates) pname version src;
 
   meta = with lib; {
     description = "Create files from templates";

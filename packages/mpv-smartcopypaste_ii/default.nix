@@ -1,10 +1,6 @@
-{ pkgs, namespace }:
-let
-  pname = "mpv-smartcopypaste_ii";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.mpvScripts.buildLua {
-  inherit (source) pname version src;
+{ _sources, mpvScripts }:
+mpvScripts.buildLua {
+  inherit (_sources.mpv-smartcopypaste_ii) pname version src;
 
   scriptPath = "scripts/SmartCopyPaste_II.lua";
 }

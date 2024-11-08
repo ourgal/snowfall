@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "fingerpaint";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.fingerpaint) pname src version;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

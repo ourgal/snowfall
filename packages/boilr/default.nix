@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "boilr";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.boilr) pname version;
 
   src = fetchzip {
     url = "https://github.com/tmrts/boilr/releases/download/${version}/boilr-${version}-linux_amd64.tgz";

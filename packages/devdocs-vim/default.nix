@@ -1,15 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-
-let
-  pname = "devdocs-vim";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.devdocs-vim) pname version src;
 
   meta = with lib; {
     description = "Lookup  API documentation from devdocs.io without leaving Vim";

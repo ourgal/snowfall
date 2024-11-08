@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "fast-anime";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.fast-anime) pname src version;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

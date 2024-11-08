@@ -1,21 +1,16 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "jerry";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.jerry) pname version src;
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D ./jerry.sh $out/bin/jerry
+    install -m755 -D jerry.sh $out/bin/jerry
     runHook postInstall
   '';
 

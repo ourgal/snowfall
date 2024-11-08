@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "serie";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.serie) pname version;
 
   src = fetchzip {
     url = "https://github.com/lusingander/serie/releases/download/v${version}/serie-${version}-x86_64-unknown-linux-gnu.tar.gz";

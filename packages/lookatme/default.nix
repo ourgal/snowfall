@@ -1,21 +1,16 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "lookatme";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication rec {
-  inherit (source) pname version src;
+  inherit (_sources.lookatme) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
-    python3.pkgs.pythonRelaxDepsHook
+  nativeBuildInputs = with python3.pkgs; [
+    setuptools
+    wheel
+    pythonRelaxDepsHook
   ];
 
   propagatedBuildInputs = with python3.pkgs; [

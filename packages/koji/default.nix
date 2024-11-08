@@ -7,15 +7,10 @@
   zlib,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "koji";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname version src;
+  inherit (_sources.koji) pname version src;
 
   cargoHash = "sha256-owppYDt0YdWoDvfmzVfiIPjLgTAT9eTI1LpRr4Y3XQA=";
 

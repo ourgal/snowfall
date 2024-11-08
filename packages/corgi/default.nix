@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "corgi";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.corgi) pname version;
 
   src = fetchzip {
     url = "https://github.com/junyu-w/corgi/releases/download/v${version}/corgi_v${version}_linux_64-bit.tar.gz";

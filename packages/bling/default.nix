@@ -2,15 +2,10 @@
   lib,
   stdenv,
   lua,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "bling";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.bling) pname src version;
 
   buildInputs = [ lua ];
 

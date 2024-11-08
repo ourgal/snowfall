@@ -3,15 +3,10 @@
   rustPlatform,
   pkg-config,
   dbus,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "bluetui";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.bluetui) pname src version;
 
   cargoHash = "sha256-w6rrZQNu5kLKEWSXFa/vSqwm76zWZug/ZqztMDY7buE=";
 

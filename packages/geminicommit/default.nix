@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "geminicommit";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.geminicommit) pname src version;
 
   vendorHash = "sha256-N1c0b+eGaIvXJ4p3ovDypGRIn8wCwemFoNm9CvItz6E=";
 

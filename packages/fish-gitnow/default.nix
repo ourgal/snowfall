@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  fishPlugins,
+  _sources,
 }:
-let
-  pname = "fish-gitnow";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-gitnow) pname version src;
 
   meta = with lib; {
     description = "Speed up your Git workflow. :tropical_fish";

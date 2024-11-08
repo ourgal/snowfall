@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  fishPlugins,
 }:
-let
-  pname = "ctrl-z.fish";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources."ctrl-z.fish") pname version src;
 
   meta = with lib; {
     description = "Makes it easy to toggle between $EDITOR and the shell using ctrl+z";

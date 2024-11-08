@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "neonmodem";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname version src;
+  inherit (_sources.neonmodem) pname version src;
 
   vendorHash = "sha256-pESNARoUgfg5/cTlTvKF3i7dTMIu0gRG/oV4Ov6h2cY=";
 

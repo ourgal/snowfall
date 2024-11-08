@@ -5,15 +5,10 @@
   openssl,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "rust-kanban";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname version src;
+  inherit (_sources.rust-kanban) pname version src;
 
   cargoHash = "sha256-5AXVl2yqpVoMlK2WP0mZL6vn+Xy6fdVi7oCOh8LaaFE=";
 

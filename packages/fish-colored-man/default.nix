@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  fishPlugins,
+  _sources,
 }:
-let
-  pname = "fish-colored-man";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-colored-man) pname version src;
 
   meta = with lib; {
     description = "Color-enabled man pages plugin for fish-shell";

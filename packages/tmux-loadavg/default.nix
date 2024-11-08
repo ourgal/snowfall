@@ -1,10 +1,9 @@
-{ pkgs, namespace }:
+{ tmuxPlugins, _sources }:
 let
   pluginName = "tmux-loadavg";
-  source = pkgs.${namespace}.sources.${pluginName};
 in
-pkgs.tmuxPlugins.mkTmuxPlugin {
+tmuxPlugins.mkTmuxPlugin {
   inherit pluginName;
-  inherit (source) version src;
+  inherit (_sources.${pluginName}) version src;
   rtpFilePath = "tmux-loadavg.tmux";
 }

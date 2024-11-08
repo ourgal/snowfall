@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-let
-  pname = "visual-split-vim";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.visual-split-vim) pname version src;
 
   meta = with lib; {
     description = "Vim plugin to control splits with visual selections or text objects";

@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  fishPlugins,
+  _sources,
 }:
-let
-  pname = "fish-sponge";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-sponge) pname version src;
 
   meta = with lib; {
     description = "Clean fish history from typos automatically";

@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "tuime";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.tuime) pname version src;
 
   cargoHash = "sha256-0Y/fE1ydvVg/oOwbZ/49zUDD/84FYq8BQ3mfgbtTrSE=";
 

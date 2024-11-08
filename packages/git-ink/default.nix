@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "git-ink";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.git-ink) pname version src;
 
   installPhase = ''
     runHook preInstall

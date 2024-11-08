@@ -3,15 +3,10 @@
   rustPlatform,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "lobtui";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.lobtui) pname version src;
 
   cargoHash = "sha256-DUDERnhvnnGhjFH5KpIKmx1XNNAu2sDsf8DVhVfcd60=";
 

@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "shipit";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.shipit) pname version src;
 
   dontBuild = true;
 

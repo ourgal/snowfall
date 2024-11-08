@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "advance-touch";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.advance-touch) pname version src;
   pyproject = true;
 
   nativeBuildInputs = [

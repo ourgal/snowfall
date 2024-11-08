@@ -1,12 +1,11 @@
 {
   writeShellApplication,
   lib,
-  namespace,
-  pkgs,
+  _sources,
 }:
 let
-  name = "git-heatgrid";
-  inherit (pkgs.${namespace}.sources.${name}) src;
+  inherit (_sources.git-heatgrid) src;
+  name = _sources.git-heatgrid.pname;
 in
 writeShellApplication rec {
   inherit name;

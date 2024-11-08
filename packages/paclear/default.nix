@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "paclear";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname src version;
+  inherit (_sources.paclear) pname src version;
 
   vendorHash = "sha256-VE3nnUO3A/HkaoGXef+zuPT2VubWiDfiiSils0F0l74=";
 

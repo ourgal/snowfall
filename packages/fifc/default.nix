@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  fishPlugins,
+  _sources,
 }:
-let
-  pname = "fifc";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fifc) pname version src;
 
   meta = with lib; {
     description = "Configurable fzf completions for fish shell";

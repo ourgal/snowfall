@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-let
-  pname = "vim-floaterm";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.vim-floaterm) pname version src;
 
   patches = [ ./broot.patch ];
 

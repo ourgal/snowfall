@@ -7,15 +7,10 @@
   stdenv,
   darwin,
   wayland,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "blendr";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.blendr) pname src version;
 
   cargoHash = "sha256-2LbHEXLyrWIbWhCzbhB0rS2olBhueTl9cucaz92iYTk=";
 

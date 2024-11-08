@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  fishPlugins,
 }:
-let
-  pname = "enhancd";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin rec {
-  inherit (source) pname src version;
+fishPlugins.buildFishPlugin rec {
+  inherit (_sources.enhancd) pname src version;
 
   meta = with lib; {
     description = "Rocket: A next-generation cd command with your interactive filter";

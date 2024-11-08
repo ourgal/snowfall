@@ -1,14 +1,12 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
 
 let
-  argparse = python3.pkgs.buildPythonApplication rec {
-    pname = "argparse";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  argparse = python3.pkgs.buildPythonApplication {
+    inherit (_sources.argparse) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [
@@ -26,11 +24,9 @@ let
       mainProgram = "argparse";
     };
   };
-  pname = "github-dlr";
-  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.github-dlr) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "ytui";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname version src;
+  inherit (_sources.ytui) pname version src;
 
   vendorHash = "sha256-qDzvLKsf3/5xgVtjE/ogrq8xTZDtjpVol+rqL0P60GM=";
 

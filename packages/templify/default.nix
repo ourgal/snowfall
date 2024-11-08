@@ -5,15 +5,10 @@
   openssl,
   stdenv,
   darwin,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "templify";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname src version;
+  inherit (_sources.templify) pname src version;
 
   cargoHash = "sha256-i6QNh3/kZeibdFlkzYVkIXPPgLmTTymcXXXztbuoj7g=";
 

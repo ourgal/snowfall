@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "pnut";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.pnut) pname version src;
 
   preBuild = ''
     substituteInPlace Makefile --replace-fail /usr/local/bin $out/bin

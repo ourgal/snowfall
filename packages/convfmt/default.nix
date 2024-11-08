@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "convfmt";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname version src;
+  inherit (_sources.convfmt) pname version src;
 
   cargoHash = "sha256-OVCnY0/hw+VOIvDYcQO/FEQk3W0qQOqAPW8SAYG0xyY=";
 

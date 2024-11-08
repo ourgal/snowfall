@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  fishPlugins,
 }:
-let
-  pname = "fish-abbreviation-tips";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-abbreviation-tips) pname version src;
 
   meta = with lib; {
     description = "Help you remembering your abbreviations";

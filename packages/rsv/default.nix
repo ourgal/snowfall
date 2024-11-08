@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "rsv";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.rsv) pname version src;
 
   cargoHash = "sha256-ggn7TGI5/AnW/jqgWcRsWvt1C7XovCo7cY/55QH9OY8=";
 

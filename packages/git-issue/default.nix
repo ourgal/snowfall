@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "git-issue";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.git-issue) pname src version;
 
   makeFlags = [ "PREFIX=$(out)" ];
 

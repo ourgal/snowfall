@@ -6,15 +6,10 @@
   stdenv,
   darwin,
   alsa-lib,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "code-radio-cli";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.code-radio-cli) pname src version;
 
   cargoHash = "sha256-W2c63beCqEIB0SxrpC0ptxsoKrHSt+TId98LcX7RNBg=";
 

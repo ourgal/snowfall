@@ -3,15 +3,10 @@
   rustPlatform,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "otree";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.otree) pname version src;
 
   cargoHash = "sha256-qwH/qUOG+MIrctnPQVhCeumYmCDQB9iv1NZEdMhcdFY=";
 

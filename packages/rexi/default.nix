@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "rexi";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.rexi) pname version src;
 
   format = "pyproject";
 

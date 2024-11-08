@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  vimUtils,
+  _sources,
 }:
-let
-  pname = "parinfer-rust";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin rec {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin rec {
+  inherit (_sources.parinfer-rust) pname version src;
 
   meta = with lib; {
     description = "A Rust port of parinfer";

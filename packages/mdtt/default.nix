@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "mdtt";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname version src;
+  inherit (_sources.mdtt) pname version src;
 
   vendorHash = "sha256-sEdDfQnBaqQ/pBubYT0sWMaC3tyi0g/dIfUsrHYrA+Q=";
 

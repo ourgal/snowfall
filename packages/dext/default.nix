@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "dext";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.dext) pname src version;
 
   dontBuild = true;
 

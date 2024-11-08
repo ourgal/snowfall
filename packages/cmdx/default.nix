@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "cmdx";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.cmdx) pname version;
 
   src = fetchzip {
     url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/v${version}/cmdx_linux_amd64.tar.gz";

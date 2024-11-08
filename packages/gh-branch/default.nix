@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "gh-branch";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.gh-branch) pname src version;
 
   dontBuild = true;
 

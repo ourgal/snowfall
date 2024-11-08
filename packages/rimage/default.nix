@@ -2,15 +2,10 @@
   lib,
   rustPlatform,
   pkg-config,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "rimage";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname version src;
+  inherit (_sources.rimage) pname version src;
 
   cargoHash = "sha256-OAMZOpxGlYfJkSRXhDXiZ3eYdDiXU1g7bEUNOJ6Zf/M=";
 

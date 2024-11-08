@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "sig";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.sig) pname version src;
 
   cargoHash = "sha256-gZZ2aOsqVqGN3gCBZnBXzlFicMssNIEyRT688OuNMJc=";
 

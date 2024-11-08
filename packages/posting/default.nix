@@ -4,13 +4,11 @@
   cargo,
   rustPlatform,
   rustc,
-  namespace,
-  pkgs,
+  _sources,
 }:
 let
-  textual = python3.pkgs.buildPythonApplication rec {
-    pname = "textual";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  textual = python3.pkgs.buildPythonApplication {
+    inherit (_sources.textual) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
@@ -31,9 +29,8 @@ let
 
     pythonImportsCheck = [ "textual" ];
   };
-  textual-autocomplete = python3.pkgs.buildPythonApplication rec {
-    pname = "textual-autocomplete";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  textual-autocomplete = python3.pkgs.buildPythonApplication {
+    inherit (_sources.textual-autocomplete) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
@@ -45,9 +42,8 @@ let
 
     pythonImportsCheck = [ "textual_autocomplete" ];
   };
-  pydantic = python3.pkgs.buildPythonApplication rec {
-    pname = "pydantic";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  pydantic = python3.pkgs.buildPythonApplication {
+    inherit (_sources.pydantic) pname version src;
     pyproject = true;
 
     nativeBuildInputs = with python3.pkgs; [
@@ -70,9 +66,8 @@ let
 
     pythonImportsCheck = [ "pydantic" ];
   };
-  pydantic-settings = python3.pkgs.buildPythonApplication rec {
-    pname = "pydantic-settings";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  pydantic-settings = python3.pkgs.buildPythonApplication {
+    inherit (_sources.pydantic-settings) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [ python3.pkgs.hatchling ];
@@ -90,8 +85,7 @@ let
     pythonImportsCheck = [ "pydantic_settings" ];
   };
   pydantic-core = python3.pkgs.buildPythonApplication rec {
-    pname = "pydantic-core";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+    inherit (_sources.pydantic-core) pname version src;
     pyproject = true;
 
     cargoDeps = rustPlatform.fetchCargoTarball {
@@ -112,11 +106,9 @@ let
 
     pythonImportsCheck = [ "pydantic_core" ];
   };
-  pname = "posting";
-  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.posting) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

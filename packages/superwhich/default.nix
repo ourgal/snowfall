@@ -1,16 +1,10 @@
 {
   lib,
   rustPlatform,
-  pkgs,
-  namespace,
+  _sources,
 }:
-
-let
-  pname = "superwhich";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.superwhich) pname src version;
 
   cargoHash = "sha256-ex3ozdKO7u1jTB8opaqwUngMo9qlS4GzYF2o5H1n8cI=";
 

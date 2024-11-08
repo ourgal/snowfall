@@ -2,15 +2,10 @@
   lib,
   stdenv,
   emacs,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "org-export";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.org-export) pname version src;
 
   dontBuild = true;
 

@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-let
-  pname = "chezmoi-vim";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.chezmoi-vim) pname version src;
 
   meta = with lib; {
     description = "Highlight dotfiles you manage with chezmoi";

@@ -1,17 +1,12 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
   ruby,
   python3,
+  _sources,
 }:
-let
-  pname = "gaze";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.gaze) pname src version;
 
   vendorHash = "sha256-RdTA2HL/wKwqMIvm6gjsUTlaYklSRhyVhgJsGS9QRtY=";
 

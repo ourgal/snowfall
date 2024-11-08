@@ -1,19 +1,11 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
+  _sources,
 }:
 
 buildGoModule rec {
-  pname = "x";
-  version = "1.1.4";
-
-  src = fetchFromGitHub {
-    owner = "devhindo";
-    repo = "x";
-    rev = "v${version}";
-    hash = "sha256-sAmyZFX9lZ6UXVCt7st187Ie6aVW0dSUlQQQmLiHUlM=";
-  };
+  inherit (_sources.x) pname version src;
 
   sourceRoot = "${src.name}/src/cli";
 

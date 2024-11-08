@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "zfind";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname version src;
+  inherit (_sources.zfind) pname version src;
 
   vendorHash = "sha256-blq0/pRppdf2jcuhIqYeNhcazFNZOGeEjPTSLgHqhrU=";
 

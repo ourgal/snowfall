@@ -2,16 +2,13 @@
   lib,
   stdenv,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
 let
   rich = python3.withPackages (ps: [ ps.rich ]);
-  pname = "dlorg";
-  source = pkgs.${namespace}.sources.${pname};
 in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.dlorg) pname src version;
 
   dontBuild = true;
 

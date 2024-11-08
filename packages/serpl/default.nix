@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "serpl";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.serpl) pname version src;
 
   cargoHash = "sha256-8XYEZQfoizVmOuh0hymzMj2UDiXNkSeHqBAWOqaMY84=";
 

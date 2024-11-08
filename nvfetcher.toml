@@ -966,3 +966,19 @@ fetch.github = "devhindo/x"
 [pypipe]
 src.github = "bugen/pypipe"
 fetch.github = "bugen/pypipe"
+
+[git-lens-vim]
+src.git = "https://github.com/Eliot00/git-lens.vim"
+fetch.github = "Eliot00/git-lens.vim"
+
+[git-messenger-vim]
+src.git = "https://github.com/rhysd/git-messenger.vim"
+fetch.github = "rhysd/git-messenger.vim"
+
+[hatsune-miku-windows-linux-cursors]
+src.github = "supermariofps/hatsune-miku-windows-linux-cursors"
+fetch.github = "supermariofps/hatsune-miku-windows-linux-cursors"
+
+[tokyonight-vim]
+src.git = "https://github.com/ghifarit53/tokyonight-vim"
+fetch.github = "ghifarit53/tokyonight-vim"

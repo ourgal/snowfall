@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "git-grab";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.git-grab) pname version src;
 
   cargoHash = "sha256-0HZ27rMA2d+roxxl6mYs9vuIWKAXct/6NezuOILs8p0=";
 

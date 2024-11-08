@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "hypergrep";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.hypergrep) pname version;
 
   src = fetchzip {
     url = "https://github.com/p-ranav/hypergrep/releases/download/v${version}/hg_${version}.zip";

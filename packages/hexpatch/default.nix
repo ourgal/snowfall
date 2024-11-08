@@ -4,15 +4,10 @@
   pkg-config,
   cmake,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "hexpatch";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.hexpatch) pname version src;
 
   cargoHash = "sha256-6IaSKVPEen4aI977rv8jv/M8FCe7ABr7qSHgisWieVM=";
 

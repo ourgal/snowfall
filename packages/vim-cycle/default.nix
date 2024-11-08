@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  vimUtils,
 }:
-let
-  pname = "vim-cycle";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.vim-cycle) pname version src;
 
   meta = with lib; {
     description = "A vim plugin to toggle words between pairs or lists of related words";

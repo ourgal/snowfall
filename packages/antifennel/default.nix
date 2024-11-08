@@ -2,15 +2,10 @@
   lib,
   stdenv,
   luajit,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "antifennel";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.antifennel) pname version src;
 
   buildInputs = [ luajit ];
 

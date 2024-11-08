@@ -1,16 +1,11 @@
 {
   lib,
   stdenv,
-  pkgs,
-  namespace,
   installShellFiles,
+  _sources,
 }:
-let
-  pname = "v";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.v) pname src version;
 
   dontBuild = true;
 

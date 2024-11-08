@@ -3,16 +3,10 @@
   rustPlatform,
   pkg-config,
   oniguruma,
-  pkgs,
-  namespace,
+  _sources,
 }:
-
-let
-  pname = "textpod";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.textpod) pname src version;
 
   cargoHash = "sha256-blo3VqRbVame7hd2UiaCg52iXeyFWo5uPM+zyddx99E=";
 

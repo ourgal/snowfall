@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  fishPlugins,
+  _sources,
 }:
-let
-  pname = "fish-f";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-f) pname version src;
 
   meta = with lib; {
     description = "Quickly get to a previously mentioned file in fish shell -- z for files";

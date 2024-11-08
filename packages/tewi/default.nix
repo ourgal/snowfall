@@ -1,13 +1,11 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
 let
-  geoip2fast = python3.pkgs.buildPythonApplication rec {
-    pname = "geoip2fast";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  geoip2fast = python3.pkgs.buildPythonApplication {
+    inherit (_sources.geoip2fast) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [
@@ -17,9 +15,8 @@ let
 
     pythonImportsCheck = [ "geoip2fast" ];
   };
-  textual = python3.pkgs.buildPythonApplication rec {
-    pname = "textual";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  textual = python3.pkgs.buildPythonApplication {
+    inherit (_sources.textual) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
@@ -40,11 +37,9 @@ let
 
     pythonImportsCheck = [ "textual" ];
   };
-  pname = "tewi";
-  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication rec {
-  inherit (source) pname version src;
+  inherit (_sources.tewi) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

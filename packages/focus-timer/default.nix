@@ -3,15 +3,10 @@
   buildGoModule,
   alsa-lib,
   pkg-config,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "focus";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname src version;
+  inherit (_sources.focus) pname src version;
 
   vendorHash = "sha256-wWTDo4zbvQjosI+fsBwEq5wKhJX2gw9VAbih1urRTO8=";
 

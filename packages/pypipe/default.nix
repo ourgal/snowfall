@@ -3,12 +3,8 @@
   python3,
   _sources,
 }:
-let
-  pname = "pypipe";
-  source = _sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.pypipe) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [ python3.pkgs.hatchling ];

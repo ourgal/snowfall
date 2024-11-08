@@ -1,20 +1,15 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "makedown";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.makedown) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+  nativeBuildInputs = with python3.pkgs; [
+    setuptools
+    wheel
   ];
 
   pythonImportsCheck = [ "makedown" ];

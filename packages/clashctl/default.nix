@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "clashctl";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.clashctl) pname version src;
 
   cargoHash = "sha256-G0mAcB80D7/s9kwkNhJkGLkVYpXMwqpLq/T9gLuYj4E=";
 
