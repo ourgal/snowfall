@@ -982,3 +982,7 @@ fetch.github = "supermariofps/hatsune-miku-windows-linux-cursors"
 [tokyonight-vim]
 src.git = "https://github.com/ghifarit53/tokyonight-vim"
 fetch.github = "ghifarit53/tokyonight-vim"
+
+[complate]
+src.github = "replicadse/complate"
+fetch.github = "replicadse/complate"

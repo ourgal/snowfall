@@ -340,6 +340,17 @@
       sha256 = "sha256-+SyHeJkGh9G3tklqLCF5oBL8H6XAGSEo+hVDa5Zpdhw=";
     };
   };
+  complate = {
+    pname = "complate";
+    version = "0.14.0";
+    src = fetchFromGitHub {
+      owner = "replicadse";
+      repo = "complate";
+      rev = "0.14.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-X/uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=";
+    };
+  };
   compose2nix = {
     pname = "compose2nix";
     version = "v0.3.1";
