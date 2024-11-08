@@ -610,6 +610,27 @@
         },
         "version": "v0.9.11.1"
     },
+    "complate": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "complate",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "replicadse",
+            "repo": "complate",
+            "rev": "0.14.0",
+            "sha256": "sha256-X/uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.14.0"
+    },
     "compose2nix": {
         "cargoLocks": null,
         "date": null,

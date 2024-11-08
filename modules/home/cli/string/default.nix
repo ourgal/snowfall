@@ -10,6 +10,7 @@ args.module (
         # keep-sorted start
         cat_win
         chepy
+        complate
         pypipe
         # keep-sorted end
       ]
