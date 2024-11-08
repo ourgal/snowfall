@@ -604,13 +604,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.6.9";
+    version = "v2.7.0";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.6.9";
+      rev = "v2.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-gQrNedNJ+joGhWtVub6im/74xIW1wgiOFeMgB+pSbH4=";
+      sha256 = "sha256-C6/I6DFfLZxZm/U8eNOuwqu1U0hRS4uO5wGrbOaQj70=";
     };
   };
   fc-fish = {
