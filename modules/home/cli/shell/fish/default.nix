@@ -69,7 +69,6 @@ args.module (
           "fish-fzf"
           "fish-gitnow"
           "fish-sponge"
-          "fishbang"
           "puffer-fish"
           "rgg.fish"
           "to-fish"
