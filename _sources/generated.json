@@ -1118,12 +1118,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.6.9",
-            "sha256": "sha256-gQrNedNJ+joGhWtVub6im/74xIW1wgiOFeMgB+pSbH4=",
+            "rev": "v2.7.0",
+            "sha256": "sha256-C6/I6DFfLZxZm/U8eNOuwqu1U0hRS4uO5wGrbOaQj70=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.6.9"
+        "version": "v2.7.0"
     },
     "fc-fish": {
         "cargoLocks": null,
