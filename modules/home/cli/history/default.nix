@@ -9,6 +9,11 @@ args.module (
       "tsukae"
       # keep-sorted end
     ];
-    enable = "hishtory";
+    enable = [
+      # keep-sorted start
+      "hishtory"
+      "shellclear"
+      # keep-sorted end
+    ];
   }
 )
