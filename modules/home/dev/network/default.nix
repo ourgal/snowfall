@@ -22,6 +22,7 @@ args.module (
       "ipinfo"
       "lychee"
       "nali"
+      "oha"
       "q"
       "tcping-go"
       "termshark"
