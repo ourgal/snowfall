@@ -3,10 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    progs = [
-      "home-manager"
-      { fish.shellAbbrs.hms = "home-manager switch"; }
-    ];
+    progs = [ "home-manager" ];
     value = {
       manual.html.enable = true;
       systemd.user.startServices = "sd-switch";

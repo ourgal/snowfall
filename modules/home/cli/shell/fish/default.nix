@@ -34,9 +34,6 @@ args.module (
           scut = "systemctl --user status";
           scur = "systemctl --user restart";
           scuo = "systemctl --user stop";
-
-          nms = "nh home switch";
-          nos = "nh os switch";
         };
         functions = {
           scroff = {
