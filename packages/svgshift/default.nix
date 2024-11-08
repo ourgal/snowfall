@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "svgshift";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.svgshift) pname version src;
 
   buildPhase = "gcc svgshift.c -o svgshift";
 

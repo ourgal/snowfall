@@ -5,15 +5,10 @@
   openssl,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "cloneit";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname src version;
+  inherit (_sources.cloneit) pname src version;
 
   cargoHash = "sha256-nX/G5m6hdjfsC3YrCvqOfT3LQYrRnQ5/lNLS1Lv5f24=";
 

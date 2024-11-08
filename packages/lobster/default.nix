@@ -12,19 +12,14 @@
   makeWrapper,
   mpv,
   openssl,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "lobster";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenvNoCC.mkDerivation {
-  inherit (source) pname version src;
+  inherit (_sources.lobster) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 
-  wrapperPaths = lib.makeBinPath [
+  wrapperPath = lib.makeBinPath [
     coreutils
     curl
     ffmpeg

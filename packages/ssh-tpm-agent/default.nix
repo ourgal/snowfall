@@ -2,15 +2,10 @@
   lib,
   buildGoModule,
   openssl,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "ssh-tpm-agent";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname version src;
+  inherit (_sources.ssh-tpm-agent) pname version src;
 
   proxyVendor = true;
 

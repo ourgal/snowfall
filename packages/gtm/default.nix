@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "gtm";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.gtm) pname version;
 
   src = fetchzip {
     hash = "sha256-Jb8JCKJ4WvA7hLwDkywnBIW+xOYrr3Uww3/OUUk+ZDI=";

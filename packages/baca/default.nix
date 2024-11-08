@@ -1,13 +1,11 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
 let
-  kdtree = python3.pkgs.buildPythonApplication rec {
-    pname = "kdtree";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  kdtree = python3.pkgs.buildPythonApplication {
+    inherit (_sources.kdtree) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [
@@ -25,9 +23,8 @@ let
       mainProgram = "kdtree";
     };
   };
-  climage = python3.pkgs.buildPythonApplication rec {
-    pname = "climage";
-    inherit (pkgs.${namespace}.sources.${pname}) version src;
+  climage = python3.pkgs.buildPythonApplication {
+    inherit (_sources.climage) pname version src;
     pyproject = true;
 
     nativeBuildInputs = [
@@ -50,11 +47,9 @@ let
       mainProgram = "climage";
     };
   };
-  pname = "baca";
-  source = pkgs.${namespace}.sources.${pname};
 in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname version src;
+  inherit (_sources.baca) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

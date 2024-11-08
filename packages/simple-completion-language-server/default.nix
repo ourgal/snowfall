@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "simple-completion-language-server";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.simple-completion-language-server) pname version src;
 
   cargoHash = "sha256-3fJ6aFixNo+RRlYSZ2k/EVd7J2WV3e8q4LonYmq7w8k=";
 

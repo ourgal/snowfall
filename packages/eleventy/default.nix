@@ -1,15 +1,10 @@
 {
   lib,
   buildNpmPackage,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "eleventy";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildNpmPackage {
-  inherit (source) pname src version;
+  inherit (_sources.eleventy) pname src version;
 
   npmDepsHash = "sha256-yB111+LFq5DA6MQAMo0EwUNibZUVZUBpVnrZj6u/Xlg=";
 

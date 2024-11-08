@@ -1,15 +1,10 @@
 {
   lib,
   stdenv,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "fzf-help";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname src version;
+  inherit (_sources.fzf-help) pname src version;
 
   dontBuild = true;
 

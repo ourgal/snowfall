@@ -3,15 +3,10 @@
   stdenv,
   python3,
   socat,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "curd";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.curd) pname src version;
 
   dontBuild = true;
 

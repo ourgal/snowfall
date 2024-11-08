@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "rustywatch";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.rustywatch) pname version;
 
   src = fetchzip {
     url = "https://github.com/ak9024/rustywatch/releases/download/v${version}/rustywatch-${version}-x86_64-unknown-linux-gnu.tar.gz";

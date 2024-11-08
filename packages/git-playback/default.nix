@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "git-playback";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.git-playback) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [

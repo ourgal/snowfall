@@ -7,16 +7,11 @@
   bat,
   cue,
   shellcheck,
-  pkgs,
-  namespace,
   makeWrapper,
+  _sources,
 }:
-let
-  pname = "kbgrep";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.kbgrep) pname src version;
 
   nativeBuildInputs = [
     bashly

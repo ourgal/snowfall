@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "mdformat-config";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.mdformat-config) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [ python3.pkgs.poetry-core ];

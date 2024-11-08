@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  fishPlugins,
 }:
-let
-  pname = "autopair.fish";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources."autopair.fish") pname version src;
 
   meta = with lib; {
     description = "Auto-complete matching pairs in the Fish command line";

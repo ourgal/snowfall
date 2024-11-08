@@ -2,15 +2,10 @@
   lib,
   stdenv,
   perl,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "git-cal";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.git-cal) pname src version;
 
   dontBuild = true;
 

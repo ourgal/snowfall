@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  vimUtils,
+  _sources,
 }:
-let
-  pname = "pangu-vim";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.vimUtils.buildVimPlugin {
-  inherit (source) pname version src;
+vimUtils.buildVimPlugin {
+  inherit (_sources.pangu-vim) pname version src;
 
   meta = with lib; {
     description = "盘古之白』中文排版自动规范化的 Vim 插件";

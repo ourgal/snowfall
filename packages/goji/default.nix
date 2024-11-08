@@ -2,15 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "goji";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname version src;
+  inherit (_sources.goji) pname version src;
 
   vendorHash = "sha256-qgFpC559JN+BneAcgrOE7WSXO2cG32+eu8sjk5P5EFI=";
 

@@ -1,21 +1,16 @@
 {
   lib,
   stdenv,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "fzf-kill";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.fzf-kill) pname src version;
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D ./fzf-kill $out/bin/fzf-kill
+    install -m755 -D fzf-kill $out/bin/fzf-kill
     runHook postInstall
   '';
 

@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "game_2048_tui";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.game_2048_tui) pname version src;
 
   cargoHash = "sha256-eTld+ryAE9hpnsTtoYXkZJIQ8O4fnk3lPMUfLvJVruQ=";
 

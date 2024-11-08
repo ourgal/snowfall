@@ -1,10 +1,9 @@
-{ pkgs, namespace }:
+{ _sources, tmuxPlugins }:
 let
   pluginName = "tmux2k";
-  source = pkgs.${namespace}.sources.${pluginName};
 in
-pkgs.tmuxPlugins.mkTmuxPlugin {
+tmuxPlugins.mkTmuxPlugin {
   inherit pluginName;
-  inherit (source) version src;
+  inherit (_sources.${pluginName}) version src;
   rtpFilePath = "2k.tmux";
 }

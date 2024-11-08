@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "datadash";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.datadash) pname src version;
 
   vendorHash = "sha256-naG4vVuuUqXFOpAJbzeIQ09ZjETUENE4elERldNkCO8=";
 

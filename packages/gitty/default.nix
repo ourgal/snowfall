@@ -2,15 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "gitty";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.gitty) pname src version;
 
   vendorHash = "sha256-N4WXyw6eF8yav2wTrQNnakqNq/fkUe+/poJCJyp4lsc=";
 

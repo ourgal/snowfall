@@ -1,10 +1,6 @@
-{ pkgs, namespace }:
-let
-  pname = "mpv-blur-edges";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.mpvScripts.buildLua {
-  inherit (source) pname version src;
+{ mpvScripts, _sources }:
+mpvScripts.buildLua {
+  inherit (_sources.mpv-blur-edges) pname version src;
 
   scriptPath = "scripts/blur-edges.lua";
 }

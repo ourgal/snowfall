@@ -1,19 +1,11 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
+  _sources,
 }:
 
-stdenv.mkDerivation rec {
-  pname = "hatsune-miku-windows-linux-cursors";
-  version = "1.2.4";
-
-  src = fetchFromGitHub {
-    owner = "supermariofps";
-    repo = "hatsune-miku-windows-linux-cursors";
-    rev = version;
-    hash = "sha256-PB8b/hGH5HtCEPOVPTtObWYOj520TqBpoxavA8Tfx2s=";
-  };
+stdenv.mkDerivation {
+  inherit (_sources.hatsune-miku-windows-linux-cursors) pname src version;
 
   dontBuild = true;
 

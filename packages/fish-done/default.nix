@@ -1,14 +1,10 @@
 {
   lib,
-  pkgs,
-  namespace,
+  _sources,
+  fishPlugins,
 }:
-let
-  pname = "fish-done";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.fishPlugins.buildFishPlugin {
-  inherit (source) pname version src;
+fishPlugins.buildFishPlugin {
+  inherit (_sources.fish-done) pname version src;
 
   meta = with lib; {
     description = "A fish-shell package to automatically receive notifications when long processes finish";

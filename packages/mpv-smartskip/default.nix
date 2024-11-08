@@ -1,10 +1,6 @@
-{ pkgs, namespace }:
-let
-  pname = "mpv-smartskip";
-  source = pkgs.${namespace}.sources.${pname};
-in
-pkgs.mpvScripts.buildLua {
-  inherit (source) pname version src;
+{ mpvScripts, _sources }:
+mpvScripts.buildLua {
+  inherit (_sources.mpv-smartskip) pname version src;
 
   scriptPath = "scripts/SmartSkip.lua";
 }

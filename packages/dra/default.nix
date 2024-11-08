@@ -7,15 +7,10 @@
   zlib,
   stdenv,
   darwin,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "dra";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage rec {
-  inherit (source) pname version src;
+  inherit (_sources.dra) pname version src;
 
   cargoHash = "sha256-C5y+J6haR+NhSDYk8p1ht2mYLaacf3K3CereNUr9C/U=";
 

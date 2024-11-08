@@ -2,15 +2,10 @@
   lib,
   stdenv,
   fetchzip,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "comigo";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation rec {
-  inherit (source) pname version;
+  inherit (_sources.comigo) pname version;
 
   src = fetchzip {
     url = "https://github.com/yumenaka/comigo/releases/download/v${version}/comi_v0.9.11_Linux_x86_64.tar.gz";

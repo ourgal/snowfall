@@ -1,15 +1,10 @@
 {
   lib,
   buildGoModule,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "soba";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule rec {
-  inherit (source) pname version src;
+  inherit (_sources.soba) pname version src;
 
   vendorHash = "sha256-julsw0L65/lKE0YyKV6PJg8D7PRnfyPKHqM0yXWk07Q=";
 

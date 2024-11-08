@@ -1,15 +1,10 @@
 {
   buildGoModule,
   lib,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "autocrop";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.autocrop) pname src version;
 
   vendorHash = "sha256-qX4sPNq3qjPuwFkGd5Hxb4udLF9GRVfAWTF6M26QRqk=";
 

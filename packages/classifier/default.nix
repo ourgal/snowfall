@@ -1,20 +1,15 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "classifier";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.classifier) pname src version;
   pyproject = true;
 
-  nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+  nativeBuildInputs = with python3.pkgs; [
+    setuptools
+    wheel
   ];
 
   propagatedBuildInputs = with python3.pkgs; [ arrow ];

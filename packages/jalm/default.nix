@@ -1,15 +1,10 @@
 {
   lib,
   rustPlatform,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "jalm";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.jalm) pname version src;
 
   cargoHash = "sha256-hwUdn8pD3/VWnultlLMprpng84nN2u+ht7P5KVdbBE4=";
 

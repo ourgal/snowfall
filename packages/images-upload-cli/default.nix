@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "images-upload-cli";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication rec {
-  inherit (source) pname version src;
+  inherit (_sources.images-upload-cli) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

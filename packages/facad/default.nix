@@ -3,15 +3,10 @@
   stdenv,
   meson,
   ninja,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "facad";
-  source = pkgs.${namespace}.sources.${pname};
-in
 stdenv.mkDerivation {
-  inherit (source) pname src version;
+  inherit (_sources.facad) pname src version;
 
   nativeBuildInputs = [
     meson

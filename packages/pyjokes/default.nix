@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "pyjokes";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src version;
+  inherit (_sources.pyjokes) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [

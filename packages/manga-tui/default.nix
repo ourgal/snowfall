@@ -6,17 +6,12 @@
   sqlite,
   stdenv,
   darwin,
-  namespace,
   bzip2,
   zstd,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "manga-tui";
-  source = pkgs.${namespace}.sources.${pname};
-in
 rustPlatform.buildRustPackage {
-  inherit (source) pname version src;
+  inherit (_sources.manga-tui) pname version src;
 
   cargoHash = "sha256-IufJPCvUEWR5p4PrFlaiQPW9wyIFj/Pd/JHki69L6Es=";
 

@@ -2,15 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "gogitmoji";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname version src;
+  inherit (_sources.gogitmoji) pname version src;
 
   vendorHash = "sha256-OjYhqYscuybA3BiaoJMdVQpV+m1MLFDZC+F6xB2+g4Y=";
 

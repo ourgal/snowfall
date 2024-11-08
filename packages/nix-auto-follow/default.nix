@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  namespace,
-  pkgs,
+  _sources,
 }:
-let
-  pname = "nix-auto-follow";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication {
-  inherit (source) pname src;
+  inherit (_sources.nix-auto-follow) pname src;
   version = "0.1.0";
   pyproject = true;
 

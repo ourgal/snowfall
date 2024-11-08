@@ -1,15 +1,10 @@
 {
   lib,
   python3,
-  pkgs,
-  namespace,
+  _sources,
 }:
-let
-  pname = "cat_win";
-  source = pkgs.${namespace}.sources.${pname};
-in
 python3.pkgs.buildPythonApplication rec {
-  inherit (source) pname src version;
+  inherit (_sources.cat_win) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [ python3.pkgs.flit-core ];

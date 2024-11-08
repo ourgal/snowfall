@@ -1,16 +1,10 @@
 {
   lib,
   buildGoModule,
-  pkgs,
-  namespace,
+  _sources,
 }:
-
-let
-  pname = "config-file-validator";
-  source = pkgs.${namespace}.sources.${pname};
-in
 buildGoModule {
-  inherit (source) pname src version;
+  inherit (_sources.config-file-validator) pname src version;
 
   vendorHash = "sha256-GybtH7P1Y/j7MrmokjpzqVdb/Vry+hzlKWorjdjuxUc=";
 
