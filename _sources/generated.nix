@@ -1739,6 +1739,17 @@
       sha256 = "sha256-HJlzGI7OPjAeLvriWi2ieflP2LIKxRYRaPOG1hXn8qg=";
     };
   };
+  pypipe = {
+    pname = "pypipe";
+    version = "v0.4.1";
+    src = fetchFromGitHub {
+      owner = "bugen";
+      repo = "pypipe";
+      rev = "v0.4.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-QHQZbjrKU0lE89L/13ukjXqZ2I/8XR9Hz5/YjmiXQhk=";
+    };
+  };
   quartz = {
     pname = "quartz";
     version = "64686482cb9e8a24a53d44134497a600eaa5d275";
