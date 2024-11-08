@@ -962,3 +962,7 @@ fetch.github = "rafamadriz/friendly-snippets"
 [x]
 src.github = "devhindo/x"
 fetch.github = "devhindo/x"
+
+[pypipe]
+src.github = "bugen/pypipe"
+fetch.github = "bugen/pypipe"

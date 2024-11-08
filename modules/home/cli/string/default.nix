@@ -10,6 +10,7 @@ args.module (
         # keep-sorted start
         cat_win
         chepy
+        pypipe
         # keep-sorted end
       ]
       ++ cat_win.optional-dependencies.clip
