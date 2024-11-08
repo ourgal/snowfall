@@ -26,9 +26,6 @@ args.module (
         "bukubrow"
       ];
       progs.fish = {
-        shellAbbrs = {
-          bb = "buku";
-        };
         functions = {
           fzf-buku = {
             body = ''

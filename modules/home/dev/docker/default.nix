@@ -14,6 +14,5 @@ args.module (
       "podman-compose"
       # keep-sorted end
     ];
-    progs.fish.shellAbbrs.zd = "lazydocker";
   }
 )
