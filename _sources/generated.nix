@@ -398,13 +398,13 @@
   };
   curd = {
     pname = "curd";
-    version = "v0.0.10";
+    version = "v1.0.1";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "v0.0.10";
+      rev = "v1.0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-5xPQb9dQhgJwZ05LH1qHkR8FSnVX/FPrCr6LvBFT8+w=";
+      sha256 = "sha256-202Cb/b2PomoKAGrVf8UofTt8JQq0puV/xRAVUu+GqQ=";
     };
   };
   datadash = {
@@ -991,6 +991,30 @@
     };
     date = "2024-05-17";
   };
+  git-lens-vim = {
+    pname = "git-lens-vim";
+    version = "6c22e05c3e43bbe6e2cdc02bbc2978886e50e27c";
+    src = fetchFromGitHub {
+      owner = "Eliot00";
+      repo = "git-lens.vim";
+      rev = "6c22e05c3e43bbe6e2cdc02bbc2978886e50e27c";
+      fetchSubmodules = false;
+      sha256 = "sha256-YZdiYB1YJFv/oCJSC/Ld0QBDTp+mqItwIWURbbN9yCw=";
+    };
+    date = "2024-04-14";
+  };
+  git-messenger-vim = {
+    pname = "git-messenger-vim";
+    version = "edc603d4cda7894a743e383e16c638e206d03148";
+    src = fetchFromGitHub {
+      owner = "rhysd";
+      repo = "git-messenger.vim";
+      rev = "edc603d4cda7894a743e383e16c638e206d03148";
+      fetchSubmodules = false;
+      sha256 = "sha256-SgivafrSdql6yG0Nj2+zo0dWE7x3YigzD6kJRrucPC0=";
+    };
+    date = "2024-09-05";
+  };
   git-of-theseus = {
     pname = "git-of-theseus";
     version = "961bda027ffa9fcd8bbe99d5b8809cc0eaa86464";
@@ -1168,6 +1192,17 @@
       rev = "v0.4.0";
       fetchSubmodules = false;
       sha256 = "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=";
+    };
+  };
+  hatsune-miku-windows-linux-cursors = {
+    pname = "hatsune-miku-windows-linux-cursors";
+    version = "1.2.4";
+    src = fetchFromGitHub {
+      owner = "supermariofps";
+      repo = "hatsune-miku-windows-linux-cursors";
+      rev = "1.2.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-PB8b/hGH5HtCEPOVPTtObWYOj520TqBpoxavA8Tfx2s=";
     };
   };
   hexpatch = {
@@ -1879,13 +1914,13 @@
   };
   rust-kanban = {
     pname = "rust-kanban";
-    version = "v0.10.4";
+    version = "v0.10.5";
     src = fetchFromGitHub {
       owner = "yashs662";
       repo = "rust_kanban";
-      rev = "v0.10.4";
+      rev = "v0.10.5";
       fetchSubmodules = false;
-      sha256 = "sha256-1sCc5ChDTYEo+WYsyYvmxJJ/JXtd/uPtUeKBjYjXcHU=";
+      sha256 = "sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=";
     };
   };
   rustywatch = {
@@ -2366,6 +2401,18 @@
     };
     date = "2024-02-11";
   };
+  tokyonight-vim = {
+    pname = "tokyonight-vim";
+    version = "4e82e0f0452a6ce8f387828ec71013015515035a";
+    src = fetchFromGitHub {
+      owner = "ghifarit53";
+      repo = "tokyonight-vim";
+      rev = "4e82e0f0452a6ce8f387828ec71013015515035a";
+      fetchSubmodules = false;
+      sha256 = "sha256-ui/6xv8PH6KuQ4hG1FNMf6EUdF2wfWPNgG/GMXYvn/8=";
+    };
+    date = "2021-04-23";
+  };
   toolong = {
     pname = "toolong";
     version = "v1.4.0";
@@ -2613,15 +2660,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "acf301f06703ca712574441720415b0fb28c38a0";
+    version = "187215190586296bf7641322cd0fb4333d70b44f";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "acf301f06703ca712574441720415b0fb28c38a0";
+      rev = "187215190586296bf7641322cd0fb4333d70b44f";
       fetchSubmodules = false;
-      sha256 = "sha256-DMxLykw3oBtCQHtMOIBLV15otxxHraydr1rGCtLG6HU=";
+      sha256 = "sha256-L0EMdceByTAupyZBbVf72A5+Z3n2gFSUb7WsB0qoB4w=";
     };
-    date = "2024-11-06";
+    date = "2024-11-07";
   };
   visual-split-vim = {
     pname = "visual-split-vim";

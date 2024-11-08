@@ -729,12 +729,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v0.0.10",
-            "sha256": "sha256-5xPQb9dQhgJwZ05LH1qHkR8FSnVX/FPrCr6LvBFT8+w=",
+            "rev": "v1.0.1",
+            "sha256": "sha256-202Cb/b2PomoKAGrVf8UofTt8JQq0puV/xRAVUu+GqQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.0.10"
+        "version": "v1.0.1"
     },
     "datadash": {
         "cargoLocks": null,
@@ -1812,6 +1812,48 @@
         },
         "version": "d056998566d30235072b97982756ff607e9ecce9"
     },
+    "git-lens-vim": {
+        "cargoLocks": null,
+        "date": "2024-04-14",
+        "extract": null,
+        "name": "git-lens-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Eliot00",
+            "repo": "git-lens.vim",
+            "rev": "6c22e05c3e43bbe6e2cdc02bbc2978886e50e27c",
+            "sha256": "sha256-YZdiYB1YJFv/oCJSC/Ld0QBDTp+mqItwIWURbbN9yCw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6c22e05c3e43bbe6e2cdc02bbc2978886e50e27c"
+    },
+    "git-messenger-vim": {
+        "cargoLocks": null,
+        "date": "2024-09-05",
+        "extract": null,
+        "name": "git-messenger-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rhysd",
+            "repo": "git-messenger.vim",
+            "rev": "edc603d4cda7894a743e383e16c638e206d03148",
+            "sha256": "sha256-SgivafrSdql6yG0Nj2+zo0dWE7x3YigzD6kJRrucPC0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "edc603d4cda7894a743e383e16c638e206d03148"
+    },
     "git-of-theseus": {
         "cargoLocks": null,
         "date": "2023-11-25",
@@ -2147,6 +2189,27 @@
             "type": "github"
         },
         "version": "v0.4.0"
+    },
+    "hatsune-miku-windows-linux-cursors": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "hatsune-miku-windows-linux-cursors",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "supermariofps",
+            "repo": "hatsune-miku-windows-linux-cursors",
+            "rev": "1.2.4",
+            "sha256": "sha256-PB8b/hGH5HtCEPOVPTtObWYOj520TqBpoxavA8Tfx2s=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.2.4"
     },
     "hexpatch": {
         "cargoLocks": null,
@@ -3461,12 +3524,12 @@
             "name": null,
             "owner": "yashs662",
             "repo": "rust_kanban",
-            "rev": "v0.10.4",
-            "sha256": "sha256-1sCc5ChDTYEo+WYsyYvmxJJ/JXtd/uPtUeKBjYjXcHU=",
+            "rev": "v0.10.5",
+            "sha256": "sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.10.4"
+        "version": "v0.10.5"
     },
     "rustywatch": {
         "cargoLocks": null,
@@ -4338,6 +4401,27 @@
         },
         "version": "fb818507c2b95e498495fb73206eb101566d71ee"
     },
+    "tokyonight-vim": {
+        "cargoLocks": null,
+        "date": "2021-04-23",
+        "extract": null,
+        "name": "tokyonight-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ghifarit53",
+            "repo": "tokyonight-vim",
+            "rev": "4e82e0f0452a6ce8f387828ec71013015515035a",
+            "sha256": "sha256-ui/6xv8PH6KuQ4hG1FNMf6EUdF2wfWPNgG/GMXYvn/8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4e82e0f0452a6ce8f387828ec71013015515035a"
+    },
     "toolong": {
         "cargoLocks": null,
         "date": null,
@@ -4781,7 +4865,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-11-06",
+        "date": "2024-11-07",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -4793,12 +4877,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "acf301f06703ca712574441720415b0fb28c38a0",
-            "sha256": "sha256-DMxLykw3oBtCQHtMOIBLV15otxxHraydr1rGCtLG6HU=",
+            "rev": "187215190586296bf7641322cd0fb4333d70b44f",
+            "sha256": "sha256-L0EMdceByTAupyZBbVf72A5+Z3n2gFSUb7WsB0qoB4w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "acf301f06703ca712574441720415b0fb28c38a0"
+        "version": "187215190586296bf7641322cd0fb4333d70b44f"
     },
     "visual-split-vim": {
         "cargoLocks": null,
