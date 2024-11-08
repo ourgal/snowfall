@@ -5,13 +5,13 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "adl"
       "ani-cli"
       "animdl"
       # keep-sorted end
     ];
     myPkgs = [
       # keep-sorted start
-      "adl"
       "fast-anime"
       "lobster"
       "sauce"
