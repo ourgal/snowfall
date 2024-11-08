@@ -9,6 +9,7 @@ args.module (
       "loop"
       "moreutils"
       "progress"
+      "with-shell"
       # keep-sorted end
     ];
     enable = [
