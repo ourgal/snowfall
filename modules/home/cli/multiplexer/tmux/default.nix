@@ -97,6 +97,7 @@ args.module (
       myPkgs = [
         # keep-sorted start
         "fzfp"
+        "git-mux"
         # keep-sorted end
       ];
       progs = [

@@ -1875,6 +1875,27 @@
         },
         "version": "edc603d4cda7894a743e383e16c638e206d03148"
     },
+    "git-mux": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "git-mux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "benelan",
+            "repo": "git-mux",
+            "rev": "v0.3.0",
+            "sha256": "sha256-rqWLnp8OaNFaM7jfplfsnVotkBpDhCfIVOk8W83GjPM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.3.0"
+    },
     "git-of-theseus": {
         "cargoLocks": null,
         "date": "2023-11-25",

@@ -990,3 +990,7 @@ fetch.github = "replicadse/complate"
 [textimg]
 src.github = "jiro4989/textimg"
 fetch.github = "jiro4989/textimg"
+
+[git-mux]
+src.github = "benelan/git-mux"
+fetch.github = "benelan/git-mux"
