@@ -29,7 +29,7 @@ stdenv.mkDerivation {
     runHook preInstall
 
     install -Dm755 kbg $out/bin/kbg
-    wrapProgram $out/bin/kbg --prefix PATH : ${
+    wrapProgram $out/bin/kbg --prefix PATH:${
       lib.makeBinPath [
         ripgrep
         fzf

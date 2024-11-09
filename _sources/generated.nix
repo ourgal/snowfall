@@ -1026,6 +1026,17 @@
     };
     date = "2024-09-05";
   };
+  git-mux = {
+    pname = "git-mux";
+    version = "v0.3.0";
+    src = fetchFromGitHub {
+      owner = "benelan";
+      repo = "git-mux";
+      rev = "v0.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-rqWLnp8OaNFaM7jfplfsnVotkBpDhCfIVOk8W83GjPM=";
+    };
+  };
   git-of-theseus = {
     pname = "git-of-theseus";
     version = "961bda027ffa9fcd8bbe99d5b8809cc0eaa86464";
