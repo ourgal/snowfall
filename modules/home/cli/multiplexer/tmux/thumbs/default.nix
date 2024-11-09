@@ -11,6 +11,7 @@ args.module (
         cfgHome
         config
         ;
+      inherit (lib.types) str;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
@@ -19,14 +20,15 @@ args.module (
         {
           plugin = pkgs.tmuxPlugins.tmux-thumbs;
           extraConfig = ''
-            set -g @thumbs-key ${cfg.key};
+            set -g @thumbs-key ${cfg.key}
+            bind ${cfg.key} ${cfg.command}
           '';
         }
       ];
       extraOpts = {
-        key = mkOpt' lib.types.str ".";
-        path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.tmux-thumbs}/share/tmux-plugins/tmux-thumbs/tmux-thumbs.sh";
-        command = mkOpt' lib.types.str "run-shell -b ${cfg.path}";
+        key = mkOpt' str ".";
+        path = mkOpt' str "${pkgs.tmuxPlugins.tmux-thumbs}/share/tmux-plugins/tmux-thumbs/tmux-thumbs.sh";
+        command = mkOpt' str "run-shell -b ${cfg.path}";
       };
     }
   )

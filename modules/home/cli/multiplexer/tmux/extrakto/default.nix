@@ -19,14 +19,14 @@ args.module (
         {
           plugin = pkgs.tmuxPlugins.extrakto;
           extraConfig = ''
-            set -g @extrakto_key ${cfg.key};
+            set -g @extrakto_key ${cfg.key}
           '';
         }
       ];
       extraOpts = {
         key = mkOpt' lib.types.str "i";
         path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.extrakto}/share/tmux-plugins/extrakto/scripts/helpers.sh";
-        command = mkOpt' lib.types.str "run-shell -b ${cfg.path} #{pane_id}";
+        command = mkOpt' lib.types.str "run-shell ${cfg.path} #{pane_id}";
       };
     }
   )
