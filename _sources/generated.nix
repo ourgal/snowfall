@@ -252,6 +252,18 @@
       sha256 = "sha256-PfGhd8mI3vccUg9XykR3NRHS6GKd1P4tfLqEmEizUkU=";
     };
   };
+  cdo = {
+    pname = "cdo";
+    version = "8aefae7fcac56615a053fc99fd5f977328ceea2b";
+    src = fetchFromGitHub {
+      owner = "dotboris";
+      repo = "cdo";
+      rev = "8aefae7fcac56615a053fc99fd5f977328ceea2b";
+      fetchSubmodules = false;
+      sha256 = "sha256-rPhaVlHFTFThu+QC4GAFNLijpOC26NYVKFn371hUPLw=";
+    };
+    date = "2024-11-09";
+  };
   chezmoi-vim = {
     pname = "chezmoi-vim";
     version = "abf37336437867cbd99ce2f8849b717415391cc3";
