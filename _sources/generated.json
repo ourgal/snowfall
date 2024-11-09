@@ -1118,12 +1118,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.7.0",
-            "sha256": "sha256-C6/I6DFfLZxZm/U8eNOuwqu1U0hRS4uO5wGrbOaQj70=",
+            "rev": "v2.7.1",
+            "sha256": "sha256-oXZmVoGqV8tgvuYLDYVBi3Uf7deT7IABRQunOGl9wvE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.0"
+        "version": "v2.7.1"
     },
     "fc-fish": {
         "cargoLocks": null,
@@ -2246,12 +2246,12 @@
             "name": null,
             "owner": "Etto48",
             "repo": "HexPatch",
-            "rev": "v1.9.2",
-            "sha256": "sha256-g20p2RaRXw0vPgsTPPnG9MDwiZJfNS4NtMIrjALNGf0=",
+            "rev": "v1.9.3",
+            "sha256": "sha256-UhenCrCVUL6mdEpmTU4e1sIHBS8QXVRtKTMlLah56Zs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.9.2"
+        "version": "v1.9.3"
     },
     "hl": {
         "cargoLocks": null,
