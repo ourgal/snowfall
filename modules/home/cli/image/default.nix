@@ -29,6 +29,7 @@ args.module (
       "pik"
       "rimage"
       "svgshift"
+      "textimg"
       # keep-sorted end
     ];
   }

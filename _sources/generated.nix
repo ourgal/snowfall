@@ -2193,6 +2193,17 @@
       sha256 = "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=";
     };
   };
+  textimg = {
+    pname = "textimg";
+    version = "v3.1.10";
+    src = fetchFromGitHub {
+      owner = "jiro4989";
+      repo = "textimg";
+      rev = "v3.1.10";
+      fetchSubmodules = false;
+      sha256 = "sha256-6lmGuqXuK0ROf24wLEEeGIK0Etk1qMtsmT52LCnmWQc=";
+    };
+  };
   textpod = {
     pname = "textpod";
     version = "0.1.2";
