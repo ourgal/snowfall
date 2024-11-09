@@ -16,126 +16,6 @@ args.module (
       inherit (pkgs) tmuxPlugins;
       inherit (lib.${namespace}.settings) laptops;
       cfg = cfgHome config.${namespace} ./.;
-      baseConf = ''
-        set -g default-terminal "tmux-256color"
-        set -ag terminal-overrides ",xterm-256color:RGB"
-        # set -g history-limit 20000
-        set -g buffer-limit 20
-        set -sg escape-time 0
-        set -g display-time 1500
-        set -g remain-on-exit off
-        set -g repeat-time 300
-        setw -g allow-rename off
-        setw -g automatic-rename on
-        set-option -g automatic-rename-format "#{?#{==:#{pane_current_command},fish},#{b:pane_current_path},#{pane_current_command}}"
-        set -g focus-events on
-        setw -g aggressive-resize on
-
-        set -gq allow-passthrough on
-
-        set -ga update-environment TERM
-        set -ga update-environment TERM_PROGRAM
-
-        # Set parent terminal title to reflect current window in tmux session
-        set -g set-titles on
-        set -g set-titles-string "#I:#W"
-
-        # Start index of window/pane with 1, because we're humans, not computers
-        set -g base-index 1
-        setw -g pane-base-index 1
-
-        # Enable mouse support
-        set -g mouse on
-
-        set -g status-position top
-
-        # ==========================
-        # ===   Key bindings     ===
-        # ==========================
-
-        # unbind default key bindings, we're going to override
-        unbind "\$" # rename-session
-        unbind ,    # rename-window
-        unbind %    # split-window -h
-        unbind '"'  # split-window
-        unbind \}    # swap-pane -D
-        unbind \{    # swap-pane -U
-        unbind [    # paste-buffer
-        unbind ]
-        unbind "'"  # select-window
-        unbind n    # next-window
-        unbind p    # previous-window
-        unbind c    # new-window
-        unbind l    # last-window
-        unbind M-n  # next window with alert
-        unbind M-p  # next window with alert
-        unbind o    # focus thru panes
-        unbind &    # kill-window
-        unbind "#"  # list-buffer
-        unbind =    # choose-buffer
-        # unbind z    # zoom-pane
-        unbind M-Up  # resize 5 rows up
-        unbind M-Down # resize 5 rows down
-        unbind M-Right # resize 5 rows right
-        unbind M-Left # resize 5 rows left
-        unbind b
-        unbind s # choose session
-        unbind w # choose window
-        unbind . # move window
-        unbind i # display window information
-        unbind f # search for a pane
-
-        # new window and retain cwd
-        bind n new-session
-        bind p paste-buffer
-        bind-key "c" new-window -c "#{pane_current_path}"
-
-        # Rename session and window
-        bind r command-prompt -I "#{window_name}" "rename-window '%%'"
-        bind R command-prompt -I "#{session_name}" "rename-session '%%'"
-
-        bind w choose-session
-        bind = command-prompt -I "#{move-window}" "move-window '%%'"
-
-        bind-key -r "<" swap-window -d -t -1
-        bind-key -r ">" swap-window -d -t +1
-
-        # Split panes
-        bind-key "v" split-window -h -c "#{pane_current_path}"
-        bind-key "V" split-window -fh -c "#{pane_current_path}"
-        bind-key "s" split-window -v -c "#{pane_current_path}"
-        bind-key "S" split-window -fv -c "#{pane_current_path}"
-
-        # Kill pane/window/session shortcuts
-        bind x kill-window
-        bind C-x confirm-before -p "kill other windows? (y/n)" "kill-window -a"
-        set -g detach-on-destroy off
-        bind X confirm-before -p "kill-session #S? (y/n)" kill-session
-
-        # Detach from session
-        bind d detach
-        bind D if -F '#{session_many_attached}' \
-            'confirm-before -p "Detach other clients? (y/n)" "detach -a"' \
-            'display "Session has only 1 client attached"'
-
-        # bind Space if-shell -F '#{==:#{session_name},popup}' {
-        #     detach-client
-        # } {
-        #     popup -d '#{pane_current_path}' -xC -yC -w 80% -h 80% -E "tmux attach -t popup || tmux new -s popup"
-        # }
-
-        # ================================================
-        # ===     Copy mode, scroll and clipboard      ===
-        # ================================================
-
-        set -g @copy_use_osc52_fallback on
-
-        # Prefer vi style key table
-        setw -g mode-keys vi
-
-        # trigger copy mode by
-        bind b copy-mode
-      '';
       themeType = lib.types.enum [
         "tmux2k"
         "dracula"
@@ -185,12 +65,6 @@ args.module (
           set -g @minimal-tmux-status "top"
         '';
       };
-      pluginsBase = with tmuxPlugins; [
-        {
-          plugin = copycat;
-          extraConfig = baseConf;
-        }
-      ];
 
       pluginsResurrect = with tmuxPlugins; [
         {
@@ -232,6 +106,7 @@ args.module (
             historyLimit = 20000;
             newSession = true;
             baseIndex = 1;
+            sensibleOnTop = false;
             catppuccin.extraConfig = lib.mkIf config.programs.tmux.catppuccin.enable ''
               # Configure Catppuccin
               set -g @catppuccin_flavor "macchiato"
@@ -289,8 +164,7 @@ args.module (
               set -g window-status-current-style "bg=#{@thm_peach},fg=#{@thm_bg},bold"
             '';
             plugins =
-              pluginsBase
-              ++ (
+              (
                 if (cfg.theme == "tmux2k") then
                   [ tmux2k ]
                 else if (cfg.theme == "dracula") then
@@ -340,6 +214,7 @@ args.module (
       enable = [
         # keep-sorted start
         "auto-renumber-session"
+        "copycat"
         "edgelord"
         "extrakto"
         "fpp"
