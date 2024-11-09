@@ -11,6 +11,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "hoard"
       "nap"
       "the-way"
       # keep-sorted end
