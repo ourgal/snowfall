@@ -986,3 +986,7 @@ fetch.github = "ghifarit53/tokyonight-vim"
 [complate]
 src.github = "replicadse/complate"
 fetch.github = "replicadse/complate"
+
+[textimg]
+src.github = "jiro4989/textimg"
+fetch.github = "jiro4989/textimg"

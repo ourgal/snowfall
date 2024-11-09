@@ -4035,6 +4035,27 @@
         },
         "version": "v0.4.1"
     },
+    "textimg": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "textimg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jiro4989",
+            "repo": "textimg",
+            "rev": "v3.1.10",
+            "sha256": "sha256-6lmGuqXuK0ROf24wLEEeGIK0Etk1qMtsmT52LCnmWQc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v3.1.10"
+    },
     "textpod": {
         "cargoLocks": null,
         "date": null,
