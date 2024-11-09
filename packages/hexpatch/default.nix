@@ -9,7 +9,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.hexpatch) pname version src;
 
-  cargoHash = "sha256-6IaSKVPEen4aI977rv8jv/M8FCe7ABr7qSHgisWieVM=";
+  cargoHash = "sha256-jWDntqxWsSzfDFxZnVDxh7n/CjFIj+sYMsyX/UXhoaM=";
 
   nativeBuildInputs = [
     pkg-config

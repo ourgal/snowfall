@@ -604,13 +604,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.0";
+    version = "v2.7.1";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.0";
+      rev = "v2.7.1";
       fetchSubmodules = false;
-      sha256 = "sha256-C6/I6DFfLZxZm/U8eNOuwqu1U0hRS4uO5wGrbOaQj70=";
+      sha256 = "sha256-oXZmVoGqV8tgvuYLDYVBi3Uf7deT7IABRQunOGl9wvE=";
     };
   };
   fc-fish = {
@@ -1218,13 +1218,13 @@
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.9.2";
+    version = "v1.9.3";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.9.2";
+      rev = "v1.9.3";
       fetchSubmodules = false;
-      sha256 = "sha256-g20p2RaRXw0vPgsTPPnG9MDwiZJfNS4NtMIrjALNGf0=";
+      sha256 = "sha256-UhenCrCVUL6mdEpmTU4e1sIHBS8QXVRtKTMlLah56Zs=";
     };
   };
   hl = {
