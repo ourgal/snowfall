@@ -109,10 +109,6 @@ args.module (
                 ];
                 r = "replace_with_yanked";
                 R = "rename_symbol";
-                c = [
-                  "trim_selections"
-                  "change_selection"
-                ];
                 "*" =
                   if tmuxEnabled then
                     [
@@ -250,10 +246,6 @@ args.module (
                 r = "replace_with_yanked";
                 R = "rename_symbol";
                 "A-d" = "delete_selection";
-                c = [
-                  "trim_selections"
-                  "change_selection"
-                ];
                 "*" =
                   if tmuxEnabled then
                     [
@@ -275,8 +267,6 @@ args.module (
                 "$" = "goto_line_end";
                 "^" = "goto_first_nonwhitespace";
                 "0" = "goto_line_start";
-                # "s" = { };
-                # "S" = { };
                 "/" = "select_regex";
                 "?" = "split_selection";
                 "esc" = [
