@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "lab";
     enable = [
       # keep-sorted start
       "gh"
