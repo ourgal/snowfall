@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     myPkgs = "bt";
+    nixPkgs = "projectable";
   }
 )
