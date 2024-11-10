@@ -1,11 +1,21 @@
 args:
 args.module (
   args
-  // {
-    path = ./.;
-    nixPkgs = "perlnavigator";
-    perlPkgs = "Appcpanminus";
-    files.".perlcriticrc" = ''[-Subroutines::ProhibitSubroutinePrototypes]'';
-    enable = "global";
-  }
+  // (
+    let
+      inherit (args) config;
+    in
+    {
+      path = ./.;
+      nixPkgs = "perlnavigator";
+      perlPkgs = "Appcpanminus";
+      files = {
+        ".perlcriticrc" = ''[-Subroutines::ProhibitSubroutinePrototypes]'';
+        ".perltidyrc" = ''
+          -i=${toString config.editorconfig.settings."*".indent_size}
+        '';
+      };
+      enable = "global";
+    }
+  )
 )
