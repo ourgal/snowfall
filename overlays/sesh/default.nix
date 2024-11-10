@@ -1,6 +1,6 @@
-{ channels, lib, ... }:
-final: prev: {
+{ ... }:
+_final: prev: {
   sesh = prev.sesh.overrideAttrs (_oldAttrs: {
-    postFixup = "rm $out/bin/docs";
+    excludedPackages = [ "docs" ];
   });
 }
