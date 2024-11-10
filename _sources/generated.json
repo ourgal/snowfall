@@ -35,6 +35,27 @@
         },
         "version": "1.0.2"
     },
+    "ahoy": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ahoy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ahoy-cli",
+            "repo": "ahoy",
+            "rev": "v2.2.0",
+            "sha256": "sha256-xwjfY9HudxVz3xEEyRPtWysbojtan56ABBL3KgG0J/8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.0"
+    },
     "akuse": {
         "cargoLocks": null,
         "date": null,

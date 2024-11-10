@@ -16,6 +16,7 @@ args.module (
     ];
     myPkgs = [
       # keep-sorted start
+      "ahoy"
       "cdo"
       "cmdx"
       "machma"
