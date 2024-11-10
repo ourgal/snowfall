@@ -14,6 +14,7 @@ args.module (
     haskellPkgs = "brok";
     nixPkgs = [
       # keep-sorted start
+      "cidr-merger"
       "dig"
       "dnspeep"
       "dogdns"
