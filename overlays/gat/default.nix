@@ -1,6 +1,9 @@
-{ channels, lib, ... }:
-final: prev: {
+{ ... }:
+_final: prev: {
   gat = prev.gat.overrideAttrs (_oldAttrs: {
-    postFixup = "rm $out/bin/docs";
+    excludedPackages = [
+      "docs"
+      "tapes"
+    ];
   });
 }
