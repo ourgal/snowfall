@@ -1034,3 +1034,7 @@ fetch.github = "VirtusLab/render"
 [hssp]
 src.git = "https://github.com/sterchelen/hssp"
 fetch.github = "sterchelen/hssp"
+
+[dnspyre]
+src.github = "Tantalor93/dnspyre"
+fetch.github = "Tantalor93/dnspyre"

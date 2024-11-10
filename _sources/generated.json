@@ -925,6 +925,27 @@
         },
         "version": "d4966d6d1e4384e8f6c7f33b473a24cf6cdd0617"
     },
+    "dnspyre": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "dnspyre",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Tantalor93",
+            "repo": "dnspyre",
+            "rev": "v3.5.0",
+            "sha256": "sha256-bcBVpCX7n0IpdLn5VqG+1yDiH5Yy8Kn9UGd8KVwDYhI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v3.5.0"
+    },
     "docker-alist": {
         "cargoLocks": null,
         "date": null,
