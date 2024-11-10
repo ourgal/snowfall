@@ -22,6 +22,7 @@ args.module (
       "ipinfo"
       "lychee"
       "nali"
+      "netop"
       "oha"
       "q"
       "tcping-go"
