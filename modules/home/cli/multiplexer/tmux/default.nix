@@ -107,7 +107,7 @@ args.module (
             historyLimit = 20000;
             newSession = true;
             baseIndex = 1;
-            sensibleOnTop = false;
+            sensibleOnTop = true;
             catppuccin.extraConfig = lib.mkIf config.programs.tmux.catppuccin.enable ''
               # Configure Catppuccin
               set -g @catppuccin_flavor "macchiato"
