@@ -1018,3 +1018,7 @@ fetch.github = "ahoy-cli/ahoy"
 [updo]
 src.github = "Owloops/updo"
 fetch.github = "Owloops/updo"
+
+[cidr]
+src.github = "bschaatsbergen/cidr"
+fetch.github = "bschaatsbergen/cidr"

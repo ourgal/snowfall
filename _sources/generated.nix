@@ -287,6 +287,17 @@
     };
     date = "2024-07-26";
   };
+  cidr = {
+    pname = "cidr";
+    version = "v2.2.0";
+    src = fetchFromGitHub {
+      owner = "bschaatsbergen";
+      repo = "cidr";
+      rev = "v2.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-8Tf7He7pY5A5UqpQ9lwJTW8DC4qBu0AEuGOXHpYo6bQ=";
+    };
+  };
   clashctl = {
     pname = "clashctl";
     version = "0.3.3";

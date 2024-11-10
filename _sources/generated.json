@@ -511,6 +511,27 @@
         },
         "version": "abf37336437867cbd99ce2f8849b717415391cc3"
     },
+    "cidr": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "cidr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bschaatsbergen",
+            "repo": "cidr",
+            "rev": "v2.2.0",
+            "sha256": "sha256-8Tf7He7pY5A5UqpQ9lwJTW8DC4qBu0AEuGOXHpYo6bQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.0"
+    },
     "clashctl": {
         "cargoLocks": null,
         "date": null,
