@@ -3531,6 +3531,27 @@
         },
         "version": "v0.4.5"
     },
+    "render": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "render",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "VirtusLab",
+            "repo": "render",
+            "rev": "v0.3.0",
+            "sha256": "sha256-BA9kwNWKH1JzVDi+gWkEN19VoTZnuLyGATAzOVtnIXs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.3.0"
+    },
     "repoblame": {
         "cargoLocks": null,
         "date": "2024-09-15",

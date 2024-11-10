@@ -12,6 +12,7 @@ args.module (
         chepy
         complate
         pypipe
+        render
         # keep-sorted end
       ]
       ++ cat_win.optional-dependencies.clip
