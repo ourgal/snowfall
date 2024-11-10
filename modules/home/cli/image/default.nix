@@ -28,6 +28,7 @@ args.module (
       "manga-tui"
       "pik"
       "rimage"
+      "sprite-dicing"
       "svgshift"
       "textimg"
       # keep-sorted end

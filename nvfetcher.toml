@@ -998,3 +998,7 @@ fetch.github = "benelan/git-mux"
 [cdo]
 src.git = "https://github.com/dotboris/cdo"
 fetch.github = "dotboris/cdo"
+
+[sprite-dicing]
+src.github = "elringus/sprite-dicing"
+fetch.github = "elringus/sprite-dicing"

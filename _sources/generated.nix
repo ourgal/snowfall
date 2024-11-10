@@ -2090,6 +2090,17 @@
       sha256 = "sha256-i9IBe5jcCCzWRxu+dbx3neu5jakZe/Zzi3+FgtYNynk=";
     };
   };
+  sprite-dicing = {
+    pname = "sprite-dicing";
+    version = "v2.1.0";
+    src = fetchFromGitHub {
+      owner = "elringus";
+      repo = "sprite-dicing";
+      rev = "v2.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-Wyws9I/ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=";
+    };
+  };
   ssh-tpm-agent = {
     pname = "ssh-tpm-agent";
     version = "v0.7.0";
