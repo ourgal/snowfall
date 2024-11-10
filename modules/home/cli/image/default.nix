@@ -25,6 +25,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "autocrop"
+      "gif-progress"
       "manga-tui"
       "pik"
       "rimage"
