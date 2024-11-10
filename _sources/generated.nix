@@ -1922,6 +1922,17 @@
       sha256 = "sha256-9hZ7ZS+p6PoLKcuHS2re537wxojN2SzhOm5gBuRX9Xc=";
     };
   };
+  render = {
+    pname = "render";
+    version = "v0.3.0";
+    src = fetchFromGitHub {
+      owner = "VirtusLab";
+      repo = "render";
+      rev = "v0.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-BA9kwNWKH1JzVDi+gWkEN19VoTZnuLyGATAzOVtnIXs=";
+    };
+  };
   repoblame = {
     pname = "repoblame";
     version = "66c7eb2ce6a62f60be1711e8975c1b582ec39045";
