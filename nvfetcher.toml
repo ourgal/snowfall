@@ -1002,3 +1002,7 @@ fetch.github = "dotboris/cdo"
 [sprite-dicing]
 src.github = "elringus/sprite-dicing"
 fetch.github = "elringus/sprite-dicing"
+
+[servicer]
+src.github = "servicer-labs/servicer"
+fetch.github = "servicer-labs/servicer"

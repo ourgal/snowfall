@@ -2034,6 +2034,17 @@
       sha256 = "sha256-koD5aFqL+XVxc5Iq3reTYIHiPm0z7hAQ4K59IfbY4Hg=";
     };
   };
+  servicer = {
+    pname = "servicer";
+    version = "v0.1.13";
+    src = fetchFromGitHub {
+      owner = "servicer-labs";
+      repo = "servicer";
+      rev = "v0.1.13";
+      fetchSubmodules = false;
+      sha256 = "sha256-4/6vu/iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=";
+    };
+  };
   shipit = {
     pname = "shipit";
     version = "0.4.0";
