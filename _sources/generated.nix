@@ -2862,6 +2862,15 @@
     };
     date = "2023-10-08";
   };
+  vsc-fugitive = {
+    pname = "vsc-fugitive";
+    version = "0.0.21";
+    src = fetchurl {
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.21/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.0.21.zip";
+      sha256 = "sha256-DxnQUbmqVbWShJAWiF8IbWeMtvUvMtXRVBDzJAJ+l9c=";
+    };
+  };
   "web-search.fish" = {
     pname = "web-search.fish";
     version = "29d3027685cdc7f8ed857e3888733c6d5b5458fb";
