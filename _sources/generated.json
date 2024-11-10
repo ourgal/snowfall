@@ -3909,6 +3909,27 @@
         },
         "version": "v0.7.0"
     },
+    "stego": {
+        "cargoLocks": null,
+        "date": "2019-10-22",
+        "extract": null,
+        "name": "stego",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ajmwagar",
+            "repo": "stego",
+            "rev": "d9d5911f4d2d141fea74936f235a74bf03961c71",
+            "sha256": "sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "d9d5911f4d2d141fea74936f235a74bf03961c71"
+    },
     "sunbeam": {
         "cargoLocks": null,
         "date": null,

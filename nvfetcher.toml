@@ -1006,3 +1006,7 @@ fetch.github = "elringus/sprite-dicing"
 [servicer]
 src.github = "servicer-labs/servicer"
 fetch.github = "servicer-labs/servicer"
+
+[stego]
+src.git = "https://github.com/ajmwagar/stego"
+fetch.github = "ajmwagar/stego"

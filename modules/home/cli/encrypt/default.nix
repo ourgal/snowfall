@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "stego";
     nixPkgs = [
       # keep-sorted start
       "bottom-rs"

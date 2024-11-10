@@ -2123,6 +2123,18 @@
       sha256 = "sha256-yK7G+wZIn+kJazKOFOs8EYlRWZkCQuT0qZfmdqbcOnM=";
     };
   };
+  stego = {
+    pname = "stego";
+    version = "d9d5911f4d2d141fea74936f235a74bf03961c71";
+    src = fetchFromGitHub {
+      owner = "ajmwagar";
+      repo = "stego";
+      rev = "d9d5911f4d2d141fea74936f235a74bf03961c71";
+      fetchSubmodules = false;
+      sha256 = "sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=";
+    };
+    date = "2019-10-22";
+  };
   sunbeam = {
     pname = "sunbeam";
     version = "v1.0.0";
