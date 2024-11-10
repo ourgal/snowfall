@@ -1010,3 +1010,7 @@ fetch.github = "servicer-labs/servicer"
 [stego]
 src.git = "https://github.com/ajmwagar/stego"
 fetch.github = "ajmwagar/stego"
+
+[ahoy]
+src.github = "ahoy-cli/ahoy"
+fetch.github = "ahoy-cli/ahoy"

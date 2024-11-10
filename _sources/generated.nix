@@ -26,6 +26,17 @@
       sha256 = "sha256-I4wF4PuhDUnM7YluERJzMWysUODtfUTPOo4nvNSGZ8U=";
     };
   };
+  ahoy = {
+    pname = "ahoy";
+    version = "v2.2.0";
+    src = fetchFromGitHub {
+      owner = "ahoy-cli";
+      repo = "ahoy";
+      rev = "v2.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-xwjfY9HudxVz3xEEyRPtWysbojtan56ABBL3KgG0J/8=";
+    };
+  };
   akuse = {
     pname = "akuse";
     version = "1.9.0";
