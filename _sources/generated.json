@@ -4737,6 +4737,27 @@
         },
         "version": "v1.0.1"
     },
+    "updo": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "updo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Owloops",
+            "repo": "updo",
+            "rev": "v0.1.2",
+            "sha256": "sha256-AkzniJ58tcesLSsOaJW1n1z4cavo2O8DUD0+ImBBLgM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.2"
+    },
     "v": {
         "cargoLocks": null,
         "date": "2024-11-03",

@@ -1014,3 +1014,7 @@ fetch.github = "ajmwagar/stego"
 [ahoy]
 src.github = "ahoy-cli/ahoy"
 fetch.github = "ahoy-cli/ahoy"
+
+[updo]
+src.github = "Owloops/updo"
+fetch.github = "Owloops/updo"

@@ -2580,6 +2580,17 @@
       sha256 = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
     };
   };
+  updo = {
+    pname = "updo";
+    version = "v0.1.2";
+    src = fetchFromGitHub {
+      owner = "Owloops";
+      repo = "updo";
+      rev = "v0.1.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-AkzniJ58tcesLSsOaJW1n1z4cavo2O8DUD0+ImBBLgM=";
+    };
+  };
   v = {
     pname = "v";
     version = "353a0e7620294d840bdffcf0e7c5e287625a9709";
