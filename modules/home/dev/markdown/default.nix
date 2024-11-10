@@ -18,6 +18,8 @@ args.module (
       "marksman"
       "md-tangle"
       "mdbook"
+      "vale"
+      "vale-ls"
       # keep-sorted end
     ];
     enable = [
