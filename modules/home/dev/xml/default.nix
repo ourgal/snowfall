@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "dasel"
       "faq"
+      "xq-xml"
       # keep-sorted end
     ];
   }
