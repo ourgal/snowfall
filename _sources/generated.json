@@ -3741,6 +3741,27 @@
         },
         "version": "0.3.3"
     },
+    "servicer": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "servicer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "servicer-labs",
+            "repo": "servicer",
+            "rev": "v0.1.13",
+            "sha256": "sha256-4/6vu/iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.13"
+    },
     "shipit": {
         "cargoLocks": null,
         "date": null,
