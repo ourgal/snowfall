@@ -1030,3 +1030,7 @@ fetch.github = "1xyz/pryrite"
 [render]
 src.github = "VirtusLab/render"
 fetch.github = "VirtusLab/render"
+
+[hssp]
+src.git = "https://github.com/sterchelen/hssp"
+fetch.github = "sterchelen/hssp"
