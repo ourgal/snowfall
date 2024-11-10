@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "cidr"
       "get_cert"
+      "hssp"
       "impala"
       "updo"
       "vl"

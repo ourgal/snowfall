@@ -1294,6 +1294,18 @@
       sha256 = "sha256-LAlI/QFrKJTB1fDuNSOrf1u5nB1w3vNAYixYiUnYg0o=";
     };
   };
+  hssp = {
+    pname = "hssp";
+    version = "a08b37f4faca8b4269531be375c046f9beede0a0";
+    src = fetchFromGitHub {
+      owner = "sterchelen";
+      repo = "hssp";
+      rev = "a08b37f4faca8b4269531be375c046f9beede0a0";
+      fetchSubmodules = false;
+      sha256 = "sha256-y6k2Jcx6NZKU4i7OghWPlqEW/gZkDJtw5Rhqx+7SRyU=";
+    };
+    date = "2023-02-09";
+  };
   hypergrep = {
     pname = "hypergrep";
     version = "v0.1.1";
