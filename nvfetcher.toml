@@ -1022,3 +1022,7 @@ fetch.github = "Owloops/updo"
 [cidr]
 src.github = "bschaatsbergen/cidr"
 fetch.github = "bschaatsbergen/cidr"
+
+[pryrite]
+src.github = "1xyz/pryrite"
+fetch.github = "1xyz/pryrite"

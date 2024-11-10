@@ -1783,6 +1783,17 @@
       sha256 = "sha256-6nclWKouYp6ENGK23DQ6Wq9gpIQQjXHyLSOxyKV1i8A=";
     };
   };
+  pryrite = {
+    pname = "pryrite";
+    version = "0.10.20";
+    src = fetchFromGitHub {
+      owner = "1xyz";
+      repo = "pryrite";
+      rev = "0.10.20";
+      fetchSubmodules = false;
+      sha256 = "sha256-mhdS4Wnb0DseddrofyEQZed9VcbfQj0MpoXXOQY2Ct8=";
+    };
+  };
   puffer-fish = {
     pname = "puffer-fish";
     version = "12d062eae0ad24f4ec20593be845ac30cd4b5923";
