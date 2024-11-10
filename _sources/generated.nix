@@ -510,6 +510,17 @@
     };
     date = "2024-08-18";
   };
+  dnspyre = {
+    pname = "dnspyre";
+    version = "v3.5.0";
+    src = fetchFromGitHub {
+      owner = "Tantalor93";
+      repo = "dnspyre";
+      rev = "v3.5.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-bcBVpCX7n0IpdLn5VqG+1yDiH5Yy8Kn9UGd8KVwDYhI=";
+    };
+  };
   docker-alist = {
     pname = "docker-alist";
     version = "v3.39.1";
