@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "get_cert"
       "impala"
+      "updo"
       "vl"
       # keep-sorted end
     ];
