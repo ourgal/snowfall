@@ -33,6 +33,7 @@ args.module (
       "time"
       "touch"
       "tree"
+      "uniq"
       "watch"
       "which"
       # keep-sorted end
