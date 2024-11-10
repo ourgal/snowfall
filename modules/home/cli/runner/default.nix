@@ -21,6 +21,7 @@ args.module (
       "cmdx"
       "machma"
       "makedown"
+      "pryrite"
       "sake"
       # keep-sorted end
     ];
