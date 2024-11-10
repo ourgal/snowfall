@@ -20,6 +20,7 @@ args.module (
         "poetry"
         "pylint"
         "pyright"
+        "python-launcher"
         "rye"
         "uv"
         "zxpy"
