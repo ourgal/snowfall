@@ -15,13 +15,15 @@ args.module (
           "files.autoSave" = "afterDelay";
           "files.autoSaveDelay" = 1000;
           "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Fira Code', monospace";
-          "editor.fontSize" = "18";
+          "editor.fontSize" = "16";
         };
         package = pkgs.vscodium;
       };
       enable = [
         # keep-sorted start
+        "catppuccin"
         "even_better_toml"
+        "fugitive"
         "nix-ide"
         "vim"
         # keep-sorted end

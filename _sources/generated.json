@@ -5241,6 +5241,21 @@
         },
         "version": "f57518bf6ac1b6c5e10db6a9259016b84ff81d8b"
     },
+    "vsc-fugitive": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "vsc-fugitive",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "vscode-fugitive-0.0.21.zip",
+            "sha256": "sha256-DxnQUbmqVbWShJAWiF8IbWeMtvUvMtXRVBDzJAJ+l9c=",
+            "type": "url",
+            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.21/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+        },
+        "version": "0.0.21"
+    },
     "web-search.fish": {
         "cargoLocks": null,
         "date": "2024-10-14",
