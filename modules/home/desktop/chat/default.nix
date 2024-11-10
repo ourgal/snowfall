@@ -4,8 +4,11 @@ args.module (
   // {
     path = ./.;
     nixPkgs = [
+      # keep-sorted start
+      "discord"
       "element-desktop"
       "telegram-desktop"
+      # keep-sorted end
     ];
   }
 )
