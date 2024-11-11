@@ -20,6 +20,9 @@ args.module (
       tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";
       zellij-popup = "${pkgs.${namespace}.zellij-popup}/bin/zellij-popup";
       cfg = cfgHome config.${namespace} ./.;
+      toggleBool = pkgs.writeShellScript "toggle_boolen" ''
+        awk '{if ($0 ~ /true/) printf "false"; else if ($0 ~ /false/) printf "true";else if ($0 ~ /True/) printf "False"; else if ($0 ~ /False/) printf "True"; else printf $0;}'
+      '';
 
       zellijEnter = "zellij action write 13";
     in
@@ -234,11 +237,11 @@ args.module (
                 "C-s" = "select_regex";
                 "C-c" = { };
                 "C-a" = [
-                  ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                  ":pipe ${toggleBool}"
                   "increment"
                 ];
                 "C-x" = [
-                  ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                  ":pipe ${toggleBool}"
                   "decrement"
                 ];
               };
@@ -361,11 +364,11 @@ args.module (
                   "C-s" = "select_regex";
                   "C-c" = { };
                   "C-a" = [
-                    ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                    ":pipe ${toggleBool}"
                     "increment"
                   ];
                   "C-x" = [
-                    ":pipe awk '{if ($0 ~ /true/) printf \"false\"; else if ($0 ~ /false/) printf \"true\";else if ($0 ~ /True/) printf \"False\"; else if ($0 ~ /False/) printf \"True\"; else printf $0;}'"
+                    ":pipe ${toggleBool}"
                     "decrement"
                   ];
                 };
