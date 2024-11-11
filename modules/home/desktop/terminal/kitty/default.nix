@@ -4,7 +4,8 @@ args.module (
   // {
     path = ./.;
     progs.kitty = {
-      catppuccin.enable = true;
+      catppuccin.enable = false;
+      theme = "Tomorrow Night Bright";
       font = {
         name = "FiraCode Nerd Font Mono";
         size = 14;
