@@ -32,7 +32,7 @@ in
     name = mkOpt' str "zxc";
     browser = mkOpt' str "firefox";
     editor = mkOpt' str "hx";
-    terminal = mkOpt' str "wezterm";
+    terminal = mkOpt' str "kitty";
     browserS = mkOpt' str "brave";
     browserSS = mkOpt' str "qutebrowser";
     pager = mkOpt' str "moar";
@@ -53,6 +53,7 @@ in
       sessionVariables = {
         EDITOR = cfg.editor;
         PAGER = cfg.pager;
+        TERMINAL = cfg.terminal;
       };
       stateVersion = "23.11";
     };
