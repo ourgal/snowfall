@@ -14,7 +14,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/ThaUnknown/miru/releases/download/v${version}/linux-Miru-${version}.AppImage";
-    hash = "sha256-yfavGhH/QROChWB0MxYt8+dssYo0+/1bV+h2Ce951RE=";
+    hash = "sha256-4ueVgIcIi/RIFRoDKStiNqszfaIXZ9dfagddzCVaSRs=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };

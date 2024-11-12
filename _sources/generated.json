@@ -1202,12 +1202,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.7.1",
-            "sha256": "sha256-oXZmVoGqV8tgvuYLDYVBi3Uf7deT7IABRQunOGl9wvE=",
+            "rev": "v2.7.3",
+            "sha256": "sha256-5e9x90IpgBm1C1JKJ8SmfKwuqmmBgqBx7vIRZKMtLig=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.1"
+        "version": "v2.7.3"
     },
     "fc-fish": {
         "cargoLocks": null,
@@ -1677,7 +1677,7 @@
         "extract": null,
         "name": "geminicommit",
         "passthru": null,
-        "pinned": false,
+        "pinned": true,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
@@ -2238,7 +2238,7 @@
         "extract": null,
         "name": "grip-grab",
         "passthru": null,
-        "pinned": false,
+        "pinned": true,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
@@ -2870,12 +2870,12 @@
             "name": null,
             "owner": "ThaUnknown",
             "repo": "miru",
-            "rev": "v5.5.6",
-            "sha256": "sha256-T32a7xcgPeDSmRjW10iSvIuTgFOM3KONPbxaV1y+sRY=",
+            "rev": "v5.5.8",
+            "sha256": "sha256-IMoB1VUPmIx+wQ6QZJvF1WdVfjRM+hCaKQn17tLb37U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v5.5.6"
+        "version": "v5.5.8"
     },
     "mpv-M-x": {
         "cargoLocks": null,
@@ -3269,12 +3269,12 @@
             "name": null,
             "owner": "darrenburns",
             "repo": "posting",
-            "rev": "2.0.1",
-            "sha256": "sha256-6KtC5VuG3x07VTenpyDAJr9KO4jdTCFk1u/pSoyYPsc=",
+            "rev": "2.1.1",
+            "sha256": "sha256-i3wftbQTg0zD7dLQhEFIoBX+ehMpHk15W1kQqbWkv7Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.0.1"
+        "version": "2.1.1"
     },
     "pot": {
         "cargoLocks": null,
@@ -3449,7 +3449,7 @@
     },
     "quartz": {
         "cargoLocks": null,
-        "date": "2024-10-03",
+        "date": "2024-11-10",
         "extract": null,
         "name": "quartz",
         "passthru": null,
@@ -3461,12 +3461,12 @@
             "name": null,
             "owner": "vimpostor",
             "repo": "quartz",
-            "rev": "64686482cb9e8a24a53d44134497a600eaa5d275",
-            "sha256": "sha256-sDMD68hwSEcFAEfuv1sn3JcGCL8bRSYxkgv24vrwcb4=",
+            "rev": "f434332abba5341d4e520f2fe18710fff6089089",
+            "sha256": "sha256-czg17UhEuvQvhPh7j0CsWtaCNszXqFxf6jPyKvM5HIY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "64686482cb9e8a24a53d44134497a600eaa5d275"
+        "version": "f434332abba5341d4e520f2fe18710fff6089089"
     },
     "radio-go-go": {
         "cargoLocks": null,

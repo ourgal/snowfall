@@ -221,6 +221,7 @@ fetch.github = "ayoisaiah/focus"
 [geminicommit]
 src.github = "tfkhdyt/geminicommit"
 fetch.github = "tfkhdyt/geminicommit"
+pinned = true
 
 [gg]
 src.git = "https://github.com/qw3rtman/gg"
@@ -678,6 +679,7 @@ fetch.github = "ellisonleao/vl"
 [grip-grab]
 src.github = "alexpasmantier/grip-grab"
 fetch.github = "alexpasmantier/grip-grab"
+pinned = true
 
 [hypergrep]
 src.github = "p-ranav/hypergrep"
