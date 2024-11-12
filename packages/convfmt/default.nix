@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.convfmt) pname version src;
 
-  cargoHash = "sha256-OVCnY0/hw+VOIvDYcQO/FEQk3W0qQOqAPW8SAYG0xyY=";
+  cargoLock = _sources.convfmt.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Cli tool which can convert different formats";

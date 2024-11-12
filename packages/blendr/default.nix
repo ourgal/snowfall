@@ -12,7 +12,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.blendr) pname src version;
 
-  cargoHash = "sha256-2LbHEXLyrWIbWhCzbhB0rS2olBhueTl9cucaz92iYTk=";
+  cargoLock = _sources.blendr.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

@@ -1,23 +1,18 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.serie) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.serie) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/lusingander/serie/releases/download/v${version}/serie-${version}-x86_64-unknown-linux-gnu.tar.gz";
-    hash = "sha256-Phj+DJbB8x3UOKNFQOfejbdtAj9Fnj+ROAe4imPs/Rw=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D serie $out/bin/serie
+    install -Dm755 serie -t $out/bin
     runHook postInstall
   '';
 

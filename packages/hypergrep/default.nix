@@ -1,22 +1,27 @@
 {
   lib,
   stdenv,
-  fetchzip,
+  unzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.hypergrep) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.hypergrep) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/p-ranav/hypergrep/releases/download/v${version}/hg_${version}.zip";
-    hash = "sha256-L4DRzWqMB+wWmbbF54Fuu4LQjfbu9FmAK3pMAmBKpAk=";
-  };
+  nativeBuildInputs = [ unzip ];
+
+  unpackPhase = ''
+    runHook preUnpack
+    LANG=en_US.UTF-8 unzip -qq "$src"
+    runHook postUnpack
+  '';
+
+  sourceRoot = ".";
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D hg $out/bin/hg
+    install -Dm755 hg -t $out/bin
     runHook postInstall
   '';
 

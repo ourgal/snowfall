@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.tuime) pname version src;
 
-  cargoHash = "sha256-0Y/fE1ydvVg/oOwbZ/49zUDD/84FYq8BQ3mfgbtTrSE=";
+  cargoLock = _sources.tuime.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Tui clock written in rust";

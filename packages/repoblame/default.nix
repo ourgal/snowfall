@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.repoblame) pname version src;
 
-  cargoHash = "sha256-/8DyiWX2s0Dx0OQJnaQPCym0jp66pQ1KnOwXTtlPjwk=";
+  cargoLock = _sources.repoblame.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Aggregate git blame stats across any git repository. Find out top contributors by Lines of Code";

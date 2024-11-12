@@ -8,7 +8,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.lobtui) pname version src;
 
-  cargoHash = "sha256-DUDERnhvnnGhjFH5KpIKmx1XNNAu2sDsf8DVhVfcd60=";
+  cargoLock = _sources.lobtui.cargoLock."Cargo.lock";
 
   buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 

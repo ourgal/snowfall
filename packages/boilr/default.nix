@@ -1,23 +1,18 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.boilr) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.boilr) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/tmrts/boilr/releases/download/${version}/boilr-${version}-linux_amd64.tgz";
-    hash = "sha256-HHqQnUXkaDOjWZ2AwZnndGKl/ZuJxzz5N2mVeL5KKPg=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D boilr $out/bin/boilr
+    install -Dm755 boilr -t $out/bin
     runHook postInstall
   '';
 

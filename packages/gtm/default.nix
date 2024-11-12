@@ -1,20 +1,20 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.gtm) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.gtm) pname version src;
 
-  src = fetchzip {
-    hash = "sha256-Jb8JCKJ4WvA7hLwDkywnBIW+xOYrr3Uww3/OUUk+ZDI=";
-    url = "https://github.com/git-time-metric/gtm/releases/download/v${version}/gtm.v${version}.linux.tar.gz";
-  };
+  sourceRoot = ".";
 
   dontBuild = true;
 
-  installPhase = "install -D -m0755 gtm $out/bin/gtm";
+  installPhase = ''
+    runHook preInstall
+    install -Dm755 gtm -t $out/bin
+    runHook postInstall
+  '';
 
   meta = with lib; {
     description = "Simple, seamless, lightweight time tracking for Git";

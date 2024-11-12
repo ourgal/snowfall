@@ -1,23 +1,18 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.cmdx) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.cmdx) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/v${version}/cmdx_linux_amd64.tar.gz";
-    hash = "sha256-lo2iv5gYAqGOIBKIgOLNVc8qAACzxzTzhXjJdITNRLE=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D cmdx $out/bin/cmdx
+    install -Dm755 cmdx -t $out/bin
     runHook postInstall
   '';
 
