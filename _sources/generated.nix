@@ -649,13 +649,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.1";
+    version = "v2.7.3";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.1";
+      rev = "v2.7.3";
       fetchSubmodules = false;
-      sha256 = "sha256-oXZmVoGqV8tgvuYLDYVBi3Uf7deT7IABRQunOGl9wvE=";
+      sha256 = "sha256-5e9x90IpgBm1C1JKJ8SmfKwuqmmBgqBx7vIRZKMtLig=";
     };
   };
   fc-fish = {
@@ -1554,13 +1554,13 @@
   };
   miru = {
     pname = "miru";
-    version = "v5.5.6";
+    version = "v5.5.8";
     src = fetchFromGitHub {
       owner = "ThaUnknown";
       repo = "miru";
-      rev = "v5.5.6";
+      rev = "v5.5.8";
       fetchSubmodules = false;
-      sha256 = "sha256-T32a7xcgPeDSmRjW10iSvIuTgFOM3KONPbxaV1y+sRY=";
+      sha256 = "sha256-IMoB1VUPmIx+wQ6QZJvF1WdVfjRM+hCaKQn17tLb37U=";
     };
   };
   mpv-M-x = {
@@ -1775,13 +1775,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.0.1";
+    version = "2.1.1";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.0.1";
+      rev = "2.1.1";
       fetchSubmodules = false;
-      sha256 = "sha256-6KtC5VuG3x07VTenpyDAJr9KO4jdTCFk1u/pSoyYPsc=";
+      sha256 = "sha256-i3wftbQTg0zD7dLQhEFIoBX+ehMpHk15W1kQqbWkv7Q=";
     };
   };
   pot = {
@@ -1877,15 +1877,15 @@
   };
   quartz = {
     pname = "quartz";
-    version = "64686482cb9e8a24a53d44134497a600eaa5d275";
+    version = "f434332abba5341d4e520f2fe18710fff6089089";
     src = fetchFromGitHub {
       owner = "vimpostor";
       repo = "quartz";
-      rev = "64686482cb9e8a24a53d44134497a600eaa5d275";
+      rev = "f434332abba5341d4e520f2fe18710fff6089089";
       fetchSubmodules = false;
-      sha256 = "sha256-sDMD68hwSEcFAEfuv1sn3JcGCL8bRSYxkgv24vrwcb4=";
+      sha256 = "sha256-czg17UhEuvQvhPh7j0CsWtaCNszXqFxf6jPyKvM5HIY=";
     };
-    date = "2024-10-03";
+    date = "2024-11-10";
   };
   radio-go-go = {
     pname = "radio-go-go";
