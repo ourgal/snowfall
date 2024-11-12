@@ -1048,3 +1048,7 @@ fetch.vsmarketplace = "hnrk-str.vscode-fugitive"
 [pmark]
 src.git = "https://github.com/purarue/pmark"
 fetch.github = "purarue/pmark"
+
+[mdsf]
+src.github = "hougesen/mdsf"
+fetch.url = "https://github.com/hougesen/mdsf/releases/download/$ver/mdsf-x86_64-unknown-linux-gnu.tar.gz"

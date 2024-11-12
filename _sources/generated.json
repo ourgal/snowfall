@@ -2814,6 +2814,21 @@
         },
         "version": "0.2.1"
     },
+    "mdsf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mdsf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-l8NCTQwBOC6FfUT7sYDZGNgjEQj8GXi6IctApvz+ZdY=",
+            "type": "url",
+            "url": "https://github.com/hougesen/mdsf/releases/download/v0.3.0/mdsf-x86_64-unknown-linux-gnu.tar.gz"
+        },
+        "version": "v0.3.0"
+    },
     "mdtt": {
         "cargoLocks": null,
         "date": null,

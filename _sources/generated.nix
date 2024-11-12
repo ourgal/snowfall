@@ -1529,6 +1529,14 @@
       sha256 = "sha256-v6xtU6qZMhUnWFcCJOm9CcmLe6nKxmV9qGDM8o8MPe4=";
     };
   };
+  mdsf = {
+    pname = "mdsf";
+    version = "v0.3.0";
+    src = fetchurl {
+      url = "https://github.com/hougesen/mdsf/releases/download/v0.3.0/mdsf-x86_64-unknown-linux-gnu.tar.gz";
+      sha256 = "sha256-l8NCTQwBOC6FfUT7sYDZGNgjEQj8GXi6IctApvz+ZdY=";
+    };
+  };
   mdtt = {
     pname = "mdtt";
     version = "v0.2.1";
