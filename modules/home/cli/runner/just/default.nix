@@ -45,6 +45,9 @@ args.module (
         clash:
           @${clash}
 
+        yt-rss url:
+          @curl -s '{{url}}' | rg -o '\"(https://www.youtube.com/feeds/videos.xml\?channel_id=.*?)\"' -r '$1' | cut -d \n -f 1 | xclip -sel clip
+
         help:
           @just --list --justfile ~/.user.justfile
       '';
