@@ -1754,6 +1754,18 @@
     };
     date = "2024-01-11";
   };
+  mpv-btfs-stream = {
+    pname = "mpv-btfs-stream";
+    version = "47004fb3d176fe83c58220dd34264c720320522a";
+    src = fetchFromGitHub {
+      owner = "noctuid";
+      repo = "mpv-btfs-stream";
+      rev = "47004fb3d176fe83c58220dd34264c720320522a";
+      fetchSubmodules = false;
+      sha256 = "sha256-IAzbH4TrlKQtZEUqSSK/8z2ahY4d5Lb0XuiO2aZtkKo=";
+    };
+    date = "2021-07-16";
+  };
   mpv-smartcopypaste_ii = {
     pname = "mpv-smartcopypaste_ii";
     version = "48d68283cea47ff8e904decc9003b3abc3e2123e";

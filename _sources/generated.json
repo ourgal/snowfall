@@ -3080,6 +3080,27 @@
         },
         "version": "d0390c8e802c2e888ff4a2e1d5e4fb040f855b89"
     },
+    "mpv-btfs-stream": {
+        "cargoLocks": null,
+        "date": "2021-07-16",
+        "extract": null,
+        "name": "mpv-btfs-stream",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "noctuid",
+            "repo": "mpv-btfs-stream",
+            "rev": "47004fb3d176fe83c58220dd34264c720320522a",
+            "sha256": "sha256-IAzbH4TrlKQtZEUqSSK/8z2ahY4d5Lb0XuiO2aZtkKo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "47004fb3d176fe83c58220dd34264c720320522a"
+    },
     "mpv-smartcopypaste_ii": {
         "cargoLocks": null,
         "date": "2023-11-25",

@@ -1115,3 +1115,7 @@ fetch.url = "https://github.com/alexpasmantier/television/releases/download/$ver
 src.git = "https://codeberg.org/mergiraf/mergiraf"
 fetch.git = "https://codeberg.org/mergiraf/mergiraf"
 cargo_locks = ["Cargo.lock"]
+
+[mpv-btfs-stream]
+src.git = "https://github.com/noctuid/mpv-btfs-stream"
+fetch.github = "noctuid/mpv-btfs-stream"
