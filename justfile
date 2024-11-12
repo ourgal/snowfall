@@ -1,3 +1,5 @@
+alias u := update
+
 default: home
 
 home:
@@ -5,7 +7,7 @@ home:
     @nh home switch
 
 update:
-	@cache -s "$(date +%Y-%m-%d)" -- nvfetcher --keyfile keyfile.toml
+	@nvfetcher --keyfile keyfile.toml
 
 man-home:
 	@man home-configuration.nix
@@ -19,3 +21,19 @@ init url:
     declare -r dir=packages/$(basename "$url")
     mkdir -p "$dir"
     nix-init -u "$url" "$dir/default.nix"
+
+deploy host:
+	@git add .
+	@deploy .#{{host}}
+
+go pkg:
+	@nix-prefetch --option extra-experimental-features flakes "{ sha256 }: (builtins.getFlake (toString ./.)).packages.x86_64-linux.{{pkg}}.goModules.overrideAttrs (_: { vendorSha256 = sha256; })" | tee /dev/tty | xclip
+
+rust pkg:
+	@nix-prefetch --option extra-experimental-features flakes "{ sha256 }: (builtins.getFlake (toString ./.)).packages.x86_64-linux.{{pkg}}.cargoDeps.overrideAttrs (_: { vendorSha256 = sha256; })" | tee /dev/tty | xclip
+
+search pkg:
+	@nix-search {{pkg}}
+
+searchc pkg:
+	@nix-search -c $(cat /etc/os-release | grep VERSION_ID | cut -d\" -f 2) {{pkg}}
