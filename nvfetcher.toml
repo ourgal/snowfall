@@ -1106,3 +1106,7 @@ fetch.url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/$ver/m
 [gif-progress]
 src.github = "nwtgck/gif-progress"
 fetch.url = "https://github.com/nwtgck/gif-progress/releases/download/$ver/gif-progress-linux-amd64.tar.gz"
+
+[television]
+src.github = "alexpasmantier/television"
+fetch.url = "https://github.com/alexpasmantier/television/releases/download/$ver/tv-$ver-linux-x86_64.tar.gz"

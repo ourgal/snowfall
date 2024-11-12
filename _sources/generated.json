@@ -4391,6 +4391,21 @@
         },
         "version": "2731e1c441d81a3b2217b132e1f40ce4ea49ec5f"
     },
+    "television": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "television",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-4TJEwCNcwTiky1iAj5PzDsI4GPB/6fCgTbIu2QAl5Ps=",
+            "type": "url",
+            "url": "https://github.com/alexpasmantier/television/releases/download/v0.4.20/tv-v0.4.20-linux-x86_64.tar.gz"
+        },
+        "version": "v0.4.20"
+    },
     "templify": {
         "cargoLocks": {
             "Cargo.lock": [
