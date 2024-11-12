@@ -7,16 +7,6 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = [
-        # keep-sorted start
-        "git-toolbelt"
-        # keep-sorted end
-      ];
-      nixPkgs = [
-        # keep-sorted start
-        "git-extras"
-        # keep-sorted end
-      ];
       enable = [
         # keep-sorted start
         "add"
