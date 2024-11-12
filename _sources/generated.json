@@ -2933,6 +2933,33 @@
         },
         "version": "v0.2.1"
     },
+    "mergiraf": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./mergiraf-1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e/Cargo.lock",
+                {
+                    "tree-sitter-xml-0.7.0": "sha256-RTWvOUAs3Uql9DKsP1jf9FZZHaZORE40GXd+6g6RQZw="
+                }
+            ]
+        },
+        "date": "2024-11-12",
+        "extract": null,
+        "name": "mergiraf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e",
+            "sha256": "sha256-ChOYmrRfkyfVm4NylJqUIz1vEpoVMDQPsKZCm1GJjE8=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://codeberg.org/mergiraf/mergiraf"
+        },
+        "version": "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e"
+    },
     "minimal-tmux-status": {
         "cargoLocks": null,
         "date": "2024-11-04",

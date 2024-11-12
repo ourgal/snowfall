@@ -1110,3 +1110,8 @@ fetch.url = "https://github.com/nwtgck/gif-progress/releases/download/$ver/gif-p
 [television]
 src.github = "alexpasmantier/television"
 fetch.url = "https://github.com/alexpasmantier/television/releases/download/$ver/tv-$ver-linux-x86_64.tar.gz"
+
+[mergiraf]
+src.git = "https://codeberg.org/mergiraf/mergiraf"
+fetch.git = "https://codeberg.org/mergiraf/mergiraf"
+cargo_locks = ["Cargo.lock"]

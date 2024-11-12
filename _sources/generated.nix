@@ -1667,6 +1667,26 @@
       sha256 = "sha256-OFS/ZhXdvdmlpfCNutsvlhMv1krFlx4Xju8RSl3GS2s=";
     };
   };
+  mergiraf = {
+    pname = "mergiraf";
+    version = "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e";
+    src = fetchgit {
+      url = "https://codeberg.org/mergiraf/mergiraf";
+      rev = "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ChOYmrRfkyfVm4NylJqUIz1vEpoVMDQPsKZCm1GJjE8=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./mergiraf-1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e/Cargo.lock;
+      outputHashes = {
+        "tree-sitter-xml-0.7.0" = "sha256-RTWvOUAs3Uql9DKsP1jf9FZZHaZORE40GXd+6g6RQZw=";
+      };
+    };
+    date = "2024-11-12";
+  };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
     version = "d7188c1aeb1c7dd03230982445b7360f5e230131";
