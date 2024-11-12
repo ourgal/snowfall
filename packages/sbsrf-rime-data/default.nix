@@ -1,16 +1,20 @@
 {
-  fetchzip,
   stdenv,
+  unzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.sbsrf-rime-data) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.sbsrf-rime-data) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";
-    hash = "sha256-XIz53/6XGrnnE0qOQzsl9Q9zFvDpi5aOt1xB2pqRU/c=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
+
+  nativeBuildInputs = [ unzip ];
+
+  unpackPhase = ''
+    runHook preUnpack
+    LANG=en_US.UTF-8 unzip -qq "$src"
+    runHook postUnpack
+  '';
 
   installPhase = ''
     runHook preInstall

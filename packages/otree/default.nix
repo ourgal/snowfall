@@ -8,7 +8,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.otree) pname version src;
 
-  cargoHash = "sha256-qwH/qUOG+MIrctnPQVhCeumYmCDQB9iv1NZEdMhcdFY=";
+  cargoLock = _sources.otree.cargoLock."Cargo.lock";
 
   buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.IOKit ];
 

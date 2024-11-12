@@ -1,22 +1,16 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
 stdenv.mkDerivation rec {
-  inherit (_sources.rustywatch) pname version;
-
-  src = fetchzip {
-    url = "https://github.com/ak9024/rustywatch/releases/download/v${version}/rustywatch-${version}-x86_64-unknown-linux-gnu.tar.gz";
-    hash = "sha256-4ZqsjzyZTv6gNIpLGkWS5i+WBFrnrOzvFSWTwuGrwRA=";
-  };
+  inherit (_sources.rustywatch) pname version src;
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D rustywatch $out/bin/rustywatch
+    install -Dm755 rustywatch -t $out/bin
     runHook postInstall
   '';
 

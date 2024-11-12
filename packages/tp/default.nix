@@ -1,21 +1,16 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.tp) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.tp) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/minefuto/tp/releases/download/v${version}/tp_Linux_x86_64.tar.gz";
-    hash = "sha256-+ziOARrOL03AuMb9axU9BlPD+ZAp4XC1N0YAJLr0SfA=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D tp $out/bin/tp
+    install -Dm755 tp -t $out/bin
     runHook postInstall
   '';
 

@@ -1,22 +1,16 @@
 {
   lib,
   stdenv,
-  fetchzip,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.corgi) pname version;
-
-  src = fetchzip {
-    url = "https://github.com/junyu-w/corgi/releases/download/v${version}/corgi_v${version}_linux_64-bit.tar.gz";
-    hash = "sha256-kKJ09kJvxBqlGRfbTRRHw4hFpKP0sJqsfYvIuUfrJZQ=";
-  };
+stdenv.mkDerivation {
+  inherit (_sources.corgi) pname version src;
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D corgi $out/bin/corgi
+    install -Dm755 corgi -t $out/bin
     runHook postInstall
   '';
 

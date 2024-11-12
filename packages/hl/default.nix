@@ -1,23 +1,18 @@
 {
   lib,
-  fetchzip,
   stdenv,
   _sources,
 }:
-stdenv.mkDerivation rec {
-  inherit (_sources.hl) pname version;
+stdenv.mkDerivation {
+  inherit (_sources.hl) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/pamburus/hl/releases/download/v${version}/hl-linux-x86_64-gnu.tar.gz";
-    hash = "sha256-eILAte4fw0FjghJBSoj9bT1DxWJhWRx2oarzaUTZyYU=";
-    stripRoot = false;
-  };
+  sourceRoot = ".";
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D hl $out/bin/hl
+    install -Dm755 hl -t $out/bin
     runHook postInstall
   '';
 

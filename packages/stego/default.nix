@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.stego) pname version src;
 
-  cargoHash = "sha256-qfrVORbIQP2/u9UK0Ja14/uONNDfzxyhMIY4SGxeKqs=";
+  cargoLock = _sources.stego.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Stego is a steganographic swiss army knife";

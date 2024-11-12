@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.termsand) pname version src;
 
-  cargoHash = "sha256-E7EjEw8AmxqjbLrKuoRnVhiFPPDKrKGJiS3lfE9Psdk=";
+  cargoLock = _sources.termsand.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "";

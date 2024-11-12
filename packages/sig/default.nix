@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.sig) pname version src;
 
-  cargoHash = "sha256-gZZ2aOsqVqGN3gCBZnBXzlFicMssNIEyRT688OuNMJc=";
+  cargoLock = _sources.sig.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Interactive grep (for streaming";

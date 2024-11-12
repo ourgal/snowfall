@@ -172,6 +172,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-6QRI1MQnoppzlVfRV/bfqfTnBjC0/haFm52Ez9nltzw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./blendr-v1.3.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   bling = {
     pname = "bling";
@@ -206,16 +212,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-9svPIZzKuI4XBlxBsKucGLdX2dkfAy9ERT5oj8Su9TM=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./bluetui-v0.5.1/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   boilr = {
     pname = "boilr";
     version = "0.3.0";
-    src = fetchFromGitHub {
-      owner = "tmrts";
-      repo = "boilr";
-      rev = "0.3.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=";
+    src = fetchurl {
+      url = "https://github.com/tmrts/boilr/releases/download/0.3.0/boilr-0.3.0-linux_amd64.tgz";
+      sha256 = "sha256-vJTN8g2XcXJjekmV6g3hezck0pgNP6pRSrbulHbqwFU=";
     };
   };
   bt = {
@@ -273,6 +282,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-rPhaVlHFTFThu+QC4GAFNLijpOC26NYVKFn371hUPLw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./cdo-8aefae7fcac56615a053fc99fd5f977328ceea2b/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
     date = "2024-11-09";
   };
   chezmoi-vim = {
@@ -308,6 +323,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./clashctl-0.3.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   classifier = {
     pname = "classifier";
@@ -339,17 +360,20 @@
       fetchSubmodules = false;
       sha256 = "sha256-RP0/kquAlSwRMeB6cjvS5JB9qfdkT8IKLVxaxrmzJ+0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./cloneit-6198556e810d964cc5938c446ef42fc21b55fe0b/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
     date = "2024-07-28";
   };
   cmdx = {
     pname = "cmdx";
     version = "v1.7.4";
-    src = fetchFromGitHub {
-      owner = "suzuki-shunsuke";
-      repo = "cmdx";
-      rev = "v1.7.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-UzAtDTs9KGcImQVU6ve80j68you900ag+aJaVZXF3Dw=";
+    src = fetchurl {
+      url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/v1.7.4/cmdx_linux_amd64.tar.gz";
+      sha256 = "sha256-z2tkKCkXW9xk3xbQS3+qlTtoT0KQVXreS++bZh8/RFI=";
     };
   };
   code-radio-cli = {
@@ -362,16 +386,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N/ycu4g2W7187E3A=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./code-radio-cli-v1.0.5/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   comigo = {
     pname = "comigo";
     version = "v0.9.11.1";
-    src = fetchFromGitHub {
-      owner = "yumenaka";
-      repo = "comigo";
-      rev = "v0.9.11.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-+SyHeJkGh9G3tklqLCF5oBL8H6XAGSEo+hVDa5Zpdhw=";
+    src = fetchurl {
+      url = "https://github.com/yumenaka/comigo/releases/download/v0.9.11.1/comi_v0.9.11_Linux_x86_64.tar.gz";
+      sha256 = "sha256-2mVp3TwcdS9HB9vzz3MshK0HFJr5DIUlTDsegjlkw6Q=";
     };
   };
   complate = {
@@ -383,6 +410,12 @@
       rev = "0.14.0";
       fetchSubmodules = false;
       sha256 = "sha256-X/uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./complate-0.14.0/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   compose2nix = {
@@ -417,16 +450,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-k2Qj6/dllArP6jIDyiHA7luudsdQgipZMYY6Hm5hqEs=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./convfmt-0.1.6/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   corgi = {
     pname = "corgi";
-    version = "v0.2.4";
-    src = fetchFromGitHub {
-      owner = "junyu-w";
-      repo = "corgi";
-      rev = "v0.2.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=";
+    version = "0.2.4";
+    src = fetchurl {
+      url = "https://github.com/junyu-w/corgi/releases/download/v0.2.4/corgi_v0.2.4_linux_64-bit.tar.gz";
+      sha256 = "sha256-DYYU02p6/rO6sY1B1BKI/h+IhSdCRQl+YTuor5+dl1M=";
     };
   };
   "ctrl-z.fish" = {
@@ -571,6 +607,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-C+BEvRBm8f9rtcNQi86x4RHZiMsPl8dZNJToxG7MUxM=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./dra-0.6.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   easyjump-vim = {
     pname = "easyjump-vim";
@@ -634,6 +676,12 @@
       rev = "v0.1.17";
       fetchSubmodules = false;
       sha256 = "sha256-d2cStBjI2heQyP0cODRYQPvZJ4frFw7w5lsSdyvi5y8=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./envset-v0.1.17/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   facad = {
@@ -901,6 +949,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-/O548IEhGYSOSIG/xTGCi+P75poM5KY2AYW6lXRCtF0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./game_2048_tui-v0.0.2/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   gaze = {
     pname = "gaze";
@@ -990,6 +1044,14 @@
       sha256 = "sha256-p1GLENa6UIXcasXbJtj5wpS2nMnJzT7V7k3pwfJOano=";
     };
   };
+  gif-progress = {
+    pname = "gif-progress";
+    version = "release-fix-not-moving-progress-bar";
+    src = fetchurl {
+      url = "https://github.com/nwtgck/gif-progress/releases/download/release-fix-not-moving-progress-bar/gif-progress-linux-amd64.tar.gz";
+      sha256 = "sha256-dpPWs7S/iRUe2U91DN/+T/HyKtRZOl9FsV7ZulaqP40=";
+    };
+  };
   git-cal = {
     pname = "git-cal";
     version = "v0.9.1";
@@ -1010,6 +1072,12 @@
       rev = "3.0.0";
       fetchSubmodules = false;
       sha256 = "sha256-MsJDfmWU6LyK7M0LjYQufIpKmtS4f2hgo4Yi/x1HsrU=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./git-grab-3.0.0/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   git-heatgrid = {
@@ -1138,6 +1206,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-ZSpQJeiGn6J8G/35PTW6pRzPhTRW1Op3gakx/yXB3Zc=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./git-sumi-v0.0.9/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   git-toolbelt = {
     pname = "git-toolbelt";
@@ -1226,16 +1300,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-T3tla6Gf9lUQ+F8D57glzmfsmuX5FV806zuKQxYt2lw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./grip-grab-v0.5.5/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   gtm = {
     pname = "gtm";
     version = "v1.3.5";
-    src = fetchFromGitHub {
-      owner = "git-time-metric";
-      repo = "gtm";
-      rev = "v1.3.5";
-      fetchSubmodules = false;
-      sha256 = "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=";
+    src = fetchurl {
+      url = "https://github.com/git-time-metric/gtm/releases/download/v1.3.5/gtm.v1.3.5.linux.tar.gz";
+      sha256 = "sha256-e0Pk06MCCSnh4bqK94xh4C37eooK9Vj70ndGqey1B0M=";
     };
   };
   gtm-vim-plugin = {
@@ -1260,6 +1337,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./gw-v0.4.0/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   hatsune-miku-windows-linux-cursors = {
     pname = "hatsune-miku-windows-linux-cursors";
@@ -1282,16 +1365,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-UhenCrCVUL6mdEpmTU4e1sIHBS8QXVRtKTMlLah56Zs=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./hexpatch-v1.9.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   hl = {
     pname = "hl";
     version = "v0.29.9";
-    src = fetchFromGitHub {
-      owner = "pamburus";
-      repo = "hl";
-      rev = "v0.29.9";
-      fetchSubmodules = false;
-      sha256 = "sha256-HVfbUw3kUgWA1MUV9Df3FZeRykXMEei+tEGx+tqWNWw=";
+    src = fetchurl {
+      url = "https://github.com/pamburus/hl/releases/download/v0.29.9/hl-linux-x86_64-gnu.tar.gz";
+      sha256 = "sha256-JKdH6jR4c2IOdWM+Yq37ltN383hQlE99NYW/OpeiO3g=";
     };
   };
   hledger-fmt = {
@@ -1303,6 +1389,12 @@
       rev = "v0.2.0";
       fetchSubmodules = false;
       sha256 = "sha256-LAlI/QFrKJTB1fDuNSOrf1u5nB1w3vNAYixYiUnYg0o=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./hledger-fmt-v0.2.0/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   hssp = {
@@ -1319,13 +1411,10 @@
   };
   hypergrep = {
     pname = "hypergrep";
-    version = "v0.1.1";
-    src = fetchFromGitHub {
-      owner = "p-ranav";
-      repo = "hypergrep";
-      rev = "v0.1.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=";
+    version = "0.1.1";
+    src = fetchurl {
+      url = "https://github.com/p-ranav/hypergrep/releases/download/v0.1.1/hg_0.1.1.zip";
+      sha256 = "sha256-TfxEO2rhOvDmtUJn/xTDSOBOWUkJViUM6iR4QBsXJ5s=";
     };
   };
   images-upload-cli = {
@@ -1349,6 +1438,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-4LQmM4VTW3ykh6eDWKxBe3jxlJphgAytgeaQZNwivsQ=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./impala-v0.2.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   jalm = {
     pname = "jalm";
@@ -1359,6 +1454,12 @@
       rev = "f1e79605af1b4852b2a5dbfcc4674a5c14fc551d";
       fetchSubmodules = false;
       sha256 = "sha256-xwB6IXQX4bch+j+VhWicEz4MIsdjld29q0CJZvAhulI=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./jalm-f1e79605af1b4852b2a5dbfcc4674a5c14fc551d/Cargo.lock;
+      outputHashes = {
+
+      };
     };
     date = "2022-10-08";
   };
@@ -1414,6 +1515,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-2kBjHX7izo4loJ8oyPjE9FtCvUODC3Sm4T8ETIdeGZM=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./koji-2.2.0/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   lain = {
     pname = "lain";
@@ -1459,6 +1566,12 @@
       rev = "v0.3";
       fetchSubmodules = false;
       sha256 = "sha256-Vc6fh0XbSYNCQWosP7cOfphJin6Z5AJdcfSNdd38cKs=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./lobtui-v0.3/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   lookatme = {
@@ -1517,6 +1630,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-Se0f5jfYBmvemrYRKduDr1yT3fB2wfQP1fDpa/qrYlI=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./manga-tui-v0.4.0/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   mdformat-config = {
     pname = "mdformat-config";
@@ -1569,6 +1688,14 @@
       rev = "v5.5.8";
       fetchSubmodules = false;
       sha256 = "sha256-IMoB1VUPmIx+wQ6QZJvF1WdVfjRM+hCaKQn17tLb37U=";
+    };
+  };
+  mosdns-cn = {
+    pname = "mosdns-cn";
+    version = "v1.4.0";
+    src = fetchurl {
+      url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v1.4.0/mosdns-cn-linux-arm64.zip";
+      sha256 = "sha256-EMWm3EFtIvyBmnLniH9xD4cJacuN5gQWDXRudiMB06I=";
     };
   };
   mpv-M-x = {
@@ -1697,6 +1824,12 @@
       rev = "v0.3.0";
       fetchSubmodules = false;
       sha256 = "sha256-WvoiTu6erNI5Cb9PSoHgL6+coIGWLe46pJVXBZHOLTE=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./otree-v0.3.0/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   paclear = {
@@ -1986,6 +2119,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-CjjDh0Go4gEDFdUHEsTtnIdwR8Aokz0DIMzu/h7tIOA=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./repoblame-66c7eb2ce6a62f60be1711e8975c1b582ec39045/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
     date = "2024-09-15";
   };
   rexi = {
@@ -2021,6 +2160,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-GfxnZ9fuok4/6BGrCZHD+hslCaHYUv16/8jreK+9JEI=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./rimage-v0.10.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   rsv = {
     pname = "rsv";
@@ -2031,6 +2176,12 @@
       rev = "v0.4.14";
       fetchSubmodules = false;
       sha256 = "sha256-LKom7cLu4P95Vg9m/cP/CfWjeU5tcenejgNQhKPs8uM=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./rsv-v0.4.14/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   rust-kanban = {
@@ -2043,16 +2194,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./rust-kanban-v0.10.5/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   rustywatch = {
     pname = "rustywatch";
-    version = "v0.2.11";
-    src = fetchFromGitHub {
-      owner = "ak9024";
-      repo = "rustywatch";
-      rev = "v0.2.11";
-      fetchSubmodules = false;
-      sha256 = "sha256-UzMLSPBH/ElpEWnPV2zD1+2Pt6pO4cG7CmgJvy1MawM=";
+    version = "0.2.11";
+    src = fetchurl {
+      url = "https://github.com/ak9024/rustywatch/releases/download/v0.2.11/rustywatch-0.2.11-x86_64-unknown-linux-gnu.tar.gz";
+      sha256 = "sha256-VSxQttHLlCv7u0GEjnO236yWsdo6ocBOBb/v5tFf/WA=";
     };
   };
   s = {
@@ -2091,23 +2245,17 @@
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
     version = "20241016";
-    src = fetchFromGitHub {
-      owner = "sbsrf";
-      repo = "sbsrf";
-      rev = "20241016";
-      fetchSubmodules = false;
-      sha256 = "sha256-5tZT4syf6MPBOmIjZjnjsoFWuXwtdhsvFF8/vULJs6w=";
+    src = fetchurl {
+      url = "https://github.com/sbsrf/sbsrf/releases/download/20241016/sbsrf.zip";
+      sha256 = "sha256-DfDtdudaqXQAO+wIfaAUGzGgXlggt3teDOoFoTr2v+A=";
     };
   };
   serie = {
     pname = "serie";
-    version = "v0.4.0";
-    src = fetchFromGitHub {
-      owner = "lusingander";
-      repo = "serie";
-      rev = "v0.4.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-RP9Tv6IrDfawjXCQp0nB0nd7b6IwkdykHcEfGEguFHo=";
+    version = "0.4.0";
+    src = fetchurl {
+      url = "https://github.com/lusingander/serie/releases/download/v0.4.0/serie-0.4.0-x86_64-unknown-linux-gnu.tar.gz";
+      sha256 = "sha256-BFxd+UVx4KhER/9p0PP8DuArLjVVC9QWcsECm6OnnrE=";
     };
   };
   serpl = {
@@ -2120,6 +2268,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-koD5aFqL+XVxc5Iq3reTYIHiPm0z7hAQ4K59IfbY4Hg=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./serpl-0.3.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   servicer = {
     pname = "servicer";
@@ -2130,6 +2284,12 @@
       rev = "v0.1.13";
       fetchSubmodules = false;
       sha256 = "sha256-4/6vu/iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./servicer-v0.1.13/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   shipit = {
@@ -2153,18 +2313,30 @@
       fetchSubmodules = false;
       sha256 = "sha256-nt/KV4ohFNZTJTwbNoSxb5v9zQwp+7ypvfMthL1yMus=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./sig-v0.1.3/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b";
+    version = "b79a66085ca03b01652a0668d22e21c337b4c8e6";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "323cfb650509c005bdc4d01b9ae26d9c6fbadd1b";
+      rev = "b79a66085ca03b01652a0668d22e21c337b4c8e6";
       fetchSubmodules = false;
-      sha256 = "sha256-GfzdbCl4fOf5ORY8MXk6fxb0Hrv+L0zp2qceHPVKDTc=";
+      sha256 = "sha256-2LQ5R76raLJT2SV2BcDLRI/gag0YIQvd5vX8aISixrk=";
     };
-    date = "2024-11-05";
+    cargoLock."Cargo.lock" = {
+      lockFile = ./simple-completion-language-server-b79a66085ca03b01652a0668d22e21c337b4c8e6/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
+    date = "2024-11-12";
   };
   soba = {
     pname = "soba";
@@ -2179,13 +2351,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.3.2";
+    version = "v0.3.3";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.3.2";
+      rev = "v0.3.3";
       fetchSubmodules = false;
-      sha256 = "sha256-i9IBe5jcCCzWRxu+dbx3neu5jakZe/Zzi3+FgtYNynk=";
+      sha256 = "sha256-ZACLTBKHM6wjN+LtV6hlxaffEY/tuCPMzOzyjfeBf8E=";
     };
   };
   sprite-dicing = {
@@ -2197,6 +2369,12 @@
       rev = "v2.1.0";
       fetchSubmodules = false;
       sha256 = "sha256-Wyws9I/ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=";
+    };
+    cargoLock."crates/Cargo.lock" = {
+      lockFile = ./sprite-dicing-v2.1.0/crates/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   ssh-tpm-agent = {
@@ -2219,6 +2397,12 @@
       rev = "d9d5911f4d2d141fea74936f235a74bf03961c71";
       fetchSubmodules = false;
       sha256 = "sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./stego-d9d5911f4d2d141fea74936f235a74bf03961c71/Cargo.lock;
+      outputHashes = {
+
+      };
     };
     date = "2019-10-22";
   };
@@ -2243,6 +2427,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-mRdfulh1o4YBAcyQmFr0ydqIgk6GrorClJhp6Z7sz6U=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./superwhich-v1.0.1/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   svgshift = {
     pname = "svgshift";
@@ -2266,6 +2456,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-iWl16BEYMSQ1cvJJqkJ8anhrJui033NZeoLmockyarw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./tabry-rs-58bf619e2f90102d0678de056d9b9088ad7d179a/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
     date = "2024-10-11";
   };
   tach = {
@@ -2277,6 +2473,12 @@
       rev = "v0.14.3";
       fetchSubmodules = false;
       sha256 = "sha256-tZN3GtjO6lcd6CGQQXfAe3lxP6v4q1ear3HLTdFYpr4=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./tach-v0.14.3/Cargo.lock;
+      outputHashes = {
+        "ruff_python_ast-0.0.0" = "sha256-+8JKzKKWPQEanU2mh8p5sRjnoU6DawTQQi43qRXVXIg=";
+      };
     };
   };
   task-relative-recur = {
@@ -2313,6 +2515,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-sIZuFxnBo7+oS9GW/1WbwVPik3EBj7zWWlQFNa0Qfr0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./templify-1.0.0/Cargo.lock;
+      outputHashes = {
+
+      };
+    };
   };
   termsand = {
     pname = "termsand";
@@ -2323,6 +2531,12 @@
       rev = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
       fetchSubmodules = false;
       sha256 = "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb/wroGpj0=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./termsand-75a50ba82ed299047cd5d0cd53b6fce390cfc6e8/Cargo.lock;
+      outputHashes = {
+
+      };
     };
     date = "2024-08-15";
   };
@@ -2357,6 +2571,12 @@
       rev = "0.1.2";
       fetchSubmodules = false;
       sha256 = "sha256-pTon0BXq/scjQtTwHzvzrcSpuPwuK+omWSJInvAnC3A=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./textpod-0.1.2/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   textual = {
@@ -2604,12 +2824,9 @@
   tp = {
     pname = "tp";
     version = "v1.0.0";
-    src = fetchFromGitHub {
-      owner = "minefuto";
-      repo = "tp";
-      rev = "v1.0.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-e/G0cN0HKzpgBRajztp/DucgO0JWW/jqi/omvLWsVyQ=";
+    src = fetchurl {
+      url = "https://github.com/minefuto/tp/releases/download/v1.0.0/tp_Linux_x86_64.tar.gz";
+      sha256 = "sha256-FqGZjD+IVSH97NQDE75s9+edGsLje2yCZRblN6qlvhM=";
     };
   };
   treegen = {
@@ -2654,6 +2871,12 @@
       rev = "v1.0.1";
       fetchSubmodules = false;
       sha256 = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./tuime-v1.0.1/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   updo = {
@@ -2923,6 +3146,12 @@
       rev = "v0.2.1";
       fetchSubmodules = false;
       sha256 = "sha256-IheSAPk1l6wJ2v4RLPIPvY/5XMfh+vJLyQ/Lc7RrCJQ=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./wiper-v0.2.1/Cargo.lock;
+      outputHashes = {
+
+      };
     };
   };
   wush = {

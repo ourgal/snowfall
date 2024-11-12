@@ -10,7 +10,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.templify) pname src version;
 
-  cargoHash = "sha256-i6QNh3/kZeibdFlkzYVkIXPPgLmTTymcXXXztbuoj7g=";
+  cargoLock = _sources.templify.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

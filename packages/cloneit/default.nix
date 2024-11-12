@@ -10,7 +10,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.cloneit) pname src version;
 
-  cargoHash = "sha256-nX/G5m6hdjfsC3YrCvqOfT3LQYrRnQ5/lNLS1Lv5f24=";
+  cargoLock = _sources.cloneit.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

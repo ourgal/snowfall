@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.clashctl) pname version src;
 
-  cargoHash = "sha256-G0mAcB80D7/s9kwkNhJkGLkVYpXMwqpLq/T9gLuYj4E=";
+  cargoLock = _sources.clashctl.cargoLock."Cargo.lock";
 
   doCheck = false;
 

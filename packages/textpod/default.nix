@@ -8,7 +8,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.textpod) pname src version;
 
-  cargoHash = "sha256-blo3VqRbVame7hd2UiaCg52iXeyFWo5uPM+zyddx99E=";
+  cargoLock = _sources.textpod.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

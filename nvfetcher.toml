@@ -85,6 +85,7 @@ fetch.github = "cdump/ranger-devicons2"
 [termsand]
 src.git = "https://github.com/ourgal/termsand"
 fetch.github = "ourgal/termsand"
+cargo_locks = ["Cargo.lock"]
 
 ["tmux.fish"]
 src.git = "https://github.com/budimanjojo/tmux.fish"
@@ -169,22 +170,27 @@ fetch.github = "qjfoidnh/BaiduPCS-Go"
 [blendr]
 src.github = "dmtrKovalenko/blendr"
 fetch.github = "dmtrKovalenko/blendr"
+cargo_locks = ["Cargo.lock"]
 
 [bluetui]
 src.github = "pythops/bluetui"
 fetch.github = "pythops/bluetui"
+cargo_locks = ["Cargo.lock"]
 
 [clashctl]
 src.github = "George-Miao/clashctl"
 fetch.github = "George-Miao/clashctl"
+cargo_locks = ["Cargo.lock"]
 
 [cloneit]
 src.git = "https://github.com/alok8bb/cloneit"
 fetch.github = "alok8bb/cloneit"
+cargo_locks = ["Cargo.lock"]
 
 [code-radio-cli]
 src.github = "JasonWei512/code-radio-cli"
 fetch.github = "JasonWei512/code-radio-cli"
+cargo_locks = ["Cargo.lock"]
 
 [compose2nix]
 src.github = "aksiksi/compose2nix"
@@ -197,6 +203,7 @@ fetch.github = "dlvhdr/diffnav"
 [dra]
 src.github = "devmatteini/dra"
 fetch.github = "devmatteini/dra"
+cargo_locks = ["Cargo.lock"]
 
 [eleventy]
 src.github = "11ty/eleventy"
@@ -266,6 +273,7 @@ fetch.github = "k4rthik/git-cal"
 [git-grab]
 src.github = "wezm/git-grab"
 fetch.github = "wezm/git-grab"
+cargo_locks = ["Cargo.lock"]
 
 [git-ink]
 src.github_tag = "davidosomething/git-ink"
@@ -295,6 +303,7 @@ fetch.github = "IonicaBizau/git-stats"
 [git-sumi]
 src.github = "welpo/git-sumi"
 fetch.github = "welpo/git-sumi"
+cargo_locks = ["Cargo.lock"]
 
 [git-toolbelt]
 src.github = "nvie/git-toolbelt"
@@ -315,14 +324,17 @@ fetch.github = "tanaikech/goodls"
 [gw]
 src.github = "daniel7grant/gw"
 fetch.github = "daniel7grant/gw"
+cargo_locks = ["Cargo.lock"]
 
 [hexpatch]
 src.github = "Etto48/HexPatch"
 fetch.github = "Etto48/HexPatch"
+cargo_locks = ["Cargo.lock"]
 
 [impala]
 src.github = "pythops/Impala"
 fetch.github = "pythops/Impala"
+cargo_locks = ["Cargo.lock"]
 
 [jerry]
 src.git = "https://github.com/justchokingaround/jerry"
@@ -335,6 +347,7 @@ fetch.github = "kellyjonbrazil/Jtbl"
 [koji]
 src.github = "cococonscious/Koji"
 fetch.github = "cococonscious/Koji"
+cargo_locks = ["Cargo.lock"]
 
 [lobster]
 src.github = "justchokingaround/Lobster"
@@ -343,6 +356,7 @@ fetch.github = "justchokingaround/Lobster"
 [lobtui]
 src.github = "pythops/lobtui"
 fetch.github = "pythops/lobtui"
+cargo_locks = ["Cargo.lock"]
 
 [lookatme]
 src.github = "d0c-s4vage/lookatme"
@@ -359,6 +373,7 @@ fetch.github = "fd0/machma"
 [manga-tui]
 src.github = "josueBarretogit/manga-tui"
 fetch.github = "josueBarretogit/manga-tui"
+cargo_locks = ["Cargo.lock"]
 
 [minimal-tmux-status]
 src.git = "https://github.com/niksingh710/minimal-tmux-status"
@@ -395,6 +410,7 @@ fetch.github = "NordicSemiconductor/nrf-udev"
 [otree]
 src.github = "fioncat/otree"
 fetch.github = "fioncat/otree"
+cargo_locks = ["Cargo.lock"]
 
 [pik]
 src.git = "https://github.com/immanelg/pik"
@@ -447,6 +463,7 @@ fetch.github = "mrusme/reader"
 [repoblame]
 src.git = "https://github.com/martinn/repoblame"
 fetch.github = "martinn/repoblame"
+cargo_locks = ["Cargo.lock"]
 
 [rexi]
 src.github = "royreznik/rexi"
@@ -455,14 +472,17 @@ fetch.github = "royreznik/rexi"
 [rimage]
 src.github = "SalOne22/rimage"
 fetch.github = "SalOne22/rimage"
+cargo_locks = ["Cargo.lock"]
 
 [rsv]
 src.github = "ribbondz/rsv"
 fetch.github = "ribbondz/rsv"
+cargo_locks = ["Cargo.lock"]
 
 [rust-kanban]
 src.github_tag = "yashs662/rust_kanban"
 fetch.github = "yashs662/rust_kanban"
+cargo_locks = ["Cargo.lock"]
 
 [s]
 src.github = "zquestz/s"
@@ -474,23 +494,27 @@ fetch.github = "alajmo/sake"
 
 [sbsrf-rime-data]
 src.github = "sbsrf/sbsrf"
-fetch.github = "sbsrf/sbsrf"
+fetch.url = "https://github.com/sbsrf/sbsrf/releases/download/$ver/sbsrf.zip"
 
 [serie]
 src.github = "lusingander/serie"
-fetch.github = "lusingander/serie"
+src.prefix = "v"
+fetch.url = "https://github.com/lusingander/serie/releases/download/v$ver/serie-$ver-x86_64-unknown-linux-gnu.tar.gz"
 
 [serpl]
 src.github = "yassinebridi/serpl"
 fetch.github = "yassinebridi/serpl"
+cargo_locks = ["Cargo.lock"]
 
 [sig]
 src.github = "ynqa/sig"
 fetch.github = "ynqa/sig"
+cargo_locks = ["Cargo.lock"]
 
 [simple-completion-language-server]
 src.git = "https://github.com/estin/simple-completion-language-server"
 fetch.github = "estin/simple-completion-language-server"
+cargo_locks = ["Cargo.lock"]
 
 [soba]
 src.github = "jonhadfield/soba"
@@ -579,6 +603,7 @@ fetch.github = "bilbilak/treegen"
 [tuime]
 src.github = "nate-sys/tuime"
 fetch.github = "nate-sys/tuime"
+cargo_locks = ["Cargo.lock"]
 
 [whitespace-format]
 src.github = "DavidPal/whitespace-format"
@@ -587,6 +612,7 @@ fetch.github = "DavidPal/whitespace-format"
 [wiper]
 src.github = "ikebastuz/wiper"
 fetch.github = "ikebastuz/wiper"
+cargo_locks = ["Cargo.lock"]
 
 [wush]
 src.github = "coder/wush"
@@ -634,15 +660,16 @@ fetch.docker = "qdtoday/qd"
 
 [tp]
 src.github = "minefuto/tp"
-fetch.github = "minefuto/tp"
+fetch.url = "https://github.com/minefuto/tp/releases/download/$ver/tp_Linux_x86_64.tar.gz"
 
 [hl]
 src.github = "pamburus/hl"
-fetch.github = "pamburus/hl"
+fetch.url = "https://github.com/pamburus/hl/releases/download/$ver/hl-linux-x86_64-gnu.tar.gz"
 
 [rustywatch]
 src.github = "ak9024/rustywatch"
-fetch.github = "ak9024/rustywatch"
+src.prefix = "v"
+fetch.url = "https://github.com/ak9024/rustywatch/releases/download/v$ver/rustywatch-$ver-x86_64-unknown-linux-gnu.tar.gz"
 
 [images-upload-cli]
 src.github = "DeadNews/images-upload-cli"
@@ -651,6 +678,7 @@ fetch.github = "DeadNews/images-upload-cli"
 [envset]
 src.github = "schpet/envset"
 fetch.github = "schpet/envset"
+cargo_locks = ["Cargo.lock"]
 
 [antifennel]
 src.git = "https://git.sr.ht/~technomancy/antifennel"
@@ -659,10 +687,11 @@ fetch.git = "https://git.sr.ht/~technomancy/antifennel"
 [convfmt]
 src.github = "oriontvv/convfmt"
 fetch.github = "oriontvv/convfmt"
+cargo_locks = ["Cargo.lock"]
 
 [boilr]
 src.github = "tmrts/boilr"
-fetch.github = "tmrts/boilr"
+fetch.url = "https://github.com/tmrts/boilr/releases/download/$ver/boilr-$ver-linux_amd64.tgz"
 
 [eg]
 src.pypi = "eg"
@@ -679,27 +708,32 @@ fetch.github = "ellisonleao/vl"
 [grip-grab]
 src.github = "alexpasmantier/grip-grab"
 fetch.github = "alexpasmantier/grip-grab"
+cargo_locks = ["Cargo.lock"]
 pinned = true
 
 [hypergrep]
 src.github = "p-ranav/hypergrep"
-fetch.github = "p-ranav/hypergrep"
+src.prefix = "v"
+fetch.url = "https://github.com/p-ranav/hypergrep/releases/download/v$ver/hg_$ver.zip"
 
 [gtm]
 src.github = "git-time-metric/gtm"
-fetch.github = "git-time-metric/gtm"
+fetch.url = "https://github.com/git-time-metric/gtm/releases/download/$ver/gtm.$ver.linux.tar.gz"
 
 [tabry-rs]
 src.git = "https://github.com/evanbattaglia/tabry-rs"
 fetch.github = "evanbattaglia/tabry-rs"
+cargo_locks = ["Cargo.lock"]
 
 [corgi]
 src.github = "junyu-w/corgi"
-fetch.github = "junyu-w/corgi"
+src.prefix = "v"
+fetch.url = "https://github.com/junyu-w/corgi/releases/download/v$ver/corgi_v$ver_linux_64-bit.tar.gz"
 
 [jalm]
 src.git = "https://github.com/neelkarma/jalm"
 fetch.github = "neelkarma/jalm"
+cargo_locks = ["Cargo.lock"]
 
 [mdtt]
 src.github = "szktkfm/mdtt"
@@ -720,10 +754,11 @@ fetch.github = "mrusme/neonmodem"
 [game_2048_tui]
 src.github = "WanderHuang/game-2048-tui"
 fetch.github = "WanderHuang/game-2048-tui"
+cargo_locks = ["Cargo.lock"]
 
 [cmdx]
 src.github = "suzuki-shunsuke/cmdx"
-fetch.github = "suzuki-shunsuke/cmdx"
+fetch.url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/$ver/cmdx_linux_amd64.tar.gz"
 
 [org-export]
 src.git = "https://github.com/nhoffman/org-export"
@@ -731,7 +766,7 @@ fetch.github = "nhoffman/org-export"
 
 [comigo]
 src.github = "yumenaka/comigo"
-fetch.github = "yumenaka/comigo"
+fetch.url = "https://github.com/yumenaka/comigo/releases/download/$ver/comi_v0.9.11_Linux_x86_64.tar.gz"
 
 [makedown]
 src.git = "https://github.com/tzador/makedown"
@@ -840,6 +875,7 @@ fetch.github = "SilenZcience/cat_win"
 [hledger-fmt]
 src.github = "mondeja/hledger-fmt"
 fetch.github = "mondeja/hledger-fmt"
+cargo_locks = ["Cargo.lock"]
 
 [classifier]
 src.git = "https://github.com/bhrigu123/classifier"
@@ -912,14 +948,17 @@ fetch.pypi = "geoip2fast"
 [textpod]
 src.github = "freetonik/textpod"
 fetch.github = "freetonik/textpod"
+cargo_locks = ["Cargo.lock"]
 
 [tach]
 src.github = "gauge-sh/tach"
 fetch.github = "gauge-sh/tach"
+cargo_locks = ["Cargo.lock"]
 
 [templify]
 src.github = "cophilot/templify"
 fetch.github = "cophilot/templify"
+cargo_locks = ["Cargo.lock"]
 
 [enhancd]
 src.github = "babarot/enhancd"
@@ -956,6 +995,7 @@ fetch.github = "Hejsil/cache"
 [superwhich]
 src.github = "DarkCeptor44/superwhich"
 fetch.github = "DarkCeptor44/superwhich"
+cargo_locks = ["Cargo.lock"]
 
 [friendly-snippets]
 src.git = "https://github.com/rafamadriz/friendly-snippets"
@@ -988,6 +1028,7 @@ fetch.github = "ghifarit53/tokyonight-vim"
 [complate]
 src.github = "replicadse/complate"
 fetch.github = "replicadse/complate"
+cargo_locks = ["Cargo.lock"]
 
 [textimg]
 src.github = "jiro4989/textimg"
@@ -1000,18 +1041,22 @@ fetch.github = "benelan/git-mux"
 [cdo]
 src.git = "https://github.com/dotboris/cdo"
 fetch.github = "dotboris/cdo"
+cargo_locks = ["Cargo.lock"]
 
 [sprite-dicing]
 src.github = "elringus/sprite-dicing"
 fetch.github = "elringus/sprite-dicing"
+cargo_locks = ["crates/Cargo.lock"]
 
 [servicer]
 src.github = "servicer-labs/servicer"
 fetch.github = "servicer-labs/servicer"
+cargo_locks = ["Cargo.lock"]
 
 [stego]
 src.git = "https://github.com/ajmwagar/stego"
 fetch.github = "ajmwagar/stego"
+cargo_locks = ["Cargo.lock"]
 
 [ahoy]
 src.github = "ahoy-cli/ahoy"
@@ -1052,3 +1097,12 @@ fetch.github = "purarue/pmark"
 [mdsf]
 src.github = "hougesen/mdsf"
 fetch.url = "https://github.com/hougesen/mdsf/releases/download/$ver/mdsf-x86_64-unknown-linux-gnu.tar.gz"
+
+[mosdns-cn]
+src.github = "IrineSistiana/mosdns-cn"
+fetch.url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/$ver/mosdns-cn-linux-arm64.zip"
+
+
+[gif-progress]
+src.github = "nwtgck/gif-progress"
+fetch.url = "https://github.com/nwtgck/gif-progress/releases/download/$ver/gif-progress-linux-amd64.tar.gz"

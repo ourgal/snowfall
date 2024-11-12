@@ -10,7 +10,7 @@ rustPlatform.buildRustPackage rec {
 
   sourceRoot = "${src.name}/crates";
 
-  cargoHash = "sha256-CMvLApS/Rd82+AtlcHWi/TqJzGBCiSxXzYaMsYO0RyY=";
+  cargoLock = _sources.sprite-dicing.cargoLock."crates/Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

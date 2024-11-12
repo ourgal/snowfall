@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.game_2048_tui) pname version src;
 
-  cargoHash = "sha256-eTld+ryAE9hpnsTtoYXkZJIQ8O4fnk3lPMUfLvJVruQ=";
+  cargoLock = _sources.game_2048_tui.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "100% Rust. 2048 in `tui`. Build for fun";

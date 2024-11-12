@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.envset) pname src version;
 
-  cargoHash = "sha256-PNE2yemOFR5WsfXt6Yu4iWQaTMlqflRcFqG9UrkUnJw=";
+  cargoLock = _sources.envset.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Set values in .env files the fun way";

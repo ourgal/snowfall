@@ -1,20 +1,26 @@
-{ stdenv, fetchzip, ... }:
+{
+  lib,
+  stdenv,
+  _sources,
+}:
 
-stdenv.mkDerivation rec {
-  pname = "mosdns-cn";
-  version = "1.4.0";
-
-  src = fetchzip {
-    url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v${version}/mosdns-cn-linux-amd64.zip";
-    hash = "sha256-M4syjEBET8ZmGx4dPanyE82w72I8GLxLsDzNLKKNeGo=";
-    stripRoot = false;
-  };
+stdenv.mkDerivation {
+  inherit (_sources.mosdns-cn) pname version src;
 
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D ./mosdns-cn $out/bin/mosdns-cn
+    install -Dm755 mosdns-cn -t $out/bin
     runHook postInstall
   '';
+
+  meta = with lib; {
+    description = "A simple DNS forwarder that can make life easier. (Not maintained";
+    homepage = "https://github.com/IrineSistiana/mosdns-cn";
+    license = licenses.gpl3Only;
+    maintainers = with maintainers; [ zxc ];
+    mainProgram = "mosdns-cn";
+    platforms = platforms.x86_64;
+  };
 }

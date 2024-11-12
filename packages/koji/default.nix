@@ -12,7 +12,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.koji) pname version src;
 
-  cargoHash = "sha256-owppYDt0YdWoDvfmzVfiIPjLgTAT9eTI1LpRr4Y3XQA=";
+  cargoLock = _sources.koji.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [ pkg-config ];
 

@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.grip-grab) pname version src;
 
-  cargoHash = "sha256-oWkluCAhp/+KMY2kZiX586w2ZRP9UBG7DxBwvI3LH04=";
+  cargoLock = _sources.grip-grab.cargoLock."Cargo.lock";
 
   meta = with lib; {
     description = "Hold on tight";
