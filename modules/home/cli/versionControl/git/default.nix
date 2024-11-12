@@ -35,6 +35,7 @@ args.module (
         "ignore"
         "issue"
         "license"
+        "merge"
         "rebase"
         "security"
         "stats"
