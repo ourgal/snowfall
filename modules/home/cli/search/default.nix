@@ -19,5 +19,6 @@ args.module (
       "zfind"
       # keep-sorted end
     ];
+    enable = "television";
   }
 )

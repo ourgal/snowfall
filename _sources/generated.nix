@@ -2505,6 +2505,14 @@
     };
     date = "2024-07-04";
   };
+  television = {
+    pname = "television";
+    version = "v0.4.20";
+    src = fetchurl {
+      url = "https://github.com/alexpasmantier/television/releases/download/v0.4.20/tv-v0.4.20-linux-x86_64.tar.gz";
+      sha256 = "sha256-4TJEwCNcwTiky1iAj5PzDsI4GPB/6fCgTbIu2QAl5Ps=";
+    };
+  };
   templify = {
     pname = "templify";
     version = "1.0.0";
