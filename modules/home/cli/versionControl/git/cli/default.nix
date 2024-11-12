@@ -7,6 +7,7 @@ args.module (
     in
     {
       path = ./.;
+      myPkgs = "git-toolbelt";
       progs = [
         "scmpuff"
         {
@@ -21,6 +22,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "bit"
+        "git-extras"
         "zsh-forgit"
         # keep-sorted end
       ];
