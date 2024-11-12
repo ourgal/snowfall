@@ -3234,6 +3234,27 @@
         },
         "version": "a1adfd5dce13d7467f389074fd23b1d3748b7ae0"
     },
+    "pmark": {
+        "cargoLocks": null,
+        "date": "2024-11-11",
+        "extract": null,
+        "name": "pmark",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "purarue",
+            "repo": "pmark",
+            "rev": "b35e8a8c52b1bb2f879753ee8871af2961e4afe1",
+            "sha256": "sha256-XoqDBgvPMpy4c3/OBUZa2+jmxZ2SwLCXP2bWORRBuLk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "b35e8a8c52b1bb2f879753ee8871af2961e4afe1"
+    },
     "pnut": {
         "cargoLocks": null,
         "date": "2024-11-04",
