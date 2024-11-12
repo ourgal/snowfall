@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    nodePkgs = "peerflix";
     nixPkgs = [
       # keep-sorted start
       "gifski"
