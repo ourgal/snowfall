@@ -36,6 +36,7 @@ in
     miniflux = enabled;
     kavita = enabled;
     vaultwarden = enabled;
+    searx = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
