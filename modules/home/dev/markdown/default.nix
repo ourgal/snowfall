@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "mdtt"
+      "pmark"
       "textpod"
       # keep-sorted end
     ];

@@ -1044,3 +1044,7 @@ fetch.github = "Tantalor93/dnspyre"
 [vsc-fugitive]
 src.vsmarketplace = "hnrk-str.vscode-fugitive"
 fetch.vsmarketplace = "hnrk-str.vscode-fugitive"
+
+[pmark]
+src.git = "https://github.com/purarue/pmark"
+fetch.github = "purarue/pmark"

@@ -1761,6 +1761,18 @@
     };
     date = "2024-08-06";
   };
+  pmark = {
+    pname = "pmark";
+    version = "b35e8a8c52b1bb2f879753ee8871af2961e4afe1";
+    src = fetchFromGitHub {
+      owner = "purarue";
+      repo = "pmark";
+      rev = "b35e8a8c52b1bb2f879753ee8871af2961e4afe1";
+      fetchSubmodules = false;
+      sha256 = "sha256-XoqDBgvPMpy4c3/OBUZa2+jmxZ2SwLCXP2bWORRBuLk=";
+    };
+    date = "2024-11-11";
+  };
   pnut = {
     pname = "pnut";
     version = "44ddd5e976a826aa6e974d8a35f6bd440aea1888";
