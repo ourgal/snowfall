@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nodePkgs = "peerflix";
+    nodePkgs = [
+      # keep-sorted start
+      "peerflix"
+      "webtorrent-cli"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "gifski"
