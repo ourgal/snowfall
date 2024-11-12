@@ -27,6 +27,7 @@ args.module (
     enable = [
       # keep-sorted start
       "mdformat"
+      "mdsf"
       "zk"
       # keep-sorted end
     ];
