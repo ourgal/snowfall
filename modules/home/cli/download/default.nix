@@ -14,6 +14,7 @@ args.module (
     pyPkgs = "downloader-cli";
     nixPkgs = [
       # keep-sorted start
+      "btfs"
       "libgen-cli"
       "lux"
       "tdl"
