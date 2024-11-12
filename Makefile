@@ -11,6 +11,14 @@ home: ##@ home manager switch
 update: ##@ nvfetcher update
 	@cache -s "$$(date +%Y-%m-%d)" -- nvfetcher --keyfile keyfile.toml
 
+.PHONY: man-home
+man-home: ##@ home man page
+	@man home-configuration.nix
+
+.PHONY: man-nixos
+man-nixos: ##@ home man page
+	@man 5 configuration.nix
+
 ##@
 ##@ misc
 ##@
