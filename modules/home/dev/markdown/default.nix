@@ -19,6 +19,7 @@ args.module (
       "marksman"
       "md-tangle"
       "mdbook"
+      "mdsh"
       "vale"
       "vale-ls"
       # keep-sorted end
