@@ -13,6 +13,7 @@ args.module (
         enabled
         switch
         ;
+      inherit (lib.${namespace}) with';
       cfg = cfgHome config.${namespace} ./.;
       fileTypes = [
         "application/ogg"
@@ -187,19 +188,19 @@ args.module (
         catppuccin = disabled;
         config = if cfg.yt-subs.enable then base_config // yt_subs_config else base_config;
         scripts =
-          with pkgs.mpvScripts;
-          with pkgs.${namespace};
-          [
-            mpris
-            quack
-            sponsorblock
-            thumbfast
-            uosc
-            mpv-autoloop
-            mpv-smartcopypaste_ii
-            mpv-smartskip
-            mpv-M-x
-            mpv-btfs-stream
+          with' pkgs.mpvScripts [
+            "mpris"
+            "quack"
+            "sponsorblock"
+            "thumbfast"
+            "uosc"
+          ]
+          ++ with' pkgs.${namespace} [
+            "mpv-autoloop"
+            "mpv-smartcopypaste_ii"
+            "mpv-smartskip"
+            "mpv-M-x"
+            "mpv-btfs-stream"
           ];
         scriptOpts = {
           uosc = {
