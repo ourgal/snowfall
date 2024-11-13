@@ -3143,6 +3143,27 @@
         },
         "version": "48d68283cea47ff8e904decc9003b3abc3e2123e"
     },
+    "mpv-webtorrent-hook": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mpv-webtorrent-hook",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "noctuid",
+            "repo": "mpv-webtorrent-hook",
+            "rev": "eb2da86b628c512184818b19307632fa71fe7fb9",
+            "sha256": "sha256-udKOyX0/R47wXSmYndhhq38D94gksxZbhx50VjG1HhY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "eb2da86b628c512184818b19307632fa71fe7fb9"
+    },
     "neonmodem": {
         "cargoLocks": null,
         "date": null,
