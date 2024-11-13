@@ -1790,6 +1790,17 @@
     };
     date = "2023-11-25";
   };
+  mpv-webtorrent-hook = {
+    pname = "mpv-webtorrent-hook";
+    version = "eb2da86b628c512184818b19307632fa71fe7fb9";
+    src = fetchFromGitHub {
+      owner = "noctuid";
+      repo = "mpv-webtorrent-hook";
+      rev = "eb2da86b628c512184818b19307632fa71fe7fb9";
+      fetchSubmodules = false;
+      sha256 = "sha256-udKOyX0/R47wXSmYndhhq38D94gksxZbhx50VjG1HhY=";
+    };
+  };
   neonmodem = {
     pname = "neonmodem";
     version = "v1.0.6";

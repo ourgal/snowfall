@@ -1119,3 +1119,7 @@ cargo_locks = ["Cargo.lock"]
 [mpv-btfs-stream]
 src.git = "https://github.com/noctuid/mpv-btfs-stream"
 fetch.github = "noctuid/mpv-btfs-stream"
+
+[mpv-webtorrent-hook]
+src.manual = "eb2da86b628c512184818b19307632fa71fe7fb9" # for mpv 0.37.0
+fetch.github = "noctuid/mpv-webtorrent-hook"
