@@ -19,6 +19,7 @@ args.module (
       "lux"
       "tdl"
       "tremc"
+      "xidel"
       # keep-sorted end
     ];
     enable = [
