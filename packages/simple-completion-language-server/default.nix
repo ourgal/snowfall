@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.simple-completion-language-server) pname version src;
 
-  cargoLock = _sources.simple-completion-language-server.cargoLock."Cargo.lock";
+  cargoHash = "sha256-niFkMykfE9eHnA08d/z/jigwwbW9OtSpUYOsAcmoXAE=";
 
   checkFlags = [ "--skip=citations" ];
 

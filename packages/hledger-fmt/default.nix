@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.hledger-fmt) pname src version;
 
-  cargoLock = _sources.hledger-fmt.cargoLock."Cargo.lock";
+  cargoHash = "sha256-V8uRwRQwc1MZ0jNPoNjzfqY3CXFz5p4h4TbKYkd9nKw=";
 
   meta = with lib; {
     description = "An opinionated hledger's journal files formatter";

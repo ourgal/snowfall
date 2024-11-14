@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.git-sumi) pname src version;
 
-  cargoLock = _sources.git-sumi.cargoLock."Cargo.lock";
+  cargoHash = "sha256-a6WIN2O5M7gCxeCrFb+U0goTaAVfyG7Sgg8qL60gu68=";
 
   doCheck = false;
 

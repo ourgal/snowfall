@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.servicer) pname version src;
 
-  cargoLock = _sources.servicer.cargoLock."Cargo.lock";
+  cargoHash = "sha256-0FQiTuzI9S1GIqr2/aUOW2oNG3WOvUU8KXnR8WIadn4=";
 
   meta = with lib; {
     description = "A CLI to simplify service management on systemd";

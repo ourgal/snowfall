@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.superwhich) pname src version;
 
-  cargoLock = _sources.superwhich.cargoLock."Cargo.lock";
+  cargoHash = "sha256-ex3ozdKO7u1jTB8opaqwUngMo9qlS4GzYF2o5H1n8cI=";
 
   meta = with lib; {
     description = "Cross-platform smart which alternative";

@@ -9,7 +9,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.hexpatch) pname version src;
 
-  cargoLock = _sources.hexpatch.cargoLock."Cargo.lock";
+  cargoHash = "sha256-jWDntqxWsSzfDFxZnVDxh7n/CjFIj+sYMsyX/UXhoaM=";
 
   nativeBuildInputs = [
     pkg-config

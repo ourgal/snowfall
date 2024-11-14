@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.rsv) pname version src;
 
-  cargoLock = _sources.rsv.cargoLock."Cargo.lock";
+  cargoHash = "sha256-EdGB0qho2FzNJR8GGHOQrfRw3ELBKG7oO8htIJiDBLo=";
 
   nativeBuildInputs = [ rustPlatform.bindgenHook ];
 
