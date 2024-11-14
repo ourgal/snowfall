@@ -1,22 +1,13 @@
 {
   lib,
   namespace,
-  fetchurl,
   appimageTools,
   _sources,
 }:
 
 let
-  pname = "akuse";
+  inherit (_sources.akuse) pname version src;
   pnameCap = lib.${namespace}.capitalize pname;
-  source = _sources.${pname};
-  inherit (source) version;
-
-  src = fetchurl {
-    url = "https://github.com/akuse-app/akuse/releases/download/${version}/linux-akuse-${version}.AppImage";
-    hash = "sha256-tBM16s5XTKo06xICf2iKNDcvqLkXYzD+/7qZEIjdiOg=";
-  };
-
   appimageContents = appimageTools.extract { inherit pname version src; };
 in
 appimageTools.wrapType2 {

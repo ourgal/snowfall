@@ -1,21 +1,24 @@
 {
   lib,
   stdenv,
-  unzip,
+  fetchzip,
+  writeShellScriptBin,
+  curl,
+  jq,
+  gnused,
   _sources,
 }:
-stdenv.mkDerivation {
-  inherit (_sources.hypergrep) pname version src;
+let
+  hash = "L4DRzWqMB+wWmbbF54Fuu4LQjfbu9FmAK3pMAmBKpAk=";
+in
+stdenv.mkDerivation rec {
+  inherit (_sources.hypergrep) pname version;
 
-  nativeBuildInputs = [ unzip ];
-
-  unpackPhase = ''
-    runHook preUnpack
-    LANG=en_US.UTF-8 unzip -qq "$src"
-    runHook postUnpack
-  '';
-
-  sourceRoot = ".";
+  src = fetchzip {
+    url = "https://github.com/p-ranav/hypergrep/releases/download/v${version}/hg_${version}.zip";
+    sha256 = hash;
+    stripRoot = false;
+  };
 
   dontBuild = true;
 
@@ -23,6 +26,14 @@ stdenv.mkDerivation {
     runHook preInstall
     install -Dm755 hg -t $out/bin
     runHook postInstall
+  '';
+
+  passthru.update = writeShellScriptBin "update-package" ''
+    set -euo pipefail
+
+    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/p-ranav/hypergrep/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
+
+    drift rewrite --auto-hash --new-version "$latest"
   '';
 
   meta = with lib; {

@@ -474,12 +474,11 @@ fetch.github = "alajmo/sake"
 
 [sbsrf-rime-data]
 src.github = "sbsrf/sbsrf"
-fetch.url = "https://github.com/sbsrf/sbsrf/releases/download/$ver/sbsrf.zip"
+fetch.github = "sbsrf/sbsrf"
 
 [serie]
 src.github = "lusingander/serie"
-src.prefix = "v"
-fetch.url = "https://github.com/lusingander/serie/releases/download/v$ver/serie-$ver-x86_64-unknown-linux-gnu.tar.gz"
+fetch.github = "lusingander/serie"
 
 [serpl]
 src.github = "yassinebridi/serpl"
@@ -603,15 +602,17 @@ fetch.github = "laktak/zfind"
 
 [miru]
 src.github = "ThaUnknown/miru"
-fetch.github = "ThaUnknown/miru"
+src.prefix = "v"
+fetch.url = "https://github.com/ThaUnknown/miru/releases/download/v$ver/linux-Miru-$ver.AppImage"
 
 [pot]
 src.github = "pot-app/pot-desktop"
-fetch.github = "pot-app/pot-desktop"
+fetch.url = "https://github.com/pot-app/pot-desktop/releases/download/$ver/pot_$ver_amd64.AppImage"
 
 [numara]
 src.github = "bornova/numara-calculator"
-fetch.github = "bornova/numara-calculator"
+src.prefix = "v"
+fetch.url = "https://github.com/bornova/numara-calculator/releases/download/v$ver/Numara-$ver-x86_64.AppImage"
 
 [fast-anime]
 src.github = "Benex254/FastAnime"
@@ -635,16 +636,15 @@ fetch.docker = "qdtoday/qd"
 
 [tp]
 src.github = "minefuto/tp"
-fetch.url = "https://github.com/minefuto/tp/releases/download/$ver/tp_Linux_x86_64.tar.gz"
+fetch.github = "minefuto/tp"
 
 [hl]
 src.github = "pamburus/hl"
-fetch.url = "https://github.com/pamburus/hl/releases/download/$ver/hl-linux-x86_64-gnu.tar.gz"
+fetch.github = "pamburus/hl"
 
 [rustywatch]
 src.github = "ak9024/rustywatch"
-src.prefix = "v"
-fetch.url = "https://github.com/ak9024/rustywatch/releases/download/v$ver/rustywatch-$ver-x86_64-unknown-linux-gnu.tar.gz"
+fetch.github = "ak9024/rustywatch"
 
 [images-upload-cli]
 src.github = "DeadNews/images-upload-cli"
@@ -664,7 +664,7 @@ fetch.github = "oriontvv/convfmt"
 
 [boilr]
 src.github = "tmrts/boilr"
-fetch.url = "https://github.com/tmrts/boilr/releases/download/$ver/boilr-$ver-linux_amd64.tgz"
+fetch.github = "tmrts/boilr"
 
 [eg]
 src.pypi = "eg"
@@ -685,12 +685,11 @@ pinned = true
 
 [hypergrep]
 src.github = "p-ranav/hypergrep"
-src.prefix = "v"
-fetch.url = "https://github.com/p-ranav/hypergrep/releases/download/v$ver/hg_$ver.zip"
+fetch.github = "p-ranav/hypergrep"
 
 [gtm]
 src.github = "git-time-metric/gtm"
-fetch.url = "https://github.com/git-time-metric/gtm/releases/download/$ver/gtm.$ver.linux.tar.gz"
+fetch.github = "git-time-metric/gtm"
 
 [tabry-rs]
 src.git = "https://github.com/evanbattaglia/tabry-rs"
@@ -698,8 +697,7 @@ fetch.github = "evanbattaglia/tabry-rs"
 
 [corgi]
 src.github = "junyu-w/corgi"
-src.prefix = "v"
-fetch.url = "https://github.com/junyu-w/corgi/releases/download/v$ver/corgi_v$ver_linux_64-bit.tar.gz"
+fetch.github = "junyu-w/corgi"
 
 [jalm]
 src.git = "https://github.com/neelkarma/jalm"
@@ -727,7 +725,7 @@ fetch.github = "WanderHuang/game-2048-tui"
 
 [cmdx]
 src.github = "suzuki-shunsuke/cmdx"
-fetch.url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/$ver/cmdx_linux_amd64.tar.gz"
+fetch.github = "suzuki-shunsuke/cmdx"
 
 [org-export]
 src.git = "https://github.com/nhoffman/org-export"
@@ -735,7 +733,7 @@ fetch.github = "nhoffman/org-export"
 
 [comigo]
 src.github = "yumenaka/comigo"
-fetch.url = "https://github.com/yumenaka/comigo/releases/download/$ver/comi_v0.9.11_Linux_x86_64.tar.gz"
+fetch.github = "yumenaka/comigo"
 
 [makedown]
 src.git = "https://github.com/tzador/makedown"
@@ -939,7 +937,7 @@ fetch.github = "codevogel/pls"
 
 [akuse]
 src.github = "akuse-app/akuse"
-fetch.github = "akuse-app/akuse"
+fetch.url = "https://github.com/akuse-app/akuse/releases/download/$ver/linux-akuse-$ver.AppImage"
 
 [v]
 src.git = "https://github.com/ourgal/v"
@@ -1055,20 +1053,20 @@ fetch.github = "purarue/pmark"
 
 [mdsf]
 src.github = "hougesen/mdsf"
-fetch.url = "https://github.com/hougesen/mdsf/releases/download/$ver/mdsf-x86_64-unknown-linux-gnu.tar.gz"
+fetch.github = "hougesen/mdsf"
 
 [mosdns-cn]
 src.github = "IrineSistiana/mosdns-cn"
-fetch.url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/$ver/mosdns-cn-linux-arm64.zip"
+fetch.github = "IrineSistiana/mosdns-cn"
 
 
 [gif-progress]
 src.github = "nwtgck/gif-progress"
-fetch.url = "https://github.com/nwtgck/gif-progress/releases/download/$ver/gif-progress-linux-amd64.tar.gz"
+fetch.github = "nwtgck/gif-progress"
 
 [television]
 src.github = "alexpasmantier/television"
-fetch.url = "https://github.com/alexpasmantier/television/releases/download/$ver/tv-$ver-linux-x86_64.tar.gz"
+fetch.github = "alexpasmantier/television"
 
 [mpv-btfs-stream]
 src.git = "https://github.com/noctuid/mpv-btfs-stream"

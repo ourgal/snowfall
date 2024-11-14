@@ -1,22 +1,13 @@
 {
   lib,
   namespace,
-  fetchurl,
   appimageTools,
   _sources,
 }:
 
 let
-  pname = "miru";
+  inherit (_sources.miru) pname version src;
   pnameCap = lib.${namespace}.capitalize pname;
-  source = _sources.${pname};
-  inherit (source) version;
-
-  src = fetchurl {
-    url = "https://github.com/ThaUnknown/miru/releases/download/v${version}/linux-Miru-${version}.AppImage";
-    hash = "sha256-4ueVgIcIi/RIFRoDKStiNqszfaIXZ9dfagddzCVaSRs=";
-  };
-
   appimageContents = appimageTools.extract { inherit pname version src; };
 in
 appimageTools.wrapType2 {
