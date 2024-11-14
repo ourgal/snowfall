@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.tabry-rs) pname version src;
 
-  cargoHash = "sha256-aDqO8BCQKB4/Qtatw9q5zgKPqUfRYS4M5VIyAhkCVcg=";
+  cargoHash = "sha256-a7kPWM5/wpz0CuIJw90SA8q4tTz6WKD8yBwcWz0RsMs=";
 
   meta = with lib; {
     description = "Shell (tab) completion engine";

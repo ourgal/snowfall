@@ -64,16 +64,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "akuse-app",
-            "repo": "akuse",
-            "rev": "1.9.0",
-            "sha256": "sha256-+d2OjkzQspwcEaacIOxN07V4H3vXJyrKmDM0y8WCBlc=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-tBM16s5XTKo06xICf2iKNDcvqLkXYzD+/7qZEIjdiOg=",
+            "type": "url",
+            "url": "https://github.com/akuse-app/akuse/releases/download/1.9.0/linux-akuse-1.9.0.AppImage"
         },
         "version": "1.9.0"
     },
@@ -281,12 +275,7 @@
         "version": "v3.9.5"
     },
     "blendr": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./blendr-v1.3.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "blendr",
@@ -349,12 +338,7 @@
         "version": "v2.1"
     },
     "bluetui": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./bluetui-v0.5.1/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "bluetui",
@@ -382,10 +366,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-vJTN8g2XcXJjekmV6g3hezck0pgNP6pRSrbulHbqwFU=",
-            "type": "url",
-            "url": "https://github.com/tmrts/boilr/releases/download/0.3.0/boilr-0.3.0-linux_amd64.tgz"
+            "owner": "tmrts",
+            "repo": "boilr",
+            "rev": "0.3.0",
+            "sha256": "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "0.3.0"
     },
@@ -474,12 +464,7 @@
         "version": "v1.9.2"
     },
     "cdo": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./cdo-8aefae7fcac56615a053fc99fd5f977328ceea2b/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2024-11-09",
         "extract": null,
         "name": "cdo",
@@ -542,12 +527,7 @@
         "version": "v2.2.0"
     },
     "clashctl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./clashctl-0.3.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "clashctl",
@@ -604,12 +584,7 @@
         "version": "0.2.2"
     },
     "cloneit": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./cloneit-6198556e810d964cc5938c446ef42fc21b55fe0b/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2024-07-28",
         "extract": null,
         "name": "cloneit",
@@ -637,20 +612,21 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-z2tkKCkXW9xk3xbQS3+qlTtoT0KQVXreS++bZh8/RFI=",
-            "type": "url",
-            "url": "https://github.com/suzuki-shunsuke/cmdx/releases/download/v1.7.4/cmdx_linux_amd64.tar.gz"
+            "owner": "suzuki-shunsuke",
+            "repo": "cmdx",
+            "rev": "v1.7.4",
+            "sha256": "sha256-UzAtDTs9KGcImQVU6ve80j68you900ag+aJaVZXF3Dw=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v1.7.4"
     },
     "code-radio-cli": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./code-radio-cli-v1.0.5/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "code-radio-cli",
@@ -678,20 +654,21 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-2mVp3TwcdS9HB9vzz3MshK0HFJr5DIUlTDsegjlkw6Q=",
-            "type": "url",
-            "url": "https://github.com/yumenaka/comigo/releases/download/v0.9.11.1/comi_v0.9.11_Linux_x86_64.tar.gz"
+            "owner": "yumenaka",
+            "repo": "comigo",
+            "rev": "v0.9.11.1",
+            "sha256": "sha256-+SyHeJkGh9G3tklqLCF5oBL8H6XAGSEo+hVDa5Zpdhw=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v0.9.11.1"
     },
     "complate": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./complate-0.14.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "complate",
@@ -754,12 +731,7 @@
         "version": "v1.7.1"
     },
     "convfmt": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./convfmt-0.1.6/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "convfmt",
@@ -787,12 +759,18 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-DYYU02p6/rO6sY1B1BKI/h+IhSdCRQl+YTuor5+dl1M=",
-            "type": "url",
-            "url": "https://github.com/junyu-w/corgi/releases/download/v0.2.4/corgi_v0.2.4_linux_64-bit.tar.gz"
+            "owner": "junyu-w",
+            "repo": "corgi",
+            "rev": "v0.2.4",
+            "sha256": "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "0.2.4"
+        "version": "v0.2.4"
     },
     "ctrl-z.fish": {
         "cargoLocks": null,
@@ -1043,12 +1021,7 @@
         "version": "0.9.0"
     },
     "dra": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./dra-0.6.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "dra",
@@ -1168,12 +1141,7 @@
         "version": "v2.5.1"
     },
     "envset": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./envset-v0.1.17/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "envset",
@@ -1656,12 +1624,7 @@
         "version": "v1.0.0"
     },
     "game_2048_tui": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./game_2048_tui-v0.0.2/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "game_2048_tui",
@@ -1851,10 +1814,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-dpPWs7S/iRUe2U91DN/+T/HyKtRZOl9FsV7ZulaqP40=",
-            "type": "url",
-            "url": "https://github.com/nwtgck/gif-progress/releases/download/release-fix-not-moving-progress-bar/gif-progress-linux-amd64.tar.gz"
+            "owner": "nwtgck",
+            "repo": "gif-progress",
+            "rev": "release-fix-not-moving-progress-bar",
+            "sha256": "sha256-kNWTpvajuZZPSSZeJBP2N+z67OBPuYhaxydcETWDses=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "release-fix-not-moving-progress-bar"
     },
@@ -1880,12 +1849,7 @@
         "version": "v0.9.1"
     },
     "git-grab": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./git-grab-3.0.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "git-grab",
@@ -2116,12 +2080,7 @@
         "version": "3.2.0"
     },
     "git-sumi": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./git-sumi-v0.0.9/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "git-sumi",
@@ -2289,12 +2248,7 @@
         "version": "v2.0.5"
     },
     "grip-grab": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./grip-grab-v0.5.5/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "grip-grab",
@@ -2322,10 +2276,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-e0Pk06MCCSnh4bqK94xh4C37eooK9Vj70ndGqey1B0M=",
-            "type": "url",
-            "url": "https://github.com/git-time-metric/gtm/releases/download/v1.3.5/gtm.v1.3.5.linux.tar.gz"
+            "owner": "git-time-metric",
+            "repo": "gtm",
+            "rev": "v1.3.5",
+            "sha256": "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v1.3.5"
     },
@@ -2351,12 +2311,7 @@
         "version": "ebd33f7d01a7ac9b2695f71b1136d6b89a0d5d44"
     },
     "gw": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./gw-v0.4.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "gw",
@@ -2398,12 +2353,7 @@
         "version": "1.2.4"
     },
     "hexpatch": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./hexpatch-v1.9.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "hexpatch",
@@ -2431,20 +2381,21 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-JKdH6jR4c2IOdWM+Yq37ltN383hQlE99NYW/OpeiO3g=",
-            "type": "url",
-            "url": "https://github.com/pamburus/hl/releases/download/v0.29.9/hl-linux-x86_64-gnu.tar.gz"
+            "owner": "pamburus",
+            "repo": "hl",
+            "rev": "v0.29.9",
+            "sha256": "sha256-HVfbUw3kUgWA1MUV9Df3FZeRykXMEei+tEGx+tqWNWw=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v0.29.9"
     },
     "hledger-fmt": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./hledger-fmt-v0.2.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "hledger-fmt",
@@ -2457,12 +2408,12 @@
             "name": null,
             "owner": "mondeja",
             "repo": "hledger-fmt",
-            "rev": "v0.2.0",
-            "sha256": "sha256-LAlI/QFrKJTB1fDuNSOrf1u5nB1w3vNAYixYiUnYg0o=",
+            "rev": "v0.2.1",
+            "sha256": "sha256-ZZUEJzceBTt4ObiEJU1WUC0Ic+LijiyAeeVVhxUp7vw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.0"
+        "version": "v0.2.1"
     },
     "hssp": {
         "cargoLocks": null,
@@ -2493,12 +2444,18 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-TfxEO2rhOvDmtUJn/xTDSOBOWUkJViUM6iR4QBsXJ5s=",
-            "type": "url",
-            "url": "https://github.com/p-ranav/hypergrep/releases/download/v0.1.1/hg_0.1.1.zip"
+            "owner": "p-ranav",
+            "repo": "hypergrep",
+            "rev": "v0.1.1",
+            "sha256": "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "0.1.1"
+        "version": "v0.1.1"
     },
     "images-upload-cli": {
         "cargoLocks": null,
@@ -2522,12 +2479,7 @@
         "version": "v3.0.4"
     },
     "impala": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./impala-v0.2.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "impala",
@@ -2548,12 +2500,7 @@
         "version": "v0.2.3"
     },
     "jalm": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./jalm-f1e79605af1b4852b2a5dbfcc4674a5c14fc551d/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2022-10-08",
         "extract": null,
         "name": "jalm",
@@ -2652,12 +2599,7 @@
         "version": "0.16"
     },
     "koji": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./koji-2.2.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "koji",
@@ -2741,12 +2683,7 @@
         "version": "v4.3.0"
     },
     "lobtui": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./lobtui-v0.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "lobtui",
@@ -2851,12 +2788,7 @@
         "version": "4418bd111b4f86d0e35038d45332153c263c2d06"
     },
     "manga-tui": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./manga-tui-v0.4.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "manga-tui",
@@ -2905,12 +2837,18 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-l8NCTQwBOC6FfUT7sYDZGNgjEQj8GXi6IctApvz+ZdY=",
-            "type": "url",
-            "url": "https://github.com/hougesen/mdsf/releases/download/v0.3.0/mdsf-x86_64-unknown-linux-gnu.tar.gz"
+            "owner": "hougesen",
+            "repo": "mdsf",
+            "rev": "v0.3.1",
+            "sha256": "sha256-QziaxQ42jfYrA9Hq55XPKYtIDzOPeSzcCnHJ8N6lFoQ=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "v0.3.0"
+        "version": "v0.3.1"
     },
     "mdtt": {
         "cargoLocks": null,
@@ -2932,33 +2870,6 @@
             "type": "github"
         },
         "version": "v0.2.1"
-    },
-    "mergiraf": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./mergiraf-1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e/Cargo.lock",
-                {
-                    "tree-sitter-xml-0.7.0": "sha256-RTWvOUAs3Uql9DKsP1jf9FZZHaZORE40GXd+6g6RQZw="
-                }
-            ]
-        },
-        "date": "2024-11-12",
-        "extract": null,
-        "name": "mergiraf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e",
-            "sha256": "sha256-ChOYmrRfkyfVm4NylJqUIz1vEpoVMDQPsKZCm1GJjE8=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://codeberg.org/mergiraf/mergiraf"
-        },
-        "version": "1ba7d8dd1e92583e0fadc2a25fc1cfecfce5e13e"
     },
     "minimal-tmux-status": {
         "cargoLocks": null,
@@ -2989,18 +2900,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "ThaUnknown",
-            "repo": "miru",
-            "rev": "v5.5.8",
-            "sha256": "sha256-IMoB1VUPmIx+wQ6QZJvF1WdVfjRM+hCaKQn17tLb37U=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-4ueVgIcIi/RIFRoDKStiNqszfaIXZ9dfagddzCVaSRs=",
+            "type": "url",
+            "url": "https://github.com/ThaUnknown/miru/releases/download/v5.5.8/linux-Miru-5.5.8.AppImage"
         },
-        "version": "v5.5.8"
+        "version": "5.5.8"
     },
     "mosdns-cn": {
         "cargoLocks": null,
@@ -3010,10 +2915,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-EMWm3EFtIvyBmnLniH9xD4cJacuN5gQWDXRudiMB06I=",
-            "type": "url",
-            "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v1.4.0/mosdns-cn-linux-arm64.zip"
+            "owner": "IrineSistiana",
+            "repo": "mosdns-cn",
+            "rev": "v1.4.0",
+            "sha256": "sha256-l2jqy2rtiQTIHNVR9LoNhTszmhTd8g3JQedbZK9E6hM=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v1.4.0"
     },
@@ -3235,18 +3146,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "bornova",
-            "repo": "numara-calculator",
-            "rev": "v5.6.0",
-            "sha256": "sha256-Pn2h9Z+PDEyvhtZemfUeCW6zx0E6Ccam9GCELdHsgBs=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-o3WLlQlC1slT2F3XjfAsR3DqASe+WEV05mY/YVr0UCc=",
+            "type": "url",
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.7.0/Numara-5.7.0-x86_64.AppImage"
         },
-        "version": "v5.6.0"
+        "version": "5.7.0"
     },
     "org-export": {
         "cargoLocks": null,
@@ -3270,12 +3175,7 @@
         "version": "64ac299c041877620c2cadba83ded44f46c4e124"
     },
     "otree": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./otree-v0.3.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "otree",
@@ -3492,16 +3392,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "pot-app",
-            "repo": "pot-desktop",
-            "rev": "3.0.6",
-            "sha256": "sha256-PUXZT1kiInM/CXUoRko/5qlrRurGpQ4ym5YMTgFwuxE=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-KZU6kVD7m3unfSscm4uHWG3JLWnd0pGzl0PHtNKaRu0=",
+            "type": "url",
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.6/pot_3.0.6_amd64.AppImage"
         },
         "version": "3.0.6"
     },
@@ -3592,11 +3486,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-RXjUkUvbvRiWO0xhH6OdkS0Nvu/++CEftUbkUXanLR0=",
+            "sha256": "sha256-9XeD+69kggWsUK59ZG8nWC/HBr45d+h8PBJOepJAexA=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.26.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.27.0.tar.gz"
         },
-        "version": "2.26.0"
+        "version": "2.27.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -3803,12 +3697,7 @@
         "version": "v0.3.0"
     },
     "repoblame": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./repoblame-66c7eb2ce6a62f60be1711e8975c1b582ec39045/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2024-09-15",
         "extract": null,
         "name": "repoblame",
@@ -3871,12 +3760,7 @@
         "version": "00a852b7d62553b24b8f1bf65d63744ff40c0e5c"
     },
     "rimage": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./rimage-v0.10.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "rimage",
@@ -3897,12 +3781,7 @@
         "version": "v0.10.3"
     },
     "rsv": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./rsv-v0.4.14/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "rsv",
@@ -3923,12 +3802,7 @@
         "version": "v0.4.14"
     },
     "rust-kanban": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./rust-kanban-v0.10.5/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "rust-kanban",
@@ -3956,12 +3830,18 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-VSxQttHLlCv7u0GEjnO236yWsdo6ocBOBb/v5tFf/WA=",
-            "type": "url",
-            "url": "https://github.com/ak9024/rustywatch/releases/download/v0.2.11/rustywatch-0.2.11-x86_64-unknown-linux-gnu.tar.gz"
+            "owner": "ak9024",
+            "repo": "rustywatch",
+            "rev": "v0.2.11",
+            "sha256": "sha256-UzMLSPBH/ElpEWnPV2zD1+2Pt6pO4cG7CmgJvy1MawM=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "0.2.11"
+        "version": "v0.2.11"
     },
     "s": {
         "cargoLocks": null,
@@ -4034,10 +3914,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-DfDtdudaqXQAO+wIfaAUGzGgXlggt3teDOoFoTr2v+A=",
-            "type": "url",
-            "url": "https://github.com/sbsrf/sbsrf/releases/download/20241016/sbsrf.zip"
+            "owner": "sbsrf",
+            "repo": "sbsrf",
+            "rev": "20241016",
+            "sha256": "sha256-5tZT4syf6MPBOmIjZjnjsoFWuXwtdhsvFF8/vULJs6w=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "20241016"
     },
@@ -4049,20 +3935,21 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-BFxd+UVx4KhER/9p0PP8DuArLjVVC9QWcsECm6OnnrE=",
-            "type": "url",
-            "url": "https://github.com/lusingander/serie/releases/download/v0.4.0/serie-0.4.0-x86_64-unknown-linux-gnu.tar.gz"
+            "owner": "lusingander",
+            "repo": "serie",
+            "rev": "v0.4.0",
+            "sha256": "sha256-RP9Tv6IrDfawjXCQp0nB0nd7b6IwkdykHcEfGEguFHo=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "0.4.0"
+        "version": "v0.4.0"
     },
     "serpl": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./serpl-0.3.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "serpl",
@@ -4083,12 +3970,7 @@
         "version": "0.3.3"
     },
     "servicer": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./servicer-v0.1.13/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "servicer",
@@ -4130,12 +4012,7 @@
         "version": "0.4.0"
     },
     "sig": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./sig-v0.1.3/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "sig",
@@ -4156,12 +4033,7 @@
         "version": "v0.1.3"
     },
     "simple-completion-language-server": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./simple-completion-language-server-b79a66085ca03b01652a0668d22e21c337b4c8e6/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2024-11-12",
         "extract": null,
         "name": "simple-completion-language-server",
@@ -4216,20 +4088,15 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.3.3",
-            "sha256": "sha256-ZACLTBKHM6wjN+LtV6hlxaffEY/tuCPMzOzyjfeBf8E=",
+            "rev": "v0.3.4",
+            "sha256": "sha256-ope97ftmsAga223m83OR7VYYxa30vnXZeBPvc1ePI1Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.3"
+        "version": "v0.3.4"
     },
     "sprite-dicing": {
-        "cargoLocks": {
-            "crates/Cargo.lock": [
-                "./sprite-dicing-v2.1.0/crates/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "sprite-dicing",
@@ -4271,12 +4138,7 @@
         "version": "v0.7.0"
     },
     "stego": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./stego-d9d5911f4d2d141fea74936f235a74bf03961c71/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2019-10-22",
         "extract": null,
         "name": "stego",
@@ -4318,12 +4180,7 @@
         "version": "v1.0.0"
     },
     "superwhich": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./superwhich-v1.0.1/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "superwhich",
@@ -4365,13 +4222,8 @@
         "version": "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada"
     },
     "tabry-rs": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./tabry-rs-58bf619e2f90102d0678de056d9b9088ad7d179a/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2024-10-11",
+        "cargoLocks": null,
+        "date": "2024-11-13",
         "extract": null,
         "name": "tabry-rs",
         "passthru": null,
@@ -4383,22 +4235,15 @@
             "name": null,
             "owner": "evanbattaglia",
             "repo": "tabry-rs",
-            "rev": "58bf619e2f90102d0678de056d9b9088ad7d179a",
-            "sha256": "sha256-iWl16BEYMSQ1cvJJqkJ8anhrJui033NZeoLmockyarw=",
+            "rev": "9d5533f694478fd35e345f8d8337462c471ddb3e",
+            "sha256": "sha256-NIkuj0w92RyweKHhKrzElwwLr7XdNshpf03GEC4kHdg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "58bf619e2f90102d0678de056d9b9088ad7d179a"
+        "version": "9d5533f694478fd35e345f8d8337462c471ddb3e"
     },
     "tach": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./tach-v0.14.3/Cargo.lock",
-                {
-                    "ruff_python_ast-0.0.0": "sha256-+8JKzKKWPQEanU2mh8p5sRjnoU6DawTQQi43qRXVXIg="
-                }
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "tach",
@@ -4468,20 +4313,21 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-4TJEwCNcwTiky1iAj5PzDsI4GPB/6fCgTbIu2QAl5Ps=",
-            "type": "url",
-            "url": "https://github.com/alexpasmantier/television/releases/download/v0.4.20/tv-v0.4.20-linux-x86_64.tar.gz"
+            "owner": "alexpasmantier",
+            "repo": "television",
+            "rev": "v0.4.21",
+            "sha256": "sha256-Z24XBZ5IOXGe6KKa3xnDE/NY/sfsL2l1RpAnabsgRKU=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "v0.4.20"
+        "version": "v0.4.21"
     },
     "templify": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./templify-1.0.0/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "templify",
@@ -4502,12 +4348,7 @@
         "version": "1.0.0"
     },
     "termsand": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./termsand-75a50ba82ed299047cd5d0cd53b6fce390cfc6e8/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": "2024-08-15",
         "extract": null,
         "name": "termsand",
@@ -4570,12 +4411,7 @@
         "version": "v3.1.10"
     },
     "textpod": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./textpod-0.1.2/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "textpod",
@@ -5032,10 +4868,16 @@
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-FqGZjD+IVSH97NQDE75s9+edGsLje2yCZRblN6qlvhM=",
-            "type": "url",
-            "url": "https://github.com/minefuto/tp/releases/download/v1.0.0/tp_Linux_x86_64.tar.gz"
+            "owner": "minefuto",
+            "repo": "tp",
+            "rev": "v1.0.0",
+            "sha256": "sha256-e/G0cN0HKzpgBRajztp/DucgO0JWW/jqi/omvLWsVyQ=",
+            "sparseCheckout": [],
+            "type": "github"
         },
         "version": "v1.0.0"
     },
@@ -5103,12 +4945,7 @@
         "version": "v0.1.22"
     },
     "tuime": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./tuime-v1.0.1/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "tuime",
@@ -5585,12 +5422,7 @@
         "version": "0.0.2"
     },
     "wiper": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./wiper-v0.2.1/Cargo.lock",
-                {}
-            ]
-        },
+        "cargoLocks": null,
         "date": null,
         "extract": null,
         "name": "wiper",

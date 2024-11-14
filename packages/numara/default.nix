@@ -1,27 +1,17 @@
 {
   lib,
   namespace,
-  fetchurl,
   appimageTools,
   _sources,
 }:
 
 let
-  pname = "numara";
+  inherit (_sources.numara) pname version src;
   pnameCap = lib.${namespace}.capitalize pname;
-  source = _sources.${pname};
-  inherit (source) version;
-
-  src = fetchurl {
-    url = "https://github.com/bornova/numara-calculator/releases/download/v${version}/Numara-${version}-x86_64.AppImage";
-    hash = "sha256-MBu8wo04R0zpc2eSuHFJtWVtRleCRQiM1bxsLUXrQYo=";
-  };
-
   appimageContents = appimageTools.extract { inherit pname version src; };
 in
 appimageTools.wrapType2 {
   inherit pname version src;
-  #    mv $out/bin/{${pname}-${version},${pname}}
 
   extraInstallCommands = ''
     install -Dm444 ${appimageContents}/${pname}.desktop $out/share/applications/${pnameCap}.desktop
