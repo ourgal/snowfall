@@ -15,7 +15,12 @@ args.module (
         "stylua"
         # keep-sorted end
       ];
-      luaPkgs = "luarocks-nix";
+      luaPkgs = [
+        # keep-sorted start
+        "luacheck"
+        "luarocks-nix"
+        # keep-sorted end
+      ];
       value = {
         # for coc.nvim
         xdg.dataFile.lua-language-server.source = "${pkgs.lua-language-server}/share/lua-language-server";
