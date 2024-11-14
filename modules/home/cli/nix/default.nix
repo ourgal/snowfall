@@ -26,6 +26,7 @@ args.module (
     ];
     snowPkgs = [
       # keep-sorted start
+      "drift"
       "flake"
       "thaw"
       # keep-sorted end
