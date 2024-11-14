@@ -37,3 +37,6 @@ search pkg:
 
 searchc pkg:
 	@nix-search -c $(cat /etc/os-release | grep VERSION_ID | cut -d\" -f 2) {{pkg}}
+
+drift pkg:
+	@drift update --flake $(git root) {{pkg}}

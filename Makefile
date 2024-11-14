@@ -39,6 +39,11 @@ ifeq (sc,$(firstword $(MAKECMDGOALS)))
   $(eval $(SEARCH_ARGS):;@:)
 endif
 
+ifeq (drift,$(firstword $(MAKECMDGOALS)))
+  SEARCH_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  $(eval $(SEARCH_ARGS):;@:)
+endif
+
 ##@
 ##@ main
 ##@
@@ -89,6 +94,10 @@ sc: searchc ##@ nix-search stable packages
 .PHONY: searchc
 searchc: ##@ nix-search stable packages
 	@nix-search -c "$$(cat /etc/os-release | grep VERSION_ID | cut -d\" -f 2)" $(SEARCH_ARGS)
+
+.PHONY: drift
+drift: ##@ drift update package hash
+	@drift update --flake $$(git root) $(SEARCH_ARGS)
 
 ##@
 ##@ misc

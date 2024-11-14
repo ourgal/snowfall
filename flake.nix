@@ -83,6 +83,10 @@
       url = "github:jpetrucciani/pog";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    snowfall-drift = {
+      url = "github:snowfallorg/drift";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -136,6 +140,7 @@
         # neovim-nightly-overlay.overlays.default
         snowfall-flake.overlays."package/flake"
         snowfall-thaw.overlays."package/thaw"
+        snowfall-drift.overlays."package/drift"
         nixpkgs-f2k.overlays.window-managers
         nvfetcher.overlays.default
         nix-vscode-extensions.overlays.default
