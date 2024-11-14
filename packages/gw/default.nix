@@ -12,7 +12,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.gw) pname version src;
 
-  cargoLock = _sources.gw.cargoLock."Cargo.lock";
+  cargoHash = "sha256-vSGUndUEAgUe9F7fxb/pSshZMzOHGYPBBfP1ZGj+PiU=";
 
   nativeBuildInputs = [ pkg-config ];
 

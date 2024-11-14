@@ -9,7 +9,12 @@
 python3.pkgs.buildPythonApplication {
   inherit (_sources.tach) pname src version;
 
-  cargoDeps = rustPlatform.importCargoLock _sources.tach.cargoLock."Cargo.lock";
+  cargoDeps = rustPlatform.importCargoLock {
+    lockFile = ./Cargo.lock;
+    outputHashes = {
+      "ruff_python_ast-0.0.0" = "sha256-+8JKzKKWPQEanU2mh8p5sRjnoU6DawTQQi43qRXVXIg=";
+    };
+  };
 
   nativeBuildInputs = [
     cargo

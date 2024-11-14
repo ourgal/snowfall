@@ -11,7 +11,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.code-radio-cli) pname src version;
 
-  cargoLock = _sources.code-radio-cli.cargoLock."Cargo.lock";
+  cargoHash = "sha256-W2c63beCqEIB0SxrpC0ptxsoKrHSt+TId98LcX7RNBg=";
 
   nativeBuildInputs = [
     pkg-config

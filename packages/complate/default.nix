@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage {
 
   doCheck = false;
 
-  cargoLock = _sources.complate.cargoLock."Cargo.lock";
+  cargoHash = "sha256-3gbEDXDwpG7WqBNR1WifTTKppCzSpaQIMo9oPrmwS9Q=";
 
   meta = with lib; {
     description = "A powerful text templating tool";

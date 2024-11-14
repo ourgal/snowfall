@@ -10,7 +10,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.rust-kanban) pname version src;
 
-  cargoLock = _sources.rust-kanban.cargoLock."Cargo.lock";
+  cargoHash = "sha256-Rui5fsLBx3ix2skRQVubEV8JabAaWbexA0L2D65JCZg=";
 
   nativeBuildInputs = [ pkg-config ];
 

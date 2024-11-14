@@ -8,7 +8,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.bluetui) pname src version;
 
-  cargoLock = _sources.bluetui.cargoLock."Cargo.lock";
+  cargoHash = "sha256-w6rrZQNu5kLKEWSXFa/vSqwm76zWZug/ZqztMDY7buE=";
 
   nativeBuildInputs = [ pkg-config ];
 

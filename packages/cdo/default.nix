@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.cdo) pname version src;
 
-  cargoLock = _sources.cdo.cargoLock."Cargo.lock";
+  cargoHash = "sha256-HPLgstI3QApfPKPUyPy5DIMhK6NXbbhjvmhac4KTpM4=";
 
   meta = with lib; {
     description = "Small command to run other commands in a given directory";

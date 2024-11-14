@@ -8,7 +8,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.wiper) pname version src;
 
-  cargoLock = _sources.wiper.cargoLock."Cargo.lock";
+  cargoHash = "sha256-gYWTv0AXOmpx9Nc8akBMVWkESI0AtnGgvfH9hQZ0peo=";
 
   buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Foundation ];
 

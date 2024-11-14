@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage rec {
   inherit (_sources.rimage) pname version src;
 
-  cargoLock = _sources.rimage.cargoLock."Cargo.lock";
+  cargoHash = "sha256-OAMZOpxGlYfJkSRXhDXiZ3eYdDiXU1g7bEUNOJ6Zf/M=";
 
   nativeBuildInputs = [ pkg-config ];
 

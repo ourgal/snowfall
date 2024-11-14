@@ -13,7 +13,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.manga-tui) pname version src;
 
-  cargoLock = _sources.manga-tui.cargoLock."Cargo.lock";
+  cargoHash = "sha256-IufJPCvUEWR5p4PrFlaiQPW9wyIFj/Pd/JHki69L6Es=";
 
   nativeBuildInputs = [ pkg-config ];
 

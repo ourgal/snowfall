@@ -6,7 +6,7 @@
 rustPlatform.buildRustPackage {
   inherit (_sources.impala) pname version src;
 
-  cargoLock = _sources.impala.cargoLock."Cargo.lock";
+  cargoHash = "sha256-IMvlGAD9DB00luu9F4UKxwSYt0sV+IU8Pb7r10VtyYg=";
 
   meta = with lib; {
     description = "TUI for managing wifi on Linux";
