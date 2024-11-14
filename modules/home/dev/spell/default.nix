@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "typos";
+    nixPkgs = [
+      # keep-sorted start
+      "typos"
+      "typos-lsp"
+      # keep-sorted end
+    ];
   }
 )
