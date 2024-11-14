@@ -474,6 +474,7 @@ args.module (
                 language-servers = [
                   "scls"
                   "nil"
+                  "typos-lsp"
                 ];
                 formatter = {
                   command = "nixfmt";
@@ -693,6 +694,9 @@ args.module (
                   "--port"
                   "13603"
                 ];
+              };
+              typos-lsp = {
+                command = "typos-lsp";
               };
             };
           };
