@@ -4382,12 +4382,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v0.4.1",
-            "sha256": "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=",
+            "rev": "v0.5.0",
+            "sha256": "sha256-hhfJCmrQs6wH342N3BIdtHavWLVsGj14ANynxES7dzE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.1"
+        "version": "v0.5.0"
     },
     "textimg": {
         "cargoLocks": null,
@@ -4547,7 +4547,7 @@
     },
     "tmux-kanagawa": {
         "cargoLocks": null,
-        "date": "2024-11-03",
+        "date": "2024-11-14",
         "extract": null,
         "name": "tmux-kanagawa",
         "passthru": null,
@@ -4559,12 +4559,12 @@
             "name": null,
             "owner": "Nybkox",
             "repo": "tmux-kanagawa",
-            "rev": "d177855dcc580e730b96690b56451b4f0431a85b",
-            "sha256": "sha256-u0btTdWd5b8Ad76nDt5BXFW35VUVrrP2R6FiwYPuzgQ=",
+            "rev": "a06a8c8eeca907854cf39d32349b3f3fae8cb96d",
+            "sha256": "sha256-4ggVapqfwzRyy/CVXsvXK3HRwwVLCgKEbkLVhXnBrLw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d177855dcc580e730b96690b56451b4f0431a85b"
+        "version": "a06a8c8eeca907854cf39d32349b3f3fae8cb96d"
     },
     "tmux-loadavg": {
         "cargoLocks": null,

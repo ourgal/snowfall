@@ -2375,13 +2375,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.4.1";
+    version = "v0.5.0";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.4.1";
+      rev = "v0.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-cfp3HGK7nIcDDPWqeDOjx95rnM79mrANNhgHs7+xzn0=";
+      sha256 = "sha256-hhfJCmrQs6wH342N3BIdtHavWLVsGj14ANynxES7dzE=";
     };
   };
   textimg = {
@@ -2472,15 +2472,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "d177855dcc580e730b96690b56451b4f0431a85b";
+    version = "a06a8c8eeca907854cf39d32349b3f3fae8cb96d";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "d177855dcc580e730b96690b56451b4f0431a85b";
+      rev = "a06a8c8eeca907854cf39d32349b3f3fae8cb96d";
       fetchSubmodules = false;
-      sha256 = "sha256-u0btTdWd5b8Ad76nDt5BXFW35VUVrrP2R6FiwYPuzgQ=";
+      sha256 = "sha256-4ggVapqfwzRyy/CVXsvXK3HRwwVLCgKEbkLVhXnBrLw=";
     };
-    date = "2024-11-03";
+    date = "2024-11-14";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
