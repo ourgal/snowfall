@@ -2640,6 +2640,27 @@
         },
         "version": "88f5a8abd2649b348ffec433a24a263b37f122c0"
     },
+    "lib-x": {
+        "cargoLocks": null,
+        "date": "2024-11-15",
+        "extract": null,
+        "name": "lib-x",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ourgal",
+            "repo": "lib-x",
+            "rev": "fdfecb0e9dd27867fdab625117a53937aa03c44a",
+            "sha256": "sha256-9EUPkE/u4U9aHH+YMymCaZNuc7+nNAIwO0YIoJA1+vw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "fdfecb0e9dd27867fdab625117a53937aa03c44a"
+    },
     "lite-xl-vibe": {
         "cargoLocks": null,
         "date": "2023-10-31",

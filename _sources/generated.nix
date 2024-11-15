@@ -1435,6 +1435,18 @@
     };
     date = "2023-01-12";
   };
+  lib-x = {
+    pname = "lib-x";
+    version = "fdfecb0e9dd27867fdab625117a53937aa03c44a";
+    src = fetchFromGitHub {
+      owner = "ourgal";
+      repo = "lib-x";
+      rev = "fdfecb0e9dd27867fdab625117a53937aa03c44a";
+      fetchSubmodules = false;
+      sha256 = "sha256-9EUPkE/u4U9aHH+YMymCaZNuc7+nNAIwO0YIoJA1+vw=";
+    };
+    date = "2024-11-15";
+  };
   lite-xl-vibe = {
     pname = "lite-xl-vibe";
     version = "5b5579ab5efe9388c495d5b8baa6cd10b2db53ac";
