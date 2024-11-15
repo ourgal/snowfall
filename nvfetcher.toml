@@ -1075,3 +1075,8 @@ fetch.github = "noctuid/mpv-btfs-stream"
 [mpv-webtorrent-hook]
 src.manual = "eb2da86b628c512184818b19307632fa71fe7fb9" # for mpv 0.37.0
 fetch.github = "noctuid/mpv-webtorrent-hook"
+
+[lib-x]
+src.git = "https://github.com/ourgal/lib-x"
+src.branch = "bugfix/open"
+fetch.github = "ourgal/lib-x"

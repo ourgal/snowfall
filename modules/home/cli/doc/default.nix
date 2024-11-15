@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "archwiki"
       "eg"
+      "lib-x"
       # keep-sorted end
     ];
     nixPkgs = [
