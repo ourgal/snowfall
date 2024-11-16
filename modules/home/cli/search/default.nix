@@ -6,7 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "fpp"
-      "fzf"
       "fzf-make"
       "fzy"
       "skim"
@@ -19,6 +18,9 @@ args.module (
       "zfind"
       # keep-sorted end
     ];
-    enable = "television";
+    enable = [
+      "fzf"
+      "television"
+    ];
   }
 )
