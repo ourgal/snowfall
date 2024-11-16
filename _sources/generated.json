@@ -1196,12 +1196,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.7.3",
-            "sha256": "sha256-5e9x90IpgBm1C1JKJ8SmfKwuqmmBgqBx7vIRZKMtLig=",
+            "rev": "v2.7.5",
+            "sha256": "sha256-ccDdPuqCde1MHVyEokGGB5m5Ts6asnOjxWPVBGoWq6c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.3"
+        "version": "v2.7.5"
     },
     "fc-fish": {
         "cargoLocks": null,
@@ -1392,27 +1392,6 @@
         },
         "version": "1ad8fff696d48c8bf173aa98f9dff39d7916de0e"
     },
-    "fish-done": {
-        "cargoLocks": null,
-        "date": "2024-04-11",
-        "extract": null,
-        "name": "fish-done",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "franciscolourenco",
-            "repo": "done",
-            "rev": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366",
-            "sha256": "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "eb32ade85c0f2c68cbfcff3036756bbf27a4f366"
-    },
     "fish-f": {
         "cargoLocks": null,
         "date": "2021-05-09",
@@ -1434,27 +1413,6 @@
         },
         "version": "6099f3a4b5d148674106a264fffc84dd5a4dfe35"
     },
-    "fish-fzf": {
-        "cargoLocks": null,
-        "date": "2021-05-12",
-        "extract": null,
-        "name": "fish-fzf",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "jethrokuan",
-            "repo": "fzf",
-            "rev": "479fa67d7439b23095e01b64987ae79a91a4e283",
-            "sha256": "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "479fa67d7439b23095e01b64987ae79a91a4e283"
-    },
     "fish-gitnow": {
         "cargoLocks": null,
         "date": "2024-10-12",
@@ -1475,27 +1433,6 @@
             "type": "github"
         },
         "version": "0cf3c89209305779e82d3b5cb956cf8b54025dd6"
-    },
-    "fish-sponge": {
-        "cargoLocks": null,
-        "date": "2022-10-05",
-        "extract": null,
-        "name": "fish-sponge",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "meaningful-ooo",
-            "repo": "sponge",
-            "rev": "384299545104d5256648cee9d8b117aaa9a6d7be",
-            "sha256": "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "384299545104d5256648cee9d8b117aaa9a6d7be"
     },
     "fishbang": {
         "cargoLocks": null,
@@ -3462,27 +3399,6 @@
         },
         "version": "0.10.20"
     },
-    "puffer-fish": {
-        "cargoLocks": null,
-        "date": "2024-03-03",
-        "extract": null,
-        "name": "puffer-fish",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nickeb96",
-            "repo": "puffer-fish",
-            "rev": "12d062eae0ad24f4ec20593be845ac30cd4b5923",
-            "sha256": "sha256-2niYj0NLfmVIQguuGTA7RrPIcorJEPkxhH6Dhcy+6Bk=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "12d062eae0ad24f4ec20593be845ac30cd4b5923"
-    },
     "pydantic": {
         "cargoLocks": null,
         "date": null,
@@ -4340,12 +4256,12 @@
             "name": null,
             "owner": "alexpasmantier",
             "repo": "television",
-            "rev": "v0.4.21",
-            "sha256": "sha256-Z24XBZ5IOXGe6KKa3xnDE/NY/sfsL2l1RpAnabsgRKU=",
+            "rev": "0.4.23",
+            "sha256": "sha256-Z129B16kZ8Cth7HoljI5ZwaKBeawwiPq/GTlghPixhA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.21"
+        "version": "0.4.23"
     },
     "templify": {
         "cargoLocks": null,
@@ -4461,11 +4377,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KkFplcSdU4GoHQpv0jklyw4/FLTyOe0F81+jyYG7HfI=",
+            "sha256": "sha256-puaN5Tg0FfIi8mtAScKpLtIEBx/f6+PXKfjdNzyl9Rk=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.85.2.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-0.86.1.tar.gz"
         },
-        "version": "0.85.2"
+        "version": "0.86.1"
     },
     "textual-autocomplete": {
         "cargoLocks": null,
