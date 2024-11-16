@@ -3,12 +3,14 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "wait-for";
     nixPkgs = [
       # keep-sorted start
       "coreutils-full"
       "loop"
       "moreutils"
       "progress"
+      "retry"
       "with-shell"
       # keep-sorted end
     ];

@@ -5400,6 +5400,27 @@
         },
         "version": "0.0.21"
     },
+    "wait-for": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "wait-for",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "eficode",
+            "repo": "wait-for",
+            "rev": "v2.2.4",
+            "sha256": "sha256-lPJahbaS/YGVqFUvP6AcpDeQXh2yq7GgicADMcH7fKs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.4"
+    },
     "web-search.fish": {
         "cargoLocks": null,
         "date": "2024-10-14",

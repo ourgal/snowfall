@@ -2950,6 +2950,17 @@
       sha256 = "sha256-DxnQUbmqVbWShJAWiF8IbWeMtvUvMtXRVBDzJAJ+l9c=";
     };
   };
+  wait-for = {
+    pname = "wait-for";
+    version = "v2.2.4";
+    src = fetchFromGitHub {
+      owner = "eficode";
+      repo = "wait-for";
+      rev = "v2.2.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-lPJahbaS/YGVqFUvP6AcpDeQXh2yq7GgicADMcH7fKs=";
+    };
+  };
   "web-search.fish" = {
     pname = "web-search.fish";
     version = "29d3027685cdc7f8ed857e3888733c6d5b5458fb";
