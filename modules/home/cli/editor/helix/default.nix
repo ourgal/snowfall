@@ -20,7 +20,7 @@ args.module (
       tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";
       zellij-popup = "${pkgs.${namespace}.zellij-popup}/bin/zellij-popup";
       cfg = cfgHome config.${namespace} ./.;
-      toggleBool = pkgs.writeShellScript "toggle_boolen" ''
+      toggleBool = pkgs.writeShellScript "toggle_boolean" ''
         awk '{if ($0 ~ /true/) printf "false"; else if ($0 ~ /false/) printf "true";else if ($0 ~ /True/) printf "False"; else if ($0 ~ /False/) printf "True"; else printf $0;}'
       '';
 
