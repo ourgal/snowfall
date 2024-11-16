@@ -4,6 +4,9 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "hishtory";
-    progs.fish.interactiveShellInit = "source ${./config.fish}";
+    progs = {
+      fish.interactiveShellInit = builtins.readFile ./config.fish;
+      zsh.initExtra = builtins.readFile ./config.zsh;
+    };
   }
 )
