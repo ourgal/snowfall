@@ -103,6 +103,7 @@ args.module (
       progs = [
         {
           tmux = {
+            shell = "${pkgs.fish}/bin/fish";
             clock24 = true;
             historyLimit = 20000;
             newSession = true;

@@ -18,6 +18,13 @@ args.module (
           '';
         }
         {
+          zsh.initExtra = ''
+            __lazygit () { lazygit; zle redisplay }
+            zle -N __lazygit
+            bindkey "^g" __lazygit
+          '';
+        }
+        {
           lazygit = {
             catppuccin = enabled;
             settings = {

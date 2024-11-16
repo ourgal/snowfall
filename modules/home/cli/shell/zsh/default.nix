@@ -14,6 +14,7 @@ args.module (
           "MichaelAquilina/zsh-auto-notify"
           "Aloxaf/fzf-tab"
           "Freed-Wu/zsh-help"
+          "toku-sa-n/zsh-dot-up"
         ];
       };
     };

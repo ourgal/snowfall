@@ -15,7 +15,7 @@ args.module (
         set -g repeat-time 300
         setw -g allow-rename off
         setw -g automatic-rename on
-        set-option -g automatic-rename-format "#{?#{==:#{pane_current_command},fish},#{b:pane_current_path},#{pane_current_command}}"
+        set-option -g automatic-rename-format "#{?#{||:#{==:#{pane_current_command},zsh},#{==:#{pane_current_command},fish}},#{b:pane_current_path},#{pane_current_command}}"
         set -g focus-events on
         setw -g aggressive-resize on
 
