@@ -8,7 +8,6 @@ args.module (
       # keep-sorted start
       "micro"
       "ox"
-      "vim-full"
       "vimer"
       "vis"
       # keep-sorted end
@@ -18,6 +17,7 @@ args.module (
       "helix"
       "kakoune"
       "nixvim"
+      "vim"
       # keep-sorted end
     ];
   }

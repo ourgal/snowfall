@@ -14,9 +14,6 @@ args.module (
       progs.fish.functions.stc = {
         body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
       };
-      files = {
-        ".vim" = ln "${sync}/vim";
-      };
       confs = {
         lazyvim = ln "${sync}/lazyvim";
         doom = ln "${sync}/doom";

@@ -67,8 +67,13 @@ args.module (
       "zoxide-vim"
       # keep-sorted end
     ];
-    dataFiles = {
-      "vim/.keep" = "";
-    };
+    dataFiles."vim/.keep" = "";
+    files.".vim" = [
+      ./ftplugin
+      ./coc-settings.json
+      ./plugin
+      ./macro.vim
+      ./templates
+    ];
   }
 )

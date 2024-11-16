@@ -1,0 +1,105 @@
+{
+  "coc.source.word.filetypes": [
+    "markdown",
+    "txt"
+  ],
+  "coc.source.emoji.filetypes": [
+    "markdown",
+    "gitcommit"
+  ],
+  "coc.preferences.formatOnSave": true,
+  "suggest.noselect": true,
+  "python.formatting.provider": "ruff",
+  "pyright.organizeimports.provider": "ruff",
+  "python.linting.ruffEnabled": true,
+  "pyright.inlayHints.variableTypes": false,
+  "Lua.format.enable": false,
+  "Lua.misc.parameters": [
+    "--metapath",
+    "~/.cache/sumneko_lua/meta",
+    "--logpath",
+    "~/.cache/sumneko_lua/log"
+  ],
+  "sumneko-lua.serverDir": "/home/zxc/.local/share/lua-language-server",
+  "powershell.integratedConsole.showOnStartup": false,
+  "yaml.format.enable": true,
+  "perl.p::ls.enable": false,
+  "perl.navigator.enable": false,
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": [
+        "cs"
+      ],
+      "rootPatterns": [
+        "*.csproj",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ]
+    },
+    "dhall": {
+      "command": "dhall-lsp-server",
+      "filetypes": [
+        "dhall"
+      ]
+    },
+    "jsonnet": {
+      "command": "jsonnet-language-server",
+      "args": [
+        "-t"
+      ],
+      "rootPatterns": [
+        ".git/",
+        "jsonnetfile.json"
+      ],
+      "filetypes": [
+        "jsonnet",
+        "libsonnet"
+      ]
+    },
+    "nixd": {
+      "command": "nixd",
+      "filetypes": [],
+      "settings": {
+        "nixd": {
+          "nixpkgs": {
+            "expr": "import <nixpkgs> {}"
+          },
+          "formatting": {
+            "command": [
+              "nixfmt"
+            ]
+          }
+        }
+      }
+    },
+    "nil": {
+      "command": "nil",
+      "filetypes": [
+        "nix"
+      ],
+      "settings": {
+        "nil": {
+          "formatting": {
+            "command": [
+              "nixfmt"
+            ]
+          }
+        }
+      }
+    },
+    "fennel": {
+      "command": "fennel-ls",
+      "filetypes": [
+        "fennel"
+      ]
+    },
+    "pls": {
+      "command": "pls",
+      "filetypes": [
+        "perl"
+      ]
+    }
+  }
+}
