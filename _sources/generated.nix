@@ -251,13 +251,13 @@
   };
   cat_win = {
     pname = "cat_win";
-    version = "v1.9.2";
+    version = "v1.10.0";
     src = fetchFromGitHub {
       owner = "SilenZcience";
       repo = "cat_win";
-      rev = "v1.9.2";
+      rev = "v1.10.0";
       fetchSubmodules = false;
-      sha256 = "sha256-PfGhd8mI3vccUg9XykR3NRHS6GKd1P4tfLqEmEizUkU=";
+      sha256 = "sha256-Yib57VuJRwUzvP+bDaqwkd7zgewgEfVaorsmZo9w4p8=";
     };
   };
   cdo = {
@@ -2138,13 +2138,13 @@
   };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
-    version = "20241016";
+    version = "20241116";
     src = fetchFromGitHub {
       owner = "sbsrf";
       repo = "sbsrf";
-      rev = "20241016";
+      rev = "20241116";
       fetchSubmodules = false;
-      sha256 = "sha256-5tZT4syf6MPBOmIjZjnjsoFWuXwtdhsvFF8/vULJs6w=";
+      sha256 = "sha256-Xy/+Xejbdz3/7Bfe8oCxgO9AygOStAzv0OxxAv7u6uM=";
     };
   };
   serie = {
@@ -2484,15 +2484,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "a06a8c8eeca907854cf39d32349b3f3fae8cb96d";
+    version = "4edd6f0a70cdf1b53d8099eb0929f1cff6f3fb44";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "a06a8c8eeca907854cf39d32349b3f3fae8cb96d";
+      rev = "4edd6f0a70cdf1b53d8099eb0929f1cff6f3fb44";
       fetchSubmodules = false;
-      sha256 = "sha256-4ggVapqfwzRyy/CVXsvXK3HRwwVLCgKEbkLVhXnBrLw=";
+      sha256 = "sha256-6Hatsxl2Z8p7AEDLTsVPIj6p7Y22mIzI4VMaGM0zpE4=";
     };
-    date = "2024-11-14";
+    date = "2024-11-15";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
@@ -2896,15 +2896,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "187215190586296bf7641322cd0fb4333d70b44f";
+    version = "a3e76f6ba61a4e57cd929340bf367b7e8d56ae2b";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "187215190586296bf7641322cd0fb4333d70b44f";
+      rev = "a3e76f6ba61a4e57cd929340bf367b7e8d56ae2b";
       fetchSubmodules = false;
-      sha256 = "sha256-L0EMdceByTAupyZBbVf72A5+Z3n2gFSUb7WsB0qoB4w=";
+      sha256 = "sha256-kCrSEvLSDI0RrecvbvJ6iC1n7n9HbPPgAZ65CyaYxX4=";
     };
-    date = "2024-11-07";
+    date = "2024-11-15";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
