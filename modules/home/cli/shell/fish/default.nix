@@ -59,25 +59,25 @@ args.module (
           "autopair.fish"
           "clownfish"
           "ctrl-z.fish"
+          "done"
           "enhancd"
           "fc-fish"
           "fish-abbreviation-tips"
           "fish-bd"
           "fish-color-scheme-switcher"
-          "fish-done"
           "fish-f"
-          "fish-fzf"
           "fish-gitnow"
-          "fish-sponge"
-          "puffer-fish"
+          "fzf"
+          "puffer"
           "rgg.fish"
+          "sponge"
           "to-fish"
           "todo-comments.fish"
           # keep-sorted end
         ] pkgs;
       };
       env = {
-        FZF_LEGACY_KEYBINDINGS = "0";
+        FZF_LEGACY_KEYBINDINGS = "1";
         FZF_COMPLETE = "2";
         fifc_keybinding = "\\cx";
         ENHANCD_COMMAND = "ecd";

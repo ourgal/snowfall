@@ -646,13 +646,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.3";
+    version = "v2.7.5";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.3";
+      rev = "v2.7.5";
       fetchSubmodules = false;
-      sha256 = "sha256-5e9x90IpgBm1C1JKJ8SmfKwuqmmBgqBx7vIRZKMtLig=";
+      sha256 = "sha256-ccDdPuqCde1MHVyEokGGB5m5Ts6asnOjxWPVBGoWq6c=";
     };
   };
   fc-fish = {
@@ -760,18 +760,6 @@
     };
     date = "2021-07-16";
   };
-  fish-done = {
-    pname = "fish-done";
-    version = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
-    src = fetchFromGitHub {
-      owner = "franciscolourenco";
-      repo = "done";
-      rev = "eb32ade85c0f2c68cbfcff3036756bbf27a4f366";
-      fetchSubmodules = false;
-      sha256 = "sha256-DMIRKRAVOn7YEnuAtz4hIxrU93ULxNoQhW6juxCoh4o=";
-    };
-    date = "2024-04-11";
-  };
   fish-f = {
     pname = "fish-f";
     version = "6099f3a4b5d148674106a264fffc84dd5a4dfe35";
@@ -784,18 +772,6 @@
     };
     date = "2021-05-09";
   };
-  fish-fzf = {
-    pname = "fish-fzf";
-    version = "479fa67d7439b23095e01b64987ae79a91a4e283";
-    src = fetchFromGitHub {
-      owner = "jethrokuan";
-      repo = "fzf";
-      rev = "479fa67d7439b23095e01b64987ae79a91a4e283";
-      fetchSubmodules = false;
-      sha256 = "sha256-28QW/WTLckR4lEfHv6dSotwkAKpNJFCShxmKFGQQ1Ew=";
-    };
-    date = "2021-05-12";
-  };
   fish-gitnow = {
     pname = "fish-gitnow";
     version = "0cf3c89209305779e82d3b5cb956cf8b54025dd6";
@@ -807,18 +783,6 @@
       sha256 = "sha256-vNYUMzgBvPxHpeybhzBvyVL5RhM6qZlFtk3uZiiDvf8=";
     };
     date = "2024-10-12";
-  };
-  fish-sponge = {
-    pname = "fish-sponge";
-    version = "384299545104d5256648cee9d8b117aaa9a6d7be";
-    src = fetchFromGitHub {
-      owner = "meaningful-ooo";
-      repo = "sponge";
-      rev = "384299545104d5256648cee9d8b117aaa9a6d7be";
-      fetchSubmodules = false;
-      sha256 = "sha256-MdcZUDRtNJdiyo2l9o5ma7nAX84xEJbGFhAVhK+Zm1w=";
-    };
-    date = "2022-10-05";
   };
   fishbang = {
     pname = "fishbang";
@@ -1885,18 +1849,6 @@
       sha256 = "sha256-mhdS4Wnb0DseddrofyEQZed9VcbfQj0MpoXXOQY2Ct8=";
     };
   };
-  puffer-fish = {
-    pname = "puffer-fish";
-    version = "12d062eae0ad24f4ec20593be845ac30cd4b5923";
-    src = fetchFromGitHub {
-      owner = "nickeb96";
-      repo = "puffer-fish";
-      rev = "12d062eae0ad24f4ec20593be845ac30cd4b5923";
-      fetchSubmodules = false;
-      sha256 = "sha256-2niYj0NLfmVIQguuGTA7RrPIcorJEPkxhH6Dhcy+6Bk=";
-    };
-    date = "2024-03-03";
-  };
   pydantic = {
     pname = "pydantic";
     version = "2.9.2";
@@ -2353,13 +2305,13 @@
   };
   television = {
     pname = "television";
-    version = "v0.4.21";
+    version = "0.4.23";
     src = fetchFromGitHub {
       owner = "alexpasmantier";
       repo = "television";
-      rev = "v0.4.21";
+      rev = "0.4.23";
       fetchSubmodules = false;
-      sha256 = "sha256-Z24XBZ5IOXGe6KKa3xnDE/NY/sfsL2l1RpAnabsgRKU=";
+      sha256 = "sha256-Z129B16kZ8Cth7HoljI5ZwaKBeawwiPq/GTlghPixhA=";
     };
   };
   templify = {
@@ -2420,10 +2372,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.85.2";
+    version = "0.86.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.85.2.tar.gz";
-      sha256 = "sha256-KkFplcSdU4GoHQpv0jklyw4/FLTyOe0F81+jyYG7HfI=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.86.1.tar.gz";
+      sha256 = "sha256-puaN5Tg0FfIi8mtAScKpLtIEBx/f6+PXKfjdNzyl9Rk=";
     };
   };
   textual-autocomplete = {

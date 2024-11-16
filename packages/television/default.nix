@@ -9,13 +9,13 @@
   _sources,
 }:
 let
-  hash = "f2gjZvcbzaRK9P5KwdM3NkqWoanXVXjKjYlW1UftyRo=";
+  hash = "T9Q2j/fgtLdyYqsGlnkIqO6etIFueRSfFA7SuP0MvRM=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.television) pname version;
 
   src = fetchzip {
-    url = "https://github.com/alexpasmantier/television/releases/download/v${version}/tv-v${version}-linux-x86_64.tar.gz";
+    url = "https://github.com/alexpasmantier/television/releases/download/${version}/tv-${version}-linux-x86_64.tar.gz";
     sha256 = hash;
   };
 
