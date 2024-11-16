@@ -3006,6 +3006,18 @@
       sha256 = "sha256-sAmyZFX9lZ6UXVCt7st187Ie6aVW0dSUlQQQmLiHUlM=";
     };
   };
+  ynk = {
+    pname = "ynk";
+    version = "79b6160b60616643f7bd6b15086ac29ff4688d42";
+    src = fetchFromGitHub {
+      owner = "newtoallofthis123";
+      repo = "ynk";
+      rev = "79b6160b60616643f7bd6b15086ac29ff4688d42";
+      fetchSubmodules = false;
+      sha256 = "sha256-+zWKRdao1Mr3Vr7SSaqvGX6YFNNCFxc9bWpD5WDg8cw=";
+    };
+    date = "2024-11-15";
+  };
   ytui = {
     pname = "ytui";
     version = "v0.2.0";

@@ -1080,3 +1080,7 @@ fetch.github = "noctuid/mpv-webtorrent-hook"
 src.git = "https://github.com/ourgal/lib-x"
 src.branch = "bugfix/open"
 fetch.github = "ourgal/lib-x"
+
+[ynk]
+src.git = "https://github.com/newtoallofthis123/ynk"
+fetch.github = "newtoallofthis123/ynk"
