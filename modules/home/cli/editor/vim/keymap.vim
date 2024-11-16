@@ -1,4 +1,5 @@
-let g:mapleader = " "
+scriptencoding utf8
+let g:mapleader = ' '
 nnoremap <leader>bo <cmd>%bd\|e#\|bd#<CR>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -34,9 +35,9 @@ xnoremap & <cmd>'<,'>&&<CR>
 nnoremap <silent> <esc> <cmd>nohlsearch<CR><esc>
 
 function OpenFileOrURL()
-  let cfile = expand("<cfile>")
+  let cfile = expand('<cfile>')
   if match(cfile, '^https\?://') >= 0
-    call system("xdg-open " .. cfile)
+    call system('xdg-open ' . cfile)
   else
     normal! gF
   endif

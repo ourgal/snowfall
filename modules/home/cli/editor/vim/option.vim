@@ -23,7 +23,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-if has("gui_running")
+if has('gui_running')
 set guioptions-=T
 set guioptions-=e
 set guioptions-=m
@@ -32,12 +32,12 @@ set guitablabel=%M\ %t
 endif
 
 set encoding=utf8
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 syntax enable
 
 set regexpengine=0
 
-if (has("termguicolors"))
+if (has('termguicolors'))
     set termguicolors
 endif
 
@@ -53,26 +53,22 @@ set lazyredraw
 set magic
 set showmatch
 
-set mat=2
+set matchtime=2
 
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
-
-if has("gui_macvim")
-autocmd GUIEnter * set vb t_vb=
-endif
+set timeoutlen=500
 
 set foldcolumn=1
 
-let $LANG = "en"
+let $LANG = 'en'
 set langmenu=en
 
 set wildmenu
 
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
+if has('win16') || has('win32')
 set wildignore+=.git\*,.hg\*,.svn\*
 else
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
@@ -83,7 +79,7 @@ let &t_EI = "\e[2 q"
 
 set ruler
 set cmdheight=1
-set hid
+set hidden
 set history=500
 set number relativenumber
 
@@ -91,21 +87,19 @@ filetype plugin on
 filetype indent on
 
 set autoread
-au FocusGained,BufEnter * checktime
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 set updatetime=500
-
-set nocompatible
 
 set mouse=a
 set smoothscroll
 
 set showtabline=1
 
-augroup vimrcQfClose
+augroup settings
     autocmd!
+    autocmd FocusGained,BufEnter * checktime
     autocmd FileType qf nnoremap <buffer><silent> q :cclose<bar>lclose<CR>
 augroup END
 

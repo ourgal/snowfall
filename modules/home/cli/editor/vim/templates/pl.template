@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+
+use utf8;
+use warnings;
+use v5.38;
+use autodie;
+use open qw( :std :encoding(UTF-8) );
