@@ -2654,12 +2654,12 @@
             "name": null,
             "owner": "ourgal",
             "repo": "lib-x",
-            "rev": "fdfecb0e9dd27867fdab625117a53937aa03c44a",
-            "sha256": "sha256-9EUPkE/u4U9aHH+YMymCaZNuc7+nNAIwO0YIoJA1+vw=",
+            "rev": "bbcba99072d9164a0360e72fbdac79f9664c979d",
+            "sha256": "sha256-aCVZiSG9XGeT3dkJr+B844aaxDCFf71QzRX/u8jj05M=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fdfecb0e9dd27867fdab625117a53937aa03c44a"
+        "version": "bbcba99072d9164a0360e72fbdac79f9664c979d"
     },
     "lite-xl-vibe": {
         "cargoLocks": null,

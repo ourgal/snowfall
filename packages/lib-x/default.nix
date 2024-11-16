@@ -8,6 +8,7 @@
   glow,
   gum,
   xdg-utils,
+  zathura,
   _sources,
 }:
 
@@ -21,6 +22,8 @@ stdenv.mkDerivation {
   installPhase = ''
     runHook preInstall
     install -Dm755 lib-x -t $out/bin
+    substituteInPlace $out/bin/lib-x \
+      --replace-fail 'open "$book_path"' 'zathura "$book_path"'
     wrapProgram $out/bin/lib-x --prefix PATH:${
       lib.makeBinPath [
         calibre
@@ -29,6 +32,7 @@ stdenv.mkDerivation {
         glow
         gum
         xdg-utils
+        zathura
       ]
     }
     runHook postInstall

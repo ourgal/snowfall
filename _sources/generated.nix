@@ -1437,13 +1437,13 @@
   };
   lib-x = {
     pname = "lib-x";
-    version = "fdfecb0e9dd27867fdab625117a53937aa03c44a";
+    version = "bbcba99072d9164a0360e72fbdac79f9664c979d";
     src = fetchFromGitHub {
       owner = "ourgal";
       repo = "lib-x";
-      rev = "fdfecb0e9dd27867fdab625117a53937aa03c44a";
+      rev = "bbcba99072d9164a0360e72fbdac79f9664c979d";
       fetchSubmodules = false;
-      sha256 = "sha256-9EUPkE/u4U9aHH+YMymCaZNuc7+nNAIwO0YIoJA1+vw=";
+      sha256 = "sha256-aCVZiSG9XGeT3dkJr+B844aaxDCFf71QzRX/u8jj05M=";
     };
     date = "2024-11-15";
   };

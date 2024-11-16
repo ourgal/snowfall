@@ -1078,7 +1078,6 @@ fetch.github = "noctuid/mpv-webtorrent-hook"
 
 [lib-x]
 src.git = "https://github.com/ourgal/lib-x"
-src.branch = "bugfix/open"
 fetch.github = "ourgal/lib-x"
 
 [ynk]
