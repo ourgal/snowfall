@@ -262,15 +262,15 @@
   };
   cdo = {
     pname = "cdo";
-    version = "8aefae7fcac56615a053fc99fd5f977328ceea2b";
+    version = "35bc517e6ac924adfbe0af83ec15cee0556e8ddb";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "8aefae7fcac56615a053fc99fd5f977328ceea2b";
+      rev = "35bc517e6ac924adfbe0af83ec15cee0556e8ddb";
       fetchSubmodules = false;
-      sha256 = "sha256-rPhaVlHFTFThu+QC4GAFNLijpOC26NYVKFn371hUPLw=";
+      sha256 = "sha256-SKDgjYNxJUyEGHODQafxZ2i9VPx6LbemvMGCt4MJYmU=";
     };
-    date = "2024-11-09";
+    date = "2024-11-17";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -520,12 +520,12 @@
   };
   docker-alist = {
     pname = "docker-alist";
-    version = "v3.39.1";
+    version = "v3.39.4";
     src = dockerTools.pullImage {
       imageName = "xhofe/alist-aria2";
-      imageDigest = "sha256:2d547feef90c6e944c71d34fa6065c534ca8853eed750dbbbbbb0b477b5e1b51";
-      sha256 = "sha256-Va6Ufelujtv7J2l5tIse+vwlDuom/zUblS2QuJt1J2A=";
-      finalImageTag = "v3.39.1";
+      imageDigest = "sha256:5cd3ca4492ec4a3d806871801e3ed5fc752bfc2cac8a63df40217543884fefd7";
+      sha256 = "sha256-dIYW+bFuB/NiG5BOh09/P8HYCxwfCneUwDu44ZnWTvQ=";
+      finalImageTag = "v3.39.4";
     };
   };
   docker-flaresolverr = {
@@ -646,13 +646,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.5";
+    version = "v2.7.7";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.5";
+      rev = "v2.7.7";
       fetchSubmodules = false;
-      sha256 = "sha256-ccDdPuqCde1MHVyEokGGB5m5Ts6asnOjxWPVBGoWq6c=";
+      sha256 = "sha256-mXjIsyciwC0Lbph/YVDQXJQR8LwWux5ME43vE3HSdcg=";
     };
   };
   fc-fish = {
@@ -1549,10 +1549,10 @@
   };
   miru = {
     pname = "miru";
-    version = "5.5.8";
+    version = "5.5.9";
     src = fetchurl {
-      url = "https://github.com/ThaUnknown/miru/releases/download/v5.5.8/linux-Miru-5.5.8.AppImage";
-      sha256 = "sha256-4ueVgIcIi/RIFRoDKStiNqszfaIXZ9dfagddzCVaSRs=";
+      url = "https://github.com/ThaUnknown/miru/releases/download/v5.5.9/linux-Miru-5.5.9.AppImage";
+      sha256 = "sha256-AhaGiZ/Vx9nJmIXrzZ1JMLqjWfQDyoKpzl55NT712Ro=";
     };
   };
   mosdns-cn = {
@@ -2361,13 +2361,13 @@
   };
   textpod = {
     pname = "textpod";
-    version = "0.1.2";
+    version = "0.1.3";
     src = fetchFromGitHub {
       owner = "freetonik";
       repo = "textpod";
-      rev = "0.1.2";
+      rev = "0.1.3";
       fetchSubmodules = false;
-      sha256 = "sha256-pTon0BXq/scjQtTwHzvzrcSpuPwuK+omWSJInvAnC3A=";
+      sha256 = "sha256-iz2W4i/0Rfif9U/9VJemqMFEDBq7WPSq4anTnQIYqZM=";
     };
   };
   textual = {
@@ -2848,15 +2848,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "a3e76f6ba61a4e57cd929340bf367b7e8d56ae2b";
+    version = "9d9ab5075b693d9232f6e5006c843621ddc537f3";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "a3e76f6ba61a4e57cd929340bf367b7e8d56ae2b";
+      rev = "9d9ab5075b693d9232f6e5006c843621ddc537f3";
       fetchSubmodules = false;
-      sha256 = "sha256-kCrSEvLSDI0RrecvbvJ6iC1n7n9HbPPgAZ65CyaYxX4=";
+      sha256 = "sha256-AE1/FRoYyy542gH6/0+Petrj9r75MO+GK1XEOoBCID4=";
     };
-    date = "2024-11-15";
+    date = "2024-11-17";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
