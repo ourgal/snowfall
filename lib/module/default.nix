@@ -176,7 +176,6 @@ rec {
       haskellPkgs ? [ ],
       xfcePkgs ? [ ],
       gnomePkgs ? [ ],
-      batPkgs ? [ ],
       inputPkgs ? _p: [ ],
       nvtopPkgs ? [ ],
       extraOpts ? { },
@@ -283,7 +282,6 @@ rec {
               ++ (pkgHandle pkgs.xorg xorgPkgs)
               ++ (pkgHandle pkgs.xfce xfcePkgs)
               ++ (pkgHandle pkgs.gnome gnomePkgs)
-              ++ (pkgHandle pkgs.bat-extras batPkgs)
               ++ (pkgHandle pkgs.snowfallorg snowPkgs)
               ++ (pkgHandle pkgs.nvtopPackages nvtopPkgs)
               ++ (inputPkgs inputs);
