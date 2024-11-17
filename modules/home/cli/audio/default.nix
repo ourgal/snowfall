@@ -20,6 +20,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
+      "beets"
       "cava"
       "mpd"
       "pipewire"
