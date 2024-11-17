@@ -26,6 +26,7 @@ args.module (
       # keep-sorted start
       "aria2"
       "eget"
+      "gallery-dl"
       "nyaa"
       "transmission"
       "yt-dlp"
