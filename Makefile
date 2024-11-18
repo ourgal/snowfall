@@ -99,6 +99,10 @@ searchc: ##@ nix-search stable packages
 drift: ##@ drift update package hash
 	@drift update --flake $$(git root) $(SEARCH_ARGS)
 
+.PHONY: mmdoc
+mmdoc: ##@ generate doc
+	@mmdoc dotfiles mmdoc out
+
 ##@
 ##@ misc
 ##@
