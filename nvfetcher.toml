@@ -307,6 +307,7 @@ fetch.github = "Etto48/HexPatch"
 [impala]
 src.github = "pythops/Impala"
 fetch.github = "pythops/Impala"
+pinned = true
 
 [jerry]
 src.git = "https://github.com/justchokingaround/jerry"

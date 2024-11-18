@@ -1196,12 +1196,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.7.7",
-            "sha256": "sha256-mXjIsyciwC0Lbph/YVDQXJQR8LwWux5ME43vE3HSdcg=",
+            "rev": "v2.7.9",
+            "sha256": "sha256-CwuCHLwldDwVFDDm2zu+8wAlDNToGp7ZNvo4//Eqpn4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.7"
+        "version": "v2.7.9"
     },
     "fc-fish": {
         "cargoLocks": null,
@@ -2421,7 +2421,7 @@
         "extract": null,
         "name": "impala",
         "passthru": null,
-        "pinned": false,
+        "pinned": true,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
@@ -3335,12 +3335,12 @@
             "name": null,
             "owner": "darrenburns",
             "repo": "posting",
-            "rev": "2.1.1",
-            "sha256": "sha256-i3wftbQTg0zD7dLQhEFIoBX+ehMpHk15W1kQqbWkv7Q=",
+            "rev": "2.2.0",
+            "sha256": "sha256-fyB5db34k2r1xIl/Sw40uJ/56r8e3ELGT+HItam+ZAs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.1.1"
+        "version": "2.2.0"
     },
     "pot": {
         "cargoLocks": null,
@@ -3488,7 +3488,7 @@
     },
     "quartz": {
         "cargoLocks": null,
-        "date": "2024-11-10",
+        "date": "2024-11-17",
         "extract": null,
         "name": "quartz",
         "passthru": null,
@@ -3500,12 +3500,12 @@
             "name": null,
             "owner": "vimpostor",
             "repo": "quartz",
-            "rev": "f434332abba5341d4e520f2fe18710fff6089089",
-            "sha256": "sha256-czg17UhEuvQvhPh7j0CsWtaCNszXqFxf6jPyKvM5HIY=",
+            "rev": "921e7c763416b38ae754a6f0afc223b328cdecac",
+            "sha256": "sha256-nW8217HOB/bDVrAsuEfntkf5EkC5EJO6qL2818jB12s=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f434332abba5341d4e520f2fe18710fff6089089"
+        "version": "921e7c763416b38ae754a6f0afc223b328cdecac"
     },
     "radio-go-go": {
         "cargoLocks": null,
@@ -4377,11 +4377,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-puaN5Tg0FfIi8mtAScKpLtIEBx/f6+PXKfjdNzyl9Rk=",
+            "sha256": "sha256-Qwc/nrUtDzilry8SS6aLN4+R0mDfSxyS84Sjtcu7y3A=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.86.1.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-0.86.2.tar.gz"
         },
-        "version": "0.86.1"
+        "version": "0.86.2"
     },
     "textual-autocomplete": {
         "cargoLocks": null,
@@ -5309,12 +5309,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscode-fugitive-0.0.21.zip",
-            "sha256": "sha256-DxnQUbmqVbWShJAWiF8IbWeMtvUvMtXRVBDzJAJ+l9c=",
+            "name": "vscode-fugitive-0.0.24.zip",
+            "sha256": "sha256-ZVm4XU63WiavUAec3dKCCG4/G06AClLqUhivq69DtM8=",
             "type": "url",
-            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.21/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.24/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "0.0.21"
+        "version": "0.0.24"
     },
     "wait-for": {
         "cargoLocks": null,
