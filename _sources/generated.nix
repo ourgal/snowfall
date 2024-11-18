@@ -646,13 +646,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.7";
+    version = "v2.7.9";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.7";
+      rev = "v2.7.9";
       fetchSubmodules = false;
-      sha256 = "sha256-mXjIsyciwC0Lbph/YVDQXJQR8LwWux5ME43vE3HSdcg=";
+      sha256 = "sha256-CwuCHLwldDwVFDDm2zu+8wAlDNToGp7ZNvo4//Eqpn4=";
     };
   };
   fc-fish = {
@@ -1810,13 +1810,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.1.1";
+    version = "2.2.0";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.1.1";
+      rev = "2.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-i3wftbQTg0zD7dLQhEFIoBX+ehMpHk15W1kQqbWkv7Q=";
+      sha256 = "sha256-fyB5db34k2r1xIl/Sw40uJ/56r8e3ELGT+HItam+ZAs=";
     };
   };
   pot = {
@@ -1897,15 +1897,15 @@
   };
   quartz = {
     pname = "quartz";
-    version = "f434332abba5341d4e520f2fe18710fff6089089";
+    version = "921e7c763416b38ae754a6f0afc223b328cdecac";
     src = fetchFromGitHub {
       owner = "vimpostor";
       repo = "quartz";
-      rev = "f434332abba5341d4e520f2fe18710fff6089089";
+      rev = "921e7c763416b38ae754a6f0afc223b328cdecac";
       fetchSubmodules = false;
-      sha256 = "sha256-czg17UhEuvQvhPh7j0CsWtaCNszXqFxf6jPyKvM5HIY=";
+      sha256 = "sha256-nW8217HOB/bDVrAsuEfntkf5EkC5EJO6qL2818jB12s=";
     };
-    date = "2024-11-10";
+    date = "2024-11-17";
   };
   radio-go-go = {
     pname = "radio-go-go";
@@ -2372,10 +2372,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.86.1";
+    version = "0.86.2";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.86.1.tar.gz";
-      sha256 = "sha256-puaN5Tg0FfIi8mtAScKpLtIEBx/f6+PXKfjdNzyl9Rk=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.86.2.tar.gz";
+      sha256 = "sha256-Qwc/nrUtDzilry8SS6aLN4+R0mDfSxyS84Sjtcu7y3A=";
     };
   };
   textual-autocomplete = {
@@ -2895,11 +2895,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.0.21";
+    version = "0.0.24";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.21/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.0.21.zip";
-      sha256 = "sha256-DxnQUbmqVbWShJAWiF8IbWeMtvUvMtXRVBDzJAJ+l9c=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.24/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.0.24.zip";
+      sha256 = "sha256-ZVm4XU63WiavUAec3dKCCG4/G06AClLqUhivq69DtM8=";
     };
   };
   wait-for = {
