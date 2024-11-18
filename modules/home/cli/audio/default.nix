@@ -14,6 +14,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "id3v2"
+      "normalize"
       "pulsemixer"
       "scope-tui"
       # keep-sorted end
