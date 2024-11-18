@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "git-annex"
       "git-annex-remote-rclone"
+      "gitfs"
       # keep-sorted end
     ];
   }
