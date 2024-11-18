@@ -20,6 +20,7 @@ args.module (
       "md-tangle"
       "mdbook"
       "mdsh"
+      "mmdoc"
       "vale"
       "vale-ls"
       # keep-sorted end

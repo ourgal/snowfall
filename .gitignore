@@ -2,3 +2,4 @@
 /.gtm/
 keyfile.toml
 .playbook.fish
+out

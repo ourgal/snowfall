@@ -40,3 +40,6 @@ searchc pkg:
 
 drift pkg:
 	@drift update --flake $(git root) {{pkg}}
+
+mmdoc:
+	@mmdoc dotfiles mmdoc out
