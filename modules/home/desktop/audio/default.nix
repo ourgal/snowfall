@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "alsa-utils"
       "blanket"
+      "eartag"
       "easytag"
       "netease-cloud-music-gtk"
       "qpwgraph"
