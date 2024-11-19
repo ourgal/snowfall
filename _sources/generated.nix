@@ -1289,6 +1289,17 @@
     };
     date = "2023-02-09";
   };
+  html-to-markdown = {
+    pname = "html-to-markdown";
+    version = "v2.2.0";
+    src = fetchFromGitHub {
+      owner = "JohannesKaufmann";
+      repo = "html-to-markdown";
+      rev = "v2.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-4cpGHsFxFDsiIu48GDYYCXtogLWfAnnSN44F6+YU9Jg=";
+    };
+  };
   hypergrep = {
     pname = "hypergrep";
     version = "v0.1.1";

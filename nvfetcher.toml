@@ -1071,3 +1071,7 @@ fetch.github = "newtoallofthis123/ynk"
 [wait-for]
 src.github = "eficode/wait-for"
 fetch.github = "eficode/wait-for"
+
+[html-to-markdown]
+src.github = "JohannesKaufmann/html-to-markdown"
+fetch.github = "JohannesKaufmann/html-to-markdown"

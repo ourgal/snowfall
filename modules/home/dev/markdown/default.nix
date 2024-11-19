@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "html-to-markdown"
       "mdtt"
       "pmark"
       "textpod"
