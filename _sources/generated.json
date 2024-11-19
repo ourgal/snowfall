@@ -2373,6 +2373,27 @@
         },
         "version": "a08b37f4faca8b4269531be375c046f9beede0a0"
     },
+    "html-to-markdown": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "html-to-markdown",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "JohannesKaufmann",
+            "repo": "html-to-markdown",
+            "rev": "v2.2.0",
+            "sha256": "sha256-4cpGHsFxFDsiIu48GDYYCXtogLWfAnnSN44F6+YU9Jg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.0"
+    },
     "hypergrep": {
         "cargoLocks": null,
         "date": null,
