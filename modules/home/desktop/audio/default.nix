@@ -10,6 +10,7 @@ args.module (
       "eartag"
       "easytag"
       "netease-cloud-music-gtk"
+      "puddletag"
       "qpwgraph"
       "shortwave"
       "tageditor"
