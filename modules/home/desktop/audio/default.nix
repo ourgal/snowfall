@@ -11,6 +11,7 @@ args.module (
       "netease-cloud-music-gtk"
       "qpwgraph"
       "shortwave"
+      "tageditor"
       # keep-sorted end
     ];
     enable = "easyeffects";
