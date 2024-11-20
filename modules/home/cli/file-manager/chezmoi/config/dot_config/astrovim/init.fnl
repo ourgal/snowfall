@@ -1,5 +1,5 @@
-(local enabled {:active true})
-(local disabled {:active false})
+(local enabled {:enable true})
+(local disabled {:enable false})
 (local plugins {:autosave_nvim disabled
                 :persisted_nvim disabled
                 :vim_floaterm enabled
