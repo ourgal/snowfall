@@ -16,7 +16,6 @@ args.module (
       };
       confs = {
         lazyvim = ln "${sync}/lazyvim";
-        doom = ln "${sync}/doom";
         todo = ln "${sync}/todo";
         lvim = ln "${sync}/lvim";
       };
