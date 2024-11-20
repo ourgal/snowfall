@@ -6,6 +6,7 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "cache"
+      "debounce"
       "servicer"
       # keep-sorted end
     ];

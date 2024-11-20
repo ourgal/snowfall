@@ -1075,3 +1075,7 @@ fetch.github = "eficode/wait-for"
 [html-to-markdown]
 src.github = "JohannesKaufmann/html-to-markdown"
 fetch.github = "JohannesKaufmann/html-to-markdown"
+
+[debounce]
+src.github = "oalders/debounce"
+fetch.github = "oalders/debounce"

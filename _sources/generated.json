@@ -835,6 +835,27 @@
         },
         "version": "v0.1.0"
     },
+    "debounce": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "debounce",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "oalders",
+            "repo": "debounce",
+            "rev": "v0.5.1",
+            "sha256": "sha256-pXHvl3cxWukCExuRbmiFMhm7Kp85SC1wY6u/FZ9WTTQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.5.1"
+    },
     "devdocs-vim": {
         "cargoLocks": null,
         "date": "2024-10-18",

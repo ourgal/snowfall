@@ -460,6 +460,17 @@
       sha256 = "sha256-WEB1MVG2aGvKnkMAgF7nxKHgA05VRJONoNdsBpXM2Wk=";
     };
   };
+  debounce = {
+    pname = "debounce";
+    version = "v0.5.1";
+    src = fetchFromGitHub {
+      owner = "oalders";
+      repo = "debounce";
+      rev = "v0.5.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-pXHvl3cxWukCExuRbmiFMhm7Kp85SC1wY6u/FZ9WTTQ=";
+    };
+  };
   devdocs-vim = {
     pname = "devdocs-vim";
     version = "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271";
