@@ -11,6 +11,7 @@ args.module (
       "moreutils"
       "progress"
       "retry"
+      "wait4x"
       "with-shell"
       # keep-sorted end
     ];
