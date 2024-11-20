@@ -1,4 +1,5 @@
 alias u := update
+alias m := chezmoi
 
 default: home
 
@@ -43,3 +44,6 @@ drift pkg:
 
 mmdoc:
 	@mmdoc dotfiles mmdoc out
+
+chezmoi:
+	@chezmoi apply
