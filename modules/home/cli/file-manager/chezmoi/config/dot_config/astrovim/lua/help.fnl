@@ -3,7 +3,7 @@
                 (local repo (-> (repo:gsub "%." "_") (: :gsub "-" "_")))
                 (each [_ v (ipairs [...])]
                   (set tmp (. tmp v)))
-                (-> tmp (. repo) (. :active)))
+                (-> tmp (. repo) (. :help)))
       name (fn [author repo]
              (.. author "/" repo))
       core (require :astrocore)
