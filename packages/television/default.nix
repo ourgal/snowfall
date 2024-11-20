@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "T9Q2j/fgtLdyYqsGlnkIqO6etIFueRSfFA7SuP0MvRM=";
+  hash = "zjw2RlBuNgt4UbqHlFqi1h+zOaNtcVVqAtEIs3I2KIM=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.television) pname version;

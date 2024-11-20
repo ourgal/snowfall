@@ -1,28 +1,44 @@
 {
   lib,
-  buildGoModule,
-  fetchFromGitHub,
-  git,
+  stdenv,
+  fetchzip,
+  installShellFiles,
+  writeShellScriptBin,
+  curl,
+  jq,
+  gnused,
+  _sources,
 }:
+let
+  hash = "Sr6JnK20GCksL3jEu6uzUfKGtRgPCuFpEqg8Sa4w9pA=";
+in
+stdenv.mkDerivation rec {
+  inherit (_sources.av) pname version;
 
-buildGoModule rec {
-  pname = "av";
-  version = "0.0.42";
-
-  src = fetchFromGitHub {
-    owner = "aviator-co";
-    repo = "av";
-    rev = "v${version}";
-    hash = "sha256-vhXI2D0GRWq7GNG2dWgg6FznC4B54FC9P+nF9JfYu/A=";
+  src = fetchzip {
+    url = "https://github.com/aviator-co/av/releases/download/v${version}/av_${version}_linux_arm64.tar.gz";
+    sha256 = hash;
+    stripRoot = false;
   };
 
-  vendorHash = "sha256-I8PlVeouAPT7h1xdy2zJrtNCrb0HTb0s4+3fu0jNlgk=";
+  nativeBuildInputs = [ installShellFiles ];
 
-  ldflags = [ "-X=github.com/aviator-co/av/internal/config.Version=v${version}" ];
+  dontBuild = true;
 
-  nativeBuildInputs = [ git ];
+  installPhase = ''
+    runHook preInstall
+    install -Dm755 av -t $out/bin
+    installManPage man/*/*
+    runHook postInstall
+  '';
 
-  postInstall = "rm $out/bin/docs";
+  passthru.update = writeShellScriptBin "update-package" ''
+    set -euo pipefail
+
+    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/aviator-co/av/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
+
+    drift rewrite --auto-hash --new-version "$latest"
+  '';
 
   meta = with lib; {
     description = "A command line tool to manage stacked PRs with Aviator";

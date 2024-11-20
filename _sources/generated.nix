@@ -105,13 +105,13 @@
   };
   av = {
     pname = "av";
-    version = "v0.0.43";
+    version = "v0.0.44";
     src = fetchFromGitHub {
       owner = "aviator-co";
       repo = "av";
-      rev = "v0.0.43";
+      rev = "v0.0.44";
       fetchSubmodules = false;
-      sha256 = "sha256-zfS7yfsKvfWQXRx4yYrWIbB9ak/hTs+Gq3UH6o7PkKE=";
+      sha256 = "sha256-WoU7vJBDZZVvjtAF3inmjDjPkxK0mSogY/pe0GBiwqY=";
     };
   };
   awesome-freedesktop = {
@@ -657,13 +657,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.7.9";
+    version = "v2.8.1";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.7.9";
+      rev = "v2.8.1";
       fetchSubmodules = false;
-      sha256 = "sha256-CwuCHLwldDwVFDDm2zu+8wAlDNToGp7ZNvo4//Eqpn4=";
+      sha256 = "sha256-Ppb9k2Ha1Bxt42TI/MQCStumIaLxA4iQyQlEVUehlhM=";
     };
   };
   fc-fish = {
@@ -1807,15 +1807,15 @@
   };
   pls = {
     pname = "pls";
-    version = "a1adfd5dce13d7467f389074fd23b1d3748b7ae0";
+    version = "f860b1c7b9fce9800538d5b54dfb0dcd93370604";
     src = fetchFromGitHub {
       owner = "codevogel";
       repo = "pls";
-      rev = "a1adfd5dce13d7467f389074fd23b1d3748b7ae0";
+      rev = "f860b1c7b9fce9800538d5b54dfb0dcd93370604";
       fetchSubmodules = false;
-      sha256 = "sha256-g/ZYf8t7NtRLsCZJaFMWNPjqoCKkw8jIydC56+90G1E=";
+      sha256 = "sha256-wCz91oV1njVVWb1cBEoElsPyTP9Vwkhs1LVD/FbYDeQ=";
     };
-    date = "2024-08-06";
+    date = "2024-11-18";
   };
   pmark = {
     pname = "pmark";
@@ -1843,13 +1843,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.2.0";
+    version = "2.3.0";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.2.0";
+      rev = "2.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-fyB5db34k2r1xIl/Sw40uJ/56r8e3ELGT+HItam+ZAs=";
+      sha256 = "sha256-lL85gJxFw8/e8Js+UCE9VxBMcmWRUkHh8Cq5wTC93KA=";
     };
   };
   pot = {
@@ -2338,13 +2338,13 @@
   };
   television = {
     pname = "television";
-    version = "0.4.23";
+    version = "0.5.0";
     src = fetchFromGitHub {
       owner = "alexpasmantier";
       repo = "television";
-      rev = "0.4.23";
+      rev = "0.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Z129B16kZ8Cth7HoljI5ZwaKBeawwiPq/GTlghPixhA=";
+      sha256 = "sha256-yi8lPm3zkmamN6gPlGfojNlIXM1cgSr1zL2zMNni5f0=";
     };
   };
   templify = {
@@ -2405,18 +2405,18 @@
   };
   textual = {
     pname = "textual";
-    version = "0.86.2";
+    version = "0.86.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.86.2.tar.gz";
-      sha256 = "sha256-Qwc/nrUtDzilry8SS6aLN4+R0mDfSxyS84Sjtcu7y3A=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.86.3.tar.gz";
+      sha256 = "sha256-PE1oYSJDrzUeiy09q+RNPPh2JGJNfqZX9NcYhTIGGI8=";
     };
   };
   textual-autocomplete = {
     pname = "textual-autocomplete";
-    version = "3.0.0a12";
+    version = "3.0.0a13";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual_autocomplete/textual_autocomplete-3.0.0a12.tar.gz";
-      sha256 = "sha256-HSyeTSTH9XWryMYSy2q//0cG9qqrm5OVBrldroRUkwk=";
+      url = "https://pypi.org/packages/source/t/textual_autocomplete/textual_autocomplete-3.0.0a13.tar.gz";
+      sha256 = "sha256-21pK6VbdfW3s5T9/aV6X8qt1gZ3Za4ocBk7Flms6sRM=";
     };
   };
   tmux-auto-renumber-session = {
