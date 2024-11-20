@@ -1,6 +1,6 @@
 (let [help (require :help)
       repo :vim-subversive
-      enabled (help.enabled repo :edit)]
+      enabled (help.enabled repo :edit :replace)]
   {1 (help.name :svermeulen repo)
    : enabled
    :keys [{1 :r 2 "<plug>(SubversiveSubstitute)" :mode [:n :x]}

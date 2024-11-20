@@ -25,12 +25,12 @@
       config (fn [_ opts]
                (let [Util (require :lazyvim.util)]
                  (if (Util.has :neoconf.nvim)
-                   (let [conf (require :lazy.core.config)
-                         confNeo (. conf.spec.plugins :neoconf.nvim)
-                         plug (require :neoconf)
-                         lazyPlug (require :lazy.core.plugin)
-                         value (lazyPlug.values confNeo :opts false)]
-                     (plug.setup value)))
+                     (let [conf (require :lazy.core.config)
+                           confNeo (. conf.spec.plugins :neoconf.nvim)
+                           plug (require :neoconf)
+                           lazyPlug (require :lazy.core.plugin)
+                           value (lazyPlug.values confNeo :opts false)]
+                       (plug.setup value)))
                  (Util.format.register (Util.lsp.formatter)) ; setup autoformat
                  (when (not= opts.autoformat nil) ; deprectaed options
                    (set _G.vim.g.autoformat opts.autoformat)
@@ -76,11 +76,10 @@
                                          (if matched
                                              icon)))))
                        is-dev-nvim (= (_G.vim.fn.has :nvim-0.10.0) 0)]
-                   (if (and virtual-text-is-table
-                            virtual-text-prefix-is-icons)
-                     (set opts.diagnostics.virtual_text.prefix
-                          (if is-dev-nvim "●"
-                              old-icons))))
+                   (if (and virtual-text-is-table virtual-text-prefix-is-icons)
+                       (set opts.diagnostics.virtual_text.prefix
+                            (if is-dev-nvim "●"
+                                old-icons))))
                  (_G.vim.diagnostic.config (_G.vim.deepcopy opts.diagnostics))
 
                  (fn setup [server]

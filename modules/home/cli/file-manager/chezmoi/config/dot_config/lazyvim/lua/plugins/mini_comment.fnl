@@ -1,6 +1,6 @@
 (let [help (require :help)
       repo :mini.comment
-      enabled (help.enabled repo :edit)
+      enabled (help.enabled repo :edit :comment)
       custom_commentstring (fn []
                              (let [intern (require :ts_context_commentstring.internal)]
                                (or (intern.calculate_commentstring)

@@ -1,6 +1,6 @@
 (let [help (require :help)
       repo :vim-macrobatics
-      enabled (help.enabled repo :edit)]
+      enabled (help.enabled repo :edit :macro)]
   {1 (help.name :svermeulen repo)
    :dependencies :junegunn/fzf.vim
    : enabled

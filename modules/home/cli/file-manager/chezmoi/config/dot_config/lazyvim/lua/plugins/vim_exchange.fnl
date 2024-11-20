@@ -1,6 +1,6 @@
 (let [help (require :help)
       repo :vim-exchange
-      enabled (help.enabled repo :edit)]
+      enabled (help.enabled repo :edit :replace)]
   {1 (help.name :tommcdo repo)
    : enabled
    :keys [{1 :cx 2 "<Plug>(Exchange)" :desc :Exchange}
