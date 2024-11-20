@@ -1,0 +1,6 @@
+return {
+	"romgrk/fzy-lua-native",
+	build = "make",
+	event = "CmdlineEnter",
+	enabled = lvim.user_plugins.fzy_lua_native.active,
+}

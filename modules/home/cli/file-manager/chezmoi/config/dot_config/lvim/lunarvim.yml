@@ -1,0 +1,6 @@
+---
+globals:
+  lvim:
+    any: true
+  vim:
+    any: true
