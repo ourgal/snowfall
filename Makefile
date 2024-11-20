@@ -56,6 +56,9 @@ home: ##@ home manager switch
 .PHONY: u
 u: update ##@ nvfetcher update
 
+.PHONY: m
+m: chezmoi ##@ chezmoi apply
+
 .PHONY: update
 update: ##@ nvfetcher update
 	@nvfetcher --keyfile keyfile.toml
@@ -102,6 +105,10 @@ drift: ##@ drift update package hash
 .PHONY: mmdoc
 mmdoc: ##@ generate doc
 	@mmdoc dotfiles mmdoc out
+
+.PHONY: chezmoi
+chezmoi: ##@ chezmoi apply
+	@chezmoi apply
 
 ##@
 ##@ misc
