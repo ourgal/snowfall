@@ -35,30 +35,23 @@ args.module (
         "undo"
         # keep-sorted end
       ];
-      progs = [
-        {
-          git = {
-            userName = "ourgal";
-            userEmail = "git@fairever.aleeas.com";
-            lfs = enabled;
-            extraConfig = {
-              init.defaultBranch = "main";
-              pull.rebase = true;
-              core.editor = config.${namespace}.user.editor;
-              git-extras = {
-                defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
-                get = {
-                  clone-path = "${config.home.homeDirectory}/src";
-                };
-              };
-              push.useForceIfIncludes = true;
-              rebase.autosquash = true;
-              maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
-            };
+      progs.git = {
+        userName = "ourgal";
+        userEmail = "git@fairever.aleeas.com";
+        lfs = enabled;
+        extraConfig = {
+          init.defaultBranch = "main";
+          pull.rebase = true;
+          core.editor = config.${namespace}.user.editor;
+          git-extras = {
+            defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
+            get.clone-path = "${config.home.homeDirectory}/src";
           };
-        }
-        { fish.shellAbbrs.gr = "cd (git root)"; }
-      ];
+          push.useForceIfIncludes = true;
+          rebase.autosquash = true;
+          maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
+        };
+      };
     }
   )
 )
