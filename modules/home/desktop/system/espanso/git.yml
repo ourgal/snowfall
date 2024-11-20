@@ -74,6 +74,8 @@ matches:
   # Amend Commit
   - trigger: "gitcam."
     replace: 'git commit --amend -m "$|$"'
+  - trigger: "gitce."
+    replace: "git commit --amend --no-edit"
   # Amend Author
   - trigger: "gitama."
     replace: 'git commit --amend --author="$|$User Name <email@email.com>"'
@@ -83,6 +85,8 @@ matches:
   # Git Push
   - trigger: "gitp."
     replace: "git push origin "
+  - trigger: "gitpg."
+    replace: "git push github "
   # Git Push Force
   - trigger: "gitpf."
     replace: "git push origin --force "
