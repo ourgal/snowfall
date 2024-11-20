@@ -2478,6 +2478,27 @@
         },
         "version": "v0.2.3"
     },
+    "is": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "is",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "oalders",
+            "repo": "is",
+            "rev": "v0.5.5",
+            "sha256": "sha256-PKxWNLZYzB5pF06QdyPL9TuCTPz+tbua9uIgLSIeBdU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.5.5"
+    },
     "jalm": {
         "cargoLocks": null,
         "date": "2022-10-08",

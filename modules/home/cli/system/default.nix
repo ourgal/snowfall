@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "cache"
       "debounce"
+      "is"
       "servicer"
       # keep-sorted end
     ];
