@@ -15,7 +15,6 @@ args.module (
         body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
       };
       confs = {
-        lazyvim = ln "${sync}/lazyvim";
         todo = ln "${sync}/todo";
       };
       dataFiles = {
