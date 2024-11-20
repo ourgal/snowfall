@@ -1,3 +1,4 @@
+---
 # espanso configuration file
 
 # This is the default configuration file, change it as you like it
@@ -53,6 +54,20 @@ matches:
   # Commit
   - trigger: "gitc."
     replace: 'git commit -m "$|$"'
+  - trigger: "gitcf."
+    replace: 'git add . && git commit -m "feat: $|$"'
+  - trigger: "gitcc."
+    replace: 'git add . && git commit -m "chore: $|$"'
+  - trigger: "gitcx."
+    replace: 'git add . && git commit -m "fix: $|$"'
+  - trigger: "gitcd."
+    replace: 'git add . && git commit -m "docs: $|$"'
+  - trigger: "gitcr."
+    replace: 'git add . && git commit -m "refactor: $|$"'
+  - trigger: "gitcs."
+    replace: 'git add . && git commit -m "style: $|$"'
+  - trigger: "gitct."
+    replace: 'git add . && git commit -m "test: $|$"'
   # Amend Commit
   - trigger: "gitamc."
     replace: 'git commit --amend -m "$|$"'
@@ -268,7 +283,6 @@ matches:
   # Git Clean
   - trigger: "gitcln."
     replace: "git clean -f"
-
   # Git Switch
   - trigger: "gitsw."
     replace: "git switch "
