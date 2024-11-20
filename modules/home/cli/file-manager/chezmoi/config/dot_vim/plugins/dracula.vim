@@ -1,0 +1,3 @@
+vim9script
+set termguicolors
+colorscheme dracula
