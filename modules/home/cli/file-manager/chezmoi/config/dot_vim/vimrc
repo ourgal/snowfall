@@ -1,0 +1,14 @@
+vim9script
+# https://github.com/amix/vimrc
+
+const is_win = has('win32')
+$v = $HOME .. (is_win ? '\vimfiles' : '/.vim')
+
+import $v .. '/' .. 'options.vim'
+import $v .. '/' .. 'keymap.vim'
+import $v .. '/' .. 'vim_plug.vim'
+import $v .. '/' .. 'macro.vim'
+
+# import $v .. '/plugpac_vim.vim'
+
+# import $v .. '/dvpm.vim'
