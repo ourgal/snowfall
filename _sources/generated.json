@@ -1352,7 +1352,7 @@
     },
     "fish-bd": {
         "cargoLocks": null,
-        "date": "2022-03-04",
+        "date": "2024-11-20",
         "extract": null,
         "name": "fish-bd",
         "passthru": null,
@@ -1362,14 +1362,14 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "0rax",
+            "owner": "ourgal",
             "repo": "fish-bd",
-            "rev": "ab686e028bfe95fa561a4f4e57840e36902d4d7d",
-            "sha256": "sha256-GeWjoakXa0t2TsMC/wpLEmsSVGhHFhBVK3v9eyQdzv0=",
+            "rev": "322e8bf03cb5c30215ce53d07f03c0584cd781b2",
+            "sha256": "sha256-mOJUdTWZKCtUaoGuL/dDb56eGEYtiRpkU38xIOJC4qs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ab686e028bfe95fa561a4f4e57840e36902d4d7d"
+        "version": "322e8bf03cb5c30215ce53d07f03c0584cd781b2"
     },
     "fish-color-scheme-switcher": {
         "cargoLocks": null,

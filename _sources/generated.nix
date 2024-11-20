@@ -737,15 +737,15 @@
   };
   fish-bd = {
     pname = "fish-bd";
-    version = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
+    version = "322e8bf03cb5c30215ce53d07f03c0584cd781b2";
     src = fetchFromGitHub {
-      owner = "0rax";
+      owner = "ourgal";
       repo = "fish-bd";
-      rev = "ab686e028bfe95fa561a4f4e57840e36902d4d7d";
+      rev = "322e8bf03cb5c30215ce53d07f03c0584cd781b2";
       fetchSubmodules = false;
-      sha256 = "sha256-GeWjoakXa0t2TsMC/wpLEmsSVGhHFhBVK3v9eyQdzv0=";
+      sha256 = "sha256-mOJUdTWZKCtUaoGuL/dDb56eGEYtiRpkU38xIOJC4qs=";
     };
-    date = "2022-03-04";
+    date = "2024-11-20";
   };
   fish-color-scheme-switcher = {
     pname = "fish-color-scheme-switcher";

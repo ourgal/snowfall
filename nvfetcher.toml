@@ -11,8 +11,8 @@ src.git = "https://github.com/gazorby/fish-abbreviation-tips"
 fetch.github = "gazorby/fish-abbreviation-tips"
 
 [fish-bd]
-src.git = "https://github.com/0rax/fish-bd"
-fetch.github = "0rax/fish-bd"
+src.git = "https://github.com/ourgal/fish-bd"
+fetch.github = "ourgal/fish-bd"
 
 ["autopair.fish"]
 src.git = "https://github.com/ourgal/autopair.fish"
