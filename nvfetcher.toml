@@ -1079,3 +1079,7 @@ fetch.github = "JohannesKaufmann/html-to-markdown"
 [debounce]
 src.github = "oalders/debounce"
 fetch.github = "oalders/debounce"
+
+[is]
+src.github = "oalders/is"
+fetch.github = "oalders/is"

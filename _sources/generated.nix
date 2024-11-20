@@ -1344,6 +1344,17 @@
       sha256 = "sha256-4LQmM4VTW3ykh6eDWKxBe3jxlJphgAytgeaQZNwivsQ=";
     };
   };
+  is = {
+    pname = "is";
+    version = "v0.5.5";
+    src = fetchFromGitHub {
+      owner = "oalders";
+      repo = "is";
+      rev = "v0.5.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-PKxWNLZYzB5pF06QdyPL9TuCTPz+tbua9uIgLSIeBdU=";
+    };
+  };
   jalm = {
     pname = "jalm";
     version = "f1e79605af1b4852b2a5dbfcc4674a5c14fc551d";
