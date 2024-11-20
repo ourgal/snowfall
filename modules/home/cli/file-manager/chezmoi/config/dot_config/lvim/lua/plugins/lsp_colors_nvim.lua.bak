@@ -1,0 +1,5 @@
+return {
+	"folke/lsp-colors.nvim",
+	event = "BufRead",
+	enabled = lvim.user_plugins.lsp_colors_nvim.active,
+}

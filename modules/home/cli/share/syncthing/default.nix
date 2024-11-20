@@ -17,7 +17,6 @@ args.module (
       confs = {
         lazyvim = ln "${sync}/lazyvim";
         todo = ln "${sync}/todo";
-        lvim = ln "${sync}/lvim";
       };
       dataFiles = {
         task = ln "${sync}/task";

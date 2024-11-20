@@ -1,0 +1,5 @@
+return {
+	"jcdickinson/http.nvim",
+	build = "cargo build --workspace --release",
+	enabled = lvim.user_plugins.http_nvim.active,
+}
