@@ -1,6 +1,6 @@
 (let [help (require :help)
       repo :mini.surround
-      enabled (help.enabled repo :edit)]
+      enabled (help.enabled repo :edit :surround)]
   {1 (help.name :echasnovski repo)
    : enabled
    :opts {:mappings {:add :gza

@@ -3,7 +3,7 @@
               [v {:mode [:n :v]}]))
       help (require :help)
       repo :cutlass.nvim
-      enabled (help.enabled repo :edit)]
+      enabled (help.enabled repo :edit :copy)]
   {1 (help.name :gbprod repo)
    : enabled
    :keys (map [:d :D :c :C :x])
