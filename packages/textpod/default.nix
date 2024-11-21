@@ -4,25 +4,25 @@
   pkg-config,
   oniguruma,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.textpod) pname src version;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.textpod
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-YGwez5U8SLvIkx2IsqxJXM4aCityBD6hvWWvt/BM1mk=";
+    buildInputs = [ oniguruma ];
 
-  nativeBuildInputs = [ pkg-config ];
+    env = {
+      RUSTONIG_SYSTEM_LIBONIG = true;
+    };
 
-  buildInputs = [ oniguruma ];
-
-  env = {
-    RUSTONIG_SYSTEM_LIBONIG = true;
-  };
-
-  meta = with lib; {
-    description = "Extremely simple note-taking app inspired by \"One Big Text File";
-    homepage = "https://github.com/freetonik/textpod";
-    license = licenses.gpl3Only;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "textpod";
-  };
-}
+    meta = with lib; {
+      description = "Extremely simple note-taking app inspired by \"One Big Text File";
+      homepage = "https://github.com/freetonik/textpod";
+      license = licenses.gpl3Only;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "textpod";
+    };
+  }
+)

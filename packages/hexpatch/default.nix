@@ -5,23 +5,23 @@
   cmake,
   python3,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.hexpatch) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.hexpatch
+  // {
+    nativeBuildInputs = [
+      pkg-config
+      cmake
+      python3
+    ];
 
-  cargoHash = "sha256-jWDntqxWsSzfDFxZnVDxh7n/CjFIj+sYMsyX/UXhoaM=";
-
-  nativeBuildInputs = [
-    pkg-config
-    cmake
-    python3
-  ];
-
-  meta = with lib; {
-    description = "HexPatch: a binary patcher and editor written in Rust with terminal user interface (TUI";
-    homepage = "https://github.com/Etto48/HexPatch";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "hex-patch";
-  };
-}
+    meta = with lib; {
+      description = "HexPatch: a binary patcher and editor written in Rust with terminal user interface (TUI";
+      homepage = "https://github.com/Etto48/HexPatch";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "hex-patch";
+    };
+  }
+)

@@ -1,17 +1,40 @@
 {
   lib,
-  buildGoModule,
+  stdenv,
+  fetchzip,
+  writeShellScriptBin,
+  curl,
+  jq,
+  gnused,
   _sources,
 }:
-buildGoModule {
-  inherit (_sources.geminicommit) pname src version;
+let
+  hash = "6/NFuWzkU00zC328yK/RjmaVV+kKlH+DV7qd0cblNx8=";
+in
+stdenv.mkDerivation rec {
+  inherit (_sources.geminicommit) pname version;
 
-  vendorHash = "sha256-N1c0b+eGaIvXJ4p3ovDypGRIn8wCwemFoNm9CvItz6E=";
+  src = fetchzip {
+    url = "https://github.com/tfkhdyt/geminicommit/releases/download/v${version}/geminicommit-v${version}-linux-amd64.tar.gz";
+    sha256 = hash;
+    stripRoot = false;
+  };
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
+  dontBuild = true;
+
+  installPhase = ''
+    runHook preInstall
+    install -Dm755 geminicommit -t $out/bin
+    runHook postInstall
+  '';
+
+  passthru.update = writeShellScriptBin "update-package" ''
+    set -euo pipefail
+
+    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/tfkhdyt/geminicommit/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
+
+    drift rewrite --auto-hash --new-version "$latest"
+  '';
 
   meta = with lib; {
     description = "A CLI that writes git commit messages for you with Google Gemini AI";

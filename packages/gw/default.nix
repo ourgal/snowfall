@@ -8,32 +8,32 @@
   stdenv,
   darwin,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage rec {
-  inherit (_sources.gw) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.gw
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-vSGUndUEAgUe9F7fxb/pSshZMzOHGYPBBfP1ZGj+PiU=";
+    buildInputs = [
+      libgit2
+      openssl
+      zlib
+    ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
-  nativeBuildInputs = [ pkg-config ];
+    env = {
+      OPENSSL_NO_VENDOR = true;
+    };
 
-  buildInputs = [
-    libgit2
-    openssl
-    zlib
-  ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
+    doCheck = false;
 
-  env = {
-    OPENSSL_NO_VENDOR = true;
-  };
-
-  doCheck = false;
-
-  meta = with lib; {
-    description = "Watch local git repositories, keep in sync with remote and run commands";
-    homepage = "https://github.com/daniel7grant/gw";
-    changelog = "https://github.com/daniel7grant/gw/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "gw";
-  };
-}
+    meta = with lib; {
+      description = "Watch local git repositories, keep in sync with remote and run commands";
+      homepage = "https://github.com/daniel7grant/gw";
+      changelog = "https://github.com/daniel7grant/gw/blob/${src.rev}/CHANGELOG.md";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "gw";
+    };
+  }
+)

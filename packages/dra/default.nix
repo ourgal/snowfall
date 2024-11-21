@@ -8,28 +8,28 @@
   stdenv,
   darwin,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage rec {
-  inherit (_sources.dra) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.dra
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-C5y+J6haR+NhSDYk8p1ht2mYLaacf3K3CereNUr9C/U=";
+    buildInputs = [
+      bzip2
+      xz
+      zlib
+    ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
-  nativeBuildInputs = [ pkg-config ];
+    doCheck = false;
 
-  buildInputs = [
-    bzip2
-    xz
-    zlib
-  ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
-
-  doCheck = false;
-
-  meta = with lib; {
-    description = "A command line tool to download release assets from GitHub";
-    homepage = "https://github.com/devmatteini/dra";
-    changelog = "https://github.com/devmatteini/dra/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "dra";
-  };
-}
+    meta = with lib; {
+      description = "A command line tool to download release assets from GitHub";
+      homepage = "https://github.com/devmatteini/dra";
+      changelog = "https://github.com/devmatteini/dra/blob/${src.rev}/CHANGELOG.md";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "dra";
+    };
+  }
+)

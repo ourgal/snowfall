@@ -8,30 +8,30 @@
   stdenv,
   darwin,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage rec {
-  inherit (_sources.koji) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.koji
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-owppYDt0YdWoDvfmzVfiIPjLgTAT9eTI1LpRr4Y3XQA=";
+    buildInputs = [
+      libgit2
+      openssl
+      zlib
+    ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
-  nativeBuildInputs = [ pkg-config ];
+    env = {
+      OPENSSL_NO_VENDOR = true;
+    };
 
-  buildInputs = [
-    libgit2
-    openssl
-    zlib
-  ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
-
-  env = {
-    OPENSSL_NO_VENDOR = true;
-  };
-
-  meta = with lib; {
-    description = "An interactive CLI for creating conventional commits";
-    homepage = "https://github.com/cococonscious/koji";
-    changelog = "https://github.com/cococonscious/koji/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "koji";
-  };
-}
+    meta = with lib; {
+      description = "An interactive CLI for creating conventional commits";
+      homepage = "https://github.com/cococonscious/koji";
+      changelog = "https://github.com/cococonscious/koji/blob/${src.rev}/CHANGELOG.md";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "koji";
+    };
+  }
+)

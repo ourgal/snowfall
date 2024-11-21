@@ -2,19 +2,19 @@
   lib,
   rustPlatform,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.clashctl) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.clashctl
+  // {
+    doCheck = false;
 
-  cargoHash = "sha256-G0mAcB80D7/s9kwkNhJkGLkVYpXMwqpLq/T9gLuYj4E=";
-
-  doCheck = false;
-
-  meta = with lib; {
-    description = "CLI for interacting with clash";
-    homepage = "https://github.com/George-Miao/clashctl";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "clashctl";
-  };
-}
+    meta = with lib; {
+      description = "CLI for interacting with clash";
+      homepage = "https://github.com/George-Miao/clashctl";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "clashctl";
+    };
+  }
+)

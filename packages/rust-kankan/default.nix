@@ -6,22 +6,22 @@
   stdenv,
   darwin,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage rec {
-  inherit (_sources.rust-kanban) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.rust-kanban
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-Rui5fsLBx3ix2skRQVubEV8JabAaWbexA0L2D65JCZg=";
+    buildInputs = [ openssl ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
-  nativeBuildInputs = [ pkg-config ];
-
-  buildInputs = [ openssl ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
-
-  meta = with lib; {
-    description = "A kanban board for the terminal built with ❤\u{fe0f} in Rust";
-    homepage = "https://github.com/yashs662/rust_kanban";
-    changelog = "https://github.com/yashs662/rust_kanban/blob/${src.rev}/Changelog.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "rust-kanban";
-  };
-}
+    meta = with lib; {
+      description = "A kanban board for the terminal built with ❤\u{fe0f} in Rust";
+      homepage = "https://github.com/yashs662/rust_kanban";
+      changelog = "https://github.com/yashs662/rust_kanban/blob/${src.rev}/Changelog.md";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "rust-kanban";
+    };
+  }
+)

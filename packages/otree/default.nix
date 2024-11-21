@@ -4,19 +4,19 @@
   stdenv,
   darwin,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.otree) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.otree
+  // {
+    buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.IOKit ];
 
-  cargoHash = "sha256-qwH/qUOG+MIrctnPQVhCeumYmCDQB9iv1NZEdMhcdFY=";
-
-  buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.IOKit ];
-
-  meta = with lib; {
-    description = "A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget";
-    homepage = "https://github.com/fioncat/otree";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "otree";
-  };
-}
+    meta = with lib; {
+      description = "A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget";
+      homepage = "https://github.com/fioncat/otree";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "otree";
+    };
+  }
+)

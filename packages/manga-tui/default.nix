@@ -9,32 +9,32 @@
   bzip2,
   zstd,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.manga-tui) pname version src;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.manga-tui
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-IufJPCvUEWR5p4PrFlaiQPW9wyIFj/Pd/JHki69L6Es=";
+    buildInputs = [
+      bzip2
+      openssl
+      sqlite
+      zstd
+    ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
-  nativeBuildInputs = [ pkg-config ];
+    env = {
+      ZSTD_SYS_USE_PKG_CONFIG = true;
+    };
 
-  buildInputs = [
-    bzip2
-    openssl
-    sqlite
-    zstd
-  ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
+    doCheck = false;
 
-  env = {
-    ZSTD_SYS_USE_PKG_CONFIG = true;
-  };
-
-  doCheck = false;
-
-  meta = with lib; {
-    description = "Terminal-based manga reader and downloader with image support";
-    homepage = "https://github.com/josueBarretogit/manga-tui";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "manga-tui";
-  };
-}
+    meta = with lib; {
+      description = "Terminal-based manga reader and downloader with image support";
+      homepage = "https://github.com/josueBarretogit/manga-tui";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "manga-tui";
+    };
+  }
+)
