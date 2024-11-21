@@ -69,6 +69,7 @@ fetch.github = "cdump/ranger-devicons2"
 [termsand]
 src.git = "https://github.com/ourgal/termsand"
 fetch.github = "ourgal/termsand"
+cargo_locks = ["Cargo.lock"]
 
 ["tmux.fish"]
 src.git = "https://github.com/budimanjojo/tmux.fish"
@@ -153,22 +154,27 @@ fetch.github = "qjfoidnh/BaiduPCS-Go"
 [blendr]
 src.github = "dmtrKovalenko/blendr"
 fetch.github = "dmtrKovalenko/blendr"
+cargo_locks = ["Cargo.lock"]
 
 [bluetui]
 src.github = "pythops/bluetui"
 fetch.github = "pythops/bluetui"
+cargo_locks = ["Cargo.lock"]
 
 [clashctl]
 src.github = "George-Miao/clashctl"
 fetch.github = "George-Miao/clashctl"
+cargo_locks = ["Cargo.lock"]
 
 [cloneit]
 src.git = "https://github.com/alok8bb/cloneit"
 fetch.github = "alok8bb/cloneit"
+cargo_locks = ["Cargo.lock"]
 
 [code-radio-cli]
 src.github = "JasonWei512/code-radio-cli"
 fetch.github = "JasonWei512/code-radio-cli"
+cargo_locks = ["Cargo.lock"]
 
 [compose2nix]
 src.github = "aksiksi/compose2nix"
@@ -181,6 +187,7 @@ fetch.github = "dlvhdr/diffnav"
 [dra]
 src.github = "devmatteini/dra"
 fetch.github = "devmatteini/dra"
+cargo_locks = ["Cargo.lock"]
 
 [eleventy]
 src.github = "11ty/eleventy"
@@ -205,7 +212,6 @@ fetch.github = "ayoisaiah/focus"
 [geminicommit]
 src.github = "tfkhdyt/geminicommit"
 fetch.github = "tfkhdyt/geminicommit"
-pinned = true
 
 [gg]
 src.git = "https://github.com/qw3rtman/gg"
@@ -279,6 +285,7 @@ fetch.github = "IonicaBizau/git-stats"
 [git-sumi]
 src.github = "welpo/git-sumi"
 fetch.github = "welpo/git-sumi"
+cargo_locks = ["Cargo.lock"]
 
 [git-toolbelt]
 src.github = "nvie/git-toolbelt"
@@ -299,10 +306,12 @@ fetch.github = "tanaikech/goodls"
 [gw]
 src.github = "daniel7grant/gw"
 fetch.github = "daniel7grant/gw"
+cargo_locks = ["Cargo.lock"]
 
 [hexpatch]
 src.github = "Etto48/HexPatch"
 fetch.github = "Etto48/HexPatch"
+cargo_locks = ["Cargo.lock"]
 
 [impala]
 src.github = "pythops/Impala"
@@ -320,6 +329,7 @@ fetch.github = "kellyjonbrazil/Jtbl"
 [koji]
 src.github = "cococonscious/Koji"
 fetch.github = "cococonscious/Koji"
+cargo_locks = ["Cargo.lock"]
 
 [lobster]
 src.github = "justchokingaround/Lobster"
@@ -328,6 +338,7 @@ fetch.github = "justchokingaround/Lobster"
 [lobtui]
 src.github = "pythops/lobtui"
 fetch.github = "pythops/lobtui"
+cargo_locks = ["Cargo.lock"]
 
 [lookatme]
 src.github = "d0c-s4vage/lookatme"
@@ -344,6 +355,7 @@ fetch.github = "fd0/machma"
 [manga-tui]
 src.github = "josueBarretogit/manga-tui"
 fetch.github = "josueBarretogit/manga-tui"
+cargo_locks = ["Cargo.lock"]
 
 [minimal-tmux-status]
 src.git = "https://github.com/niksingh710/minimal-tmux-status"
@@ -380,6 +392,7 @@ fetch.github = "NordicSemiconductor/nrf-udev"
 [otree]
 src.github = "fioncat/otree"
 fetch.github = "fioncat/otree"
+cargo_locks = ["Cargo.lock"]
 
 [pik]
 src.git = "https://github.com/immanelg/pik"
@@ -432,6 +445,7 @@ fetch.github = "mrusme/reader"
 [repoblame]
 src.git = "https://github.com/martinn/repoblame"
 fetch.github = "martinn/repoblame"
+cargo_locks = ["Cargo.lock"]
 
 [rexi]
 src.github = "royreznik/rexi"
@@ -440,14 +454,17 @@ fetch.github = "royreznik/rexi"
 [rimage]
 src.github = "SalOne22/rimage"
 fetch.github = "SalOne22/rimage"
+cargo_locks = ["Cargo.lock"]
 
 [rsv]
 src.github = "ribbondz/rsv"
 fetch.github = "ribbondz/rsv"
+cargo_locks = ["Cargo.lock"]
 
 [rust-kanban]
 src.github_tag = "yashs662/rust_kanban"
 fetch.github = "yashs662/rust_kanban"
+cargo_locks = ["Cargo.lock"]
 
 [s]
 src.github = "zquestz/s"
@@ -468,14 +485,17 @@ fetch.github = "lusingander/serie"
 [serpl]
 src.github = "yassinebridi/serpl"
 fetch.github = "yassinebridi/serpl"
+cargo_locks = ["Cargo.lock"]
 
 [sig]
 src.github = "ynqa/sig"
 fetch.github = "ynqa/sig"
+cargo_locks = ["Cargo.lock"]
 
 [simple-completion-language-server]
 src.git = "https://github.com/estin/simple-completion-language-server"
 fetch.github = "estin/simple-completion-language-server"
+cargo_locks = ["Cargo.lock"]
 
 [soba]
 src.github = "jonhadfield/soba"
@@ -564,6 +584,7 @@ fetch.github = "bilbilak/treegen"
 [tuime]
 src.github = "nate-sys/tuime"
 fetch.github = "nate-sys/tuime"
+cargo_locks = ["Cargo.lock"]
 
 [whitespace-format]
 src.github = "DavidPal/whitespace-format"
@@ -572,6 +593,7 @@ fetch.github = "DavidPal/whitespace-format"
 [wiper]
 src.github = "ikebastuz/wiper"
 fetch.github = "ikebastuz/wiper"
+cargo_locks = ["Cargo.lock"]
 
 [wush]
 src.github = "coder/wush"
@@ -638,6 +660,7 @@ fetch.github = "DeadNews/images-upload-cli"
 [envset]
 src.github = "schpet/envset"
 fetch.github = "schpet/envset"
+cargo_locks = ["Cargo.lock"]
 
 [antifennel]
 src.git = "https://git.sr.ht/~technomancy/antifennel"
@@ -646,6 +669,7 @@ fetch.git = "https://git.sr.ht/~technomancy/antifennel"
 [convfmt]
 src.github = "oriontvv/convfmt"
 fetch.github = "oriontvv/convfmt"
+cargo_locks = ["Cargo.lock"]
 
 [boilr]
 src.github = "tmrts/boilr"
@@ -679,6 +703,7 @@ fetch.github = "git-time-metric/gtm"
 [tabry-rs]
 src.git = "https://github.com/evanbattaglia/tabry-rs"
 fetch.github = "evanbattaglia/tabry-rs"
+cargo_locks = ["Cargo.lock"]
 
 [corgi]
 src.github = "junyu-w/corgi"
@@ -687,6 +712,7 @@ fetch.github = "junyu-w/corgi"
 [jalm]
 src.git = "https://github.com/neelkarma/jalm"
 fetch.github = "neelkarma/jalm"
+cargo_locks = ["Cargo.lock"]
 
 [mdtt]
 src.github = "szktkfm/mdtt"
@@ -707,6 +733,7 @@ fetch.github = "mrusme/neonmodem"
 [game_2048_tui]
 src.github = "WanderHuang/game-2048-tui"
 fetch.github = "WanderHuang/game-2048-tui"
+cargo_locks = ["Cargo.lock"]
 
 [cmdx]
 src.github = "suzuki-shunsuke/cmdx"
@@ -899,6 +926,7 @@ fetch.pypi = "geoip2fast"
 [textpod]
 src.github = "freetonik/textpod"
 fetch.github = "freetonik/textpod"
+cargo_locks = ["Cargo.lock"]
 
 [tach]
 src.github = "gauge-sh/tach"
@@ -907,6 +935,7 @@ fetch.github = "gauge-sh/tach"
 [templify]
 src.github = "cophilot/templify"
 fetch.github = "cophilot/templify"
+cargo_locks = ["Cargo.lock"]
 
 [enhancd]
 src.github = "babarot/enhancd"
@@ -943,6 +972,7 @@ fetch.github = "Hejsil/cache"
 [superwhich]
 src.github = "DarkCeptor44/superwhich"
 fetch.github = "DarkCeptor44/superwhich"
+cargo_locks = ["Cargo.lock"]
 
 [friendly-snippets]
 src.git = "https://github.com/rafamadriz/friendly-snippets"
@@ -975,6 +1005,7 @@ fetch.github = "ghifarit53/tokyonight-vim"
 [complate]
 src.github = "replicadse/complate"
 fetch.github = "replicadse/complate"
+cargo_locks = ["Cargo.lock"]
 
 [textimg]
 src.github = "jiro4989/textimg"
@@ -987,6 +1018,7 @@ fetch.github = "benelan/git-mux"
 [cdo]
 src.git = "https://github.com/dotboris/cdo"
 fetch.github = "dotboris/cdo"
+cargo_locks = ["Cargo.lock"]
 
 [sprite-dicing]
 src.github = "elringus/sprite-dicing"
@@ -995,10 +1027,12 @@ fetch.github = "elringus/sprite-dicing"
 [servicer]
 src.github = "servicer-labs/servicer"
 fetch.github = "servicer-labs/servicer"
+cargo_locks = ["Cargo.lock"]
 
 [stego]
 src.git = "https://github.com/ajmwagar/stego"
 fetch.github = "ajmwagar/stego"
+cargo_locks = ["Cargo.lock"]
 
 [ahoy]
 src.github = "ahoy-cli/ahoy"
@@ -1067,6 +1101,7 @@ fetch.github = "ourgal/lib-x"
 [ynk]
 src.git = "https://github.com/newtoallofthis123/ynk"
 fetch.github = "newtoallofthis123/ynk"
+cargo_locks = ["Cargo.lock"]
 
 [wait-for]
 src.github = "eficode/wait-for"

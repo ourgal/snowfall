@@ -2,18 +2,18 @@
   lib,
   rustPlatform,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage rec {
-  inherit (_sources.convfmt) pname version src;
-
-  cargoHash = "sha256-OVCnY0/hw+VOIvDYcQO/FEQk3W0qQOqAPW8SAYG0xyY=";
-
-  meta = with lib; {
-    description = "Cli tool which can convert different formats";
-    homepage = "https://github.com/oriontvv/convfmt";
-    changelog = "https://github.com/oriontvv/convfmt/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.asl20;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "convfmt";
-  };
-}
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.convfmt
+  // {
+    meta = with lib; {
+      description = "Cli tool which can convert different formats";
+      homepage = "https://github.com/oriontvv/convfmt";
+      changelog = "https://github.com/oriontvv/convfmt/blob/${src.rev}/CHANGELOG.md";
+      license = licenses.asl20;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "convfmt";
+    };
+  }
+)

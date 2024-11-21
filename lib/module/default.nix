@@ -60,6 +60,17 @@ rec {
 
   _sources = import ../../_sources/generated.nix;
 
+  mkRustSource =
+    s:
+    let
+      firstAttrName = v: builtins.head (builtins.attrNames v);
+      cargoName = firstAttrName s.cargoLock;
+    in
+    {
+      inherit (s) pname version src;
+      cargoLock = s.cargoLock.${cargoName};
+    };
+
   mkModuleCfg =
     root: path: prefix:
     let

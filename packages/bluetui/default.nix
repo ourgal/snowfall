@@ -4,21 +4,21 @@
   pkg-config,
   dbus,
   _sources,
+  namespace,
 }:
-rustPlatform.buildRustPackage {
-  inherit (_sources.bluetui) pname src version;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.bluetui
+  // {
+    nativeBuildInputs = [ pkg-config ];
 
-  cargoHash = "sha256-w6rrZQNu5kLKEWSXFa/vSqwm76zWZug/ZqztMDY7buE=";
+    buildInputs = [ dbus ];
 
-  nativeBuildInputs = [ pkg-config ];
-
-  buildInputs = [ dbus ];
-
-  meta = with lib; {
-    description = "TUI for managing bluetooth on Linux";
-    homepage = "https://github.com/pythops/bluetui";
-    license = licenses.gpl3Only;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "bluetui";
-  };
-}
+    meta = with lib; {
+      description = "TUI for managing bluetooth on Linux";
+      homepage = "https://github.com/pythops/bluetui";
+      license = licenses.gpl3Only;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "bluetui";
+    };
+  }
+)
