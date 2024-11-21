@@ -1,0 +1,4 @@
+[".config/emacs"]
+type = "git-repo"
+url = "https://github.com/doomemacs/doomemacs"
+clone.args = ["--depth", "1"]

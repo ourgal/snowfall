@@ -15,7 +15,12 @@ args.module (
       };
       value = {
         home.activation.chezmoi = config.lib.dag.entryAfter [ "reloadSystemd" ] ''
-          PATH=$PATH:${lib.makeBinPath [ pkgs.gnumake ]}
+          PATH=$PATH:${
+            lib.makeBinPath [
+              pkgs.gnumake
+              pkgs.git
+            ]
+          }
           ${pkgs.chezmoi}/bin/chezmoi apply --force
         '';
       };
