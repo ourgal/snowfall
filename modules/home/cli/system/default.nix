@@ -8,6 +8,7 @@ args.module (
       "cache"
       "debounce"
       "is"
+      "sequin"
       "servicer"
       # keep-sorted end
     ];
