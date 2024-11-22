@@ -2281,6 +2281,17 @@
       sha256 = "sha256-Xy/+Xejbdz3/7Bfe8oCxgO9AygOStAzv0OxxAv7u6uM=";
     };
   };
+  sequin = {
+    pname = "sequin";
+    version = "v0.1.1";
+    src = fetchFromGitHub {
+      owner = "charmbracelet";
+      repo = "sequin";
+      rev = "v0.1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-QWbpX5HKX+pE/HdmqQ6dmSHZ17cFbOWVDD/s7QcrtK0=";
+    };
+  };
   serie = {
     pname = "serie";
     version = "v0.4.0";

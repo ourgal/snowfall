@@ -4063,6 +4063,27 @@
         },
         "version": "20241116"
     },
+    "sequin": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "sequin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "charmbracelet",
+            "repo": "sequin",
+            "rev": "v0.1.1",
+            "sha256": "sha256-QWbpX5HKX+pE/HdmqQ6dmSHZ17cFbOWVDD/s7QcrtK0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.1"
+    },
     "serie": {
         "cargoLocks": null,
         "date": null,
