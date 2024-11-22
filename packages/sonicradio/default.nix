@@ -6,7 +6,7 @@
 buildGoModule {
   inherit (_sources.sonicradio) pname version src;
 
-  vendorHash = "sha256-NKbYd155A32B5TK9WpV9uFVNx3zC0LDccwlUOsf4+NU=";
+  vendorHash = "sha256-SxivHDLYE7MDHbAOGatvPJ5cFQsZ52mxqTKyPpK3XCk=";
 
   ldflags = [
     "-s"
