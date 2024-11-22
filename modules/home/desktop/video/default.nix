@@ -16,6 +16,7 @@ args.module (
       "mpvc"
       "peek"
       "stremio"
+      "vlc"
       # keep-sorted end
     ];
     enable = [
