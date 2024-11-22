@@ -1118,3 +1118,7 @@ fetch.github = "oalders/debounce"
 [is]
 src.github = "oalders/is"
 fetch.github = "oalders/is"
+
+[gh-poi]
+src.github = "seachicken/gh-poi"
+fetch.github = "seachicken/gh-poi"

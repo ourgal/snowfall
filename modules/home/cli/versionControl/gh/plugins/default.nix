@@ -20,6 +20,7 @@ args.module (
           pkgs.${namespace}.gh-cp
           pkgs.${namespace}.gh-screensaver
           pkgs.${namespace}.gh-stars
+          pkgs.${namespace}.gh-poi
         ];
     }
   )
