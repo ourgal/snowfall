@@ -1006,6 +1006,17 @@
     };
     date = "2021-11-08";
   };
+  gh-poi = {
+    pname = "gh-poi";
+    version = "v0.11.0";
+    src = fetchFromGitHub {
+      owner = "seachicken";
+      repo = "gh-poi";
+      rev = "v0.11.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-xLeIqTGwizvBmOgwisqoCrFY4KdWoWrA0YYgPWtQT/M=";
+    };
+  };
   gh-screensaver = {
     pname = "gh-screensaver";
     version = "v2.0.1";
