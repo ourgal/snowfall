@@ -93,7 +93,7 @@ args.module (
           rpc-listen-port = 6800;
           rpc-secret = rpcPass;
           rpc-max-request-size = "10M";
-          console-log-level = "notice";
+          console-log-level = "warn";
           summary-interval = 0;
           # show-console-readout = false;
         };
