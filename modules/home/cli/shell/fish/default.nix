@@ -53,6 +53,38 @@ args.module (
             '';
             description = "live wallpaper";
           };
+          mkcd = {
+            body = ''
+              mkdir -p $argv[1]
+              cd $argv[1]
+            '';
+            description = "mkdir and cd";
+          };
+          mkcdc = {
+            body = ''
+              set dir (xclip -o -sel clip)
+              mkdir -p $dir
+              cd $dir
+            '';
+            description = "mkdir and cd";
+          };
+          pmkcdc = {
+            body = ''
+              set dir "../$(xclip -o -sel clip)"
+              mkdir -p $dir
+              cd $dir
+            '';
+            description = "mkdir and cd";
+          };
+          cpcd = {
+            body = ''
+              cb cp .
+              mkdir -p $argv[1]
+              cd $argv[1]
+              cb p
+            '';
+            description = "copy and cd";
+          };
         };
         plugins = lib.${namespace}.mkFishPlugins [
           # keep-sorted start
