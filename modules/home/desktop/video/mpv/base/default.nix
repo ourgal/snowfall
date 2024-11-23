@@ -5,6 +5,9 @@ args.module (
     path = ./.;
     progs.mpv = {
       catppuccin.enable = false;
+      bindings = {
+        p = "set speed 3.0";
+      };
       config = {
         # profile = "gpu-hq";
         # icc-profile = "auto";
