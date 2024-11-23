@@ -39,6 +39,7 @@ args.module (
           "bt-detach-seed-only"
           "rpc-allow-origin-all"
           "rpc-listen-all"
+          "enable-http-pipelining"
         ]
         // disableOpt [
           "always-resume"
@@ -54,7 +55,7 @@ args.module (
         // {
           # dir = config.xdg.userDirs.download;
           disk-cache = "64M";
-          file-allocation = "none";
+          file-allocation = "falloc";
           no-file-allocation-limit = "64M";
           max-resume-failure-tries = 0;
           # input-file = "${config.home.homeDirectory}/.aria2/aria2.session";
