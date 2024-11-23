@@ -1,0 +1,4 @@
+% download
+
+# downloading from clipboard
+aria2c --input-file <(xclip -o -sel clip) -j 1
