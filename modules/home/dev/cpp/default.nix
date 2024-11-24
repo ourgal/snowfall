@@ -9,6 +9,7 @@ args.module (
       "clang-tools"
       "cppcheck"
       "cpplint"
+      "flawfinder"
       "gcc"
       # keep-sorted end
     ];
