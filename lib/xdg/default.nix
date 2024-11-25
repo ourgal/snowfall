@@ -91,6 +91,7 @@ with lib;
       "video/x-ms-wvxvideo"
       "video/x-avi"
       "video/avi"
+      "video/vnd.avi"
       "video/x-flic"
       "video/fli"
       "video/x-flc"
