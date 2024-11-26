@@ -3,3 +3,4 @@
 keyfile.toml
 .playbook.fish
 out
+.env
