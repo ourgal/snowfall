@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "6/NFuWzkU00zC328yK/RjmaVV+kKlH+DV7qd0cblNx8=";
+  hash = "g5UnX6exJXC1+mlJsdbyNt4gleNp4x9R54bFsRSdgww=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.geminicommit) pname version;

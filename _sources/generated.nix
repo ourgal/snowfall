@@ -263,32 +263,32 @@
   };
   cat_win = {
     pname = "cat_win";
-    version = "v1.10.0";
+    version = "v1.10.1";
     src = fetchFromGitHub {
       owner = "SilenZcience";
       repo = "cat_win";
-      rev = "v1.10.0";
+      rev = "v1.10.1";
       fetchSubmodules = false;
-      sha256 = "sha256-Yib57VuJRwUzvP+bDaqwkd7zgewgEfVaorsmZo9w4p8=";
+      sha256 = "sha256-lioWMmUaYn309UAfMUJwuMODW0M6MrhF5v/TNZc71xk=";
     };
   };
   cdo = {
     pname = "cdo";
-    version = "35bc517e6ac924adfbe0af83ec15cee0556e8ddb";
+    version = "65bf1c8cd0a50c1001eeb7f14cd239fafb377e05";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "35bc517e6ac924adfbe0af83ec15cee0556e8ddb";
+      rev = "65bf1c8cd0a50c1001eeb7f14cd239fafb377e05";
       fetchSubmodules = false;
-      sha256 = "sha256-SKDgjYNxJUyEGHODQafxZ2i9VPx6LbemvMGCt4MJYmU=";
+      sha256 = "sha256-eudbBhV7m2ItiXinIzzCWEPyDAqzsqTWvYmnplUAwMY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-35bc517e6ac924adfbe0af83ec15cee0556e8ddb/Cargo.lock;
+      lockFile = ./cdo-65bf1c8cd0a50c1001eeb7f14cd239fafb377e05/Cargo.lock;
       outputHashes = {
 
       };
     };
-    date = "2024-11-17";
+    date = "2024-11-23";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -619,16 +619,16 @@
   };
   dra = {
     pname = "dra";
-    version = "0.6.3";
+    version = "0.7.0";
     src = fetchFromGitHub {
       owner = "devmatteini";
       repo = "dra";
-      rev = "0.6.3";
+      rev = "0.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-C+BEvRBm8f9rtcNQi86x4RHZiMsPl8dZNJToxG7MUxM=";
+      sha256 = "sha256-wS5F3vuRBg5fqfWhlRs38pPRuR78wWxzZV5V6qNo4yw=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dra-0.6.3/Cargo.lock;
+      lockFile = ./dra-0.7.0/Cargo.lock;
       outputHashes = {
 
       };
@@ -953,13 +953,13 @@
   };
   geminicommit = {
     pname = "geminicommit";
-    version = "v0.2.5";
+    version = "v0.2.6";
     src = fetchFromGitHub {
       owner = "tfkhdyt";
       repo = "geminicommit";
-      rev = "v0.2.5";
+      rev = "v0.2.6";
       fetchSubmodules = false;
-      sha256 = "sha256-gjRHx9LVS2/fpubpxy7yPm9KPlM6ailOtaprXL1KklI=";
+      sha256 = "sha256-7LZUfipJi6gR2zHSv9HoVvSSd+QWKnY0wn3US3vAifA=";
     };
   };
   geoip2fast = {
@@ -1512,16 +1512,16 @@
   };
   koji = {
     pname = "koji";
-    version = "2.2.0";
+    version = "v3.0.0";
     src = fetchFromGitHub {
       owner = "cococonscious";
       repo = "Koji";
-      rev = "2.2.0";
+      rev = "v3.0.0";
       fetchSubmodules = false;
-      sha256 = "sha256-2kBjHX7izo4loJ8oyPjE9FtCvUODC3Sm4T8ETIdeGZM=";
+      sha256 = "sha256-v2TptHCnVFJ9DLxki7GP815sosCnDStAzZw7B4g/3mk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./koji-2.2.0/Cargo.lock;
+      lockFile = ./koji-v3.0.0/Cargo.lock;
       outputHashes = {
 
       };
@@ -1848,10 +1848,10 @@
   };
   numara = {
     pname = "numara";
-    version = "5.7.1";
+    version = "5.7.2";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.1/Numara-5.7.1-x86_64.AppImage";
-      sha256 = "sha256-Ut90nNdwwXYSFHTzimDS9Sma4yAIX+1m6D8F+TKbucQ=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.2/Numara-5.7.2-x86_64.AppImage";
+      sha256 = "sha256-VCVtF6B+AwQ99/6Nz83LNyXdl8uux75SkUOiz6W/Yjs=";
     };
   };
   org-export = {
@@ -2294,13 +2294,13 @@
   };
   sequin = {
     pname = "sequin";
-    version = "v0.1.1";
+    version = "v0.2.0";
     src = fetchFromGitHub {
       owner = "charmbracelet";
       repo = "sequin";
-      rev = "v0.1.1";
+      rev = "v0.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-QWbpX5HKX+pE/HdmqQ6dmSHZ17cFbOWVDD/s7QcrtK0=";
+      sha256 = "sha256-uXfpsrjkJ/qdzoaJXY4vJJPEgcnH7wwFvfHskmEK5VA=";
     };
   };
   serie = {
@@ -2516,13 +2516,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.15.1";
+    version = "v0.15.4";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.15.1";
+      rev = "v0.15.4";
       fetchSubmodules = false;
-      sha256 = "sha256-g/6+rYTgJSAwQumJjYY2i+KerYm6YuminBgCwhr0tmM=";
+      sha256 = "sha256-e1eI6z+pbzoSvcSIhyTJa3P60sGM2fSqyMMux/tmmh0=";
     };
   };
   task-relative-recur = {
@@ -2551,13 +2551,13 @@
   };
   television = {
     pname = "television";
-    version = "0.5.1";
+    version = "0.5.3";
     src = fetchFromGitHub {
       owner = "alexpasmantier";
       repo = "television";
-      rev = "0.5.1";
+      rev = "0.5.3";
       fetchSubmodules = false;
-      sha256 = "sha256-mbf39AcW7MYu0A6D7poX6TChJccqweBvUbzJ1Ib+ABI=";
+      sha256 = "sha256-xYfaFs0a37maeLdnlEGVsocWWym41EOZ9dsuFXc1hMY=";
     };
   };
   templify = {
@@ -2636,10 +2636,10 @@
   };
   textual = {
     pname = "textual";
-    version = "0.86.3";
+    version = "0.87.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-0.86.3.tar.gz";
-      sha256 = "sha256-PE1oYSJDrzUeiy09q+RNPPh2JGJNfqZX9NcYhTIGGI8=";
+      url = "https://pypi.org/packages/source/t/textual/textual-0.87.1.tar.gz";
+      sha256 = "sha256-2vTiSLo9iQgx/yYXCZU164NYY6LjYJyM4Arw9tVe0SM=";
     };
   };
   textual-autocomplete = {
@@ -3118,15 +3118,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "3452100ca710e2dd6bec560d7ed6bc74c2ad48a8";
+    version = "71ede749440cb2d62e777b4046fe4523acea9e3b";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "3452100ca710e2dd6bec560d7ed6bc74c2ad48a8";
+      rev = "71ede749440cb2d62e777b4046fe4523acea9e3b";
       fetchSubmodules = false;
-      sha256 = "sha256-5uybhya9S8ooPGxVNQ91hq9o61OkcAeXVeqsb2RHSmE=";
+      sha256 = "sha256-GX2xgW9DWmkSp6A5V28RxCl62Knej7RluoHFWovMshc=";
     };
-    date = "2024-11-22";
+    date = "2024-11-25";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
