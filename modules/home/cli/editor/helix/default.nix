@@ -611,6 +611,14 @@ args.module (
                   "efm"
                 ];
               }
+              {
+                name = "cpp";
+                formatter = {
+                  command = "clang-format";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
