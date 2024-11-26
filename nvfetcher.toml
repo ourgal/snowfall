@@ -1126,3 +1126,7 @@ fetch.github = "seachicken/gh-poi"
 [sequin]
 src.github = "charmbracelet/sequin"
 fetch.github = "charmbracelet/sequin"
+
+[miniflux-sync]
+src.github = "revett/miniflux-sync"
+fetch.github = "revett/miniflux-sync"

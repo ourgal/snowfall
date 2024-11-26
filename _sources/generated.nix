@@ -1687,6 +1687,17 @@
       sha256 = "sha256-OFS/ZhXdvdmlpfCNutsvlhMv1krFlx4Xju8RSl3GS2s=";
     };
   };
+  miniflux-sync = {
+    pname = "miniflux-sync";
+    version = "0.1.1";
+    src = fetchFromGitHub {
+      owner = "revett";
+      repo = "miniflux-sync";
+      rev = "0.1.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-XQc6RJLGkGKSkTEjd9E7CIDvjA6LNQNor+ilNBQoUbM=";
+    };
+  };
   minimal-tmux-status = {
     pname = "minimal-tmux-status";
     version = "d7188c1aeb1c7dd03230982445b7360f5e230131";
