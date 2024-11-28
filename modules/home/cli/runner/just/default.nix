@@ -48,6 +48,9 @@ args.module (
         yt-rss url:
           @curl -s '{{url}}' | rg -o '\"(https://www.youtube.com/feeds/videos.xml\?channel_id=.*?)\"' -r '$1' | cut -d \n -f 1 | xclip -sel clip
 
+        dl:
+          @aria2c --input-file <(xclip -o -sel clip) -j 1
+
         help:
           @just --list --justfile ~/.user.justfile
       '';
