@@ -55,24 +55,35 @@ args.module (
           };
           mkcd = {
             body = ''
-              mkdir -p $argv[1]
-              cd $argv[1]
-            '';
-            description = "mkdir and cd";
-          };
-          mkcdc = {
-            body = ''
-              set dir (xclip -o -sel clip)
-              mkdir -p $dir
-              cd $dir
-            '';
-            description = "mkdir and cd";
-          };
-          pmkcdc = {
-            body = ''
-              set dir "../$(xclip -o -sel clip)"
-              mkdir -p $dir
-              cd $dir
+              set -l options (fish_opt -s h -l help)
+              set options $options (fish_opt -s c -l clip)
+              set options $options (fish_opt -s p -l parent)
+              argparse $options -- $argv
+
+              set dir $argv[1]
+
+              if set -q _flag_help
+                echo "Usage: mkcd [OPTIONS] [DIR]"
+                echo
+                echo "Options:"
+                echo "  -c, --clip     Read clipboard"
+                echo "  -p, --parent   Parent dir"
+                echo "  -h, --help     Help"
+                return
+              end
+
+              if set -q _flag_clip
+                set dir (xclip -o -sel clip)
+              end
+
+              if set -q _flag_parent
+                set dir "../$dir"
+              end
+
+              if test -n "$dir"
+                mkdir -p "$dir"
+                cd "$dir"
+              end
             '';
             description = "mkdir and cd";
           };

@@ -38,6 +38,11 @@ args.module (
           description = "current lan ip";
           tag = [ "network" ];
         }
+        {
+          command = "aria2c --input-file <(xclip -o -sel clip) -j 1";
+          description = "download from clipboard";
+          tag = [ "download" ];
+        }
       ];
     };
   }
