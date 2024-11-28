@@ -89,10 +89,37 @@ args.module (
           };
           cpcd = {
             body = ''
-              cb cp .
-              mkdir -p $argv[1]
-              cd $argv[1]
-              cb p
+              set -l options (fish_opt -s h -l help)
+              set options $options (fish_opt -s c -l clip)
+              set options $options (fish_opt -s p -l parent)
+              argparse $options -- $argv
+
+              set dir $argv[1]
+
+              if set -q _flag_help
+                echo "Usage: cpcd [OPTIONS] [DIR]"
+                echo
+                echo "Options:"
+                echo "  -c, --clip     Read clipboard"
+                echo "  -p, --parent   Parent dir"
+                echo "  -h, --help     Help"
+                return
+              end
+
+              if set -q _flag_clip
+                set dir (xclip -o -sel clip)
+              end
+
+              if set -q _flag_parent
+                set dir "../$dir"
+              end
+
+              if test -n "$dir"
+                cb cp .
+                mkdir -p "$dir"
+                cd "$dir"
+                cb p
+              end
             '';
             description = "copy and cd";
           };
