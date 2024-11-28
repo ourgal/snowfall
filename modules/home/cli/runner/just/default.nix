@@ -51,6 +51,9 @@ args.module (
         dl:
           @aria2c --input-file <(xclip -o -sel clip) -j 1
 
+        mpv:
+          @mpv "$(xclip -o -sel clip)"
+
         help:
           @just --list --justfile ~/.user.justfile
       '';
