@@ -15,6 +15,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "ripgrep"
+      "ripgrep-all"
       "sift"
       "ugrep"
       # keep-sorted end
