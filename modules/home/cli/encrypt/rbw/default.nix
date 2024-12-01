@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = "rbw";
     confs = {
-      "rbw/config.json" = builtins.toJSON {
+      "rbw/config.json" = {
         email = args.lib.strings.fileContents ./email.key;
         sso_id = null;
         base_url = args.lib.strings.fileContents ./base_url.key;

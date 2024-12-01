@@ -36,7 +36,7 @@ args.module (
         }
       ];
       confs = {
-        "tmux/plugins/tmux-which-key/config.yaml" = builtins.toJSON {
+        "tmux/plugins/tmux-which-key/config.yaml" = {
           command_alias_start_index = 200;
           keybindings = {
             prefix_table = "Space";

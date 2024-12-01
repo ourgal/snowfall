@@ -44,14 +44,14 @@ args.module (
         };
       };
       confs = {
-        "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.samhh.bukubrow.json" = builtins.toJSON chromiumNative;
-        "google-chrome/NativeMessagingHosts/com.samhh.bukubrow.json" = builtins.toJSON chromiumNative;
-        "chromium/NativeMessagingHosts/com.samhh.bukubrow.json" = builtins.toJSON chromiumNative;
-        "vivaldi/NativeMessagingHosts/com.samhh.bukubrow.json" = builtins.toJSON chromiumNative;
+        "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.samhh.bukubrow.json" = chromiumNative;
+        "google-chrome/NativeMessagingHosts/com.samhh.bukubrow.json" = chromiumNative;
+        "chromium/NativeMessagingHosts/com.samhh.bukubrow.json" = chromiumNative;
+        "vivaldi/NativeMessagingHosts/com.samhh.bukubrow.json" = chromiumNative;
       };
       files = {
-        ".mozilla/native-messaging-hosts/com.samhh.bukubrow.json" = builtins.toJSON firefoxNative;
-        ".librewolf/native-messaging-hosts/com.samhh.bukubrow.json" = builtins.toJSON firefoxNative;
+        ".mozilla/native-messaging-hosts/com.samhh.bukubrow.json" = firefoxNative;
+        ".librewolf/native-messaging-hosts/com.samhh.bukubrow.json" = firefoxNative;
       };
     }
   )

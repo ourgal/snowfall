@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = "contour";
     confs = {
-      "contour/contour.yml" = builtins.toJSON {
+      "contour/contour.yml" = {
         platform_plugin = "auto";
         renderer = {
           backend = "OpenGL";

@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = "superfile";
     # confs = {
-    #   "superfile/config.toml" = toTOML {
+    #   "superfile/config.toml" =  {
     #     theme = "catppuccin";
     #     auto_check_update = false;
     #     cd_on_quit = false;
@@ -19,7 +19,7 @@ args.module (
     #     metadata = false;
     #     enable_md5_checksum = false;
     #   };
-    #   "superfile/hotkeys.toml" = toTOML {
+    #   "superfile/hotkeys.toml" =  {
     #     confirm = bind "enter";
     #     quit = bind "ctrl+c";
     #     list_up = bind "k";

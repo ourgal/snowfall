@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) config;
+      inherit (args) config namespace;
     in
     {
       path = ./.;
@@ -15,6 +15,11 @@ args.module (
           '';
       };
       progs.fish.shellAbbrs.ideas = "eureka";
+      value = {
+        ${namespace}.cli.utils.alias.aliae.alias = {
+          ideas = "eureka";
+        };
+      };
     }
   )
 )

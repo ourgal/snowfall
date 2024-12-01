@@ -3,14 +3,16 @@ args.module (
   args
   // (
     let
-      inherit (args) toTOML config;
+      inherit (args) config;
     in
     {
       path = ./.;
       nixPkgs = "gut";
       files = {
-        ".gut/consent.toml" = toTOML { Telemetry = false; };
-        ".gut/profiles.toml" = toTOML {
+        ".gut/consent.toml" = {
+          Telemetry = false;
+        };
+        ".gut/profiles.toml" = {
           mZP-mvQBynsRxGy31Elwj = {
             Alias = "git";
             Website = "git.zxc.cn";

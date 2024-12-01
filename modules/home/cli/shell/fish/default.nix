@@ -20,9 +20,6 @@ args.module (
             set -Ux fish_key_bindings fish_vi_key_bindings
           '';
         shellAbbrs = {
-          md = "mkdir -p";
-          rd = "rmdir";
-
           sc = "systemctl";
           scs = "systemctl start";
           sct = "systemctl status";
@@ -156,6 +153,21 @@ args.module (
         { "" = ./.gitnow; }
         { "Downloads/youtube/.keep" = ""; }
       ];
+      value = {
+        ${namespace}.cli.utils.alias.aliae.alias = {
+          sc = "systemctl";
+          scs = "systemctl start";
+          sct = "systemctl status";
+          scr = "systemctl restart";
+          sco = "systemctl stop";
+
+          scu = "systemctl --user";
+          scus = "systemctl --user start";
+          scut = "systemctl --user status";
+          scur = "systemctl --user restart";
+          scuo = "systemctl --user stop";
+        };
+      };
       enable = "fzf-help";
     }
   )

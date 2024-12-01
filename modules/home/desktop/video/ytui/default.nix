@@ -4,7 +4,7 @@ args.module (
   // {
     path = ./.;
     myPkgs = "ytui";
-    confs."ytui/config.yaml" = builtins.toJSON {
+    confs."ytui/config.yaml" = {
       channels = {
         local = true;
         subscribed = [

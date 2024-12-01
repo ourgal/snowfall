@@ -17,6 +17,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
+      "alias"
       "cat"
       "cd"
       "cp"

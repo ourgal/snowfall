@@ -6,7 +6,6 @@ args.module (
       inherit (args)
         pkgs
         namespace
-        toTOML
         mkOpt'
         lib
         cfgHome
@@ -19,7 +18,7 @@ args.module (
       nixPkgs = "sesh";
       progs.tmux.extraConfig = "bind ${cfg.key} ${cfg.command}";
       confs = {
-        "sesh/sesh.toml" = toTOML {
+        "sesh/sesh.toml" = {
           default_session = {
             startup_command = "tmuxinator local";
           };

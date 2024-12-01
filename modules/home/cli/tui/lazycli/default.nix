@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = "lazycli";
     confs = {
-      "lazycli/config.yml" = builtins.toJSON {
+      "lazycli/config.yml" = {
         profiles = [
           {
             name = "ls";
