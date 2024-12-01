@@ -505,10 +505,6 @@ fetch.github = "jonhadfield/soba"
 src.github = "dancnb/sonicradio"
 fetch.github = "dancnb/sonicradio"
 
-[ssh-tpm-agent]
-src.github = "Foxboron/ssh-tpm-agent"
-fetch.github = "Foxboron/ssh-tpm-agent"
-
 [sunbeam]
 src.github = "pomdtr/sunbeam"
 fetch.github = "pomdtr/sunbeam"
