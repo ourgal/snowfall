@@ -16,6 +16,7 @@ args.module (
       "faq"
       "remarshal"
       "taplo"
+      "tomlq"
       # keep-sorted end
     ];
   }
