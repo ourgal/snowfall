@@ -102,6 +102,7 @@ args.module (
         "editorconfig"
         "efm"
         "fennel"
+        "fish"
         "go"
         "json"
         "lua"
