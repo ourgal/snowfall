@@ -95,14 +95,6 @@ fetch.github = "mlaradji/task-relative-recur"
 src.git = "https://github.com/denshakhov/git-heatgrid"
 fetch.github = "denshakhov/git-heatgrid"
 
-[adl]
-src.git = "https://github.com/RaitaroH/adl"
-fetch.github = "RaitaroH/adl"
-
-[animdl]
-src.git = "https://github.com/justfoolingaround/animdl"
-fetch.github = "justfoolingaround/animdl"
-
 [advance-touch]
 src.pypi = "advance-touch"
 fetch.pypi = "advance-touch"
@@ -146,11 +138,6 @@ fetch.github = "aviator-co/av"
 [blendr]
 src.github = "dmtrKovalenko/blendr"
 fetch.github = "dmtrKovalenko/blendr"
-cargo_locks = ["Cargo.lock"]
-
-[bluetui]
-src.github = "pythops/bluetui"
-fetch.github = "pythops/bluetui"
 cargo_locks = ["Cargo.lock"]
 
 [clashctl]
