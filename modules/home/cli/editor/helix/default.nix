@@ -619,6 +619,14 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "fish";
+                language-servers = [
+                  "scls"
+                  "fish-lsp"
+                ];
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -705,6 +713,10 @@ args.module (
               };
               typos-lsp = {
                 command = "typos-lsp";
+              };
+              fish-lsp = {
+                command = "fish-lsp";
+                args = [ "start" ];
               };
             };
           };

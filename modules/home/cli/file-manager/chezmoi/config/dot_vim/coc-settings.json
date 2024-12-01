@@ -100,6 +100,13 @@
       "filetypes": [
         "perl"
       ]
+    },
+    "fish-lsp": {
+      "command": "fish-lsp",
+      "arguments": "start",
+      "filetypes": [
+        "fish"
+      ]
     }
   }
 }
