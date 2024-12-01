@@ -3,9 +3,9 @@ args.module (
   args
   // {
     path = ./.;
+    nixPkgs = "cloneit";
     myPkgs = [
       # keep-sorted start
-      "cloneit"
       "fetch"
       "fgit"
       "github-dlr"
