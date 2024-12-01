@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "adl"
       "ani-cli"
+      "ani-skip"
       "animdl"
       # keep-sorted end
     ];
