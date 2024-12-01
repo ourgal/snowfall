@@ -10,6 +10,7 @@ args.module (
       "gobang"
       "harlequin"
       "mycli"
+      "sqruff"
       "usql"
       # keep-sorted end
     ];
