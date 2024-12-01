@@ -6,13 +6,9 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "delta"
+      "diffnav"
       "riffdiff"
       "ydiff"
-      # keep-sorted end
-    ];
-    myPkgs = [
-      # keep-sorted start
-      "diffnav"
       # keep-sorted end
     ];
     progs.fish.functions.diffnav = {
