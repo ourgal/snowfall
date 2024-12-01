@@ -430,10 +430,6 @@ fetch.github = "alajmo/sake"
 src.github = "sbsrf/sbsrf"
 fetch.github = "sbsrf/sbsrf"
 
-[serie]
-src.github = "lusingander/serie"
-fetch.github = "lusingander/serie"
-
 [serpl]
 src.github = "yassinebridi/serpl"
 fetch.github = "yassinebridi/serpl"
