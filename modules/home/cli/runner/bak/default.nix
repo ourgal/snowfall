@@ -3,7 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "go-task";
+    nixPkgs = [
+      "nq"
+      "go-task"
+    ];
     myPkgs = "pls";
   }
 )
