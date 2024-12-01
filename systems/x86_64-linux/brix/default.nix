@@ -37,6 +37,7 @@ in
     kavita = enabled;
     vaultwarden = enabled;
     searx = enabled;
+    flaresolverr = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
@@ -63,10 +64,6 @@ in
           inherit nfs;
           inherit (sources.docker-alist) version;
           duckdns = enabled;
-        };
-        flaresolverr = enabled // {
-          ports = 8191;
-          inherit (sources.docker-flaresolverr) version;
         };
         qd = enabled // {
           ports = 8923;
