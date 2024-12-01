@@ -16,6 +16,7 @@ args.module (
       "memento"
       "mpvc"
       "peek"
+      "pipeline"
       "stremio"
       "vlc"
       # keep-sorted end
