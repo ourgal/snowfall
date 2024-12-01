@@ -12,9 +12,9 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "blobdrop";
       nixPkgs = [
         # keep-sorted start
+        "blobdrop"
         "brightnessctl"
         "clash-verge-rev"
         "fuzzel"

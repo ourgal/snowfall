@@ -115,10 +115,6 @@ fetch.github = "BlingCorp/bling"
 src.git = "https://github.com/vimpostor/quartz"
 fetch.github = "vimpostor/quartz"
 
-[blobdrop]
-src.github = "vimpostor/blobdrop"
-fetch.github = "vimpostor/blobdrop"
-
 [c]
 src.git = "https://github.com/ryanmjacobs/c"
 fetch.github = "ryanmjacobs/c"
