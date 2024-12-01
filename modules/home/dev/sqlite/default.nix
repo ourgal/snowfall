@@ -10,6 +10,7 @@ args.module (
       "gobang"
       "harlequin"
       "litecli"
+      "sqruff"
       "usql"
       "visidata"
       # keep-sorted end
