@@ -16,6 +16,7 @@ args.module (
       # keep-sorted start
       "autocorrect"
       "cbfmt"
+      "doctoc"
       "lowdown"
       "marksman"
       "md-tangle"
