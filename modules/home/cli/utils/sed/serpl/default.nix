@@ -3,7 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "serpl";
+    nixPkgs = "serpl";
     confs."serpl/config.toml" = {
       keybindings = {
         "<Ctrl-q>" = "Quit";
