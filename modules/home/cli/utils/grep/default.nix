@@ -17,6 +17,7 @@ args.module (
       "ripgrep"
       "ripgrep-all"
       "sift"
+      "srgn"
       "ugrep"
       # keep-sorted end
     ];
