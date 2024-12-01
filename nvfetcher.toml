@@ -430,11 +430,6 @@ fetch.github = "alajmo/sake"
 src.github = "sbsrf/sbsrf"
 fetch.github = "sbsrf/sbsrf"
 
-[sig]
-src.github = "ynqa/sig"
-fetch.github = "ynqa/sig"
-cargo_locks = ["Cargo.lock"]
-
 [simple-completion-language-server]
 src.git = "https://github.com/estin/simple-completion-language-server"
 fetch.github = "estin/simple-completion-language-server"
