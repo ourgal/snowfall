@@ -17,6 +17,7 @@ args.module (
       "csvlens"
       "csvq"
       "csvquote"
+      "csvtk"
       "dasel"
       "miller"
       "q-text-as-data"
