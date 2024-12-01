@@ -18,6 +18,7 @@ args.module (
       "chat"
       "clipboard"
       "completion"
+      "correction"
       "dashboard"
       "disk"
       "doc"
