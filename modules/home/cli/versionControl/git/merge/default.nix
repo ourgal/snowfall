@@ -3,9 +3,9 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace;
+      inherit (args) pkgs;
       gitattributes =
-        (pkgs.runCommand "mergiraf-gitattributes" { nativeBuildInputs = [ pkgs.${namespace}.mergiraf ]; } ''
+        (pkgs.runCommand "mergiraf-gitattributes" { nativeBuildInputs = [ pkgs.mergiraf ]; } ''
           mkdir $out
           mergiraf languages --gitattributes > $out/gitattributes
         '')
@@ -13,7 +13,7 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "mergiraf";
+      nixPkgs = "mergiraf";
       progs.git.extraConfig = {
         merge.mergiraf = {
           name = "mergiraf";
