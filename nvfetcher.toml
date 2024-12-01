@@ -529,10 +529,6 @@ src.github = "ThaUnknown/miru"
 src.prefix = "v"
 fetch.url = "https://github.com/ThaUnknown/miru/releases/download/v$ver/linux-Miru-$ver.AppImage"
 
-[pot]
-src.github = "pot-app/pot-desktop"
-fetch.url = "https://github.com/pot-app/pot-desktop/releases/download/$ver/pot_$ver_amd64.AppImage"
-
 [numara]
 src.github = "bornova/numara-calculator"
 src.prefix = "v"
