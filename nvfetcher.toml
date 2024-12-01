@@ -166,11 +166,6 @@ src.github = "George-Miao/clashctl"
 fetch.github = "George-Miao/clashctl"
 cargo_locks = ["Cargo.lock"]
 
-[cloneit]
-src.git = "https://github.com/alok8bb/cloneit"
-fetch.github = "alok8bb/cloneit"
-cargo_locks = ["Cargo.lock"]
-
 [code-radio-cli]
 src.github = "JasonWei512/code-radio-cli"
 fetch.github = "JasonWei512/code-radio-cli"
