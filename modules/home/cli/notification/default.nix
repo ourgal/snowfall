@@ -4,5 +4,6 @@ args.module (
   // {
     path = ./.;
     progs = "noti";
+    nixPkgs = "fyi";
   }
 )
