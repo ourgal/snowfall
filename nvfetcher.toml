@@ -175,10 +175,6 @@ cargo_locks = ["Cargo.lock"]
 src.github = "aksiksi/compose2nix"
 fetch.github = "aksiksi/compose2nix"
 
-[diffnav]
-src.github = "dlvhdr/diffnav"
-fetch.github = "dlvhdr/diffnav"
-
 [dra]
 src.github = "devmatteini/dra"
 fetch.github = "devmatteini/dra"
