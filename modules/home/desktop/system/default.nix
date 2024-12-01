@@ -18,6 +18,7 @@ args.module (
         "brightnessctl"
         "clash-verge-rev"
         "fuzzel"
+        "hardinfo"
         "libnotify"
         "polkit"
         "qtscrcpy"
