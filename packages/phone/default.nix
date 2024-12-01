@@ -1,7 +1,7 @@
 {
   pog,
   miniserve,
-  kdeconnect,
+  plasma5Packages,
   gopass,
   brotab,
   buku,
@@ -58,7 +58,7 @@ pog.pog {
 
   runtimeInputs = [
     miniserve
-    kdeconnect
+    plasma5Packages.kdeconnect-kde
     gopass
     brotab
     buku

@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     progs.eza = {
       git = true;
-      icons = true;
+      icons = "auto";
       extraOptions = [
         "--group"
         "--group-directories-first"

@@ -2284,12 +2284,9 @@
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
     version = "20241116";
-    src = fetchFromGitHub {
-      owner = "sbsrf";
-      repo = "sbsrf";
-      rev = "20241116";
-      fetchSubmodules = false;
-      sha256 = "sha256-Xy/+Xejbdz3/7Bfe8oCxgO9AygOStAzv0OxxAv7u6uM=";
+    src = fetchurl {
+      url = "https://github.com/sbsrf/sbsrf/releases/download/20241116/sbsrf.zip";
+      sha256 = "sha256-hWmA9Xod7IYchA64Yoooo1pfr9Tvfj1Tbw79xwcQ1Lc=";
     };
   };
   sequin = {

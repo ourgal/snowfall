@@ -106,6 +106,7 @@ args.module (
         "nvim-ts-autotag"
         "settings"
         "telescope-nvim"
+        "web-devicons"
         "vim-floaterm"
         "which-key-nvim"
       ];

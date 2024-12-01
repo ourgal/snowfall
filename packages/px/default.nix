@@ -29,7 +29,7 @@ python3.pkgs.buildPythonApplication rec {
   nativeBuildInputs = [
     python3.pkgs.setuptools
     python3.pkgs.wheel
-    python3.pkgs.pytest-runner
+    # python3.pkgs.pytest-runner
   ];
 
   meta = with lib; {

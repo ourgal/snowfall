@@ -12,12 +12,11 @@ args.module (
     in
     {
       path = ./.;
-      gnomePkgs = "zenity";
       myPkgs = "blobdrop";
       nixPkgs = [
         # keep-sorted start
         "brightnessctl"
-        "clash-verge"
+        "clash-verge-rev"
         "fuzzel"
         "libnotify"
         "polkit"
@@ -28,6 +27,7 @@ args.module (
         "xclip"
         "xcolor"
         "xdragon"
+        "zenity"
         # keep-sorted end
       ];
       enable = [

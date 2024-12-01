@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "procs";
+    progs.nixvim.plugins.web-devicons.enable = true;
   }
 )

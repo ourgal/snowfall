@@ -6,7 +6,7 @@ args.module (
     nodePkgs = [
       # keep-sorted start
       "peerflix"
-      "webtorrent-cli"
+      # "webtorrent-cli"
       # keep-sorted end
     ];
     nixPkgs = [
