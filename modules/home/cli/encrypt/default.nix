@@ -10,6 +10,7 @@ args.module (
       "enc"
       "genpass"
       "hashcat"
+      "horcrux"
       "opensc"
       "pcsc-tools"
       "prs"
