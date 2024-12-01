@@ -8,6 +8,7 @@ args.module (
       "beekeeper-studio"
       "dblab"
       "gobang"
+      "rainfrog"
       "usql"
       # keep-sorted end
     ];
