@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "thefuck";
+    enable = [
+      # keep-sorted start
+      "pay-respects"
+      "thefuck"
+      # keep-sorted end
+    ];
   }
 )
