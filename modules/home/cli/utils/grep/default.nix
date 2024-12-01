@@ -9,7 +9,6 @@ args.module (
       "hypergrep"
       "kbgrep"
       "play"
-      "sig"
       # keep-sorted end
     ];
     nixPkgs = [
@@ -17,6 +16,7 @@ args.module (
       "ripgrep"
       "ripgrep-all"
       "sift"
+      "sig"
       "srgn"
       "ugrep"
       # keep-sorted end
