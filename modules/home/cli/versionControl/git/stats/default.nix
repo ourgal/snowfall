@@ -9,7 +9,6 @@ args.module (
       "git-fame"
       "git-heatgrid"
       "git-of-theseus"
-      "gitcs"
       "repoblame"
       # keep-sorted end
     ];
@@ -19,6 +18,7 @@ args.module (
       "git-bars"
       "git-quick-stats"
       "git-sizer"
+      "gitcs"
       "gitstats"
       "scc"
       "tokei"
