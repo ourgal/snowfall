@@ -8,7 +8,12 @@ args.module (
     {
       path = ./.;
       myPkgs = "hledger-fmt";
-      nixPkgs = "hledger";
+      nixPkgs = [
+        # keep-sorted start
+        "hledger"
+        "puffin"
+        # keep-sorted end
+      ];
       dataFiles."hledger/.keep" = "";
       env.LEDGER_FILE = "${config.xdg.dataHome}/hledger/main.journal";
     }
