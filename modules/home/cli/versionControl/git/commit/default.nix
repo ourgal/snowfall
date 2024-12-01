@@ -15,7 +15,6 @@ args.module (
         "git-sumi"
         "gogitmoji"
         "goji"
-        "koji"
         # keep-sorted end
       ];
       nixPkgs = [
@@ -24,6 +23,7 @@ args.module (
         "gitlint"
         "gitmoji-cli"
         "glitter"
+        "koji"
         # keep-sorted end
       ];
       enable = "geminicommit";

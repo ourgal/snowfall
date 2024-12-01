@@ -313,11 +313,6 @@ fetch.github = "justchokingaround/Jerry"
 src.github = "kellyjonbrazil/Jtbl"
 fetch.github = "kellyjonbrazil/Jtbl"
 
-[koji]
-src.github = "cococonscious/Koji"
-fetch.github = "cococonscious/Koji"
-cargo_locks = ["Cargo.lock"]
-
 [lobster]
 src.github = "justchokingaround/Lobster"
 fetch.github = "justchokingaround/Lobster"
