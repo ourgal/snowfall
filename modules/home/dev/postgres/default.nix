@@ -10,6 +10,7 @@ args.module (
       "gobang"
       "harlequin"
       "rainfrog"
+      "sql-studio"
       "sqruff"
       "usql"
       # keep-sorted end
