@@ -8,7 +8,7 @@ args.module (
     {
       path = ./.;
       dataFiles = {
-        "fcitx5/rime/default.custom.yaml" = builtins.toJSON {
+        "fcitx5/rime/default.custom.yaml" = {
           patch = {
             schema_list = [ { schema = "sbfm"; } ];
             "key_binder/bindings" = [
@@ -30,7 +30,7 @@ args.module (
             };
           };
         };
-        "fcitx5/rime/sbfm.custom.yaml" = builtins.toJSON {
+        "fcitx5/rime/sbfm.custom.yaml" = {
           patch = {
             switches = [
               {

@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) toTOML enabled;
+      inherit (args) enabled;
     in
     {
       path = ./.;
@@ -38,7 +38,7 @@ args.module (
         # keep-sorted end
       ];
       confs = {
-        "treefmt/config.toml" = toTOML {
+        "treefmt/config.toml" = {
           formatter = {
             toml = {
               command = "taplo";

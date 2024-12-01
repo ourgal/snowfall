@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = "oneshot";
     confs = {
-      "oneshot/config.yaml" = builtins.toJSON {
+      "oneshot/config.yaml" = {
         basicauth = {
           nodialog = false;
           password = "";

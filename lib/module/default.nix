@@ -236,7 +236,22 @@ rec {
                 else if (builtins.isString value) then
                   { "${name}".text = value; }
                 else if (builtins.isAttrs value) then
-                  { "${name}".source = value; }
+                  let
+                    filename = builtins.baseNameOf name;
+                    extension = lib.lists.last (lib.strings.splitString "." filename);
+                  in
+                  if
+                    (builtins.elem extension [
+                      "yaml"
+                      "yml"
+                      "json"
+                    ])
+                  then
+                    { "${name}".text = builtins.toJSON value; }
+                  else if (builtins.elem extension [ "toml" ]) then
+                    { "${name}".text = toTOML value; }
+                  else
+                    { "${name}".source = value; }
                 else
                   builtins.throw "not supported type";
             in

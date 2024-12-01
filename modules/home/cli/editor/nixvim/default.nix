@@ -52,9 +52,7 @@ args.module (
         }
         {
           fish = {
-            shellAbbrs = {
-              vu = "lvim";
-            };
+            shellAbbrs.vu = "lvim";
             functions = {
               vn = {
                 body = # fish
@@ -112,6 +110,9 @@ args.module (
       ];
       value = {
         ${namespace} = {
+          cli.utils.alias.aliae.alias = {
+            vu = "lvim";
+          };
           dev.python.global.pkgs = p: [ p.pynvim ];
           cli.editor.nixvim = {
             colorschemes.tokyonight = enabled;

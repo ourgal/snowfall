@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) toTOML config pkgs;
+      inherit (args) config pkgs;
     in
     {
       path = ./.;
       nixPkgs = "clipcat";
       confs = {
-        "clipcat/clipcatd.toml" = toTOML {
+        "clipcat/clipcatd.toml" = {
           daemonize = true;
           pid_file = "/run/user/1000/clipcatd.pid";
           max_history = 50;

@@ -137,7 +137,7 @@ args.module (
       path = ./.;
       myPkgs = "flatpak-compose";
       confs = {
-        "flatpak-compose/config.yaml" = builtins.toJSON conf;
+        "flatpak-compose/config.yaml" = conf;
       };
       value = {
         home.activation.flatpak-compose = config.lib.dag.entryAfter [ "reloadSystemd" ] ''

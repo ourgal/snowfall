@@ -18,7 +18,7 @@ args.module (
         paper.log = "ov -F --section-delimiter '^commit'";
       };
       confs = {
-        "ov/config.yaml" = builtins.toJSON {
+        "ov/config.yaml" = {
           General = {
             TabWidth = 8;
             Header = 0;

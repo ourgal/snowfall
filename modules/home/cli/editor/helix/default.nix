@@ -11,7 +11,6 @@ args.module (
         enableOpt
         cfgHome
         switch
-        toTOML
         ;
       tmuxEnabled = config.${namespace}.cli.multiplexer.tmux.enable;
       zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
@@ -728,7 +727,7 @@ args.module (
         "live-grep"
       ];
       confs = {
-        "helix/external-snippets.toml" = toTOML {
+        "helix/external-snippets.toml" = {
           "sources" = [
             {
               "git" = "https://github.com/rafamadriz/friendly-snippets.git";

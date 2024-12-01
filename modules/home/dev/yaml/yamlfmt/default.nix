@@ -4,7 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "yamlfmt";
-    confs."yamlfmt/yamlfmt.yaml" = builtins.toJSON {
+    confs."yamlfmt/yamlfmt.yaml" = {
       "formatter" = {
         "type" = "basic";
         "include_document_start" = true;

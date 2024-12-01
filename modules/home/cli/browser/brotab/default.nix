@@ -26,10 +26,10 @@ args.module (
       path = ./.;
       nixPkgs = "brotab";
       confs = {
-        "BraveSoftware/Brave-Browser/NativeMessagingHosts/brotab_mediator.json" = builtins.toJSON chromiumNative;
-        "google-chrome/NativeMessagingHosts/brotab_mediator.json" = builtins.toJSON chromiumNative;
-        "chromium/NativeMessagingHosts/brotab_mediator.json" = builtins.toJSON chromiumNative;
-        "vivaldi/NativeMessagingHosts/brotab_mediator.json" = builtins.toJSON chromiumNative;
+        "BraveSoftware/Brave-Browser/NativeMessagingHosts/brotab_mediator.json" = chromiumNative;
+        "google-chrome/NativeMessagingHosts/brotab_mediator.json" = chromiumNative;
+        "chromium/NativeMessagingHosts/brotab_mediator.json" = chromiumNative;
+        "vivaldi/NativeMessagingHosts/brotab_mediator.json" = chromiumNative;
       };
       files = {
         ".mozilla/native-messaging-hosts/brotab_mediator.json" = firefoxText;

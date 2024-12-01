@@ -54,14 +54,14 @@ args.module (
         git.extraConfig.credential.helper = "gopass";
       };
       confs = {
-        "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;
-        "google-chrome/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;
-        "chromium/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;
-        "vivaldi/NativeMessagingHosts/com.justwatch.gopass.json" = builtins.toJSON chromiumNative;
+        "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.justwatch.gopass.json" = chromiumNative;
+        "google-chrome/NativeMessagingHosts/com.justwatch.gopass.json" = chromiumNative;
+        "chromium/NativeMessagingHosts/com.justwatch.gopass.json" = chromiumNative;
+        "vivaldi/NativeMessagingHosts/com.justwatch.gopass.json" = chromiumNative;
       };
       files = {
-        ".mozilla/native-messaging-hosts/com.justwatch.gopass.json" = builtins.toJSON firefoxNative;
-        ".librewolf/native-messaging-hosts/com.justwatch.gopass.json" = builtins.toJSON firefoxNative;
+        ".mozilla/native-messaging-hosts/com.justwatch.gopass.json" = firefoxNative;
+        ".librewolf/native-messaging-hosts/com.justwatch.gopass.json" = firefoxNative;
       };
     }
   )

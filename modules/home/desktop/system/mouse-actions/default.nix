@@ -13,7 +13,7 @@ args.module (
     {
       path = ./.;
       nixPkgs = "mouse-actions";
-      confs."mouse-actions.json" = builtins.toJSON {
+      confs."mouse-actions.json" = {
         "bindings" = [
           {
             "cmd" = [
