@@ -10,6 +10,7 @@ args.module (
       "gobang"
       "harlequin"
       "litecli"
+      "sql-studio"
       "sqruff"
       "usql"
       "visidata"
