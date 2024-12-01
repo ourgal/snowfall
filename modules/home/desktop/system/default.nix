@@ -20,6 +20,7 @@ args.module (
         "fuzzel"
         "libnotify"
         "polkit"
+        "qtscrcpy"
         "ripdrag"
         "scrcpy"
         "swww"
