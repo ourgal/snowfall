@@ -20,6 +20,7 @@ args.module (
       "dasel"
       "miller"
       "q-text-as-data"
+      "qsv"
       "sq"
       "tabiew"
       "textql"
