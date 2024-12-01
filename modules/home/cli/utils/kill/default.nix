@@ -4,6 +4,11 @@ args.module (
   // {
     path = ./.;
     nodePkgs = "fkill-cli";
-    nixPkgs = "killport";
+    nixPkgs = [
+      # keep-sorted start
+      "killport"
+      "pik"
+      # keep-sorted end
+    ];
   }
 )
