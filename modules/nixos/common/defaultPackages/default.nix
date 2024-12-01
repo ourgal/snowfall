@@ -8,7 +8,9 @@ let
       light = enabled // {
         brightnessKeys = enabled;
       };
-      vim.defaultEditor = true;
+      vim = enabled // {
+        defaultEditor = true;
+      };
     };
     security.doas = enabled;
   };

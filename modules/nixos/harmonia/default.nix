@@ -13,7 +13,7 @@ let
         max_connection_rate = 256;
         priority = 30;
       };
-      signKeyPath = "/etc/harmonia/secret";
+      signKeyPaths = [ "/etc/harmonia/secret" ];
     };
   };
   path = ./.;

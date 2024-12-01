@@ -12,15 +12,15 @@ args.module (
           enabledList [
             "pyright"
             "marksman"
-            "nil-ls"
+            "nil_ls"
             "bashls"
-            "csharp-ls"
-            "lua-ls"
+            "csharp_ls"
+            "lua_ls"
             "html"
-            "rust-analyzer"
+            "rust_analyzer"
           ]
           // {
-            rust-analyzer = enabled // {
+            rust_analyzer = enabled // {
               installCargo = true;
               installRustc = true;
             };

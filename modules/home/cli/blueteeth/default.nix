@@ -4,11 +4,6 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "bluetuith";
-    myPkgs = [
-      # keep-sorted start
-      "blendr"
-      "bluetui"
-      # keep-sorted end
-    ];
+    myPkgs = "bluetui";
   }
 )

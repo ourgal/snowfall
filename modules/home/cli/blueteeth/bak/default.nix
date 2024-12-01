@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "procs";
+    myPkgs = "blendr";
   }
 )

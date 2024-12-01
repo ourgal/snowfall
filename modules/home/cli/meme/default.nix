@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "meme";
+    nixPkgs = "meme-image-generator";
   }
 )

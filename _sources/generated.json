@@ -4071,16 +4071,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "sbsrf",
-            "repo": "sbsrf",
-            "rev": "20241116",
-            "sha256": "sha256-Xy/+Xejbdz3/7Bfe8oCxgO9AygOStAzv0OxxAv7u6uM=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-hWmA9Xod7IYchA64Yoooo1pfr9Tvfj1Tbw79xwcQ1Lc=",
+            "type": "url",
+            "url": "https://github.com/sbsrf/sbsrf/releases/download/20241116/sbsrf.zip"
         },
         "version": "20241116"
     },

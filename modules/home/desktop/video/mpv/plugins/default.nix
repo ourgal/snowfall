@@ -22,7 +22,7 @@ args.module (
             "mpv-smartcopypaste_ii"
             "mpv-smartskip"
             "mpv-M-x"
-            "mpv-btfs-stream"
+            # "mpv-btfs-stream"
           ];
         scriptOpts = {
           uosc = {

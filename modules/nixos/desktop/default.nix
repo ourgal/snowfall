@@ -10,7 +10,6 @@ let
     nixosModule
     enabled
     disabled
-    enableOpt
     with'
     enableNixosSubModule
     ;
@@ -47,7 +46,7 @@ let
           package = pkgs.awesome-git;
         };
         xmonad = disabled;
-        qtile = enabled;
+        # qtile = enabled;
       };
     };
 
@@ -59,21 +58,16 @@ let
     services.libinput = enabled;
 
     hardware = {
-      opengl =
-        enabled
-        // enableOpt [
-          "driSupport"
-          "driSupport32Bit"
-        ]
-        // {
-          extraPackages = with' pkgs [
-            "intel-media-driver" # LIBVA_DRIVER_NAME=iHD
-            "libvdpau-va-gl"
-            "nvidia-vaapi-driver"
-            "vaapiIntel" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-            "vaapiVdpau" # VA-API and VDPAU
-          ];
-        };
+      graphics = enabled // {
+        enable32Bit = true;
+        extraPackages = with' pkgs [
+          "intel-media-driver" # LIBVA_DRIVER_NAME=iHD
+          "libvdpau-va-gl"
+          "nvidia-vaapi-driver"
+          "vaapiIntel" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+          "vaapiVdpau" # VA-API and VDPAU
+        ];
+      };
     };
 
     # XDG portal
