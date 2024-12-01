@@ -29,6 +29,7 @@ in
       "desktop"
       "flatpak"
       "fonts"
+      "gpu-screen-recorder"
       "harmonia"
       "kmonad"
       "location"

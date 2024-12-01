@@ -26,6 +26,7 @@ in
       "desktop"
       "disko"
       "fonts"
+      "gpu-screen-recorder"
       "harmonia"
       "kmonad"
       "laptop"
