@@ -11,12 +11,12 @@ args.module (
       "fzy"
       "skim"
       "zf"
+      "zfind"
       # keep-sorted end
     ];
     myPkgs = [
       # keep-sorted start
       "fzf-kill"
-      "zfind"
       # keep-sorted end
     ];
     enable = [

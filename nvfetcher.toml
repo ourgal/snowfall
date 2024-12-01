@@ -594,10 +594,6 @@ fetch.github = "coder/wush"
 src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
 
-[zfind]
-src.github = "laktak/zfind"
-fetch.github = "laktak/zfind"
-
 [miru]
 src.github = "ThaUnknown/miru"
 src.prefix = "v"
