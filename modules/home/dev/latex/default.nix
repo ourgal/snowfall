@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "tectonic"
+      "tex-fmt"
       "texlab"
       "texliveFull"
       # keep-sorted end
