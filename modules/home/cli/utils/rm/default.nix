@@ -8,7 +8,7 @@ args.module (
       "backdown"
       "gomi"
       "gtrash"
-      "rm-improved"
+      "rip2"
       "trash-cli"
       # keep-sorted end
     ];
