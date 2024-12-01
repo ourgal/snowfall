@@ -25,6 +25,7 @@ args.module (
       "jql"
       "jqp"
       "jsonfmt"
+      "jtbl"
       "jtc"
       "miller"
       "remarshal"
@@ -46,7 +47,6 @@ args.module (
       "bafi"
       "config-file-validator"
       "convfmt"
-      "jtbl"
       "otree"
       "vscode-json-language-server"
       # keep-sorted end
