@@ -552,10 +552,6 @@ fetch.github = "TheSast/tmux-transient-status"
 src.git = "https://github.com/ourgal/tmux-which-key"
 fetch.github = "ourgal/tmux-which-key"
 
-[toolong]
-src.github = "Textualize/toolong"
-fetch.github = "Textualize/toolong"
-
 [toru]
 src.github = "sweetbbak/toru"
 fetch.github = "sweetbbak/toru"

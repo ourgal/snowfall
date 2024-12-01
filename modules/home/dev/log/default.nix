@@ -6,13 +6,13 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "hl"
-      "toolong"
       # keep-sorted end
     ];
     nixPkgs = [
       # keep-sorted start
       "fblog"
       "lnav"
+      "toolong"
       # keep-sorted end
     ];
   }
