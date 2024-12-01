@@ -578,10 +578,6 @@ src.github = "ikebastuz/wiper"
 fetch.github = "ikebastuz/wiper"
 cargo_locks = ["Cargo.lock"]
 
-[wush]
-src.github = "coder/wush"
-fetch.github = "coder/wush"
-
 [ytui]
 src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
