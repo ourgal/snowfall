@@ -5,7 +5,6 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
-      "baidupcs-go"
       "dra"
       "goodls"
       "imgboxdwl"
@@ -14,6 +13,7 @@ args.module (
     pyPkgs = "downloader-cli";
     nixPkgs = [
       # keep-sorted start
+      "baidupcs-go"
       "btfs"
       "libgen-cli"
       "lux"
