@@ -107,6 +107,13 @@
       "filetypes": [
         "fish"
       ]
+    },
+    "superhtml": {
+      "command": "superhtml",
+      "arguments": "lsp",
+      "filetypes": [
+        "html"
+      ]
     }
   }
 }

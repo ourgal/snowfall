@@ -105,6 +105,7 @@ args.module (
         "fennel"
         "fish"
         "go"
+        "html"
         "json"
         "lua"
         "markdown"

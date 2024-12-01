@@ -626,6 +626,14 @@ args.module (
                 ];
                 auto-format = true;
               }
+              {
+                name = "html";
+                language-servers = [
+                  "scls"
+                  "superhtml"
+                ];
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -716,6 +724,10 @@ args.module (
               fish-lsp = {
                 command = "fish-lsp";
                 args = [ "start" ];
+              };
+              superhtml = {
+                command = "superhtml";
+                args = [ "lsp" ];
               };
             };
           };
