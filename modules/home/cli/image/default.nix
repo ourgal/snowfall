@@ -27,7 +27,6 @@ args.module (
       "autocrop"
       "gif-progress"
       "manga-tui"
-      "pik"
       "rimage"
       "sprite-dicing"
       "svgshift"
