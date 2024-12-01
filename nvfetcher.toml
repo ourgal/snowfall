@@ -430,11 +430,6 @@ fetch.github = "alajmo/sake"
 src.github = "sbsrf/sbsrf"
 fetch.github = "sbsrf/sbsrf"
 
-[serpl]
-src.github = "yassinebridi/serpl"
-fetch.github = "yassinebridi/serpl"
-cargo_locks = ["Cargo.lock"]
-
 [sig]
 src.github = "ynqa/sig"
 fetch.github = "ynqa/sig"
