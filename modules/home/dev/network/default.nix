@@ -9,7 +9,6 @@ args.module (
       "dnspyre"
       "get_cert"
       "hssp"
-      "impala"
       "updo"
       "vl"
       # keep-sorted end
@@ -25,6 +24,7 @@ args.module (
       "gapcast"
       "gping"
       "httping"
+      "impala"
       "ipinfo"
       "lychee"
       "nali"

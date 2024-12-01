@@ -300,11 +300,6 @@ src.github = "Etto48/HexPatch"
 fetch.github = "Etto48/HexPatch"
 cargo_locks = ["Cargo.lock"]
 
-[impala]
-src.github = "pythops/Impala"
-fetch.github = "pythops/Impala"
-pinned = true
-
 [jerry]
 src.git = "https://github.com/justchokingaround/jerry"
 fetch.github = "justchokingaround/Jerry"
