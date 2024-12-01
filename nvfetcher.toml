@@ -550,10 +550,6 @@ fetch.docker = "xhofe/alist-aria2"
 src.container = "tindy2013/subconverter"
 fetch.docker = "tindy2013/subconverter"
 
-[docker-flaresolverr]
-src.container = "flaresolverr/flaresolverr"
-fetch.docker = "flaresolverr/flaresolverr"
-
 [docker-qd]
 src.container = "qdtoday/qd"
 fetch.docker = "qdtoday/qd"
