@@ -7,7 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      myPkgs = "television";
+      nixPkgs = "television";
       confs."television/config.toml" = toTOML {
         ui = {
           use_nerd_font_icons = false;

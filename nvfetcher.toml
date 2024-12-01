@@ -1082,10 +1082,6 @@ fetch.github = "IrineSistiana/mosdns-cn"
 src.github = "nwtgck/gif-progress"
 fetch.github = "nwtgck/gif-progress"
 
-[television]
-src.github = "alexpasmantier/television"
-fetch.github = "alexpasmantier/television"
-
 [mpv-btfs-stream]
 src.git = "https://github.com/noctuid/mpv-btfs-stream"
 fetch.github = "noctuid/mpv-btfs-stream"
