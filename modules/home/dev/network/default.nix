@@ -22,6 +22,7 @@ args.module (
       "dnspeep"
       "dogdns"
       "dstp"
+      "gapcast"
       "gping"
       "httping"
       "ipinfo"
