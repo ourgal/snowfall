@@ -6,7 +6,6 @@ args.module (
     myPkgs = [
       # keep-sorted start
       "images-upload-cli"
-      "wush"
       # keep-sorted end
     ];
     nixPkgs = [
@@ -29,6 +28,7 @@ args.module (
       "tran"
       "tty-share"
       "webwormhole"
+      "wush"
       # keep-sorted end
     ];
     enable = [
