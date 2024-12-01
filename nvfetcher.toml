@@ -203,10 +203,6 @@ fetch.github = "vilmibm/gh-screensaver"
 src.github = "aymanbagabas/gh-stars"
 fetch.github = "aymanbagabas/gh-stars"
 
-[gitcs]
-src.github = "knbr13/gitcs"
-fetch.github = "knbr13/gitcs"
-
 [argparse]
 src.pypi = "argparse"
 fetch.pypi = "argparse"
