@@ -22,6 +22,7 @@ args.module (
         "checkmake"
         "commitmsgfmt"
         "datefmt"
+        "dep-tree"
         "devbox"
         "devenv"
         "dtool"
