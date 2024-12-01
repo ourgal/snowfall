@@ -147,10 +147,6 @@ fetch.github = "mandykoh/autocrop"
 src.github = "aviator-co/av"
 fetch.github = "aviator-co/av"
 
-[baidupcs-go]
-src.github = "qjfoidnh/BaiduPCS-Go"
-fetch.github = "qjfoidnh/BaiduPCS-Go"
-
 [blendr]
 src.github = "dmtrKovalenko/blendr"
 fetch.github = "dmtrKovalenko/blendr"
