@@ -520,11 +520,6 @@ cargo_locks = ["Cargo.lock"]
 src.github = "DavidPal/whitespace-format"
 fetch.github = "DavidPal/whitespace-format"
 
-[wiper]
-src.github = "ikebastuz/wiper"
-fetch.github = "ikebastuz/wiper"
-cargo_locks = ["Cargo.lock"]
-
 [ytui]
 src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
