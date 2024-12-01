@@ -3,7 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "pot";
+    nixPkgs = "pot";
     enable = "crow-translate";
   }
 )
