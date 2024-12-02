@@ -14,6 +14,7 @@ args.module (
       "imgp"
       "lutgen"
       "menyoki"
+      "pio"
       "pqiv"
       "qiv"
       "termshot"
