@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "id3v2"
       "normalize"
+      "pamixer"
       "pulsemixer"
       "scope-tui"
       # keep-sorted end
