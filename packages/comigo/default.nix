@@ -9,13 +9,13 @@
   _sources,
 }:
 let
-  hash = "4M8bGLwGSrGjml9Q0QuSnxZ1BVuMm4OtDJlmfiye2Yo=";
+  hash = "u94zYIF3B8kAErwtbAnZRjmHDVfOBuTQM1XlU6Iv9c8=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.comigo) pname version;
 
   src = fetchzip {
-    url = "https://github.com/yumenaka/comigo/releases/download/v${version}/comi_v0.9.11_Linux_x86_64.tar.gz";
+    url = "https://github.com/yumenaka/comigo/releases/download/v${version}/comi_v${version}_Linux_x86_64.tar.gz";
     sha256 = hash;
     stripRoot = false;
   };

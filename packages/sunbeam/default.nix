@@ -6,7 +6,7 @@
 buildGoModule rec {
   inherit (_sources.sunbeam) pname version src;
 
-  vendorHash = "sha256-V3dpE2V08PBp4nJuSuOH8VeTqqnC34kGT/ZdrxtV0W4=";
+  vendorHash = "sha256-+RMmbKCY9Q8w58ksK7PgtM2mo5bOc6HJFJsfdWIYDnE=";
 
   ldflags = [
     "s"

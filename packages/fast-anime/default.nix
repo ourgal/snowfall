@@ -19,6 +19,7 @@ python3.pkgs.buildPythonApplication {
     rich
     thefuzz
     yt-dlp
+    pycryptodome
   ];
 
   passthru.optional-dependencies = with python3.pkgs; {

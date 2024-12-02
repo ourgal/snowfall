@@ -362,10 +362,6 @@ fetch.github = "udem-dlteam/pnut"
 src.pypi = "textual"
 fetch.pypi = "textual"
 
-[textual-autocomplete]
-src.pypi = "textual-autocomplete"
-fetch.pypi = "textual_autocomplete"
-
 [pydantic]
 src.pypi = "pydantic"
 fetch.pypi = "pydantic"
