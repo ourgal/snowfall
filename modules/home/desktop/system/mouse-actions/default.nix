@@ -9,6 +9,10 @@ args.module (
         namespace
         pkgs
         ;
+      volume = pkgs.writeShellScript "set volume" ''
+        pactl set-sink-volume @DEFAULT_SINK@ "$1"
+        volnoti-show $(pamixer --get-volume)
+      '';
     in
     {
       path = ./.;
@@ -17,9 +21,7 @@ args.module (
         "bindings" = [
           {
             "cmd" = [
-              "pactl"
-              "set-sink-volume"
-              "@DEFAULT_SINK@"
+              "${volume}"
               "+5%"
             ];
             "event" = {
@@ -35,9 +37,7 @@ args.module (
           }
           {
             "cmd" = [
-              "pactl"
-              "set-sink-volume"
-              "@DEFAULT_SINK@"
+              "${volume}"
               "-5%"
             ];
             "event" = {
@@ -70,6 +70,8 @@ args.module (
                     lib.makeBinPath [
                       pkgs.pulseaudio
                       pkgs.mouse-actions
+                      pkgs.pamixer
+                      pkgs.volnoti
                     ]
                   }
                   mouse-actions
