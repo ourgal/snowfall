@@ -53,6 +53,7 @@ args.module (
         "sbsrf"
         "scream"
         "sxhkd"
+        "volnoti"
         "wired"
         "xbanish"
         # keep-sorted end
