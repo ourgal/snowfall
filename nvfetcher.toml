@@ -542,6 +542,10 @@ fetch.github = "Benex254/FastAnime"
 src.container = "xhofe/alist-aria2"
 fetch.docker = "xhofe/alist-aria2"
 
+[docker-flaresolverr]
+src.container = "flaresolverr/flaresolverr"
+fetch.docker = "flaresolverr/flaresolverr"
+
 [docker-subconverter]
 src.container = "tindy2013/subconverter"
 fetch.docker = "tindy2013/subconverter"
