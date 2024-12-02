@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "neovide";
+    nixPkgs = [
+      # keep-sorted start
+      "neovide"
+      "zed-editor"
+      # keep-sorted end
+    ];
     enable = [
       # keep-sorted start
       "emacs"
