@@ -7,7 +7,7 @@
 buildGoModule {
   inherit (_sources.gitty) pname src version;
 
-  vendorHash = "sha256-N4WXyw6eF8yav2wTrQNnakqNq/fkUe+/poJCJyp4lsc=";
+  vendorHash = "sha256-PA2K+qaCRiy4iTu1ZD+kbMb/ttAF3hgVUtBjcAMnRrI=";
 
   ldflags = [
     "-s"

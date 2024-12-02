@@ -3,6 +3,7 @@
   python3,
   cargo,
   rustPlatform,
+  fetchPypi,
   rustc,
   _sources,
 }:
@@ -29,9 +30,16 @@ let
 
     pythonImportsCheck = [ "textual" ];
   };
-  textual-autocomplete = python3.pkgs.buildPythonApplication {
-    inherit (_sources.textual-autocomplete) pname version src;
+  textual-autocomplete = python3.pkgs.buildPythonApplication rec {
+    pname = "textual-autocomplete";
+    version = "3.0.0a13";
     pyproject = true;
+
+    src = fetchPypi {
+      pname = "textual_autocomplete";
+      inherit version;
+      hash = "sha256-21pK6VbdfW3s5T9/aV6X8qt1gZ3Za4ocBk7Flms6sRM=";
+    };
 
     nativeBuildInputs = [ python3.pkgs.poetry-core ];
 
