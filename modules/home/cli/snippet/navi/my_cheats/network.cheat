@@ -2,3 +2,7 @@
 
 # check domain IP info
 dig <domain> +short | nali
+
+# current ip
+; more: https://github.com/chubin/awesome-console-services
+curl curlmyip.net
