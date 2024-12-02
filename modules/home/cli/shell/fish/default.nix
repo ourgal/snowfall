@@ -51,60 +51,51 @@ args.module (
             description = "live wallpaper";
           };
           mkcd = {
-            body = ''
-              set -l options (fish_opt -s h -l help)
-              set options $options (fish_opt -s c -l clip)
-              set options $options (fish_opt -s p -l parent)
-              argparse $options -- $argv
-
-              set dir $argv[1]
-
-              if set -q _flag_help
-                echo "Usage: mkcd [OPTIONS] [DIR]"
-                echo
-                echo "Options:"
-                echo "  -c, --clip     Read clipboard"
-                echo "  -p, --parent   Parent dir"
-                echo "  -h, --help     Help"
-                return
-              end
-
-              if set -q _flag_clip
-                set dir (xclip -o -sel clip)
-              end
-
-              if set -q _flag_parent
-                set dir "../$dir"
-              end
-
-              if test -n "$dir"
-                mkdir -p "$dir"
-                cd "$dir"
-              end
-            '';
             description = "mkdir and cd";
-          };
-          cpcd = {
             body = ''
               set -l options (fish_opt -s h -l help)
               set options $options (fish_opt -s c -l clip)
+              set options $options (fish_opt -s C -l copy)
               set options $options (fish_opt -s p -l parent)
+              set options $options (fish_opt -s a -l increase)
+              set options $options (fish_opt -s x -l decrease)
               argparse $options -- $argv
 
-              set dir $argv[1]
-
               if set -q _flag_help
-                echo "Usage: cpcd [OPTIONS] [DIR]"
+                echo "Usage: mkcd "(set_color yellow)"[OPTIONS]"(set_color normal)" "(set_color blue)"[DIR]"(set_color normal)""
                 echo
                 echo "Options:"
-                echo "  -c, --clip     Read clipboard"
-                echo "  -p, --parent   Parent dir"
-                echo "  -h, --help     Help"
+                echo "  "(set_color yellow)"-c"(set_color normal)", "(set_color yellow)"--clip"(set_color normal)"       Read clipboard"
+                echo "  "(set_color yellow)"-C"(set_color normal)", "(set_color yellow)"--copy"(set_color normal)"       Copy files"
+                echo "  "(set_color yellow)"-p"(set_color normal)", "(set_color yellow)"--parent"(set_color normal)"     Parent dir"
+                echo "  "(set_color yellow)"-a"(set_color normal)", "(set_color yellow)"--increase"(set_color normal)"   Increase number"
+                echo "  "(set_color yellow)"-x"(set_color normal)", "(set_color yellow)"--decrease"(set_color normal)"   Decrease number"
+                echo "  "(set_color yellow)"-h"(set_color normal)", "(set_color yellow)"--help"(set_color normal)"       Help"
                 return
+              end
+
+              if test -z "$dir"
+                set dir (basename (pwd))
+              else
+                set dir $argv[1]
               end
 
               if set -q _flag_clip
                 set dir (xclip -o -sel clip)
+              end
+
+              if set -q _flag_increase; or set -q _flag_decrease
+                set num (string match -r '\d+' $dir)
+                if set -q _flag_increase
+                  set num (math $num+1)
+                else if set _q _flag_decrease
+                  set num (math $num-1)
+                end
+                set dir (string replace -r '\d+' $num $dir)
+              end
+
+              if set -q _flag_copy
+                xclip-copyfile .
               end
 
               if set -q _flag_parent
@@ -112,13 +103,14 @@ args.module (
               end
 
               if test -n "$dir"
-                cb cp .
                 mkdir -p "$dir"
                 cd "$dir"
-                cb p
+
+                if set -q _flag_copy
+                  xclip-pastefile
+                end
               end
             '';
-            description = "copy and cd";
           };
         };
         plugins = lib.${namespace}.mkFishPlugins [
