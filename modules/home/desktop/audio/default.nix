@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "alsa-utils"
+      "audacity"
       "blanket"
       "easytag"
       "netease-cloud-music-gtk"
