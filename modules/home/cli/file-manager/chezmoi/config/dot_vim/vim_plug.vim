@@ -185,7 +185,7 @@ plug#begin(installDir)
     # Plug 'Exafunction/codeium.vim'
     # Plug 'mihaifm/bufstop'
     Plug 'laktak/tome', { 'on': [ 'TomePlayBook', 'TomeScratchPad', 'TomeScratchPadOnly' ] }
-    Plug 'zef/vim-cycle'
+    # Plug 'zef/vim-cycle'
     Plug 'Yggdroot/indentLine'
     Plug 'git-time-metric/gtm-vim-plugin'
     # Plug 'habamax/vim-asciidoctor', { 'for': 'asciidoc' }
