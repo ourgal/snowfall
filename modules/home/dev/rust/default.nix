@@ -12,33 +12,13 @@ args.module (
     ];
     files = {
       ".cargo/config.toml" = {
-        source = {
-          crates-io = {
-            replace-with = "cernet-sparse";
+        "source" = {
+          "crates-io" = {
+            "replace-with" = "mirror";
           };
-          rsproxy = {
-            registry = "https://rsproxy.cn/crates.io-index";
+          "mirror" = {
+            "registry" = "sparse+https://mirrors.cernet.edu.cn/crates.io-index/";
           };
-          rsproxy-sparse = {
-            registry = "sparse+https://rsproxy.cn/index/";
-          };
-          cernet = {
-            registry = "https://mirrors.cernet.edu.cn/crates.io-index.git";
-          };
-          cernet-sparse = {
-            registry = "sparse+https://mirrors.cernet.edu.cn/crates.io-index/";
-          };
-        };
-        registries = {
-          rsproxy = {
-            index = "https://rsproxy.cn/crates.io-index";
-          };
-          cernet = {
-            index = "https://mirrors.cernet.edu.cn/crates.io-index.git";
-          };
-        };
-        net = {
-          git-fetch-with-cli = true;
         };
       };
     };
