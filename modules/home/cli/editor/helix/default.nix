@@ -634,6 +634,18 @@ args.module (
                 ];
                 auto-format = true;
               }
+              {
+                name = "cpp";
+                language-servers = [
+                  "scls"
+                  "ccls"
+                ];
+                formatter = {
+                  command = "clang-format";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -728,6 +740,9 @@ args.module (
               superhtml = {
                 command = "superhtml";
                 args = [ "lsp" ];
+              };
+              ccls = {
+                command = "ccls";
               };
             };
           };
