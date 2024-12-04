@@ -13,6 +13,7 @@ args.module (
       "argbash"
       "argc"
       "bashly"
+      "complgen"
       "jc"
       "shc"
       "shellcheck"
