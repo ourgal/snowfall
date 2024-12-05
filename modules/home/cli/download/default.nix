@@ -9,6 +9,7 @@ args.module (
       "dra"
       "goodls"
       "imgboxdwl"
+      "tstickers"
       # keep-sorted end
     ];
     pyPkgs = "downloader-cli";
