@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     myPkgs = [
       # keep-sorted start
+      "dirdl"
       "dra"
       "goodls"
       "imgboxdwl"
