@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace lib;
+      inherit (args)
+        pkgs
+        namespace
+        lib
+        config
+        ;
     in
     {
       path = ./.;
@@ -110,6 +115,13 @@ args.module (
                   xclip-pastefile
                 end
               end
+            '';
+          };
+          tstickers = {
+            description = "download telegram stickers";
+            wraps = "tstickers";
+            body = ''
+              command tstickers --token (cat ${config.xdg.configHome}/telegram/bot1) --pack $argv
             '';
           };
         };
