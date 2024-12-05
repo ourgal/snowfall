@@ -39,6 +39,10 @@ let
           inherit owner mode;
           path = "/home/${owner}/.config/github/token";
         };
+        "telegram/bot1" = rec {
+          inherit owner mode;
+          path = "/home/${owner}/.config/telegram/bot1";
+        };
       };
     };
   };
