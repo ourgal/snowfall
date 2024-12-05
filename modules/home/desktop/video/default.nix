@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "gifski"
       "gpu-screen-recorder"
+      "kdenlive"
       "memento"
       "mpvc"
       "peek"
