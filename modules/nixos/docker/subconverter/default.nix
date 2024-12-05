@@ -10,7 +10,7 @@ let
   cfg = cfgNixos config.${namespace} ./.;
   value = arionProj {
     inherit cfg;
-    image = "tindy2013/subconverter";
+    image = "asdlokj1qpi23/subconverter";
     config = "/base";
     env = {
       TZ = "Asia/Shanghai";
