@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "u94zYIF3B8kAErwtbAnZRjmHDVfOBuTQM1XlU6Iv9c8=";
+  hash = "g9C8AYHhDz0H7E15BaRcjtatmlYm7NAsq+t7MbBN98Y=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.comigo) pname version;
