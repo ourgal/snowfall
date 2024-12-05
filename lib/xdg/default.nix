@@ -7,6 +7,7 @@ with lib;
       "image/gif"
       "image/jpeg"
       "image/jpg"
+      "image/webp"
       "image/pjpeg"
       "image/png"
       "image/tiff"
