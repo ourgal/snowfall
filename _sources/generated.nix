@@ -211,21 +211,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "65bf1c8cd0a50c1001eeb7f14cd239fafb377e05";
+    version = "4a5c743f5893ebb850a922c7fe92c9096130e362";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "65bf1c8cd0a50c1001eeb7f14cd239fafb377e05";
+      rev = "4a5c743f5893ebb850a922c7fe92c9096130e362";
       fetchSubmodules = false;
-      sha256 = "sha256-eudbBhV7m2ItiXinIzzCWEPyDAqzsqTWvYmnplUAwMY=";
+      sha256 = "sha256-2QjLVYS96LQaMB15vI1zXogRuJd/FaGkUg1YZxrBQ6s=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-65bf1c8cd0a50c1001eeb7f14cd239fafb377e05/Cargo.lock;
+      lockFile = ./cdo-4a5c743f5893ebb850a922c7fe92c9096130e362/Cargo.lock;
       outputHashes = {
 
       };
     };
-    date = "2024-11-23";
+    date = "2024-12-02";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -317,13 +317,13 @@
   };
   comigo = {
     pname = "comigo";
-    version = "v0.9.12";
+    version = "v0.9.13";
     src = fetchFromGitHub {
       owner = "yumenaka";
       repo = "comigo";
-      rev = "v0.9.12";
+      rev = "v0.9.13";
       fetchSubmodules = false;
-      sha256 = "sha256-epOEfkewt6+I1syhGskGnOeW1FrBDI0Rfmpt7n0+eOQ=";
+      sha256 = "sha256-Ck8DZMcVQSMm6udYwMe9FxfxEmGmQWYO1y3yqyjnV2Y=";
     };
   };
   complate = {
@@ -440,15 +440,15 @@
   };
   devdocs-vim = {
     pname = "devdocs-vim";
-    version = "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271";
+    version = "58f68483b5d9b1bc283557808576ceff71de4a83";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "devdocs.vim";
-      rev = "ae7e029c1fc1d89c3a18f1244a6747ad3ddfc271";
+      rev = "58f68483b5d9b1bc283557808576ceff71de4a83";
       fetchSubmodules = false;
-      sha256 = "sha256-Q+e9pwvmNfBPewT3mfAHH5fZh+VVY7mXELbMI41WkqY=";
+      sha256 = "sha256-zEOqyhYdp7R8eiJJL+izQGlFF5x3/vaaafmSHBWN8GI=";
     };
-    date = "2024-10-18";
+    date = "2024-12-03";
   };
   dext = {
     pname = "dext";
@@ -517,12 +517,12 @@
   };
   docker-subconverter = {
     pname = "docker-subconverter";
-    version = "0.9.0";
+    version = "0.9.7";
     src = dockerTools.pullImage {
-      imageName = "tindy2013/subconverter";
-      imageDigest = "sha256:41899af10188ce83f6359eacc3d12f33c74b423c35b37bcd09b686575e9e10ad";
-      sha256 = "sha256-PiCD+jyQRhzbHKQeJxJiyUd+TZRG3OZHRkV97ITlI9w=";
-      finalImageTag = "0.9.0";
+      imageName = "asdlokj1qpi23/subconverter";
+      imageDigest = "sha256:cc93272ad39eee19769e2d950bc9a2d605cbb28b5777fc67b4ed645d5969ec05";
+      sha256 = "sha256-zJAZCp5WjZyZBeE+t0U/7PdfE8Ca53UECU4iNNSR9MQ=";
+      finalImageTag = "0.9.7";
     };
   };
   dra = {
@@ -670,15 +670,15 @@
   };
   fifc = {
     pname = "fifc";
-    version = "e953fcd521f34651d4eabedcc08cfdef7945b31d";
+    version = "a01650cd432becdc6e36feeff5e8d657bd7ee84a";
     src = fetchFromGitHub {
       owner = "gazorby";
       repo = "fifc";
-      rev = "e953fcd521f34651d4eabedcc08cfdef7945b31d";
+      rev = "a01650cd432becdc6e36feeff5e8d657bd7ee84a";
       fetchSubmodules = false;
-      sha256 = "sha256-VmeVVwX5/rPZr98vaitvw6bqcZgaBNc+mEYkDRjFBXA=";
+      sha256 = "sha256-Ynb0Yd5EMoz7tXwqF8NNKqCGbzTZn/CwLsZRQXIAVp4=";
     };
-    date = "2024-10-16";
+    date = "2024-12-04";
   };
   fingerpaint = {
     pname = "fingerpaint";
@@ -799,13 +799,13 @@
   };
   friendly-snippets = {
     pname = "friendly-snippets";
-    version = "4b320fe7e34723b8f07edda3935143c6b7323ba5";
+    version = "efff286dd74c22f731cdec26a70b46e5b203c619";
     src = fetchFromGitHub {
       owner = "rafamadriz";
       repo = "friendly-snippets";
-      rev = "4b320fe7e34723b8f07edda3935143c6b7323ba5";
+      rev = "efff286dd74c22f731cdec26a70b46e5b203c619";
       fetchSubmodules = false;
-      sha256 = "sha256-qUUrRFDjjWeGzoAKqMJBhbCzRJDqjNTt7fGyQ2t0GE4=";
+      sha256 = "sha256-I8SRZxnoNC6SOWW+scoA77Jwyxcb4eUczppLdyOiZe0=";
     };
     date = "2024-12-01";
   };
@@ -1356,15 +1356,15 @@
   };
   jerry = {
     pname = "jerry";
-    version = "e8d15983a90a0be583419637b46723192ef5c1d3";
+    version = "f997596fc14fed328968f3ab27c777d001830efd";
     src = fetchFromGitHub {
       owner = "justchokingaround";
       repo = "Jerry";
-      rev = "e8d15983a90a0be583419637b46723192ef5c1d3";
+      rev = "f997596fc14fed328968f3ab27c777d001830efd";
       fetchSubmodules = false;
-      sha256 = "sha256-VEb9mrAXGmD9EYzU/W/E7sPoWw4eMBd2q0n2s8dqLls=";
+      sha256 = "sha256-IZ1+P7RrTO3NgKxZx62Cbjm7z/AWfz3MghnleHw98/4=";
     };
-    date = "2024-09-29";
+    date = "2024-12-04";
   };
   kbgrep = {
     pname = "kbgrep";
@@ -1525,13 +1525,13 @@
   };
   mdsf = {
     pname = "mdsf";
-    version = "v0.3.1";
+    version = "v0.3.2";
     src = fetchFromGitHub {
       owner = "hougesen";
       repo = "mdsf";
-      rev = "v0.3.1";
+      rev = "v0.3.2";
       fetchSubmodules = false;
-      sha256 = "sha256-QziaxQ42jfYrA9Hq55XPKYtIDzOPeSzcCnHJ8N6lFoQ=";
+      sha256 = "sha256-AHX0sqiXCsm7E8EgcjVR7rLaSdD5V9RdeXqD7V16hJM=";
     };
   };
   mdtt = {
@@ -1870,10 +1870,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.10.2";
+    version = "2.10.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.2.tar.gz";
-      sha256 = "sha256-K8LX8XIy4IQcu6RkHmW6Hrb6+zoI3joJH/POFKGXxPo=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.3.tar.gz";
+      sha256 = "sha256-y1rDYM6JTOrNacQDGHkAoCxLILaTqd0dZD4e/6uerfk=";
     };
   };
   pydantic-core = {
@@ -2183,21 +2183,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "a3222a996f803dfa8f18744b5047b826648db140";
+    version = "7a6b5d69a66206e937405e55ac076e12117ceff7";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "a3222a996f803dfa8f18744b5047b826648db140";
+      rev = "7a6b5d69a66206e937405e55ac076e12117ceff7";
       fetchSubmodules = false;
-      sha256 = "sha256-g3fsztKOrDnIJ2PB/3ULhNenJ5FeAChOu8Nvjb/bLHk=";
+      sha256 = "sha256-1bGzn8HzhiTuy5hDDnKAbXKNbT4zlRgPy35MxCSMZsQ=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-a3222a996f803dfa8f18744b5047b826648db140/Cargo.lock;
+      lockFile = ./simple-completion-language-server-7a6b5d69a66206e937405e55ac076e12117ceff7/Cargo.lock;
       outputHashes = {
 
       };
     };
-    date = "2024-11-26";
+    date = "2024-12-04";
   };
   soba = {
     pname = "soba";
@@ -2212,13 +2212,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.4.1";
+    version = "v0.4.2";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.4.1";
+      rev = "v0.4.2";
       fetchSubmodules = false;
-      sha256 = "sha256-/ub5m+yV3kfVkm5aMbTDOvpbdDg4g6xkPW1rhbuW5JQ=";
+      sha256 = "sha256-G8mIg64RUycvu7TD+q0tb+hrMpU+0D0GkUgZ459FDJ0=";
     };
   };
   sprite-dicing = {
@@ -2310,13 +2310,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.16.2";
+    version = "v0.16.3";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.16.2";
+      rev = "v0.16.3";
       fetchSubmodules = false;
-      sha256 = "sha256-iN2S5lauqK2H+ET0EcubRqTg1cmRn8DiBEYL2uq0HaQ=";
+      sha256 = "sha256-aOifhOxD1dVJsbYIwVmr6G+hmO5F8MoSiAnv8ux0PRQ=";
     };
   };
   task-relative-recur = {
@@ -2475,15 +2475,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "4edd6f0a70cdf1b53d8099eb0929f1cff6f3fb44";
+    version = "0d2db8d95e1b74643a06802043c7000a79ba0a0a";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "4edd6f0a70cdf1b53d8099eb0929f1cff6f3fb44";
+      rev = "0d2db8d95e1b74643a06802043c7000a79ba0a0a";
       fetchSubmodules = false;
-      sha256 = "sha256-6Hatsxl2Z8p7AEDLTsVPIj6p7Y22mIzI4VMaGM0zpE4=";
+      sha256 = "sha256-9S4HQHuECGLPLdPishmwEO0twdeQ6mZQfIMNFFDkgQ8=";
     };
-    date = "2024-11-15";
+    date = "2024-12-02";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
@@ -2882,15 +2882,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "d43a4604bc0ec5cb425ea0384668110cb6c3cd98";
+    version = "4787f90c4c616658664072c0e9dbd6f26811eacf";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "d43a4604bc0ec5cb425ea0384668110cb6c3cd98";
+      rev = "4787f90c4c616658664072c0e9dbd6f26811eacf";
       fetchSubmodules = false;
-      sha256 = "sha256-2mTK84VYgZDRczVDGrF84BnIVIOy2TGrVnIiJuaU1fI=";
+      sha256 = "sha256-uhFv7MtNltQ0d0iAK/2oiCgg4F93YL3EsYabsHcMlhQ=";
     };
-    date = "2024-11-29";
+    date = "2024-12-04";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
