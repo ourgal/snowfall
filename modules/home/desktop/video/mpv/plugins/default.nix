@@ -13,12 +13,10 @@ args.module (
           with' pkgs.mpvScripts [
             "mpris"
             "quack"
-            "sponsorblock"
             "thumbfast"
             "uosc"
           ]
           ++ with' pkgs.${namespace} [
-            "mpv-autoloop"
             "mpv-smartcopypaste_ii"
             "mpv-smartskip"
             "mpv-M-x"
@@ -27,15 +25,6 @@ args.module (
         scriptOpts = {
           uosc = {
             autohide = "yes";
-          };
-          SmartSkip = {
-            silence_audio_level = "-60";
-            silence_duration = "0.85";
-            silence_skip_to_end = "cancel";
-            min_skip_duration = 0;
-            max_skip_duration = 0;
-            autoload_playlist = "no";
-            ignore_silence_duration = 5;
           };
           autoloop = {
             autoloop_duration = 360;
