@@ -37,6 +37,7 @@ args.module (
         "barrier"
         "clipboard"
         "cursor"
+        "dunst"
         "espanso"
         "flameshot"
         "gammastep"
@@ -54,7 +55,6 @@ args.module (
         "scream"
         "sxhkd"
         "volnoti"
-        "wired"
         "xbanish"
         # keep-sorted end
       ];
