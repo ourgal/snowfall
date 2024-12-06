@@ -4006,6 +4006,27 @@
         },
         "version": "d9d5911f4d2d141fea74936f235a74bf03961c71"
     },
+    "subtotxt": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "subtotxt",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NebularNerd",
+            "repo": "subtotxt",
+            "rev": "v2.1",
+            "sha256": "sha256-ShNGPv5uMIqdJoWuJZrVQ5p3RHluPleowDMnGrV4EY4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.1"
+    },
     "sunbeam": {
         "cargoLocks": null,
         "date": null,

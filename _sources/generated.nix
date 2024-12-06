@@ -2250,6 +2250,17 @@
     };
     date = "2019-10-22";
   };
+  subtotxt = {
+    pname = "subtotxt";
+    version = "v2.1";
+    src = fetchFromGitHub {
+      owner = "NebularNerd";
+      repo = "subtotxt";
+      rev = "v2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-ShNGPv5uMIqdJoWuJZrVQ5p3RHluPleowDMnGrV4EY4=";
+    };
+  };
   sunbeam = {
     pname = "sunbeam";
     version = "v1.0.1";
