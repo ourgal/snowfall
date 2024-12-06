@@ -21,6 +21,13 @@ with lib;
       "image/x-tga"
       "image/x-xbitmap"
     ];
+    office = {
+      doc = [
+        "application/msword"
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      ];
+      xls = [ "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ];
+    };
     video_audio = [
       "application/ogg"
       "application/x-ogg"
