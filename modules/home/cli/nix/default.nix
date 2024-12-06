@@ -10,6 +10,7 @@ args.module (
       "nix-du"
       "nix-generate-from-cpan"
       "nix-info"
+      "nix-inspect"
       "nix-melt"
       "nix-output-monitor"
       "nix-prefetch"
