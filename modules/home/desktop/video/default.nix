@@ -11,6 +11,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "aegisub"
       "gifski"
       "gpu-screen-recorder"
       "kdenlive"
