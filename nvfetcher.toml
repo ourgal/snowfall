@@ -1035,3 +1035,7 @@ fetch.github = "charmbracelet/sequin"
 [miniflux-sync]
 src.github = "revett/miniflux-sync"
 fetch.github = "revett/miniflux-sync"
+
+[subtotxt]
+src.github = "NebularNerd/subtotxt"
+fetch.github = "NebularNerd/subtotxt"
