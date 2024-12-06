@@ -18,6 +18,7 @@ args.module (
       "mpvc"
       "peek"
       "pipeline"
+      "shotcut"
       "stremio"
       "vlc"
       # keep-sorted end
