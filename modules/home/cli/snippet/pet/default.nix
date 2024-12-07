@@ -39,7 +39,7 @@ args.module (
           tag = [ "network" ];
         }
         {
-          command = "aria2c --input-file <(xclip -o -sel clip) -j 1";
+          command = "aria2c --input-file <(xclip -o -sel clip)";
           description = "download from clipboard";
           tag = [ "download" ];
         }
