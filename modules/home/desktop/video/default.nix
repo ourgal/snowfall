@@ -14,7 +14,6 @@ args.module (
       "aegisub"
       "gifski"
       "gpu-screen-recorder"
-      "kdenlive"
       "memento"
       "mpvc"
       "peek"
