@@ -41,6 +41,6 @@ pog.pog {
         exit
       fi
 
-      find . -type d -execdir bash -c 'cd "$1" && test -e urls.txt && aria2c --input-file urls.txt -j 1 && rm urls.txt' shell {} \;
+      find . -type d -execdir bash -c 'cd "$1" && test -e urls.txt && aria2c --input-file urls.txt && rm urls.txt' shell {} \;
     '';
 }
