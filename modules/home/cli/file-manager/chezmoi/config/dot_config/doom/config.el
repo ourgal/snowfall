@@ -86,10 +86,6 @@
 
 (setq select-enable-clipboard nil)
 
-;; auto save
-(auto-save-mode)
-(auto-save-visited-mode)
-
 (add-hook 'after-save-hook 'git-time-metric-record)
 
 (add-hook 'completion-at-point-functions #'cape-dabbrev)
