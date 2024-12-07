@@ -8,18 +8,15 @@ args.module (
     {
       path = ./.;
       myPkgs = "espanso";
-      confs = [
-        { "espanso/config" = ./default.yml; }
-        {
-          "espanso/match" = [
-            ./base.yml
-            ./github.yml
-            ./git.yml
-            ./translate.yml
-            ./markdown.yml
-          ];
-        }
-      ];
+      confs = {
+        "espanso/config/default.yml" = { };
+        "espanso/match" = [
+          ./github.yml
+          ./git.yml
+          ./translate.yml
+          ./markdown.yml
+        ];
+      };
       value = {
         systemd.user.services.espanso = {
           Unit = {

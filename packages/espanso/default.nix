@@ -1,7 +1,8 @@
 {
   writeShellApplication,
   lib,
-  pkgs,
+  espanso,
+  espanso-wayland,
   ...
 }:
 writeShellApplication rec {
@@ -17,9 +18,9 @@ writeShellApplication rec {
   text = # bash
     ''
       if test -z "''${WAYLAND_DISPLAY:-""}" ; then
-        ${pkgs.espanso}/bin/espanso "$@"
+        ${espanso}/bin/espanso "$@"
       else
-        ${pkgs.espanso-wayland}/bin/espanso "$@"
+        ${espanso-wayland}/bin/espanso "$@"
       fi
     '';
 }
