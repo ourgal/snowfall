@@ -1,0 +1,6 @@
+% rclone
+
+# rclone upload dir
+cd "<dir>" && rclone mkdir "<remote>" && rclone copy . "<remote>" -P && rclone size "<remote>" && du -s && read -p "remove $dir ? [y/n] " -n 1 -r && echo && if test $REPLY = 'y'; then cd .. && rm -rf "<dir>"; fi
+
+$ dir: ls -D | fzf --print0
