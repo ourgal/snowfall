@@ -1039,3 +1039,7 @@ fetch.github = "revett/miniflux-sync"
 [subtotxt]
 src.github = "NebularNerd/subtotxt"
 fetch.github = "NebularNerd/subtotxt"
+
+["aria2.conf"]
+src.git = "https://github.com/P3TERX/aria2.conf"
+fetch.github = "P3TERX/aria2.conf"
