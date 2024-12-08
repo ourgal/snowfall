@@ -26,6 +26,7 @@ args.module (
       "impala"
       "ipinfo"
       "lychee"
+      "mitmproxy"
       "nali"
       "netop"
       "oha"
