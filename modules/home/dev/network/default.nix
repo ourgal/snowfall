@@ -13,7 +13,6 @@ args.module (
       "vl"
       # keep-sorted end
     ];
-    haskellPkgs = "brok";
     nixPkgs = [
       # keep-sorted start
       "cidr-merger"
