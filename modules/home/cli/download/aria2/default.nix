@@ -12,7 +12,6 @@ args.module (
         ;
       sessionFile = "${config.xdg.dataHome}/aria2/session";
       configFile = "${config.xdg.configHome}/aria2/aria2.conf";
-      rpcPass = "P3TERX";
     in
     {
       path = ./.;
@@ -92,7 +91,6 @@ args.module (
           peer-agent = "Deluge 1.3.15";
           peer-id-prefix = "-DE13F0-";
           rpc-listen-port = 6800;
-          rpc-secret = rpcPass;
           rpc-max-request-size = "10M";
           console-log-level = "warn";
           summary-interval = 0;
