@@ -55,6 +55,18 @@
       sha256 = "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=";
     };
   };
+  "aria2.conf" = {
+    pname = "aria2.conf";
+    version = "02b9d95ea155e66f7e3c4340cd22717f8bc7401c";
+    src = fetchFromGitHub {
+      owner = "P3TERX";
+      repo = "aria2.conf";
+      rev = "02b9d95ea155e66f7e3c4340cd22717f8bc7401c";
+      fetchSubmodules = false;
+      sha256 = "sha256-O7g/oGgANgoChKACAKzLIOOUbacWpHCEsH533eJwePo=";
+    };
+    date = "2024-02-28";
+  };
   autocrop = {
     pname = "autocrop";
     version = "2afe00ed87fb10a6d368d0d4140307dc99b1a545";

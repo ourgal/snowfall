@@ -12,6 +12,17 @@ args.module (
         ;
       sessionFile = "${config.xdg.dataHome}/aria2/session";
       configFile = "${config.xdg.configHome}/aria2/aria2.conf";
+      aria2-session = pkgs.writeShellScript "aria2-session" ''
+        sessionDir="$HOME/.local/share/aria2"
+        sessionFile="$HOME/.local/share/aria2/session"
+        if ! test -d "$sessionDir"; then
+          mkdir -p "$sessionDir"
+        fi
+        if ! test -e "$sessionFile"; then
+          touch "$sessionFile"
+        fi
+      '';
+      source = pkgs._sources."aria2.conf".src;
     in
     {
       path = ./.;
@@ -54,11 +65,9 @@ args.module (
         // {
           # dir = config.xdg.userDirs.download;
           disk-cache = "64M";
-          file-allocation = "falloc";
+          file-allocation = "none";
           no-file-allocation-limit = "64M";
           max-resume-failure-tries = 0;
-          # input-file = "${config.home.homeDirectory}/.aria2/aria2.session";
-          # save-session = "${config.home.homeDirectory}/.aria2/aria2.session";
           save-session-interval = 1;
           auto-save-interval = 20;
           max-file-not-found = 10;
@@ -94,20 +103,21 @@ args.module (
           rpc-max-request-size = "10M";
           console-log-level = "warn";
           summary-interval = 0;
-          # show-console-readout = false;
+          # on-download-stop = "${config.xdg.configHome}/aria2/delete.sh";
+          # on-download-complete = "${config.xdg.configHome}/aria2/clean.sh";
         };
-      confs = [
-        {
-          aria2 = [
-            ./delete.sh
-            ./clean.sh
-            ./core
-            ./dht6.dat
-            ./script.conf
-          ];
-        }
-      ];
       value = {
+        xdg.configFile = {
+          "aria2/delete.sh".source = source + "/delete.sh";
+          "aria2/clean.sh".source = source + "/clean.sh";
+          "aria2/tracker.sh".source = source + "/tracker.sh";
+          "aria2/move.sh".source = source + "/move.sh";
+          "aria2/upload.sh".source = source + "/upload.sh";
+          "aria2/core".source = source + "/core";
+          "aria2/dht.dat".source = source + "/dht.dat";
+          "aria2/dht6.dat".source = source + "/dht6.dat";
+          "aria2/script.conf".source = source + "/script.conf";
+        };
         ${namespace}.dev.python.global.pkgs = (p: with p; [ aria2p ] ++ aria2p.optional-dependencies.tui);
         systemd.user.services.aria2 = {
           Unit = {
@@ -116,8 +126,8 @@ args.module (
             After = "network-online.target";
           };
           Service = {
-            ExecStartPre = "${pkgs.${namespace}.aria2-session}/bin/aria2-session";
-            ExecStart = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete = '${config.xdg.configHome}/aria2/clean.sh'";
+            ExecStartPre = aria2-session;
+            ExecStart = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete='${config.xdg.configHome}/aria2/clean.sh'";
             ExecReload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
             Restart = "on-abort";
           };
