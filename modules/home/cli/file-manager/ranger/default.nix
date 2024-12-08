@@ -12,6 +12,20 @@ args.module (
           mappings = {
             e = "edit";
           };
+          rifle = [
+            {
+              condition = "else";
+              command = ''xdg-open "$1"'';
+            }
+            {
+              condition = "label editor";
+              command = ''"$EDITOR" -- "$@"'';
+            }
+            {
+              condition = "label pager";
+              command = ''"$PAGER" -- "$@"'';
+            }
+          ];
           plugins = [
             {
               name = "zoxide";
@@ -28,11 +42,11 @@ args.module (
         };
         fish.functions.ra = {
           body = ''
-            set dir (mktemp -t ranger_cd.XXX)
-            ranger --choosedir=$dir
-            cd (cat $dir) $argv
-            rm $dir
-            commandline -f repaint
+            set dir $HOME/.config/ranger/.rangerdir
+            ranger --choosedir=$dir $argv
+            cd (cat $dir)
+            echo -n > $dir
+            # commandline -f repaint
           '';
           description = "ranger cd on exit";
         };
