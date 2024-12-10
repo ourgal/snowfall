@@ -92,8 +92,8 @@ args.module (
               };
             keys = {
               normal = {
-                "L" = ":buffer-next";
-                "H" = ":buffer-previous";
+                "]".b = ":buffer-next";
+                "[".b = ":buffer-previous";
                 "C-h" = "jump_view_left";
                 "C-l" = "jump_view_right";
                 "C-j" = "jump_view_down";
@@ -105,10 +105,6 @@ args.module (
                     ":sh ${helix-zellij} lazygit"
                   else
                     "";
-                "X" = [
-                  ":w"
-                  ":bclose"
-                ];
                 r = "replace_with_yanked";
                 R = "rename_symbol";
                 "*" =
