@@ -13,6 +13,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "ack"
       "ripgrep"
       "ripgrep-all"
       "sift"
