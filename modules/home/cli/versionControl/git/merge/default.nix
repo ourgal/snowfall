@@ -15,11 +15,15 @@ args.module (
       path = ./.;
       nixPkgs = "mergiraf";
       progs.git.extraConfig = {
-        merge.mergiraf = {
-          name = "mergiraf";
-          driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P";
+        merge = {
+          tool = "vimdiff";
+          conflictstyle = "diff3";
+          mergiraf = {
+            name = "mergiraf";
+            driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P";
+          };
+          core.attributesfile = "~/.gitattributes";
         };
-        core.attributesfile = "~/.gitattributes";
       };
       value = {
         home.file.".gitattributes".source = gitattributes;
