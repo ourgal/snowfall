@@ -39,7 +39,9 @@ set undofile
 # Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowritebackup
+
 set noswapfile
+# set directory=$HOME/.local/share/vim/swap//
 
 # Set extra options when running in GUI mode
 if has("gui_running")
