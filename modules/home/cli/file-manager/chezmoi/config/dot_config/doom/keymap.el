@@ -6,11 +6,6 @@
 (map! "C-j" #'evil-window-down)
 (map! "C-k" #'evil-window-up)
 
-;; buffer
-(map! :n "L" #'next-buffer
-      :n "H" #'previous-buffer
-      :n "X" #'evil-delete-buffer)
-
 ;; window
 (map! :n "C-w o" #'delete-other-windows
       :n "C-w z" #'doom/window-enlargen)
