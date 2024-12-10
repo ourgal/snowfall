@@ -10,9 +10,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap ZZ <cmd>xa<cr>
 nnoremap ZQ <cmd>qa!<cr>
-nnoremap L :bn<CR>
-nnoremap H :bp<CR>
-nnoremap X :bp\|bd #<CR>
 noremap Q @@
 xnoremap / <Esc>/\%V
 nnoremap <c-n> <tab>

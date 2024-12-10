@@ -29,12 +29,6 @@ nnoremap ZZ <cmd>xa<cr>
 nnoremap ZQ <cmd>qa!<cr>
 #}}}
 
-# switch and delete buffers {{{
-nnoremap L :bn<CR>
-nnoremap H :bp<CR>
-nnoremap X :bp\|bd #<CR>
-#}}}
-
 # no copying when motions {{{
 # nnoremap d "_d
 # nnoremap D "_D

@@ -17,7 +17,6 @@
 ; search in visual mode
 (map :x "/" "<Esc>/\\%V")
 
-(map :n :X "<cmd>bp|bd #<cr>")
 ((. (require :config.update_packages) :config))
 
 (map :n "<leader>,u" :<cmd>UpdatePackages<cr> {:desc "Update packages"})

@@ -10,11 +10,6 @@ M.set_terminal_keymaps = function()
 end
 
 M.other = function()
-  if lvim.user_plugins.edit.bufferline.bufferline.cycle ~= true then
-    vim.keymap.set("n", "L", "<cmd>bn<cr>")
-    vim.keymap.set("n", "H", "<cmd>bp<cr>")
-  end
-
   require("configs.update_packages").config()
 
   lvim.builtin.which_key.mappings[","] = {
@@ -33,8 +28,6 @@ M.other = function()
   vim.cmd("source " .. config_path .. "/lua/configs/update-nix-fetchgit.vim")
   lvim.builtin.which_key.mappings[","]["s"]["p"] = { "<cmd>Share<cr>", "Pastebin" }
   lvim.builtin.which_key.vmappings[","]["s"]["p"] = { ":'<,'>Share<cr>", "Pastebin" }
-
-  lvim.keys.normal_mode["X"] = "<cmd>bp|bd #<cr>"
 
   vim.keymap.set("n", "<M-d>", '"_d')
   vim.keymap.set("n", "<M-D>", '"_D')
