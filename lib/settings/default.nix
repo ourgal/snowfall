@@ -16,6 +16,7 @@ let
     "surface"
   ];
   servers = {
+    anki-sync-server = [ "brix" ];
     syncthing = [ "brix" ];
   };
 in
