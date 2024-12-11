@@ -37,14 +37,8 @@ let
           cd2exe = false;
         };
         "mosdns-cn/hosts".text = "domain:zxc.cn 192.168.123.206";
-        "mosdns-cn/geoip.dat".source = builtins.fetchurl {
-          url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202408052210/geoip.dat";
-          sha256 = "0w9fkf4c8q7h9z0sz8yqzkp58s35h1p7v7qari1z3fhcamjw3rdh";
-        };
-        "mosdns-cn/geosite.dat".source = builtins.fetchurl {
-          url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202408052210/geosite.dat";
-          sha256 = "0mzqm0zwsfrycpmwnww85r543v99k6q1jzc483gdnj86jqrvzn4v";
-        };
+        "mosdns-cn/geoip.dat".source = pkgs._sources.v2ray-rules-dat-geoip.src;
+        "mosdns-cn/geosite.dat".source = pkgs._sources.v2ray-rules-dat-geosite.src;
       };
     };
     systemd.services.mosdns-cn = {

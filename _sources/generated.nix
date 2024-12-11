@@ -2767,6 +2767,22 @@
     };
     date = "2024-11-03";
   };
+  v2ray-rules-dat-geoip = {
+    pname = "v2ray-rules-dat-geoip";
+    version = "202412102212";
+    src = fetchurl {
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202412102212/geoip.dat";
+      sha256 = "sha256-86HjDT2D/d+fvTbIYxUUHsEQ9iQ169fx4BIWJ+6oL2w=";
+    };
+  };
+  v2ray-rules-dat-geosite = {
+    pname = "v2ray-rules-dat-geosite";
+    version = "202412102212";
+    src = fetchurl {
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202412102212/geosite.dat";
+      sha256 = "sha256-OyO7/nLFHyJfXtqcYBEQ9H5xO/pEsPdZEz5fj/fYiiA=";
+    };
+  };
   vim-auto-save = {
     pname = "vim-auto-save";
     version = "6697e84b25f6a56c36d0c5ae9004b8b9247662ea";
