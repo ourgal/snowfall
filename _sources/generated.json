@@ -1432,6 +1432,21 @@
         },
         "version": "v1.4.3"
     },
+    "fortune-python": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "fortune-python",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-F0LrNesABYlUbxsWvM1XOhENhIyO3rZhbSYEymICkZc=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/f/fortune-python/fortune-python-1.1.1.tar.gz"
+        },
+        "version": "1.1.1"
+    },
     "friendly-snippets": {
         "cargoLocks": null,
         "date": "2024-12-01",
@@ -4801,6 +4816,27 @@
             "type": "github"
         },
         "version": "v0.1.22"
+    },
+    "tui-network": {
+        "cargoLocks": null,
+        "date": "2024-12-10",
+        "extract": null,
+        "name": "tui-network",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Zatfer17",
+            "repo": "tui-network",
+            "rev": "e25a1585a03e9d604a995c4431dcaf7888893fb7",
+            "sha256": "sha256-FeI+FD+Q9Vx/xaMEEimd86x+TJVRt7YzUjUEf9DDjx8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e25a1585a03e9d604a995c4431dcaf7888893fb7"
     },
     "tuime": {
         "cargoLocks": {
