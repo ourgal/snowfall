@@ -809,6 +809,14 @@
       sha256 = "sha256-p9gTFUYHdyOY2EFT/ZmBHT7dRNm64s/3ExUXG7bfQ70=";
     };
   };
+  fortune-python = {
+    pname = "fortune-python";
+    version = "1.1.1";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/f/fortune-python/fortune-python-1.1.1.tar.gz";
+      sha256 = "sha256-F0LrNesABYlUbxsWvM1XOhENhIyO3rZhbSYEymICkZc=";
+    };
+  };
   friendly-snippets = {
     pname = "friendly-snippets";
     version = "efff286dd74c22f731cdec26a70b46e5b203c619";
@@ -2706,6 +2714,18 @@
       fetchSubmodules = false;
       sha256 = "sha256-VvPdWRP+lrhho+Bk5rT9pktEvKe01512WoDfAu5d868=";
     };
+  };
+  tui-network = {
+    pname = "tui-network";
+    version = "e25a1585a03e9d604a995c4431dcaf7888893fb7";
+    src = fetchFromGitHub {
+      owner = "Zatfer17";
+      repo = "tui-network";
+      rev = "e25a1585a03e9d604a995c4431dcaf7888893fb7";
+      fetchSubmodules = false;
+      sha256 = "sha256-FeI+FD+Q9Vx/xaMEEimd86x+TJVRt7YzUjUEf9DDjx8=";
+    };
+    date = "2024-12-10";
   };
   tuime = {
     pname = "tuime";

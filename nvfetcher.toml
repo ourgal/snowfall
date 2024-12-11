@@ -1043,3 +1043,11 @@ fetch.github = "NebularNerd/subtotxt"
 ["aria2.conf"]
 src.git = "https://github.com/P3TERX/aria2.conf"
 fetch.github = "P3TERX/aria2.conf"
+
+[tui-network]
+src.git = "https://github.com/Zatfer17/tui-network"
+fetch.github = "Zatfer17/tui-network"
+
+[fortune-python]
+src.pypi = "fortune-python"
+fetch.pypi = "fortune-python"
