@@ -13,6 +13,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "acpi"
+      "atop"
       "compsize"
       "cpu-x"
       "cyme"
