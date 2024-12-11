@@ -37,6 +37,7 @@ in
     kavita = enabled;
     vaultwarden = enabled;
     searx = enabled;
+    anki-sync-server = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
