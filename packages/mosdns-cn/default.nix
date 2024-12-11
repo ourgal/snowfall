@@ -9,13 +9,13 @@
   _sources,
 }:
 let
-  hash = "jv5tJvx8Eyfw2KuQnasfP6UzKkBgQNRnKramekrPTQA=";
+  hash = "M4syjEBET8ZmGx4dPanyE82w72I8GLxLsDzNLKKNeGo=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.mosdns-cn) pname version;
 
   src = fetchzip {
-    url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v${version}/mosdns-cn-linux-arm64.zip";
+    url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v${version}/mosdns-cn-linux-amd64.zip";
     sha256 = hash;
     stripRoot = false;
   };

@@ -1051,3 +1051,11 @@ fetch.github = "Zatfer17/tui-network"
 [fortune-python]
 src.pypi = "fortune-python"
 fetch.pypi = "fortune-python"
+
+[v2ray-rules-dat-geoip]
+src.github = "Loyalsoldier/v2ray-rules-dat"
+fetch.url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$ver/geoip.dat"
+
+[v2ray-rules-dat-geosite]
+src.github = "Loyalsoldier/v2ray-rules-dat"
+fetch.url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$ver/geosite.dat"
