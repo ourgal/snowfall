@@ -4,7 +4,7 @@ args.module (
   // (
     let
       inherit (args) lib namespace;
-      inherit (lib.${namespace}) mkSshConfig;
+      inherit (lib.${namespace}) mkSshConfig ip;
     in
     {
       path = ./.;
@@ -31,7 +31,7 @@ args.module (
       progs.ssh.matchBlocks = {
         soft = {
           host = "soft";
-          hostname = "brix.local";
+          hostname = ip.brix;
           port = 23231;
         };
       } // mkSshConfig;

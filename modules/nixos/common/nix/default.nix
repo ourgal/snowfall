@@ -11,12 +11,13 @@ let
     enableOpt
     disabled
     enabled
+    ip
     ;
   value = {
     nix =
       let
         mirrors = [
-          "http://home.local:50000"
+          "http://${ip.home}:50000"
           "https://mirrors.cernet.edu.cn/nix-channels/store"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org"

@@ -3,7 +3,8 @@ args.module (
   args
   // (
     let
-      inherit (args) host;
+      inherit (args) host lib namespace;
+      inherit (lib.${namespace}) ip;
     in
     {
       path = ./.;
@@ -41,7 +42,7 @@ args.module (
                   {   name = libpipewire-module-roc-sink
                       args = {
                           fec.code = rs8m
-                          remote.ip = home.local
+                          remote.ip = ${ip.home}
                           remote.source.port = 10001
                           remote.repair.port = 10002
                           sink.name = "Roc Sink"

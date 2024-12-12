@@ -3,9 +3,15 @@ args.module (
   args
   // (
     let
-      inherit (args) host lib pkgs;
+      inherit (args)
+        host
+        lib
+        pkgs
+        namespace
+        ;
+      inherit (lib.${namespace}) ip;
       isClient = host != "home";
-      serverHost = "home.local";
+      serverHost = ip.home;
       isServer = host == "home";
     in
     {

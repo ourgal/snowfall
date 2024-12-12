@@ -10,6 +10,7 @@ let
     disabled
     enabledList
     sources
+    ip
     ;
   user = config.${namespace}.user.name;
 in
@@ -46,7 +47,7 @@ in
     ];
     docker =
       let
-        nfs = "brix.local";
+        nfs = ip.brix;
       in
       enabled
       // {
