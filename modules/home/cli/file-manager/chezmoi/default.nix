@@ -19,6 +19,8 @@ args.module (
             lib.makeBinPath [
               pkgs.gnumake
               pkgs.git
+              pkgs.fnlfmt
+              pkgs.fennel
             ]
           }
           ${pkgs.chezmoi}/bin/chezmoi apply --force
