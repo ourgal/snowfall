@@ -21,6 +21,7 @@ in
     user.host = "brix";
     boot.systemd = enabled;
     common = enabled;
+    nh = enabled;
     sops-nix = enabled;
     nfs = enabled;
     caddy = enabled // {
