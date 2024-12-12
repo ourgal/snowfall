@@ -13,6 +13,15 @@ let
     };
 
     services.resolved = enabled;
+
+    # services.avahi = enabled // {
+    #   nssmdns4 = true;
+    #   publish = enabled // {
+    #     addresses = true;
+    #     workstation = true;
+    #   };
+    # };
+
     systemd.network = disabled;
   };
   path = ./.;
