@@ -6,6 +6,7 @@ let
     enabled
     disabled
     domains
+    ip
     ;
   value = {
     networking = {
@@ -16,7 +17,7 @@ let
       # useNetworkd = true;
       enableIPv6 = true;
       hosts = {
-        "192.168.123.206" = builtins.attrValues domains;
+        "${ip.brix}" = builtins.attrValues domains;
       };
     };
 

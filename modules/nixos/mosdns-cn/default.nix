@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled ip;
   value = {
     environment = {
       systemPackages = with pkgs.${namespace}; [ mosdns-cn ];
@@ -36,7 +36,7 @@ let
           working_dir = "/etc/mosdns-cn";
           cd2exe = false;
         };
-        "mosdns-cn/hosts".text = "domain:zxc.cn 192.168.123.206";
+        "mosdns-cn/hosts".text = "domain:zxc.cn ${ip.brix}";
         "mosdns-cn/geoip.dat".source = pkgs._sources.v2ray-rules-dat-geoip.src;
         "mosdns-cn/geosite.dat".source = pkgs._sources.v2ray-rules-dat-geosite.src;
       };

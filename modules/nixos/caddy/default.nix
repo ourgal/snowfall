@@ -13,10 +13,11 @@ let
     cfgNixos
     switch
     mkDockerProxyDuckdns
+    ip
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
-  host = "brix.local";
+  host = ip.brix;
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
