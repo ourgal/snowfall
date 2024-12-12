@@ -1,8 +1,8 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
-  PORT = "3000";
+  inherit (lib.${namespace}) nixosModule enabled domains;
+  port = 3000;
   value = {
     systemd.services.pairdrop = {
       description = "Pairdrop service";
@@ -13,13 +13,13 @@ let
         ExecStart = "${pkgs.pairdrop}/bin/pairdrop";
       };
       environment = {
-        inherit PORT;
+        PORT = toString port;
       };
     };
     services.caddy = enabled // {
       virtualHosts = {
-        "http://pairdrop.zxc.cn".extraConfig = ''
-          reverse_proxy http://localhost:${PORT}
+        "http://${domains.pairdrop}".extraConfig = ''
+          reverse_proxy http://localhost:${toString port}
         '';
       };
     };

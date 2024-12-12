@@ -1,10 +1,11 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   user = config.${namespace}.user.name;
   port = 27701;
   value = {
+    sops.secrets."anki-sync-server/password".owner = user;
     services = {
       anki-sync-server = enabled // {
         inherit port;
@@ -12,13 +13,13 @@ let
         users = [
           {
             username = user;
-            passwordFile = "/home/${user}/.config/anki-sync-server/password";
+            passwordFile = "/run/secrets/anki-sync-server/password";
           }
         ];
       };
       caddy = enabled // {
         virtualHosts = {
-          "http://anki.zxc.cn".extraConfig = ''
+          "http://${domains.anki}".extraConfig = ''
             reverse_proxy http://localhost:${toString port}
           '';
         };

@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8000;
   user = "rustypaste";
   dataDir = "/var/lib/rustypaste";
@@ -98,7 +98,7 @@ let
     };
     services.caddy = enabled // {
       virtualHosts = {
-        "http://rustypaste.zxc.cn".extraConfig = ''
+        "http://${domains.rustypaste}".extraConfig = ''
           reverse_proxy http://localhost:${toString port}
         '';
       };

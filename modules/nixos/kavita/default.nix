@@ -6,7 +6,7 @@ let
     pkgs
     config
     ;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   Port = 5000;
   user = config.${namespace}.user.name;
   group = "kavita";
@@ -57,7 +57,7 @@ let
 
     services.caddy = enabled // {
       virtualHosts = {
-        "http://kavita.zxc.cn".extraConfig = ''
+        "http://${domains.kavita}".extraConfig = ''
           reverse_proxy http://localhost:${toString Port}
         '';
       };

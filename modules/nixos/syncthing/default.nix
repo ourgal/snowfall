@@ -121,11 +121,13 @@ let
     services.caddy =
       let
         inherit (config.${namespace}.user.duckdns) token domain;
+        inherit (lib.${namespace}) domains;
+        inherit (lib.${namespace}.settings) servers;
       in
-      lib.mkIf (host == "brix") {
+      lib.mkIf (builtins.elem host servers.syncthing) {
         enable = true;
         virtualHosts = {
-          "http://syncthing.zxc.cn".extraConfig = ''
+          "http://${domains.syncthing}".extraConfig = ''
             reverse_proxy http://localhost:8384
           '';
           "syncthing.${domain}.duckdns.org".extraConfig = ''

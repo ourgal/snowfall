@@ -1,19 +1,21 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
+  port = 8888;
   value = {
     services = {
       atuin = enabled // {
         openFirewall = true;
         openRegistration = true;
         host = "0.0.0.0";
+        inherit port;
       };
       postgresql = enabled;
       caddy = enabled // {
         virtualHosts = {
-          "http://atuin.zxc.cn".extraConfig = ''
-            reverse_proxy http://localhost:8888
+          "http://${domains.atuin}".extraConfig = ''
+            reverse_proxy http://localhost:${toString port}
           '';
         };
       };
