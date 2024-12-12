@@ -14,6 +14,7 @@ let
     "syncthing"
     "atuin"
     "harmonia"
+    "soft-serve"
   ];
   domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
 in
