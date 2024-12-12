@@ -6,7 +6,7 @@ let
     pkgs
     config
     ;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   user = config.${namespace}.user.name;
   port = 5001;
   User = "zxc";
@@ -27,7 +27,7 @@ let
     };
     services.caddy = enabled // {
       virtualHosts = {
-        "http://dufs.zxc.cn".extraConfig = ''
+        "http://${domains.dufs}".extraConfig = ''
           reverse_proxy http://localhost:${toString port}
         '';
       };

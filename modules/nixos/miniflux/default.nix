@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   port = 5002;
   user = "miniflux";
   value = {
@@ -23,7 +23,7 @@ let
     };
     services.caddy = enabled // {
       virtualHosts = {
-        "http://miniflux.zxc.cn".extraConfig = ''
+        "http://${domains.miniflux}".extraConfig = ''
           reverse_proxy http://localhost:${toString port}
         '';
       };

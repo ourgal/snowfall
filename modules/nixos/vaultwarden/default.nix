@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8222;
   value = {
     sops.secrets."vaultwarden/adminToken".owner = "vaultwarden";
@@ -19,7 +19,7 @@ let
       enabled
       // {
         virtualHosts = {
-          "http://vaultwarden.zxc.cn".extraConfig = ''
+          "http://${domains.vaultwarden}".extraConfig = ''
             reverse_proxy http://localhost:${toString port}
           '';
           "vaultwarden.${domain}.duckdns.org".extraConfig = ''

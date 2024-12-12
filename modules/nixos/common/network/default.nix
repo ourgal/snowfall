@@ -1,7 +1,12 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled disabled;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    disabled
+    domains
+    ;
   value = {
     networking = {
       networkmanager = enabled // {
@@ -10,6 +15,9 @@ let
       # useDHCP = false;
       # useNetworkd = true;
       enableIPv6 = true;
+      hosts = {
+        "192.168.123.206" = builtins.attrValues domains;
+      };
     };
 
     services.resolved = enabled;
