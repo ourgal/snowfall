@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   inherit (config.${namespace}.user) host;
   value = {
     services.soft-serve = enabled // {
@@ -52,6 +52,13 @@ let
         23233
         9418
       ];
+    };
+    services.caddy = enabled // {
+      virtualHosts = {
+        "http://${domains.soft-serve}".extraConfig = ''
+          reverse_proxy http://localhost:23232
+        '';
+      };
     };
   };
   path = ./.;
