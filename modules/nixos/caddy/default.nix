@@ -14,6 +14,7 @@ let
     switch
     mkDockerProxyDuckdns
     ip
+    domains
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
@@ -51,7 +52,12 @@ let
   package = if cfg.xcaddy.enable then xcaddy else pkgs.caddy;
   value = {
     services.caddy = enabled // {
-      inherit virtualHosts package;
+      virtualHosts = virtualHosts // {
+        "http://${domains.harmonia}".extraConfig = ''
+          reverse_proxy http://home.local:50000
+        '';
+      };
+      inherit package;
     };
     networking.firewall.allowedTCPPorts = [
       80
