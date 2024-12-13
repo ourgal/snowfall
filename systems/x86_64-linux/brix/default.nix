@@ -41,6 +41,7 @@ in
     searx = enabled;
     anki-sync-server = enabled;
     mosdns-cn = enabled;
+    mosdns = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
