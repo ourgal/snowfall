@@ -2,8 +2,8 @@ args:
 let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled ip;
-  port = "25353";
-  redisPort = "6379";
+  port = 25353;
+  redisPort = 6379;
   value = {
     environment = {
       systemPackages = with pkgs.${namespace}; [ mosdns-cn ];
