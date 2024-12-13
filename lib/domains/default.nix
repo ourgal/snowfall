@@ -19,5 +19,5 @@ let
   domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
 in
 {
-  inherit domains;
+  inherit domains domain;
 }
