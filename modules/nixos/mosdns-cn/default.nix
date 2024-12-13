@@ -2,16 +2,18 @@ args:
 let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled ip;
+  port = "25353";
+  redisPort = "6379";
   value = {
     environment = {
       systemPackages = with pkgs.${namespace}; [ mosdns-cn ];
       etc = {
         "mosdns-cn/config.yaml".text = builtins.toJSON {
-          server_addr = ":25353";
+          server_addr = ":${toString port}";
           cache_size = 0;
           lazy_cache_ttl = 86400;
           lazy_cache_reply_ttl = 30;
-          redis_cache = "redis://localhost:6379";
+          redis_cache = "redis://localhost:${toString redisPort}";
           min_ttl = 0;
           max_ttl = 0;
           hosts = [ "hosts" ];
@@ -52,11 +54,11 @@ let
       };
     };
     services.redis.servers.mosdns-cn = enabled // {
-      port = 6379;
+      port = redisPort;
     };
     networking.firewall = {
-      allowedTCPPorts = [ 25353 ];
-      allowedUDPPorts = [ 25353 ];
+      allowedTCPPorts = [ port ];
+      allowedUDPPorts = [ port ];
     };
   };
   path = ./.;
