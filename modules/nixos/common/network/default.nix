@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib config;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -8,10 +8,13 @@ let
     domains
     ip
     ;
+  inherit (config.${namespace}.user) host;
+  inherit (lib.${namespace}.settings) laptops;
   value = {
     networking = {
       networkmanager = enabled // {
         wifi.backend = "iwd";
+        dns = if (builtins.elem host laptops) then "dnsmasq" else "none";
       };
       # useDHCP = false;
       # useNetworkd = true;
@@ -19,6 +22,7 @@ let
       hosts = {
         "${ip.brix}" = builtins.attrValues domains;
       };
+      nameservers = [ ip.brix ];
     };
 
     services.avahi = enabled // {
