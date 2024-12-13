@@ -2767,6 +2767,18 @@
     };
     date = "2024-11-03";
   };
+  v2dat = {
+    pname = "v2dat";
+    version = "47b8ee51fb528e11e1a83453b7e767a18d20d1f7";
+    src = fetchFromGitHub {
+      owner = "urlesistiana";
+      repo = "v2dat";
+      rev = "47b8ee51fb528e11e1a83453b7e767a18d20d1f7";
+      fetchSubmodules = false;
+      sha256 = "sha256-dJld4hYdfnpphIEJvYsj5VvEF4snLvXZ059HJ2BXwok=";
+    };
+    date = "2022-12-15";
+  };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
     version = "202412102212";

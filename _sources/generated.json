@@ -4906,6 +4906,27 @@
         },
         "version": "353a0e7620294d840bdffcf0e7c5e287625a9709"
     },
+    "v2dat": {
+        "cargoLocks": null,
+        "date": "2022-12-15",
+        "extract": null,
+        "name": "v2dat",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "urlesistiana",
+            "repo": "v2dat",
+            "rev": "47b8ee51fb528e11e1a83453b7e767a18d20d1f7",
+            "sha256": "sha256-dJld4hYdfnpphIEJvYsj5VvEF4snLvXZ059HJ2BXwok=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "47b8ee51fb528e11e1a83453b7e767a18d20d1f7"
+    },
     "v2ray-rules-dat-geoip": {
         "cargoLocks": null,
         "date": null,

@@ -1059,3 +1059,7 @@ fetch.url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$
 [v2ray-rules-dat-geosite]
 src.github = "Loyalsoldier/v2ray-rules-dat"
 fetch.url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$ver/geosite.dat"
+
+[v2dat]
+src.git = "https://github.com/urlesistiana/v2dat"
+fetch.github = "urlesistiana/v2dat"
