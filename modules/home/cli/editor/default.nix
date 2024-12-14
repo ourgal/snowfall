@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "v";
+    myPkgs = [
+      # keep-sorted start
+      "ki-editor"
+      "v"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "micro"
