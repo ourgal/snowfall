@@ -58,6 +58,41 @@ let
         Type = "simple";
         ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config ${config}";
         Restart = "always";
+        DynamicUser = true;
+        StateDirectory = "mosdns-cn";
+        WorkingDirectory = "/var/lib/mosdns-cn";
+        RuntimeDirectory = "mosdns-cn";
+        RuntimeDirectoryMode = "0750";
+        ProcSubset = "pid";
+        ProtectProc = "invisible";
+        UMask = "0027";
+        CapabilityBoundingSet = [ ];
+        ProtectHome = true;
+        PrivateDevices = true;
+        PrivateUsers = true;
+        ProtectHostname = true;
+        ProtectClock = true;
+        ProtectKernelTunables = true;
+        ProtectKernelModules = true;
+        ProtectKernelLogs = true;
+        ProtectControlGroups = true;
+        RestrictAddressFamilies = [
+          "AF_UNIX"
+          "AF_INET"
+          "AF_INET6"
+        ];
+        RestrictNamespaces = true;
+        LockPersonality = true;
+        MemoryDenyWriteExecute = true;
+        RestrictRealtime = true;
+        RemoveIPC = true;
+        PrivateMounts = true;
+        SystemCallArchitectures = "native";
+        SystemCallFilter = [
+          "@system-service"
+          "~@cpu-emulation @debug @keyring @module @mount @obsolete @privileged @raw-io @reboot @setuid @swap"
+        ];
+
       };
     };
     services.redis.servers.mosdns-cn = enabled // {
