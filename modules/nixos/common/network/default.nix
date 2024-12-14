@@ -9,12 +9,11 @@ let
     ip
     ;
   inherit (config.${namespace}.user) host;
-  inherit (lib.${namespace}.settings) laptops;
+  inherit (lib.${namespace}.settings) desktops;
   value = {
     networking = {
       networkmanager = enabled // {
         wifi.backend = "iwd";
-        dns = if (builtins.elem host laptops) then "dnsmasq" else "none";
       };
       # useDHCP = false;
       # useNetworkd = true;
@@ -22,10 +21,10 @@ let
       hosts = {
         "${ip.brix}" = builtins.attrValues domains;
       };
-      nameservers = [ ip.brix ];
     };
 
-    services.avahi = enabled // {
+    services.resolved = if (builtins.elem host desktops) then enabled else disabled;
+    services.avahi = (if (!builtins.elem host desktops) then enabled else disabled) // {
       nssmdns4 = true;
       publish = enabled // {
         addresses = true;
