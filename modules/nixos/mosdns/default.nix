@@ -41,7 +41,7 @@ let
             "/etc/mosdns/dns.yaml"
           ];
           "log" = {
-            "file" = "/var/log/mosdns.log";
+            "file" = "/var/lib/mosdns/app.log";
             "level" = "debug";
           };
           "plugins" = [
@@ -788,12 +788,48 @@ let
     };
     systemd.services.mosdns = {
       description = "mosdns";
-      after = [ "network.target" ];
+      requires = [ "network-online.target" ];
+      after = [ "network-online.target" ];
       wantedBy = [ "multi-user.target" ];
-      serviceConfig = {
+      serviceConfig = rec {
         Type = "simple";
         ExecStart = "${pkgs.mosdns}/bin/mosdns start -c /etc/mosdns/config.yaml";
         Restart = "always";
+        DynamicUser = true;
+        StateDirectory = "mosdns";
+        WorkingDirectory = "/var/lib/mosdns";
+        RuntimeDirectory = "mosdns";
+        RuntimeDirectoryMode = "0750";
+        ProcSubset = "pid";
+        ProtectProc = "invisible";
+        UMask = "0027";
+        CapabilityBoundingSet = [ "CAP_NET_BIND_SERVICE" ];
+        ProtectHome = true;
+        PrivateDevices = true;
+        # PrivateUsers = true;
+        ProtectHostname = true;
+        ProtectClock = true;
+        ProtectKernelTunables = true;
+        ProtectKernelModules = true;
+        ProtectKernelLogs = true;
+        ProtectControlGroups = true;
+        RestrictAddressFamilies = [
+          "AF_UNIX"
+          "AF_INET"
+          "AF_INET6"
+        ];
+        AmbientCapabilities = CapabilityBoundingSet;
+        RestrictNamespaces = true;
+        LockPersonality = true;
+        MemoryDenyWriteExecute = true;
+        RestrictRealtime = true;
+        RemoveIPC = true;
+        PrivateMounts = true;
+        SystemCallArchitectures = "native";
+        SystemCallFilter = [
+          "@system-service"
+          "~@cpu-emulation @debug @keyring @module @mount @obsolete @privileged @raw-io @reboot @setuid @swap"
+        ];
       };
     };
     networking.firewall = {
