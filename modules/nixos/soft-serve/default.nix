@@ -1,8 +1,16 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    pkgs
+    ;
   inherit (lib.${namespace}) nixosModule enabled domains;
   inherit (config.${namespace}.user) host;
+  cfg = config.services.soft-serve;
+  format = pkgs.formats.yaml { };
+  configFile = format.generate "config.yaml" cfg.settings;
   value = {
     services.soft-serve = enabled // {
       settings = {
@@ -37,7 +45,7 @@ let
           ssh_enabled = true;
         };
         jobs = {
-          mirror_pull = "@every 10m";
+          mirror_pull = "@every 15m";
         };
         stats = {
           listen_addr = ":23233";
@@ -60,6 +68,10 @@ let
         '';
       };
     };
+    systemd.tmpfiles.rules = [
+      "L+ /var/lib/private/soft-serve/config.yaml - - - - ${configFile}"
+    ];
+    systemd.services.soft-serve.environment._reloadConfig = "${configFile}";
   };
   path = ./.;
   _args = {
