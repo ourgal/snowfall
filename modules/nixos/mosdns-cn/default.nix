@@ -1,55 +1,62 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled ip;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    ip
+    domain
+    ;
   port = 25353;
   redisPort = 6379;
+  geoip = pkgs._sources.v2ray-rules-dat-geoip.src;
+  geosite = pkgs._sources.v2ray-rules-dat-geosite.src;
+  config = pkgs.writeText "config.yaml" (
+    builtins.toJSON {
+      server_addr = ":${toString port}";
+      cache_size = 0;
+      lazy_cache_ttl = 86400;
+      lazy_cache_reply_ttl = 30;
+      redis_cache = "redis://localhost:${toString redisPort}";
+      min_ttl = 0;
+      max_ttl = 0;
+      hosts = [ "${hosts}" ];
+      blacklist_domain = [ ];
+      insecure = false;
+      ca = [ ];
+      debug = false;
+      log_file = "";
+      upstream = [ ];
+      local_upstream = [
+        "https://223.5.5.5/dns-query"
+        "https://doh.apad.pro/dns-query"
+      ];
+      local_ip = [ "${geoip}:cn" ];
+      local_domain = [ "${geosite}:cn" ];
+      local_latency = 50;
+      remote_upstream = [
+        "https://8.8.4.4/dns-query"
+        "https://doh.apad.pro/dns-query"
+      ];
+      remote_domain = [ "${geosite}:geolocation-!cn" ];
+      working_dir = "/etc/mosdns-cn";
+      cd2exe = false;
+    }
+  );
+  hosts = pkgs.writeText "hosts" "domain:${domain} ${ip.brix}";
   value = {
     environment = {
       systemPackages = with pkgs.${namespace}; [ mosdns-cn ];
-      etc = {
-        "mosdns-cn/config.yaml".text = builtins.toJSON {
-          server_addr = ":${toString port}";
-          cache_size = 0;
-          lazy_cache_ttl = 86400;
-          lazy_cache_reply_ttl = 30;
-          redis_cache = "redis://localhost:${toString redisPort}";
-          min_ttl = 0;
-          max_ttl = 0;
-          hosts = [ "hosts" ];
-          blacklist_domain = [ ];
-          insecure = false;
-          ca = [ ];
-          debug = false;
-          log_file = "";
-          upstream = [ ];
-          local_upstream = [
-            "https://223.5.5.5/dns-query"
-            "https://doh.apad.pro/dns-query"
-          ];
-          local_ip = [ "geoip.dat:cn" ];
-          local_domain = [ "geosite.dat:cn" ];
-          local_latency = 50;
-          remote_upstream = [
-            "https://8.8.4.4/dns-query"
-            "https://doh.apad.pro/dns-query"
-          ];
-          remote_domain = [ "geosite.dat:geolocation-!cn" ];
-          working_dir = "/etc/mosdns-cn";
-          cd2exe = false;
-        };
-        "mosdns-cn/hosts".text = "domain:zxc.cn ${ip.brix}";
-        "mosdns-cn/geoip.dat".source = pkgs._sources.v2ray-rules-dat-geoip.src;
-        "mosdns-cn/geosite.dat".source = pkgs._sources.v2ray-rules-dat-geosite.src;
-      };
     };
     systemd.services.mosdns-cn = {
       description = "mosdns-cn";
-      after = [ "network.target" ];
+      requires = [ "network-online.target" ];
+      after = [ "network-online.target" ];
       wantedBy = [ "multi-user.target" ];
+      environment._reloadConfig = "${config}${geoip}${geosite}";
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config /etc/mosdns-cn/config.yaml";
+        ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config ${config}";
         Restart = "always";
       };
     };
