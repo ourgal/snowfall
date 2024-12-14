@@ -3,12 +3,7 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = [
-      # keep-sorted start
-      "ki-editor"
-      "v"
-      # keep-sorted end
-    ];
+    myPkgs = "v";
     nixPkgs = [
       # keep-sorted start
       "micro"
@@ -22,6 +17,7 @@ args.module (
       # keep-sorted start
       "helix"
       "kakoune"
+      "ki"
       "nixvim"
       # keep-sorted end
     ];
