@@ -1,12 +1,18 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args)
+    namespace
+    lib
+    pkgs
+    config
+    ;
   inherit (lib.${namespace})
     nixosModule
     _sources
     ip
     domain
     ;
+  inherit (config.${namespace}.user) duckdns;
   port = 53;
   geoLists =
     pkgs.runCommand "mosdns_config"
@@ -27,7 +33,7 @@ let
         v2dat unpack geoip geoip.dat -o $out -f cn -f private
         v2dat unpack geosite geosite.dat -o $out -f category-ads-all -f geolocation-!cn -f gfw -f cn -f private
       '';
-  config = pkgs.writeText "config.yaml" (
+  conf = pkgs.writeText "config.yaml" (
     builtins.toJSON {
       "api" = {
         "http" = "0.0.0.0:8338";
@@ -775,7 +781,10 @@ let
         }
         {
           "args" = {
-            "entries" = [ "domain:${domain} ${ip.brix}" ];
+            "entries" = [
+              "domain:${domain} ${ip.brix}"
+              "domain:${duckdns.domain}.duckdns.org ${ip.brix}"
+            ];
           };
           "tag" = "selfhost";
           "type" = "hosts";
@@ -795,10 +804,10 @@ let
       requires = [ "network-online.target" ];
       after = [ "network-online.target" ];
       wantedBy = [ "multi-user.target" ];
-      environment._reloadConfig = "${config}${dat_exec}${dns}${whitelist}${greylist}";
+      environment._reloadConfig = "${conf}${dat_exec}${dns}${whitelist}${greylist}";
       serviceConfig = rec {
         Type = "simple";
-        ExecStart = "${pkgs.mosdns}/bin/mosdns start -c ${config}";
+        ExecStart = "${pkgs.mosdns}/bin/mosdns start -c ${conf}";
         Restart = "always";
         DynamicUser = true;
         StateDirectory = "mosdns";
