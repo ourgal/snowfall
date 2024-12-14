@@ -40,7 +40,7 @@ in
     vaultwarden = enabled;
     searx = enabled;
     anki-sync-server = enabled;
-    mosdns = enabled;
+    mosdns-cn = enabled;
     firewall = enabledList [
       "docker"
       "mdns"
