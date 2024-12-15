@@ -25,6 +25,7 @@ args.module (
       "download"
       "editor"
       "encrypt"
+      "epub"
       "file-manager"
       "font"
       "fun"
