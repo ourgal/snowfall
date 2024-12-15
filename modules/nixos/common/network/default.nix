@@ -9,7 +9,7 @@ let
     ip
     ;
   inherit (config.${namespace}.user) host;
-  inherit (lib.${namespace}.settings) desktops;
+  inherit (lib.${namespace}.settings) laptops;
   value = {
     networking = {
       networkmanager = enabled // {
@@ -23,8 +23,8 @@ let
       };
     };
 
-    services.resolved = if (builtins.elem host desktops) then enabled else disabled;
-    services.avahi = (if (!builtins.elem host desktops) then enabled else disabled) // {
+    services.resolved = if (builtins.elem host laptops) then enabled else disabled;
+    services.avahi = (if (!builtins.elem host laptops) then enabled else disabled) // {
       nssmdns4 = true;
       publish = enabled // {
         addresses = true;
