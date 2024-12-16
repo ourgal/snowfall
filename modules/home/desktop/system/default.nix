@@ -29,6 +29,7 @@ args.module (
         "xclip"
         "xcolor"
         "xdragon"
+        "xsel"
         "zenity"
         # keep-sorted end
       ];
