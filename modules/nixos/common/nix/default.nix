@@ -28,6 +28,7 @@ let
           experimental-features = [
             "nix-command"
             "flakes"
+            "pipe-operators"
           ];
           substituters = lib.mkBefore mirrors;
           trusted-substituters = lib.mkBefore mirrors;
