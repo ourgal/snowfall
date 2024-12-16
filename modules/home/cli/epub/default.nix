@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     nixPkgs = [
       # keep-sorted start
+      "epr"
       "epubcheck"
       # keep-sorted end
     ];
