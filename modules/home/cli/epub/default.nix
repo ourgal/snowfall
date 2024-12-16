@@ -8,6 +8,7 @@ args.module (
       "epr"
       "epub2txt2"
       "epubcheck"
+      "epy"
       # keep-sorted end
     ];
   }
