@@ -3,10 +3,11 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace lib enabled;
+      inherit (args) namespace lib;
       inherit (lib.${namespace}) defaultTypes mime;
-      defaults =
-        (defaultTypes "writer.desktop" mime.office.doc) // (defaultTypes "calc.desktop" mime.office.xls);
+      defaults = lib.attrsets.recursiveUpdate (defaultTypes "writer.desktop" mime.office.doc) (
+        defaultTypes "calc.desktop" mime.office.xls
+      );
     in
     {
       path = ./.;
@@ -27,12 +28,7 @@ args.module (
         "zathura"
         # keep-sorted end
       ];
-      value = {
-        xdg.mimeApps = enabled // {
-          associations.added = defaults;
-          defaultApplications = defaults;
-        };
-      };
+      value = defaults;
     }
   )
 )

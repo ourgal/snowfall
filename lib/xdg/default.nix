@@ -1,7 +1,18 @@
-{ lib, ... }:
-with lib;
+{ ... }:
 {
   mime = {
+    html = [
+      "x-scheme-handler/http"
+      "x-scheme-handler/https"
+      "x-scheme-handler/chrome"
+      "text/html"
+      "application/x-extension-htm"
+      "application/x-extension-html"
+      "application/x-extension-shtml"
+      "application/x-extension-xhtml"
+      "application/x-extension-xht"
+      "application/xhtml+xml"
+    ];
     image = [
       "image/bmp"
       "image/gif"
@@ -154,16 +165,26 @@ with lib;
   };
   defaultTypes =
     default: types:
-    listToAttrs (
-      foldl' (
-        acc: type:
-        acc
-        ++ [
-          {
-            name = type;
-            value = default;
-          }
-        ]
-      ) [ ] types
-    );
+    let
+      _defaults = builtins.listToAttrs (
+        builtins.foldl' (
+          acc: type:
+          acc
+          ++ [
+            {
+              name = type;
+              value = default;
+            }
+          ]
+        ) [ ] types
+      );
+      defaults = {
+        xdg.mimeApps = {
+          enable = true;
+          associations.added = _defaults;
+          defaultApplications = _defaults;
+        };
+      };
+    in
+    defaults;
 }
