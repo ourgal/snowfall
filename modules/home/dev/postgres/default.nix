@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "beekeeper-studio"
+      "dbgate"
       "dblab"
       "gobang"
       "harlequin"
