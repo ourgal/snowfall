@@ -37,13 +37,7 @@ args.module (
       dataFiles = {
         "applications/feh.desktop" = desktopFile;
       };
-      value = {
-        xdg.mimeApps = {
-          enable = true;
-          associations.added = defaults;
-          defaultApplications = defaults;
-        };
-      };
+      value = defaults;
     }
   )
 )

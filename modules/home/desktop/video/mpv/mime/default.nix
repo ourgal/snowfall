@@ -3,18 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace lib enabled;
+      inherit (args) namespace lib;
       inherit (lib.${namespace}) defaultTypes mime;
       defaults = defaultTypes "mpv.desktop" mime.video_audio;
     in
     {
       path = ./.;
-      value = {
-        xdg.mimeApps = enabled // {
-          associations.added = defaults;
-          defaultApplications = defaults;
-        };
-      };
+      value = defaults;
     }
   )
 )
