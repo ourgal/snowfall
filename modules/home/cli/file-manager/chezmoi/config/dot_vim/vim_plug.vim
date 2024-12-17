@@ -19,7 +19,7 @@ plug#begin(installDir)
     Plug 'sheerun/vim-polyglot' # syntax highlight
     Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } # undo history viewer
     Plug 'cohama/lexima.vim' # auto pair, auto close
-    Plug 'tyru/caw.vim', { 'on': '<Plug>(caw:hatpos:toggle)' } # comment
+    Plug 'tyru/caw.vim'
     # Plug 'mhinz/vim-signify' # column hint
     Plug 'airblade/vim-gitgutter' # git column hint
     Plug 'thaerkh/vim-workspace' # session manager
