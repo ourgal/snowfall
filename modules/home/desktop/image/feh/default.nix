@@ -4,8 +4,7 @@ args.module (
   // (
     let
       inherit (args) lib namespace;
-      inherit (lib.${namespace}) defaultTypes mime;
-      defaults = defaultTypes "feh.desktop" mime.image;
+      inherit (lib.${namespace}) mime;
       desktopFile = ''
         [Desktop Entry]
         Name=Feh
@@ -25,19 +24,15 @@ args.module (
     {
       path = ./.;
       nixPkgs = "feh";
-      confs = {
-        "feh/themes" = ''
-          feh -B black \
-          -F \
-          -d \
-          --geometry 500x500 \
-          --auto-zoom
-        '';
-      };
-      dataFiles = {
-        "applications/feh.desktop" = desktopFile;
-      };
-      value = defaults;
+      confs."feh/themes" = ''
+        feh -B black \
+        -F \
+        -d \
+        --geometry 500x500 \
+        --auto-zoom
+      '';
+      dataFiles."applications/feh.desktop" = desktopFile;
+      defaultApps."feh.desktop" = mime.image;
     }
   )
 )
