@@ -101,3 +101,7 @@ def OpenFileOrURL(): void
 enddef
 
 nnoremap <silent> gf <ScriptCmd>OpenFileOrURL()<CR>
+
+nnoremap g* :%s/<c-r><c-w>/
+
+nnoremap . ;

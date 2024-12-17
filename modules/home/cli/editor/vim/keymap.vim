@@ -41,3 +41,7 @@ function OpenFileOrURL()
 endfunction
 
 nnoremap <silent> gf <cmd>call OpenFileOrURL()<CR>
+
+nnoremap g* :%s/<c-r><c-w>/
+
+nnoremap . ;
