@@ -105,25 +105,6 @@ args.module (
                     ":sh ${helix-zellij} lazygit"
                   else
                     "";
-                r = "replace_with_yanked";
-                R = "rename_symbol";
-                "*" =
-                  if tmuxEnabled then
-                    [
-                      "search_selection"
-                      "select_all"
-                      "select_regex"
-                      ":sh tmux send-key C-m"
-                    ]
-                  else if zellijEnabled then
-                    [
-                      "search_selection"
-                      "select_all"
-                      "select_regex"
-                      ":sh ${zellijEnter}"
-                    ]
-                  else
-                    "search_selection";
                 "G" = "goto_last_line";
                 "$" = "goto_line_end";
                 "^" = "goto_first_nonwhitespace";
@@ -131,13 +112,10 @@ args.module (
                 V = "extend_line_below";
                 "A-v" = "extend_line_above";
                 "esc" = "collapse_selection";
-                "A-." = { };
-                ";" = "repeat_last_motion";
                 "Z" = {
                   Z = ":xa";
                   Q = ":qa!";
                 };
-                "C-c" = { };
                 g = {
                   "/" =
                     if tmuxEnabled then
@@ -151,14 +129,33 @@ args.module (
                     ":sort"
                     "keep_primary_selection"
                   ];
-                  c = "toggle_comments";
+                  c = {
+                    c = "toggle_comments";
+                    l = "toggle_line_comments";
+                    b = "toggle_block_comments";
+                  };
                   e = { };
                   s = { };
                   l = { };
                   h = { };
-                  w = { };
+                  "*" =
+                    if tmuxEnabled then
+                      [
+                        "search_selection"
+                        "select_all"
+                        "select_regex"
+                        ":sh tmux send-key C-m"
+                      ]
+                    else if zellijEnabled then
+                      [
+                        "search_selection"
+                        "select_all"
+                        "select_regex"
+                        ":sh ${zellijEnter}"
+                      ]
+                    else
+                      "search_selection";
                 };
-                s = "goto_word";
                 "space" = {
                   l = {
                     f = ":fmt";
@@ -168,17 +165,10 @@ args.module (
                   R = { };
                   y = { };
                   Y = { };
-                  c = { };
-                  C = { };
-                  "A-c" = { };
                   p = { };
                   P = { };
                   y = { };
                   Y = { };
-                  F = { };
-                  b = { };
-                  g = { };
-                  j = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
                     if (tmuxEnabled && cfg.broot.enable) then
@@ -186,12 +176,7 @@ args.module (
                     else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      {
-                        f = ":sh ${helix-tmux} broot";
-                        b = "buffer_picker";
-                        g = "changed_file_picker";
-                        j = "jumplist_picker";
-                      };
+                      "file_picker";
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
@@ -230,7 +215,6 @@ args.module (
                   };
                 };
                 "C-s" = "select_regex";
-                "C-c" = { };
                 "C-a" = [
                   ":pipe ${toggleBool}"
                   "increment"
@@ -241,26 +225,7 @@ args.module (
                 ];
               };
               select = {
-                r = "replace_with_yanked";
-                R = "rename_symbol";
                 "A-d" = "delete_selection";
-                "*" =
-                  if tmuxEnabled then
-                    [
-                      "search_selection"
-                      "select_all"
-                      "select_regex"
-                      ":sh tmux send-key C-m"
-                    ]
-                  else if zellijEnabled then
-                    [
-                      "search_selection"
-                      "select_all"
-                      "select_regex"
-                      ":sh ${zellijEnter}"
-                    ]
-                  else
-                    "search_selection";
                 G = "goto_file_end";
                 "$" = "goto_line_end";
                 "^" = "goto_first_nonwhitespace";
@@ -271,8 +236,6 @@ args.module (
                   "normal_mode"
                   "collapse_selection"
                 ];
-                "A-." = { };
-                ";" = "repeat_last_motion";
                 g = {
                   z = [
                     "split_selection_on_newline"
@@ -284,9 +247,24 @@ args.module (
                   s = { };
                   l = { };
                   h = { };
-                  w = { };
+                  "*" =
+                    if tmuxEnabled then
+                      [
+                        "search_selection"
+                        "select_all"
+                        "select_regex"
+                        ":sh tmux send-key C-m"
+                      ]
+                    else if zellijEnabled then
+                      [
+                        "search_selection"
+                        "select_all"
+                        "select_regex"
+                        ":sh ${zellijEnter}"
+                      ]
+                    else
+                      "search_selection";
                 };
-                s = "goto_word";
                 "space" = {
                   l = {
                     f = ":fmt";
@@ -296,17 +274,10 @@ args.module (
                   R = { };
                   y = { };
                   Y = { };
-                  c = { };
-                  C = { };
-                  "A-c" = { };
                   p = { };
                   P = { };
                   y = { };
                   Y = { };
-                  F = { };
-                  b = { };
-                  g = { };
-                  j = { };
                   B = ":sh ${helix-tmux} blame";
                   f =
                     if (tmuxEnabled && cfg.broot.enable) then
@@ -314,12 +285,7 @@ args.module (
                     else if (zellijEnabled && cfg.broot.enable) then
                       ":sh ${helix-zellij} broot"
                     else
-                      {
-                        f = ":sh ${helix-tmux} broot";
-                        b = "buffer_picker";
-                        g = "changed_file_picker";
-                        j = "jumplist_picker";
-                      };
+                      "file_picker";
                   e =
                     if tmuxEnabled then
                       ":sh ${helix-tmux} lf"
@@ -357,7 +323,6 @@ args.module (
                         "";
                   };
                   "C-s" = "select_regex";
-                  "C-c" = { };
                   "C-a" = [
                     ":pipe ${toggleBool}"
                     "increment"
