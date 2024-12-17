@@ -196,6 +196,7 @@ plug#begin(installDir)
     # Plug 'mattn/vim-lsp-settings'
     # Plug 'prabirshrestha/asyncomplete.vim'
     # Plug 'prabirshrestha/asyncomplete-lsp.vim'
+    Plug 'michaeljsmith/vim-indent-object'
 plug#end()
 #}}}
 
