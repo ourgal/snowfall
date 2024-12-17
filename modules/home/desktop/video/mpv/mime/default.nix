@@ -4,12 +4,11 @@ args.module (
   // (
     let
       inherit (args) namespace lib;
-      inherit (lib.${namespace}) defaultTypes mime;
-      defaults = defaultTypes "mpv.desktop" mime.video_audio;
+      inherit (lib.${namespace}) mime;
     in
     {
       path = ./.;
-      value = defaults;
+      defaultApps."mpv.desktop" = mime.video_audio;
     }
   )
 )

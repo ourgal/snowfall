@@ -197,6 +197,7 @@ rec {
       servs ? [ ],
       env ? { },
       enable ? [ ],
+      defaultApps ? { },
       ...
     }@args:
     let
@@ -289,6 +290,27 @@ rec {
           (with' prefix pkgs)
         else
           builtins.throw "not support type";
+      defaultTypes =
+        default: types:
+        let
+          defaults = builtins.listToAttrs (
+            builtins.foldl' (
+              acc: type:
+              acc
+              ++ [
+                {
+                  name = type;
+                  value = default;
+                }
+              ]
+            ) [ ] types
+          );
+        in
+        defaults;
+      defaults = lib.attrsets.foldlAttrs (
+        acc: n: v:
+        acc // defaultTypes n v
+      ) { } defaultApps;
     in
     {
       options.${namespace} = optHome { inherit path extraOpts; };
@@ -316,6 +338,11 @@ rec {
           };
           xdg.configFile = confHandle confs;
           xdg.dataFile = confHandle dataFiles;
+          xdg.mimeApps = {
+            enable = true;
+            associations.added = defaults;
+            defaultApplications = defaults;
+          };
           programs = progsHandle progs;
           services = progsHandle servs;
           ${namespace} = enableHomeSubModule {
