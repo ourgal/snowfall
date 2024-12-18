@@ -4355,6 +4355,27 @@
         },
         "version": "0.88.1"
     },
+    "timewarrior": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "timewarrior",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "GothenburgBitFactory",
+            "repo": "timewarrior",
+            "rev": "v1.7.1",
+            "sha256": "sha256-wuSKZh46B6hufwnVP/FIT9LW67Wp2qyV+0xczhU4a0U=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.7.1"
+    },
     "tmux-auto-renumber-session": {
         "cargoLocks": null,
         "date": "2023-03-01",

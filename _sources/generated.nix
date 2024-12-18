@@ -2456,6 +2456,17 @@
       sha256 = "sha256-nFbZU9x9Go3fBqzJENkiQCfgJBZVH5KSDnD0Nb0o4GI=";
     };
   };
+  timewarrior = {
+    pname = "timewarrior";
+    version = "v1.7.1";
+    src = fetchFromGitHub {
+      owner = "GothenburgBitFactory";
+      repo = "timewarrior";
+      rev = "v1.7.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-wuSKZh46B6hufwnVP/FIT9LW67Wp2qyV+0xczhU4a0U=";
+    };
+  };
   tmux-auto-renumber-session = {
     pname = "tmux-auto-renumber-session";
     version = "19fead0395afdc36830d840249c0c7190ccd8bb9";
