@@ -21,7 +21,7 @@ args.module (
         pause = "no";
         fullscreen = "yes";
         force-seekable = "yes";
-        keep-open = "no";
+        keep-open = "always";
         sub-auto = "fuzzy";
         alang = "ja,jp,jpn,en,eng";
         slang = "en,eng,chs,sc,zh,chi,zho,zh-Hant,zh-CN,zh-Hans";
