@@ -33,6 +33,8 @@ let
     };
 
     systemd.network = disabled;
+
+    hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;
   };
   path = ./.;
   _args = {
