@@ -16,7 +16,7 @@ args.module (
         listen_on = "unix:/tmp/kitty";
         enabled_layouts = "splits";
         background_opacity = "0.8";
-        cursor_trail = 0;
+        cursor_trail = 1;
       };
       keybindings = {
         "ctrl+shift+p>u" = "kitten hints --type url --program @";
