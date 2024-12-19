@@ -48,7 +48,7 @@ in
     ];
     docker =
       let
-        nfs = ip.brix;
+        nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
       in
       enabled
       // {
