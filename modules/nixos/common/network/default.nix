@@ -23,8 +23,8 @@ let
       };
     };
 
-    services.resolved = if (builtins.elem host laptops) then enabled else disabled;
-    services.avahi = (if (!builtins.elem host laptops) then enabled else disabled) // {
+    services.resolved = enabled;
+    services.avahi = disabled // {
       nssmdns4 = true;
       publish = enabled // {
         addresses = true;

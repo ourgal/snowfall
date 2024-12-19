@@ -54,7 +54,7 @@ let
     services.caddy = enabled // {
       virtualHosts = virtualHosts // {
         "http://${domains.harmonia}".extraConfig = ''
-          reverse_proxy http://home.local:50000
+          reverse_proxy http://${if config.services.resolved.enable then "home.local" else ip.home}:50000
         '';
       };
       inherit package;
