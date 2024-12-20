@@ -56,19 +56,10 @@ args.module (
           };
         };
       };
-      value = {
-        systemd.user.services.clipcat = {
-          Unit = {
-            Description = "Clipcat daemon";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStartPre = "${pkgs.coreutils-full}/bin/rm -f %t/clipcat/grpc.sock";
-            ExecStart = "${pkgs.clipcat}/bin/clipcatd --no-daemon --replace";
-          };
-        };
+      systemdServices.clipcat = {
+        gui = true;
+        startPre = "${pkgs.coreutils-full}/bin/rm -f %t/clipcat/grpc.sock";
+        start = "${pkgs.clipcat}/bin/clipcatd --no-daemon --replace";
       };
     }
   )

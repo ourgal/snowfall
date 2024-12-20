@@ -7,6 +7,12 @@ args.module (
     in
     {
       path = ./.;
+      systemdServices.feh-wallsetter = {
+        gui = true;
+        type = "oneshot";
+        condEnv = "XAUTHORITY";
+        start = "${pkgs.${namespace}.feh-wallsetter}/bin/feh-wallsetter";
+      };
       value = {
         systemd.user.timers.feh-wallsetter = {
           Unit = {
@@ -18,19 +24,6 @@ args.module (
           };
           Timer = {
             OnUnitActiveSec = "10m";
-          };
-        };
-        systemd.user.services.feh-wallsetter = {
-          Unit = {
-            Description = "feh wallsetter";
-            ConditionEnvironment = "XAUTHORITY";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStart = "${pkgs.${namespace}.feh-wallsetter}/bin/feh-wallsetter";
-            Type = "oneshot";
           };
         };
       };

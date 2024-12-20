@@ -7,22 +7,11 @@ args.module (
     in
     {
       path = ./.;
-      value = {
-        systemd.user.services.transmission = {
-          Unit = {
-            Description = "Transmission Service";
-            Wants = "network-online.target";
-            After = "network-online.target";
-          };
-          Service = {
-            ExecStart = "${pkgs.transmission_4}/bin/transmission-daemon -f -g ${config.xdg.configHome}/transmission/transmission-daemon";
-            ExecReload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
-            Restart = "on-abort";
-          };
-          Install = {
-            WantedBy = [ "default.target" ];
-          };
-        };
+      systemdServices.transmission = {
+        online = true;
+        start = "${pkgs.transmission_4}/bin/transmission-daemon -f -g ${config.xdg.configHome}/transmission/transmission-daemon";
+        reload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
+        restart = "on-abort";
       };
     }
   )
