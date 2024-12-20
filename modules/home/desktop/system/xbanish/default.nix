@@ -7,19 +7,9 @@ args.module (
     in
     {
       path = ./.;
-      value = {
-        systemd.user.services.xbanish = {
-          Unit = {
-            Description = "Xbanish autohide the mouse";
-          };
-          Install = {
-            WantedBy = [ "default.target" ];
-          };
-          Service = {
-            ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
-            ExecStart = "${pkgs.xbanish}/bin/xbanish";
-          };
-        };
+      systemdServices.xbanish = {
+        startPre = "${pkgs.coreutils-full}/bin/sleep 10";
+        start = "${pkgs.xbanish}/bin/xbanish";
       };
     }
   )

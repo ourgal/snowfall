@@ -8,6 +8,13 @@ args.module (
     {
       path = ./.;
       nixPkgs = "nitrogen";
+      systemdServices.nitrogen = {
+        gui = true;
+        type = "oneshot";
+        start = "${pkgs.nitrogen}/bin/nitrogen --set-zoom-fill --random %h/Pictures/wallpapers/";
+        condEnv = "XAUTHORITY";
+        restart = "on-abort";
+      };
       value = {
         systemd.user.timers.nitrogen = {
           Unit = {
@@ -19,19 +26,6 @@ args.module (
           };
           Timer = {
             OnUnitActiveSec = "10m";
-          };
-        };
-        systemd.user.services.nitrogen = {
-          Unit = {
-            Description = "nitrogen wallsetter";
-            ConditionEnvironment = "XAUTHORITY";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStart = "${pkgs.nitrogen}/bin/nitrogen --set-zoom-fill --random %h/Pictures/wallpapers/";
-            Type = "oneshot";
           };
         };
       };

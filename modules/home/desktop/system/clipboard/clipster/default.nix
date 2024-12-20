@@ -91,18 +91,9 @@ args.module (
         # Used to only monitor clipboard changes from whitelisted apps, all other apps will be ignored!
         #whitelist_classes =
       '';
-      value = {
-        systemd.user.services.clipster = {
-          Unit = {
-            Description = "Clipster daemon";
-          };
-          Install = {
-            WantedBy = [ "graphical-session.target" ];
-          };
-          Service = {
-            ExecStart = "${pkgs.clipster}/bin/clipster --daemon";
-          };
-        };
+      systemdServices.clipster = {
+        gui = true;
+        start = "${pkgs.clipster}/bin/clipster --daemon";
       };
     }
   )

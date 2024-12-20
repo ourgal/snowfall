@@ -54,32 +54,25 @@ args.module (
         ];
         "shape_button" = "None";
       };
-      value = {
-        systemd.user.services.mouse-actions =
-          lib.mkIf (builtins.elem host lib.${namespace}.settings.desktops)
-            {
-              Unit = {
-                Description = "Mouse actions Service";
-              };
-              Install = {
-                WantedBy = [ "default.target" ];
-              };
-              Service = {
-                ExecStart = pkgs.writeShellScript "mouse-actions-script" ''
-                  PATH=$PATH:${
-                    lib.makeBinPath [
-                      pkgs.pulseaudio
-                      pkgs.mouse-actions
-                      pkgs.pamixer
-                      pkgs.volnoti
-                    ]
-                  }
-                  mouse-actions
-                '';
-                Nice = -20;
-              };
-            };
-      };
+      systemdServices.mouse-actions = (
+        if (builtins.elem host lib.${namespace}.settings.desktops) then
+          {
+            start = pkgs.writeShellScript "mouse-actions-script" ''
+              PATH=$PATH:${
+                lib.makeBinPath [
+                  pkgs.pulseaudio
+                  pkgs.mouse-actions
+                  pkgs.pamixer
+                  pkgs.volnoti
+                ]
+              }
+              mouse-actions
+            '';
+            nice = -20;
+          }
+        else
+          { }
+      );
     }
   )
 )

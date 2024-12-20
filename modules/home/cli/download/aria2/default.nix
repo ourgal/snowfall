@@ -117,6 +117,13 @@ args.module (
             # on-download-complete = "${config.xdg.configHome}/aria2/clean.sh";
           };
       };
+      systemdServices.aria2 = {
+        online = true;
+        startPre = aria2-session;
+        start = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete='${config.xdg.configHome}/aria2/clean.sh'";
+        reload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
+        restart = "on-abort";
+      };
       value = {
         xdg.configFile = {
           "aria2/delete.sh".source = source + "/delete.sh";
@@ -130,22 +137,6 @@ args.module (
           "aria2/script.conf".source = source + "/script.conf";
         };
         ${namespace}.dev.python.global.pkgs = (p: with p; [ aria2p ] ++ aria2p.optional-dependencies.tui);
-        systemd.user.services.aria2 = {
-          Unit = {
-            Description = "Aria2 Service";
-            Wants = "network-online.target";
-            After = "network-online.target";
-          };
-          Service = {
-            ExecStartPre = aria2-session;
-            ExecStart = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete='${config.xdg.configHome}/aria2/clean.sh'";
-            ExecReload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
-            Restart = "on-abort";
-          };
-          Install = {
-            WantedBy = [ "default.target" ];
-          };
-        };
       };
     }
   )

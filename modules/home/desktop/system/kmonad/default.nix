@@ -13,21 +13,15 @@ args.module (
     {
       path = ./.;
       nixPkgs = "kmonad";
+      systemdServices."kmonad@miryoku" =
+        if (builtins.elem host lib.${namespace}.settings.laptops) then
+          {
+            start = "${pkgs.kmonad}/bin/kmonad %E/kmonad/%i.kbd";
+            nice = -20;
+          }
+        else
+          { };
       value = {
-        systemd.user.services."kmonad@miryoku" =
-          lib.mkIf (builtins.elem host lib.${namespace}.settings.laptops)
-            {
-              Unit = {
-                Description = "Kmonad keyboard config";
-              };
-              Install = {
-                WantedBy = [ "default.target" ];
-              };
-              Service = {
-                ExecStart = "${pkgs.kmonad}/bin/kmonad %E/kmonad/%i.kbd";
-                Nice = -20;
-              };
-            };
         xdg.configFile = {
           "kmonad/miryoku.kbd".source =
             if host == "surface" then

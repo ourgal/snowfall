@@ -8,18 +8,8 @@ args.module (
     {
       path = ./.;
       nixPkgs = "clipse";
-      value = {
-        systemd.user.services.clipse = {
-          Unit = {
-            Description = "Clipse daemon";
-          };
-          Install = {
-            WantedBy = [ "default.target" ];
-          };
-          Service = {
-            ExecStart = "${pkgs.clipse}/bin/clipse --listen-shell";
-          };
-        };
+      systemdServices.clipse = {
+        start = "${pkgs.clipse}/bin/clipse --listen-shell";
       };
     }
   )

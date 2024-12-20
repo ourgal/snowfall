@@ -198,6 +198,7 @@ rec {
       env ? { },
       enable ? [ ],
       defaultApps ? { },
+      systemdServices ? { },
       ...
     }@args:
     let
@@ -311,6 +312,71 @@ rec {
         acc: n: v:
         acc // defaultTypes n v
       ) { } defaultApps;
+      _systemdServices =
+        let
+          ret = lib.attrsets.foldlAttrs (
+            acc: name: value:
+            let
+              newVal = {
+                Install = {
+                  WantedBy = [
+                    (if ((value ? gui) && (value.gui)) then "graphical-session.target" else "default.target")
+                  ];
+                };
+                Unit =
+                  {
+                    Description = "${name} Service";
+                  }
+                  // (
+                    if ((value ? online) && (value.online)) then
+                      {
+                        Wants = "network-online.target";
+                        After = "network-online.target";
+                      }
+                    else
+                      { }
+                  )
+                  // (if (value ? condEnv) then { ConditionEnvironment = value.condEnv; } else { })
+                  // (if (value ? after) then { After = value.after; } else { });
+                Service =
+                  {
+                    ExecStart = if (value ? start) then value.start else "";
+                    RestartSec = 10;
+                  }
+                  // (if (value ? type) then { Type = value.type; } else { Type = "simple"; })
+                  // (if (value ? nice) then { Nice = value.nice; } else { })
+                  // (if (value ? restart) then { Restart = value.restart; } else { Restart = "always"; })
+                  // (if (value ? reload) then { ExecReload = value.reload; } else { })
+                  // (if (value ? start) then { ExecStart = value.start; } else { })
+                  // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { });
+              } // value;
+            in
+            acc
+            // {
+              "${name}" = (
+                if (value != { }) then
+                  lib.attrsets.filterAttrs (
+                    n: _v:
+                    !builtins.elem n [
+                      "online"
+                      "start"
+                      "reload"
+                      "restart"
+                      "type"
+                      "gui"
+                      "condEnv"
+                      "nice"
+                      "startPre"
+                      "after"
+                    ]
+                  ) newVal
+                else
+                  value
+              );
+            }
+          ) { } systemdServices;
+        in
+        ret;
     in
     {
       options.${namespace} = optHome { inherit path extraOpts; };
@@ -349,6 +415,7 @@ rec {
             inherit path;
             subModule = enable;
           };
+          systemd.user.services = _systemdServices;
         } value
       );
     };
