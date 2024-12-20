@@ -2,20 +2,23 @@
 let
   domain = "zxc.cn";
   services = [
-    "searx"
+    # keep-sorted start
+    "alist"
     "anki"
-    "vaultwarden"
+    "ariang"
+    "atuin"
+    "dufs"
+    "flaresolverr"
+    "harmonia"
     "kavita"
     "miniflux"
-    "rustypaste"
     "pairdrop"
-    "dufs"
-    "ariang"
-    "syncthing"
-    "atuin"
-    "harmonia"
+    "rustypaste"
+    "searx"
     "soft-serve"
-    "alist"
+    "syncthing"
+    "vaultwarden"
+    # keep-sorted end
   ];
   domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
 in
