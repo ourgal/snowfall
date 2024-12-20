@@ -1067,3 +1067,7 @@ fetch.github = "urlesistiana/v2dat"
 [timewarrior]
 src.github = "GothenburgBitFactory/timewarrior"
 fetch.github = "GothenburgBitFactory/timewarrior"
+
+[recoverpy]
+src.github = "PabloLec/RecoverPy"
+fetch.github = "PabloLec/RecoverPy"

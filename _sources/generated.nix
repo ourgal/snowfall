@@ -2004,6 +2004,17 @@
       sha256 = "sha256-9hZ7ZS+p6PoLKcuHS2re537wxojN2SzhOm5gBuRX9Xc=";
     };
   };
+  recoverpy = {
+    pname = "recoverpy";
+    version = "2.1.10";
+    src = fetchFromGitHub {
+      owner = "PabloLec";
+      repo = "RecoverPy";
+      rev = "2.1.10";
+      fetchSubmodules = false;
+      sha256 = "sha256-67A/bR8RLU1iU5p6miJ2CNDgpOz//DtRLyDETIcrduA=";
+    };
+  };
   render = {
     pname = "render";
     version = "v0.3.0";

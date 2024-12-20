@@ -8,6 +8,7 @@ args.module (
       "cache"
       "debounce"
       "is"
+      "recoverpy"
       "sequin"
       "servicer"
       # keep-sorted end
