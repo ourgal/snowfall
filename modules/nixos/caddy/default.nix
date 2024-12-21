@@ -56,6 +56,9 @@ let
         "http://${domains.harmonia}".extraConfig = ''
           reverse_proxy http://${if config.services.resolved.enable then "home.local" else ip.home}:50000
         '';
+        "http://${domains.yacd}".extraConfig = ''
+          reverse_proxy http://192.168.123.1:9999
+        '';
       };
       inherit package;
     };

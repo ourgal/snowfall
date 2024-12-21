@@ -18,6 +18,7 @@ let
     "soft-serve"
     "syncthing"
     "vaultwarden"
+    "yacd"
     # keep-sorted end
   ];
   domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
