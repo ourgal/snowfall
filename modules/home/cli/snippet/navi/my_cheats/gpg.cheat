@@ -2,3 +2,14 @@
 
 # list keys
 gpg -k --fingerprint --keyid-format long
+
+; $ public: gpg --list-keys | awk '/^pub/{split($2, a, "/"); print a[2]}'
+$ public: gpg --with-colons --list-keys --with-fingerprint | awk -F: '$1 == "pub" {print $5}'
+
+$ keys: ls *.gpg
+
+# export public key
+gpg --output public.gpg --armor --export <public>
+
+# import key
+gpg --import <keys>
