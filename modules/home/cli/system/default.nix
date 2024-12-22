@@ -18,6 +18,7 @@ args.module (
       "bkt"
       "charm-freeze"
       "geekbench"
+      "glib"
       "handlr-regex"
       "inxi"
       "kmon"
