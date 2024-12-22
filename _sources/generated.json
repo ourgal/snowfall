@@ -1369,6 +1369,27 @@
         },
         "version": "0cf3c89209305779e82d3b5cb956cf8b54025dd6"
     },
+    "fish-ranger-cd": {
+        "cargoLocks": null,
+        "date": "2018-11-04",
+        "extract": null,
+        "name": "fish-ranger-cd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sei40kr",
+            "repo": "fish-ranger-cd",
+            "rev": "42d7e6cada419b681cdbf01723b1919968b7cae9",
+            "sha256": "sha256-Bs3chNFkCUNgfiDsg6wVMt071ZODDGFeqjxqh4X6KNA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "42d7e6cada419b681cdbf01723b1919968b7cae9"
+    },
     "fishbang": {
         "cargoLocks": null,
         "date": "2023-08-04",
@@ -3502,6 +3523,27 @@
             "type": "github"
         },
         "version": "v0.3.2"
+    },
+    "ranger-archives": {
+        "cargoLocks": null,
+        "date": "2024-04-18",
+        "extract": null,
+        "name": "ranger-archives",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "maximtrp",
+            "repo": "ranger-archives",
+            "rev": "b4e136b24fdca7670e0c6105fb496e5df356ef25",
+            "sha256": "sha256-QJu5G2AYtwcaE355yhiG4wxGFMQvmBWvaPQGLsi5x9Q=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "b4e136b24fdca7670e0c6105fb496e5df356ef25"
     },
     "ranger-devicons2": {
         "cargoLocks": null,

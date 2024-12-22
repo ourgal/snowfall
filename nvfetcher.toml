@@ -1071,3 +1071,11 @@ fetch.github = "GothenburgBitFactory/timewarrior"
 [recoverpy]
 src.github = "PabloLec/RecoverPy"
 fetch.github = "PabloLec/RecoverPy"
+
+[ranger-archives]
+src.git = "https://github.com/maximtrp/ranger-archives"
+fetch.github = "maximtrp/ranger-archives"
+
+[fish-ranger-cd]
+src.git = "https://github.com/sei40kr/fish-ranger-cd"
+fetch.github = "sei40kr/fish-ranger-cd"

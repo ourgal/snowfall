@@ -3,14 +3,16 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib namespace;
     in
     {
       path = ./.;
       progs = {
         ranger = {
           mappings = {
-            e = "edit";
+            ex = "extract";
+            ec = "compress";
+            DD = "shell rip %s";
           };
           rifle = [
             {
@@ -35,20 +37,18 @@ args.module (
               name = "devicons2";
               inherit (pkgs._sources.ranger-devicons2) src;
             }
+            {
+              name = "archives";
+              inherit (pkgs._sources.ranger-archives) src;
+            }
           ];
           extraConfig = ''
             default_linemode devicons2
           '';
         };
-        fish.functions.ra = {
-          body = ''
-            set dir $HOME/.config/ranger/.rangerdir
-            ranger --choosedir=$dir $argv
-            cd (cat $dir)
-            echo -n > $dir
-            # commandline -f repaint
-          '';
-          description = "ranger cd on exit";
+        fish = {
+          plugins = lib.${namespace}.mkFishPlugins [ "fish-ranger-cd" ] pkgs;
+          shellAbbrs.ra = "ranger-cd";
         };
       };
     }

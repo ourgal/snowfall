@@ -775,6 +775,18 @@
     };
     date = "2024-10-12";
   };
+  fish-ranger-cd = {
+    pname = "fish-ranger-cd";
+    version = "42d7e6cada419b681cdbf01723b1919968b7cae9";
+    src = fetchFromGitHub {
+      owner = "sei40kr";
+      repo = "fish-ranger-cd";
+      rev = "42d7e6cada419b681cdbf01723b1919968b7cae9";
+      fetchSubmodules = false;
+      sha256 = "sha256-Bs3chNFkCUNgfiDsg6wVMt071ZODDGFeqjxqh4X6KNA=";
+    };
+    date = "2018-11-04";
+  };
   fishbang = {
     pname = "fishbang";
     version = "0b5ef82ead524a7dd0da5760d8f677b02b35f654";
@@ -1956,6 +1968,18 @@
       fetchSubmodules = false;
       sha256 = "sha256-vEZUBA+KeDHgqZvzrAN6ramZ5D4iqQdVU+qFOK/39co=";
     };
+  };
+  ranger-archives = {
+    pname = "ranger-archives";
+    version = "b4e136b24fdca7670e0c6105fb496e5df356ef25";
+    src = fetchFromGitHub {
+      owner = "maximtrp";
+      repo = "ranger-archives";
+      rev = "b4e136b24fdca7670e0c6105fb496e5df356ef25";
+      fetchSubmodules = false;
+      sha256 = "sha256-QJu5G2AYtwcaE355yhiG4wxGFMQvmBWvaPQGLsi5x9Q=";
+    };
+    date = "2024-04-18";
   };
   ranger-devicons2 = {
     pname = "ranger-devicons2";
