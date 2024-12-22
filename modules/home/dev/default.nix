@@ -102,6 +102,7 @@ args.module (
         "cpp"
         "editorconfig"
         "efm"
+        "execline"
         "fennel"
         "fish"
         "go"
