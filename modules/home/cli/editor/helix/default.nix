@@ -607,6 +607,18 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "ruby";
+                language-servers = [
+                  "scls"
+                  "solargraph"
+                ];
+                formatter = {
+                  command = "rubyfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
