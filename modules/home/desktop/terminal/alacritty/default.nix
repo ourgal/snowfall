@@ -37,7 +37,7 @@ args.module (
       progs.alacritty = {
         catppuccin.enable = false;
         settings = {
-          live_config_reload = true;
+          general.live_config_reload = true;
           env.TERM = "xterm-256color";
           window = {
             decorations = "none";
