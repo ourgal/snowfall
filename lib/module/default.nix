@@ -184,6 +184,7 @@ rec {
       dotnetPkgs ? [ ],
       perlPkgs ? [ ],
       luaPkgs ? [ ],
+      rubyPkgs ? [ ],
       haskellPkgs ? [ ],
       xfcePkgs ? [ ],
       gnomePkgs ? [ ],
@@ -392,6 +393,7 @@ rec {
               ++ (pkgHandle pkgs.dotnetPackages dotnetPkgs)
               ++ (pkgHandle pkgs.perlPackages perlPkgs)
               ++ (pkgHandle pkgs.luaPackages luaPkgs)
+              ++ (pkgHandle pkgs.rubyPackages rubyPkgs)
               ++ (pkgHandle pkgs.haskellPackages haskellPkgs)
               ++ (pkgHandle pkgs.xorg xorgPkgs)
               ++ (pkgHandle pkgs.xfce xfcePkgs)

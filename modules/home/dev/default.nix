@@ -116,6 +116,7 @@ args.module (
         "perl"
         "python"
         "regex"
+        "ruby"
         "rust"
         "sh"
         "share"
