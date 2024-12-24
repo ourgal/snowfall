@@ -9,6 +9,7 @@ args.module (
       "ghc"
       "haskell-language-server"
       "hlint"
+      "ormolu"
       "stack"
       # keep-sorted end
     ];
