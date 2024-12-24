@@ -615,7 +615,6 @@ args.module (
                 ];
                 formatter = {
                   command = "rubyfmt";
-                  args = [ "-" ];
                 };
                 auto-format = true;
               }
