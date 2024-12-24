@@ -534,7 +534,11 @@ args.module (
                 name = "c";
                 formatter = {
                   command = "clang-format";
-                  args = [ "-" ];
+                  args = [
+                    "--style"
+                    "Google"
+                    "-"
+                  ];
                 };
                 auto-format = true;
               }
@@ -572,14 +576,6 @@ args.module (
                 ];
               }
               {
-                name = "cpp";
-                formatter = {
-                  command = "clang-format";
-                  args = [ "-" ];
-                };
-                auto-format = true;
-              }
-              {
                 name = "fish";
                 language-servers = [
                   "scls"
@@ -603,7 +599,11 @@ args.module (
                 ];
                 formatter = {
                   command = "clang-format";
-                  args = [ "-" ];
+                  args = [
+                    "--style"
+                    "Google"
+                    "-"
+                  ];
                 };
                 auto-format = true;
               }
