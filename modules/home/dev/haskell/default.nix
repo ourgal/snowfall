@@ -11,6 +11,7 @@ args.module (
       "hlint"
       "ormolu"
       "stack"
+      "stylish-haskell"
       # keep-sorted end
     ];
   }
