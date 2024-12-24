@@ -132,8 +132,8 @@ args.module (
           "aria2/move.sh".source = source + "/move.sh";
           "aria2/upload.sh".source = source + "/upload.sh";
           "aria2/core".source = source + "/core";
-          "aria2/dht.dat".source = source + "/dht.dat";
-          "aria2/dht6.dat".source = source + "/dht6.dat";
+          # "aria2/dht.dat".source = source + "/dht.dat";
+          # "aria2/dht6.dat".source = source + "/dht6.dat";
           "aria2/script.conf".source = source + "/script.conf";
         };
         ${namespace}.dev.python.global.pkgs = (p: with p; [ aria2p ] ++ aria2p.optional-dependencies.tui);
