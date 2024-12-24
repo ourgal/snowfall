@@ -618,6 +618,10 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "haskell";
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
