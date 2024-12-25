@@ -27,6 +27,7 @@ args.module (
         "wishlist"
         # keep-sorted end
       ];
+      perlPkgs = "AppClusterSSH";
       enable = "ssh-tpm-agent";
       progs.ssh.matchBlocks = {
         soft = {
