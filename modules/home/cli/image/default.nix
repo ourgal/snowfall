@@ -12,6 +12,7 @@ args.module (
       "graphviz"
       "imagemagick"
       "imgp"
+      "kcc"
       "lutgen"
       "menyoki"
       "pio"
