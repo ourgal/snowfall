@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "treegen";
+    myPkgs = [
+      # keep-sorted start
+      "mkcd"
+      "treegen"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "gtree"
