@@ -11,7 +11,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
-      "hishtory"
+      "atuin"
       "shellclear"
       # keep-sorted end
     ];
