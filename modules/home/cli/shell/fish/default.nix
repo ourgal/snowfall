@@ -79,42 +79,18 @@ args.module (
                 return
               end
 
-              if test -z "$dir"
-                set dir (basename (pwd))
-              else
-                set dir $argv[1]
-              end
+              test -z $dir && set dir (basename (pwd)) || set dir $argv[1]
 
-              if set -q _flag_clip
-                set dir (xclip -o -sel clip)
-              end
+              set -q _flag_clip && set dir (xclip -o -sel clip)
 
-              if set -q _flag_increase; or set -q _flag_decrease
-                set num (string match -r '\d+' $dir)
-                if set -q _flag_increase
-                  set num (math $num+1)
-                else if set _q _flag_decrease
-                  set num (math $num-1)
-                end
-                set dir (string replace -r '\d+' $num $dir)
-              end
+              set -q _flag_increase && set dir (echo $dir | perl -pe 's/(\d+)/$1+1/eg' )
+              set -q _flag_decrease && set dir (echo $dir | perl -pe 's/(\d+)/$1-1/eg' )
 
-              if set -q _flag_copy
-                xclip-copyfile .
-              end
+              set -q _flag_copy && xclip-copyfile .
 
-              if set -q _flag_parent
-                set dir "../$dir"
-              end
+              set -q _flag_parent && set dir "../$dir"
 
-              if test -n "$dir"
-                mkdir -p "$dir"
-                cd "$dir"
-
-                if set -q _flag_copy
-                  xclip-pastefile
-                end
-              end
+              test -n $dir && mkdir -p $dir && cd $dir && set -q _flag_copy && xclip-pastefile
             '';
           };
           tstickers = {
