@@ -31,15 +31,14 @@ pog.pog {
     mpv
   ];
 
-  script =
-    helpers: with helpers; ''
-      if ${flag "audio"}; then
-        mkdir -p "$audio_dir" > /dev/null 2>&1
-        yt-dlp --trim-filenames 50 --no-write-subs --no-embed-subs --no-write-auto-subs -P "$audio_dir" -f 'ba' -x --audio-format mp3 "$1"
-      else
-        filename=$(yt-dlp --print filename --no-simulate -P ~/.cache/yt-dlp "$1")
-        mpv --speed=3 "$filename"
-        rm "$filename"
-      fi
-    '';
+  script = ''
+    if [[ $audio ]]; then
+      mkdir -p "$audio_dir" > /dev/null 2>&1
+      yt-dlp --trim-filenames 50 --no-write-subs --no-embed-subs --no-write-auto-subs -P "$audio_dir" -f 'ba' -x --audio-format mp3 "$1"
+    else
+      filename=$(yt-dlp --print filename --no-simulate -P ~/.cache/yt-dlp "$1")
+      mpv --speed=3 "$filename"
+      rm "$filename"
+    fi
+  '';
 }

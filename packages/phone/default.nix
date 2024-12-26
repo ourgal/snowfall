@@ -64,61 +64,60 @@ pog.pog {
     buku
   ];
 
-  script =
-    helpers: with helpers; ''
-      chooseDevice() {
-        declare -r devices=$(kdeconnect-cli --list-available --name-only)
-        echo "$devices" | fzf
-      }
+  script = ''
+    function chooseDevice {
+      declare -r devices=$(kdeconnect-cli --list-available --name-only)
+      echo "$devices" | fzf
+    }
 
-      sendClipboard() {
-        kdeconnect-cli --send-clipboard -n "$(chooseDevice)"
-      }
+    function sendClipboard {
+      kdeconnect-cli --send-clipboard -n "$(chooseDevice)"
+    }
 
-      shareFilesOrURL() {
-        kdeconnect-cli --share "$1" -n "$(chooseDevice)"
-      }
+    function shareFilesOrURL {
+      kdeconnect-cli --share "$1" -n "$(chooseDevice)"
+    }
 
-      shareText() {
-        kdeconnect-cli --share-text "$1" -n "$(chooseDevice)"
-      }
+    function shareText {
+      kdeconnect-cli --share-text "$1" -n "$(chooseDevice)"
+    }
 
-      getIP() {
-        ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
-      }
+    function getIP {
+      ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+    }
 
-      getPassword() {
-        gopass show --password "$(gopass search "$1")"
-      }
+    function getPassword {
+      gopass show --password "$(gopass search "$1")"
+    }
 
-      getTab() {
-        bt list | cut -f 3 | fzf
-      }
+    function getTab {
+      bt list | cut -f 3 | fzf
+    }
 
-      getBookmark() {
-        declare -r id=$(buku --nc -p -f 3 | fzf | cut -f 1)
-        buku --nc -p "$id" -f 10
-      }
+    function getBookmark {
+      declare -r id=$(buku --nc -p -f 3 | fzf | cut -f 1)
+      buku --nc -p "$id" -f 10
+    }
 
-      if ${flag "serve"}; then
-        shareFilesOrURL "$(getIP):8080"
-        miniserve --dirs-first -upload-files --mkdir --hidden "$file"
-      elif ${flag "file"}; then
-        shareFilesOrURL "$file"
-      elif ${flag "url"}; then
-        shareFilesOrURL "$url"
-      elif ${flag "text"}; then
-        shareText "$text"
-      elif ${flag "tab"}; then
-        shareFilesOrURL "$(getTab)"
-      elif ${flag "bookmark"}; then
-        shareFilesOrURL "$(getBookmark)"
-      elif ${flag "password"}; then
-        shareText "$(getPassword "$password")"
-      elif ${flag "clip"}; then
-        sendClipboard
-      else
-        sendClipboard
-      fi
-    '';
+    if [[ $serve ]]; then
+      shareFilesOrURL "$(getIP):8080"
+      miniserve --dirs-first -upload-files --mkdir --hidden "$file"
+    elif [[ $file ]]; then
+      shareFilesOrURL "$file"
+    elif [[ $url ]]; then
+      shareFilesOrURL "$url"
+    elif [[ $text ]]; then
+      shareText "$text"
+    elif [[ $tab ]]; then
+      shareFilesOrURL "$(getTab)"
+    elif [[ $bookmark ]]; then
+      shareFilesOrURL "$(getBookmark)"
+    elif [[ $password ]]; then
+      shareText "$(getPassword "$password")"
+    elif [[ $clip ]]; then
+      sendClipboard
+    else
+      sendClipboard
+    fi
+  '';
 }

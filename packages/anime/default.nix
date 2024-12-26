@@ -47,21 +47,20 @@ pog.pog {
     pkgs.${namespace}.tewi
   ];
 
-  script =
-    helpers: with helpers; ''
-      if ${flag "watch"}; then
-        viddy transmission-remote --list
-      elif ${flag "clear"}; then
-        ids=$(transmission-remote --list | awk 'NR > 1 && $1 != "Sum:" && $2 == "100%" {print $1}' | sed 's/\*//')
-        for id in $ids; do
-          transmission-remote -t "$id" -r
-        done
-      elif ${flag "delete"}; then
-        transmission-remote -t "$delete" -r
-      elif ${flag "add"}; then
-        transmission-remote -w "$download_dir" --trash-torrent --add "$add"
-      else
-        tewi
-      fi
-    '';
+  script = ''
+    if [[ $watch ]]; then
+      viddy transmission-remote --list
+    elif [[ $clear ]]; then
+      ids=$(transmission-remote --list | awk 'NR > 1 && $1 != "Sum:" && $2 == "100%" {print $1}' | sed 's/\*//')
+      for id in $ids; do
+        transmission-remote -t "$id" -r
+      done
+    elif [[ $delete ]]; then
+      transmission-remote -t "$delete" -r
+    elif [[ $add ]]; then
+      transmission-remote -w "$download_dir" --trash-torrent --add "$add"
+    else
+      tewi
+    fi
+  '';
 }
