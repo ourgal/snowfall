@@ -1079,3 +1079,7 @@ fetch.github = "maximtrp/ranger-archives"
 [fish-ranger-cd]
 src.git = "https://github.com/sei40kr/fish-ranger-cd"
 fetch.github = "sei40kr/fish-ranger-cd"
+
+[jj-fzf]
+src.github = "tim-janik/jj-fzf"
+fetch.github = "tim-janik/jj-fzf"

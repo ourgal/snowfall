@@ -1398,6 +1398,17 @@
     };
     date = "2024-12-04";
   };
+  jj-fzf = {
+    pname = "jj-fzf";
+    version = "v0.24.0";
+    src = fetchFromGitHub {
+      owner = "tim-janik";
+      repo = "jj-fzf";
+      rev = "v0.24.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-naYedpY4bioJ1onn/8hQjkx8sKCgPXQP3nRbneVulcU=";
+    };
+  };
   kbgrep = {
     pname = "kbgrep";
     version = "v0.2.1";
