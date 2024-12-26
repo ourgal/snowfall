@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "jj-fzf";
     progs = {
       jujutsu.settings = {
         user = {

@@ -2495,6 +2495,27 @@
         },
         "version": "f997596fc14fed328968f3ab27c777d001830efd"
     },
+    "jj-fzf": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "jj-fzf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tim-janik",
+            "repo": "jj-fzf",
+            "rev": "v0.24.0",
+            "sha256": "sha256-naYedpY4bioJ1onn/8hQjkx8sKCgPXQP3nRbneVulcU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.24.0"
+    },
     "kbgrep": {
         "cargoLocks": null,
         "date": null,
