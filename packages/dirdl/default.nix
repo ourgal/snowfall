@@ -29,18 +29,17 @@ pog.pog {
     aria2
   ];
 
-  script =
-    helpers: with helpers; ''
-      clipboard2urls() {
-        mkdir -p "$dir"
-        xclip -o -sel clip > "$dir/urls.txt"
-      }
+  script = ''
+    function clipboard2urls {
+      mkdir -p "$dir"
+      xclip -o -sel clip > "$dir/urls.txt"
+    }
 
-      if ${flag "clip"}; then
-        clipboard2urls
-        exit
-      fi
+    if [[ $clip ]]; then
+      clipboard2urls
+      exit
+    fi
 
-      find . -type d -execdir bash -c 'cd "$1" && test -e urls.txt && aria2c --input-file urls.txt && rm urls.txt' shell {} \;
-    '';
+    find . -type d -execdir bash -c 'cd "$1" && test -e urls.txt && aria2c --input-file urls.txt && rm urls.txt' shell {} \;
+  '';
 }

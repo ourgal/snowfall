@@ -20,21 +20,19 @@ pog.pog {
     }
   ];
 
-  script =
-    helpers: with helpers; ''
-      get_sink_id() {
-        id="$(pactl list sinks short | grep "$1" | cut -f 1)"
-        echo "$id"
-      }
+  script = ''
+    function get_sink_id {
+      pactl list sinks short | grep "$1" | cut -f 1
+    }
 
-      if ${flag "on"}; then
-        roc="$(get_sink_id roc-sink)"
-        pactl set-default-sink "$roc"
-      elif ${flag "off"}; then
-        speak="$(get_sink_id analog-stereo)"
-        pactl set-default-sink "$speak"
-      else
-        help
-      fi
-    '';
+    if [[ $on ]]; then
+      roc=$(get_sink_id roc-sink)
+      pactl set-default-sink "$roc"
+    elif [[ $off ]]; then
+      speak=$(get_sink_id analog-stereo)
+      pactl set-default-sink "$speak"
+    else
+      help
+    fi
+  '';
 }
