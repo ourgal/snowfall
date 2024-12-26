@@ -23,6 +23,7 @@ args.module (
         buku = ln "${sync}/buku";
         jrnl = ln "${sync}/jrnl";
       };
+      files.Music = ln "${sync}/music";
     }
   )
 )

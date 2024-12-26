@@ -42,7 +42,7 @@ let
       doom = desktops ++ syncthing;
       lazyvim = desktops ++ syncthing;
       lvim = desktops ++ syncthing;
-      music_download_dl = desktops ++ syncthing;
+      music = desktops ++ syncthing;
       nap = desktops ++ syncthing;
       task = desktops ++ syncthing;
       todo = desktops ++ syncthing;
