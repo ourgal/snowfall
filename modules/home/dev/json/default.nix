@@ -16,7 +16,6 @@ args.module (
       "jello"
       "jid"
       "jiq"
-      "jj"
       "jless"
       "jnv"
       "jo"
