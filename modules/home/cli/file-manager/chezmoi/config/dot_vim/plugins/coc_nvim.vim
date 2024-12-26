@@ -52,7 +52,7 @@ nnoremap <silent> K :call ShowDocumentation()<CR>
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming
-nnoremap R <plug>(coc-rename)
+nnoremap <leader>R <plug>(coc-rename)
 
 " Formatting selected code
 " xmap <leader>f  <Plug>(coc-format-selected)

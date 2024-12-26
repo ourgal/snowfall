@@ -1,2 +1,2 @@
-nnoremap r <plug>(SubversiveSubstitute)
-xnoremap r <plug>(SubversiveSubstitute)
+nnoremap R <plug>(SubversiveSubstitute)
+xnoremap R <plug>(SubversiveSubstitute)
