@@ -1,0 +1,5 @@
+font-family = "FiraCode Nerd Font Mono"
+cursor-style = bar
+background-opacity = 0.8
+window-decoration = false
+auto-update = off
