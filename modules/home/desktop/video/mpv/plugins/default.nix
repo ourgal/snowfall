@@ -11,10 +11,13 @@ args.module (
       progs.mpv = {
         scripts =
           with' pkgs.mpvScripts [
+            # keep-sorted start
+            "manga-reader"
             "mpris"
             "quack"
             "thumbfast"
             "uosc"
+            # keep-sorted end
           ]
           ++ with' pkgs.${namespace} [
             "mpv-smartskip"
