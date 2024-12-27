@@ -8,5 +8,6 @@ args.module (
       "powershell"
       # keep-sorted end
     ];
+    confs.powershell = ./Microsoft.PowerShell_profile.ps1;
   }
 )
