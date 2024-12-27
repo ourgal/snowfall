@@ -17,7 +17,6 @@ args.module (
             "uosc"
           ]
           ++ with' pkgs.${namespace} [
-            "mpv-smartcopypaste_ii"
             "mpv-smartskip"
             "mpv-M-x"
             # "mpv-btfs-stream"
