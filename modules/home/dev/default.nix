@@ -115,6 +115,7 @@ args.module (
         "nodejs"
         "org-mode"
         "perl"
+        "powershell"
         "python"
         "regex"
         "ruby"
