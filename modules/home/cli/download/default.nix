@@ -30,6 +30,7 @@ args.module (
       "eget"
       "gallery-dl"
       "nyaa"
+      "raw_novel_illustrations"
       "transmission"
       "yt-dlp"
       # keep-sorted end

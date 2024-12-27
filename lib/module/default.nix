@@ -225,7 +225,16 @@ rec {
                     filename = builtins.baseNameOf value;
                     extension = lib.lists.last (lib.strings.splitString "." filename);
                     nameFinal = if (name != "") then name + "/" else "";
-                    executable = if (builtins.elem extension [ "sh" ]) then true else false;
+                    executable =
+                      if
+                        (builtins.elem extension [
+                          "sh"
+                          "e"
+                        ])
+                      then
+                        true
+                      else
+                        false;
                   in
                   {
                     "${nameFinal}${filename}" = {
