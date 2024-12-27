@@ -16,6 +16,7 @@ args.module (
       "qview"
       "sxiv"
       "viewnior"
+      "yacreader"
       # keep-sorted end
     ];
     enable = [
