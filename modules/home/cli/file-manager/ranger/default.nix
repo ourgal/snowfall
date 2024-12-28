@@ -13,6 +13,8 @@ args.module (
             ex = "extract";
             ec = "compress";
             DD = "shell rip %s";
+            gd = "cd ~/Downloads";
+            "g." = "cd ~/.config";
           };
           rifle = [
             {
@@ -44,6 +46,21 @@ args.module (
           ];
           extraConfig = ''
             default_linemode devicons2
+            unmap gL
+            unmap gl
+            unmap g/
+            unmap gr
+            unmap gR
+            unmap ge
+            unmap gm
+            unmap gM
+            unmap g?
+            unmap go
+            unmap gs
+            unmap gp
+            unmap gu
+            unmap gv
+            unmap gi
           '';
         };
         fish = {
