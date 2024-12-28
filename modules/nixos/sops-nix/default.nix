@@ -43,6 +43,10 @@ let
           inherit owner mode;
           path = "/home/${owner}/.config/telegram/bot1";
         };
+        "mpdscribble/conf" = {
+          inherit owner mode;
+          path = "/home/${owner}/.mpdscribble/mpdscribble.conf";
+        };
       };
     };
   };
