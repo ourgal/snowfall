@@ -3,7 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "focus-timer";
     nixPkgs = [
       # keep-sorted start
       "comodoro"
@@ -11,6 +10,11 @@ args.module (
       "openpomodoro-cli"
       # keep-sorted end
     ];
-    enable = "openpomodoro-cli";
+    enable = [
+      # keep-sorted start
+      "focus-timer"
+      "openpomodoro-cli"
+      # keep-sorted end
+    ];
   }
 )
