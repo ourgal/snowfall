@@ -10,11 +10,6 @@ args.module (
       "openpomodoro-cli"
       # keep-sorted end
     ];
-    enable = [
-      # keep-sorted start
-      "focus-timer"
-      "openpomodoro-cli"
-      # keep-sorted end
-    ];
+    enable = "focus-timer";
   }
 )
