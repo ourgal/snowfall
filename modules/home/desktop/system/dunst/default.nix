@@ -7,17 +7,29 @@ args.module (
     in
     {
       path = ./.;
-      servs.dunst.settings = {
-        global = {
-          font = "Iosevka Nerd Font 14";
+      servs.dunst = {
+        iconTheme = {
+          name = "Adwaita";
+          package = pkgs.adwaita-icon-theme;
         };
-        play_sound = {
-          summary = "*";
-          script = toString (
-            pkgs.writeShellScript "alert" ''
-              ${pkgs.pulseaudio}/bin/paplay ~/.config/dunst/mp3_CARTOON_BELL_Medium_Size_Ring_Tinkle_Fast_Sequence_02.mp3
-            ''
-          );
+        settings = {
+          global = {
+            font = "Iosevka Nerd Font 14";
+          };
+          play_sound = {
+            summary = "*";
+            script = toString (
+              # https://dunst-project.org/documentation/#SCRIPTING
+              pkgs.writeShellScript "alert" ''
+                BELL=~/.config/dunst/mp3_CARTOON_BELL_Medium_Size_Ring_Tinkle_Fast_Sequence_02.mp3
+
+                [[ $DUNST_SUMMARY == "MPD Notification" ]] && exit
+                [[ $DUNST_SUMMARY == "Espanso" ]] && exit
+
+                ${pkgs.pulseaudio}/bin/paplay "$BELL"
+              ''
+            );
+          };
         };
       };
       confs.dunst = ./mp3_CARTOON_BELL_Medium_Size_Ring_Tinkle_Fast_Sequence_02.mp3;
