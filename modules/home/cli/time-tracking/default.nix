@@ -3,6 +3,13 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "comodoro";
+    nixPkgs = [
+      # keep-sorted start
+      "comodoro"
+      "klog-time-tracker"
+      "openpomodoro-cli"
+      # keep-sorted end
+    ];
+    enable = "openpomodoro-cli";
   }
 )
