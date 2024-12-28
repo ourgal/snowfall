@@ -3,18 +3,8 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = [
-      # keep-sorted start
-      "grit"
-      "klog-time-tracker"
-      # keep-sorted end
-    ];
-    myPkgs = [
-      # keep-sorted start
-      "focus-timer"
-      "rust-kankan"
-      # keep-sorted end
-    ];
+    nixPkgs = "grit";
+    myPkgs = "rust-kankan";
     enable = [
       # keep-sorted start
       "eureka"
