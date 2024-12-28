@@ -36,9 +36,12 @@ args.module (
         '';
       };
       enable = [
+        # keep-sorted start
         "http"
-        "mpd-notification"
         "mpd-mpris"
+        "mpd-notification"
+        "mpdscribble"
+        # keep-sorted end
       ];
       value = {
         xdg.userDirs = enabled // {
