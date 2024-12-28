@@ -13,6 +13,7 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
+      "espeak"
       "id3v2"
       "normalize"
       "openai-whisper-cpp"
