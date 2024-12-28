@@ -21,6 +21,7 @@ args.module (
       "lux"
       "tdl"
       "tremc"
+      "wget"
       "wget2"
       "xidel"
       # keep-sorted end
