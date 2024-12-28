@@ -28,6 +28,7 @@ args.module (
       "tran"
       "tty-share"
       "webwormhole"
+      "wgetpaste"
       "wush"
       # keep-sorted end
     ];
