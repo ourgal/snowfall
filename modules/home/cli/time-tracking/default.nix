@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "focus-timer";
     nixPkgs = [
       # keep-sorted start
       "comodoro"
