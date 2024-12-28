@@ -84,6 +84,11 @@ args.module (
         }
       ];
 
+      openpomodoro =
+        if config.${namespace}.cli.time-tracking.openpomodoro-cli.enable then
+          "set -ga status-left '#[bg=#(pomodoro tmux-color)]🍅'"
+        else
+          "";
     in
     {
       path = ./.;
@@ -120,6 +125,7 @@ args.module (
               # status left look and feel
               set -g status-left-length 100
               set -g status-left ""
+              ${openpomodoro}
               set -ga status-left "#{?client_prefix,#{#[bg=#{@thm_red},fg=#{@thm_bg},bold] #S },#{#[bg=#{@thm_bg},fg=#{@thm_blue}] #S }}"
               set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_overlay_0},none]│"
               set -ga status-left "#[bg=#{@thm_bg},fg=#{@thm_maroon}]#{E:@catppuccin_gitmux_text}"

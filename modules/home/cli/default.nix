@@ -55,6 +55,7 @@ args.module (
       "string"
       "system"
       "task"
+      "time-tracking"
       "timezone"
       "translate"
       "tui"
