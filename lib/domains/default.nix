@@ -16,6 +16,7 @@ let
     "rustypaste"
     "searx"
     "soft-serve"
+    "subconverter"
     "syncthing"
     "vaultwarden"
     "yacd"
