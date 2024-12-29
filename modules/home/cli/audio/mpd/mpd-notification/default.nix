@@ -10,7 +10,6 @@ args.module (
       systemdServices.mpd-notification = {
         Unit = {
           Requires = "dbus.socket";
-          PartOf = "graphical-session.target";
           After = [
             "mpd.service"
             "network.target"
@@ -21,7 +20,7 @@ args.module (
           ConditionUser = "!@system";
         };
         type = "notify";
-        restart = "on-failure";
+        restart = "always";
         start = "${pkgs.mpd-notification}/bin/mpd-notification";
       };
     }
