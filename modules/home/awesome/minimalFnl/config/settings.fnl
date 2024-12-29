@@ -47,7 +47,9 @@
                                                :key :o
                                                :enable true}
                               :on_top {:modkey [modkey] :key :t :enable true}
-                              :minimize {:modkey [modkey] :key :n :enable true}
+                              :minimize {:modkey [modkey]
+                                         :key :n
+                                         :enable false}
                               :maximize {:modkey [modkey] :key :m :enable true}
                               :maximize_vertical {:modkey [modkey :Control]
                                                   :key :m
