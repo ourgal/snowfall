@@ -1,6 +1,6 @@
 % music
 
 # beets inport mp3
-beet import --move "<mp3>"
+source="<files>"; mp3="${source%.*}.mp3"; [[ ${source##*.} != "mp3" ]] && ffmpeg -i "$source" -f wav - | lame -V 2 --noreplaygain - "$mp3" && rm "$source"; beet import --move "$mp3"
 
-$ mp3: ls *.mp3
+$ files: ls *.{mp3,flac,wav,m4a}
