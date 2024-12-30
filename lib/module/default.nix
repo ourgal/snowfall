@@ -358,7 +358,8 @@ rec {
                   // (if (value ? restart) then { Restart = value.restart; } else { Restart = "always"; })
                   // (if (value ? reload) then { ExecReload = value.reload; } else { })
                   // (if (value ? start) then { ExecStart = value.start; } else { })
-                  // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { });
+                  // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { })
+                  // (if (value ? env) then { Environment = value.env; } else { });
               } // value;
             in
             acc
@@ -378,6 +379,7 @@ rec {
                       "nice"
                       "startPre"
                       "after"
+                      "env"
                     ]
                   ) newVal
                 else
