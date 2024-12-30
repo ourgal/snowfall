@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "espeak"
       "id3v2"
+      "lame"
       "normalize"
       "openai-whisper-cpp"
       "pamixer"
