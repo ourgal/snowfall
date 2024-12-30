@@ -39,6 +39,7 @@ args.module (
         # keep-sorted start
         "http"
         "mpd-mpris"
+        "ympd"
         # keep-sorted end
       ];
       value = {
