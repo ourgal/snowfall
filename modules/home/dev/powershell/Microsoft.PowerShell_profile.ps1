@@ -13,6 +13,10 @@ carapace _carapace | Out-String | Invoke-Expression
 # aliae
 aliae init pwsh | Invoke-Expression
 
+# first download online help files
 if (!(Test-Path "~/.local/share/powershell/Help")){
     Update-Help
 }
+
+# parameter color
+Set-PSReadLineOption -Colors @{ "parameter"="darkgreen" }
