@@ -39,8 +39,6 @@ args.module (
         # keep-sorted start
         "http"
         "mpd-mpris"
-        "mpd-notification"
-        "mpdscribble"
         # keep-sorted end
       ];
       value = {
