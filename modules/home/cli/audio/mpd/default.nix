@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) enabled lib namespace;
+      inherit (args) enabled;
     in
     {
       path = ./.;
@@ -16,12 +16,6 @@ args.module (
         "vimpc"
         # keep-sorted end
       ];
-      progs.ncmpcpp.bindings = lib.${namespace}.mkNcmpcppBindings {
-        j = "scroll_down";
-        k = "scroll_up";
-        l = "next_column";
-        h = "previous_column";
-      };
       servs.mpd = {
         network = {
           listenAddress = "any";
@@ -43,6 +37,7 @@ args.module (
         "http"
         "mpd-mpris"
         "mympd"
+        "ncmpcpp"
         "sptlrx"
         # keep-sorted end
       ];
