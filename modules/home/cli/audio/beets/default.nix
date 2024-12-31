@@ -12,10 +12,13 @@ args.module (
       path = ./.;
       progs.beets = {
         settings = {
-          "plugins" = "fromfilename chroma lyrics fish convert";
-          "convert" = {
+          plugins = "fromfilename chroma lyrics fish convert";
+          convert = {
             "command" = "${gapless} $source $dest";
             "extension" = "mp3";
+          };
+          lyrics = {
+            synced = "yes";
           };
         };
         package = (
