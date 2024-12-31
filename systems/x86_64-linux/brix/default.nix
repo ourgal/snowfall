@@ -24,9 +24,7 @@ in
     nh = enabled;
     sops-nix = enabled;
     nfs = enabled;
-    caddy = enabled // {
-      xcaddy = enabled;
-    };
+    caddy = enabled;
     logrotate = enabled;
     soft-serve = enabled;
     atuin = enabled;
