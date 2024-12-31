@@ -12,6 +12,7 @@ args.module (
         "mmtc"
         "mpc-cli"
         "pms"
+        "rmpc"
         "vimpc"
         # keep-sorted end
       ];
