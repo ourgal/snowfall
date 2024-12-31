@@ -40,6 +40,7 @@ args.module (
         "http"
         "mpd-mpris"
         "mympd"
+        "sptlrx"
         # keep-sorted end
       ];
       value = {
