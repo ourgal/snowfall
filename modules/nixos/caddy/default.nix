@@ -49,7 +49,14 @@ let
       })
     else
       mkDockerProxy { inherit docker host; };
-  package = if cfg.xcaddy.enable then xcaddy else pkgs.caddy;
+  package =
+    if cfg.xcaddy.enable then
+      xcaddy
+    else
+      pkgs.caddy.withPlugins {
+        plugins = [ "github.com/caddy-dns/duckdns@v0.4.0" ];
+        hash = "sha256-KZmdqTnLiS3XdHsqvEIrWyfQNDq1qJrVgMfFjgvOUo0=";
+      };
   value = {
     services.caddy = enabled // {
       virtualHosts = virtualHosts // {

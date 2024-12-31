@@ -91,6 +91,10 @@
       url = "github:ghostty-org/ghostty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    caddy-nix = {
+      url = "github:vincentbernat/caddy-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -149,6 +153,7 @@
         nvfetcher.overlays.default
         nix-vscode-extensions.overlays.default
         pog.overlays.${system}.default
+        caddy-nix.overlays.default
       ];
 
       # Add modules to all NixOS systems.
