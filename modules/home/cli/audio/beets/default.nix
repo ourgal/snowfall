@@ -12,7 +12,7 @@ args.module (
       path = ./.;
       progs.beets = {
         settings = {
-          plugins = "fromfilename chroma lyrics fish convert";
+          plugins = "fromfilename chroma lyrics fish convert fetchart embedart";
           convert = {
             "command" = "${gapless} $source $dest";
             "extension" = "mp3";
