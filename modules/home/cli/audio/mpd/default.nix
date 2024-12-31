@@ -38,6 +38,7 @@ args.module (
       };
       enable = [
         # keep-sorted start
+        "ashuffle"
         "http"
         "mpd-mpris"
         "mympd"
