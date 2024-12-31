@@ -7,7 +7,7 @@ let
     config
     ;
   inherit (lib.${namespace}) nixosModule enabled domains;
-  Port = 5000;
+  port = 5000;
   user = config.${namespace}.user.name;
   group = "kavita";
   defaultGroup = "kavita";
@@ -15,7 +15,7 @@ let
   dataDir = "/home/${user}/.config/kavita";
   package = pkgs.kavita;
   settings = {
-    inherit Port;
+    Port = port;
   };
   tokenKeyFile = "/run/secrets/kavita/token";
   settingsFormat = pkgs.formats.json { };
@@ -58,10 +58,11 @@ let
     services.caddy = enabled // {
       virtualHosts = {
         "http://${domains.kavita}".extraConfig = ''
-          reverse_proxy http://localhost:${toString Port}
+          reverse_proxy http://localhost:${toString port}
         '';
       };
     };
+    networking.firewall.allowedTCPPorts = [ port ];
   };
   path = ./.;
   _args = {
