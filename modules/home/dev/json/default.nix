@@ -29,6 +29,7 @@ args.module (
       "miller"
       "remarshal"
       "rq"
+      "spruce"
       "visidata"
       "yj"
       "yq-go"
