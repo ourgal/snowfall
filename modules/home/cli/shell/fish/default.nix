@@ -23,6 +23,10 @@ args.module (
             set fish_greeting
             scheme set tokyonight
             set -Ux fish_key_bindings fish_vi_key_bindings
+
+            # slashslash-fish
+            slashslash plugin --unregister buck
+            slashslash enable make
           '';
         shellAbbrs = {
           sc = "systemctl";
@@ -117,6 +121,7 @@ args.module (
           "fzf"
           "puffer"
           "rgg.fish"
+          "slashslash-fish"
           "sponge"
           "to-fish"
           "todo-comments.fish"

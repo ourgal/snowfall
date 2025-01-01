@@ -1083,3 +1083,7 @@ fetch.github = "sei40kr/fish-ranger-cd"
 [jj-fzf]
 src.github = "tim-janik/jj-fzf"
 fetch.github = "tim-janik/jj-fzf"
+
+[slashslash-fish]
+src.git = "https://github.com/ourgal/slashslash.fish"
+fetch.github = "ourgal/slashslash.fish"
