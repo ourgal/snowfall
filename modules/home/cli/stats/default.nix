@@ -6,6 +6,7 @@ args.module (
     enable = [
       # keep-sorted start
       "btop"
+      "gotop"
       "htop"
       # keep-sorted end
     ];
