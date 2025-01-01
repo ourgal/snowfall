@@ -2265,6 +2265,18 @@
     };
     date = "2024-12-04";
   };
+  slashslash-fish = {
+    pname = "slashslash-fish";
+    version = "64d29b229f77e5f01562370f310edc3fcaa5ca1c";
+    src = fetchFromGitHub {
+      owner = "ourgal";
+      repo = "slashslash.fish";
+      rev = "64d29b229f77e5f01562370f310edc3fcaa5ca1c";
+      fetchSubmodules = false;
+      sha256 = "sha256-5MyDN3NyDKcEn5zUNDq3VZaBM9Mm3wCBuCLTbHP65O4=";
+    };
+    date = "2025-01-01";
+  };
   soba = {
     pname = "soba";
     version = "1.2.21";

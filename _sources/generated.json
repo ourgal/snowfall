@@ -4037,6 +4037,27 @@
         },
         "version": "7a6b5d69a66206e937405e55ac076e12117ceff7"
     },
+    "slashslash-fish": {
+        "cargoLocks": null,
+        "date": "2025-01-01",
+        "extract": null,
+        "name": "slashslash-fish",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ourgal",
+            "repo": "slashslash.fish",
+            "rev": "64d29b229f77e5f01562370f310edc3fcaa5ca1c",
+            "sha256": "sha256-5MyDN3NyDKcEn5zUNDq3VZaBM9Mm3wCBuCLTbHP65O4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "64d29b229f77e5f01562370f310edc3fcaa5ca1c"
+    },
     "soba": {
         "cargoLocks": null,
         "date": null,
