@@ -17,6 +17,7 @@ args.module (
       "pwgen"
       "rage"
       "ssh-to-age"
+      "ssss"
       # keep-sorted end
     ];
     pyPkgs = "names";
