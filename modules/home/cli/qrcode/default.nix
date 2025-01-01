@@ -8,6 +8,7 @@ args.module (
       "clipqr"
       "qrcode"
       "qrcp"
+      "qrencode"
       "qrscan"
       "qrtool"
       "wifi-qr"
