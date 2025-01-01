@@ -10,6 +10,7 @@ args.module (
       "dblab"
       "gobang"
       "harlequin"
+      "lazysql"
       "litecli"
       "sql-studio"
       "sqruff"
