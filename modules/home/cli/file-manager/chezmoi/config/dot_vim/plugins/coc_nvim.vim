@@ -155,3 +155,9 @@ set pumheight=10
 
 nmap <Leader>,t <Plug>(coc-translator-p)
 vmap <Leader>,t <Plug>(coc-translator-pv)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+" let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+" let g:coc_snippet_prev = '<c-k>'
