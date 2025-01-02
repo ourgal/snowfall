@@ -46,7 +46,7 @@
                          (when _G.client.focus
                            (_G.client.focus:raise)))
                        {:description "go back" :group :client})
-   :open_terminal #(key $1 $2 (fn [] (awful.spawn settings.terminal))
+   :open_terminal #(key $1 $2 (fn [] (awful.spawn settings.terminal_cmd))
                         {:description "open a terminal" :group :launcher})
    :increase_master_client #(key $1 $2
                                  (fn [] (awful.tag.incnmaster 1 nil true))

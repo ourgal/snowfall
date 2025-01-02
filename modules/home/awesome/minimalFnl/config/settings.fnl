@@ -17,6 +17,7 @@
   {: tag_num
    : host
    : terminal
+   :terminal_cmd (.. terminal " --single-instance")
    : editor
    :editor_cmd (.. terminal " -e " editor)
    : launcher
