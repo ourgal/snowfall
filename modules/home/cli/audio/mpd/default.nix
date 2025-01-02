@@ -24,10 +24,8 @@ args.module (
         extraConfig = ''
           auto_update "yes"
           audio_output {
-              type        "pulse"
-              name        "My Pulse Output"
-          #   server      "remote_server"     # optional
-          #   sink        "remote_server_sink"    # optional
+                  type            "pipewire"
+                  name            "PipeWire Sound Server"
           }
         '';
       };
