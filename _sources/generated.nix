@@ -517,6 +517,16 @@
       finalImageTag = "v3.3.21";
     };
   };
+  docker-lancommander = {
+    pname = "docker-lancommander";
+    version = "v1.0.4";
+    src = dockerTools.pullImage {
+      imageName = "lancommander/lancommander";
+      imageDigest = "sha256:3114f9115697f5719cbf886501fad1e2779072565f7f30bf45afd5c76a02d6d4";
+      sha256 = "sha256-Re3LcJr/rwuDjkgPkdRXOUEoLalePlC7o8NXesgINi0=";
+      finalImageTag = "v1.0.4";
+    };
+  };
   docker-qd = {
     pname = "docker-qd";
     version = "20240210";

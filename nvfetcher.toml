@@ -1087,3 +1087,7 @@ fetch.github = "tim-janik/jj-fzf"
 [slashslash-fish]
 src.git = "https://github.com/ourgal/slashslash.fish"
 fetch.github = "ourgal/slashslash.fish"
+
+[docker-lancommander]
+src.container = "lancommander/lancommander"
+fetch.docker = "lancommander/lancommander"

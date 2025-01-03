@@ -905,6 +905,26 @@
         },
         "version": "v3.3.21"
     },
+    "docker-lancommander": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-lancommander",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:3114f9115697f5719cbf886501fad1e2779072565f7f30bf45afd5c76a02d6d4",
+            "imageName": "lancommander/lancommander",
+            "imageTag": "v1.0.4",
+            "os": null,
+            "sha256": "sha256-Re3LcJr/rwuDjkgPkdRXOUEoLalePlC7o8NXesgINi0=",
+            "tlsVerify": null
+        },
+        "version": "v1.0.4"
+    },
     "docker-qd": {
         "cargoLocks": null,
         "date": null,
