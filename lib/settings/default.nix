@@ -15,6 +15,7 @@ let
     "home"
     "surface"
   ];
+  windows = [ "nuc" ];
   servers = {
     anki-sync-server = [ "brix" ];
     syncthing = [ "brix" ];
@@ -27,6 +28,7 @@ in
       laptops
       desktops
       servers
+      windows
       ;
     hostType = lib.types.enum allHosts;
   };

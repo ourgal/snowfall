@@ -35,7 +35,7 @@ let
   };
   folders =
     let
-      inherit (lib.${namespace}.settings) desktops;
+      inherit (lib.${namespace}.settings) desktops windows;
       inherit (lib.${namespace}.settings.servers) syncthing;
     in
     {
@@ -47,7 +47,7 @@ let
       task = desktops ++ syncthing;
       todo = desktops ++ syncthing;
       vim = desktops ++ syncthing;
-      buku = desktops ++ syncthing;
+      buku = desktops ++ windows ++ syncthing;
       jrnl = desktops ++ syncthing;
       books = [ "home" ] ++ syncthing;
       wenku = [ "home" ] ++ syncthing;
