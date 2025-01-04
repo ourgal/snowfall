@@ -157,3 +157,29 @@ Set-PSReadLineKeyHandler -Key Backspace `
 }
 
 #endregion Smart Insert/Delete
+
+if ( (Get-Module -ListAvailable PSFzf) -eq $null ) {
+    Install-Module PSFzf
+}
+
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r' -EnableAliasFuzzyKillProcess
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+
+Set-PSReadLineKeyHandler -Key Ctrl+o `
+                         -BriefDescription FuzzyEdit `
+                         -LongDescription "Fuzzy Edit" `
+                         -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("Invoke-FuzzyEdit")
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+
+Set-PSReadLineKeyHandler -Key Alt+c `
+                         -BriefDescription FuzzyCd `
+                         -LongDescription "Fuzzy Cd" `
+                         -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("Invoke-FuzzySetLocation")
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
