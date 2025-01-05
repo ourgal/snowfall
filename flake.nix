@@ -141,6 +141,7 @@
         allowUnfree = true;
         joypixels.acceptLicense = true;
         allowUnfreePredicate = pkg: builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "nvdia-x11" ];
+        permittedInsecurePackages = [ "openssl-1.1.1w" ]; # for koreader
       };
 
       overlays = with inputs; [
