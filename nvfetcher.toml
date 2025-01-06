@@ -1091,3 +1091,7 @@ fetch.github = "ourgal/slashslash.fish"
 [docker-lancommander]
 src.container = "lancommander/lancommander"
 fetch.docker = "lancommander/lancommander"
+
+[stardict-cn-dicts]
+src.git = "https://github.com/shanyouli/stardict"
+fetch.github = "shanyouli/stardict"

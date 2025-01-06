@@ -2320,6 +2320,18 @@
       sha256 = "sha256-Wyws9I/ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=";
     };
   };
+  stardict-cn-dicts = {
+    pname = "stardict-cn-dicts";
+    version = "3d14395f2ad47d20874ace4835c63f6cb5b2f7f4";
+    src = fetchFromGitHub {
+      owner = "shanyouli";
+      repo = "stardict";
+      rev = "3d14395f2ad47d20874ace4835c63f6cb5b2f7f4";
+      fetchSubmodules = false;
+      sha256 = "sha256-0m1f2UenJhIyJ8qLK4Alq0zV40LF76BfRdJKi4KSPMg=";
+    };
+    date = "2019-11-19";
+  };
   stego = {
     pname = "stego";
     version = "d9d5911f4d2d141fea74936f235a74bf03961c71";
