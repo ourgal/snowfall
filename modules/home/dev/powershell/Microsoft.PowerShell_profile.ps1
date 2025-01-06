@@ -22,7 +22,7 @@ if (!(Test-Path "~/.local/share/powershell/Help")){
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 # parameter color
-Set-PSReadLineOption -Colors @{ "parameter"="darkgreen" }
+Set-PSReadLineOption -Colors @{ "parameter"="Blue"; "operator"="DarkMagenta" }
 
 # PSReadline
 Set-PSReadLineKeyHandler -Key Alt+e -Function ViEditVisually
