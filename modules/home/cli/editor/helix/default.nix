@@ -116,6 +116,7 @@ args.module (
                   Z = ":xa";
                   Q = ":qa!";
                 };
+                "backspace" = "trim_selections";
                 g = {
                   "/" =
                     if tmuxEnabled then
@@ -214,7 +215,6 @@ args.module (
                         "";
                   };
                 };
-                "C-s" = "select_regex";
                 "C-a" = [
                   ":pipe ${toggleBool}"
                   "increment"
@@ -230,12 +230,12 @@ args.module (
                 "$" = "goto_line_end";
                 "^" = "goto_first_nonwhitespace";
                 "0" = "goto_line_start";
-                "/" = "select_regex";
                 "?" = "split_selection";
                 "esc" = [
                   "normal_mode"
                   "collapse_selection"
                 ];
+                "backspace" = "trim_selections";
                 g = {
                   z = [
                     "split_selection_on_newline"
@@ -266,9 +266,7 @@ args.module (
                       "search_selection";
                 };
                 "space" = {
-                  l = {
-                    f = ":fmt";
-                  };
+                  l = { };
                   s = { };
                   S = { };
                   R = { };
@@ -322,7 +320,6 @@ args.module (
                       else
                         "";
                   };
-                  "C-s" = "select_regex";
                   "C-a" = [
                     ":pipe ${toggleBool}"
                     "increment"
