@@ -1,0 +1,6 @@
+% documents
+
+# send to Documents folder
+mv "<files>" ~/Documents
+
+$ files: ls *.{epub,mobi,pdf}
