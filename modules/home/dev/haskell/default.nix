@@ -11,7 +11,6 @@ args.module (
     ];
     nixPkgs = [
       # keep-sorted start
-      "cabal-install"
       "ghc"
       "haskell-language-server"
       "hlint"
@@ -19,6 +18,12 @@ args.module (
       "shake"
       "stack"
       "stylish-haskell"
+      # keep-sorted end
+    ];
+    enable = [
+      # keep-sorted start
+      "cabal"
+      "stack"
       # keep-sorted end
     ];
   }
