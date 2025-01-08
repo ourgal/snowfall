@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    haskellPkgs = "hindent";
+    haskellPkgs = [
+      # keep-sorted start
+      "hasktags"
+      "hindent"
+      # keep-sorted end
+    ];
     nixPkgs = [
       # keep-sorted start
       "cabal-install"
