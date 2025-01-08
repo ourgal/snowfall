@@ -16,6 +16,7 @@ args.module (
       "haskell-language-server"
       "hlint"
       "ormolu"
+      "shake"
       "stack"
       "stylish-haskell"
       # keep-sorted end
