@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "hasktags"
       "hindent"
+      "implicit-hie"
       # keep-sorted end
     ];
     nixPkgs = [
