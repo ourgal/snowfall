@@ -83,7 +83,7 @@ args.module (
                 return
               end
 
-              test -z $dir && set dir (basename (pwd)) || set dir $argv[1]
+              test -z $argv[1] && set dir (basename (pwd)) || set dir $argv[1]
 
               set -q _flag_clip && set dir (xclip -o -sel clip)
 
