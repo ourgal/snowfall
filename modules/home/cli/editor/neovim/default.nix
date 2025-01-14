@@ -8,12 +8,14 @@ args.module (
     {
       path = ./.;
       nixPkgs = [
+        # keep-sorted start
         "fd"
+        "neovim-node-client"
         "ripgrep"
         "tree-sitter"
         "ueberzugpp"
+        # keep-sorted end
       ];
-      nodePkgs = "neovim";
       progs = [
         {
           neovim = {
