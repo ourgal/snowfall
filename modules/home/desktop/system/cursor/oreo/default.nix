@@ -15,7 +15,7 @@ args.module (
           name = "oreo_spark_blue_bordered_cursors";
           size = 24;
         };
-        catppuccin.pointerCursor = disabled;
+        catppuccin.cursors = disabled;
       };
     }
   )

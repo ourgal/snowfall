@@ -4,7 +4,6 @@ args.module (
   // {
     path = ./.;
     progs.kitty = {
-      catppuccin.enable = false;
       themeFile = "Tomorrow_Night_Bright";
       font = {
         name = "FiraCode Nerd Font Mono";
@@ -22,5 +21,6 @@ args.module (
         "ctrl+shift+p>u" = "kitten hints --type url --program @";
       };
     };
+    value.catppuccin.kitty.enable = false;
   }
 )
