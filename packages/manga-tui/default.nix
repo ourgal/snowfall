@@ -8,6 +8,7 @@
   darwin,
   bzip2,
   zstd,
+  dbus,
   _sources,
   namespace,
 }:
@@ -21,6 +22,7 @@ rustPlatform.buildRustPackage (
       openssl
       sqlite
       zstd
+      dbus
     ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
     env = {

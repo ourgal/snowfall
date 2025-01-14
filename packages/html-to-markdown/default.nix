@@ -7,9 +7,7 @@
 buildGoModule {
   inherit (_sources.html-to-markdown) pname version src;
 
-  vendorHash = "sha256-/iIG77PPdkTzWuLMmRPN0Ojxrz4AvEfmaZi+Lo8Ouj0=";
-
-  postInstall = "mv $out/bin/{cli,html2markdown}";
+  vendorHash = "sha256-fpwf0a6PgcZmWONbftcR9875qZox6O7+8bToJgz59Z8=";
 
   ldflags = [
     "-s"

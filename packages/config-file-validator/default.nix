@@ -6,7 +6,7 @@
 buildGoModule {
   inherit (_sources.config-file-validator) pname src version;
 
-  vendorHash = "sha256-GybtH7P1Y/j7MrmokjpzqVdb/Vry+hzlKWorjdjuxUc=";
+  vendorHash = "sha256-TVWOCgQCBCveUbTW04ZKsrG51vup7J7NTU0+790v3Dk=";
 
   ldflags = [
     "-s"
