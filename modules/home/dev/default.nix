@@ -99,6 +99,7 @@ args.module (
       enable = [
         # keep-sorted start
         "android"
+        "ansible"
         "cpp"
         "editorconfig"
         "efm"
