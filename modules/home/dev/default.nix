@@ -126,6 +126,7 @@ args.module (
         "spell"
         "template"
         "toml"
+        "vagrant"
         "vim"
         "yaml"
         # keep-sorted end
