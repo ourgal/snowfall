@@ -28,12 +28,12 @@
             "name": null,
             "owner": "ahoy-cli",
             "repo": "ahoy",
-            "rev": "v2.2.0",
-            "sha256": "sha256-xwjfY9HudxVz3xEEyRPtWysbojtan56ABBL3KgG0J/8=",
+            "rev": "v2.3.0",
+            "sha256": "sha256-PLKogNPA3+7wsO02He8xJXx3ki4pRwpVwo+6ELiKuCY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.2.0"
+        "version": "v2.3.0"
     },
     "akuse": {
         "cargoLocks": null,
@@ -162,12 +162,12 @@
             "name": null,
             "owner": "aviator-co",
             "repo": "av",
-            "rev": "v0.0.46",
-            "sha256": "sha256-DIX5PnjEJRuhonV5cI8GEVMI7Bfj+8/1paA70Mbk1TE=",
+            "rev": "v0.1.3",
+            "sha256": "sha256-2jBbuzMLnQVyd+Ix+laqoH37knMbhyUcGH/HlY5fwZU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.0.46"
+        "version": "v0.1.3"
     },
     "awesome-freedesktop": {
         "cargoLocks": null,
@@ -260,7 +260,7 @@
     },
     "bling": {
         "cargoLocks": null,
-        "date": "2024-06-02",
+        "date": "2024-12-17",
         "extract": null,
         "name": "bling",
         "passthru": null,
@@ -272,12 +272,12 @@
             "name": null,
             "owner": "BlingCorp",
             "repo": "bling",
-            "rev": "19ccfc0daf5edda8bbc508487616d00277a9d954",
-            "sha256": "sha256-6NZSUb7sSBUegSIPIubQUOZG3knzXfnyfEbCoEyggtc=",
+            "rev": "bcfb671248cf9ff636b7fd7d7120d8ed9deaa395",
+            "sha256": "sha256-rhhUsXQ3awjFiEHEG0axilSCWS6pR+w74K/pIfEUc5w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "19ccfc0daf5edda8bbc508487616d00277a9d954"
+        "version": "bcfb671248cf9ff636b7fd7d7120d8ed9deaa395"
     },
     "boilr": {
         "cargoLocks": null,
@@ -377,21 +377,21 @@
             "name": null,
             "owner": "SilenZcience",
             "repo": "cat_win",
-            "rev": "v1.10.1",
-            "sha256": "sha256-lioWMmUaYn309UAfMUJwuMODW0M6MrhF5v/TNZc71xk=",
+            "rev": "v1.10.2",
+            "sha256": "sha256-AJVZdjkyNhl3ZUo2pl8zqlV8A4Cp6xLeL8dZTdfnU/Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.10.1"
+        "version": "v1.10.2"
     },
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./cdo-4a5c743f5893ebb850a922c7fe92c9096130e362/Cargo.lock",
+                "./cdo-2624ea520d2ed1dfe0083b44699d2900a564ff7c/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-12-02",
+        "date": "2025-01-04",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -403,12 +403,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "4a5c743f5893ebb850a922c7fe92c9096130e362",
-            "sha256": "sha256-2QjLVYS96LQaMB15vI1zXogRuJd/FaGkUg1YZxrBQ6s=",
+            "rev": "2624ea520d2ed1dfe0083b44699d2900a564ff7c",
+            "sha256": "sha256-JwpG6soXfNXuO5m9Jl5hWWACPOnNFaPnjSYIlw/EPoo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4a5c743f5893ebb850a922c7fe92c9096130e362"
+        "version": "2624ea520d2ed1dfe0083b44699d2900a564ff7c"
     },
     "chezmoi-vim": {
         "cargoLocks": null,
@@ -528,12 +528,12 @@
             "name": null,
             "owner": "suzuki-shunsuke",
             "repo": "cmdx",
-            "rev": "v1.7.4",
-            "sha256": "sha256-UzAtDTs9KGcImQVU6ve80j68you900ag+aJaVZXF3Dw=",
+            "rev": "v1.7.7",
+            "sha256": "sha256-Z3mGBsLisCoz3/e31e2OcshhVJu440Xz9xEUHJBTtUw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.7.4"
+        "version": "v1.7.7"
     },
     "code-radio-cli": {
         "cargoLocks": {
@@ -643,12 +643,12 @@
             "name": null,
             "owner": "Boeing",
             "repo": "config-file-validator",
-            "rev": "v1.7.1",
-            "sha256": "sha256-WloMMnSxJUKfRHodLYEbxD2adOfRcu7aOud1ziZaUfY=",
+            "rev": "v1.8.0",
+            "sha256": "sha256-vMORG3ieExTXOuFI8lVZzpY5ffN6qfuwsm1mVVjum4A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.7.1"
+        "version": "v1.8.0"
     },
     "convfmt": {
         "cargoLocks": {
@@ -732,12 +732,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v1.0.3",
-            "sha256": "sha256-+c08e3WUWWe57U0STch6PCJLAwZ+rROmIcy3UByDecE=",
+            "rev": "v1.0.5",
+            "sha256": "sha256-Mf67GCPVuU+Rpou2HmbMeDcekqi+VkX4e2dFjrOTlm4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.3"
+        "version": "v1.0.5"
     },
     "datadash": {
         "cargoLocks": null,
@@ -783,7 +783,7 @@
     },
     "devdocs-vim": {
         "cargoLocks": null,
-        "date": "2024-12-03",
+        "date": "2024-12-19",
         "extract": null,
         "name": "devdocs-vim",
         "passthru": null,
@@ -795,12 +795,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "devdocs.vim",
-            "rev": "58f68483b5d9b1bc283557808576ceff71de4a83",
-            "sha256": "sha256-zEOqyhYdp7R8eiJJL+izQGlFF5x3/vaaafmSHBWN8GI=",
+            "rev": "798cc7d26db27906526345af65d900887b9d4160",
+            "sha256": "sha256-k9tCrdru2tGdtJCU7edn/Er7bUUBpgYygxGUSO7RgH8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "58f68483b5d9b1bc283557808576ceff71de4a83"
+        "version": "798cc7d26db27906526345af65d900887b9d4160"
     },
     "dext": {
         "cargoLocks": null,
@@ -876,14 +876,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:b926783665b4c73b0127a908c5947766937fee19f542979e9a6d4a4df472b79a",
+            "imageDigest": "sha256:573e8862f6893804fd4a98781e269459f0d69fa148ede371afd2bf58a2dda289",
             "imageName": "xhofe/alist-aria2",
-            "imageTag": "v3.40.0",
+            "imageTag": "v3.41.0",
             "os": null,
-            "sha256": "sha256-PynChlbKMxK0ldGvnDR7gAiNT6+Ov2neyaQ1x2cLEXQ=",
+            "sha256": "sha256-66iXxKv+XdMjCn1Oa3XhgNpOKaoy7NXCnEG7OwVz6RY=",
             "tlsVerify": null
         },
-        "version": "v3.40.0"
+        "version": "v3.41.0"
     },
     "docker-flaresolverr": {
         "cargoLocks": null,
@@ -1151,12 +1151,12 @@
             "name": null,
             "owner": "Benex254",
             "repo": "FastAnime",
-            "rev": "v2.8.4",
-            "sha256": "sha256-08zzcQ3vEZ21rrsBAzzFTvCOv3fBJYBqwsv1aw0hagk=",
+            "rev": "v2.8.7",
+            "sha256": "sha256-cYj26LdaY5+EhjHyvKwjUCZ5DiXpYHQSzlgzFVqaKtM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.8.4"
+        "version": "v2.8.7"
     },
     "fc-fish": {
         "cargoLocks": null,
@@ -1412,7 +1412,7 @@
     },
     "fishbang": {
         "cargoLocks": null,
-        "date": "2023-08-04",
+        "date": "2025-01-09",
         "extract": null,
         "name": "fishbang",
         "passthru": null,
@@ -1424,12 +1424,12 @@
             "name": null,
             "owner": "brewingweasel",
             "repo": "fishbang",
-            "rev": "0b5ef82ead524a7dd0da5760d8f677b02b35f654",
-            "sha256": "sha256-AbFSUz2C4ru0jclF60JOpzf7xWo0ffahEsM5hkNNtGw=",
+            "rev": "f8d2721ac5508dbda54a666ebf12f1492c478277",
+            "sha256": "sha256-VHtjt3Xobvs0DTXJ1mFU8i84EEsNQv3yqbhjs7c1mNE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0b5ef82ead524a7dd0da5760d8f677b02b35f654"
+        "version": "f8d2721ac5508dbda54a666ebf12f1492c478277"
     },
     "flatpak-compose": {
         "cargoLocks": null,
@@ -1445,12 +1445,12 @@
             "name": null,
             "owner": "faan11",
             "repo": "flatpak-compose",
-            "rev": "0.4.0",
-            "sha256": "sha256-BpsEelrtb5yWRiP70/wIsrYWS2aFl6tUFbQ8ChTrj+s=",
+            "rev": "0.4.1",
+            "sha256": "sha256-lRjH9Kj8WuZdW5eQFmn5La3nmFznoQeRI4KrP64HhsE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.4.0"
+        "version": "0.4.1"
     },
     "focus": {
         "cargoLocks": null,
@@ -1523,12 +1523,12 @@
             "name": null,
             "owner": "BartSte",
             "repo": "fzf-help",
-            "rev": "v2.3.0",
-            "sha256": "sha256-gM+5TQYJp69OOusM+6CO4EXtjexGlfx4rzZFo/+8vv0=",
+            "rev": "v2.3.1",
+            "sha256": "sha256-KjufpK3W+RwvOuB3zTmpa4+33ciut8HJbjG3QPNWPzU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.0"
+        "version": "v2.3.1"
     },
     "fzf-kill": {
         "cargoLocks": null,
@@ -2288,17 +2288,17 @@
             "name": null,
             "owner": "supermariofps",
             "repo": "hatsune-miku-windows-linux-cursors",
-            "rev": "1.2.5",
+            "rev": "1.2.6",
             "sha256": "sha256-OQjjOc9VnxJ7tWNmpHIMzNWX6WsavAOkgPwK1XAMwtE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.2.5"
+        "version": "1.2.6"
     },
     "hexpatch": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./hexpatch-v1.9.3/Cargo.lock",
+                "./hexpatch-v1.9.4/Cargo.lock",
                 {}
             ]
         },
@@ -2314,12 +2314,12 @@
             "name": null,
             "owner": "Etto48",
             "repo": "HexPatch",
-            "rev": "v1.9.3",
-            "sha256": "sha256-UhenCrCVUL6mdEpmTU4e1sIHBS8QXVRtKTMlLah56Zs=",
+            "rev": "v1.9.4",
+            "sha256": "sha256-tVJp8ZFHaHM6Yhty0n5W4ZDKG/L5+8ZcbbTnw2yLEOI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.9.3"
+        "version": "v1.9.4"
     },
     "hl": {
         "cargoLocks": null,
@@ -2335,12 +2335,12 @@
             "name": null,
             "owner": "pamburus",
             "repo": "hl",
-            "rev": "v0.29.9",
-            "sha256": "sha256-HVfbUw3kUgWA1MUV9Df3FZeRykXMEei+tEGx+tqWNWw=",
+            "rev": "v0.30.2",
+            "sha256": "sha256-wYL3CFBj2k6YDSvWlcUdEnV20WIieCbvAW/PCTMXqPU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.29.9"
+        "version": "v0.30.2"
     },
     "hledger-fmt": {
         "cargoLocks": null,
@@ -2356,12 +2356,12 @@
             "name": null,
             "owner": "mondeja",
             "repo": "hledger-fmt",
-            "rev": "v0.2.1",
-            "sha256": "sha256-ZZUEJzceBTt4ObiEJU1WUC0Ic+LijiyAeeVVhxUp7vw=",
+            "rev": "v0.2.3",
+            "sha256": "sha256-fhFfYdJqsvVpw0jep9QeUTcqjUp12ojDthBadeYPVPY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.1"
+        "version": "v0.2.3"
     },
     "hssp": {
         "cargoLocks": null,
@@ -2398,12 +2398,12 @@
             "name": null,
             "owner": "JohannesKaufmann",
             "repo": "html-to-markdown",
-            "rev": "v2.2.1",
-            "sha256": "sha256-PikJxSRasPe3NiMf6QW/MOT22PrH69X739jXcqJ+hAk=",
+            "rev": "v2.2.2",
+            "sha256": "sha256-RiMQsWuPzmWJf5MpF+fhsitc2qKGkOYYpoLjWVIQtf8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.2.1"
+        "version": "v2.2.2"
     },
     "hypergrep": {
         "cargoLocks": null,
@@ -2440,12 +2440,12 @@
             "name": null,
             "owner": "DeadNews",
             "repo": "images-upload-cli",
-            "rev": "v3.0.4",
-            "sha256": "sha256-UHXhudNqyL/efA+7D2BZYsKPHVJ5/ObTH6gEnOn/+bI=",
+            "rev": "v3.0.5",
+            "sha256": "sha256-iK1pB8MTCEXttZU9RdYeF2mmj4FwF5svbxLH5ekQ/cc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v3.0.4"
+        "version": "v3.0.5"
     },
     "is": {
         "cargoLocks": null,
@@ -2550,12 +2550,12 @@
             "name": null,
             "owner": "pcrockett",
             "repo": "kbgrep",
-            "rev": "v0.2.1",
-            "sha256": "sha256-dDGOrfEiihFtHeAkVaeMr9rzVqBvwtSE6KqWHjVrEWg=",
+            "rev": "v0.2.2",
+            "sha256": "sha256-5Pd0C1Dl/1lZ+FXbmu1nVV40HysXXLeVROtfRjqEuT4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.1"
+        "version": "v0.2.2"
     },
     "kdtree": {
         "cargoLocks": null,
@@ -2769,7 +2769,7 @@
     "manga-tui": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./manga-tui-v0.4.0/Cargo.lock",
+                "./manga-tui-v0.5.0/Cargo.lock",
                 {}
             ]
         },
@@ -2785,12 +2785,12 @@
             "name": null,
             "owner": "josueBarretogit",
             "repo": "manga-tui",
-            "rev": "v0.4.0",
-            "sha256": "sha256-Se0f5jfYBmvemrYRKduDr1yT3fB2wfQP1fDpa/qrYlI=",
+            "rev": "v0.5.0",
+            "sha256": "sha256-kmJrr1Gi1z9v2gkFmvcCAtBST+AkofVJSxyvAFnUZKQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.0"
+        "version": "v0.5.0"
     },
     "mdformat-config": {
         "cargoLocks": null,
@@ -2827,12 +2827,12 @@
             "name": null,
             "owner": "hougesen",
             "repo": "mdsf",
-            "rev": "v0.3.2",
-            "sha256": "sha256-AHX0sqiXCsm7E8EgcjVR7rLaSdD5V9RdeXqD7V16hJM=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-GEHGPRddhVRjY220Fdxpf48usskOVXa8djrZ6bdG490=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.2"
+        "version": "v0.4.0"
     },
     "mdtt": {
         "cargoLocks": null,
@@ -2935,7 +2935,7 @@
     },
     "mpv-M-x": {
         "cargoLocks": null,
-        "date": "2024-11-04",
+        "date": "2025-01-07",
         "extract": null,
         "name": "mpv-M-x",
         "passthru": null,
@@ -2947,12 +2947,12 @@
             "name": null,
             "owner": "Seme4eg",
             "repo": "mpv-scripts",
-            "rev": "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b",
-            "sha256": "sha256-hxodo/40Ipj7pSHowDxywCdMo/wTzWLnJU+zhgjYqlc=",
+            "rev": "e691bcebad9a352d31c42d3f1c9cc00a43ee14ca",
+            "sha256": "sha256-FJw8FTFYTW6qYGOnQchqKpdr2+VIyJufqcOmhLeMchQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b2fac4ad7c9e762196de3eeea5c5c884b5e9a05b"
+        "version": "e691bcebad9a352d31c42d3f1c9cc00a43ee14ca"
     },
     "mpv-autoloop": {
         "cargoLocks": null,
@@ -3103,7 +3103,7 @@
     },
     "nix-auto-follow": {
         "cargoLocks": null,
-        "date": "2024-11-03",
+        "date": "2025-01-07",
         "extract": null,
         "name": "nix-auto-follow",
         "passthru": null,
@@ -3115,12 +3115,12 @@
             "name": null,
             "owner": "fzakaria",
             "repo": "nix-auto-follow",
-            "rev": "b6b221222552c7301a1242430d83317a20a5e5f8",
-            "sha256": "sha256-B5OB97AujLCBah0c1vYAUq4IGDtWRR0DwBqrXS8XJlU=",
+            "rev": "21646a12a47769707d46be8ab7be5e22c4f3224a",
+            "sha256": "sha256-UaTTuBs+3+jT360fyfHdjpa4MhSFoMz+D1kp0rr+FwM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b6b221222552c7301a1242430d83317a20a5e5f8"
+        "version": "21646a12a47769707d46be8ab7be5e22c4f3224a"
     },
     "nrf-udev": {
         "cargoLocks": null,
@@ -3152,11 +3152,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-VCVtF6B+AwQ99/6Nz83LNyXdl8uux75SkUOiz6W/Yjs=",
+            "sha256": "sha256-SqH5poaBjIX0AJjNd0kOSmmnx1VH+JO/zLT+hBGs5fc=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.7.2/Numara-5.7.2-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.7.3/Numara-5.7.3-x86_64.AppImage"
         },
-        "version": "5.7.2"
+        "version": "5.7.3"
     },
     "org-export": {
         "cargoLocks": null,
@@ -3303,12 +3303,12 @@
             "name": null,
             "owner": "paololazzari",
             "repo": "play",
-            "rev": "v0.3.3",
-            "sha256": "sha256-l6nYyfNqm3hunNQqteQWAVJSdeJG2O2FPb6IypHw6CA=",
+            "rev": "v0.3.4",
+            "sha256": "sha256-YBLmX40kUgo59/R42g5IABx4oVE0SBCqMhBOnMnVMWo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.3"
+        "version": "v0.3.4"
     },
     "pls": {
         "cargoLocks": null,
@@ -3354,7 +3354,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2024-11-04",
+        "date": "2025-01-08",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3366,12 +3366,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "44ddd5e976a826aa6e974d8a35f6bd440aea1888",
-            "sha256": "sha256-DeJNk3BLyHhngZRQbjPRLm8kxXRyFl354to6W36IZWI=",
+            "rev": "93bbc5c7212e7f64832f0216807703f24d9a9483",
+            "sha256": "sha256-HcuXHlO/0eso9YXJRI7A0SmcB/GoM/W/2GzZw0ykhDo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "44ddd5e976a826aa6e974d8a35f6bd440aea1888"
+        "version": "93bbc5c7212e7f64832f0216807703f24d9a9483"
     },
     "posting": {
         "cargoLocks": null,
@@ -3445,11 +3445,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-y1rDYM6JTOrNacQDGHkAoCxLILaTqd0dZD4e/6uerfk=",
+            "sha256": "sha256-J4s427rsViAR1lnuBfYzRpUbOiSKbzZC4bxoiU6itP8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.3.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.5.tar.gz"
         },
-        "version": "2.10.3"
+        "version": "2.10.5"
     },
     "pydantic-core": {
         "cargoLocks": null,
@@ -3460,11 +3460,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-YqdjNSh5uEqjEFj8kxiEBV/XUInMy9nVi7av0BFBsjU=",
+            "sha256": "sha256-6wJuWkwf7gVyYHIzf/UdHvtvWQkLfakNMOpYYlsf+zk=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.27.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.27.2.tar.gz"
         },
-        "version": "2.27.1"
+        "version": "2.27.2"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -3475,11 +3475,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-4PklRtipkjy4lBaJq/hdZgGowZoj6Xo0spZKLj+BPKA=",
+            "sha256": "sha256-EMnKrTXmS/s8L79woHjA4lzJJJl4LlIAdH+UKgZd7JM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.6.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.7.1.tar.gz"
         },
-        "version": "2.6.1"
+        "version": "2.7.1"
     },
     "pyjokes": {
         "cargoLocks": null,
@@ -3525,7 +3525,7 @@
     },
     "quartz": {
         "cargoLocks": null,
-        "date": "2024-11-17",
+        "date": "2024-12-20",
         "extract": null,
         "name": "quartz",
         "passthru": null,
@@ -3537,12 +3537,12 @@
             "name": null,
             "owner": "vimpostor",
             "repo": "quartz",
-            "rev": "921e7c763416b38ae754a6f0afc223b328cdecac",
-            "sha256": "sha256-nW8217HOB/bDVrAsuEfntkf5EkC5EJO6qL2818jB12s=",
+            "rev": "87e0bd6813cb9cc66b353bb286b4032f447620c2",
+            "sha256": "sha256-1nZFWCuT8k9siQoIxo4lFzjiFfs3lx2f9bVZjtChdw0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "921e7c763416b38ae754a6f0afc223b328cdecac"
+        "version": "87e0bd6813cb9cc66b353bb286b4032f447620c2"
     },
     "radio-go-go": {
         "cargoLocks": null,
@@ -3715,11 +3715,11 @@
     "repoblame": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./repoblame-66c7eb2ce6a62f60be1711e8975c1b582ec39045/Cargo.lock",
+                "./repoblame-20ca80088e5ee838dc23f0fc467b8db28fcbab8c/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-09-15",
+        "date": "2025-01-04",
         "extract": null,
         "name": "repoblame",
         "passthru": null,
@@ -3731,12 +3731,12 @@
             "name": null,
             "owner": "martinn",
             "repo": "repoblame",
-            "rev": "66c7eb2ce6a62f60be1711e8975c1b582ec39045",
-            "sha256": "sha256-CjjDh0Go4gEDFdUHEsTtnIdwR8Aokz0DIMzu/h7tIOA=",
+            "rev": "20ca80088e5ee838dc23f0fc467b8db28fcbab8c",
+            "sha256": "sha256-xInbq62VpjYOMquD1x8ky0v/YdpwYE3Sy3calyJm0Bk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "66c7eb2ce6a62f60be1711e8975c1b582ec39045"
+        "version": "20ca80088e5ee838dc23f0fc467b8db28fcbab8c"
     },
     "rexi": {
         "cargoLocks": null,
@@ -3956,12 +3956,12 @@
             "name": null,
             "owner": "sbsrf",
             "repo": "sbsrf",
-            "rev": "20241116",
-            "sha256": "sha256-Xy/+Xejbdz3/7Bfe8oCxgO9AygOStAzv0OxxAv7u6uM=",
+            "rev": "20250108",
+            "sha256": "sha256-Oi8A3yHg1k3BRQSqX4LUsbZjqnUHJh12cJpFg9VEdjc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "20241116"
+        "version": "20250108"
     },
     "sequin": {
         "cargoLocks": null,
@@ -3977,12 +3977,12 @@
             "name": null,
             "owner": "charmbracelet",
             "repo": "sequin",
-            "rev": "v0.2.0",
-            "sha256": "sha256-uXfpsrjkJ/qdzoaJXY4vJJPEgcnH7wwFvfHskmEK5VA=",
+            "rev": "v0.3.0",
+            "sha256": "sha256-pGZ7QmmPIpXrRcfkbEbTZzHXHtqPwU8Cju9Q2xtSqvw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.0"
+        "version": "v0.3.0"
     },
     "servicer": {
         "cargoLocks": {
@@ -4034,11 +4034,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-7a6b5d69a66206e937405e55ac076e12117ceff7/Cargo.lock",
+                "./simple-completion-language-server-ebd344df0667254622a103a1277405ce5f662724/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-12-04",
+        "date": "2025-01-14",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4050,12 +4050,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "7a6b5d69a66206e937405e55ac076e12117ceff7",
-            "sha256": "sha256-1bGzn8HzhiTuy5hDDnKAbXKNbT4zlRgPy35MxCSMZsQ=",
+            "rev": "ebd344df0667254622a103a1277405ce5f662724",
+            "sha256": "sha256-X5XTkAbl5RKd7uqiJ82M7xG05XYxOXqKuK5RbCE//F8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7a6b5d69a66206e937405e55ac076e12117ceff7"
+        "version": "ebd344df0667254622a103a1277405ce5f662724"
     },
     "slashslash-fish": {
         "cargoLocks": null,
@@ -4258,7 +4258,7 @@
     },
     "svgshift": {
         "cargoLocks": null,
-        "date": "2024-08-20",
+        "date": "2024-12-27",
         "extract": null,
         "name": "svgshift",
         "passthru": null,
@@ -4270,21 +4270,21 @@
             "name": null,
             "owner": "10xJSChad",
             "repo": "svgshift",
-            "rev": "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada",
-            "sha256": "sha256-je9ZbXTFKq3tA3aE0QTu70Sco45rQyLW+lS6//zNCmw=",
+            "rev": "2cb42460e223b878bff97011da879e964cd5cad3",
+            "sha256": "sha256-bJjbWRSgJy1HIWpwSJ6jfezzTfz+obo0S0JJZ7zGh9c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5a24a7e661a6056c994d1bf1b4ef63b8dd506ada"
+        "version": "2cb42460e223b878bff97011da879e964cd5cad3"
     },
     "tabry-rs": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./tabry-rs-9d5533f694478fd35e345f8d8337462c471ddb3e/Cargo.lock",
+                "./tabry-rs-d24f00a7fd927aa33c5542b8d37c38aabba65a96/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-11-13",
+        "date": "2025-01-04",
         "extract": null,
         "name": "tabry-rs",
         "passthru": null,
@@ -4296,12 +4296,12 @@
             "name": null,
             "owner": "evanbattaglia",
             "repo": "tabry-rs",
-            "rev": "9d5533f694478fd35e345f8d8337462c471ddb3e",
-            "sha256": "sha256-NIkuj0w92RyweKHhKrzElwwLr7XdNshpf03GEC4kHdg=",
+            "rev": "d24f00a7fd927aa33c5542b8d37c38aabba65a96",
+            "sha256": "sha256-G1lwV5xafd45ZB2kZUlrY4EOYMnTsSeuew3QwbqAt+8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9d5533f694478fd35e345f8d8337462c471ddb3e"
+        "version": "d24f00a7fd927aa33c5542b8d37c38aabba65a96"
     },
     "tach": {
         "cargoLocks": null,
@@ -4317,12 +4317,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.16.3",
-            "sha256": "sha256-aOifhOxD1dVJsbYIwVmr6G+hmO5F8MoSiAnv8ux0PRQ=",
+            "rev": "v0.20.0",
+            "sha256": "sha256-AdgPJRvcyxy0ExQ533957sCi9y3RF8B5B0X4V4eH8rE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.16.3"
+        "version": "v0.20.0"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -4463,7 +4463,7 @@
     "textpod": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./textpod-0.1.3/Cargo.lock",
+                "./textpod-0.1.4/Cargo.lock",
                 {}
             ]
         },
@@ -4479,12 +4479,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "0.1.3",
-            "sha256": "sha256-iz2W4i/0Rfif9U/9VJemqMFEDBq7WPSq4anTnQIYqZM=",
+            "rev": "0.1.4",
+            "sha256": "sha256-d0CjHtzWHJYqWts1WiulIZebZwiAls36VpYOi0qwv/k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.1.3"
+        "version": "0.1.4"
     },
     "textual": {
         "cargoLocks": null,
@@ -4495,11 +4495,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-nFbZU9x9Go3fBqzJENkiQCfgJBZVH5KSDnD0Nb0o4GI=",
+            "sha256": "sha256-vsn+Y1R8HFUladG3XTCQOLfUVsA/ht+jcG3bCZsVE5k=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-0.88.1.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-1.0.0.tar.gz"
         },
-        "version": "0.88.1"
+        "version": "1.0.0"
     },
     "timewarrior": {
         "cargoLocks": null,
@@ -4587,7 +4587,7 @@
     },
     "tmux-fzf-url": {
         "cargoLocks": null,
-        "date": "2024-04-14",
+        "date": "2025-01-07",
         "extract": null,
         "name": "tmux-fzf-url",
         "passthru": null,
@@ -4599,12 +4599,12 @@
             "name": null,
             "owner": "wfxr",
             "repo": "tmux-fzf-url",
-            "rev": "28ed7ce3c73a328d8463d4f4aaa6ccb851e520fa",
-            "sha256": "sha256-tl0SjG/CeolrN7OIHj6MgkB9lFmFgEuJevsSuwVs+78=",
+            "rev": "16381dce1c30fedd75fc775f887be7ea6c7cbf55",
+            "sha256": "sha256-n3dEUnu0jd1MiWKRCr3HpWlq6Lw4eCYOKLbG30QgSx0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "28ed7ce3c73a328d8463d4f4aaa6ccb851e520fa"
+        "version": "16381dce1c30fedd75fc775f887be7ea6c7cbf55"
     },
     "tmux-kanagawa": {
         "cargoLocks": null,
@@ -4671,7 +4671,7 @@
     },
     "tmux-power-zoom": {
         "cargoLocks": null,
-        "date": "2024-10-14",
+        "date": "2024-12-21",
         "extract": null,
         "name": "tmux-power-zoom",
         "passthru": null,
@@ -4683,12 +4683,12 @@
             "name": null,
             "owner": "jaclu",
             "repo": "tmux-power-zoom",
-            "rev": "30eb97c090ff07c8e957b2e761f25931c1d49133",
-            "sha256": "sha256-FMzdN+xEejjZfmQ65q7sK9sRbSoK/bZYtcaEPgeDGBc=",
+            "rev": "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac",
+            "sha256": "sha256-WdA4QwqPkUPrCzb/qm3kSKSDD0DtDMIzkwC5wXQ0oKE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "30eb97c090ff07c8e957b2e761f25931c1d49133"
+        "version": "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac"
     },
     "tmux-tea": {
         "cargoLocks": null,
@@ -4713,7 +4713,7 @@
     },
     "tmux-tome": {
         "cargoLocks": null,
-        "date": "2024-11-06",
+        "date": "2025-01-08",
         "extract": null,
         "name": "tmux-tome",
         "passthru": null,
@@ -4725,12 +4725,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "83fd5124d8770697093bd6f46eca5d0080b333e6",
-            "sha256": "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=",
+            "rev": "122fd17d2bd915dfd489cbf6308eaf60d3273c57",
+            "sha256": "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "83fd5124d8770697093bd6f46eca5d0080b333e6"
+        "version": "122fd17d2bd915dfd489cbf6308eaf60d3273c57"
     },
     "tmux-transient-status": {
         "cargoLocks": null,
@@ -4797,7 +4797,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2024-11-04",
+        "date": "2025-01-02",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -4809,12 +4809,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "be70e2e352135f41f8665ddd8729f2ef47d60089",
-            "sha256": "sha256-UshHfSEvzJMK3G1bolwStdza9oiYWNFLC4xsKZlU/TI=",
+            "rev": "5e11cd8ead1e8c7e375c6808489e06be1de403f4",
+            "sha256": "sha256-4JVNJ7Lcvr93UM8zq0K9RcAnQcBkfh6SnRyT8qBqZRo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "be70e2e352135f41f8665ddd8729f2ef47d60089"
+        "version": "5e11cd8ead1e8c7e375c6808489e06be1de403f4"
     },
     "to-fish": {
         "cargoLocks": null,
@@ -4935,12 +4935,12 @@
             "name": null,
             "owner": "bilbilak",
             "repo": "treegen",
-            "rev": "v1.0.0",
-            "sha256": "sha256-z6CHr89fC9UVQgPmugOctB82XQ8yP6K5Ap2qsMLSnyk=",
+            "rev": "v1.1.0",
+            "sha256": "sha256-PPWUEfX7OXKZnghiVXU+eCjveA1VszA3uS8C3uI3pFM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.0"
+        "version": "v1.1.0"
     },
     "trzsz-go": {
         "cargoLocks": null,
@@ -4986,7 +4986,7 @@
     },
     "tui-network": {
         "cargoLocks": null,
-        "date": "2024-12-10",
+        "date": "2025-01-02",
         "extract": null,
         "name": "tui-network",
         "passthru": null,
@@ -4998,12 +4998,12 @@
             "name": null,
             "owner": "Zatfer17",
             "repo": "tui-network",
-            "rev": "e25a1585a03e9d604a995c4431dcaf7888893fb7",
-            "sha256": "sha256-FeI+FD+Q9Vx/xaMEEimd86x+TJVRt7YzUjUEf9DDjx8=",
+            "rev": "e1c932daf532805b522201383984da4a29e156fe",
+            "sha256": "sha256-JfgUvgQ0eGqt/l6JN6Tfmtr0tVbbbNKJzv+RFIyEhMs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e25a1585a03e9d604a995c4431dcaf7888893fb7"
+        "version": "e1c932daf532805b522201383984da4a29e156fe"
     },
     "tuime": {
         "cargoLocks": {
@@ -5103,11 +5103,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-86HjDT2D/d+fvTbIYxUUHsEQ9iQ169fx4BIWJ+6oL2w=",
+            "sha256": "sha256-shg7KRyPfMNglbnm6+msU0T1KRMvoOHf0AkLFNL7JMU=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202412102212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501132211/geoip.dat"
         },
-        "version": "202412102212"
+        "version": "202501132211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5118,11 +5118,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-OyO7/nLFHyJfXtqcYBEQ9H5xO/pEsPdZEz5fj/fYiiA=",
+            "sha256": "sha256-xgsJ3NmpQ+BDPKxtur+dM+CGPzz6RLucP+RlnpZriks=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202412102212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501132211/geosite.dat"
         },
-        "version": "202412102212"
+        "version": "202501132211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -5294,7 +5294,7 @@
     },
     "vim-tome": {
         "cargoLocks": null,
-        "date": "2024-11-06",
+        "date": "2025-01-08",
         "extract": null,
         "name": "vim-tome",
         "passthru": null,
@@ -5306,12 +5306,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "83fd5124d8770697093bd6f46eca5d0080b333e6",
-            "sha256": "sha256-75zmN0XhsmYnqf8oVTI71yAmA62UVVnRSiUJrtIitw8=",
+            "rev": "122fd17d2bd915dfd489cbf6308eaf60d3273c57",
+            "sha256": "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "83fd5124d8770697093bd6f46eca5d0080b333e6"
+        "version": "122fd17d2bd915dfd489cbf6308eaf60d3273c57"
     },
     "vim-toop": {
         "cargoLocks": null,
@@ -5399,7 +5399,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2024-12-04",
+        "date": "2025-01-04",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -5411,12 +5411,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "4787f90c4c616658664072c0e9dbd6f26811eacf",
-            "sha256": "sha256-uhFv7MtNltQ0d0iAK/2oiCgg4F93YL3EsYabsHcMlhQ=",
+            "rev": "acba227a047dbd8b13a960c9ca4814949c5a4a2a",
+            "sha256": "sha256-SLYOlt0mVPE5wNMnWlsVA1wqIGavbAZ6dbKrfe+rXYA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4787f90c4c616658664072c0e9dbd6f26811eacf"
+        "version": "acba227a047dbd8b13a960c9ca4814949c5a4a2a"
     },
     "visual-split-vim": {
         "cargoLocks": null,
@@ -5489,12 +5489,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscode-fugitive-0.0.25.zip",
-            "sha256": "sha256-TzXy9Mp1uLOjcRQTXtfFR4MZBN38RgH4owE3B9xGtPk=",
+            "name": "vscode-fugitive-0.0.26.zip",
+            "sha256": "sha256-bKgPlfI+f/RpsbNJvlP78jubgQrztloTjxroCWaCFSQ=",
             "type": "url",
-            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.25/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.26/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "0.0.25"
+        "version": "0.0.26"
     },
     "wait-for": {
         "cargoLocks": null,
@@ -5552,12 +5552,12 @@
             "name": null,
             "owner": "DavidPal",
             "repo": "whitespace-format",
-            "rev": "0.0.2",
-            "sha256": "sha256-UscDx0cQ7YqZc6k42ww9Pi9g5nxJCRr+fcETneG0zHc=",
+            "rev": "0.0.6",
+            "sha256": "sha256-PaFZst2O8pNI+LSws31nrbs4ih76r5ouJhFi/cgst80=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.0.2"
+        "version": "0.0.6"
     },
     "x": {
         "cargoLocks": null,
@@ -5583,11 +5583,11 @@
     "ynk": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./ynk-79b6160b60616643f7bd6b15086ac29ff4688d42/Cargo.lock",
+                "./ynk-a7eebd75f6179420207a9247f1524198880f8335/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-11-15",
+        "date": "2025-01-06",
         "extract": null,
         "name": "ynk",
         "passthru": null,
@@ -5599,12 +5599,12 @@
             "name": null,
             "owner": "newtoallofthis123",
             "repo": "ynk",
-            "rev": "79b6160b60616643f7bd6b15086ac29ff4688d42",
-            "sha256": "sha256-+zWKRdao1Mr3Vr7SSaqvGX6YFNNCFxc9bWpD5WDg8cw=",
+            "rev": "a7eebd75f6179420207a9247f1524198880f8335",
+            "sha256": "sha256-tEqrl8FGhojrrgru7R9Ttslla65q/AIYxAJJKCEINSk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "79b6160b60616643f7bd6b15086ac29ff4688d42"
+        "version": "a7eebd75f6179420207a9247f1524198880f8335"
     },
     "ytui": {
         "cargoLocks": null,
@@ -5620,11 +5620,11 @@
             "name": null,
             "owner": "Banh-Canh",
             "repo": "ytui",
-            "rev": "v0.2.0",
-            "sha256": "sha256-M3BdfM/3iKe2b3aiOmClVWIgGOrYnRZZ6XpQQFmBNXA=",
+            "rev": "v0.2.2",
+            "sha256": "sha256-SxgjyplbxevXVp4r3HOZE0odzBCtfbO3IeNXB3M+8W8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.0"
+        "version": "v0.2.2"
     }
 }

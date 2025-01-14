@@ -6,7 +6,7 @@
 buildGoModule rec {
   inherit (_sources.ytui) pname version src;
 
-  vendorHash = "sha256-qDzvLKsf3/5xgVtjE/ogrq8xTZDtjpVol+rqL0P60GM=";
+  vendorHash = "sha256-TEOGMhGY9TdLm1awKM4e/4x2qA5bcdmHJ9mwI1zdsLI=";
 
   ldflags = [
     "-s"

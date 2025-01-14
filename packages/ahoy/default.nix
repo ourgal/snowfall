@@ -7,6 +7,8 @@
 buildGoModule rec {
   inherit (_sources.ahoy) pname version src;
 
+  sourceRoot = "${src.name}/v2";
+
   vendorHash = null;
 
   ldflags = [

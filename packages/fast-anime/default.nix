@@ -20,6 +20,7 @@ python3.pkgs.buildPythonApplication {
     thefuzz
     yt-dlp
     pycryptodome
+    pypresence
   ];
 
   passthru.optional-dependencies = with python3.pkgs; {
