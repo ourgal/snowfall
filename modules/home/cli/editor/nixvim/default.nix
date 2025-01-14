@@ -12,8 +12,8 @@ args.module (
         "ripgrep"
         "tree-sitter"
         "ueberzugpp"
+        "neovim-node-client"
       ];
-      nodePkgs = "neovim";
       progs = [
         {
           nixvim = {
