@@ -63,6 +63,7 @@ args.module (
         };
       };
       value = {
+        catppuccin.fcitx5 = enabled;
         i18n.inputMethod = {
           enabled = "fcitx5";
           fcitx5 = {
@@ -72,7 +73,6 @@ args.module (
               fcitx5-configtool
               fcitx5-material-color
             ];
-            catppuccin = enabled;
           };
         };
       };

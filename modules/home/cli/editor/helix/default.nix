@@ -29,10 +29,6 @@ args.module (
       path = ./.;
       progs = {
         helix = {
-          catppuccin = enabled // {
-            flavor = "mocha";
-            useItalics = true;
-          };
           settings = {
             editor =
               enableOpt [
@@ -644,7 +640,8 @@ args.module (
                 validation = true;
                 schemas = {
                   "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}";
-                  "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" =
+                    "roles/{tasks,handlers}/*.{yml,yaml}";
                 };
               };
               scls = {
@@ -766,6 +763,10 @@ args.module (
       extraOpts = {
         broot = switch;
         live_grep = switch;
+      };
+      value.catppuccin.helix = enabled // {
+        flavor = "mocha";
+        useItalics = true;
       };
     }
   )

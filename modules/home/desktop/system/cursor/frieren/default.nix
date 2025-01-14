@@ -20,7 +20,7 @@ args.module (
           name = "frieren-cursors";
           size = 24;
         };
-        catppuccin.pointerCursor = disabled;
+        catppuccin.cursors = disabled;
       };
     }
   )

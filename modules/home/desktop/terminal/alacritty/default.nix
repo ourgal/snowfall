@@ -35,7 +35,6 @@ args.module (
     {
       path = ./.;
       progs.alacritty = {
-        catppuccin.enable = false;
         settings = {
           general.live_config_reload = true;
           env.TERM = "xterm-256color";
@@ -65,6 +64,7 @@ args.module (
           };
         } // tomorrow_night_bright;
       };
+      value.catppuccin.alacritty.enable = false;
     }
   )
 )

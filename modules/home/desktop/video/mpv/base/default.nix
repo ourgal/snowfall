@@ -4,7 +4,6 @@ args.module (
   // {
     path = ./.;
     progs.mpv = {
-      catppuccin.enable = false;
       bindings = {
         p = "set speed 3.0";
       };
@@ -34,5 +33,6 @@ args.module (
         input-ipc-server = "/tmp/mpvsocket";
       };
     };
+    value.catppuccin.mpv.enable = false;
   }
 )
