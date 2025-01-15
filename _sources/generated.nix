@@ -1967,6 +1967,18 @@
       sha256 = "sha256-QHQZbjrKU0lE89L/13ukjXqZ2I/8XR9Hz5/YjmiXQhk=";
     };
   };
+  qman = {
+    pname = "qman";
+    version = "5559a2446f799d82eee74019ed424272df89f4b1";
+    src = fetchFromGitHub {
+      owner = "plp13";
+      repo = "qman";
+      rev = "5559a2446f799d82eee74019ed424272df89f4b1";
+      fetchSubmodules = false;
+      sha256 = "sha256-NuyN5qEtH4ZIoTnbKEaam24J91yps2HyFSNKFQq6dUY=";
+    };
+    date = "2024-11-18";
+  };
   quartz = {
     pname = "quartz";
     version = "87e0bd6813cb9cc66b353bb286b4032f447620c2";

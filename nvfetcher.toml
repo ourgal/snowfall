@@ -1095,3 +1095,7 @@ fetch.docker = "lancommander/lancommander"
 [stardict-cn-dicts]
 src.git = "https://github.com/shanyouli/stardict"
 fetch.github = "shanyouli/stardict"
+
+[qman]
+src.git = "https://github.com/plp13/qman"
+fetch.github = "plp13/qman"

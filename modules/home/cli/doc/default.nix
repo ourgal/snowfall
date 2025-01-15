@@ -8,6 +8,7 @@ args.module (
       "archwiki"
       "eg"
       "lib-x"
+      "qman"
       # keep-sorted end
     ];
     nixPkgs = [
