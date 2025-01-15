@@ -3523,6 +3523,27 @@
         },
         "version": "v0.4.1"
     },
+    "qman": {
+        "cargoLocks": null,
+        "date": "2024-11-18",
+        "extract": null,
+        "name": "qman",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "plp13",
+            "repo": "qman",
+            "rev": "5559a2446f799d82eee74019ed424272df89f4b1",
+            "sha256": "sha256-NuyN5qEtH4ZIoTnbKEaam24J91yps2HyFSNKFQq6dUY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5559a2446f799d82eee74019ed424272df89f4b1"
+    },
     "quartz": {
         "cargoLocks": null,
         "date": "2024-12-20",
