@@ -33,6 +33,18 @@
       sha256 = "sha256-tBM16s5XTKo06xICf2iKNDcvqLkXYzD+/7qZEIjdiOg=";
     };
   };
+  aniweather = {
+    pname = "aniweather";
+    version = "18cc76d9f4c0ee1276d8314d48ffaa0b4640dbf9";
+    src = fetchFromGitHub {
+      owner = "kaishira";
+      repo = "aniweather";
+      rev = "18cc76d9f4c0ee1276d8314d48ffaa0b4640dbf9";
+      fetchSubmodules = false;
+      sha256 = "sha256-rtFq1a1jmEMuEfICuBRZc23aRxj1M54swsWa3P2Oh/c=";
+    };
+    date = "2025-01-08";
+  };
   antifennel = {
     pname = "antifennel";
     version = "a135f016414517ecb624bad26b39ed56d256beaa";
