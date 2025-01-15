@@ -24,6 +24,8 @@ stdenv.mkDerivation rec {
     mkdir -p $out/share/rime-data
     rm ./default.custom.yaml
     cp -r ./* $out/share/rime-data
+    substituteInPlace $out/share/rime-data/lua/sbxlm/radicals.lua \
+      --replace-fail 'rime.api.get_user_data_dir() .. "/lua/sbxlm/radicals.txt"' "\"$out/share/rime-data/lua/sbxlm/radicals.txt\""
     runHook postInstall
   '';
 
