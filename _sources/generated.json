@@ -50,6 +50,27 @@
         },
         "version": "1.9.0"
     },
+    "aniweather": {
+        "cargoLocks": null,
+        "date": "2025-01-08",
+        "extract": null,
+        "name": "aniweather",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kaishira",
+            "repo": "aniweather",
+            "rev": "18cc76d9f4c0ee1276d8314d48ffaa0b4640dbf9",
+            "sha256": "sha256-rtFq1a1jmEMuEfICuBRZc23aRxj1M54swsWa3P2Oh/c=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "18cc76d9f4c0ee1276d8314d48ffaa0b4640dbf9"
+    },
     "antifennel": {
         "cargoLocks": null,
         "date": "2024-09-25",
