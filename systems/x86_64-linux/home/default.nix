@@ -44,6 +44,7 @@ in
       "tpm"
       "udev"
       "udisks2"
+      "virtualbox"
       # keep-sorted end
     ];
 
