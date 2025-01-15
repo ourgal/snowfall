@@ -496,8 +496,8 @@ src.git = "https://github.com/TheSast/tmux-transient-status"
 fetch.github = "TheSast/tmux-transient-status"
 
 [tmux-which-key]
-src.git = "https://github.com/ourgal/tmux-which-key"
-fetch.github = "ourgal/tmux-which-key"
+src.git = "https://github.com/alexwforsythe/tmux-which-key"
+fetch.github = "alexwforsythe/tmux-which-key"
 
 [toru]
 src.github = "sweetbbak/toru"
