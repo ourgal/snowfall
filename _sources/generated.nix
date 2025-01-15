@@ -2705,15 +2705,15 @@
   };
   tmux-which-key = {
     pname = "tmux-which-key";
-    version = "b7283f4ccece66dd4a49fd6badd55b43262c6ae6";
+    version = "1f419775caf136a60aac8e3a269b51ad10b51eb6";
     src = fetchFromGitHub {
-      owner = "ourgal";
+      owner = "alexwforsythe";
       repo = "tmux-which-key";
-      rev = "b7283f4ccece66dd4a49fd6badd55b43262c6ae6";
+      rev = "1f419775caf136a60aac8e3a269b51ad10b51eb6";
       fetchSubmodules = false;
-      sha256 = "sha256-zJlQ+3945xrfI5BpywpB5J79m5j2y3vtLUHsZgUaCJ0=";
+      sha256 = "sha256-X7FunHrAexDgAlZfN+JOUJvXFZeyVj9yu6WRnxMEA8E=";
     };
-    date = "2024-09-09";
+    date = "2024-07-08";
   };
   "tmux.fish" = {
     pname = "tmux.fish";

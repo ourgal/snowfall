@@ -549,9 +549,6 @@ args.module (
           ];
         };
       };
-      value = {
-        ${namespace}.dev.python.global.pkgs = (p: [ p.pyyaml ]);
-      };
     }
   )
 )
