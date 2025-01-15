@@ -13,9 +13,11 @@ stdenv.mkDerivation {
   installPhase = ''
     runHook preInstall
     install -Dm755 pmark -t $out/bin
-    substituteInPlace $out/bin/pmark --replace-fail '/usr/bin/env perl' ${perl}/bin/perl
+    patchShebangs $out/bin/pmark
     runHook postInstall
   '';
+
+  nativeBuildInputs = [ perl ];
 
   meta = with lib; {
     description = "A hacky, markdown pre-processor/generator";
