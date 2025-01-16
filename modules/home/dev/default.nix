@@ -109,6 +109,7 @@ args.module (
         "go"
         "haskell"
         "html"
+        "jinja"
         "json"
         "lua"
         "markdown"
