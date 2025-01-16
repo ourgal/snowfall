@@ -10,6 +10,7 @@ args.module (
       "git-secret"
       "gitleaks"
       "transcrypt"
+      "trufflehog"
       # keep-sorted end
     ];
   }

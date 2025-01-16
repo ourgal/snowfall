@@ -56,6 +56,8 @@ pre-commit:
       run: validator {staged_files}
     gitleaks:
       run: gitleaks protect -v --staged
+    trufflehog:
+      run: trufflehog --no-update git file://. --since-commit HEAD --results=verified,unknown --fail
 commit-msg:
   scripts:
     "commitlint.sh":
