@@ -2643,6 +2643,18 @@
     };
     date = "2018-05-30";
   };
+  tmux-mouse-swipe = {
+    pname = "tmux-mouse-swipe";
+    version = "ecc540e96eb005578e6731d456df5a17d8301c8e";
+    src = fetchFromGitHub {
+      owner = "jaclu";
+      repo = "tmux-mouse-swipe";
+      rev = "ecc540e96eb005578e6731d456df5a17d8301c8e";
+      fetchSubmodules = false;
+      sha256 = "sha256-SRYroDifMxdUFEnKE3ObdfACoFjZyzL7FIEDIeZWF6k=";
+    };
+    date = "2024-12-21";
+  };
   tmux-pane-focus = {
     pname = "tmux-pane-focus";
     version = "94adfd620bee88b9262fe28df6b07a23e82f3a5c";

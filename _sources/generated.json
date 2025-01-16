@@ -4690,6 +4690,27 @@
         },
         "version": "91319eff74ee677efb77c882dcc8e3b8780dc3a2"
     },
+    "tmux-mouse-swipe": {
+        "cargoLocks": null,
+        "date": "2024-12-21",
+        "extract": null,
+        "name": "tmux-mouse-swipe",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jaclu",
+            "repo": "tmux-mouse-swipe",
+            "rev": "ecc540e96eb005578e6731d456df5a17d8301c8e",
+            "sha256": "sha256-SRYroDifMxdUFEnKE3ObdfACoFjZyzL7FIEDIeZWF6k=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "ecc540e96eb005578e6731d456df5a17d8301c8e"
+    },
     "tmux-pane-focus": {
         "cargoLocks": null,
         "date": "2024-03-05",

@@ -174,6 +174,7 @@ args.module (
         "fzf-url"
         "gitmux"
         "jump"
+        "mouse-swipe"
         "open"
         "power-zoom"
         "sesh"

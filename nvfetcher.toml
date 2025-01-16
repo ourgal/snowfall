@@ -1103,3 +1103,7 @@ fetch.github = "plp13/qman"
 [aniweather]
 src.git = "https://github.com/kaishira/aniweather"
 fetch.github = "kaishira/aniweather"
+
+[tmux-mouse-swipe]
+src.git = "https://github.com/jaclu/tmux-mouse-swipe"
+fetch.github = "jaclu/tmux-mouse-swipe"
