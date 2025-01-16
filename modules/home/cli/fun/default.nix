@@ -19,6 +19,7 @@ args.module (
       "boxes"
       "cfonts"
       "confetty"
+      "cowsay"
       "doge"
       "figlet"
       "figurine"
