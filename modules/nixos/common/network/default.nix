@@ -10,9 +10,10 @@ let
     ;
   inherit (config.${namespace}.user) host;
   inherit (lib.${namespace}.settings) laptops;
+  inherit (lib) mkDefault;
   value = {
     networking = {
-      networkmanager = enabled // {
+      networkmanager = mkDefault enabled // {
         wifi.backend = "iwd";
       };
       # useDHCP = false;
@@ -23,7 +24,7 @@ let
       };
     };
 
-    services.resolved = enabled;
+    services.resolved = mkDefault enabled;
     services.avahi = disabled // {
       nssmdns4 = true;
       publish = enabled // {
@@ -32,7 +33,7 @@ let
       };
     };
 
-    systemd.network = disabled;
+    systemd.network = mkDefault disabled;
 
     hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;
   };
