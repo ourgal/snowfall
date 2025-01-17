@@ -3,7 +3,12 @@ let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled;
   value = {
-    services.displayManager.ly = enabled;
+    services.displayManager.ly = enabled // {
+      settings = {
+        animation = "matrix";
+        clear_password = true;
+      };
+    };
   };
   path = ./.;
   _args = {
