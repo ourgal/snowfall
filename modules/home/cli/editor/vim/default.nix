@@ -69,14 +69,6 @@ args.module (
     ];
     dataFiles = {
       "vim/.keep" = "";
-      "vim/swap/.keep" = "";
     };
-    files.".vim" = [
-      ./ftplugin
-      ./coc-settings.json
-      ./plugin
-      ./macro.vim
-      ./templates
-    ];
   }
 )

@@ -23,7 +23,7 @@ set nobackup
 set nowritebackup
 
 set noswapfile
-# set directory=$HOME/.local/share/vim/swap//
+" set directory=$HOME/.local/share/vim/swap//
 
 if has('gui_running')
 set guioptions-=T
