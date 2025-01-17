@@ -22,6 +22,7 @@ args.module (
       "handlr-regex"
       "inxi"
       "kmon"
+      "nixos-facter"
       "pinentry-all"
       "pipx"
       "screenkey"
