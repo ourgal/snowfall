@@ -9,6 +9,7 @@ args.module (
       # keep-sorted end
     ];
     progs.git.extraConfig = {
+      rebase.autoSquash = true;
       sequence.editor = "interactive-rebase-tool";
       interactive-rebase-tool = {
         inputMoveDown = "Down j";
