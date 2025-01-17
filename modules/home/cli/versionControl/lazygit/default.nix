@@ -3,23 +3,11 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs enabled;
+      inherit (args) enabled;
     in
     {
       path = ./.;
       progs = {
-        fish.interactiveShellInit = ''
-          if test $fish_key_bindings = fish_vi_key_bindings
-            bind --mode insert \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
-          else
-            bind \cg '${pkgs.lazygit}/bin/lazygit; commandline -f cancel'
-          end
-        '';
-        zsh.initExtra = ''
-          __lazygit () { lazygit; zle redisplay }
-          zle -N __lazygit
-          bindkey "^g" __lazygit
-        '';
         lazygit = {
           settings = {
             gui.nerdFontsVersion = "3";
