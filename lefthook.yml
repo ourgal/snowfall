@@ -1,55 +1,64 @@
+---
 output: false
 pre-commit:
   commands:
     toml:
-      glob: "*.toml"
+      glob: '*.toml'
       run: taplo fmt {staged_files}
       stage_fixed: true
     json:
-      glob: "*.json"
+      glob: '*.json'
       run: fixjson -w {staged_files}
       stage_fixed: true
     yaml:
-      glob: "*.{yaml,yml}"
-      run: yamlfmt {staged_files}
+      glob: '*.{yaml,yml}'
+      run: yamlfix {staged_files}
       stage_fixed: true
     nix:
-      glob: "*.nix"
+      glob: '*.nix'
       run: nixfmt {staged_files}
       stage_fixed: true
     deadnix:
-      glob: "*.nix"
+      glob: '*.nix'
       run: deadnix -eq {staged_files}
       stage_fixed: true
     python:
-      glob: "*.py"
+      glob: '*.py'
       run: ruff check --fix {staged_files} && ruff format {staged_files}
       stage_fixed: true
     lua:
-      glob: "*.lua"
+      glob: '*.lua'
       run: stylua {staged_files}
       stage_fixed: true
     fennel:
-      glob: "*.fnl"
+      glob: '*.fnl'
       run: fnlfmt --fix {staged_files}
       stage_fixed: true
     markdown:
-      glob: "*.md"
+      glob: '*.md'
       run: mdformat {staged_files}
       stage_fixed: true
     sh:
-      glob: "*.sh"
+      glob: '*.sh'
       run: shfmt -s -w {staged_files}
       stage_fixed: true
     go:
-      glob: "*.go"
+      glob: '*.go'
       run: gofmt -w {staged_files}
+      stage_fixed: true
+    elisp:
+      glob: '*.el'
+      run: lisp-format -i -style=google {staged_files}
       stage_fixed: true
     keep-sorted:
       run: keep-sorted --mode fix {staged_files}
       stage_fixed: true
     whitespace:
-      run: whitespace-format --remove-trailing-whitespace --remove-trailing-empty-lines {staged_files} --exclude "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico|.xcf|.ogg)$"
+      run: >
+        whitespace-format --remove-trailing-whitespace
+        --remove-trailing-empty-lines
+        {staged_files} --exclude
+        "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico|.xcf|.ogg)$"
       stage_fixed: true
     config-file-validator:
       run: validator {staged_files}
@@ -57,5 +66,5 @@ pre-commit:
       run: gitleaks protect -v --staged
 commit-msg:
   scripts:
-    "commitlint.sh":
+    commitlint.sh:
       runner: bash
