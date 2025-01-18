@@ -443,7 +443,7 @@ args.module (
                   "ansible-language-server"
                 ];
                 formatter = {
-                  command = "yamlfmt";
+                  command = "yamlfix";
                   args = [ "-" ];
                 };
                 auto-format = true;
