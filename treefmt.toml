@@ -11,7 +11,7 @@ options = ["-w"]
 includes = ["*.json"]
 
 [formatter.yaml]
-command = "yamlfmt"
+command = "yamlfix"
 includes = ["*.yaml", "*.yml"]
 
 [formatter.nix]
