@@ -1107,3 +1107,7 @@ fetch.github = "kaishira/aniweather"
 [tmux-mouse-swipe]
 src.git = "https://github.com/jaclu/tmux-mouse-swipe"
 fetch.github = "jaclu/tmux-mouse-swipe"
+
+[lisp-format]
+src.git = "https://github.com/eschulte/lisp-format"
+fetch.github = "eschulte/lisp-format"

@@ -1474,6 +1474,18 @@
     };
     date = "2024-11-15";
   };
+  lisp-format = {
+    pname = "lisp-format";
+    version = "088c8f78ca41204b44f2636275517ac09a2de6a9";
+    src = fetchFromGitHub {
+      owner = "eschulte";
+      repo = "lisp-format";
+      rev = "088c8f78ca41204b44f2636275517ac09a2de6a9";
+      fetchSubmodules = false;
+      sha256 = "sha256-L2Wl+UWQSiJYvzctyXrMQNViZiZ6Q5vgek1PWkIaTn4=";
+    };
+    date = "2022-02-16";
+  };
   lite-xl-vibe = {
     pname = "lite-xl-vibe";
     version = "5b5579ab5efe9388c495d5b8baa6cd10b2db53ac";
