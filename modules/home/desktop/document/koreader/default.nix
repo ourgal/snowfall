@@ -7,15 +7,16 @@ args.module (
       dicts =
         pkgs.runCommand "koreader_dicts"
           {
-            src = pkgs._sources.stardict-cn-dicts.src;
+            inherit (pkgs._sources.stardict-cn-dicts) src;
             nativeBuildInputs = [
               pkgs.${namespace}.v2dat
             ];
           }
           ''
             mkdir $out
-            tar -xvf $src/stardict-quick_eng-zh_CN-2.4.2.tar.xz \
-                --directory=$out
+            for file in $src/*.tar.xz; do
+              tar -xvf "$file" --directory=$out
+            done
           '';
     in
     {
