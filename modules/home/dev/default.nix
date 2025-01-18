@@ -111,6 +111,7 @@ args.module (
         "html"
         "jinja"
         "json"
+        "lisp"
         "lua"
         "markdown"
         "nix"

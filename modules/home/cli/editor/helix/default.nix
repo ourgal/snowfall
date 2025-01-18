@@ -615,6 +615,16 @@ args.module (
                 name = "haskell";
                 auto-format = true;
               }
+              {
+                name = "elisp";
+                language-servers = [
+                  "scls"
+                ];
+                formatter = {
+                  command = "lisp-format";
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {

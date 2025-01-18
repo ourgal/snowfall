@@ -2635,6 +2635,27 @@
         },
         "version": "bbcba99072d9164a0360e72fbdac79f9664c979d"
     },
+    "lisp-format": {
+        "cargoLocks": null,
+        "date": "2022-02-16",
+        "extract": null,
+        "name": "lisp-format",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "eschulte",
+            "repo": "lisp-format",
+            "rev": "088c8f78ca41204b44f2636275517ac09a2de6a9",
+            "sha256": "sha256-L2Wl+UWQSiJYvzctyXrMQNViZiZ6Q5vgek1PWkIaTn4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "088c8f78ca41204b44f2636275517ac09a2de6a9"
+    },
     "lite-xl-vibe": {
         "cargoLocks": null,
         "date": "2023-10-31",

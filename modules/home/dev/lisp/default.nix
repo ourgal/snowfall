@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "lisp-format";
     nixPkgs = [
       # keep-sorted start
       "parinfer-rust-emacs"
