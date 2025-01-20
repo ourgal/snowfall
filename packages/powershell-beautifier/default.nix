@@ -3,19 +3,11 @@
   stdenv,
   powershell,
   writeShellScriptBin,
-  fetchFromGitHub,
+  _sources,
 }:
 let
   powershell-beautifier = stdenv.mkDerivation rec {
-    pname = "powershell-beautifier";
-    version = "1.2.5";
-
-    src = fetchFromGitHub {
-      owner = "DTW-DanWard";
-      repo = "PowerShell-Beautifier";
-      rev = "V${version}";
-      hash = "sha256-N/Wz2TDgQFEW//QR5SwzFFJAiRx8+RoMS842m27mYjM=";
-    };
+    inherit (_sources.powershell-beautifier) pname version src;
 
     dontBuild = true;
 
