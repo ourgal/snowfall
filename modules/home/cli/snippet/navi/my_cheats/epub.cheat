@@ -1,0 +1,4 @@
+% epub
+
+# zipping epub
+zip -rX "$(basename $(pwd)).epub" $(\ls -p)
