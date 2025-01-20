@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) config namespace enabled;
+      inherit (args)
+        config
+        namespace
+        enabled
+        pkgs
+        ;
     in
     {
       path = ./.;
@@ -51,6 +56,7 @@ args.module (
           rebase.autosquash = true;
           maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
         };
+        package = pkgs.gitFull;
       };
     }
   )
