@@ -3,6 +3,7 @@ args.module (
   args
   // {
     path = ./.;
+    myPkgs = "powershell-beautifier";
     nixPkgs = [
       # keep-sorted start
       "powershell"

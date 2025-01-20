@@ -1111,3 +1111,7 @@ fetch.github = "jaclu/tmux-mouse-swipe"
 [lisp-format]
 src.git = "https://github.com/eschulte/lisp-format"
 fetch.github = "eschulte/lisp-format"
+
+[powershell-beautifier]
+src.github_tag = "DTW-DanWard/PowerShell-Beautifier"
+fetch.github = "DTW-DanWard/PowerShell-Beautifier"
