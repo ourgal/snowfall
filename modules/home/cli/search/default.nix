@@ -10,6 +10,7 @@ args.module (
       "fzf-make"
       "fzy"
       "skim"
+      "src-cli"
       "zf"
       "zfind"
       # keep-sorted end
