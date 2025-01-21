@@ -1,19 +1,11 @@
 {
   lib,
-  stdenv,
-  fetchFromGitHub,
+  vimUtils,
+  _sources,
 }:
 
-stdenv.mkDerivation rec {
-  pname = "vim-hug-neovim-rpc";
-  version = "unstable-2021-05-15";
-
-  src = fetchFromGitHub {
-    owner = "roxma";
-    repo = "vim-hug-neovim-rpc";
-    rev = "93ae38792bc197c3bdffa2716ae493c67a5e7957";
-    hash = "sha256-XX+0FUk2tXG7fklGT2pNsa4vUG+qYSDUMhB5HSAg6Ww=";
-  };
+vimUtils.buildVimPlugin {
+  inherit (_sources.vim-hug-neovim-rpc) pname verison src;
 
   meta = {
     description = "EXPERIMENTAL";
