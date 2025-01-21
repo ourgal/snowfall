@@ -1115,3 +1115,11 @@ fetch.github = "eschulte/lisp-format"
 [powershell-beautifier]
 src.github_tag = "DTW-DanWard/PowerShell-Beautifier"
 fetch.github = "DTW-DanWard/PowerShell-Beautifier"
+
+[vim-ghost]
+src.git = "https://github.com/raghur/vim-ghost"
+fetch.github = "raghur/vim-ghost"
+
+[simple-websocket-server]
+src.git = "https://github.com/dpallot/simple-websocket-server"
+fetch.github = "dpallot/simple-websocket-server"
