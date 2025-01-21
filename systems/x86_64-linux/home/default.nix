@@ -42,6 +42,7 @@ in
       "sops-nix"
       "syncthing"
       "tpm"
+      "tuptime"
       "udev"
       "udisks2"
       "virtualbox"
