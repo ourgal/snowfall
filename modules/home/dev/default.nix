@@ -34,6 +34,7 @@ args.module (
         "process-compose"
         "reuse"
         "treefmt2"
+        "tup"
         "universal-ctags"
         # keep-sorted end
       ];
