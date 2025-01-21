@@ -66,6 +66,7 @@ args.module (
       "vim-workspace"
       "vim-zoom"
       "vimsuggest"
+      "vimux"
       "vis"
       "visual-split-vim"
       "vlime"
