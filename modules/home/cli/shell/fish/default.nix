@@ -111,7 +111,6 @@ args.module (
           "clownfish"
           "ctrl-z.fish"
           "done"
-          "enhancd"
           "fc-fish"
           "fish-abbreviation-tips"
           "fish-bd"
