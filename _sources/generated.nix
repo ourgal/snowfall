@@ -554,6 +554,18 @@
       finalImageTag = "0.9.7";
     };
   };
+  dps-ghosttext-vim = {
+    pname = "dps-ghosttext-vim";
+    version = "70eb098546c498342bba6d6568b60558d33d613c";
+    src = fetchFromGitHub {
+      owner = "gamoutatsumi";
+      repo = "dps-ghosttext.vim";
+      rev = "70eb098546c498342bba6d6568b60558d33d613c";
+      fetchSubmodules = false;
+      sha256 = "sha256-w34dragcm/7E7jz6ZQsPKSNCBNwgk3kbSzEM1IPzuc8=";
+    };
+    date = "2024-10-18";
+  };
   dra = {
     pname = "dra";
     version = "0.8.0";
