@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "95B6VZFJQmIUhi64Ab85yBFauEyEEDd9s4voDrBdi8c=";
+  hash = "sha256-gVZPjnhOntTC1WmRm+5eeKN0MhNxiXvi31q4vnKjNUA=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.hledger-fmt) pname version;
