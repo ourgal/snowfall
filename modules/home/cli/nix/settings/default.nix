@@ -8,12 +8,17 @@ args.module (
         pkgs
         lib
         namespace
+        inputs
         ;
       inherit (lib.${namespace}) domains;
     in
     {
       path = ./.;
       value = {
+        nix = {
+          channels = { inherit (inputs) nixpkgs; };
+          nixPath = [ "$HOME/.nix-defexpr/channels" ];
+        };
         home.activation.report-changes = config.lib.dag.entryAnywhere ''
           ${pkgs.nvd}/bin/nvd diff $oldGenPath $newGenPath
         '';
