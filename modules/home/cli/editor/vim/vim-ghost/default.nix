@@ -9,7 +9,7 @@ args.module (
       path = ./.;
       progs.vim.plugins = with pkgs.vimPlugins; [
         vim-ghost
-        nvim-yarp
+        nvim-yarp # broken
         pkgs.${namespace}.vim-hug-neovim-rpc
       ];
       value.${namespace}.dev.python.global.pkgs = p: [
