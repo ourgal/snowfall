@@ -13,6 +13,7 @@ args.module (
       "chezmoi-vim"
       "coc-nvim"
       "devdocs-vim"
+      "dps-ghosttext-vim"
       "easyjump-vim"
       "editorconfig-vim"
       "fzf-vim"
