@@ -28,6 +28,7 @@ args.module (
       "pangu-vim"
       "parinfer-rust"
       "rainbow"
+      "skim"
       "targets-vim"
       "undotree"
       "vim-auto-save"
