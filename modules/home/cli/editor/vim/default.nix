@@ -12,6 +12,7 @@ args.module (
       "caw-vim"
       "chezmoi-vim"
       "coc-nvim"
+      "ctrlp-vim"
       "devdocs-vim"
       "dps-ghosttext-vim"
       "easyjump-vim"
