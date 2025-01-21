@@ -1388,13 +1388,13 @@
   };
   is = {
     pname = "is";
-    version = "v0.5.5";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "oalders";
       repo = "is";
-      rev = "v0.5.5";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-PKxWNLZYzB5pF06QdyPL9TuCTPz+tbua9uIgLSIeBdU=";
+      sha256 = "sha256-zlSZwD4sug3EYwlar6UFlMnIaQtLq9j10eQbp3bRAWA=";
     };
   };
   jalm = {
@@ -2557,13 +2557,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.5.0";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.5.0";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-hhfJCmrQs6wH342N3BIdtHavWLVsGj14ANynxES7dzE=";
+      sha256 = "sha256-JMVsmu98WJaeFGAzIKb+dwQ4a70M9ZuaSGYqZ3Tku9M=";
     };
   };
   textimg = {
@@ -3023,6 +3023,18 @@
       sha256 = "sha256-FGPtU+/sEULde5G2xwqVqf9kIWwUE426/Ot7uZoW8Pk=";
     };
     date = "2024-11-01";
+  };
+  vim-hug-neovim-rpc = {
+    pname = "vim-hug-neovim-rpc";
+    version = "93ae38792bc197c3bdffa2716ae493c67a5e7957";
+    src = fetchFromGitHub {
+      owner = "roxma";
+      repo = "vim-hug-neovim-rpc";
+      rev = "93ae38792bc197c3bdffa2716ae493c67a5e7957";
+      fetchSubmodules = false;
+      sha256 = "sha256-XX+0FUk2tXG7fklGT2pNsa4vUG+qYSDUMhB5HSAg6Ww=";
+    };
+    date = "2021-05-15";
   };
   vim-mkdir = {
     pname = "vim-mkdir";
