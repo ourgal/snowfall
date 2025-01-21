@@ -1123,3 +1123,7 @@ fetch.github = "raghur/vim-ghost"
 [simple-websocket-server]
 src.git = "https://github.com/dpallot/simple-websocket-server"
 fetch.github = "dpallot/simple-websocket-server"
+
+[dps-ghosttext-vim]
+src.git = "https://github.com/gamoutatsumi/dps-ghosttext.vim"
+fetch.github = "gamoutatsumi/dps-ghosttext.vim"
