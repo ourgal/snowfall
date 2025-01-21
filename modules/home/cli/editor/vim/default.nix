@@ -7,6 +7,7 @@ args.module (
     enable = [
       # keep-sorted start
       "ale"
+      "align"
       "bufexplorer"
       "catppuccin-vim"
       "caw-vim"
