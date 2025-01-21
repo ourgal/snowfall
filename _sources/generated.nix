@@ -556,16 +556,16 @@
   };
   dra = {
     pname = "dra";
-    version = "0.7.1";
+    version = "0.8.0";
     src = fetchFromGitHub {
       owner = "devmatteini";
       repo = "dra";
-      rev = "0.7.1";
+      rev = "0.8.0";
       fetchSubmodules = false;
-      sha256 = "sha256-1uih8ir1LXNadLVv5aWBkU56Ifx7/Jlrg9k58DlHhvY=";
+      sha256 = "sha256-TOPU88sN4QFeKzz6pSk+TmBjksLptD+IpJX/N/7St7s=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dra-0.7.1/Cargo.lock;
+      lockFile = ./dra-0.8.0/Cargo.lock;
       outputHashes = {
         
       };
@@ -1292,16 +1292,16 @@
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.9.4";
+    version = "v1.9.5";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.9.4";
+      rev = "v1.9.5";
       fetchSubmodules = false;
-      sha256 = "sha256-tVJp8ZFHaHM6Yhty0n5W4ZDKG/L5+8ZcbbTnw2yLEOI=";
+      sha256 = "sha256-DRuknqj4E+G4ChN5CH5N4Zrl3btSo1HdqiRPfLC5YTE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./hexpatch-v1.9.4/Cargo.lock;
+      lockFile = ./hexpatch-v1.9.5/Cargo.lock;
       outputHashes = {
         
       };
@@ -1320,13 +1320,13 @@
   };
   hledger-fmt = {
     pname = "hledger-fmt";
-    version = "v0.2.3";
+    version = "v0.2.4";
     src = fetchFromGitHub {
       owner = "mondeja";
       repo = "hledger-fmt";
-      rev = "v0.2.3";
+      rev = "v0.2.4";
       fetchSubmodules = false;
-      sha256 = "sha256-fhFfYdJqsvVpw0jep9QeUTcqjUp12ojDthBadeYPVPY=";
+      sha256 = "sha256-qzjdTEsFfZyYMqWDy6QgLI3TiAMI1PQfBoEweIj6nkU=";
     };
   };
   hssp = {
@@ -1798,16 +1798,16 @@
   };
   otree = {
     pname = "otree";
-    version = "v0.3.0";
+    version = "v0.3.1";
     src = fetchFromGitHub {
       owner = "fioncat";
       repo = "otree";
-      rev = "v0.3.0";
+      rev = "v0.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-WvoiTu6erNI5Cb9PSoHgL6+coIGWLe46pJVXBZHOLTE=";
+      sha256 = "sha256-CYobQppNsTg53a/+jVL8kqzfNnTVwW7VTgT+amW+lns=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./otree-v0.3.0/Cargo.lock;
+      lockFile = ./otree-v0.3.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -1897,15 +1897,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "d54b6d7990ed1f76ffebe732f4595d1497ccff9a";
+    version = "a93c1f070c1ece58d7e89f988f7c43b06eb48b08";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "d54b6d7990ed1f76ffebe732f4595d1497ccff9a";
+      rev = "a93c1f070c1ece58d7e89f988f7c43b06eb48b08";
       fetchSubmodules = false;
-      sha256 = "sha256-kyu86RVWaB/tkYRzdNp+7jA2I9bXMUjvY7jIYMW+d0g=";
+      sha256 = "sha256-HzMv/Lzidg77gSIIvnFRRpeoNQhHRCqcRm6UFOptmeY=";
     };
-    date = "2025-01-19";
+    date = "2025-01-20";
   };
   posting = {
     pname = "posting";
@@ -2301,21 +2301,33 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "2f9ea085285afbcb7451ef586574310f244fad70";
+    version = "05ce211f38387e1249e69abfd2fb4506fc624686";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "2f9ea085285afbcb7451ef586574310f244fad70";
+      rev = "05ce211f38387e1249e69abfd2fb4506fc624686";
       fetchSubmodules = false;
-      sha256 = "sha256-NWcyks2cisclBfvCvWkVdFoUcjTlMo/7/a+8GTnsT9E=";
+      sha256 = "sha256-yP5ED3Y0VKMYWAWmMFpXEeJPGFjSVe3HZh0ek4W6OGg=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-2f9ea085285afbcb7451ef586574310f244fad70/Cargo.lock;
+      lockFile = ./simple-completion-language-server-05ce211f38387e1249e69abfd2fb4506fc624686/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-01-20";
+    date = "2025-01-21";
+  };
+  simple-websocket-server = {
+    pname = "simple-websocket-server";
+    version = "7a9b03766d3a9b1dbbdf671a3bbc6f555806dffe";
+    src = fetchFromGitHub {
+      owner = "dpallot";
+      repo = "simple-websocket-server";
+      rev = "7a9b03766d3a9b1dbbdf671a3bbc6f555806dffe";
+      fetchSubmodules = false;
+      sha256 = "sha256-KWkXLc9k00GHbmz+U8QR4LMiDg7NIItYJajVYeP6SXY=";
+    };
+    date = "2022-10-21";
   };
   slashslash-fish = {
     pname = "slashslash-fish";
@@ -2926,18 +2938,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501192212";
+    version = "202501202211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501192212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501202211/geoip.dat";
       sha256 = "sha256-tsskrwnAIhgrvtCHGPGQI4lsYN99N1FYFZR2z16Sa0Y=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501192212";
+    version = "202501202211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501192212/geosite.dat";
-      sha256 = "sha256-x+IUavi+7rQD092HOXRXM9ZLhwcL4Wr50cBksZJ2URw=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501202211/geosite.dat";
+      sha256 = "sha256-JoTqGdBRxjJzxfDjIqylBs0mmLNebUNFZkUvmRYqk9g=";
     };
   };
   vim-auto-save = {
@@ -2975,6 +2987,18 @@
       sha256 = "sha256-wIgcBcdxJsT+qrsC5Boj6hp0xpp5gFeQFhK7yyC5a1o=";
     };
     date = "2024-04-08";
+  };
+  vim-ghost = {
+    pname = "vim-ghost";
+    version = "115e2600481c92c0bfb69d82ccbd8af7dc052a03";
+    src = fetchFromGitHub {
+      owner = "raghur";
+      repo = "vim-ghost";
+      rev = "115e2600481c92c0bfb69d82ccbd8af7dc052a03";
+      fetchSubmodules = false;
+      sha256 = "sha256-sC83gfCY3vtHDQ5iKV2Ax9DqES2qBz6a4Hro1TDsd5U=";
+    };
+    date = "2021-09-26";
   };
   vim-github-link = {
     pname = "vim-github-link";
@@ -3098,15 +3122,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "d977f2723c23349663461e4a7beededffb584585";
+    version = "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "d977f2723c23349663461e4a7beededffb584585";
+      rev = "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0";
       fetchSubmodules = false;
-      sha256 = "sha256-ifHiY2sM2eXkH0H4VXJAoewC+FUUABBmKiK4FNyBEGE=";
+      sha256 = "sha256-JHHAR6W0C+2i/jh+UaWdsqhbU12J5NqNv8iowJlQFOw=";
     };
-    date = "2025-01-19";
+    date = "2025-01-20";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
