@@ -24,6 +24,7 @@ args.module (
       "lexima-vim"
       "lightline-vim"
       "mkdx"
+      "mru"
       "pangu-vim"
       "parinfer-rust"
       "rainbow"
