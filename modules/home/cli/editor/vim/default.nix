@@ -18,6 +18,7 @@ args.module (
       "dps-ghosttext-vim"
       "easyjump-vim"
       "editorconfig-vim"
+      "ferret"
       "fzf-vim"
       "git-lens-vim"
       "git-messager-vim"
