@@ -36,7 +36,8 @@ pre-commit:
       stage_fixed: true
     markdown:
       glob: '*.md'
-      run: mdformat {staged_files}
+      run: prettier --parser markdown --write {staged_files} && autocorrect --fix
+        --quiet {staged_files}
       stage_fixed: true
     sh:
       glob: '*.sh'
