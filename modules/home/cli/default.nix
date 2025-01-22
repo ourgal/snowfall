@@ -12,7 +12,7 @@ args.module (
       "anime"
       "audio"
       "binary"
-      "blueteeth"
+      "bluetooth"
       "bookmark"
       "browser"
       "chat"
