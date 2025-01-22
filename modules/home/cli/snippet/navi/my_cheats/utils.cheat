@@ -2,3 +2,6 @@
 
 # show current coreutils progress
 progress -w
+
+# convert default.nix to markdown
+md='README.md'; nixFile='default.nix'; echo "\`\`\`nix tangle:$nixFile" > "$md" && cat "$nixFile" >> "$md" && echo '```' >> "$md"
