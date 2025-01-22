@@ -25,6 +25,7 @@ args.module (
       "indentLine"
       "lexima-vim"
       "lightline-vim"
+      "meson"
       "mkdx"
       "mru"
       "pangu-vim"
