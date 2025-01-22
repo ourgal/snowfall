@@ -10,6 +10,7 @@ args.module (
       progs.vim = {
         plugins = with pkgs.vimPlugins; [
           # keep-sorted start
+          coc-go
           coc-json
           coc-nvim
           coc-pyright
