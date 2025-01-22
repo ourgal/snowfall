@@ -3,7 +3,12 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "stack";
+    nixPkgs = [
+      # keep-sorted start
+      "ghcid"
+      "stack"
+      # keep-sorted end
+    ];
     files.".stack/config.yaml" = {
       package-index = {
         download-prefix = "https://mirrors.cernet.edu.cn/hackage/";
