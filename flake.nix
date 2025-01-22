@@ -95,6 +95,10 @@
       url = "github:vincentbernat/caddy-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lem = {
+      url = "github:lem-project/lem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

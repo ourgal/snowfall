@@ -7,7 +7,7 @@ args.module (
     in
     {
       path = ./.;
-      inputPkgs = (p: [ p.ghostty.packages."${pkgs.system}".default ]);
+      inputPkgs = p: [ p.ghostty.packages."${pkgs.system}".default ];
       confs.ghostty = ./config;
     }
   )
