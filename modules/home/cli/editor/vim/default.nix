@@ -22,6 +22,7 @@ args.module (
       "git-lens-vim"
       "git-messager-vim"
       "gtm-vim-plugin"
+      "gv-vim"
       "indentLine"
       "lexima-vim"
       "lightline-vim"
