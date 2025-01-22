@@ -108,7 +108,7 @@ augroup END
 set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
 set grepformat=%f:%l:%c:%m
 
-set signcolumn=yes
+set signcolumn=auto
 set sessionoptions-=blank
 set foldmethod=marker
 set cursorline
