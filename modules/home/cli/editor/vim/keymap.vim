@@ -6,8 +6,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <silent> \h :noh<cr>
-nnoremap n nzzzv
-nnoremap N Nzzzv
 nnoremap ZZ <cmd>xa<cr>
 nnoremap ZQ <cmd>qa!<cr>
 noremap Q @@
