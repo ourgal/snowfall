@@ -72,6 +72,7 @@ args.module (
       "visual-split-vim"
       "vlime"
       "wiki-vim"
+      "zeavim-vim"
       "zoxide-vim"
       # keep-sorted end
     ];
