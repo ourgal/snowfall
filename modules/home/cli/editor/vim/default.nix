@@ -4,7 +4,7 @@ args.module (
   // (
     let
       inherit (args) config namespace;
-      inherit (config.${namespace}.cli.editor.vim.motion) is-vim;
+      inherit (config.${namespace}.cli.editor.vim.motion.n) is-vim;
     in
     {
       path = ./.;
@@ -23,18 +23,27 @@ args.module (
       enable = [
         # keep-sorted start
         "align"
+        "auto-quotes"
+        "auto-save"
+        "command"
         "comment"
-        "edit"
         "git"
         "integration"
+        "jump"
         "lang"
         "lint"
         "lsp"
         "motion"
         "picker"
+        "quickfix"
         "search"
+        "session"
+        "snippet"
+        "template"
         "theme"
         "ui"
+        "undo"
+        "visual"
         # keep-sorted end
       ];
       dataFiles = {

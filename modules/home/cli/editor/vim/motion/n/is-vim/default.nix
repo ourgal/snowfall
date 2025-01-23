@@ -4,8 +4,8 @@ args.module (
   // (
     let
       inherit (args) pkgs config namespace;
-      inherit (config.${namespace}.cli.editor.vim.motion) vim-anzu;
-      inherit (config.${namespace}.cli.editor.vim.motion) vim-asterisk;
+      inherit (config.${namespace}.cli.editor.vim.motion.n) vim-anzu;
+      inherit (config.${namespace}.cli.editor.vim.motion.asterisk) vim-asterisk;
     in
     {
       path = ./.;

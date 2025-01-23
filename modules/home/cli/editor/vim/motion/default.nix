@@ -5,29 +5,23 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "easyjump-vim"
-      "is-vim"
-      "targets-vim"
-      "undotree"
-      "vim-asterisk"
-      "vim-exchange"
-      "vim-matchup"
-      "vim-repeat"
-      "vim-sneak"
-      "vim-subversive"
-      "vim-surround"
+      "CACX"
+      "asterisk"
+      "brackets"
+      "dot"
+      "exchange"
+      "n"
+      "percent"
+      "replace"
+      "surround"
+      "textobj"
       "vim-toop"
-      "vim-unimpaired"
       # keep-sorted end
     ];
     disable = [
       # keep-sorted start
-      "gundo-vim"
       "ultisnips"
-      "vim-anzu"
-      "vim-cycle"
       "vim-snipewin"
-      "vim-visual-star-search"
       # keep-sorted end
     ];
   }
