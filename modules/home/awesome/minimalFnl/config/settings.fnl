@@ -1,5 +1,6 @@
 (let [awful (require :awful)
       terminal (-> (os.getenv :TERMINAL) (or :kitty))
+      terminal_opts {:kitty " --single-instance" :wezterm ""}
       editor (-> (os.getenv :EDITOR) (or :vim))
       browser :firefox
       browserS :brave
@@ -17,7 +18,7 @@
   {: tag_num
    : host
    : terminal
-   :terminal_cmd (.. terminal " --single-instance")
+   :terminal_cmd (.. terminal (. terminal_opts terminal))
    : editor
    :editor_cmd (.. terminal " -e " editor)
    : launcher
