@@ -4,7 +4,7 @@ args.module (
   // (
     let
       inherit (args) pkgs config namespace;
-      inherit (config.${namespace}.cli.editor.vim.motion) is-vim;
+      inherit (config.${namespace}.cli.editor.vim.motion.n) is-vim;
     in
     {
       path = ./.;
