@@ -5,8 +5,11 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "align"
-      "vim-easy-align"
+      "bufexplorer"
+      "ctrlp-vim"
+      "fzf-vim"
+      "mru"
+      "skim"
       # keep-sorted end
     ];
   }

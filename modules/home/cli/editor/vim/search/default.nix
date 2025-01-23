@@ -5,8 +5,8 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "align"
-      "vim-easy-align"
+      "ferret"
+      "vim-grepper"
       # keep-sorted end
     ];
   }
