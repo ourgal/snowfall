@@ -14,6 +14,7 @@ args.module (
       "csv"
       "dhall"
       "go"
+      "jq"
       "latex"
       "rst"
       # keep-sorted end
