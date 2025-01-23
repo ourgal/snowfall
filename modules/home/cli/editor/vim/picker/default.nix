@@ -10,6 +10,7 @@ args.module (
       "fzf-vim"
       "mru"
       "skim"
+      "vim-dirvish"
       # keep-sorted end
     ];
   }
