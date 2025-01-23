@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
+      "just"
       "lisp"
       "markdown"
       "python"
