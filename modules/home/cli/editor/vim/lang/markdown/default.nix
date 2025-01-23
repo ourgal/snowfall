@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "mkdx"
       "pangu-vim"
+      "vim-table-mode"
       "wiki-vim"
       # keep-sorted end
     ];
