@@ -62,7 +62,7 @@ set novisualbell
 set t_vb=
 set timeoutlen=500
 
-set foldcolumn=1
+set foldcolumn=0
 
 let $LANG = 'en'
 set langmenu=en
