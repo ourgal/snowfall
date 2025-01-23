@@ -21,7 +21,7 @@ in
     name = mkOpt' str "zxc";
     browser = mkOpt' str "firefox";
     editor = mkOpt' str "hx";
-    terminal = mkOpt' str "kitty";
+    terminal = mkOpt' str "wezterm";
     browserS = mkOpt' str "brave";
     browserSS = mkOpt' str "qutebrowser";
     pager = mkOpt' str "moar";
