@@ -24,6 +24,7 @@ args.module (
       # keep-sorted start
       "gundo-vim"
       "ultisnips"
+      "vim-anzu"
       "vim-cycle"
       "vim-snipewin"
       # keep-sorted end
