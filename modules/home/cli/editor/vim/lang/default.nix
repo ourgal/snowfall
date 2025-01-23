@@ -18,6 +18,7 @@ args.module (
       "jq"
       "latex"
       "rst"
+      "zig"
       # keep-sorted end
     ];
   }
