@@ -5,7 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "align"
+      "tabular"
       "vim-easy-align"
       # keep-sorted end
     ];
