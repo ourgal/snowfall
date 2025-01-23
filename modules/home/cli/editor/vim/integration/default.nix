@@ -23,6 +23,7 @@ args.module (
     disable = [
       # keep-sorted start
       "editorconfig-vim"
+      "emodeline" # emacs
       "hurl"
       "tup"
       "vim-ghost" # broken
