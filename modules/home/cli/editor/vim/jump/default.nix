@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "easyjump-vim";
+    enable = [
+      # keep-sorted start
+      "easyjump-vim"
+      "vim-fetch"
+      # keep-sorted end
+    ];
   }
 )
