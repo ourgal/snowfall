@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "lisp"
       "markdown"
+      "python"
       # keep-sorted end
     ];
     disable = [
