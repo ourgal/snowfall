@@ -8,6 +8,7 @@ args.module (
       "git-lens-vim"
       "git-messager-vim"
       "gv-vim"
+      "vim-flog"
       "vim-fugitive"
       "vim-gitgutter"
       "vim-github-link"
