@@ -9,6 +9,7 @@ args.module (
       "is-vim"
       "targets-vim"
       "undotree"
+      "vim-asterisk"
       "vim-exchange"
       "vim-matchup"
       "vim-repeat"
@@ -17,7 +18,6 @@ args.module (
       "vim-surround"
       "vim-toop"
       "vim-unimpaired"
-      "vim-visual-star-search"
       # keep-sorted end
     ];
     disable = [
@@ -27,6 +27,7 @@ args.module (
       "vim-anzu"
       "vim-cycle"
       "vim-snipewin"
+      "vim-visual-star-search"
       # keep-sorted end
     ];
   }

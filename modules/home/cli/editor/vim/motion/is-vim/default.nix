@@ -5,6 +5,7 @@ args.module (
     let
       inherit (args) pkgs config namespace;
       inherit (config.${namespace}.cli.editor.vim.motion) vim-anzu;
+      inherit (config.${namespace}.cli.editor.vim.motion) vim-asterisk;
     in
     {
       path = ./.;
@@ -15,6 +16,13 @@ args.module (
             ''
               map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
               map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+            ''
+          else if vim-asterisk.enable then
+            ''
+              map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+              map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+              map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+              map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
             ''
           else
             "";
