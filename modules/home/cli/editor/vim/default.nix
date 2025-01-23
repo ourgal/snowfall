@@ -40,6 +40,7 @@ args.module (
         "search"
         "session"
         "snippet"
+        "tabline"
         "template"
         "theme"
         "ui"
