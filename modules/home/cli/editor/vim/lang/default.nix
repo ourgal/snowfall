@@ -14,6 +14,7 @@ args.module (
       # keep-sorted start
       "csv"
       "dhall"
+      "fish"
       "go"
       "jq"
       "latex"
