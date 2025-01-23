@@ -5,8 +5,9 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "align"
-      "vim-easy-align"
+      "mkdx"
+      "pangu-vim"
+      "wiki-vim"
       # keep-sorted end
     ];
   }

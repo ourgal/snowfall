@@ -5,9 +5,10 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "align"
-      "vim-easy-align"
+      "parinfer-rust"
+      "vlime"
       # keep-sorted end
     ];
+    disable = "slimv";
   }
 )
