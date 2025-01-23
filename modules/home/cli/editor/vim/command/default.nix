@@ -6,6 +6,7 @@ args.module (
     enable = [
       # keep-sorted start
       "vim-mkdir"
+      "vim-suda"
       "vimsuggest"
       # keep-sorted end
     ];
