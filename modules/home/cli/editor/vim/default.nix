@@ -4,6 +4,7 @@ args.module (
   // (
     let
       inherit (args) config namespace;
+      inherit (config.${namespace}.cli.editor.vim.motion) is-vim;
     in
     {
       path = ./.;
@@ -11,7 +12,7 @@ args.module (
         (builtins.readFile ./option.vim)
         + (builtins.readFile ./keymap.vim)
         + (
-          if config.${namespace}.cli.editor.vim.motion.is-vim.enable then
+          if is-vim.enable then
             ""
           else
             ''
