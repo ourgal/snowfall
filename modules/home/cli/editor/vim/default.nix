@@ -33,6 +33,7 @@ args.module (
         "lang"
         "lint"
         "lsp"
+        "mark"
         "motion"
         "picker"
         "quickfix"
