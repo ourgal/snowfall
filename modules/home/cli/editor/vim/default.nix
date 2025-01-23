@@ -23,7 +23,7 @@ args.module (
       enable = [
         # keep-sorted start
         "align"
-        "auto-quotes"
+        "auto-pair"
         "auto-save"
         "command"
         "comment"
