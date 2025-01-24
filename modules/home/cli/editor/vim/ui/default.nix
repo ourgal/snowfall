@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
+      "context-vim"
       "indentLine"
       "lightline-vim"
       "vim-highlightedyank"
