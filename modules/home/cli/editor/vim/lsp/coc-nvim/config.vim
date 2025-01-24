@@ -126,7 +126,7 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " provide custom statusline: lightline.vim, vim-airline
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function',''\'''\')}
 
-let g:coc_global_extensions = ['coc-fish', '@yaegassy/coc-marksman', 'coc-powershell', 'coc-word', 'coc-emoji', 'coc-dash-complete', 'coc-just-complete', 'coc-translator', 'coc-perl']
+let g:coc_global_extensions = ['coc-fish', '@yaegassy/coc-marksman', 'coc-powershell', 'coc-emoji', 'coc-dash-complete', 'coc-just-complete', 'coc-translator', 'coc-perl']
 " nnoremap <leader>e <Cmd>CocCommand explorer --quit-on-open<CR>
 
 " limit completion item
