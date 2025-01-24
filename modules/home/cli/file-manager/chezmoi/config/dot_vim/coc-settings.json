@@ -7,7 +7,7 @@
     "markdown",
     "gitcommit"
   ],
-  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnSave": false,
   "suggest.noselect": true,
   "python.formatting.provider": "ruff",
   "pyright.organizeimports.provider": "ruff",

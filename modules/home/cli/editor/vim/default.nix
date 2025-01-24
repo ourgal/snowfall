@@ -27,6 +27,7 @@ args.module (
         "auto-save"
         "command"
         "comment"
+        "format"
         "git"
         "integration"
         "jump"
