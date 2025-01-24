@@ -8,6 +8,7 @@ args.module (
       "context-vim"
       "lightline-vim"
       "quick-scope"
+      "tagbar"
       "vim-highlightedyank"
       "vim-indent-guides"
       "vim-polyglot"
