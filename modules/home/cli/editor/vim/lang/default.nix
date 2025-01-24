@@ -17,6 +17,7 @@ args.module (
       "dhall"
       "fish"
       "go"
+      "html"
       "jq"
       "latex"
       "rst"
