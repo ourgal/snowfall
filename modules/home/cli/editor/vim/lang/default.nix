@@ -20,6 +20,7 @@ args.module (
       "jq"
       "latex"
       "rst"
+      "sql"
       "zig"
       # keep-sorted end
     ];
