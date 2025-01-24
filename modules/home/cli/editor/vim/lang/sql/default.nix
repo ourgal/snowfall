@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "vim-dadbod";
+    enable = [
+      # keep-sorted start
+      "vim-dadbod"
+      "vim-dadbod-ui"
+      # keep-sorted end
+    ];
   }
 )
