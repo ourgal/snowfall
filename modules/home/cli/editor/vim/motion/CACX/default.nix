@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "vim-cycle";
+    enable = [
+      # keep-sorted start
+      "vim-cycle"
+      "vim-visual-increment"
+      # keep-sorted end
+    ];
   }
 )
