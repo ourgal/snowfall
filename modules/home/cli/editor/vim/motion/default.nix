@@ -13,6 +13,7 @@ args.module (
       "n"
       "percent"
       "replace"
+      "splitjoin-vim"
       "surround"
       "textobj"
       "vim-toop"
