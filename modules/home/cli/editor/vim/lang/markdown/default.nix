@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "pangu-vim"
       "vim-markdown"
+      "vim-markdown-toc"
       "wiki-vim"
       # keep-sorted end
     ];
