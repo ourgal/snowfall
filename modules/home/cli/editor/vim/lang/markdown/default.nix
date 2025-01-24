@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
+      "markdown-preview-nvim"
       "pangu-vim"
       "vim-markdown"
       "vim-markdown-toc"
