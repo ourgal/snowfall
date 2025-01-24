@@ -13,6 +13,7 @@ args.module (
           coc-go
           coc-json
           coc-nvim
+          coc-prettier
           coc-pyright
           coc-r-lsp
           coc-sh
