@@ -5,6 +5,7 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
+      "traces-vim"
       "vim-mkdir"
       "vim-suda"
       "vimsuggest"
