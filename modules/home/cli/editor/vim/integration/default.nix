@@ -14,6 +14,7 @@ args.module (
       "vim-dispatch"
       "vim-floaterm"
       "vim-silicon"
+      "vim-tmux-clipboard"
       "vim-tome" # tmux playbook
       "vimux" # tmux
       "zeavim-vim"

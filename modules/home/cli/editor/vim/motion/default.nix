@@ -16,6 +16,7 @@ args.module (
       "splitjoin-vim"
       "surround"
       "textobj"
+      "vim-expand-region"
       "vim-toop"
       # keep-sorted end
     ];
