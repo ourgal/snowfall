@@ -38,6 +38,7 @@ args.module (
         "pair"
         "picker"
         "quickfix"
+        "register"
         "search"
         "session"
         "snippet"
