@@ -25,6 +25,7 @@ args.module (
       "editorconfig-vim"
       "emodeline" # emacs
       "hurl"
+      "kmonad-vim"
       "tup"
       "vim-ghost" # broken
       "vim-ledger"
