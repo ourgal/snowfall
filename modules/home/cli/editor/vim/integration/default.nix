@@ -7,7 +7,6 @@ args.module (
       # keep-sorted start
       "chezmoi-vim"
       "devdocs-vim"
-      "dps-ghosttext-vim"
       "gtm-vim-plugin"
       "meson"
       "vim-carbon-now-sh"
@@ -23,6 +22,7 @@ args.module (
     ];
     disable = [
       # keep-sorted start
+      "dps-ghosttext-vim"
       "editorconfig-vim"
       "emodeline" # emacs
       "hurl"
