@@ -11,6 +11,7 @@ args.module (
       progs.vim.extraConfig =
         (builtins.readFile ./option.vim)
         + (builtins.readFile ./keymap.vim)
+        + (builtins.readFile ./macro.vim)
         + (
           if is-vim.enable then
             ""
