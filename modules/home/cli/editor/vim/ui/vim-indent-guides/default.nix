@@ -8,10 +8,7 @@ args.module (
     {
       path = ./.;
       progs.vim = {
-        plugins = with pkgs.vimPlugins; [
-          vim-prosession
-          vim-obsession
-        ];
+        plugins = with pkgs.vimPlugins; [ vim-indent-guides ];
         extraConfig = builtins.readFile ./config.vim;
       };
     }
