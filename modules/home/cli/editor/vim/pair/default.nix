@@ -5,10 +5,11 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "lexima-vim"
+      "delimitMate" # auto quotes
       "switch-vim"
       "vim-endwise"
       # keep-sorted end
     ];
+    disable = "lexima-vim"; # auto quotes
   }
 )
