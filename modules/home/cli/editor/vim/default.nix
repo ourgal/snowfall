@@ -23,7 +23,6 @@ args.module (
       enable = [
         # keep-sorted start
         "align"
-        "auto-pair"
         "auto-save"
         "command"
         "comment"
@@ -35,6 +34,7 @@ args.module (
         "lsp"
         "mark"
         "motion"
+        "pair"
         "picker"
         "quickfix"
         "search"
