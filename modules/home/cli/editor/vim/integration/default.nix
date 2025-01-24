@@ -9,6 +9,7 @@ args.module (
       "devdocs-vim"
       "gtm-vim-plugin"
       "meson"
+      "vim-bracketed-paste"
       "vim-carbon-now-sh"
       "vim-dispatch"
       "vim-floaterm"
