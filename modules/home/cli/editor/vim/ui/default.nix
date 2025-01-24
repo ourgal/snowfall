@@ -6,16 +6,21 @@ args.module (
     enable = [
       # keep-sorted start
       "context-vim"
-      "indentLine"
       "lightline-vim"
       "quick-scope"
       "vim-highlightedyank"
+      "vim-indent-guides"
       "vim-polyglot"
       "vim-which-key"
       "vim-zoom"
       "visual-split-vim"
       # keep-sorted end
     ];
-    disable = "rainbow";
+    disable = [
+      # keep-sorted start
+      "indentLine"
+      "rainbow"
+      # keep-sorted end
+    ];
   }
 )
