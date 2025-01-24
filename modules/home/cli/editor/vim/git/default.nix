@@ -18,6 +18,7 @@ args.module (
     disable = [
       # keep-sorted start
       "gitv"
+      "vim-gh-line" # open the browser
       "vim-signify"
       # keep-sorted end
     ];
