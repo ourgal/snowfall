@@ -5334,27 +5334,6 @@
         },
         "version": "04c77b6010f7e45e72b4d3c399c120d42f7c5d47"
     },
-    "vim-dirvish-dovish": {
-        "cargoLocks": null,
-        "date": "2022-06-10",
-        "extract": null,
-        "name": "vim-dirvish-dovish",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "roginfarrer",
-            "repo": "vim-dirvish-dovish",
-            "rev": "04c77b6010f7e45e72b4d3c399c120d42f7c5d47",
-            "sha256": "sha256-8uw1Ft48JVphhdhd9TBcB3b9NFBRkwdEQH2LZblE1dk=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "04c77b6010f7e45e72b4d3c399c120d42f7c5d47"
-    },
     "vim-floaterm": {
         "cargoLocks": null,
         "date": "2024-04-08",
