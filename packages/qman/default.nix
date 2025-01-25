@@ -13,10 +13,8 @@
   _sources,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   inherit (_sources.qman) pname version src;
-
-  sourceRoot = "${src.name}/src";
 
   nativeBuildInputs = [
     meson
