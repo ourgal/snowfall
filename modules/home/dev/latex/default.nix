@@ -8,8 +8,8 @@ args.module (
       "tectonic"
       "tex-fmt"
       "texlab"
-      "texliveFull"
       # keep-sorted end
     ];
+    enable = "texlive";
   }
 )
