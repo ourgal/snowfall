@@ -426,13 +426,13 @@
   };
   curd = {
     pname = "curd";
-    version = "v1.0.5";
+    version = "v1.0.6";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "v1.0.5";
+      rev = "v1.0.6";
       fetchSubmodules = false;
-      sha256 = "sha256-Mf67GCPVuU+Rpou2HmbMeDcekqi+VkX4e2dFjrOTlm4=";
+      sha256 = "sha256-myTIay9EuZ9tL+km9bSGc+29wfafcXWcHp/Wyb4ebWs=";
     };
   };
   datadash = {
@@ -529,8 +529,8 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:9eb8029b91c647bbea7d7d048672f8c41eb501aa6159d6ac9402242290c3b20c";
-      sha256 = "sha256-iWnF5wdRxmyd+aD5JLeie9oHzDpe9FUBQTWuwTUe2Ko=";
+      imageDigest = "sha256:f6fdbcc6812b3bca65da94e2a3c7bdab25d262c962435fa7d457d0e7b05d926e";
+      sha256 = "sha256-pECGEJyZcspxteLVCO19YcE8ktl/em0Q8q0FKbbUlKo=";
       finalImageTag = "v1.1.0";
     };
   };
@@ -1429,13 +1429,13 @@
   };
   jj-fzf = {
     pname = "jj-fzf";
-    version = "v0.24.0";
+    version = "v0.25.0";
     src = fetchFromGitHub {
       owner = "tim-janik";
       repo = "jj-fzf";
-      rev = "v0.24.0";
+      rev = "v0.25.0";
       fetchSubmodules = false;
-      sha256 = "sha256-naYedpY4bioJ1onn/8hQjkx8sKCgPXQP3nRbneVulcU=";
+      sha256 = "sha256-StF0TKXTgtglFDbNTAU1c7Vw+6m70Mz2RvFon3difsk=";
     };
   };
   kbgrep = {
@@ -1965,10 +1965,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.10.5";
+    version = "2.10.6";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.5.tar.gz";
-      sha256 = "sha256-J4s427rsViAR1lnuBfYzRpUbOiSKbzZC4bxoiU6itP8=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.6.tar.gz";
+      sha256 = "sha256-yl2qgnzOM956Qr4UJUiwCWvwWn57Nlrr+l+O7scSgjY=";
     };
   };
   pydantic-core = {
@@ -2011,15 +2011,15 @@
   };
   qman = {
     pname = "qman";
-    version = "5559a2446f799d82eee74019ed424272df89f4b1";
+    version = "bb8cc09681f4b01225943f977feabe78bbeedc4e";
     src = fetchFromGitHub {
       owner = "plp13";
       repo = "qman";
-      rev = "5559a2446f799d82eee74019ed424272df89f4b1";
+      rev = "bb8cc09681f4b01225943f977feabe78bbeedc4e";
       fetchSubmodules = false;
-      sha256 = "sha256-NuyN5qEtH4ZIoTnbKEaam24J91yps2HyFSNKFQq6dUY=";
+      sha256 = "sha256-9e889rcHK9VF9+2kIX74lB2xTQxILIQb/8WYqS+HYhQ=";
     };
-    date = "2024-11-18";
+    date = "2025-01-24";
   };
   quartz = {
     pname = "quartz";
@@ -2366,13 +2366,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.4.2";
+    version = "v0.5.2";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.4.2";
+      rev = "v0.5.2";
       fetchSubmodules = false;
-      sha256 = "sha256-G8mIg64RUycvu7TD+q0tb+hrMpU+0D0GkUgZ459FDJ0=";
+      sha256 = "sha256-POf5F5KHbgO7bItTd4QeWJNTDSolmfUPwpvHMp+AviQ=";
     };
   };
   sprite-dicing = {
@@ -2487,13 +2487,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.22.0";
+    version = "v0.23.0";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.22.0";
+      rev = "v0.23.0";
       fetchSubmodules = false;
-      sha256 = "sha256-VkEJWmg8t59IDCsFiYLbRzbbXgtWmBqDhZevgULjvWQ=";
+      sha256 = "sha256-8oLQgevrC/mXBdq7c9FuBS59/5b90sszKumsyeJWZuA=";
     };
   };
   task-relative-recur = {
@@ -2950,18 +2950,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501222211";
+    version = "202501242211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501222211/geoip.dat";
-      sha256 = "sha256-tsskrwnAIhgrvtCHGPGQI4lsYN99N1FYFZR2z16Sa0Y=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geoip.dat";
+      sha256 = "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501222211";
+    version = "202501242211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501222211/geosite.dat";
-      sha256 = "sha256-Ru0gCxDvdYXnRNI9ouOHLwa34hNsI8bE0+Y7q0TKbso=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geosite.dat";
+      sha256 = "sha256-PY+6L/XBZ2IlCrkRXxC+Qtzwuod6gzxZzJfRLREL3Mc=";
     };
   };
   vim-auto-save = {
@@ -2978,15 +2978,27 @@
   };
   vim-cycle = {
     pname = "vim-cycle";
-    version = "a327a47e16cbc7f83a1427050c5878b165a53132";
+    version = "57a2a7ca9451f47146a829cc74c1c950a855329e";
     src = fetchFromGitHub {
       owner = "zef";
       repo = "vim-cycle";
-      rev = "a327a47e16cbc7f83a1427050c5878b165a53132";
+      rev = "57a2a7ca9451f47146a829cc74c1c950a855329e";
       fetchSubmodules = false;
-      sha256 = "sha256-pSpqt5JUG26G0T1849z1lcFK4tpdJWPTgODPK5nW72M=";
+      sha256 = "sha256-PwLM6QCHDq3I9FR6sslvZjQ+a0qLVrZH3gie1KnFIFA=";
     };
-    date = "2022-02-17";
+    date = "2025-01-23";
+  };
+  vim-dirvish-dovish = {
+    pname = "vim-dirvish-dovish";
+    version = "04c77b6010f7e45e72b4d3c399c120d42f7c5d47";
+    src = fetchFromGitHub {
+      owner = "roginfarrer";
+      repo = "vim-dirvish-dovish";
+      rev = "04c77b6010f7e45e72b4d3c399c120d42f7c5d47";
+      fetchSubmodules = false;
+      sha256 = "sha256-8uw1Ft48JVphhdhd9TBcB3b9NFBRkwdEQH2LZblE1dk=";
+    };
+    date = "2022-06-10";
   };
   vim-floaterm = {
     pname = "vim-floaterm";
@@ -3146,15 +3158,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0";
+    version = "9784510fe980dfcf255ed5ed5e8c32a63705e15d";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0";
+      rev = "9784510fe980dfcf255ed5ed5e8c32a63705e15d";
       fetchSubmodules = false;
-      sha256 = "sha256-JHHAR6W0C+2i/jh+UaWdsqhbU12J5NqNv8iowJlQFOw=";
+      sha256 = "sha256-KDo8Y04RBVwIwqpLWG83YTmXbtfUtENOKiKK+wcJOxg=";
     };
-    date = "2025-01-20";
+    date = "2025-01-24";
   };
   visual-split-vim = {
     pname = "visual-split-vim";

@@ -753,12 +753,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v1.0.5",
-            "sha256": "sha256-Mf67GCPVuU+Rpou2HmbMeDcekqi+VkX4e2dFjrOTlm4=",
+            "rev": "v1.0.6",
+            "sha256": "sha256-myTIay9EuZ9tL+km9bSGc+29wfafcXWcHp/Wyb4ebWs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.5"
+        "version": "v1.0.6"
     },
     "datadash": {
         "cargoLocks": null,
@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:9eb8029b91c647bbea7d7d048672f8c41eb501aa6159d6ac9402242290c3b20c",
+            "imageDigest": "sha256:f6fdbcc6812b3bca65da94e2a3c7bdab25d262c962435fa7d457d0e7b05d926e",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-iWnF5wdRxmyd+aD5JLeie9oHzDpe9FUBQTWuwTUe2Ko=",
+            "sha256": "sha256-pECGEJyZcspxteLVCO19YcE8ktl/em0Q8q0FKbbUlKo=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -2571,12 +2571,12 @@
             "name": null,
             "owner": "tim-janik",
             "repo": "jj-fzf",
-            "rev": "v0.24.0",
-            "sha256": "sha256-naYedpY4bioJ1onn/8hQjkx8sKCgPXQP3nRbneVulcU=",
+            "rev": "v0.25.0",
+            "sha256": "sha256-StF0TKXTgtglFDbNTAU1c7Vw+6m70Mz2RvFon3difsk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.24.0"
+        "version": "v0.25.0"
     },
     "kbgrep": {
         "cargoLocks": null,
@@ -3529,11 +3529,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-J4s427rsViAR1lnuBfYzRpUbOiSKbzZC4bxoiU6itP8=",
+            "sha256": "sha256-yl2qgnzOM956Qr4UJUiwCWvwWn57Nlrr+l+O7scSgjY=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.5.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.6.tar.gz"
         },
-        "version": "2.10.5"
+        "version": "2.10.6"
     },
     "pydantic-core": {
         "cargoLocks": null,
@@ -3609,7 +3609,7 @@
     },
     "qman": {
         "cargoLocks": null,
-        "date": "2024-11-18",
+        "date": "2025-01-24",
         "extract": null,
         "name": "qman",
         "passthru": null,
@@ -3621,12 +3621,12 @@
             "name": null,
             "owner": "plp13",
             "repo": "qman",
-            "rev": "5559a2446f799d82eee74019ed424272df89f4b1",
-            "sha256": "sha256-NuyN5qEtH4ZIoTnbKEaam24J91yps2HyFSNKFQq6dUY=",
+            "rev": "bb8cc09681f4b01225943f977feabe78bbeedc4e",
+            "sha256": "sha256-9e889rcHK9VF9+2kIX74lB2xTQxILIQb/8WYqS+HYhQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5559a2446f799d82eee74019ed424272df89f4b1"
+        "version": "bb8cc09681f4b01225943f977feabe78bbeedc4e"
     },
     "quartz": {
         "cargoLocks": null,
@@ -4239,12 +4239,12 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.4.2",
-            "sha256": "sha256-G8mIg64RUycvu7TD+q0tb+hrMpU+0D0GkUgZ459FDJ0=",
+            "rev": "v0.5.2",
+            "sha256": "sha256-POf5F5KHbgO7bItTd4QeWJNTDSolmfUPwpvHMp+AviQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.2"
+        "version": "v0.5.2"
     },
     "sprite-dicing": {
         "cargoLocks": null,
@@ -4443,12 +4443,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.22.0",
-            "sha256": "sha256-VkEJWmg8t59IDCsFiYLbRzbbXgtWmBqDhZevgULjvWQ=",
+            "rev": "v0.23.0",
+            "sha256": "sha256-8oLQgevrC/mXBdq7c9FuBS59/5b90sszKumsyeJWZuA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.22.0"
+        "version": "v0.23.0"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -5250,11 +5250,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-tsskrwnAIhgrvtCHGPGQI4lsYN99N1FYFZR2z16Sa0Y=",
+            "sha256": "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501222211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geoip.dat"
         },
-        "version": "202501222211"
+        "version": "202501242211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5265,11 +5265,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Ru0gCxDvdYXnRNI9ouOHLwa34hNsI8bE0+Y7q0TKbso=",
+            "sha256": "sha256-PY+6L/XBZ2IlCrkRXxC+Qtzwuod6gzxZzJfRLREL3Mc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501222211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geosite.dat"
         },
-        "version": "202501222211"
+        "version": "202501242211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -5294,7 +5294,7 @@
     },
     "vim-cycle": {
         "cargoLocks": null,
-        "date": "2022-02-17",
+        "date": "2025-01-23",
         "extract": null,
         "name": "vim-cycle",
         "passthru": null,
@@ -5306,12 +5306,33 @@
             "name": null,
             "owner": "zef",
             "repo": "vim-cycle",
-            "rev": "a327a47e16cbc7f83a1427050c5878b165a53132",
-            "sha256": "sha256-pSpqt5JUG26G0T1849z1lcFK4tpdJWPTgODPK5nW72M=",
+            "rev": "57a2a7ca9451f47146a829cc74c1c950a855329e",
+            "sha256": "sha256-PwLM6QCHDq3I9FR6sslvZjQ+a0qLVrZH3gie1KnFIFA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a327a47e16cbc7f83a1427050c5878b165a53132"
+        "version": "57a2a7ca9451f47146a829cc74c1c950a855329e"
+    },
+    "vim-dirvish-dovish": {
+        "cargoLocks": null,
+        "date": "2022-06-10",
+        "extract": null,
+        "name": "vim-dirvish-dovish",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "roginfarrer",
+            "repo": "vim-dirvish-dovish",
+            "rev": "04c77b6010f7e45e72b4d3c399c120d42f7c5d47",
+            "sha256": "sha256-8uw1Ft48JVphhdhd9TBcB3b9NFBRkwdEQH2LZblE1dk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "04c77b6010f7e45e72b4d3c399c120d42f7c5d47"
     },
     "vim-floaterm": {
         "cargoLocks": null,
@@ -5588,7 +5609,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2025-01-20",
+        "date": "2025-01-24",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -5600,12 +5621,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0",
-            "sha256": "sha256-JHHAR6W0C+2i/jh+UaWdsqhbU12J5NqNv8iowJlQFOw=",
+            "rev": "9784510fe980dfcf255ed5ed5e8c32a63705e15d",
+            "sha256": "sha256-KDo8Y04RBVwIwqpLWG83YTmXbtfUtENOKiKK+wcJOxg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "97a0195e0a6a7fdbee35bf8e5828d1e6d655d8e0"
+        "version": "9784510fe980dfcf255ed5ed5e8c32a63705e15d"
     },
     "visual-split-vim": {
         "cargoLocks": null,
