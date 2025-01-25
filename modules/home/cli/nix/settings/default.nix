@@ -19,6 +19,7 @@ args.module (
           channels = { inherit (inputs) nixpkgs; };
           nixPath = [ "$HOME/.nix-defexpr/channels" ];
         };
+        home.preferXdgDirectories = true;
         home.activation.report-changes = config.lib.dag.entryAnywhere ''
           ${pkgs.nvd}/bin/nvd diff $oldGenPath $newGenPath
         '';
