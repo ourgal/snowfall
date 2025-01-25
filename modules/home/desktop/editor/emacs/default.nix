@@ -18,7 +18,10 @@ args.module (
         package = pkgs.emacs;
       };
       servs = "emacs";
-      value.systemd.user.services.emacs.Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
+      value = {
+        systemd.user.services.emacs.Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
+        home.sessionPath = [ "$HOME/.config/emacs/bin" ]; # doomemacs
+      };
     }
   )
 )

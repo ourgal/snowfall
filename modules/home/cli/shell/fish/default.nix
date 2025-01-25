@@ -13,11 +13,6 @@ args.module (
     {
       path = ./.;
       progs.fish = {
-        shellInit = # fish
-          ''
-            fish_add_path ~/.local/bin
-            fish_add_path ~/.config/emacs/bin
-          '';
         interactiveShellInit = # fish
           ''
             set fish_greeting
@@ -151,6 +146,7 @@ args.module (
           scur = "systemctl --user restart";
           scuo = "systemctl --user stop";
         };
+        home.sessionPath = [ "$HOME/.local/bin" ];
       };
       enable = "fzf-help";
     }
