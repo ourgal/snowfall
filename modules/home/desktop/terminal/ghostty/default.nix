@@ -1,14 +1,16 @@
 args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      inputPkgs = p: [ p.ghostty.packages."${pkgs.system}".default ];
-      confs.ghostty = ./config;
-    }
-  )
+  // {
+    path = ./.;
+    progs.ghostty.settings = {
+      font-family = "FiraCode Nerd Font Mono";
+      font-size = 14;
+      cursor-style = "bar";
+      background-opacity = 0.8;
+      window-decoration = false;
+      auto-update = "off";
+      theme = "catppuccin-mocha";
+    };
+  }
 )

@@ -87,10 +87,6 @@
       url = "github:snowfallorg/drift";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     caddy-nix = {
       url = "github:vincentbernat/caddy-nix";
       inputs.nixpkgs.follows = "nixpkgs";
