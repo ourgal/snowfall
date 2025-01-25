@@ -13,6 +13,7 @@ args.module (
       "lazysql"
       "litecli"
       "sql-studio"
+      "sqls"
       "sqruff"
       "usql"
       "visidata"
