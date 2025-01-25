@@ -8,7 +8,6 @@ args.module (
       "code-radio-cli"
       "radio-go-go"
       "roc-switch"
-      "sonicradio"
       # keep-sorted end
     ];
     nixPkgs = [
