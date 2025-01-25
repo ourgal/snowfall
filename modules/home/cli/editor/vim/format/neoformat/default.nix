@@ -9,7 +9,6 @@ args.module (
       path = ./.;
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ neoformat ];
-        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )
