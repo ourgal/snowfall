@@ -10,7 +10,9 @@ in
     qtile.Cozytile = enabled;
     fonts = enabled;
     cli = enabled;
-    desktop = enabled;
+    desktop = enabled // {
+      system.batsignal = enabled;
+    };
     dev = enabled;
   };
 }
