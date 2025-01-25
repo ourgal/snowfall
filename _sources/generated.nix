@@ -3005,18 +3005,6 @@
     };
     date = "2022-06-10";
   };
-  vim-dirvish-dovish = {
-    pname = "vim-dirvish-dovish";
-    version = "04c77b6010f7e45e72b4d3c399c120d42f7c5d47";
-    src = fetchFromGitHub {
-      owner = "roginfarrer";
-      repo = "vim-dirvish-dovish";
-      rev = "04c77b6010f7e45e72b4d3c399c120d42f7c5d47";
-      fetchSubmodules = false;
-      sha256 = "sha256-8uw1Ft48JVphhdhd9TBcB3b9NFBRkwdEQH2LZblE1dk=";
-    };
-    date = "2022-06-10";
-  };
   vim-floaterm = {
     pname = "vim-floaterm";
     version = "4e28c8dd0271e10a5f55142fb6fe9b1599ee6160";
