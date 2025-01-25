@@ -13,6 +13,7 @@ args.module (
       "lazysql"
       "rainfrog"
       "sql-studio"
+      "sqls"
       "sqruff"
       "usql"
       # keep-sorted end

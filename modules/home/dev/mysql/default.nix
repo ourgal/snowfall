@@ -13,6 +13,7 @@ args.module (
       "lazysql"
       "mycli"
       "sql-studio"
+      "sqls"
       "sqruff"
       "usql"
       # keep-sorted end
