@@ -14,7 +14,7 @@ python3.pkgs.buildPythonApplication {
   pythonRelaxDeps = true;
 
   build-system = [
-    python3.pkgs.poetry-core
+    python3.pkgs.hatchling
   ];
 
   dependencies = with python3.pkgs; [
