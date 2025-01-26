@@ -23,6 +23,7 @@ args.module (
       "feh"
       "imv"
       "nitrogen"
+      "wallpapers"
       # keep-sorted end
     ];
   }
