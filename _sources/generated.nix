@@ -1282,7 +1282,7 @@
       repo = "gw";
       rev = "v0.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-xVtGFlmoLOq3byi/iznebj8d84F+uG6wNoZzrxwR0FQ=";
+      sha256 = "sha256-tyZEGGX9Vr1T/U6Gea3Ku1dbHu4s2RY3u+jacrxn0Zo=";
     };
     cargoLock."Cargo.lock" = {
       lockFile = ./gw-v0.4.1/Cargo.lock;
@@ -1395,6 +1395,17 @@
       rev = "v0.6.0";
       fetchSubmodules = false;
       sha256 = "sha256-zlSZwD4sug3EYwlar6UFlMnIaQtLq9j10eQbp3bRAWA=";
+    };
+  };
+  isd = {
+    pname = "isd";
+    version = "v0.2.0";
+    src = fetchFromGitHub {
+      owner = "isd-project";
+      repo = "isd";
+      rev = "v0.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-YOQoI9PB096C/wNF9y5nrXkpJGbO6cXQ2U6I2Ece2PM=";
     };
   };
   jalm = {
@@ -1909,15 +1920,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "7f8346f30138c34b2a5f63e310c5e9de7c403688";
+    version = "05f52d75e2354b4dc5f3014337504a45b76dc3cc";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "7f8346f30138c34b2a5f63e310c5e9de7c403688";
+      rev = "05f52d75e2354b4dc5f3014337504a45b76dc3cc";
       fetchSubmodules = false;
-      sha256 = "sha256-6RwPcmY+zJ6fIeTPqcDXQb1jy1eNwbGikUIKm+p/eAU=";
+      sha256 = "sha256-ok8YZWZrRuVEqiz2xoxIt6vSS1/vkSYpXTn7cvbnDqk=";
     };
-    date = "2025-01-22";
+    date = "2025-01-25";
   };
   posting = {
     pname = "posting";
@@ -2263,13 +2274,13 @@
   };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
-    version = "20250118";
+    version = "20250126";
     src = fetchFromGitHub {
       owner = "sbsrf";
       repo = "sbsrf";
-      rev = "20250118";
+      rev = "20250126";
       fetchSubmodules = false;
-      sha256 = "sha256-DVq2m8W0ak/THWyFTTMowbV2LMNLIAa2vzw0SZ4Wi9w=";
+      sha256 = "sha256-wyz6r3HLP2ttzzgbSAThvvIqKAgYFGtZ0/MM3rJek2g=";
     };
   };
   sequin = {
