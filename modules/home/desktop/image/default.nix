@@ -22,7 +22,7 @@ args.module (
       # keep-sorted start
       "feh"
       "imv"
-      "nitrogen"
+      "random-background"
       "wallpapers"
       # keep-sorted end
     ];
