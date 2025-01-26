@@ -529,8 +529,8 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:f6fdbcc6812b3bca65da94e2a3c7bdab25d262c962435fa7d457d0e7b05d926e";
-      sha256 = "sha256-pECGEJyZcspxteLVCO19YcE8ktl/em0Q8q0FKbbUlKo=";
+      imageDigest = "sha256:8f326151a6aa52fd4ec226be77b70c8c22c259eb1b3837765e646eaaec2647df";
+      sha256 = "sha256-UAS+AIDt9pKW5qRXfuCZg4OSMXaC5EPvO35ykqAWb9o=";
       finalImageTag = "v1.1.0";
     };
   };
@@ -1276,16 +1276,16 @@
   };
   gw = {
     pname = "gw";
-    version = "v0.4.0";
+    version = "v0.4.1";
     src = fetchFromGitHub {
       owner = "daniel7grant";
       repo = "gw";
-      rev = "v0.4.0";
+      rev = "v0.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=";
+      sha256 = "sha256-xVtGFlmoLOq3byi/iznebj8d84F+uG6wNoZzrxwR0FQ=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./gw-v0.4.0/Cargo.lock;
+      lockFile = ./gw-v0.4.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -2105,13 +2105,13 @@
   };
   recoverpy = {
     pname = "recoverpy";
-    version = "2.1.10";
+    version = "2.2.0";
     src = fetchFromGitHub {
       owner = "PabloLec";
       repo = "RecoverPy";
-      rev = "2.1.10";
+      rev = "2.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-67A/bR8RLU1iU5p6miJ2CNDgpOz//DtRLyDETIcrduA=";
+      sha256 = "sha256-VLZNXgn53x5t1JUH8W9Gj9IrAXrXac8OOsNaFkIbI+4=";
     };
   };
   render = {
@@ -2366,13 +2366,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.5.2";
+    version = "v0.5.8";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.5.2";
+      rev = "v0.5.8";
       fetchSubmodules = false;
-      sha256 = "sha256-POf5F5KHbgO7bItTd4QeWJNTDSolmfUPwpvHMp+AviQ=";
+      sha256 = "sha256-tKdBw1IR1q9DF2V6kLBQCUz/Yet8/bRnVUQcy6owc1o=";
     };
   };
   sprite-dicing = {
@@ -2950,18 +2950,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501242211";
+    version = "202501252211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501252211/geoip.dat";
       sha256 = "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501242211";
+    version = "202501252211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geosite.dat";
-      sha256 = "sha256-PY+6L/XBZ2IlCrkRXxC+Qtzwuod6gzxZzJfRLREL3Mc=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501252211/geosite.dat";
+      sha256 = "sha256-2kDZCtAmhHmPzL+jr2+sz/DICLY0PPRqFFtcoEDbmys=";
     };
   };
   vim-auto-save = {
