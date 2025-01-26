@@ -16,6 +16,10 @@ args.module (
       "tageditor"
       # keep-sorted end
     ];
-    enable = "easyeffects";
+    enable = [
+      # keep-sorted start
+      "easyeffects"
+      # keep-sorted end
+    ];
   }
 )
