@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:f6fdbcc6812b3bca65da94e2a3c7bdab25d262c962435fa7d457d0e7b05d926e",
+            "imageDigest": "sha256:8f326151a6aa52fd4ec226be77b70c8c22c259eb1b3837765e646eaaec2647df",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-pECGEJyZcspxteLVCO19YcE8ktl/em0Q8q0FKbbUlKo=",
+            "sha256": "sha256-UAS+AIDt9pKW5qRXfuCZg4OSMXaC5EPvO35ykqAWb9o=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -2293,7 +2293,7 @@
     "gw": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./gw-v0.4.0/Cargo.lock",
+                "./gw-v0.4.1/Cargo.lock",
                 {}
             ]
         },
@@ -2309,12 +2309,12 @@
             "name": null,
             "owner": "daniel7grant",
             "repo": "gw",
-            "rev": "v0.4.0",
-            "sha256": "sha256-hJf2u3CnkZ2kysEksdmxfLX+J6GK5Qd/Ntr2cHKphXU=",
+            "rev": "v0.4.1",
+            "sha256": "sha256-xVtGFlmoLOq3byi/iznebj8d84F+uG6wNoZzrxwR0FQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.0"
+        "version": "v0.4.1"
     },
     "hatsune-miku-windows-linux-cursors": {
         "cargoLocks": null,
@@ -3789,12 +3789,12 @@
             "name": null,
             "owner": "PabloLec",
             "repo": "RecoverPy",
-            "rev": "2.1.10",
-            "sha256": "sha256-67A/bR8RLU1iU5p6miJ2CNDgpOz//DtRLyDETIcrduA=",
+            "rev": "2.2.0",
+            "sha256": "sha256-VLZNXgn53x5t1JUH8W9Gj9IrAXrXac8OOsNaFkIbI+4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.1.10"
+        "version": "2.2.0"
     },
     "render": {
         "cargoLocks": null,
@@ -4239,12 +4239,12 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.5.2",
-            "sha256": "sha256-POf5F5KHbgO7bItTd4QeWJNTDSolmfUPwpvHMp+AviQ=",
+            "rev": "v0.5.8",
+            "sha256": "sha256-tKdBw1IR1q9DF2V6kLBQCUz/Yet8/bRnVUQcy6owc1o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.5.2"
+        "version": "v0.5.8"
     },
     "sprite-dicing": {
         "cargoLocks": null,
@@ -5252,9 +5252,9 @@
             "name": null,
             "sha256": "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501252211/geoip.dat"
         },
-        "version": "202501242211"
+        "version": "202501252211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5265,11 +5265,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-PY+6L/XBZ2IlCrkRXxC+Qtzwuod6gzxZzJfRLREL3Mc=",
+            "sha256": "sha256-2kDZCtAmhHmPzL+jr2+sz/DICLY0PPRqFFtcoEDbmys=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501242211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501252211/geosite.dat"
         },
-        "version": "202501242211"
+        "version": "202501252211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
