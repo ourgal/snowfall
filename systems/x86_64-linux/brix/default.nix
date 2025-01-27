@@ -56,11 +56,6 @@ in
           inherit nfs;
           inherit (sources.docker-subconverter) version;
         };
-        e5 = enabled // {
-          ports = 1066;
-          inherit nfs;
-          version = "latest";
-        };
         alist = enabled // {
           ports = 5244;
           inherit nfs;
