@@ -29,7 +29,7 @@ in
       "fonts"
       "gpu-screen-recorder"
       "harmonia"
-      "kmonad"
+      "input"
       "laptop"
       "location"
       "logrotate"
