@@ -45,6 +45,7 @@ in
       "nfs"
     ];
     tuptime = enabled;
+    flaresolverr = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
@@ -61,10 +62,6 @@ in
           inherit nfs;
           inherit (sources.docker-alist) version;
           duckdns = enabled;
-        };
-        flaresolverr = enabled // {
-          ports = 8191;
-          inherit (sources.docker-flaresolverr) version;
         };
         qd = enabled // {
           ports = 8923;
