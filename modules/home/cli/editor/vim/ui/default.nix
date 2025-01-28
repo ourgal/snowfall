@@ -5,7 +5,6 @@ args.module (
     path = ./.;
     enable = [
       # keep-sorted start
-      "context-vim"
       "lightline-vim"
       "quick-scope"
       "tagbar"
