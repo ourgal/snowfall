@@ -3,7 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs lib config;
+      inherit (args)
+        pkgs
+        lib
+        config
+        mkOpt'
+        namespace
+        ;
+      cfg = config.${namespace}.desktop.system.rofi;
     in
     {
       path = ./.;
@@ -13,7 +20,7 @@ args.module (
         theme = lib.mkIf (!config.catppuccin.enable) "spotlight";
         plugins = [ pkgs.rofi-emoji ];
         extraConfig = {
-          modes = "drun,power:${pkgs.rofi-power-menu}/bin/rofi-power-menu,emoji";
+          modes = lib.strings.concatStringsSep "," cfg.modes;
           font = "FiraCode Mono 14";
           kb-element-next = "";
           kb-element-prev = "";
@@ -29,6 +36,10 @@ args.module (
           name = "Rofi-screenshot";
           exec = "rofi-screenshot";
         };
+      };
+      enable = "power-menu";
+      extraOpts = {
+        modes = mkOpt' (lib.types.listOf lib.types.str) [ "drun" ];
       };
     }
   )
