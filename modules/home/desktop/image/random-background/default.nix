@@ -8,5 +8,6 @@ args.module (
       enableXinerama = false;
       imageDirectory = "%h/Pictures/wallpapers";
     };
+    value.systemd.user.services.random-background.Unit.ConditionEnvironment = "XAUTHORITY";
   }
 )

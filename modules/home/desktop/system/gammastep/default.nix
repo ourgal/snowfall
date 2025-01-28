@@ -1,9 +1,19 @@
 args:
 args.module (
   args
-  // {
-    path = ./.;
-    servs.gammastep.provider = "geoclue2";
-    value.systemd.user.services.gammastep.Unit.ConditionEnvironment = "WAYLAND_DISPLAY";
-  }
+  // (
+    let
+      inherit (args) pkgs;
+    in
+    {
+      path = ./.;
+      servs.gammastep.provider = "geoclue2";
+      value = {
+        systemd.user.services.gammastep = {
+          Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
+          Unit.ConditionEnvironment = "WAYLAND_DISPLAY";
+        };
+      };
+    }
+  )
 )
