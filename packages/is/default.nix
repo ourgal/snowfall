@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "sha256-6v7Us9202vIV2lpL0ipoP87RQY92QuN87juts04y93c=";
+  hash = "sha256-te3noC0hyF+iRzYXjhGhfzs5Q9GgQ+eMxnEfN6MM7B0=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.is) pname version;
