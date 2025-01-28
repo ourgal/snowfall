@@ -20,6 +20,7 @@ args.module (
       "dnspeep"
       "dogdns"
       "dstp"
+      "fffuu" # Fancy Formal Firewall Universal Understander
       "gapcast"
       "gping"
       "httping"
