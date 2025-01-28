@@ -95,6 +95,10 @@
       url = "github:lem-project/lem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -155,6 +159,7 @@
         nix-vscode-extensions.overlays.default
         pog.overlays.${system}.default
         caddy-nix.overlays.default
+        nur.overlays.default
       ];
 
       # Add modules to all NixOS systems.

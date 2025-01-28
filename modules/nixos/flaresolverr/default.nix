@@ -1,11 +1,12 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8191;
   value = {
     services.flaresolverr = enabled // {
       openFirewall = true;
+      package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
     };
     services.caddy = enabled // {
       virtualHosts = {
