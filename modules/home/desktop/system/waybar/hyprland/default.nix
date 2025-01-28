@@ -504,6 +504,7 @@ args.module (
           ];
         };
       };
+      value.wayland.windowManager.hyprland.settings.exec-once = [ "waybar" ];
       extraOpts = {
         simplebar = switch;
         clock24h = switch;
