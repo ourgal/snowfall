@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:8f326151a6aa52fd4ec226be77b70c8c22c259eb1b3837765e646eaaec2647df",
+            "imageDigest": "sha256:2566c014ad321c80caec7aac8edce18f2ed700c5844839dd27471ef5ace84773",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-UAS+AIDt9pKW5qRXfuCZg4OSMXaC5EPvO35ykqAWb9o=",
+            "sha256": "sha256-gf+A4/oowyXMj8wmkRMYUndStoEzVVp0WMI8h60Tllw=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -2503,12 +2503,12 @@
             "name": null,
             "owner": "oalders",
             "repo": "is",
-            "rev": "v0.6.0",
-            "sha256": "sha256-zlSZwD4sug3EYwlar6UFlMnIaQtLq9j10eQbp3bRAWA=",
+            "rev": "v0.6.1",
+            "sha256": "sha256-DkCyymyAoo16ocfLgfdlFSaeadBcdP9QZSWSBQpwql0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.0"
+        "version": "v0.6.1"
     },
     "isd": {
         "cargoLocks": null,
@@ -3333,7 +3333,7 @@
     },
     "parinfer-rust": {
         "cargoLocks": null,
-        "date": "2024-05-07",
+        "date": "2025-01-27",
         "extract": null,
         "name": "parinfer-rust",
         "passthru": null,
@@ -3345,12 +3345,12 @@
             "name": null,
             "owner": "eraserhd",
             "repo": "parinfer-rust",
-            "rev": "d84828b453e158d06406f6b5e9056f6b54ff76c9",
-            "sha256": "sha256-Q2fYogfn5QcNDEie4sUaVydAmDmcFXnsvz35cxPCf+M=",
+            "rev": "d269dca33970823e4a1f65958e92417ce88f09d9",
+            "sha256": "sha256-rUR5yzy/ACgcWZbmBIAtv00cqT6HXwy4iAfpOZL/9WQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d84828b453e158d06406f6b5e9056f6b54ff76c9"
+        "version": "d269dca33970823e4a1f65958e92417ce88f09d9"
     },
     "pik": {
         "cargoLocks": null,
@@ -3387,12 +3387,12 @@
             "name": null,
             "owner": "paololazzari",
             "repo": "play",
-            "rev": "v0.3.4",
-            "sha256": "sha256-YBLmX40kUgo59/R42g5IABx4oVE0SBCqMhBOnMnVMWo=",
+            "rev": "v0.3.5",
+            "sha256": "sha256-31naTjYwCytytKXg9tQo2qx0hVoBwBwL7nVeoAV+/go=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.4"
+        "version": "v0.3.5"
     },
     "pls": {
         "cargoLocks": null,
@@ -3438,7 +3438,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2025-01-25",
+        "date": "2025-01-27",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3450,12 +3450,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "05f52d75e2354b4dc5f3014337504a45b76dc3cc",
-            "sha256": "sha256-ok8YZWZrRuVEqiz2xoxIt6vSS1/vkSYpXTn7cvbnDqk=",
+            "rev": "8361a92b828750a2c520fc4a98c6cbe69d33e51c",
+            "sha256": "sha256-9ETDTP07ni3YHxcjQtwN328v3/vZnq7pi0837d2E4Jg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "05f52d75e2354b4dc5f3014337504a45b76dc3cc"
+        "version": "8361a92b828750a2c520fc4a98c6cbe69d33e51c"
     },
     "posting": {
         "cargoLocks": null,
@@ -4103,12 +4103,12 @@
             "name": null,
             "owner": "charmbracelet",
             "repo": "sequin",
-            "rev": "v0.3.0",
-            "sha256": "sha256-pGZ7QmmPIpXrRcfkbEbTZzHXHtqPwU8Cju9Q2xtSqvw=",
+            "rev": "v0.3.1",
+            "sha256": "sha256-rszK2UZ3Eq9g+Di1lncDQIT4TlUcWZEu1SU2aE2uFHY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.0"
+        "version": "v0.3.1"
     },
     "servicer": {
         "cargoLocks": {
@@ -4239,12 +4239,12 @@
             "name": null,
             "owner": "jonhadfield",
             "repo": "soba",
-            "rev": "1.2.21",
-            "sha256": "sha256-QWo5POFYlWJOLfW3arayY2gTgjTCqDs701NpZZV098o=",
+            "rev": "1.3.1",
+            "sha256": "sha256-RAtfTuL+PqU8jM7wCsjicyBbTXhcXCtDMbYiS6T0VGs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.2.21"
+        "version": "1.3.1"
     },
     "sonicradio": {
         "cargoLocks": null,
@@ -5273,9 +5273,9 @@
             "name": null,
             "sha256": "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501262210/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geoip.dat"
         },
-        "version": "202501262210"
+        "version": "202501272211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5286,11 +5286,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-/I3s5KFvSH2f5WftjX9gVwrZCX6H4PL22YxEangDG0E=",
+            "sha256": "sha256-IY0A9WVhKQmG+jaNyL9gj+8fREGNdNQdqPmmxwr3juc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501262210/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geosite.dat"
         },
-        "version": "202501262210"
+        "version": "202501272211"
     },
     "vim-auto-save": {
         "cargoLocks": null,

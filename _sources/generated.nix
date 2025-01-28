@@ -529,8 +529,8 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:8f326151a6aa52fd4ec226be77b70c8c22c259eb1b3837765e646eaaec2647df";
-      sha256 = "sha256-UAS+AIDt9pKW5qRXfuCZg4OSMXaC5EPvO35ykqAWb9o=";
+      imageDigest = "sha256:2566c014ad321c80caec7aac8edce18f2ed700c5844839dd27471ef5ace84773";
+      sha256 = "sha256-gf+A4/oowyXMj8wmkRMYUndStoEzVVp0WMI8h60Tllw=";
       finalImageTag = "v1.1.0";
     };
   };
@@ -1388,13 +1388,13 @@
   };
   is = {
     pname = "is";
-    version = "v0.6.0";
+    version = "v0.6.1";
     src = fetchFromGitHub {
       owner = "oalders";
       repo = "is";
-      rev = "v0.6.0";
+      rev = "v0.6.1";
       fetchSubmodules = false;
-      sha256 = "sha256-zlSZwD4sug3EYwlar6UFlMnIaQtLq9j10eQbp3bRAWA=";
+      sha256 = "sha256-DkCyymyAoo16ocfLgfdlFSaeadBcdP9QZSWSBQpwql0=";
     };
   };
   isd = {
@@ -1861,15 +1861,15 @@
   };
   parinfer-rust = {
     pname = "parinfer-rust";
-    version = "d84828b453e158d06406f6b5e9056f6b54ff76c9";
+    version = "d269dca33970823e4a1f65958e92417ce88f09d9";
     src = fetchFromGitHub {
       owner = "eraserhd";
       repo = "parinfer-rust";
-      rev = "d84828b453e158d06406f6b5e9056f6b54ff76c9";
+      rev = "d269dca33970823e4a1f65958e92417ce88f09d9";
       fetchSubmodules = false;
-      sha256 = "sha256-Q2fYogfn5QcNDEie4sUaVydAmDmcFXnsvz35cxPCf+M=";
+      sha256 = "sha256-rUR5yzy/ACgcWZbmBIAtv00cqT6HXwy4iAfpOZL/9WQ=";
     };
-    date = "2024-05-07";
+    date = "2025-01-27";
   };
   pik = {
     pname = "pik";
@@ -1885,13 +1885,13 @@
   };
   play = {
     pname = "play";
-    version = "v0.3.4";
+    version = "v0.3.5";
     src = fetchFromGitHub {
       owner = "paololazzari";
       repo = "play";
-      rev = "v0.3.4";
+      rev = "v0.3.5";
       fetchSubmodules = false;
-      sha256 = "sha256-YBLmX40kUgo59/R42g5IABx4oVE0SBCqMhBOnMnVMWo=";
+      sha256 = "sha256-31naTjYwCytytKXg9tQo2qx0hVoBwBwL7nVeoAV+/go=";
     };
   };
   pls = {
@@ -1920,15 +1920,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "05f52d75e2354b4dc5f3014337504a45b76dc3cc";
+    version = "8361a92b828750a2c520fc4a98c6cbe69d33e51c";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "05f52d75e2354b4dc5f3014337504a45b76dc3cc";
+      rev = "8361a92b828750a2c520fc4a98c6cbe69d33e51c";
       fetchSubmodules = false;
-      sha256 = "sha256-ok8YZWZrRuVEqiz2xoxIt6vSS1/vkSYpXTn7cvbnDqk=";
+      sha256 = "sha256-9ETDTP07ni3YHxcjQtwN328v3/vZnq7pi0837d2E4Jg=";
     };
-    date = "2025-01-25";
+    date = "2025-01-27";
   };
   posting = {
     pname = "posting";
@@ -2285,13 +2285,13 @@
   };
   sequin = {
     pname = "sequin";
-    version = "v0.3.0";
+    version = "v0.3.1";
     src = fetchFromGitHub {
       owner = "charmbracelet";
       repo = "sequin";
-      rev = "v0.3.0";
+      rev = "v0.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-pGZ7QmmPIpXrRcfkbEbTZzHXHtqPwU8Cju9Q2xtSqvw=";
+      sha256 = "sha256-rszK2UZ3Eq9g+Di1lncDQIT4TlUcWZEu1SU2aE2uFHY=";
     };
   };
   servicer = {
@@ -2366,13 +2366,13 @@
   };
   soba = {
     pname = "soba";
-    version = "1.2.21";
+    version = "1.3.1";
     src = fetchFromGitHub {
       owner = "jonhadfield";
       repo = "soba";
-      rev = "1.2.21";
+      rev = "1.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-QWo5POFYlWJOLfW3arayY2gTgjTCqDs701NpZZV098o=";
+      sha256 = "sha256-RAtfTuL+PqU8jM7wCsjicyBbTXhcXCtDMbYiS6T0VGs=";
     };
   };
   sonicradio = {
@@ -2961,18 +2961,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501262210";
+    version = "202501272211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501262210/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geoip.dat";
       sha256 = "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501262210";
+    version = "202501272211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501262210/geosite.dat";
-      sha256 = "sha256-/I3s5KFvSH2f5WftjX9gVwrZCX6H4PL22YxEangDG0E=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geosite.dat";
+      sha256 = "sha256-IY0A9WVhKQmG+jaNyL9gj+8fREGNdNQdqPmmxwr3juc=";
     };
   };
   vim-auto-save = {
