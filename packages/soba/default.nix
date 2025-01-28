@@ -6,7 +6,7 @@
 buildGoModule rec {
   inherit (_sources.soba) pname version src;
 
-  vendorHash = "sha256-julsw0L65/lKE0YyKV6PJg8D7PRnfyPKHqM0yXWk07Q=";
+  vendorHash = "sha256-ZJGQbr3uOtoFbXhPJ8fUtug1ntAexO7M8m3Cour6XXY=";
 
   ldflags = [
     "-s"
