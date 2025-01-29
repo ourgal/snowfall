@@ -11,7 +11,6 @@ args.module (
       "AI"
       "anime"
       "audio"
-      "binary"
       "bluetooth"
       "bookmark"
       "browser"
