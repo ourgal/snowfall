@@ -6,6 +6,7 @@ args.module (
     myPkgs = "posting";
     nixPkgs = [
       # keep-sorted start
+      "atac"
       "curlie"
       "goaccess" # web log viewer
       "htmlq"
