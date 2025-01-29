@@ -22,6 +22,7 @@ args.module (
       "glib"
       "handlr-regex"
       "inxi"
+      "kbt" # keyboard tester
       "kmon"
       "nixos-facter"
       "pinentry-all"
