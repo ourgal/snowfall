@@ -113,3 +113,5 @@ set sessionoptions-=blank
 set foldmethod=marker
 set cursorline
 set scrolloff=5
+
+set shortmess-=S " show she search count
