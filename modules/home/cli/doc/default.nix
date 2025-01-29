@@ -17,6 +17,7 @@ args.module (
       "cheat"
       "dasht"
       "halp"
+      "wiki-tui"
       # keep-sorted end
     ];
     enable = "tealdeer";
