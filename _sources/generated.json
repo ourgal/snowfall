@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:2566c014ad321c80caec7aac8edce18f2ed700c5844839dd27471ef5ace84773",
+            "imageDigest": "sha256:6dfbf19ea817c464b44240a2d61e301168ac91d17e397dde8684892d55f70488",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-gf+A4/oowyXMj8wmkRMYUndStoEzVVp0WMI8h60Tllw=",
+            "sha256": "sha256-usyuQlAX9jmEYGXXwLH8Z+QxAauGmeeoGkO4QwmzabY=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -957,14 +957,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:7d9a54588876203720d7638cd0ca5e25897d3c8993fcfa9f9c0c59a91cf8ed9f",
+            "imageDigest": "sha256:fe65b2c4fb937f9378f1823cb670429df8c5056ca163bc9ce7fca4d519a7881c",
             "imageName": "qdtoday/qd",
-            "imageTag": "20240210",
+            "imageTag": "20250128",
             "os": null,
-            "sha256": "sha256-vxZHuExbVwA4HyXzrXgogomxRg3EaHaEwBG1BH/gvnI=",
+            "sha256": "sha256-Dx2bFMLoksFPdcJHv/6LyS6nF+b0J4LYFQpBIczYlHw=",
             "tlsVerify": null
         },
-        "version": "20240210"
+        "version": "20250128"
     },
     "docker-subconverter": {
         "cargoLocks": null,
@@ -4160,11 +4160,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-05ce211f38387e1249e69abfd2fb4506fc624686/Cargo.lock",
+                "./simple-completion-language-server-7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-01-21",
+        "date": "2025-01-28",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4176,12 +4176,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "05ce211f38387e1249e69abfd2fb4506fc624686",
-            "sha256": "sha256-yP5ED3Y0VKMYWAWmMFpXEeJPGFjSVe3HZh0ek4W6OGg=",
+            "rev": "7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78",
+            "sha256": "sha256-SNhn4J3EPFsyjh97OmXHJmq6FmDWZLXOWZDi8Sway+A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "05ce211f38387e1249e69abfd2fb4506fc624686"
+        "version": "7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -5273,9 +5273,9 @@
             "name": null,
             "sha256": "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501282211/geoip.dat"
         },
-        "version": "202501272211"
+        "version": "202501282211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5286,11 +5286,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-IY0A9WVhKQmG+jaNyL9gj+8fREGNdNQdqPmmxwr3juc=",
+            "sha256": "sha256-bbfSnW1WEqTzKJezSdcaYMnix/OnWnv8BuBB2LsH4AQ=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501272211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501282211/geosite.dat"
         },
-        "version": "202501272211"
+        "version": "202501282211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
