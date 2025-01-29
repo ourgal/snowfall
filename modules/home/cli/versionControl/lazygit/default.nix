@@ -187,7 +187,10 @@ args.module (
           };
         };
       };
-      enable = "diff-so-fancy";
+      enable = [
+        "shortcut"
+        "diff-so-fancy"
+      ];
       value.catppuccin.lazygit = enabled;
     }
   )

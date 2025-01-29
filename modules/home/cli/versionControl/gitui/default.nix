@@ -14,6 +14,5 @@ args.module (
           open_help: Some(( code: F(1), modifiers: "")),
       )
     '';
-    enable = "shortcut";
   }
 )
