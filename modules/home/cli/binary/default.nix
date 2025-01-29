@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "hexyl";
+    nixPkgs = [
+      # keep-sorted start
+      "fq"
+      "hexyl"
+      # keep-sorted end
+    ];
   }
 )
