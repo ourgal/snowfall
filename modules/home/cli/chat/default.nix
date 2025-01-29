@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "nchat"
       "toot"
+      "toxic"
       # keep-sorted end
     ];
     enable = "tg";
