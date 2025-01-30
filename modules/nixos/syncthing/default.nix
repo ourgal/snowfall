@@ -54,6 +54,7 @@ let
       linovel = [ "home" ] ++ syncthing;
       gal-save = [ "nuc" ] ++ syncthing;
       game-save = [ "nuc" ] ++ syncthing;
+      documents = desktops ++ syncthing;
     };
   value = {
     sops.secrets."syncthing/${host}/key".owner = user;
