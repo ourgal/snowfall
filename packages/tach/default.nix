@@ -12,7 +12,7 @@ python3.pkgs.buildPythonApplication {
   cargoDeps = rustPlatform.importCargoLock {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "ruff_python_ast-0.0.0" = "sha256-+8JKzKKWPQEanU2mh8p5sRjnoU6DawTQQi43qRXVXIg=";
+      "ruff_python_ast-0.0.0" = "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0=";
     };
   };
 
