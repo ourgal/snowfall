@@ -10,5 +10,6 @@ args.module (
       "gitfs"
       # keep-sorted end
     ];
+    enable = "git-ftp";
   }
 )
