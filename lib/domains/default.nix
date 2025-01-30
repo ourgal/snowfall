@@ -1,4 +1,4 @@
-{ ... }:
+_:
 let
   domain = "zxc.cn";
   services = [
@@ -18,6 +18,7 @@ let
     "soft-serve"
     "subconverter"
     "syncthing"
+    "transmission"
     "vaultwarden"
     "yacd"
     # keep-sorted end

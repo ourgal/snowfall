@@ -47,7 +47,7 @@ args.module (
           redirections_time = 1;
           redirections_url = "https://raw.githubusercontent.com/erengy/anime-relations/master/anime-relations.txt";
           scan_whole_list = false;
-          searchdir = [ "~/Videos" ];
+          searchdir = [ "/mnt/nfs/anime" ];
           tracker_enabled = true;
           tracker_ignore_not_next = true;
           tracker_interval = 10;
