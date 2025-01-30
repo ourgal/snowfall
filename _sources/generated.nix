@@ -1861,15 +1861,15 @@
   };
   parinfer-rust = {
     pname = "parinfer-rust";
-    version = "d269dca33970823e4a1f65958e92417ce88f09d9";
+    version = "e02b0280111f82facbe19c854a374d713d37ac17";
     src = fetchFromGitHub {
       owner = "eraserhd";
       repo = "parinfer-rust";
-      rev = "d269dca33970823e4a1f65958e92417ce88f09d9";
+      rev = "e02b0280111f82facbe19c854a374d713d37ac17";
       fetchSubmodules = false;
-      sha256 = "sha256-rUR5yzy/ACgcWZbmBIAtv00cqT6HXwy4iAfpOZL/9WQ=";
+      sha256 = "sha256-2oLhsJHT4Q8KIa1sRLUaVOrDisnG0IZPHvLTqHe7Gcg=";
     };
-    date = "2025-01-27";
+    date = "2025-01-29";
   };
   pik = {
     pname = "pik";
@@ -1920,15 +1920,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "8361a92b828750a2c520fc4a98c6cbe69d33e51c";
+    version = "134afc3e83c55fa3680d86b3afd9ef92dc9ed60b";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "8361a92b828750a2c520fc4a98c6cbe69d33e51c";
+      rev = "134afc3e83c55fa3680d86b3afd9ef92dc9ed60b";
       fetchSubmodules = false;
-      sha256 = "sha256-9ETDTP07ni3YHxcjQtwN328v3/vZnq7pi0837d2E4Jg=";
+      sha256 = "sha256-d6a97y2ga4wIacR3AP5V2heKS0gD4FDm+hQ18nTCdm8=";
     };
-    date = "2025-01-27";
+    date = "2025-01-29";
   };
   posting = {
     pname = "posting";
@@ -2105,13 +2105,13 @@
   };
   reader = {
     pname = "reader";
-    version = "v0.4.5";
+    version = "v0.4.6";
     src = fetchFromGitHub {
       owner = "mrusme";
       repo = "reader";
-      rev = "v0.4.5";
+      rev = "v0.4.6";
       fetchSubmodules = false;
-      sha256 = "sha256-9hZ7ZS+p6PoLKcuHS2re537wxojN2SzhOm5gBuRX9Xc=";
+      sha256 = "sha256-Z0mDRL02wZfmPRVDTDV85MqI5Ztctqen7PmOSW5Ee48=";
     };
   };
   recoverpy = {
@@ -2498,13 +2498,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.23.0";
+    version = "v0.24.0";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.23.0";
+      rev = "v0.24.0";
       fetchSubmodules = false;
-      sha256 = "sha256-8oLQgevrC/mXBdq7c9FuBS59/5b90sszKumsyeJWZuA=";
+      sha256 = "sha256-sJs5bdnBhMhZ2I1RCfgbJyj/R+SsOHCaPNc8Fuhiq/E=";
     };
   };
   task-relative-recur = {
@@ -2961,18 +2961,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501282211";
+    version = "202501292212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501282211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501292212/geoip.dat";
       sha256 = "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501282211";
+    version = "202501292212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501282211/geosite.dat";
-      sha256 = "sha256-bbfSnW1WEqTzKJezSdcaYMnix/OnWnv8BuBB2LsH4AQ=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501292212/geosite.dat";
+      sha256 = "sha256-c5FxsjztRSp/YucveTDOobFtTvj6op5qHBxJnlZ0HG0=";
     };
   };
   vim-auto-save = {
