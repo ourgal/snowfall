@@ -1,7 +1,8 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled;
+  user = config.${namespace}.user.name;
   pasv_max_port = 10100;
   pasv_min_port = 10090;
   value = {
@@ -10,6 +11,9 @@ let
       localUsers = true;
       chrootlocalUser = true;
       allowWriteableChroot = true;
+      anonymousUser = true;
+      anonymousUserHome = "/home/${user}";
+      anonymousUserNoPassword = true;
       extraConfig = ''
         pasv_enable=Yes
         pasv_max_port=${toString pasv_max_port}
