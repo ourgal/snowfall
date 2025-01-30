@@ -9,12 +9,13 @@ args.module (
         namespace
         pkgs
         ;
+      inherit (lib.${namespace}.settings) laptops;
     in
     {
       path = ./.;
       nixPkgs = "kmonad";
       systemdServices."kmonad@miryoku" =
-        if (builtins.elem host lib.${namespace}.settings.laptops) then
+        if (builtins.elem host laptops) then
           {
             start = "${pkgs.kmonad}/bin/kmonad %E/kmonad/%i.kbd";
             nice = -20;
