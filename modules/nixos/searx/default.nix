@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8080;
   value = {
     services = {
@@ -16,7 +16,7 @@ let
       };
       caddy = enabled // {
         virtualHosts = {
-          "http://searx.zxc.cn".extraConfig = ''
+          "http://${domains.searx}".extraConfig = ''
             reverse_proxy http://localhost:${toString port}
           '';
         };
