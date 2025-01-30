@@ -44,7 +44,6 @@ args.module (
         "gammastep"
         "gtk"
         "kdeconnect"
-        "kmonad"
         "maim"
         "mouse-actions"
         "picom"
