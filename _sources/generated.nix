@@ -529,19 +529,19 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:6dfbf19ea817c464b44240a2d61e301168ac91d17e397dde8684892d55f70488";
-      sha256 = "sha256-usyuQlAX9jmEYGXXwLH8Z+QxAauGmeeoGkO4QwmzabY=";
+      imageDigest = "sha256:721395158271a6c877eedcae6178091fa19222bee03160efa0c7afd0c27650b4";
+      sha256 = "sha256-e5S/IGb21AnPVnm0VTNfYH3+yKfwV2IIhkg7L7SIZ/Q=";
       finalImageTag = "v1.1.0";
     };
   };
   docker-qd = {
     pname = "docker-qd";
-    version = "20250128";
+    version = "20250129";
     src = dockerTools.pullImage {
       imageName = "qdtoday/qd";
-      imageDigest = "sha256:fe65b2c4fb937f9378f1823cb670429df8c5056ca163bc9ce7fca4d519a7881c";
-      sha256 = "sha256-Dx2bFMLoksFPdcJHv/6LyS6nF+b0J4LYFQpBIczYlHw=";
-      finalImageTag = "20250128";
+      imageDigest = "sha256:0d3605a7bb780049565e03f05e71a45c79f44ae8d3815dd2f77ce5eb4adda168";
+      sha256 = "sha256-j60PPD8StZVrMJtAw8FEqU+mKic3v3dtxx4XrU6CpOY=";
+      finalImageTag = "20250129";
     };
   };
   docker-subconverter = {
@@ -1861,15 +1861,15 @@
   };
   parinfer-rust = {
     pname = "parinfer-rust";
-    version = "e02b0280111f82facbe19c854a374d713d37ac17";
+    version = "b9464ff9d682912f20f268444065c343cb1434cd";
     src = fetchFromGitHub {
       owner = "eraserhd";
       repo = "parinfer-rust";
-      rev = "e02b0280111f82facbe19c854a374d713d37ac17";
+      rev = "b9464ff9d682912f20f268444065c343cb1434cd";
       fetchSubmodules = false;
-      sha256 = "sha256-2oLhsJHT4Q8KIa1sRLUaVOrDisnG0IZPHvLTqHe7Gcg=";
+      sha256 = "sha256-uxuGDrte8V20ev1x1vJCBIvrkxL5xw6YPxfjzDbv5Po=";
     };
-    date = "2025-01-29";
+    date = "2025-01-30";
   };
   pik = {
     pname = "pik";
@@ -1984,10 +1984,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.27.2";
+    version = "2.28.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.27.2.tar.gz";
-      sha256 = "sha256-6wJuWkwf7gVyYHIzf/UdHvtvWQkLfakNMOpYYlsf+zk=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.28.0.tar.gz";
+      sha256 = "sha256-SuphUw+f3I8SikdywP286RWezqAyAcFv4uS6fr0RsXM=";
     };
   };
   pydantic-settings = {
@@ -2961,18 +2961,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202501292212";
+    version = "202501302211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501292212/geoip.dat";
-      sha256 = "sha256-L1jLQCsrYh5k5B6z/Wq4Ujzbf13Ht1i/9+h6lGNiROc=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501302211/geoip.dat";
+      sha256 = "sha256-VgT6+9ubT67Z+ItsejGPFMldjheam/Fc1HBCB3ml9HY=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202501292212";
+    version = "202501302211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501292212/geosite.dat";
-      sha256 = "sha256-c5FxsjztRSp/YucveTDOobFtTvj6op5qHBxJnlZ0HG0=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501302211/geosite.dat";
+      sha256 = "sha256-UxiOrowDx2WQ0EeYLNkaQIDBxtm3aAYvLEQxHDIzUxQ=";
     };
   };
   vim-auto-save = {
