@@ -1,10 +1,10 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule;
+  inherit (lib.${namespace}) nixosModule ip;
   value = {
     fileSystems."/mnt/nfs/anime" = {
-      device = "brix.local:/anime";
+      device = "${ip.brix}:/anime";
       fsType = "nfs";
       options = [
         "x-systemd.automount"

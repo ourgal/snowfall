@@ -34,6 +34,7 @@ in
       "laptop"
       "location"
       "logrotate"
+      "nfsMount"
       "nh"
       "pcscd"
       "power"
