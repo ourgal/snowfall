@@ -4,15 +4,13 @@ args.module (
   // (
     let
       inherit (args) config pkgs;
-      inherit (pkgs) stc-cli;
-      inherit (config.xdg) configHome dataHome;
       ln = config.lib.file.mkOutOfStoreSymlink;
-      sync = "${dataHome}/syncthing";
+      sync = "/var/lib/syncthing";
     in
     {
       path = ./.;
       progs.fish.functions.stc = {
-        body = "${stc-cli}/bin/stc --homedir=${configHome}/syncthing $argv";
+        body = "${pkgs.stc-cli}/bin/stc --homedir=${sync} $argv";
       };
       confs = {
         todo = ln "${sync}/todo";
