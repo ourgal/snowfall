@@ -12,6 +12,7 @@ let
     "harmonia"
     "kavita"
     "miniflux"
+    "navidrome"
     "pairdrop"
     "rustypaste"
     "searx"
