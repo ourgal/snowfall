@@ -51,9 +51,7 @@ args.module (
         "visual"
         # keep-sorted end
       ];
-      dataFiles = {
-        "vim/.keep" = "";
-      };
+      tmpfiles = [ "d ${config.xdg.dataHome}/vim - - - - -" ];
     }
   )
 )

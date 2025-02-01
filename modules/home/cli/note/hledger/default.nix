@@ -14,7 +14,7 @@ args.module (
         "puffin"
         # keep-sorted end
       ];
-      dataFiles."hledger/.keep" = "";
+      tmpfiles = [ "d ${config.xdg.dataHome}/hledger - - - - -" ];
       env.LEDGER_FILE = "${config.xdg.dataHome}/hledger/main.journal";
     }
   )
