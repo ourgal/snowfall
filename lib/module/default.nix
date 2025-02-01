@@ -198,6 +198,7 @@ rec {
       servs ? [ ],
       env ? { },
       enable ? [ ],
+      tmpfiles ? [ ],
       defaultApps ? { },
       systemdServices ? { },
       ...
@@ -428,7 +429,10 @@ rec {
             inherit path;
             subModule = enable;
           };
-          systemd.user.services = _systemdServices;
+          systemd.user = {
+            services = _systemdServices;
+            tmpfiles.rules = tmpfiles;
+          };
         } value
       );
     };

@@ -128,10 +128,10 @@ args.module (
         fifc_keybinding = "\\cx";
         ENHANCD_COMMAND = "ecd";
       };
-      files = [
-        { "" = ./.gitnow; }
-        { "Downloads/youtube/.keep" = ""; }
-      ];
+      files = {
+        "" = ./.gitnow;
+      };
+      tmpfiles = [ "d ${config.home.homeDirectory}/Downloads/youtube - - - - -" ];
       value = {
         ${namespace}.cli.utils.alias.aliae.alias = {
           sc = "systemctl";
