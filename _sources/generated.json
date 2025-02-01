@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:721395158271a6c877eedcae6178091fa19222bee03160efa0c7afd0c27650b4",
+            "imageDigest": "sha256:f2bace47abeaf1a47c2d0e5827f0317288d43503b6cc3e26bdf38ac1b0e47056",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-e5S/IGb21AnPVnm0VTNfYH3+yKfwV2IIhkg7L7SIZ/Q=",
+            "sha256": "sha256-dmreBbu9Fsyg+RhZ6BnhImCpEEEvr+0gdZKxUhhCCqU=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -4160,11 +4160,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78/Cargo.lock",
+                "./simple-completion-language-server-f6ab8e8374d046e5c6ff36cc9804dfc708b56c02/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-01-28",
+        "date": "2025-01-31",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4176,12 +4176,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78",
-            "sha256": "sha256-SNhn4J3EPFsyjh97OmXHJmq6FmDWZLXOWZDi8Sway+A=",
+            "rev": "f6ab8e8374d046e5c6ff36cc9804dfc708b56c02",
+            "sha256": "sha256-ot2h85cn2ID7GAOSJvIeKcC3uUYzS3TWQ4Ql6MzPG50=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7bdf05bbf2c72d2b083c04c025de9c2af5bf1d78"
+        "version": "f6ab8e8374d046e5c6ff36cc9804dfc708b56c02"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -4516,7 +4516,7 @@
     "templify": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./templify-1.0.0/Cargo.lock",
+                "./templify-2.0.0/Cargo.lock",
                 {}
             ]
         },
@@ -4532,12 +4532,12 @@
             "name": null,
             "owner": "cophilot",
             "repo": "templify",
-            "rev": "1.0.0",
-            "sha256": "sha256-sIZuFxnBo7+oS9GW/1WbwVPik3EBj7zWWlQFNa0Qfr0=",
+            "rev": "2.0.0",
+            "sha256": "sha256-j6utB5Ry/b8P82PwMpzj0Bx1x/I5b065okMMZpEjYTs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.0.0"
+        "version": "2.0.0"
     },
     "termsand": {
         "cargoLocks": {
@@ -5271,11 +5271,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-VgT6+9ubT67Z+ItsejGPFMldjheam/Fc1HBCB3ml9HY=",
+            "sha256": "sha256-9SNQ7pqv9Zpv/CT1dz77SrY8J1NET0DfryMWaEb13mE=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501302211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501312211/geoip.dat"
         },
-        "version": "202501302211"
+        "version": "202501312211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5286,11 +5286,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-UxiOrowDx2WQ0EeYLNkaQIDBxtm3aAYvLEQxHDIzUxQ=",
+            "sha256": "sha256-/EEqXzGDRja375/nS7lRfYWxoV+FsR463LiSRTcN6Ys=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501302211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202501312211/geosite.dat"
         },
-        "version": "202501302211"
+        "version": "202501312211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -5630,7 +5630,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2025-01-24",
+        "date": "2025-01-31",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -5642,12 +5642,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "9784510fe980dfcf255ed5ed5e8c32a63705e15d",
-            "sha256": "sha256-KDo8Y04RBVwIwqpLWG83YTmXbtfUtENOKiKK+wcJOxg=",
+            "rev": "bc12ece76bb9b3722abdb3fd9adaa206f0873bc8",
+            "sha256": "sha256-lJkl3tczCHA2T1JwyE6Omf23+Rhk5D05D2ubf8aTtXE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9784510fe980dfcf255ed5ed5e8c32a63705e15d"
+        "version": "bc12ece76bb9b3722abdb3fd9adaa206f0873bc8"
     },
     "visual-split-vim": {
         "cargoLocks": null,
