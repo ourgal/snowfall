@@ -10,6 +10,7 @@ let
     "dufs"
     "flaresolverr"
     "harmonia"
+    "jellyfin"
     "kavita"
     "miniflux"
     "navidrome"
