@@ -104,8 +104,6 @@ let
     };
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

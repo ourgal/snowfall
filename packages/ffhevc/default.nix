@@ -12,9 +12,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-HCy+G0RHVYAnsVbsmKpmG/AgSkm+rSsdpQWIGnNW8oY=";
   };
 
-  nativeBuildInputs = [
-    installShellFiles
-  ];
+  nativeBuildInputs = [ installShellFiles ];
 
   dontBuild = true;
 

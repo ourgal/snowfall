@@ -5,10 +5,7 @@
   ...
 }:
 let
-  inherit (lib.${namespace})
-    enabled
-    disabled
-    ;
+  inherit (lib.${namespace}) enabled disabled;
   user = config.${namespace}.user.name;
 in
 {

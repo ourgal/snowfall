@@ -31,13 +31,9 @@ python3.pkgs.buildPythonApplication {
   inherit (_sources.isd) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = with python3.pkgs; [
-    pythonRelaxDepsHook
-  ];
+  nativeBuildInputs = with python3.pkgs; [ pythonRelaxDepsHook ];
 
-  build-system = [
-    python3.pkgs.hatchling
-  ];
+  build-system = [ python3.pkgs.hatchling ];
 
   dependencies = with python3.pkgs; [
     pfzy
@@ -48,9 +44,7 @@ python3.pkgs.buildPythonApplication {
     xdg-base-dirs
   ];
 
-  pythonImportsCheck = [
-    "isd"
-  ];
+  pythonImportsCheck = [ "isd" ];
 
   pythonRelaxDeps = true;
 

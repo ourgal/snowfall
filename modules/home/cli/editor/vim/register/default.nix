@@ -1,7 +1,1 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-  }
-)
+args: args.module (args // { path = ./.; })

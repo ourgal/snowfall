@@ -6,8 +6,6 @@ let
     networking.firewall.allowedTCPPorts = [ 50000 ];
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

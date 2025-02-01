@@ -7,7 +7,8 @@ args.module (
     in
     {
       path = ./.;
-      progs.lazygit.settings.git.paging.externalDiffCommand = "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off";
+      progs.lazygit.settings.git.paging.externalDiffCommand =
+        "${pkgs.difftastic}/bin/difft --color=always --syntax-highlight=off";
     }
   )
 )

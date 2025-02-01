@@ -38,8 +38,6 @@ let
     hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

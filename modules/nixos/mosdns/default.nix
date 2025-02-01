@@ -21,9 +21,7 @@ let
           pkgs._sources.v2ray-rules-dat-geoip.src
           pkgs._sources.v2ray-rules-dat-geosite.src
         ];
-        nativeBuildInputs = [
-          pkgs.${namespace}.v2dat
-        ];
+        nativeBuildInputs = [ pkgs.${namespace}.v2dat ];
       }
       ''
         mkdir $out
@@ -49,36 +47,24 @@ let
       "plugins" = [
         {
           "args" = [
-            {
-              "exec" = "query_summary reject_null_domain";
-            }
-            {
-              "exec" = "$reject_3";
-            }
+            { "exec" = "query_summary reject_null_domain"; }
+            { "exec" = "$reject_3"; }
           ];
           "tag" = "reject_null_domain";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary reject_qtype65";
-            }
-            {
-              "exec" = "$reject_3";
-            }
+            { "exec" = "query_summary reject_qtype65"; }
+            { "exec" = "$reject_3"; }
           ];
           "tag" = "reject_qtype65";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary reject_adlist";
-            }
-            {
-              "exec" = "$reject_3";
-            }
+            { "exec" = "query_summary reject_adlist"; }
+            { "exec" = "$reject_3"; }
           ];
           "tag" = "reject_ad";
           "type" = "sequence";
@@ -105,72 +91,48 @@ let
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary dns_nocn";
-            }
-            {
-              "exec" = "$dns_nocn";
-            }
+            { "exec" = "query_summary dns_nocn"; }
+            { "exec" = "$dns_nocn"; }
           ];
           "tag" = "dns_nocn_seq";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary dns_cn";
-            }
-            {
-              "exec" = "$dns_cn";
-            }
+            { "exec" = "query_summary dns_cn"; }
+            { "exec" = "$dns_cn"; }
           ];
           "tag" = "dns_cn_seq";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary local";
-            }
-            {
-              "exec" = "$local";
-            }
+            { "exec" = "query_summary local"; }
+            { "exec" = "$local"; }
           ];
           "tag" = "local_seq";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary fallback";
-            }
-            {
-              "exec" = "$dns_cn";
-            }
+            { "exec" = "query_summary fallback"; }
+            { "exec" = "$dns_cn"; }
           ];
           "tag" = "fallback_seq";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "query_summary other";
-            }
-            {
-              "exec" = "$dns_cn";
-            }
+            { "exec" = "query_summary other"; }
+            { "exec" = "$dns_cn"; }
           ];
           "tag" = "other_seq";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "$ecs_cn";
-            }
-            {
-              "exec" = "$dns_cn_seq";
-            }
+            { "exec" = "$ecs_cn"; }
+            { "exec" = "$dns_cn_seq"; }
             {
               "exec" = "drop_resp";
               "matches" = "!resp_ip $geoip_cn";
@@ -181,15 +143,9 @@ let
         }
         {
           "args" = [
-            {
-              "exec" = "$no_ecs";
-            }
-            {
-              "exec" = "prefer_ipv4";
-            }
-            {
-              "exec" = "$dns_nocn_seq";
-            }
+            { "exec" = "$no_ecs"; }
+            { "exec" = "prefer_ipv4"; }
+            { "exec" = "$dns_nocn_seq"; }
             {
               "exec" = "drop_resp";
               "matches" = "resp_ip $geoip_cn";
@@ -199,71 +155,47 @@ let
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "$forward_remote";
-            }
-          ];
+          "args" = [ { "exec" = "$forward_remote"; } ];
           "tag" = "query_gfw";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "prefer_ipv4";
-            }
-            {
-              "exec" = "$fallback_seq";
-            }
+            { "exec" = "prefer_ipv4"; }
+            { "exec" = "$fallback_seq"; }
           ];
           "tag" = "query_fallback";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "$cache_lan";
-            }
+            { "exec" = "$cache_lan"; }
             {
               "exec" = "return";
               "matches" = "has_resp";
             }
-            {
-              "exec" = "$local_seq";
-            }
+            { "exec" = "$local_seq"; }
           ];
           "tag" = "query_lan";
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "$other_seq";
-            }
-          ];
+          "args" = [ { "exec" = "$other_seq"; } ];
           "tag" = "query_other";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "$ttl_1h";
-            }
-            {
-              "exec" = "accept";
-            }
+            { "exec" = "$ttl_1h"; }
+            { "exec" = "accept"; }
           ];
           "tag" = "pre_handle";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "$ttl_5m";
-            }
-            {
-              "exec" = "accept";
-            }
+            { "exec" = "$ttl_5m"; }
+            { "exec" = "accept"; }
           ];
           "tag" = "main_handle";
           "type" = "sequence";
@@ -311,9 +243,7 @@ let
               "matches" = "ptr_ip $geoip_private";
             }
             { "exec" = "$selfhost"; }
-            {
-              "exec" = "jump has_resp_pre";
-            }
+            { "exec" = "jump has_resp_pre"; }
           ];
           "tag" = "pre_sequence";
           "type" = "sequence";
@@ -324,57 +254,35 @@ let
               "exec" = "$reject_ad";
               "matches" = "qname $geosite_ads-all";
             }
-            {
-              "exec" = "$cache_wan";
-            }
-            {
-              "exec" = "jump has_resp_main";
-            }
+            { "exec" = "$cache_wan"; }
+            { "exec" = "jump has_resp_main"; }
             {
               "exec" = "$query_cn";
               "matches" = "qname $geosite_cn";
             }
-            {
-              "exec" = "jump has_resp_main";
-            }
+            { "exec" = "jump has_resp_main"; }
             {
               "exec" = "$query_gfw";
               "matches" = "qname $geosite_gfw";
             }
-            {
-              "exec" = "jump has_resp_main";
-            }
+            { "exec" = "jump has_resp_main"; }
             {
               "exec" = "$query_nocn";
               "matches" = "qname $geosite_location-!cn";
             }
-            {
-              "exec" = "jump has_resp_main";
-            }
-            {
-              "exec" = "$no_ecs";
-            }
-            {
-              "exec" = "$query_fallback";
-            }
-            {
-              "exec" = "jump has_resp_main";
-            }
+            { "exec" = "jump has_resp_main"; }
+            { "exec" = "$no_ecs"; }
+            { "exec" = "$query_fallback"; }
+            { "exec" = "jump has_resp_main"; }
           ];
           "tag" = "main_sequence";
           "type" = "sequence";
         }
         {
           "args" = [
-            {
-              "exec" = "metrics_collector metrics";
-            }
-            {
-              "exec" = "$pre_sequence";
-            }
-            {
-              "exec" = "$main_sequence";
-            }
+            { "exec" = "metrics_collector metrics"; }
+            { "exec" = "$pre_sequence"; }
+            { "exec" = "$main_sequence"; }
           ];
           "tag" = "sequence";
           "type" = "sequence";
@@ -544,11 +452,7 @@ let
         {
           "args" = {
             "concurrent" = 1;
-            "upstreams" = [
-              {
-                "addr" = "${ip.router}:1053";
-              }
-            ];
+            "upstreams" = [ { "addr" = "${ip.router}:1053"; } ];
           };
           "tag" = "forward_remote";
           "type" = "forward";
@@ -616,39 +520,23 @@ let
         {
           "args" = {
             "concurrent" = 1;
-            "upstreams" = [
-              {
-                "addr" = "udp://${ip.router}:53";
-              }
-            ];
+            "upstreams" = [ { "addr" = "udp://${ip.router}:53"; } ];
           };
           "tag" = "local";
           "type" = "forward";
         }
         {
-          "args" = [
-            {
-              "exec" = "reject 2";
-            }
-          ];
+          "args" = [ { "exec" = "reject 2"; } ];
           "tag" = "reject_2";
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "reject 3";
-            }
-          ];
+          "args" = [ { "exec" = "reject 3"; } ];
           "tag" = "reject_3";
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "reject 5";
-            }
-          ];
+          "args" = [ { "exec" = "reject 5"; } ];
           "tag" = "reject_5";
           "type" = "sequence";
         }
@@ -660,18 +548,14 @@ let
       "plugins" = [
         {
           "args" = {
-            "files" = [
-              "${geoLists}/geoip_private.txt"
-            ];
+            "files" = [ "${geoLists}/geoip_private.txt" ];
           };
           "tag" = "geoip_private";
           "type" = "ip_set";
         }
         {
           "args" = {
-            "files" = [
-              "${geoLists}/geoip_cn.txt"
-            ];
+            "files" = [ "${geoLists}/geoip_cn.txt" ];
           };
           "tag" = "geoip_cn";
           "type" = "ip_set";
@@ -698,18 +582,14 @@ let
         }
         {
           "args" = {
-            "files" = [
-              "${geoLists}/geosite_geolocation-!cn.txt"
-            ];
+            "files" = [ "${geoLists}/geosite_geolocation-!cn.txt" ];
           };
           "tag" = "geosite_location-!cn";
           "type" = "domain_set";
         }
         {
           "args" = {
-            "files" = [
-              "${geoLists}/geosite_category-ads-all.txt"
-            ];
+            "files" = [ "${geoLists}/geosite_category-ads-all.txt" ];
           };
           "tag" = "geosite_ads-all";
           "type" = "domain_set";
@@ -753,29 +633,17 @@ let
           "type" = "ecs_handler";
         }
         {
-          "args" = [
-            {
-              "exec" = "ttl 60";
-            }
-          ];
+          "args" = [ { "exec" = "ttl 60"; } ];
           "tag" = "ttl_1m";
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "ttl 300";
-            }
-          ];
+          "args" = [ { "exec" = "ttl 300"; } ];
           "tag" = "ttl_5m";
           "type" = "sequence";
         }
         {
-          "args" = [
-            {
-              "exec" = "ttl 3600";
-            }
-          ];
+          "args" = [ { "exec" = "ttl 3600"; } ];
           "tag" = "ttl_1h";
           "type" = "sequence";
         }
@@ -852,8 +720,6 @@ let
     };
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

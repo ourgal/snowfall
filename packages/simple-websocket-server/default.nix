@@ -13,9 +13,7 @@ python3.pkgs.buildPythonPackage {
     python3.pkgs.wheel
   ];
 
-  pythonImportsCheck = [
-    "SimpleWebSocketServer"
-  ];
+  pythonImportsCheck = [ "SimpleWebSocketServer" ];
 
   meta = {
     description = "A python based websocket server that is simple and easy to use";

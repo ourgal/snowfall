@@ -7,8 +7,6 @@ let
     boot.extraModulePackages = with config.boot.kernelPackages; [ acpi_call ];
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

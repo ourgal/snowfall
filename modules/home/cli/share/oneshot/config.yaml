@@ -1,68 +1,69 @@
+---
 basicauth:
   nodialog: false
-  password: ""
-  passwordfile: ""
+  password: ''
+  passwordfile: ''
   passwordprompt: false
-  unauthorizedpage: ""
+  unauthorizedpage: ''
   unauthorizedstatus: 401
-  username: ""
+  username: ''
 cmd:
   discoveryserver:
     jwt:
-      key: ""
-      value: ""
+      key: ''
+      value: ''
     maxqueuesize: 0
     requiredkey:
-      path: ""
-      value: ""
+      path: ''
+      value: ''
     server:
-      addr: ""
-      tlscert: ""
-      tlskey: ""
+      addr: ''
+      tlscert: ''
+      tlskey: ''
     urlassignment:
-      domain: ""
-      path: ""
-      pathprefix: ""
-      port: ""
-      scheme: ""
+      domain: ''
+      path: ''
+      pathprefix: ''
+      port: ''
+      scheme: ''
   exec:
-    dir: ""
+    dir: ''
     enforcecgi: false
     env: []
     headers: {}
     replaceheaders: false
-    stderr: ""
+    stderr: ''
   p2p:
     browserclient:
       open: false
     client:
       send:
-        archivemethod: ""
-        name: ""
+        archivemethod: ''
+        name: ''
   receive:
-    csrftoken: ""
+    csrftoken: ''
     decodeb64: false
-    eol: ""
+    eol: ''
     header: {}
     includebody: false
     status: 200
-    uifile: ""
+    uifile: ''
   redirect:
     header: {}
     status: 307
   rproxy:
     matchhost: false
-    method: ""
+    method: ''
     requestheader: {}
     responseheader: {}
-    spoofhost: ""
+    spoofhost: ''
     status: 0
     tee: false
   send:
     archivemethod: tar.gz
     header: {}
-    mime: ""
-    name: ""
+    mime: ''
+    name: ''
     nodownload: false
     statuscode: 200
 cors:
@@ -74,43 +75,43 @@ cors:
   successstatus: 204
 discovery:
   enabled: true
-  host: ""
+  host: ''
   insecure: false
-  key: ""
-  keypath: ""
+  key: ''
+  keypath: ''
   onlyredirect: false
-  preferredurl: ""
+  preferredurl: ''
   reports:
     enabled: true
     headerfilter:
       allow: []
       block: []
       usedefaults: true
-  requiredurl: ""
+  requiredurl: ''
 nattraversal:
   p2p:
-    discoverydir: ""
+    discoverydir: ''
     enabled: false
     icegathertimeout: 30s
     only: false
     webrtcconfiguration: []
-    webrtcconfigurationfile: ""
+    webrtcconfigurationfile: ''
   upnp:
     duration: 0s
     enabled: false
     externalport: 0
     timeout: 1m0s
 output:
-  format: ""
+  format: ''
   nocolor: false
   qrcode: true
   quiet: false
 server:
   allowbots: false
-  exitonfail: "0"
-  host: ""
-  maxreadsize: "0"
+  exitonfail: '0'
+  host: ''
+  maxreadsize: '0'
   port: 8080
   timeout: 0s
-  tlscert: ""
-  tlskey: ""
+  tlscert: ''
+  tlskey: ''
