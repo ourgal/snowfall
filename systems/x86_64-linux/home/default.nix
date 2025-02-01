@@ -40,6 +40,7 @@ in
       "pcscd"
       "power"
       "sops-nix"
+      "temp-hosts"
       "tpm"
       "tuptime"
       "udev"
