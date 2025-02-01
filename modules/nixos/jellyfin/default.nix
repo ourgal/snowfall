@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8096;
   value = {
@@ -9,11 +9,21 @@ let
         openFirewall = true;
       };
       caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.jellyfin}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
+        virtualHosts =
+          let
+            inherit (config.${namespace}.user.duckdns) token domain;
+          in
+          {
+            "http://${domains.jellyfin}".extraConfig = ''
+              reverse_proxy http://localhost:${toString port}
+            '';
+            "jellyfin.${domain}.duckdns.org".extraConfig = ''
+              tls {
+                  dns duckdns ${token}
+              }
+              reverse_proxy http://localhost:${toString port}
+            '';
+          };
       };
     };
     systemd.services.jellyfin.serviceConfig = {
