@@ -23,12 +23,7 @@ let
           "openRPCPort"
         ]
         // {
-          inherit user;
           webHome = pkgs.flood-for-transmission;
-          downloadDirPermissions = "766";
-          settings = {
-            download-dir = "/home/${user}/mnt/nfs/anime/";
-          };
           package = pkgs.transmission_4;
         };
       caddy = enabled // {
