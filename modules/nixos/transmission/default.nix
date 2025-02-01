@@ -14,6 +14,7 @@ let
     ;
   user = config.${namespace}.user.name;
   port = 9091;
+  dataDir = "/var/lib/transmission";
   value = {
     services = {
       transmission =
@@ -25,6 +26,13 @@ let
         // {
           webHome = pkgs.flood-for-transmission;
           package = pkgs.transmission_4;
+          settings = {
+            download-dir = "${dataDir}/Downloads";
+            rpc-whitelist-enabled = false;
+            rpc-host-whitelist-enabled = false;
+            ratio-limit = 0;
+            ratio-limit-enabled = true;
+          };
         };
       caddy = enabled // {
         virtualHosts = {
@@ -35,6 +43,10 @@ let
       };
     };
     users.users.${user}.extraGroups = [ "transmission" ];
+    systemd.tmpfiles.rules = [
+      "e ${dataDir} 2770 - - - -"
+      "e ${dataDir}/Downloads 2770 - - - -"
+    ];
   };
   path = ./.;
   _args = {
