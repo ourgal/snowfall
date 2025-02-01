@@ -8,6 +8,7 @@ args.module (
       "classifier"
       "dext"
       "dlorg"
+      "mnamer"
       # keep-sorted end
     ];
     nixPkgs = [
