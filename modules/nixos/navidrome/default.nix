@@ -3,6 +3,7 @@ let
   inherit (args)
     namespace
     lib
+    config
     ;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 4533;
@@ -17,11 +18,21 @@ let
         };
       };
       caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.navidrome}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
+        virtualHosts =
+          let
+            inherit (config.${namespace}.user.duckdns) token domain;
+          in
+          {
+            "http://${domains.navidrome}".extraConfig = ''
+              reverse_proxy http://localhost:${toString port}
+            '';
+            "navidrome.${domain}.duckdns.org".extraConfig = ''
+              tls {
+                  dns duckdns ${token}
+              }
+              reverse_proxy http://localhost:${toString port}
+            '';
+          };
       };
     };
     systemd.services.navidrome.serviceConfig = {
