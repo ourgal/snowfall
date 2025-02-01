@@ -40,7 +40,6 @@ in
       "pcscd"
       "power"
       "sops-nix"
-      "syncthing"
       "tpm"
       "tuptime"
       "udev"
