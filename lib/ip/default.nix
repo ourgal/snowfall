@@ -5,6 +5,7 @@ let
     brix = "206";
     home = "100";
     router = "1";
+    d2550 = "143";
   };
   ip = lib.attrsets.mapAttrs (_n: v: "${lan}.${v}") _ip;
 in
