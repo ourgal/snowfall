@@ -49,6 +49,7 @@ in
     vsftpd = enabled;
     transmission = enabled;
     navidrome = enabled;
+    jellyfin = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
