@@ -132,6 +132,7 @@ args.module (
         "" = ./.gitnow;
       };
       tmpfiles = [ "d ${config.home.homeDirectory}/Downloads/youtube - - - - -" ];
+      sessionPath = [ "$HOME/.local/bin" ];
       value = {
         ${namespace}.cli.utils.alias.aliae.alias = {
           sc = "systemctl";
@@ -146,7 +147,6 @@ args.module (
           scur = "systemctl --user restart";
           scuo = "systemctl --user stop";
         };
-        home.sessionPath = [ "$HOME/.local/bin" ];
       };
       enable = "fzf-help";
     }

@@ -20,10 +20,8 @@ args.module (
           coc.nvim:registry=https://registry.npmmirror.com/'';
       };
       tmpfiles = [ "d ${config.xdg.dataHome}/pnpm - - - - -" ];
-      progs.fish.shellInit = ''
-        set -x PNPM_HOME "$HOME/.local/share/pnpm"
-        fish_add_path ~/.local/share/pnpm
-      '';
+      sessionPath = [ "$HOME/.local/share/pnpm" ];
+      env.PNPM_HOME = "$HOME/.local/share/pnpm";
     }
   )
 )
