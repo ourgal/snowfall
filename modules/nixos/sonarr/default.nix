@@ -2,26 +2,24 @@ args:
 let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled domains;
-  port = 8096;
+  port = 8989;
   value = {
     services = {
-      jellyfin = enabled // {
+      sonarr = enabled // {
         openFirewall = true;
       };
       caddy = enabled // {
         virtualHosts = {
-          "http://${domains.jellyfin}".extraConfig = ''
+          "http://${domains.sonarr}".extraConfig = ''
             reverse_proxy http://localhost:${toString port}
           '';
         };
       };
     };
-    systemd.services.jellyfin.serviceConfig = {
-      SupplementaryGroups = [
-        "syncthing"
-        "sonarr"
-      ];
+    systemd.services.sonarr.serviceConfig = {
+      SupplementaryGroups = [ "transmission" ];
     };
+    systemd.tmpfiles.rules = [ "d /mnt/anime 2770 sonarr sonarr - -" ];
   };
   path = ./.;
   _args = {

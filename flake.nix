@@ -145,7 +145,11 @@
         allowUnfree = true;
         joypixels.acceptLicense = true;
         allowUnfreePredicate = pkg: builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "nvdia-x11" ];
-        permittedInsecurePackages = [ "openssl-1.1.1w" ]; # for koreader
+        permittedInsecurePackages = [
+          "openssl-1.1.1w" # for koreader
+          "dotnet-sdk-6.0.428" # for sonarr
+          "aspnetcore-runtime-6.0.36" # for sonarr
+        ];
       };
 
       overlays = with inputs; [

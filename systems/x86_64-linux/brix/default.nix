@@ -50,6 +50,7 @@ in
     transmission = enabled;
     navidrome = enabled;
     jellyfin = enabled;
+    sonarr = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
