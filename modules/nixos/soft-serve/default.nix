@@ -68,14 +68,10 @@ let
         '';
       };
     };
-    systemd.tmpfiles.rules = [
-      "L+ /var/lib/private/soft-serve/config.yaml - - - - ${configFile}"
-    ];
+    systemd.tmpfiles.rules = [ "L+ /var/lib/private/soft-serve/config.yaml - - - - ${configFile}" ];
     systemd.services.soft-serve.environment._reloadConfig = "${configFile}";
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

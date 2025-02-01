@@ -1,3 +1,4 @@
+---
 # Default Contour Configuration File.
 
 # Overrides the auto-detected platform plugin to be loaded.
@@ -143,7 +144,7 @@ profiles:
     # Sets initial working directory when spawning a new terminal.
     # A leading ~ is expanded to the user's home directory.
     # Default value is the user's home directory.
-    initial_working_directory: "~"
+    initial_working_directory: '~'
     # When this profile is *activated*, this flag decides
     # whether or not the title bar will be shown
     show_title_bar: true
@@ -163,11 +164,11 @@ profiles:
       # If set to "default" BEL character sound will be default sound.
       # If set to path to a file then BEL sound will use that file. Example
       #   sound: "/home/user/Music/bell.wav"
-      sound: "default"
+      sound: default
       # If this boolean is true, a window alert will be raised with each bell
       alert: true
     # Defines the class part of the WM_CLASS property of the window.
-    wm_class: "contour"
+    wm_class: contour
     # Tells Contour how to handle Option-Key events on MacOS.
     # This value is ignored on other platforms.
     #
@@ -313,7 +314,7 @@ profiles:
       regular:
         # Font family defines the font family name, such as:
         # Fira Code", "Courier New", or "monospace" (default).
-        family: "FiraCode Nerd Font Mono"
+        family: FiraCode Nerd Font Mono
         # Font weight can be one of:
         #   thin, extra_light, light, demilight, book, normal,
         #   medium, demibold, bold, extra_bold, black, extra_black.
@@ -337,7 +338,7 @@ profiles:
       # This is a special font to be used for displaying unicode symbols
       # that are to be rendered in emoji presentation.
       # Defaults to "emoji".
-      emoji: "emoji"
+      emoji: emoji
     # Indicates whether or not bold text should be rendered in bright colors,
     # for indexed colors.
     #
@@ -353,7 +354,7 @@ profiles:
       # - rectangle     just the outline of a block
       # - underscore    a line under the text
       # - bar:          the well known i-Beam
-      shape: "block"
+      shape: block
       # Determines whether or not the cursor will be blinking over time.
       blinking: false
       # Blinking interval (in milliseconds) to use when cursor is blinking.
@@ -417,8 +418,8 @@ profiles:
 # --------------
 #
 # Here you can configure your color profiles, whereas a color can be expressed in standard web format,
-# with a leading # followed by red/green/blue values, 7 characters in total.
-# You may alternatively use 0x as prefix instead of #.
+# with a leading  # followed by red/green/blue values, 7 characters in total.
+# You may alternatively use 0x as prefix instead of  #.
 # For example 0x102030 is equal to '#102030'.
 color_schemes:
   default:
@@ -550,9 +551,9 @@ color_schemes:
       background: '#000000'
     # Colors for the IME (Input Method Editor) area.
     input_method_editor:
-      # Default: default #FFFFFF
+      #  Default: default  # FFFFFF
       foreground: '#FFFFFF'
-      # Default: default #FF0000
+      #  Default: default  # FF0000
       background: '#FF0000'
     # Normal colors
     normal:
@@ -692,16 +693,16 @@ input_mapping:
   - {mods: [Control, Shift], key: Plus, action: IncreaseFontSize}
   - {mods: [Control], key: '0', action: ResetFontSize}
   - {mods: [Control, Shift], key: Minus, action: DecreaseFontSize}
-  - {mods: [Control, Shift], key: '_', action: DecreaseFontSize}
+  - {mods: [Control, Shift], key: _, action: DecreaseFontSize}
   - {mods: [Control, Shift], key: N, action: NewTerminal}
   - {mods: [Control, Shift], key: V, action: PasteClipboard, strip: false}
   - {mods: [Control, Alt], key: V, action: PasteClipboard, strip: true}
-  - {mods: [Control], key: C, action: CopySelection, mode: 'Select|Insert'}
-  - {mods: [Control], key: C, action: CancelSelection, mode: 'Select|Insert'}
-  - {mods: [Control], key: V, action: PasteClipboard, strip: false, mode: 'Select|Insert'}
-  - {mods: [Control], key: V, action: CancelSelection, mode: 'Select|Insert'}
-  - {mods: [], key: Escape, action: CancelSelection, mode: 'Select|Insert'}
-  - {mods: [Control, Shift], key: Space, action: ViNormalMode, mode: 'Insert'}
+  - {mods: [Control], key: C, action: CopySelection, mode: Select|Insert}
+  - {mods: [Control], key: C, action: CancelSelection, mode: Select|Insert}
+  - {mods: [Control], key: V, action: PasteClipboard, strip: false, mode: Select|Insert}
+  - {mods: [Control], key: V, action: CancelSelection, mode: Select|Insert}
+  - {mods: [], key: Escape, action: CancelSelection, mode: Select|Insert}
+  - {mods: [Control, Shift], key: Space, action: ViNormalMode, mode: Insert}
   - {mods: [Control, Shift], key: Comma, action: OpenConfiguration}
   - {mods: [Control, Shift], key: Q, action: Quit}
   - {mods: [Control], mouse: WheelDown, action: DecreaseFontSize}
@@ -712,17 +713,16 @@ input_mapping:
   - {mods: [Shift], key: PageDown, action: ScrollPageDown}
   - {mods: [Shift], key: PageUp, action: ScrollPageUp}
   - {mods: [Shift], key: UpArrow, action: ScrollOneUp}
-  - {mods: [Control, Alt], key: K, action: ScrollMarkUp, mode: "~Alt"}
-  - {mods: [Control, Alt], key: J, action: ScrollMarkDown, mode: "~Alt"}
+  - {mods: [Control, Alt], key: K, action: ScrollMarkUp, mode: ~Alt}
+  - {mods: [Control, Alt], key: J, action: ScrollMarkDown, mode: ~Alt}
   - {mods: [Shift], mouse: WheelDown, action: ScrollPageDown}
   - {mods: [Shift], mouse: WheelUp, action: ScrollPageUp}
   - {mods: [Control, Alt], key: O, action: OpenFileManager}
-  - {mods: [Control, Alt], key: '.', action: ToggleStatusLine}
-  - {mods: [Control, Shift], key: 'F', action: SearchReverse}
-  - {mods: [Control, Shift], key: 'H', action: NoSearchHighlight}
-  - {mods: [], key: 'F3', action: FocusNextSearchMatch}
-  - {mods: [Shift], key: 'F3', action: FocusPreviousSearchMatch}
-
+  - {mods: [Control, Alt], key: ., action: ToggleStatusLine}
+  - {mods: [Control, Shift], key: F, action: SearchReverse}
+  - {mods: [Control, Shift], key: H, action: NoSearchHighlight}
+  - {mods: [], key: F3, action: FocusNextSearchMatch}
+  - {mods: [Shift], key: F3, action: FocusPreviousSearchMatch}
 #   - { mods: [Control, Meta],  key: 'E',           action: TraceEnter,             mode: "~Trace" }
 #   - { mods: [Control, Meta],  key: 'E',           action: TraceLeave,             mode: "Trace" }
 #   - { mods: [Control, Meta],  key: 'N',           action: TraceStep,              mode: "Trace" }

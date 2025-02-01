@@ -17,8 +17,6 @@ let
     environment.systemPackages = with' pkgs [ "pulseaudio" ];
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

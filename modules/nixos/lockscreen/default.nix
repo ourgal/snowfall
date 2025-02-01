@@ -6,8 +6,6 @@ let
     services.xserver.xautolock = enabled;
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

@@ -1,10 +1,6 @@
 args:
 let
-  inherit (args)
-    namespace
-    lib
-    config
-    ;
+  inherit (args) namespace lib config;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -54,15 +50,11 @@ let
         mode = "2770";
         dir = "/var/lib/syncthing";
       in
-      [
-        "e ${dir} ${mode} - - - -"
-      ]
+      [ "e ${dir} ${mode} - - - -" ]
       ++ (builtins.map (x: "e ${dir}/${x} ${mode} - - - -") (builtins.attrNames folders));
     users.users.${user}.extraGroups = [ "syncthing" ];
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

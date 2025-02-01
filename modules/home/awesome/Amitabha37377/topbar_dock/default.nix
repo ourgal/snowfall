@@ -68,7 +68,8 @@ args.module (
         home.file = {
           ".icons/Tela".source = "${args.pkgs.tela-icon-theme}/share/icons/Tela";
           ".icons/Papirus".source = "${args.pkgs.papirus-icon-theme}/share/icons/Papirus";
-          ".icons/Zafiro-Icons-Dark-Blue-f".source = "${args.pkgs.zafiro-icons}/share/icons/Zafiro-icons-Dark";
+          ".icons/Zafiro-Icons-Dark-Blue-f".source =
+            "${args.pkgs.zafiro-icons}/share/icons/Zafiro-icons-Dark";
         };
       };
       dot.desktop.system.nm-applet.enable = true;

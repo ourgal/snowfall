@@ -1,15 +1,16 @@
+---
 matches:
-  - replace: "{{mydate}}"
+  - replace: '{{mydate}}'
     trigger: :date
     vars:
       - name: mydate
         params:
-          format: "%m/%d/%Y"
+          format: '%m/%d/%Y'
         type: date
-  - replace: "{{mydate}}"
+  - replace: '{{mydate}}'
     trigger: :time
     vars:
       - name: mydate
         params:
-          format: "%H:%M"
+          format: '%H:%M'
         type: date

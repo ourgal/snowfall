@@ -22,8 +22,6 @@ let
     systemd.tmpfiles.rules = [ "d /mnt/anime 2770 sonarr sonarr - -" ];
   };
   path = ./.;
-  _args = {
-    inherit value path args;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args

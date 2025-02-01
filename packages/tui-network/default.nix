@@ -30,13 +30,9 @@ let
     inherit (_sources.fortune-python) pname version src;
     pyproject = true;
 
-    build-system = [
-      python3.pkgs.setuptools
-    ];
+    build-system = [ python3.pkgs.setuptools ];
 
-    pythonImportsCheck = [
-      "fortune"
-    ];
+    pythonImportsCheck = [ "fortune" ];
 
     meta = {
       description = "A Fortune clone in Python";
@@ -51,13 +47,9 @@ python3.pkgs.buildPythonApplication {
   inherit (_sources.tui-network) pname version src;
   pyproject = true;
 
-  build-system = [
-    python3.pkgs.poetry-core
-  ];
+  build-system = [ python3.pkgs.poetry-core ];
 
-  nativeBuildInputs = with python3.pkgs; [
-    pythonRelaxDepsHook
-  ];
+  nativeBuildInputs = with python3.pkgs; [ pythonRelaxDepsHook ];
 
   dependencies = [
     fortune-python
@@ -66,9 +58,7 @@ python3.pkgs.buildPythonApplication {
 
   pythonRelaxDeps = true;
 
-  pythonImportsCheck = [
-    "tui_network"
-  ];
+  pythonImportsCheck = [ "tui_network" ];
 
   meta = {
     description = "";

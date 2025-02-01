@@ -1,10 +1,10 @@
+---
 name: Update nix hash
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   schedule:
-    - cron: "0 0 * * *"
+    - cron: 0 0 * * *
 jobs:
   nvfetcher:
     runs-on: ubuntu-latest
@@ -23,4 +23,4 @@ jobs:
       - run: rm keyfile.toml
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto update nix hash"
+          commit_message: 'chore: auto update nix hash'

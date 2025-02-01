@@ -27,9 +27,7 @@ let
       pillow
     ];
 
-    pythonImportsCheck = [
-      "pyrlottie"
-    ];
+    pythonImportsCheck = [ "pyrlottie" ];
 
     pythonRelaxDeps = true;
 
@@ -69,17 +67,11 @@ python3.pkgs.buildPythonApplication rec {
   ];
 
   optional-dependencies = with python3.pkgs; {
-    pyrlottie = [
-      pyrlottie
-    ];
-    rlottie-python = [
-      rlottie-python
-    ];
+    pyrlottie = [ pyrlottie ];
+    rlottie-python = [ rlottie-python ];
   };
 
-  pythonImportsCheck = [
-    "tstickers"
-  ];
+  pythonImportsCheck = [ "tstickers" ];
 
   pythonRelaxDeps = true;
 

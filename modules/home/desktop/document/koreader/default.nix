@@ -8,9 +8,7 @@ args.module (
         pkgs.runCommand "koreader_dicts"
           {
             inherit (pkgs._sources.stardict-cn-dicts) src;
-            nativeBuildInputs = [
-              pkgs.${namespace}.v2dat
-            ];
+            nativeBuildInputs = [ pkgs.${namespace}.v2dat ];
           }
           ''
             mkdir $out
