@@ -26,6 +26,7 @@ args.module (
     enable = [
       # keep-sorted start
       "freetube"
+      "jellyfin-mpv-shim"
       "mpv"
       "ytui"
       # keep-sorted end
