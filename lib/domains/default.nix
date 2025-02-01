@@ -18,6 +18,7 @@ let
     "rustypaste"
     "searx"
     "soft-serve"
+    "sonarr"
     "subconverter"
     "syncthing"
     "transmission"
