@@ -431,7 +431,10 @@ args.module (
                 ];
                 formatter = {
                   command = "nixfmt";
-                  args = [ "-" ];
+                  args = [
+                    "--strict"
+                    "-"
+                  ];
                 };
                 auto-format = true;
               }
@@ -617,9 +620,7 @@ args.module (
               }
               {
                 name = "elisp";
-                language-servers = [
-                  "scls"
-                ];
+                language-servers = [ "scls" ];
                 formatter = {
                   command = "lisp-format";
                 };
