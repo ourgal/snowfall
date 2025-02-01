@@ -16,6 +16,7 @@ includes = ["*.yaml", "*.yml"]
 
 [formatter.nix]
 command = "nixfmt"
+options = ["--strict"]
 includes = ["*.nix"]
 
 [formatter.python]

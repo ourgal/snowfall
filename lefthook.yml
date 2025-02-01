@@ -16,7 +16,7 @@ pre-commit:
       stage_fixed: true
     nix:
       glob: '*.nix'
-      run: nixfmt {staged_files}
+      run: nixfmt --strict {staged_files}
       stage_fixed: true
     deadnix:
       glob: '*.nix'

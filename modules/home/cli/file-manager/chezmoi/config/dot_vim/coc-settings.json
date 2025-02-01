@@ -68,7 +68,8 @@
           },
           "formatting": {
             "command": [
-              "nixfmt"
+              "nixfmt",
+              "--strict"
             ]
           }
         }
@@ -83,7 +84,8 @@
         "nil": {
           "formatting": {
             "command": [
-              "nixfmt"
+              "nixfmt",
+              "--strict"
             ]
           }
         }
