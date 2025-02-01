@@ -16,7 +16,7 @@ args.module (
       ];
       dotnetPkgs = "Nuget";
       env.DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
-      progs.fish.shellInit = "fish_add_path ~/.dotnet/tools";
+      sessionPath = [ "$HOME/.dotnet/tools" ];
     }
   )
 )

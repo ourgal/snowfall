@@ -197,6 +197,7 @@ rec {
       progs ? [ ],
       servs ? [ ],
       env ? { },
+      sessionPath ? [ ],
       enable ? [ ],
       tmpfiles ? [ ],
       defaultApps ? { },
@@ -331,7 +332,7 @@ rec {
               newVal = {
                 Install = {
                   WantedBy = [
-                    (if ((value ? gui) && (value.gui)) then "graphical-session.target" else "default.target")
+                    (if ((value ? gui) && value.gui) then "graphical-session.target" else "default.target")
                   ];
                 };
                 Unit =
@@ -339,7 +340,7 @@ rec {
                     Description = "${name} Service";
                   }
                   // (
-                    if ((value ? online) && (value.online)) then
+                    if ((value ? online) && value.online) then
                       {
                         Wants = "network-online.target";
                         After = "network-online.target";
@@ -365,7 +366,7 @@ rec {
             in
             acc
             // {
-              "${name}" = (
+              "${name}" =
                 if (value != { }) then
                   lib.attrsets.filterAttrs (
                     n: _v:
@@ -384,8 +385,7 @@ rec {
                     ]
                   ) newVal
                 else
-                  value
-              );
+                  value;
             }
           ) { } systemdServices;
         in
@@ -415,13 +415,16 @@ rec {
               ++ (inputPkgs inputs);
             file = confHandle files;
             sessionVariables = env;
+            inherit sessionPath;
           };
-          xdg.configFile = confHandle confs;
-          xdg.dataFile = confHandle dataFiles;
-          xdg.mimeApps = {
-            enable = true;
-            associations.added = defaults;
-            defaultApplications = defaults;
+          xdg = {
+            configFile = confHandle confs;
+            dataFile = confHandle dataFiles;
+            mimeApps = {
+              enable = true;
+              associations.added = defaults;
+              defaultApplications = defaults;
+            };
           };
           programs = progsHandle progs;
           services = progsHandle servs;
