@@ -5,6 +5,7 @@ let
     "brix"
     "home"
     "surface"
+    "d2550"
   ];
   laptops = [
     "air"
