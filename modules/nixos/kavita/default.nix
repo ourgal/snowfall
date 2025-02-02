@@ -13,9 +13,17 @@ let
       tokenKeyFile = config.sops.secrets."kavita/token".path;
     };
 
-    systemd.services.kavita.serviceConfig = {
-      SupplementaryGroups = [ "syncthing" ];
-    };
+    systemd.services.kavita =
+      let
+        tmpfiles = [ "systemd-tmpfiles-resetup.service" ];
+      in
+      {
+        partOf = tmpfiles;
+        after = tmpfiles;
+        serviceConfig = {
+          SupplementaryGroups = [ "syncthing" ];
+        };
+      };
 
     services.caddy = enabled // {
       virtualHosts =

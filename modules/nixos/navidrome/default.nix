@@ -31,9 +31,15 @@ let
           };
       };
     };
-    systemd.services.navidrome.serviceConfig = {
-      SupplementaryGroups = [ "syncthing" ];
-    };
+    systemd.services.navidrome.serviceConfig =
+      let
+        tmpfiles = [ "systemd-tmpfiles-resetup.service" ];
+      in
+      {
+        partOf = tmpfiles;
+        after = tmpfiles;
+        SupplementaryGroups = [ "syncthing" ];
+      };
   };
   path = ./.;
   _args = { inherit value path args; };
