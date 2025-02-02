@@ -1135,7 +1135,3 @@ fetch.github = "roxma/vim-hug-neovim-rpc"
 [vim-dirvish-dovish]
 src.git = "https://github.com/roginfarrer/vim-dirvish-dovish"
 fetch.github = "roginfarrer/vim-dirvish-dovish"
-
-[isd]
-src.github = "isd-project/isd"
-fetch.github = "isd-project/isd"
