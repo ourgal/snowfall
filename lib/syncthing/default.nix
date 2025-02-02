@@ -2,6 +2,7 @@
 {
   mkSyncthingFolders =
     {
+      dataDir,
       host,
       folders, # {folder = [ "host a" "host b" ];}
     }:
@@ -9,6 +10,7 @@
       folder =
         {
           name,
+          dataDir,
           host,
           hosts ? [ ],
         }:
@@ -16,14 +18,14 @@
           devices = if (builtins.elem host hosts) then builtins.filter (e: e != host) hosts else [ ];
         in
         {
-          path = "~/${name}";
+          path = "${dataDir}/${name}";
           inherit devices;
         };
     in
     lib.attrsets.mapAttrs (
       n: v:
       folder {
-        inherit host;
+        inherit dataDir host;
         name = n;
         hosts = v;
       }

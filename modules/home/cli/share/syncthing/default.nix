@@ -3,19 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        config
-        pkgs
-        enabled
-        lib
-        ;
+      inherit (args) config pkgs disabled;
       ln = config.lib.file.mkOutOfStoreSymlink;
       sync = "${config.xdg.dataHome}/syncthing";
     in
     {
       path = ./.;
       progs.fish.functions.stc = {
-        body = "${pkgs.stc-cli}/bin/stc --homedir=${sync} $argv";
+        body = "${pkgs.stc-cli}/bin/stc --homedir=${config.xdg.configHome}/syncthing $argv";
       };
       confs = {
         todo = ln "${sync}/todo";
@@ -30,7 +25,7 @@ args.module (
         Music = ln "${sync}/music";
         Documents = ln "${sync}/documents";
       };
-      servs.syncthing = enabled // {
+      servs.syncthing = disabled // {
         # inherit guiAddress;
         # key = config.sops.secrets."syncthing/${host}/key".path;
         # cert = config.sops.secrets."syncthing/${host}/cert".path;
