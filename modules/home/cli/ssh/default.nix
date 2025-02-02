@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) lib namespace;
+      inherit (args) lib namespace config;
       inherit (lib.${namespace}) mkSshConfig ip;
     in
     {
@@ -29,6 +29,7 @@ args.module (
       ];
       perlPkgs = "AppClusterSSH";
       enable = "ssh-tpm-agent";
+      tmpfiles = [ "d ${config.home.homeDirectory}/.ssh - - - - -" ];
       progs.ssh.matchBlocks = {
         soft = {
           host = "soft";
