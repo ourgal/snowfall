@@ -8,7 +8,6 @@ args.module (
       "cache"
       "debounce"
       "is"
-      "isd"
       "recoverpy"
       "sequin"
       "servicer"
