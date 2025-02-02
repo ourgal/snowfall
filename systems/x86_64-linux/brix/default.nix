@@ -51,6 +51,7 @@ in
     navidrome = enabled;
     jellyfin = enabled;
     sonarr = enabled;
+    metacubexd = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;

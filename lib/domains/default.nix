@@ -12,6 +12,7 @@ let
     "harmonia"
     "jellyfin"
     "kavita"
+    "metacubexd"
     "miniflux"
     "navidrome"
     "pairdrop"
