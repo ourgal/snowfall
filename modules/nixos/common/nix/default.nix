@@ -11,13 +11,13 @@ let
     enableOpt
     disabled
     enabled
-    domains
+    ip
     ;
   value = {
     nix =
       let
         mirrors = [
-          "http://${domains.harmonia}"
+          "http://${ip.home}:50000"
           "https://mirrors.cernet.edu.cn/nix-channels/store"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org"
