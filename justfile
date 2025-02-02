@@ -47,3 +47,7 @@ mmdoc:
 
 chezmoi:
 	@chezmoi apply
+
+anywhere host ip:
+	@git add .
+	@nixos-anywhere --flake .#{{host}} root@{{ip}}
