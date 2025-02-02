@@ -2510,27 +2510,6 @@
         },
         "version": "v0.6.1"
     },
-    "isd": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "isd",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "isd-project",
-            "repo": "isd",
-            "rev": "v0.4.1",
-            "sha256": "sha256-5DCHKu41948cfAkbG8BP9N6LTRb3mhalpiMoHx/FL5k=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.4.1"
-    },
     "jalm": {
         "cargoLocks": {
             "Cargo.lock": [
