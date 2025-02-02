@@ -40,6 +40,7 @@ in
       "pcscd"
       "power"
       "sops-nix"
+      "syncthing"
       "temp-hosts"
       "tpm"
       "tuptime"
