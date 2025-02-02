@@ -4183,6 +4183,27 @@
         },
         "version": "7a9b03766d3a9b1dbbdf671a3bbc6f555806dffe"
     },
+    "sing-box-fork": {
+        "cargoLocks": null,
+        "date": "2024-08-19",
+        "extract": null,
+        "name": "sing-box-fork",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "PuerNya",
+            "repo": "sing-box",
+            "rev": "154018b315673a20f8f47cae1b465449e6c9a032",
+            "sha256": "sha256-hTpqTpeSlKVdvVL9JDyg7+J4pAhNDMypYgQ7gQS4JOU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "154018b315673a20f8f47cae1b465449e6c9a032"
+    },
     "slashslash-fish": {
         "cargoLocks": null,
         "date": "2025-01-01",
@@ -4328,12 +4349,12 @@
             "name": null,
             "owner": "NebularNerd",
             "repo": "subtotxt",
-            "rev": "v2.1",
-            "sha256": "sha256-ShNGPv5uMIqdJoWuJZrVQ5p3RHluPleowDMnGrV4EY4=",
+            "rev": "2025-31-01",
+            "sha256": "sha256-PzIChrX7mP/vaCcSUjQ6JyU6Kxs2A0SyCtXE02Wo+xY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.1"
+        "version": "2025-31-01"
     },
     "sunbeam": {
         "cargoLocks": null,
