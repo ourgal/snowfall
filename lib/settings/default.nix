@@ -6,6 +6,8 @@ let
     "home"
     "surface"
     "d2550"
+    "nixos-mbr"
+    "nixos-uefi"
   ];
   laptops = [
     "air"

@@ -3,7 +3,7 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule;
   inherit (config.${namespace}.user) host;
-  uefi = {
+  gpt = {
     type = "gpt";
     partitions = {
       ESP = {
@@ -69,20 +69,36 @@ let
     disko.devices = {
       disk.disk1 = {
         device =
-          if (host == "surface") then
+          if
+            (builtins.elem host [
+              "air"
+              "surface"
+              "nixos-uefi"
+            ])
+          then
             "/dev/nvme0n1"
-          else if (host == "home") then
-            "/dev/sda"
-          else if (host == "air") then
-            "/dev/nvme0n1"
-          else if (host == "brix") then
-            "/dev/sda"
-          else if (host == "d2550") then
+          else if
+            (builtins.elem host [
+              "brix"
+              "home"
+              "d2550"
+              "nixos-mbr"
+            ])
+          then
             "/dev/sda"
           else
             builtins.throw "unknown host";
         type = "disk";
-        content = if (host != "d2550") then uefi else msdos;
+        content =
+          if
+            (builtins.elem host [
+              "nixos-mbr"
+              "d2550"
+            ])
+          then
+            msdos
+          else
+            gpt;
       };
     };
   };
