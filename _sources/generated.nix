@@ -2341,6 +2341,18 @@
     };
     date = "2022-10-21";
   };
+  sing-box-fork = {
+    pname = "sing-box-fork";
+    version = "154018b315673a20f8f47cae1b465449e6c9a032";
+    src = fetchFromGitHub {
+      owner = "PuerNya";
+      repo = "sing-box";
+      rev = "154018b315673a20f8f47cae1b465449e6c9a032";
+      fetchSubmodules = false;
+      sha256 = "sha256-hTpqTpeSlKVdvVL9JDyg7+J4pAhNDMypYgQ7gQS4JOU=";
+    };
+    date = "2024-08-19";
+  };
   slashslash-fish = {
     pname = "slashslash-fish";
     version = "64d29b229f77e5f01562370f310edc3fcaa5ca1c";
@@ -2418,13 +2430,13 @@
   };
   subtotxt = {
     pname = "subtotxt";
-    version = "v2.1";
+    version = "2025-31-01";
     src = fetchFromGitHub {
       owner = "NebularNerd";
       repo = "subtotxt";
-      rev = "v2.1";
+      rev = "2025-31-01";
       fetchSubmodules = false;
-      sha256 = "sha256-ShNGPv5uMIqdJoWuJZrVQ5p3RHluPleowDMnGrV4EY4=";
+      sha256 = "sha256-PzIChrX7mP/vaCcSUjQ6JyU6Kxs2A0SyCtXE02Wo+xY=";
     };
   };
   sunbeam = {
