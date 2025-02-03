@@ -71,9 +71,6 @@ let
       };
     };
 
-    systemd.services.syncthing-init.serviceConfig.ExecStartPost =
-      if isDesktop then updateConfig else "";
-
     services.caddy = lib.mkIf (builtins.elem host syncthing) {
       enable = true;
       virtualHosts = {
@@ -83,15 +80,24 @@ let
       };
     };
 
-    systemd.tmpfiles.rules =
-      if !isDesktop then
-        let
-          mode = "2770";
-        in
-        [ "e ${dataDir} ${mode} ${user} ${group} - -" ]
-        ++ (builtins.map (x: "e ${dataDir}/${x} ${mode} ${user} ${group} - -") (builtins.attrNames folders))
-      else
-        [ ];
+    systemd = {
+      services.syncthing-init.serviceConfig.ExecStartPost = if isDesktop then updateConfig else "";
+      tmpfiles.rules =
+        if !isDesktop then
+          let
+            mode = "0770";
+          in
+          [ "e ${dataDir} ${mode} ${user} ${group} - -" ]
+          ++ (builtins.map (x: "e ${dataDir}/${x} ${mode} ${user} ${group} - -") (builtins.attrNames folders))
+        else
+          [ ];
+      services.systemd-tmpfiles-resetup = {
+        before =
+          lib.optional config.services.jellyfin.enable "jellyfin.service"
+          ++ lib.optional config.services.kavita.enable "kavita.service"
+          ++ lib.optional config.services.navidrome.enable "navidrome.service";
+      };
+    };
 
     users.users.${user}.extraGroups = if isDesktop then [ "syncthing" ] else [ ];
   };

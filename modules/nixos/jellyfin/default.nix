@@ -27,20 +27,14 @@ let
       };
     };
 
-    systemd.services.jellyfin =
-      let
-        tmpfiles = [ "systemd-tmpfiles-resetup.service" ];
-      in
-      {
-        partOf = tmpfiles;
-        after = tmpfiles;
-        serviceConfig = {
-          SupplementaryGroups = [
-            "syncthing"
-            "sonarr"
-          ];
-        };
+    systemd.services.jellyfin = {
+      serviceConfig = {
+        SupplementaryGroups = [
+          "syncthing"
+          "sonarr"
+        ];
       };
+    };
   };
   path = ./.;
   _args = { inherit value path args; };
