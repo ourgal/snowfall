@@ -10,7 +10,7 @@ let
         ROCKET_ADDRESS = "::1";
         ROCKET_PORT = port;
       };
-      environmentFile = "/run/secrets/vaultwarden/adminToken";
+      environmentFile = config.sops.secrets."vaultwarden/adminToken".path;
     };
     services.caddy =
       let

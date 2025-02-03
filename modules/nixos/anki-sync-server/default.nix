@@ -13,7 +13,7 @@ let
         users = [
           {
             username = user;
-            passwordFile = "/run/secrets/anki-sync-server/password";
+            passwordFile = config.sops.secrets."anki-sync-server/password".path;
           }
         ];
       };
