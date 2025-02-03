@@ -937,11 +937,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:f2bace47abeaf1a47c2d0e5827f0317288d43503b6cc3e26bdf38ac1b0e47056",
+            "imageDigest": "sha256:dc7c043ab77a43223c98502cff575faff59fadfd03e850eaa606d494cfdadb38",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.0",
             "os": null,
-            "sha256": "sha256-dmreBbu9Fsyg+RhZ6BnhImCpEEEvr+0gdZKxUhhCCqU=",
+            "sha256": "sha256-WoZlsIsTGu2l5trHs5qKCP1+yW8NPykf7w2xJK8Off4=",
             "tlsVerify": null
         },
         "version": "v1.1.0"
@@ -4731,6 +4731,27 @@
             "type": "github"
         },
         "version": "a390528534bf8e0f050daa1776db555eba4fadd9"
+    },
+    "tmux-floax": {
+        "cargoLocks": null,
+        "date": "2024-11-21",
+        "extract": null,
+        "name": "tmux-floax",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "omerxx",
+            "repo": "tmux-floax",
+            "rev": "61c7f466b9a4ceed56f99d403250164170d586cd",
+            "sha256": "sha256-DOwn7XEg/L95YieUAyZU0FJ49vm2xKGUclm8WCKDizU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "61c7f466b9a4ceed56f99d403250164170d586cd"
     },
     "tmux-fzf-url": {
         "cargoLocks": null,
