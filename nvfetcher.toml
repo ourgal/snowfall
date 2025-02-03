@@ -1138,6 +1138,7 @@ fetch.github = "roginfarrer/vim-dirvish-dovish"
 
 [sing-box-fork]
 src.git = "https://github.com/PuerNya/sing-box"
+src.branch = "building"
 fetch.github = "PuerNya/sing-box"
 
 [tmux-floax]
