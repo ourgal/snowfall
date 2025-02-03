@@ -4690,6 +4690,27 @@
         },
         "version": "19fead0395afdc36830d840249c0c7190ccd8bb9"
     },
+    "tmux-buoyshell": {
+        "cargoLocks": null,
+        "date": "2025-01-27",
+        "extract": null,
+        "name": "tmux-buoyshell",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "cnavajas4",
+            "repo": "tmux-buoyshell",
+            "rev": "859e351e968195d8426b929511fc45204ceed420",
+            "sha256": "sha256-zVkoGNxaJvXgzI0+9ayPKv4mbTbCZci1Y2WMJLbV5M4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "859e351e968195d8426b929511fc45204ceed420"
+    },
     "tmux-continuum": {
         "cargoLocks": null,
         "date": "2024-07-08",

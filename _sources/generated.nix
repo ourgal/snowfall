@@ -2637,6 +2637,18 @@
     };
     date = "2023-03-01";
   };
+  tmux-buoyshell = {
+    pname = "tmux-buoyshell";
+    version = "859e351e968195d8426b929511fc45204ceed420";
+    src = fetchFromGitHub {
+      owner = "cnavajas4";
+      repo = "tmux-buoyshell";
+      rev = "859e351e968195d8426b929511fc45204ceed420";
+      fetchSubmodules = false;
+      sha256 = "sha256-zVkoGNxaJvXgzI0+9ayPKv4mbTbCZci1Y2WMJLbV5M4=";
+    };
+    date = "2025-01-27";
+  };
   tmux-continuum = {
     pname = "tmux-continuum";
     version = "c7ae4f4f4a1c5b7a00718f71742eb3d3ebd9b82a";
