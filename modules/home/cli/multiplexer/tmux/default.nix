@@ -165,7 +165,6 @@ args.module (
       enable = [
         # keep-sorted start
         "auto-renumber-session"
-        "buoyshell"
         "copycat"
         "edgelord"
         "extrakto"
