@@ -529,8 +529,8 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:f2bace47abeaf1a47c2d0e5827f0317288d43503b6cc3e26bdf38ac1b0e47056";
-      sha256 = "sha256-dmreBbu9Fsyg+RhZ6BnhImCpEEEvr+0gdZKxUhhCCqU=";
+      imageDigest = "sha256:dc7c043ab77a43223c98502cff575faff59fadfd03e850eaa606d494cfdadb38";
+      sha256 = "sha256-WoZlsIsTGu2l5trHs5qKCP1+yW8NPykf7w2xJK8Off4=";
       finalImageTag = "v1.1.0";
     };
   };
@@ -2660,6 +2660,18 @@
       sha256 = "sha256-jermraRckdUz3BQCJVKcF1DyuKhnUzfSBJcCicXC7Q4=";
     };
     date = "2024-07-08";
+  };
+  tmux-floax = {
+    pname = "tmux-floax";
+    version = "61c7f466b9a4ceed56f99d403250164170d586cd";
+    src = fetchFromGitHub {
+      owner = "omerxx";
+      repo = "tmux-floax";
+      rev = "61c7f466b9a4ceed56f99d403250164170d586cd";
+      fetchSubmodules = false;
+      sha256 = "sha256-DOwn7XEg/L95YieUAyZU0FJ49vm2xKGUclm8WCKDizU=";
+    };
+    date = "2024-11-21";
   };
   tmux-fzf-url = {
     pname = "tmux-fzf-url";
