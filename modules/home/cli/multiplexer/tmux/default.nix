@@ -168,6 +168,7 @@ args.module (
         "copycat"
         "edgelord"
         "extrakto"
+        "floax"
         "fpp"
         "fuzzback"
         "fzf"
