@@ -1143,3 +1143,7 @@ fetch.github = "PuerNya/sing-box"
 [tmux-floax]
 src.git = "https://github.com/omerxx/tmux-floax"
 fetch.github = "omerxx/tmux-floax"
+
+[tmux-buoyshell]
+src.git = "https://github.com/cnavajas4/tmux-buoyshell"
+fetch.github = "cnavajas4/tmux-buoyshell"

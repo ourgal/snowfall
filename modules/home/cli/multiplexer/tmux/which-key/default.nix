@@ -23,6 +23,8 @@ args.module (
         extrakto
         fzf
         session-wizard
+        floax
+        buoyshell
         ;
     in
     {
@@ -528,6 +530,14 @@ args.module (
                 ++ lib.optional sesh.enable {
                   name = "Sesh";
                   inherit (sesh) key command;
+                }
+                ++ lib.optional floax.enable {
+                  name = "Floax";
+                  inherit (floax) key command;
+                }
+                ++ lib.optional buoyshell.enable {
+                  name = "Buoyshell";
+                  inherit (buoyshell) key command;
                 };
             }
             { separator = true; }
