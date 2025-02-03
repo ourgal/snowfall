@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 5002;
   user = "miniflux";
@@ -11,7 +11,7 @@ let
         POLLING_PARSING_ERROR_LIMIT = 0;
         LISTEN_ADDR = "localhost:${toString port}";
       };
-      adminCredentialsFile = "/run/secrets/miniflux/adminCredentialsFile";
+      adminCredentialsFile = config.sops.secrets."miniflux/adminCredentialsFile".path;
     };
     users = {
       users.${user} = {
