@@ -50,13 +50,10 @@ rec {
 
   with' = prefix: pkgs: builtins.map (p: prefix.${p}) pkgs;
 
-  tomlFile = file: builtins.fromTOML (builtins.readFile file);
-  jsonFile = file: builtins.fromJSON (builtins.readFile file);
-
   inherit (inputs.nix-std.lib.serde) toTOML;
   # }}}
 
-  sources = jsonFile ../../_sources/generated.json;
+  sources = lib.importJSON ../../_sources/generated.json;
 
   _sources = import ../../_sources/generated.nix;
 

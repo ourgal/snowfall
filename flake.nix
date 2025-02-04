@@ -130,7 +130,6 @@
           disableOpt
           mkOpt'
           cfgHome
-          tomlFile
           switch
           sources
           toTOML

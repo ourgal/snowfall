@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace pkgs;
+      inherit (args) namespace pkgs lib;
     in
     {
       path = ./.;
@@ -15,11 +15,11 @@ args.module (
           content.blocking.method = "both";
           downloads.location.suggestion = "both";
         };
-        searchEngines = args.tomlFile ./searchEngines.key;
+        searchEngines = lib.importTOML ./searchEngines.key;
         keyBindings = {
           normal = {
             "M" = "hint links spawn -d mpv {hint-url}";
-            "<Ctrl-o>" = args.lib.mkMerge [
+            "<Ctrl-o>" = lib.mkMerge [
               "session-save"
               "cmd-set-text -s :session-load -c"
             ];
@@ -53,7 +53,7 @@ args.module (
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
           };
         };
-        quickmarks = args.tomlFile ./quickmarks.key;
+        quickmarks = lib.importTOML ./quickmarks.key;
         greasemonkey = with pkgs; [
           (fetchurl {
             url = "https://github.com/afreakk/greasemonkeyscripts/raw/master/youtube_sponsorblock.js";
@@ -73,9 +73,7 @@ args.module (
           })
         ];
       };
-      value = {
-        ${namespace}.dev.python.global.pkgs = (p: [ p.adblock ]);
-      };
+      value.${namespace}.dev.python.global.pkgs = p: [ p.adblock ];
     }
   )
 )
