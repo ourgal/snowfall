@@ -7,7 +7,7 @@ let
     ip
     domain
     ;
-  port = 25353;
+  port = 53;
   redisPort = 6379;
   geoip = pkgs._sources.v2ray-rules-dat-geoip.src;
   geosite = pkgs._sources.v2ray-rules-dat-geosite.src;
@@ -39,7 +39,6 @@ let
         "https://doh.apad.pro/dns-query"
       ];
       remote_domain = [ "${geosite}:geolocation-!cn" ];
-      working_dir = "/etc/mosdns-cn";
       cd2exe = false;
     }
   );
@@ -54,7 +53,7 @@ let
       after = [ "network-online.target" ];
       wantedBy = [ "multi-user.target" ];
       environment._reloadConfig = "${config}${geoip}${geosite}";
-      serviceConfig = {
+      serviceConfig = rec {
         Type = "simple";
         ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config ${config}";
         Restart = "always";
@@ -66,10 +65,10 @@ let
         ProcSubset = "pid";
         ProtectProc = "invisible";
         UMask = "0027";
-        CapabilityBoundingSet = [ ];
+        CapabilityBoundingSet = [ "CAP_NET_BIND_SERVICE" ];
+        AmbientCapabilities = CapabilityBoundingSet;
         ProtectHome = true;
         PrivateDevices = true;
-        PrivateUsers = true;
         ProtectHostname = true;
         ProtectClock = true;
         ProtectKernelTunables = true;
