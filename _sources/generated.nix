@@ -529,8 +529,8 @@
     version = "v1.1.0";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:dc7c043ab77a43223c98502cff575faff59fadfd03e850eaa606d494cfdadb38";
-      sha256 = "sha256-WoZlsIsTGu2l5trHs5qKCP1+yW8NPykf7w2xJK8Off4=";
+      imageDigest = "sha256:fccb43221169b5097ced9b48a10c6617f0146d5bb701394815be3e7aff5af928";
+      sha256 = "sha256-vXl4yIngvlHVFGcK3hR4N2YykUQe6YZA6OBcX8IbvYA=";
       finalImageTag = "v1.1.0";
     };
   };
@@ -1790,10 +1790,10 @@
   };
   numara = {
     pname = "numara";
-    version = "5.7.4";
+    version = "5.7.5";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.4/Numara-5.7.4-x86_64.AppImage";
-      sha256 = "sha256-N/A7IaM0kuevoAytr0lVSMYiLLHtadIz6e5yJfVITFo=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.5/Numara-5.7.5-x86_64.AppImage";
+      sha256 = "sha256-70kc7uPINoSnO8vASiApnzyDOq+bXruOonO7xiRq68w=";
     };
   };
   org-export = {
@@ -2986,18 +2986,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502022211";
+    version = "202502032211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502022211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502032211/geoip.dat";
       sha256 = "sha256-jlWTRdfVwzfBXx9iaiATiNSbc9bTrrIkCkCfZCQQSqs=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502022211";
+    version = "202502032211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502022211/geosite.dat";
-      sha256 = "sha256-let3gXXP/QO3FPBpEfG+W8BtqF7XhDsq3uw+s3Zo9hI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502032211/geosite.dat";
+      sha256 = "sha256-WV96nMeOFPCZLakZEg7Eb507Y9C+l/3wwQLwLpfSGpI=";
     };
   };
   vim-auto-save = {
