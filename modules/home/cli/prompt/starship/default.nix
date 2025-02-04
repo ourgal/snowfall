@@ -9,7 +9,6 @@ args.module (
         namespace
         cfgHome
         mkOpt'
-        tomlFile
         ;
       cfg = cfgHome config.${namespace} ./.;
       styleOpt = lib.types.enum [
@@ -22,11 +21,11 @@ args.module (
       path = ./.;
       progs.starship.settings =
         if (cfg.style == "fancy") then
-          tomlFile ./fancy.toml
+          lib.importTOML ./fancy.toml
         else if (cfg.style == "minimal") then
-          tomlFile ./minimal.toml
+          lib.importTOML ./minimal.toml
         else if (cfg.style == "jetpack") then
-          tomlFile ./jetpack.toml
+          lib.importTOML ./jetpack.toml
         else
           { };
       extraOpts = {
