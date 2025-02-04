@@ -11,6 +11,7 @@ let
       "localBin"
       "network"
       "nix"
+      "user"
       "ssh"
       "timezone"
       "zram"
