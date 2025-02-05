@@ -17,6 +17,7 @@ let
     "navidrome"
     "pairdrop"
     "rustypaste"
+    "scrutiny"
     "searx"
     "soft-serve"
     "sonarr"

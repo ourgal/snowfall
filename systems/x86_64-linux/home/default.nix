@@ -39,6 +39,7 @@ in
       "nh"
       "pcscd"
       "power"
+      "scrutiny"
       "sops-nix"
       "syncthing"
       "tpm"
