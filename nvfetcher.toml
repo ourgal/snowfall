@@ -773,7 +773,7 @@ src.git = "https://github.com/AfzGit/dext"
 fetch.github = "AfzGit/dext"
 
 [gaze]
-src.github = "wtetsu/gaze"
+src.manual = "v1.1.6"        # go >= 1.23.5
 fetch.github = "wtetsu/gaze"
 
 [ehh]
