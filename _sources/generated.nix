@@ -1617,6 +1617,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-/aVP+JOnX19RNRBBorC5TFqMf46rRi5I698NmKFL1fg=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./mdsf-v0.5.0/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
   };
   mdtt = {
     pname = "mdtt";
