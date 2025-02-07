@@ -1,45 +1,48 @@
 {
   lib,
-  stdenv,
-  fetchzip,
-  writeShellScriptBin,
-  curl,
-  jq,
-  gnused,
+  rustPlatform,
   _sources,
+  pkg-config,
+  bzip2,
+  xz,
+  zstd,
+  stdenv,
+  darwin,
 }:
-let
-  hash = "JxmO0nLa+zL+ZKhitMXcdPb/XsPZ9cvocc1CmB+7bZ0=";
-in
-stdenv.mkDerivation rec {
-  inherit (_sources.hl) pname version;
 
-  src = fetchzip {
-    url = "https://github.com/pamburus/hl/releases/download/v${version}/hl-linux-x86_64-gnu.tar.gz";
-    sha256 = hash;
+rustPlatform.buildRustPackage {
+  inherit (_sources.hl) pname version src;
+
+  cargoLock = {
+    lockFile = ./Cargo.lock;
+    outputHashes = {
+      "htp-0.4.2" = "sha256-oYLN0aCLIeTST+Ib6OgWqEgu9qyI0n5BDtIUIIThLiQ=";
+      "wildflower-0.3.0" = "sha256-vv+ppiCrtEkCWab53eutfjHKrHZj+BEAprV5by8plzE=";
+    };
   };
 
-  dontBuild = true;
+  nativeBuildInputs = [ pkg-config ];
 
-  installPhase = ''
-    runHook preInstall
-    install -Dm755 hl -t $out/bin
-    runHook postInstall
-  '';
+  buildInputs =
+    [
+      bzip2
+      xz
+      zstd
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      darwin.apple_sdk.frameworks.CoreFoundation
+      darwin.apple_sdk.frameworks.CoreServices
+    ];
 
-  passthru.update = writeShellScriptBin "update-package" ''
-    set -euo pipefail
+  env = {
+    ZSTD_SYS_USE_PKG_CONFIG = true;
+  };
 
-    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/pamburus/hl/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
-
-    drift rewrite --auto-hash --new-version "$latest"
-  '';
-
-  meta = with lib; {
-    description = "A fast and powerful log viewer and processor that translates JSON or logfmt logs into a pretty human-readable format";
+  meta = {
+    description = "A fast and powerful log viewer and processor that translates JSON logs or logfmt logs into a pretty human-readable format";
     homepage = "https://github.com/pamburus/hl";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ zxc ];
     mainProgram = "hl";
   };
 }
