@@ -763,6 +763,7 @@ fetch.github = "SilenZcience/cat_win"
 [hledger-fmt]
 src.github = "mondeja/hledger-fmt"
 fetch.github = "mondeja/hledger-fmt"
+cargo_locks = ["Cargo.lock"]
 
 [classifier]
 src.git = "https://github.com/bhrigu123/classifier"
