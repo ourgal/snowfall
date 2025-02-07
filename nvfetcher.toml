@@ -561,6 +561,7 @@ fetch.github = "pamburus/hl"
 [rustywatch]
 src.github = "ak9024/rustywatch"
 fetch.github = "ak9024/rustywatch"
+cargo_locks = ["Cargo.lock"]
 
 [images-upload-cli]
 src.github = "DeadNews/images-upload-cli"
