@@ -10,6 +10,7 @@ let
     "dufs"
     "flaresolverr"
     "harmonia"
+    "jackett"
     "jellyfin"
     "kavita"
     "metacubexd"

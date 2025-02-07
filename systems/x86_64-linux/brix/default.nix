@@ -53,6 +53,7 @@ in
     sonarr = enabled;
     metacubexd = enabled;
     scrutiny = enabled;
+    jackett = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
