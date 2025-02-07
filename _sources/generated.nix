@@ -597,10 +597,10 @@
   };
   eg = {
     pname = "eg";
-    version = "1.2.2";
+    version = "1.2.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/e/eg/eg-1.2.2.tar.gz";
-      sha256 = "sha256-jTdF7OsqTJFQexkjGTdHt66IiI5iV+uKrM996uKjAKc=";
+      url = "https://pypi.org/packages/source/e/eg/eg-1.2.3.tar.gz";
+      sha256 = "sha256-MfIhskcBqfxLA02Vk/CBhZ2UOxS/JrLpgZBQm2TiYis=";
     };
   };
   ehh = {
@@ -638,16 +638,16 @@
   };
   envset = {
     pname = "envset";
-    version = "v0.1.17";
+    version = "v0.2.0";
     src = fetchFromGitHub {
       owner = "schpet";
       repo = "envset";
-      rev = "v0.1.17";
+      rev = "v0.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-d2cStBjI2heQyP0cODRYQPvZJ4frFw7w5lsSdyvi5y8=";
+      sha256 = "sha256-QyC73f3PUzs50aRxDAknM//38Al8WYA1cTVaLwybhPc=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./envset-v0.1.17/Cargo.lock;
+      lockFile = ./envset-v0.2.0/Cargo.lock;
       outputHashes = {
         
       };
@@ -2986,18 +2986,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502052212";
+    version = "202502062212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502052212/geoip.dat";
-      sha256 = "sha256-jlWTRdfVwzfBXx9iaiATiNSbc9bTrrIkCkCfZCQQSqs=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geoip.dat";
+      sha256 = "sha256-UIdnS3nXNIEpMnd1rDu/yqPPsNKdrs90JPhjYNrxhX4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502052212";
+    version = "202502062212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502052212/geosite.dat";
-      sha256 = "sha256-W1VMVzq4IAwEUEQ/vCpg0EAg3SiBsxYcfnUjffiRFMY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geosite.dat";
+      sha256 = "sha256-g6F76TgaPvimeL7fVMGoHUGhJVpg+dJm3UZzibZ6kSQ=";
     };
   };
   vim-auto-save = {
