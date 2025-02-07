@@ -1,47 +1,38 @@
 {
   lib,
+  rustPlatform,
+  pkg-config,
+  zstd,
   stdenv,
-  fetchzip,
-  writeShellScriptBin,
-  curl,
-  jq,
-  gnused,
+  darwin,
   _sources,
+  namespace,
 }:
-let
-  hash = "sha256-J2WO2TRSnOWHEVRI2kKKRC2tzJW3MaMWLA4Xo1as1OQ=";
-in
-stdenv.mkDerivation rec {
-  inherit (_sources.mdsf) pname version;
+rustPlatform.buildRustPackage (
+  lib.${namespace}.mkRustSource _sources.mdsf
+  // {
 
-  src = fetchzip {
-    url = "https://github.com/hougesen/mdsf/releases/download/v${version}/mdsf-x86_64-unknown-linux-gnu.tar.gz";
-    sha256 = hash;
-  };
+    nativeBuildInputs = [ pkg-config ];
 
-  dontBuild = true;
+    buildInputs =
+      [ zstd ]
+      ++ lib.optionals stdenv.isDarwin [
+        darwin.apple_sdk.frameworks.Security
+        darwin.apple_sdk.frameworks.SystemConfiguration
+      ];
 
-  installPhase = ''
-    runHook preInstall
-    install -Dm755 mdsf -t $out/bin
-    runHook postInstall
-  '';
+    doCheck = false;
 
-  passthru.update = writeShellScriptBin "update-package" ''
-    set -euo pipefail
+    env = {
+      ZSTD_SYS_USE_PKG_CONFIG = true;
+    };
 
-    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/hougesen/mdsf/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
-
-    drift rewrite --auto-hash --new-version "$latest"
-  '';
-
-  meta = with lib; {
-    description = "Format markdown code blocks using your favorite code formatters";
-    homepage = "https://github.com/hougesen/mdsf";
-    changelog = "https://github.com/hougesen/mdsf/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "mdsf";
-    platforms = platforms.x86_64;
-  };
-}
+    meta = {
+      description = "Format, and lint, markdown code snippets using your favorite tools";
+      homepage = "https://github.com/hougesen/mdsf";
+      license = lib.licenses.mit;
+      maintainers = with lib.maintainers; [ zxc ];
+      mainProgram = "mdsf";
+    };
+  }
+)
