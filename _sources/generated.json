@@ -2877,7 +2877,12 @@
         "version": "0.2.1"
     },
     "mdsf": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./mdsf-v0.5.0/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "mdsf",
