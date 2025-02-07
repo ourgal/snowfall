@@ -2239,6 +2239,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-UzMLSPBH/ElpEWnPV2zD1+2Pt6pO4cG7CmgJvy1MawM=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./rustywatch-v0.2.11/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
   };
   s = {
     pname = "s";
@@ -2511,13 +2517,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.24.1";
+    version = "v0.25.0";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.24.1";
+      rev = "v0.25.0";
       fetchSubmodules = false;
-      sha256 = "sha256-ZyYPnwJiqTRLHA2NHxDN2L2fV7kS0TsdhYwUmuFCwe8=";
+      sha256 = "sha256-p+WJqousuPiuaX51dDvd7pFg5K8twDXBjmyK1pfZrUM=";
     };
   };
   task-relative-recur = {
