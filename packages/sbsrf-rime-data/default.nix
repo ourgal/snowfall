@@ -8,7 +8,7 @@
   _sources,
 }:
 let
-  hash = "sha256-wkAh6BtaUsB07Y3hFUIlibkZgvzBJhlq2gwj38D5Xr8=";
+  hash = "A1G2ECju7ZhnEWTIYkX9S8mDNrytwCOSW3l4CK3OLkI=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.sbsrf-rime-data) pname version;
