@@ -63,6 +63,7 @@ args.module (
         ".mozilla/native-messaging-hosts/com.justwatch.gopass.json" = firefoxNative;
         ".librewolf/native-messaging-hosts/com.justwatch.gopass.json" = firefoxNative;
       };
+      enable = "browserpass";
     }
   )
 )
