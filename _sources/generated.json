@@ -2385,7 +2385,12 @@
         "version": "v0.30.3"
     },
     "hledger-fmt": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./hledger-fmt-v0.2.4/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "hledger-fmt",
@@ -4066,12 +4071,12 @@
             "name": null,
             "owner": "sbsrf",
             "repo": "sbsrf",
-            "rev": "20250126",
-            "sha256": "sha256-wyz6r3HLP2ttzzgbSAThvvIqKAgYFGtZ0/MM3rJek2g=",
+            "rev": "20250207",
+            "sha256": "sha256-i3MAzQHff+1IgsdvL5Pkwya3I26GXeuqybCiV+JgEQo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "20250126"
+        "version": "20250207"
     },
     "sequin": {
         "cargoLocks": null,

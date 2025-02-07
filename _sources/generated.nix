@@ -1340,6 +1340,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-qzjdTEsFfZyYMqWDy6QgLI3TiAMI1PQfBoEweIj6nkU=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./hledger-fmt-v0.2.4/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
   };
   hssp = {
     pname = "hssp";
@@ -2269,13 +2275,13 @@
   };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
-    version = "20250126";
+    version = "20250207";
     src = fetchFromGitHub {
       owner = "sbsrf";
       repo = "sbsrf";
-      rev = "20250126";
+      rev = "20250207";
       fetchSubmodules = false;
-      sha256 = "sha256-wyz6r3HLP2ttzzgbSAThvvIqKAgYFGtZ0/MM3rJek2g=";
+      sha256 = "sha256-i3MAzQHff+1IgsdvL5Pkwya3I26GXeuqybCiV+JgEQo=";
     };
   };
   sequin = {
