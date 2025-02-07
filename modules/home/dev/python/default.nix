@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "poetry"
       "pylint"
+      "pypy"
       "pyright"
       "python-launcher"
       "rye"
