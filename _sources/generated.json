@@ -3974,7 +3974,12 @@
         "version": "v0.10.5"
     },
     "rustywatch": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./rustywatch-v0.2.11/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "rustywatch",
@@ -4474,12 +4479,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.24.1",
-            "sha256": "sha256-ZyYPnwJiqTRLHA2NHxDN2L2fV7kS0TsdhYwUmuFCwe8=",
+            "rev": "v0.25.0",
+            "sha256": "sha256-p+WJqousuPiuaX51dDvd7pFg5K8twDXBjmyK1pfZrUM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.24.1"
+        "version": "v0.25.0"
     },
     "task-relative-recur": {
         "cargoLocks": null,
