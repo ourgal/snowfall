@@ -982,6 +982,7 @@ fetch.github = "purarue/pmark"
 [mdsf]
 src.github = "hougesen/mdsf"
 fetch.github = "hougesen/mdsf"
+cargo_locks = ["Cargo.lock"]
 
 [mosdns-cn]
 src.github = "IrineSistiana/mosdns-cn"
