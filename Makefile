@@ -9,7 +9,7 @@ $(eval $(MAKE_ARGS):;@:)
 .PHONY: home
 home: ##@ home manager switch
 	@git add .
-	@nh home switch
+	@nh home switch --backup-extension bak
 
 .PHONY: u
 u: update ##@ nvfetcher update
