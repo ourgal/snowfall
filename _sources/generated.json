@@ -405,6 +405,27 @@
         },
         "version": "v1.10.2"
     },
+    "ccsum": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ccsum",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sevenc-nanashi",
+            "repo": "ccsum",
+            "rev": "v0.1.0",
+            "sha256": "sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.0"
+    },
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
@@ -4479,12 +4500,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.25.0",
-            "sha256": "sha256-p+WJqousuPiuaX51dDvd7pFg5K8twDXBjmyK1pfZrUM=",
+            "rev": "v0.25.1",
+            "sha256": "sha256-q7aRXzWkTpEfIMJQz76j8MIMxen84/NyC3hyEl/feWI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.25.0"
+        "version": "v0.25.1"
     },
     "task-relative-recur": {
         "cargoLocks": null,

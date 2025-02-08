@@ -228,6 +228,17 @@
       sha256 = "sha256-AJVZdjkyNhl3ZUo2pl8zqlV8A4Cp6xLeL8dZTdfnU/Y=";
     };
   };
+  ccsum = {
+    pname = "ccsum";
+    version = "v0.1.0";
+    src = fetchFromGitHub {
+      owner = "sevenc-nanashi";
+      repo = "ccsum";
+      rev = "v0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=";
+    };
+  };
   cdo = {
     pname = "cdo";
     version = "9e438f4794a1bb366fea214d4b006c087c9b5e63";
@@ -2517,13 +2528,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.25.0";
+    version = "v0.25.1";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.25.0";
+      rev = "v0.25.1";
       fetchSubmodules = false;
-      sha256 = "sha256-p+WJqousuPiuaX51dDvd7pFg5K8twDXBjmyK1pfZrUM=";
+      sha256 = "sha256-q7aRXzWkTpEfIMJQz76j8MIMxen84/NyC3hyEl/feWI=";
     };
   };
   task-relative-recur = {
