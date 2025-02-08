@@ -19,7 +19,6 @@ args.module (
           coc-sh
           coc-snippets
           coc-sumneko-lua
-          coc-tabnine
           coc-texlab
           coc-toml
           coc-tsserver
