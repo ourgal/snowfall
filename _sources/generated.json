@@ -406,7 +406,12 @@
         "version": "v1.10.2"
     },
     "ccsum": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./ccsum-v0.1.0/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "ccsum",
