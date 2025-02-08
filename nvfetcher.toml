@@ -1151,3 +1151,8 @@ fetch.github = "omerxx/tmux-floax"
 [tmux-buoyshell]
 src.git = "https://github.com/cnavajas4/tmux-buoyshell"
 fetch.github = "cnavajas4/tmux-buoyshell"
+
+[ccsum]
+src.github_tag = "sevenc-nanashi/ccsum"
+fetch.github = "sevenc-nanashi/ccsum"
+cargo_locks = ["Cargo.lock"]
