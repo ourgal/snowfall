@@ -238,6 +238,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./ccsum-v0.1.0/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
   };
   cdo = {
     pname = "cdo";
