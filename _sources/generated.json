@@ -3554,11 +3554,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SuphUw+f3I8SikdywP286RWezqAyAcFv4uS6fr0RsXM=",
+            "sha256": "sha256-BctJ8w7m/UpVTxTcKgZTiTHAOfAjKWIdV7oARlYT0o4=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.28.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.29.0.tar.gz"
         },
-        "version": "2.28.0"
+        "version": "2.29.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -5330,9 +5330,9 @@
             "name": null,
             "sha256": "sha256-UIdnS3nXNIEpMnd1rDu/yqPPsNKdrs90JPhjYNrxhX4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502072211/geoip.dat"
         },
-        "version": "202502062212"
+        "version": "202502072211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5343,11 +5343,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-g6F76TgaPvimeL7fVMGoHUGhJVpg+dJm3UZzibZ6kSQ=",
+            "sha256": "sha256-zIh0XxMiTTe8SYevWWnL4jdFZYPohaRsaEFRRWfr0Mg=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502072211/geosite.dat"
         },
-        "version": "202502062212"
+        "version": "202502072211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
