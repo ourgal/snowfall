@@ -1985,10 +1985,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.28.0";
+    version = "2.29.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.28.0.tar.gz";
-      sha256 = "sha256-SuphUw+f3I8SikdywP286RWezqAyAcFv4uS6fr0RsXM=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.29.0.tar.gz";
+      sha256 = "sha256-BctJ8w7m/UpVTxTcKgZTiTHAOfAjKWIdV7oARlYT0o4=";
     };
   };
   pydantic-settings = {
@@ -3004,18 +3004,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502062212";
+    version = "202502072211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502072211/geoip.dat";
       sha256 = "sha256-UIdnS3nXNIEpMnd1rDu/yqPPsNKdrs90JPhjYNrxhX4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502062212";
+    version = "202502072211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502062212/geosite.dat";
-      sha256 = "sha256-g6F76TgaPvimeL7fVMGoHUGhJVpg+dJm3UZzibZ6kSQ=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502072211/geosite.dat";
+      sha256 = "sha256-zIh0XxMiTTe8SYevWWnL4jdFZYPohaRsaEFRRWfr0Mg=";
     };
   };
   vim-auto-save = {
