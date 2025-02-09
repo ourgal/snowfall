@@ -9,6 +9,7 @@ args.module (
       path = ./.;
       systemdServices.jellyfin-mpv-shim = {
         online = true;
+        gui = true;
         start = "${pkgs.jellyfin-mpv-shim}/bin/jellyfin-mpv-shim";
       };
     }
