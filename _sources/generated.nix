@@ -1480,6 +1480,17 @@
       sha256 = "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=";
     };
   };
+  lab = {
+    pname = "lab";
+    version = "v1.3.1";
+    src = fetchFromGitHub {
+      owner = "lugenx";
+      repo = "lab";
+      rev = "v1.3.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-gHJbiseJW0DTrrphn7nNBfgtARyqHZsiZgx4pGL0Zlc=";
+    };
+  };
   lain = {
     pname = "lain";
     version = "88f5a8abd2649b348ffec433a24a263b37f122c0";
@@ -2348,21 +2359,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "9fc165dbf67321ebb798302ccc1f8ca6748be920";
+    version = "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "9fc165dbf67321ebb798302ccc1f8ca6748be920";
+      rev = "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6";
       fetchSubmodules = false;
-      sha256 = "sha256-wzYoCDUx5OdGKE2GqavZW62Pr7vsEXoyPE2kOHnoK08=";
+      sha256 = "sha256-UZ0d6LGct11ZdzXYxVtTtcie1bvxeGWksfvWlybty6Y=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-9fc165dbf67321ebb798302ccc1f8ca6748be920/Cargo.lock;
+      lockFile = ./simple-completion-language-server-40a6157a3ae0c7bd17730a557ad8ecc8b43455e6/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-04";
+    date = "2025-02-09";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -2854,15 +2865,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "5e11cd8ead1e8c7e375c6808489e06be1de403f4";
+    version = "24711da97e793710cc62a1a8d2e0c3bfe44740e4";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "5e11cd8ead1e8c7e375c6808489e06be1de403f4";
+      rev = "24711da97e793710cc62a1a8d2e0c3bfe44740e4";
       fetchSubmodules = false;
-      sha256 = "sha256-4JVNJ7Lcvr93UM8zq0K9RcAnQcBkfh6SnRyT8qBqZRo=";
+      sha256 = "sha256-pcvu/6RxJdJiY9/zPz0H9wt2cNmd+C210DP+Jnpan7s=";
     };
-    date = "2025-01-02";
+    date = "2025-02-09";
   };
   to-fish = {
     pname = "to-fish";
