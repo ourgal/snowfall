@@ -2413,7 +2413,7 @@
     "hledger-fmt": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./hledger-fmt-v0.2.4/Cargo.lock",
+                "./hledger-fmt-v0.2.5/Cargo.lock",
                 {}
             ]
         },
@@ -2429,12 +2429,12 @@
             "name": null,
             "owner": "mondeja",
             "repo": "hledger-fmt",
-            "rev": "v0.2.4",
-            "sha256": "sha256-qzjdTEsFfZyYMqWDy6QgLI3TiAMI1PQfBoEweIj6nkU=",
+            "rev": "v0.2.5",
+            "sha256": "sha256-Ox/kWMTleurjVZEgw7EOg/PICkZMr+1FNpdDa4KnSOQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.4"
+        "version": "v0.2.5"
     },
     "hssp": {
         "cargoLocks": null,
