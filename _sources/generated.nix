@@ -1349,16 +1349,16 @@
   };
   hledger-fmt = {
     pname = "hledger-fmt";
-    version = "v0.2.4";
+    version = "v0.2.5";
     src = fetchFromGitHub {
       owner = "mondeja";
       repo = "hledger-fmt";
-      rev = "v0.2.4";
+      rev = "v0.2.5";
       fetchSubmodules = false;
-      sha256 = "sha256-qzjdTEsFfZyYMqWDy6QgLI3TiAMI1PQfBoEweIj6nkU=";
+      sha256 = "sha256-Ox/kWMTleurjVZEgw7EOg/PICkZMr+1FNpdDa4KnSOQ=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./hledger-fmt-v0.2.4/Cargo.lock;
+      lockFile = ./hledger-fmt-v0.2.5/Cargo.lock;
       outputHashes = {
         
       };
