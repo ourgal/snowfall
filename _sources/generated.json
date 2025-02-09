@@ -2645,6 +2645,27 @@
         },
         "version": "0.16"
     },
+    "lab": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "lab",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lugenx",
+            "repo": "lab",
+            "rev": "v1.3.1",
+            "sha256": "sha256-gHJbiseJW0DTrrphn7nNBfgtARyqHZsiZgx4pGL0Zlc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.3.1"
+    },
     "lain": {
         "cargoLocks": null,
         "date": "2023-01-12",
@@ -4180,11 +4201,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-9fc165dbf67321ebb798302ccc1f8ca6748be920/Cargo.lock",
+                "./simple-completion-language-server-40a6157a3ae0c7bd17730a557ad8ecc8b43455e6/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-02-04",
+        "date": "2025-02-09",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4196,12 +4217,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "9fc165dbf67321ebb798302ccc1f8ca6748be920",
-            "sha256": "sha256-wzYoCDUx5OdGKE2GqavZW62Pr7vsEXoyPE2kOHnoK08=",
+            "rev": "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6",
+            "sha256": "sha256-UZ0d6LGct11ZdzXYxVtTtcie1bvxeGWksfvWlybty6Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9fc165dbf67321ebb798302ccc1f8ca6748be920"
+        "version": "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -5048,7 +5069,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2025-01-02",
+        "date": "2025-02-09",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -5060,12 +5081,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "5e11cd8ead1e8c7e375c6808489e06be1de403f4",
-            "sha256": "sha256-4JVNJ7Lcvr93UM8zq0K9RcAnQcBkfh6SnRyT8qBqZRo=",
+            "rev": "24711da97e793710cc62a1a8d2e0c3bfe44740e4",
+            "sha256": "sha256-pcvu/6RxJdJiY9/zPz0H9wt2cNmd+C210DP+Jnpan7s=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5e11cd8ead1e8c7e375c6808489e06be1de403f4"
+        "version": "24711da97e793710cc62a1a8d2e0c3bfe44740e4"
     },
     "to-fish": {
         "cargoLocks": null,
