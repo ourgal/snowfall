@@ -12,6 +12,7 @@ args.module (
         "boilr"
         "envset"
         "gaze"
+        "lab"
         "whitespace-format"
         # keep-sorted end
       ];

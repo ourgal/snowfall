@@ -1156,3 +1156,7 @@ fetch.github = "cnavajas4/tmux-buoyshell"
 src.github_tag = "sevenc-nanashi/ccsum"
 fetch.github = "sevenc-nanashi/ccsum"
 cargo_locks = ["Cargo.lock"]
+
+[lab]
+src.github = "lugenx/lab"
+fetch.github = "lugenx/lab"
