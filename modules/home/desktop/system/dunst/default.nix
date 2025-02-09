@@ -25,6 +25,7 @@ args.module (
 
                 [[ $DUNST_SUMMARY == "MPD Notification" ]] && exit
                 [[ $DUNST_SUMMARY == "Espanso" ]] && exit
+                [[ $DUNST_SUMMARY == "Battery*" ]] && exit
 
                 ${pkgs.pulseaudio}/bin/paplay "$BELL"
               ''
