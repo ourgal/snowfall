@@ -25,7 +25,6 @@ in
       "common"
       "desktop"
       "disko"
-      "envfs"
       "fonts"
       "gpu-screen-recorder"
       "harmonia"
