@@ -1890,15 +1890,15 @@
   };
   parinfer-rust = {
     pname = "parinfer-rust";
-    version = "a1ec39b047da610f0797328582e7da0ffcab050e";
+    version = "55bec1e3d4f127527c5c2e507fac96cc934aed6e";
     src = fetchFromGitHub {
       owner = "eraserhd";
       repo = "parinfer-rust";
-      rev = "a1ec39b047da610f0797328582e7da0ffcab050e";
+      rev = "55bec1e3d4f127527c5c2e507fac96cc934aed6e";
       fetchSubmodules = false;
-      sha256 = "sha256-lj01B7avPqxPgA9V3FMFAjY+fIxLa+EjuDmz4wWVuAw=";
+      sha256 = "sha256-8b5xx4hEFXqTiCONdLkvwo1rvnk0u1XOY7TPToU9BFc=";
     };
-    date = "2025-02-01";
+    date = "2025-02-10";
   };
   pik = {
     pname = "pik";
@@ -1949,15 +1949,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "e2a3c773da0f7e90def8696b0b2e4c62651a74de";
+    version = "38ce121b32f1441b0020bedd1b4ea3504245295f";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "e2a3c773da0f7e90def8696b0b2e4c62651a74de";
+      rev = "38ce121b32f1441b0020bedd1b4ea3504245295f";
       fetchSubmodules = false;
-      sha256 = "sha256-Ly/eAgirH4b+dtuphlW/TfsrKPeckfgFxkydScO3lgc=";
+      sha256 = "sha256-ppRj4FCMCO4jsQVTAVK+Qx36KIRrHoi5tlXw83KR3XI=";
     };
-    date = "2025-02-04";
+    date = "2025-02-10";
   };
   posting = {
     pname = "posting";
@@ -2745,15 +2745,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "0d2db8d95e1b74643a06802043c7000a79ba0a0a";
+    version = "5440b9476627bf5f7f3526156a17ae0e3fd232dd";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "0d2db8d95e1b74643a06802043c7000a79ba0a0a";
+      rev = "5440b9476627bf5f7f3526156a17ae0e3fd232dd";
       fetchSubmodules = false;
-      sha256 = "sha256-9S4HQHuECGLPLdPishmwEO0twdeQ6mZQfIMNFFDkgQ8=";
+      sha256 = "sha256-sFL9/PMdPJxN7tgpc4YbUHW4PkCXlKmY7a7gi7PLcn8=";
     };
-    date = "2024-12-02";
+    date = "2025-02-10";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
@@ -3032,18 +3032,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502092211";
+    version = "202502102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502092211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502102212/geoip.dat";
       sha256 = "sha256-UIdnS3nXNIEpMnd1rDu/yqPPsNKdrs90JPhjYNrxhX4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502092211";
+    version = "202502102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502092211/geosite.dat";
-      sha256 = "sha256-wQyAzLyYDa8aedDaZScUQydhnyP1+FKyDZl3jv9u52M=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502102212/geosite.dat";
+      sha256 = "sha256-pQbylkZ26TCgSos/9BzC1niGfyfZtsbiONc2Dx6JUi4=";
     };
   };
   vim-auto-save = {
@@ -3287,11 +3287,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.0.26";
+    version = "0.0.27";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.26/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.0.26.zip";
-      sha256 = "sha256-bKgPlfI+f/RpsbNJvlP78jubgQrztloTjxroCWaCFSQ=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.27/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.0.27.zip";
+      sha256 = "sha256-tQvH69KaE93blvekFEawbutsb89fyvIp+Yj5fBK6V/w=";
     };
   };
   wait-for = {
