@@ -1713,15 +1713,15 @@
   };
   mpv-M-x = {
     pname = "mpv-M-x";
-    version = "e691bcebad9a352d31c42d3f1c9cc00a43ee14ca";
+    version = "beee45c82e6cd7a77aeb2bbd51e364d5a2899614";
     src = fetchFromGitHub {
       owner = "Seme4eg";
       repo = "mpv-scripts";
-      rev = "e691bcebad9a352d31c42d3f1c9cc00a43ee14ca";
+      rev = "beee45c82e6cd7a77aeb2bbd51e364d5a2899614";
       fetchSubmodules = false;
-      sha256 = "sha256-FJw8FTFYTW6qYGOnQchqKpdr2+VIyJufqcOmhLeMchQ=";
+      sha256 = "sha256-VAWYP00FNrsdjpGdh5J8AnnZIVv9DqwEP4J4QuNFjmg=";
     };
-    date = "2025-01-07";
+    date = "2025-02-11";
   };
   mpv-autoloop = {
     pname = "mpv-autoloop";
@@ -1949,15 +1949,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "38ce121b32f1441b0020bedd1b4ea3504245295f";
+    version = "7a4179ef996048b1f3694244d48639ac8b110d54";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "38ce121b32f1441b0020bedd1b4ea3504245295f";
+      rev = "7a4179ef996048b1f3694244d48639ac8b110d54";
       fetchSubmodules = false;
-      sha256 = "sha256-ppRj4FCMCO4jsQVTAVK+Qx36KIRrHoi5tlXw83KR3XI=";
+      sha256 = "sha256-w9GAZcfv/YWV08hrVYsDzDS0tAc9CWxjOsvVps8hPWs=";
     };
-    date = "2025-02-10";
+    date = "2025-02-11";
   };
   posting = {
     pname = "posting";
@@ -2359,21 +2359,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6";
+    version = "632fbef52823bb902dda36dedc7c6f05cfaa0ade";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "40a6157a3ae0c7bd17730a557ad8ecc8b43455e6";
+      rev = "632fbef52823bb902dda36dedc7c6f05cfaa0ade";
       fetchSubmodules = false;
-      sha256 = "sha256-UZ0d6LGct11ZdzXYxVtTtcie1bvxeGWksfvWlybty6Y=";
+      sha256 = "sha256-qetUUtfB+4JHfRKE7Wm7U2AryxoEJVgMZZ6LvaVoPSA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-40a6157a3ae0c7bd17730a557ad8ecc8b43455e6/Cargo.lock;
+      lockFile = ./simple-completion-language-server-632fbef52823bb902dda36dedc7c6f05cfaa0ade/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-09";
+    date = "2025-02-11";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -2545,13 +2545,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.25.1";
+    version = "v0.25.3";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.25.1";
+      rev = "v0.25.3";
       fetchSubmodules = false;
-      sha256 = "sha256-q7aRXzWkTpEfIMJQz76j8MIMxen84/NyC3hyEl/feWI=";
+      sha256 = "sha256-cHRx+t+0VS+WBUl/FkDjHaxtDfrxD+KJ3PU8x1pFg8Q=";
     };
   };
   task-relative-recur = {
@@ -3287,11 +3287,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.0.27";
+    version = "0.1.0";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.0.27/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.0.27.zip";
-      sha256 = "sha256-tQvH69KaE93blvekFEawbutsb89fyvIp+Yj5fBK6V/w=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.1.0.zip";
+      sha256 = "sha256-lvAF53WUNEF2ttCBvuNlSNhyi7xized/zb8AqE1DdIg=";
     };
   };
   wait-for = {
