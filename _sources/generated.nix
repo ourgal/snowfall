@@ -2685,15 +2685,15 @@
   };
   tmux-buoyshell = {
     pname = "tmux-buoyshell";
-    version = "1a482a820c86a3d0cb5a543e5527f2f5a9fec2b9";
+    version = "d3ed152986a939279894852a9e08c0899bdcbd09";
     src = fetchFromGitHub {
       owner = "cnavajas4";
       repo = "tmux-buoyshell";
-      rev = "1a482a820c86a3d0cb5a543e5527f2f5a9fec2b9";
+      rev = "d3ed152986a939279894852a9e08c0899bdcbd09";
       fetchSubmodules = false;
-      sha256 = "sha256-xSXsbDPHa1OVwpWUTShesgtzRe+940n/fiMPRMYwIwc=";
+      sha256 = "sha256-YHnhR6XB+1/6X8J5KUrXCb0fmwr/mepmXjO7eD/0mXE=";
     };
-    date = "2025-02-08";
+    date = "2025-02-11";
   };
   tmux-continuum = {
     pname = "tmux-continuum";
@@ -3032,18 +3032,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502102212";
+    version = "202502112211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502102212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502112211/geoip.dat";
       sha256 = "sha256-UIdnS3nXNIEpMnd1rDu/yqPPsNKdrs90JPhjYNrxhX4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502102212";
+    version = "202502112211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502102212/geosite.dat";
-      sha256 = "sha256-pQbylkZ26TCgSos/9BzC1niGfyfZtsbiONc2Dx6JUi4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502112211/geosite.dat";
+      sha256 = "sha256-TMjTloDQ7n33ZZzmfUDKMf7Di/Ji7Uq9bJbeHBYNm1s=";
     };
   };
   vim-auto-save = {
