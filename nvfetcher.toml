@@ -1160,3 +1160,7 @@ cargo_locks = ["Cargo.lock"]
 [lab]
 src.github = "lugenx/lab"
 fetch.github = "lugenx/lab"
+
+[rx]
+src.github = "f01c33/rx"
+fetch.github = "f01c33/rx"
