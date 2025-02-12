@@ -10,10 +10,7 @@ let
       settings.PermitRootLogin = "yes";
     };
     programs.mosh = enabled;
-    environment.systemPackages = [
-      pkgs.lrzsz
-      pkgs.${namespace}.trzsz-go
-    ];
+    environment.systemPackages = [ pkgs.${namespace}.trzsz-go ];
   };
   path = ./.;
   _args = { inherit value path args; };
