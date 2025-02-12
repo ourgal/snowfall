@@ -2274,6 +2274,17 @@
       };
     };
   };
+  rx = {
+    pname = "rx";
+    version = "v0.0.1";
+    src = fetchFromGitHub {
+      owner = "f01c33";
+      repo = "rx";
+      rev = "v0.0.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-hNLKbGAXH/BNgnmi4KYoEKY3neGxT5zBJLOi6vmfbhs=";
+    };
+  };
   s = {
     pname = "s";
     version = "v0.7.1";

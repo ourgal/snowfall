@@ -4046,6 +4046,27 @@
         },
         "version": "v0.2.11"
     },
+    "rx": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "rx",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "f01c33",
+            "repo": "rx",
+            "rev": "v0.0.1",
+            "sha256": "sha256-hNLKbGAXH/BNgnmi4KYoEKY3neGxT5zBJLOi6vmfbhs=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.1"
+    },
     "s": {
         "cargoLocks": null,
         "date": null,
