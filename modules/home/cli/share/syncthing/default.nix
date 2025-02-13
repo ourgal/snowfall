@@ -16,10 +16,10 @@ args.module (
         todo = ln "${sync}/todo";
       };
       dataFiles = {
-        task = ln "${sync}/task";
         nap = ln "${sync}/nap";
         buku = ln "${sync}/buku";
         jrnl = ln "${sync}/jrnl";
+        "task/taskchampion.sqlite3" = ln "${sync}/task/taskchampion.sqlite3";
       };
       files = {
         Music = ln "${sync}/music";
