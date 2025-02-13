@@ -27,6 +27,7 @@ in
       "bluetooth"
       "common"
       "desktop"
+      "envfs"
       "flatpak"
       "fonts"
       "gpu-screen-recorder"
