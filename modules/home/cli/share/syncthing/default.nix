@@ -16,6 +16,7 @@ args.module (
         todo = ln "${sync}/todo";
       };
       dataFiles = {
+        timewarrior = ln "${sync}/timew";
         nap = ln "${sync}/nap";
         buku = ln "${sync}/buku";
         jrnl = ln "${sync}/jrnl";

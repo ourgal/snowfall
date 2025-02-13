@@ -74,6 +74,7 @@
         gal-save = [ "nuc" ] ++ syncthing;
         game-save = [ "nuc" ] ++ syncthing;
         documents = desktops ++ syncthing;
+        timew = desktops ++ syncthing;
       };
   };
 }
