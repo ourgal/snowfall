@@ -6,7 +6,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "neovide"
-      "zed-editor"
       # keep-sorted end
     ];
     enable = [
