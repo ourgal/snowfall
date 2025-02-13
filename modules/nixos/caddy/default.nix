@@ -55,7 +55,7 @@ let
     else
       pkgs.caddy.withPlugins {
         plugins = [ "github.com/caddy-dns/duckdns@v0.4.0" ];
-        hash = "sha256-KZmdqTnLiS3XdHsqvEIrWyfQNDq1qJrVgMfFjgvOUo0=";
+        hash = "sha256-QAGe0GBOedXOTKwWUli7KFMyaz0xuLXfWjYYoh19mak=";
       };
   value = {
     services.caddy = enabled // {
