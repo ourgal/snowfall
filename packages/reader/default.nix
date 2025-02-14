@@ -6,7 +6,7 @@
 buildGoModule {
   inherit (_sources.reader) pname version src;
 
-  vendorHash = "sha256-6k6Zmwdpc4rBsahtU9nJmTUqfDZi6EeaJGVeLFzbY34=";
+  vendorHash = "sha256-dr/y4BBBe5K9U24ikLzYA+B2mzTGpFuFqoj5OLXtUG4=";
 
   ldflags = [
     "-s"
