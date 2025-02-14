@@ -44,11 +44,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-+JlQxwWMT3kCocbHFerSyCca5rvmYUprqSV/TOh+I9E=",
+            "sha256": "sha256-1o+uhD84KmPN9sN6chEOnASj8yyazHOlMCoF/kK5yvE=",
             "type": "url",
-            "url": "https://github.com/akuse-app/akuse/releases/download/1.10.0/linux-akuse-1.10.0.AppImage"
+            "url": "https://github.com/akuse-app/akuse/releases/download/1.10.1/linux-akuse-1.10.1.AppImage"
         },
-        "version": "1.10.0"
+        "version": "1.10.1"
     },
     "aniweather": {
         "cargoLocks": null,

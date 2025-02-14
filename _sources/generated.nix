@@ -22,10 +22,10 @@
   };
   akuse = {
     pname = "akuse";
-    version = "1.10.0";
+    version = "1.10.1";
     src = fetchurl {
-      url = "https://github.com/akuse-app/akuse/releases/download/1.10.0/linux-akuse-1.10.0.AppImage";
-      sha256 = "sha256-+JlQxwWMT3kCocbHFerSyCca5rvmYUprqSV/TOh+I9E=";
+      url = "https://github.com/akuse-app/akuse/releases/download/1.10.1/linux-akuse-1.10.1.AppImage";
+      sha256 = "sha256-1o+uhD84KmPN9sN6chEOnASj8yyazHOlMCoF/kK5yvE=";
     };
   };
   aniweather = {
