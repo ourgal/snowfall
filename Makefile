@@ -7,9 +7,13 @@ $(eval $(MAKE_ARGS):;@:)
 ##@
 
 .PHONY: home
-home: ##@ home manager switch
+home: qutebrowser ##@ home manager switch
 	@git add .
 	@nh home switch --backup-extension bak
+
+.PHONY: qutebrowser
+qutebrowser: ##@ update qutebrowser bookmarks
+	@make -C modules/home/desktop/browser/qutebrowser
 
 .PHONY: u
 u: update ##@ nvfetcher update
