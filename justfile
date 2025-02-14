@@ -51,3 +51,6 @@ chezmoi:
 anywhere host ip:
 	@git add .
 	@nixos-anywhere --flake .#{{host}} root@{{ip}}
+
+qutebrowser:
+	@make -C modules/home/desktop/browser/qutebrowser
