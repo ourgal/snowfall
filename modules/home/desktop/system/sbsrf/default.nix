@@ -4,11 +4,8 @@ args.module (
   // (
     let
       inherit (args) pkgs enabled config;
-    in
-    {
-      path = ./.;
-      dataFiles = {
-        "fcitx5/rime/sbfm.custom.yaml" = {
+      conf = pkgs.writeText "config.yaml" (
+        builtins.toJSON {
           patch = {
             switches = [
               {
@@ -41,13 +38,20 @@ args.module (
               };
             };
           };
-        };
-      };
+        }
+      );
+    in
+    {
+      path = ./.;
       value = {
         catppuccin.fcitx5 = enabled;
-        systemd.user.services.fcitx5-daemon.Service.ExecStartPre = pkgs.writeShellScript "remove_configs" ''
-          ${pkgs.coreutils-full}/bin/rm ${config.xdg.dataHome}/fcitx5/rime/build/*.yaml
-        '';
+        xdg.dataFile."fcitx5/rime/sbfm.custom.yaml".source = conf;
+        systemd.user.services.fcitx5-daemon.Service = {
+          Environment = "_reloadConfig=${conf}";
+          ExecStartPre = pkgs.writeShellScript "remove_configs" ''
+            ${pkgs.coreutils-full}/bin/rm ${config.xdg.dataHome}/fcitx5/rime/build/*.yaml
+          '';
+        };
         i18n.inputMethod = {
           enabled = "fcitx5";
           fcitx5 = {
