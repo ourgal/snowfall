@@ -434,11 +434,11 @@
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./cdo-d1861533ec79780d9fe3d0e7d5d999723a2ae8ae/Cargo.lock",
+                "./cdo-f2b243ae294d9fdaec5a327cb0064825fa610f21/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-02-08",
+        "date": "2025-02-15",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -450,12 +450,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "d1861533ec79780d9fe3d0e7d5d999723a2ae8ae",
-            "sha256": "sha256-aJaSmGn/FSY3IfqW/QKQW3V3ZRFsBZk3lawiNjkOcJo=",
+            "rev": "f2b243ae294d9fdaec5a327cb0064825fa610f21",
+            "sha256": "sha256-Sln6Vm6QyfQTUJAgAJO62arD/iWWddSWbqbyUteCTVs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d1861533ec79780d9fe3d0e7d5d999723a2ae8ae"
+        "version": "f2b243ae294d9fdaec5a327cb0064825fa610f21"
     },
     "chezmoi-vim": {
         "cargoLocks": null,
@@ -5398,9 +5398,9 @@
             "name": null,
             "sha256": "sha256-3khw752h+RomIfC+SV1gjEicxuGoczRbKIkUdxTwBC4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502142211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502152211/geoip.dat"
         },
-        "version": "202502142211"
+        "version": "202502152211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5411,11 +5411,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-aB3gItOgRj8kMHeBr5aRQXGxaEcvqlWevwqqXMa9OOs=",
+            "sha256": "sha256-7XRe58k4pAdQL2tTduSt090ybgRmODFQ6Ux+g9De99A=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502142211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502152211/geosite.dat"
         },
-        "version": "202502142211"
+        "version": "202502152211"
     },
     "vim-auto-save": {
         "cargoLocks": null,

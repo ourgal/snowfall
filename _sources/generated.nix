@@ -247,21 +247,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "d1861533ec79780d9fe3d0e7d5d999723a2ae8ae";
+    version = "f2b243ae294d9fdaec5a327cb0064825fa610f21";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "d1861533ec79780d9fe3d0e7d5d999723a2ae8ae";
+      rev = "f2b243ae294d9fdaec5a327cb0064825fa610f21";
       fetchSubmodules = false;
-      sha256 = "sha256-aJaSmGn/FSY3IfqW/QKQW3V3ZRFsBZk3lawiNjkOcJo=";
+      sha256 = "sha256-Sln6Vm6QyfQTUJAgAJO62arD/iWWddSWbqbyUteCTVs=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-d1861533ec79780d9fe3d0e7d5d999723a2ae8ae/Cargo.lock;
+      lockFile = ./cdo-f2b243ae294d9fdaec5a327cb0064825fa610f21/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-08";
+    date = "2025-02-15";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -3043,18 +3043,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502142211";
+    version = "202502152211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502142211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502152211/geoip.dat";
       sha256 = "sha256-3khw752h+RomIfC+SV1gjEicxuGoczRbKIkUdxTwBC4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502142211";
+    version = "202502152211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502142211/geosite.dat";
-      sha256 = "sha256-aB3gItOgRj8kMHeBr5aRQXGxaEcvqlWevwqqXMa9OOs=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502152211/geosite.dat";
+      sha256 = "sha256-7XRe58k4pAdQL2tTduSt090ybgRmODFQ6Ux+g9De99A=";
     };
   };
   vim-auto-save = {
