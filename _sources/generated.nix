@@ -2556,13 +2556,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.25.5";
+    version = "v0.25.6";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.25.5";
+      rev = "v0.25.6";
       fetchSubmodules = false;
-      sha256 = "sha256-As103AD0g8Qiz8GQEMkNAoOixIc3/E7Go576HUvfh2Y=";
+      sha256 = "sha256-KHtqOXXPhXLmlZ0mYruv+4NoldbE17ePoGs536g/Y8c=";
     };
   };
   task-relative-recur = {
