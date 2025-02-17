@@ -10,6 +10,7 @@
   ncurses,
   inih,
   ninja,
+  bzip2,
   _sources,
 }:
 
@@ -29,6 +30,7 @@ stdenv.mkDerivation {
     zlib
     ncurses
     inih
+    bzip2
   ];
 
   meta = {
