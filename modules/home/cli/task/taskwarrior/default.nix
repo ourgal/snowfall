@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs namespace;
     in
     {
       path = ./.;
@@ -17,6 +17,11 @@ args.module (
       ];
       progs.taskwarrior.package = pkgs.taskwarrior3;
       enable = [ "timewarrior" ];
+      value = {
+        ${namespace}.cli.utils.alias.aliae.alias = {
+          taskw = "taskwarrior-tui";
+        };
+      };
     }
   )
 )
