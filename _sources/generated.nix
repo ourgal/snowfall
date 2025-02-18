@@ -474,6 +474,24 @@
       sha256 = "sha256-pXHvl3cxWukCExuRbmiFMhm7Kp85SC1wY6u/FZ9WTTQ=";
     };
   };
+  dela = {
+    pname = "dela";
+    version = "755779e0e6a84cd0760d950308b30ea6ec0a79a5";
+    src = fetchFromGitHub {
+      owner = "aleyan";
+      repo = "dela";
+      rev = "755779e0e6a84cd0760d950308b30ea6ec0a79a5";
+      fetchSubmodules = false;
+      sha256 = "sha256-ExDRhb7h8LwXfvxVtMPoVYLKpEj4YxaxMsNieoL9E3I=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./dela-755779e0e6a84cd0760d950308b30ea6ec0a79a5/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
+    date = "2025-02-16";
+  };
   devdocs-vim = {
     pname = "devdocs-vim";
     version = "798cc7d26db27906526345af65d900887b9d4160";
@@ -1949,15 +1967,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "e37a3ba86701080a8d75d151bb686a5b95da3e4b";
+    version = "e54d2ce995b7a9058796fce420cb67e05a43031f";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "e37a3ba86701080a8d75d151bb686a5b95da3e4b";
+      rev = "e54d2ce995b7a9058796fce420cb67e05a43031f";
       fetchSubmodules = false;
-      sha256 = "sha256-DkxyYuzehxpjRLm9u33V8xnlmIB1izcLd5SWyfRi3dY=";
+      sha256 = "sha256-+uUQ68TS0Kvpn71P+rrm8MSdQaMtq+MSnitqhiK1oZQ=";
     };
-    date = "2025-02-16";
+    date = "2025-02-18";
   };
   posting = {
     pname = "posting";
@@ -3251,15 +3269,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "9c56dd5ea709010eee22fa63761f2cd9c38c193d";
+    version = "8d78b359248804d291ea5da175009408aec3a7c9";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "9c56dd5ea709010eee22fa63761f2cd9c38c193d";
+      rev = "8d78b359248804d291ea5da175009408aec3a7c9";
       fetchSubmodules = false;
-      sha256 = "sha256-3+IrYa4VZKpWi8gljCOY1S7BbXWNmt7b/pao70oJ2iM=";
+      sha256 = "sha256-Z3IRbFd5r7XIkxuqoZyAewfecX2lNtdYMM6SE/ETFnY=";
     };
-    date = "2025-02-14";
+    date = "2025-02-18";
   };
   visual-split-vim = {
     pname = "visual-split-vim";

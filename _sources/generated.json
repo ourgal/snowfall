@@ -828,6 +828,32 @@
         },
         "version": "v0.5.1"
     },
+    "dela": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./dela-755779e0e6a84cd0760d950308b30ea6ec0a79a5/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2025-02-16",
+        "extract": null,
+        "name": "dela",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "aleyan",
+            "repo": "dela",
+            "rev": "755779e0e6a84cd0760d950308b30ea6ec0a79a5",
+            "sha256": "sha256-ExDRhb7h8LwXfvxVtMPoVYLKpEj4YxaxMsNieoL9E3I=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "755779e0e6a84cd0760d950308b30ea6ec0a79a5"
+    },
     "devdocs-vim": {
         "cargoLocks": null,
         "date": "2024-12-19",
@@ -3474,7 +3500,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2025-02-16",
+        "date": "2025-02-18",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3486,12 +3512,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "e37a3ba86701080a8d75d151bb686a5b95da3e4b",
-            "sha256": "sha256-DkxyYuzehxpjRLm9u33V8xnlmIB1izcLd5SWyfRi3dY=",
+            "rev": "e54d2ce995b7a9058796fce420cb67e05a43031f",
+            "sha256": "sha256-+uUQ68TS0Kvpn71P+rrm8MSdQaMtq+MSnitqhiK1oZQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e37a3ba86701080a8d75d151bb686a5b95da3e4b"
+        "version": "e54d2ce995b7a9058796fce420cb67e05a43031f"
     },
     "posting": {
         "cargoLocks": null,
@@ -5755,7 +5781,7 @@
     },
     "vimsuggest": {
         "cargoLocks": null,
-        "date": "2025-02-14",
+        "date": "2025-02-18",
         "extract": null,
         "name": "vimsuggest",
         "passthru": null,
@@ -5767,12 +5793,12 @@
             "name": null,
             "owner": "girishji",
             "repo": "vimsuggest",
-            "rev": "9c56dd5ea709010eee22fa63761f2cd9c38c193d",
-            "sha256": "sha256-3+IrYa4VZKpWi8gljCOY1S7BbXWNmt7b/pao70oJ2iM=",
+            "rev": "8d78b359248804d291ea5da175009408aec3a7c9",
+            "sha256": "sha256-Z3IRbFd5r7XIkxuqoZyAewfecX2lNtdYMM6SE/ETFnY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9c56dd5ea709010eee22fa63761f2cd9c38c193d"
+        "version": "8d78b359248804d291ea5da175009408aec3a7c9"
     },
     "visual-split-vim": {
         "cargoLocks": null,
