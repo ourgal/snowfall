@@ -30,6 +30,9 @@ let
         # note if you use "plugdev", make sure you have this group and the wanted user is in that group
         SUBSYSTEMS=="usb", ATTR{idVendor}=="20a0", ATTR{idProduct}=="42d4", GROUP="plugdev", MODE="0660"
         # SUBSYSTEMS=="usb", ATTR{idVendor}=="20a0", ATTR{idProduct}=="42d4", TAG+="uaccess"
+
+        # kindle
+        SUBSYSTEM=="usb", ATTR{idVendor}=="1949", ATTR{idProduct}=="0251", MODE="0666", GROUP="plugdev"
       '';
     };
   };
