@@ -26,6 +26,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
+      "dela"
       "just"
       "pueue"
       # keep-sorted end

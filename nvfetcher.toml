@@ -1164,3 +1164,8 @@ fetch.github = "lugenx/lab"
 [rx]
 src.github = "f01c33/rx"
 fetch.github = "f01c33/rx"
+
+[dela]
+src.git = "https://github.com/aleyan/dela"
+fetch.github = "aleyan/dela"
+cargo_locks = ["Cargo.lock"]
