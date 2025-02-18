@@ -13,10 +13,14 @@ args.module (
       # keep-sorted start
       "amfora"
       "circumflex"
-      "lynx"
       "w3m"
       # keep-sorted end
     ];
-    enable = "brotab";
+    enable = [
+      # keep-sorted start
+      "brotab"
+      "lynx"
+      # keep-sorted end
+    ];
   }
 )
