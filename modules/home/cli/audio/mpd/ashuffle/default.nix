@@ -14,7 +14,7 @@ args.module (
           After = "mpd.service";
         };
         restart = "always";
-        start = "${pkgs.ashuffle}/bin/ashuffle";
+        start = "${pkgs.ashuffle}/bin/ashuffle --queue-buffer 1";
       };
     }
   )
