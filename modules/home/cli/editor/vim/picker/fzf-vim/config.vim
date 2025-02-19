@@ -10,6 +10,7 @@ let g:which_key_map['s']['K'] = [':Maps', 'Keymaps']
 let g:which_key_map['s']['C'] = [':Commands', 'Commands']
 let g:which_key_map['g']['h'] = [':BCommits', 'Commit history']
 let g:which_key_map['/'] = [':RG', 'Live grep']
-let g:which_key_map['*'] = [':RG <c-r><c-w>', 'Live Grep current word']
+
+nnoremap <silent><expr> <leader>* ':RG ' . expand('<cword>') . '<cr>'
 
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
