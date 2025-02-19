@@ -3061,18 +3061,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502172211";
+    version = "202502182212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502172211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geoip.dat";
       sha256 = "sha256-3khw752h+RomIfC+SV1gjEicxuGoczRbKIkUdxTwBC4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502172211";
+    version = "202502182212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502172211/geosite.dat";
-      sha256 = "sha256-rk26v42aUllrVeKnk9q8j9urZVVkPXmqCfcfp+YT+7Y=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geosite.dat";
+      sha256 = "sha256-cKfahSEGryWTTKpxqm8WqhjJP78SZXGkke0mJGY5Jo0=";
     };
   };
   vim-auto-save = {
