@@ -3500,7 +3500,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2025-02-18",
+        "date": "2025-02-19",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3512,12 +3512,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "e54d2ce995b7a9058796fce420cb67e05a43031f",
-            "sha256": "sha256-+uUQ68TS0Kvpn71P+rrm8MSdQaMtq+MSnitqhiK1oZQ=",
+            "rev": "bc734b4fa8097878f64ef4786c888e9a1217f7b9",
+            "sha256": "sha256-UC1c3wXQXHBMJGLWRWwru4t9G4HgIj9g01HfgCnn6gY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e54d2ce995b7a9058796fce420cb67e05a43031f"
+        "version": "bc734b4fa8097878f64ef4786c888e9a1217f7b9"
     },
     "posting": {
         "cargoLocks": null,
@@ -4573,12 +4573,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.25.6",
-            "sha256": "sha256-KHtqOXXPhXLmlZ0mYruv+4NoldbE17ePoGs536g/Y8c=",
+            "rev": "v0.26.0",
+            "sha256": "sha256-UEUdQQRWDIia/oociOJWafx87CFX4DGCK2TEwzHZ0fk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.25.6"
+        "version": "v0.26.0"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -4625,7 +4625,7 @@
     "templify": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./templify-2.0.0/Cargo.lock",
+                "./templify-2.0.1/Cargo.lock",
                 {}
             ]
         },
@@ -4641,12 +4641,12 @@
             "name": null,
             "owner": "cophilot",
             "repo": "templify",
-            "rev": "2.0.0",
-            "sha256": "sha256-j6utB5Ry/b8P82PwMpzj0Bx1x/I5b065okMMZpEjYTs=",
+            "rev": "2.0.1",
+            "sha256": "sha256-uxkZCqcdQVdaVbru4etbA70cBR6Ou8QptsyBCfrMxG8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "termsand": {
         "cargoLocks": {
@@ -4751,11 +4751,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-EoF3/G1j0PMjbjdOKNaPQ0O9LploJdoqbxItn78BfTE=",
+            "sha256": "sha256-Cx1Fy+NRzNaL/u/SLe+jOlmBFDYIneBIurn7i0ZXvYc=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-2.0.4.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-2.1.0.tar.gz"
         },
-        "version": "2.0.4"
+        "version": "2.1.0"
     },
     "timewarrior": {
         "cargoLocks": null,
@@ -5424,9 +5424,9 @@
             "name": null,
             "sha256": "sha256-3khw752h+RomIfC+SV1gjEicxuGoczRbKIkUdxTwBC4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502192211/geoip.dat"
         },
-        "version": "202502182212"
+        "version": "202502192211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5437,11 +5437,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cKfahSEGryWTTKpxqm8WqhjJP78SZXGkke0mJGY5Jo0=",
+            "sha256": "sha256-BrVTh2u/R7O1CiOJgDPVNHR/pZWWVQJRsWogpqTjwZM=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502192211/geosite.dat"
         },
-        "version": "202502182212"
+        "version": "202502192211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -5871,12 +5871,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscode-fugitive-0.1.0.zip",
-            "sha256": "sha256-lvAF53WUNEF2ttCBvuNlSNhyi7xized/zb8AqE1DdIg=",
+            "name": "vscode-fugitive-0.1.1.zip",
+            "sha256": "sha256-HextrR6GxZJws7uUkR2omkJzkQOMbaSA3SPNLQb4wsU=",
             "type": "url",
-            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "0.1.0"
+        "version": "0.1.1"
     },
     "wait-for": {
         "cargoLocks": null,

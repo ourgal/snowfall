@@ -1967,15 +1967,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "e54d2ce995b7a9058796fce420cb67e05a43031f";
+    version = "bc734b4fa8097878f64ef4786c888e9a1217f7b9";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "e54d2ce995b7a9058796fce420cb67e05a43031f";
+      rev = "bc734b4fa8097878f64ef4786c888e9a1217f7b9";
       fetchSubmodules = false;
-      sha256 = "sha256-+uUQ68TS0Kvpn71P+rrm8MSdQaMtq+MSnitqhiK1oZQ=";
+      sha256 = "sha256-UC1c3wXQXHBMJGLWRWwru4t9G4HgIj9g01HfgCnn6gY=";
     };
-    date = "2025-02-18";
+    date = "2025-02-19";
   };
   posting = {
     pname = "posting";
@@ -2574,13 +2574,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.25.6";
+    version = "v0.26.0";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.25.6";
+      rev = "v0.26.0";
       fetchSubmodules = false;
-      sha256 = "sha256-KHtqOXXPhXLmlZ0mYruv+4NoldbE17ePoGs536g/Y8c=";
+      sha256 = "sha256-UEUdQQRWDIia/oociOJWafx87CFX4DGCK2TEwzHZ0fk=";
     };
   };
   task-relative-recur = {
@@ -2609,16 +2609,16 @@
   };
   templify = {
     pname = "templify";
-    version = "2.0.0";
+    version = "2.0.1";
     src = fetchFromGitHub {
       owner = "cophilot";
       repo = "templify";
-      rev = "2.0.0";
+      rev = "2.0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-j6utB5Ry/b8P82PwMpzj0Bx1x/I5b065okMMZpEjYTs=";
+      sha256 = "sha256-uxkZCqcdQVdaVbru4etbA70cBR6Ou8QptsyBCfrMxG8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./templify-2.0.0/Cargo.lock;
+      lockFile = ./templify-2.0.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -2683,10 +2683,10 @@
   };
   textual = {
     pname = "textual";
-    version = "2.0.4";
+    version = "2.1.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-2.0.4.tar.gz";
-      sha256 = "sha256-EoF3/G1j0PMjbjdOKNaPQ0O9LploJdoqbxItn78BfTE=";
+      url = "https://pypi.org/packages/source/t/textual/textual-2.1.0.tar.gz";
+      sha256 = "sha256-Cx1Fy+NRzNaL/u/SLe+jOlmBFDYIneBIurn7i0ZXvYc=";
     };
   };
   timewarrior = {
@@ -3061,18 +3061,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502182212";
+    version = "202502192211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502192211/geoip.dat";
       sha256 = "sha256-3khw752h+RomIfC+SV1gjEicxuGoczRbKIkUdxTwBC4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502182212";
+    version = "202502192211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502182212/geosite.dat";
-      sha256 = "sha256-cKfahSEGryWTTKpxqm8WqhjJP78SZXGkke0mJGY5Jo0=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502192211/geosite.dat";
+      sha256 = "sha256-BrVTh2u/R7O1CiOJgDPVNHR/pZWWVQJRsWogpqTjwZM=";
     };
   };
   vim-auto-save = {
@@ -3316,11 +3316,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.1.0";
+    version = "0.1.1";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.1.0.zip";
-      sha256 = "sha256-lvAF53WUNEF2ttCBvuNlSNhyi7xized/zb8AqE1DdIg=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.1.1.zip";
+      sha256 = "sha256-HextrR6GxZJws7uUkR2omkJzkQOMbaSA3SPNLQb4wsU=";
     };
   };
   wait-for = {
