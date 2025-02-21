@@ -2039,10 +2039,10 @@
   };
   pydantic-settings = {
     pname = "pydantic-settings";
-    version = "2.7.1";
+    version = "2.8.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.7.1.tar.gz";
-      sha256 = "sha256-EMnKrTXmS/s8L79woHjA4lzJJJl4LlIAdH+UKgZd7JM=";
+      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.8.0.tar.gz";
+      sha256 = "sha256-iOLKKPbmjqECyZw8QB1skHjmil32AOl7Q4kcNOCJUAo=";
     };
   };
   pyjokes = {
