@@ -1169,3 +1169,7 @@ fetch.github = "f01c33/rx"
 src.git = "https://github.com/aleyan/dela"
 fetch.github = "aleyan/dela"
 cargo_locks = ["Cargo.lock"]
+
+[emacs-eglot-booster]
+src.git = "https://github.com/jdtsmith/eglot-booster"
+fetch.github = "jdtsmith/eglot-booster"
