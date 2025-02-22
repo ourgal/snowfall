@@ -18,6 +18,7 @@ args.module (
       # keep-sorted start
       "apheleia"
       "better-defaults"
+      "cape"
       "catppuccin"
       "corfu"
       "dirvish"
