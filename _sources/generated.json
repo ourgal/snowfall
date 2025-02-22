@@ -1184,6 +1184,69 @@
         },
         "version": "e6daa6bcaf4aceee29c8a5a949b43eb1b89900ed"
     },
+    "emacs-gtm-emacs-plugin": {
+        "cargoLocks": null,
+        "date": "2018-11-16",
+        "extract": null,
+        "name": "emacs-gtm-emacs-plugin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "c301",
+            "repo": "gtm-emacs-plugin",
+            "rev": "287108ed1d6885dc795eb3bad4476aa08c626186",
+            "sha256": "sha256-jSCnO6CRUVTlo3iGs8G2tj/vXF3b2lq/h6iyvYWVBDM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "287108ed1d6885dc795eb3bad4476aa08c626186"
+    },
+    "emacs-perltidy.el": {
+        "cargoLocks": null,
+        "date": "2024-08-14",
+        "extract": null,
+        "name": "emacs-perltidy.el",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "perl-ide",
+            "repo": "perltidy.el",
+            "rev": "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2",
+            "sha256": "sha256-TXMa7fFnDqoj/5dt4ls2CXybBxjMnSDNI67z9nAk7VA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2"
+    },
+    "emacs-zoxide.el": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "emacs-zoxide.el",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Vonfry",
+            "repo": "zoxide.el",
+            "rev": "c4b72681b139f40ba82f43d9c93adbd37da7b238",
+            "sha256": "sha256-tQjQVrjCHiH5Zvw080C/xmQCjDaIIuKRcI4gXjbNCEg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c4b72681b139f40ba82f43d9c93adbd37da7b238"
+    },
     "enhancd": {
         "cargoLocks": null,
         "date": null,
