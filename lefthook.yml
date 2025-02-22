@@ -47,10 +47,6 @@ pre-commit:
       glob: '*.go'
       run: gofmt -w {staged_files}
       stage_fixed: true
-    elisp:
-      glob: '*.el'
-      run: lisp-format -i -style=google {staged_files}
-      stage_fixed: true
     keep-sorted:
       glob: '*.nix'
       run: keep-sorted --mode fix {staged_files}
