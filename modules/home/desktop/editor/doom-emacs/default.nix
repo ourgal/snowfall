@@ -26,8 +26,9 @@ args.module (
           build [
             # keep-sorted start
             "emacs-eglot-booster"
-            "emacs-gtm-emacs-plugin"
-            "emacs-zoxide.el"
+            "emacs-git-time-metric"
+            "emacs-perltidy"
+            "emacs-zoxide"
             # keep-sorted end
           ];
       };
