@@ -13,15 +13,15 @@ args.module (
           epkgs: with epkgs; [
             evil
             evil-leader
-            evil-nerd-commenter
+            evil-commentary
             evil-surround
             evil-collection
           ];
         extraConfig = builtins.concatStringsSep "" (
           [ (builtins.readFile ./config.el) ]
-          ++ [ (builtins.readFile ./evil-nerd-commenter.el) ]
           ++ [ (builtins.readFile ./evil-surround.el) ]
           ++ [ (builtins.readFile ./evil-collection.el) ]
+          ++ [ (builtins.readFile ./evil-commentary.el) ]
           ++ lib.optional emacs.helpful.enable (builtins.readFile ./helpful.el)
           ++ lib.optional emacs.eldoc-box.enable (builtins.readFile ./eldoc-box.el)
           ++ lib.optional emacs.fzf.enable (builtins.readFile ./fzf.el)
