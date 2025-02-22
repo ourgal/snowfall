@@ -23,14 +23,15 @@ args.module (
             build =
               p: builtins.map (x: epkgs.melpaBuild { inherit (args.pkgs._sources.${x}) pname version src; }) p;
           in
-          build [
+          (build [
             # keep-sorted start
             "emacs-eglot-booster"
             "emacs-git-time-metric"
             "emacs-perltidy"
             "emacs-zoxide"
             # keep-sorted end
-          ];
+          ])
+          ++ [ epkgs.move-text ];
       };
     }
   )

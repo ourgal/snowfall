@@ -117,3 +117,4 @@
 ;; (load! "plugins/highlight-indent-guides")
 (load! "plugins/eglot-booster")
 (load! "plugins/perltidy")
+(load! "plugins/move-text")
