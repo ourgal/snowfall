@@ -672,6 +672,42 @@
     };
     date = "2024-10-29";
   };
+  emacs-gtm-emacs-plugin = {
+    pname = "emacs-gtm-emacs-plugin";
+    version = "287108ed1d6885dc795eb3bad4476aa08c626186";
+    src = fetchFromGitHub {
+      owner = "c301";
+      repo = "gtm-emacs-plugin";
+      rev = "287108ed1d6885dc795eb3bad4476aa08c626186";
+      fetchSubmodules = false;
+      sha256 = "sha256-jSCnO6CRUVTlo3iGs8G2tj/vXF3b2lq/h6iyvYWVBDM=";
+    };
+    date = "2018-11-16";
+  };
+  "emacs-perltidy.el" = {
+    pname = "emacs-perltidy.el";
+    version = "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2";
+    src = fetchFromGitHub {
+      owner = "perl-ide";
+      repo = "perltidy.el";
+      rev = "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2";
+      fetchSubmodules = false;
+      sha256 = "sha256-TXMa7fFnDqoj/5dt4ls2CXybBxjMnSDNI67z9nAk7VA=";
+    };
+    date = "2024-08-14";
+  };
+  "emacs-zoxide.el" = {
+    pname = "emacs-zoxide.el";
+    version = "c4b72681b139f40ba82f43d9c93adbd37da7b238";
+    src = fetchFromGitHub {
+      owner = "Vonfry";
+      repo = "zoxide.el";
+      rev = "c4b72681b139f40ba82f43d9c93adbd37da7b238";
+      fetchSubmodules = false;
+      sha256 = "sha256-tQjQVrjCHiH5Zvw080C/xmQCjDaIIuKRcI4gXjbNCEg=";
+    };
+    date = "2023-09-13";
+  };
   enhancd = {
     pname = "enhancd";
     version = "v2.5.1";
