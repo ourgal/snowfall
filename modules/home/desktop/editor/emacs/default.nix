@@ -1,27 +1,43 @@
 args:
 args.module (
   args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      path = ./.;
-      nixPkgs = [
-        # keep-sorted start
-        "emacs-lsp-booster"
-        "gnuplot"
-        # keep-sorted end
-      ];
-      progs.emacs = {
-        extraPackages = epkgs: [ epkgs.vterm ];
-        package = pkgs.emacs;
-      };
-      servs = "emacs";
-      sessionPath = [ "$HOME/.config/emacs/bin" ]; # doomemacs
-      value = {
-        systemd.user.services.emacs.Service.ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 10";
-      };
-    }
-  )
+  // {
+    path = ./.;
+    nixPkgs = [
+      # keep-sorted start
+      "emacs-lsp-booster"
+      "gnuplot"
+      # keep-sorted end
+    ];
+    progs.emacs = {
+      extraPackages = epkgs: [ epkgs.vterm ];
+    };
+    servs = "emacs";
+    sessionPath = [ "$HOME/.config/emacs/bin" ]; # doomemacs
+    enable = [
+      # keep-sorted start
+      "apheleia"
+      "better-defaults"
+      "catppuccin"
+      "corfu"
+      "dirvish"
+      "editorconfig"
+      "eglot-booster"
+      "eldoc-box"
+      "evil"
+      "fzf"
+      "helpful"
+      "keybindings"
+      "ligature"
+      "nix-mode"
+      "orderless"
+      "persp-mode"
+      "rainbow-delimiters"
+      "super-save"
+      "telega"
+      "which-key"
+      # keep-sorted end
+    ];
+  }
+
 )

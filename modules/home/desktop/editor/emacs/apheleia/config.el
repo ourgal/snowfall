@@ -1,0 +1,1 @@
+(apheleia-global-mode t)

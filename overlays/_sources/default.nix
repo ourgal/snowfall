@@ -1,4 +1,5 @@
-_: final: _prev:
+{ lib, ... }:
+final: _prev:
 let
   sources = import ../../_sources/generated.nix {
     inherit (final)
@@ -12,7 +13,12 @@ let
     _n: v:
     v
     // (
-      if builtins.hasAttr "date" v then
+      if lib.strings.hasPrefix "emacs-" v.pname then
+        {
+          pname = lib.strings.removePrefix "emacs-" v.pname;
+          version = v.date;
+        }
+      else if builtins.hasAttr "date" v then
         { version = "unstable-${v.date}"; }
       else if final.lib.strings.hasPrefix "v" v.version then
         { version = final.lib.substring 1 (-1) v.version; }

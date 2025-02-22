@@ -1777,6 +1777,7 @@
         "snowfall-lib": "snowfall-lib_3",
         "snowfall-thaw": "snowfall-thaw",
         "sops-nix": "sops-nix",
+        "telega-overlay": "telega-overlay",
         "unstable": "unstable_2",
         "wired": "wired"
       }
@@ -2127,6 +2128,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "telega-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1739495147,
+        "narHash": "sha256-H6CylaBZal2Ykm8u94lIiNAtTBK3AguX3N0pKPRrBm8=",
+        "owner": "ourgal",
+        "repo": "telega-overlay",
+        "rev": "bd05b9119f01e6174e4d16acd4fa4b09563d6aa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ourgal",
+        "repo": "telega-overlay",
         "type": "github"
       }
     },
