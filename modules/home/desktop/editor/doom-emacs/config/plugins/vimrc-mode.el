@@ -2,5 +2,5 @@
 
 ;; vim
 (use-package! vimrc-mode
-	      :mode "\\.vim\\(rc\\)$"
-	      :defer t)
+  :mode "\\.vim\\(rc\\)$"
+  :defer t)
