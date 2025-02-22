@@ -561,12 +561,12 @@
   };
   docker-lancommander = {
     pname = "docker-lancommander";
-    version = "v1.1.0";
+    version = "1.1.1";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:fccb43221169b5097ced9b48a10c6617f0146d5bb701394815be3e7aff5af928";
-      sha256 = "sha256-vXl4yIngvlHVFGcK3hR4N2YykUQe6YZA6OBcX8IbvYA=";
-      finalImageTag = "v1.1.0";
+      imageDigest = "sha256:5427985f273d381ef5c60b8190032e32c9417ff32d7ec7eb13df0add2b48ae2a";
+      sha256 = "sha256-VMPUxhrLg2j8SKwY9ZgudZ3AziqqlFOzc3tTqa/DSN0=";
+      finalImageTag = "1.1.1";
     };
   };
   docker-qd = {
@@ -713,13 +713,13 @@
   };
   fast-anime = {
     pname = "fast-anime";
-    version = "v2.8.7";
+    version = "v2.8.8";
     src = fetchFromGitHub {
       owner = "Benex254";
       repo = "FastAnime";
-      rev = "v2.8.7";
+      rev = "v2.8.8";
       fetchSubmodules = false;
-      sha256 = "sha256-cYj26LdaY5+EhjHyvKwjUCZ5DiXpYHQSzlgzFVqaKtM=";
+      sha256 = "sha256-7ioO1ZbKqYE6DIkBl9FtufY14o1NY4tbhRIdCWx0y1E=";
     };
   };
   fc-fish = {
@@ -2465,13 +2465,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.6.5";
+    version = "v0.6.6";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.6.5";
+      rev = "v0.6.6";
       fetchSubmodules = false;
-      sha256 = "sha256-B497R/pytfzon3yXx2FKGDOEQ1bY/TmTXHxQjIwr4Fs=";
+      sha256 = "sha256-0xKFNzzd/ZwhNT0sTzATNmb5SQSTYN3j30gwkkxFENM=";
     };
   };
   sprite-dicing = {
