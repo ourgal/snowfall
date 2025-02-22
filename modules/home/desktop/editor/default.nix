@@ -10,7 +10,7 @@ args.module (
     ];
     enable = [
       # keep-sorted start
-      "emacs"
+      "doom-emacs"
       "lite-xl"
       "vscode"
       # keep-sorted end

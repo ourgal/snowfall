@@ -103,6 +103,10 @@
       url = "github:ourgal/telega-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -189,6 +193,7 @@
         nixvim.homeManagerModules.nixvim
         nyaa.homeManagerModule
         nvchad4nix.homeManagerModule
+        nix-doom-emacs-unstraightened.hmModule
       ];
 
       templates = {
