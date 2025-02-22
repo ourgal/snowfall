@@ -99,6 +99,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    telega-overlay = {
+      url = "github:ourgal/telega-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -163,6 +167,7 @@
         pog.overlays.${system}.default
         caddy-nix.overlays.default
         nur.overlays.default
+        # telega-overlay.overlay
       ];
 
       # Add modules to all NixOS systems.
