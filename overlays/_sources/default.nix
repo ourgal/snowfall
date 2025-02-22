@@ -15,7 +15,7 @@ let
     // (
       if lib.strings.hasPrefix "emacs-" v.pname then
         {
-          pname = lib.strings.removePrefix "emacs-" v.pname;
+          pname = lib.strings.removeSuffix ".el" (lib.strings.removePrefix "emacs-" v.pname);
           version = v.date;
         }
       else if builtins.hasAttr "date" v then

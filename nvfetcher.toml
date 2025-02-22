@@ -1173,3 +1173,15 @@ cargo_locks = ["Cargo.lock"]
 [emacs-eglot-booster]
 src.git = "https://github.com/jdtsmith/eglot-booster"
 fetch.github = "jdtsmith/eglot-booster"
+
+["emacs-zoxide.el"]
+src.git = "https://github.com/Vonfry/zoxide.el"
+fetch.github = "Vonfry/zoxide.el"
+
+["emacs-perltidy.el"]
+src.git = "https://github.com/perl-ide/perltidy.el"
+fetch.github = "perl-ide/perltidy.el"
+
+[emacs-gtm-emacs-plugin]
+src.git = "https://github.com/c301/gtm-emacs-plugin"
+fetch.github = "c301/gtm-emacs-plugin"

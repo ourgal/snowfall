@@ -68,26 +68,4 @@
 
 ;; (package! indent-guide)
 
-(package! git-time-metric
-	  :recipe (:host github
-			 :repo "c301/gtm-emacs-plugin")
-	  :pin "287108ed1d6885dc795eb3bad4476aa08c626186")
-
 (package! adoc-mode)
-
-(package! eglot-booster
-	  :recipe (:host github
-			 :repo "jdtsmith/eglot-booster")
-	  :pin "e6daa6bcaf4aceee29c8a5a949b43eb1b89900ed")
-
-(package! zoxide
-	  :recipe (:host github
-			 :repo "Vonfry/zoxide.el")
-	  :pin "c4b72681b139f40ba82f43d9c93adbd37da7b238")
-
-(package!
- perltidy
- :recipe (:host github
-		:repo "perl-ide/perltidy.el"
-		:branch "master")
- :pin "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2")
