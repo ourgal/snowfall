@@ -672,8 +672,8 @@
     };
     date = "2024-10-29";
   };
-  emacs-gtm-emacs-plugin = {
-    pname = "emacs-gtm-emacs-plugin";
+  emacs-git-time-metric = {
+    pname = "emacs-git-time-metric";
     version = "287108ed1d6885dc795eb3bad4476aa08c626186";
     src = fetchFromGitHub {
       owner = "c301";
@@ -684,8 +684,8 @@
     };
     date = "2018-11-16";
   };
-  "emacs-perltidy.el" = {
-    pname = "emacs-perltidy.el";
+  emacs-perltidy = {
+    pname = "emacs-perltidy";
     version = "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2";
     src = fetchFromGitHub {
       owner = "perl-ide";
@@ -696,8 +696,8 @@
     };
     date = "2024-08-14";
   };
-  "emacs-zoxide.el" = {
-    pname = "emacs-zoxide.el";
+  emacs-zoxide = {
+    pname = "emacs-zoxide";
     version = "c4b72681b139f40ba82f43d9c93adbd37da7b238";
     src = fetchFromGitHub {
       owner = "Vonfry";
@@ -2117,15 +2117,15 @@
   };
   qman = {
     pname = "qman";
-    version = "f8cc8c0b831e6109e88bfc24c50a0e51501f4aea";
+    version = "6e14038ed6070f1759fb921a3fe5599d89475e84";
     src = fetchFromGitHub {
       owner = "plp13";
       repo = "qman";
-      rev = "f8cc8c0b831e6109e88bfc24c50a0e51501f4aea";
+      rev = "6e14038ed6070f1759fb921a3fe5599d89475e84";
       fetchSubmodules = false;
-      sha256 = "sha256-6Kc/mlBnhZtw3ZGszjxyw/mJMhH6/bQzRWEhd7yipiw=";
+      sha256 = "sha256-aoPRHPtp7ISz8BaPuh2wj/+PLzFdDmAy8ZLX0PgueeQ=";
     };
-    date = "2025-02-21";
+    date = "2025-02-22";
   };
   quartz = {
     pname = "quartz";

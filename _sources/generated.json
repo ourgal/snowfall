@@ -1184,11 +1184,11 @@
         },
         "version": "e6daa6bcaf4aceee29c8a5a949b43eb1b89900ed"
     },
-    "emacs-gtm-emacs-plugin": {
+    "emacs-git-time-metric": {
         "cargoLocks": null,
         "date": "2018-11-16",
         "extract": null,
-        "name": "emacs-gtm-emacs-plugin",
+        "name": "emacs-git-time-metric",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -1205,11 +1205,11 @@
         },
         "version": "287108ed1d6885dc795eb3bad4476aa08c626186"
     },
-    "emacs-perltidy.el": {
+    "emacs-perltidy": {
         "cargoLocks": null,
         "date": "2024-08-14",
         "extract": null,
-        "name": "emacs-perltidy.el",
+        "name": "emacs-perltidy",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -1226,11 +1226,11 @@
         },
         "version": "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2"
     },
-    "emacs-zoxide.el": {
+    "emacs-zoxide": {
         "cargoLocks": null,
         "date": "2023-09-13",
         "extract": null,
-        "name": "emacs-zoxide.el",
+        "name": "emacs-zoxide",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -3776,7 +3776,7 @@
     },
     "qman": {
         "cargoLocks": null,
-        "date": "2025-02-21",
+        "date": "2025-02-22",
         "extract": null,
         "name": "qman",
         "passthru": null,
@@ -3788,12 +3788,12 @@
             "name": null,
             "owner": "plp13",
             "repo": "qman",
-            "rev": "f8cc8c0b831e6109e88bfc24c50a0e51501f4aea",
-            "sha256": "sha256-6Kc/mlBnhZtw3ZGszjxyw/mJMhH6/bQzRWEhd7yipiw=",
+            "rev": "6e14038ed6070f1759fb921a3fe5599d89475e84",
+            "sha256": "sha256-aoPRHPtp7ISz8BaPuh2wj/+PLzFdDmAy8ZLX0PgueeQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f8cc8c0b831e6109e88bfc24c50a0e51501f4aea"
+        "version": "6e14038ed6070f1759fb921a3fe5599d89475e84"
     },
     "quartz": {
         "cargoLocks": null,
