@@ -197,6 +197,12 @@
 
       homes.users = homeSpecialArgsFinal;
 
-      deploy = lib.mkDeploy { inherit (inputs) self; };
+      deploy = lib.mkDeploy {
+        inherit (inputs) self;
+        overrides = {
+          brix.hostname = "192.168.123.206";
+          d2550.hostname = "192.168.123.143";
+        };
+      };
     };
 }
