@@ -831,11 +831,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-05dcd928277e4e08a3684890a251e33966b8f20e/Cargo.lock",
+                "./dela-8745fc49c3a570b37857d91bd238a40343d70726/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-02-19",
+        "date": "2025-02-22",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -847,12 +847,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "05dcd928277e4e08a3684890a251e33966b8f20e",
-            "sha256": "sha256-woae9SW4/jw9m0PWUBa+eo0M58QGSbe0ezp/U4WeMSM=",
+            "rev": "8745fc49c3a570b37857d91bd238a40343d70726",
+            "sha256": "sha256-3wJmM1QbQRKPk+Ab4v00tdMswLO3vfU1JiB+5UKEIkQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "05dcd928277e4e08a3684890a251e33966b8f20e"
+        "version": "8745fc49c3a570b37857d91bd238a40343d70726"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -4835,11 +4835,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Cx1Fy+NRzNaL/u/SLe+jOlmBFDYIneBIurn7i0ZXvYc=",
+            "sha256": "sha256-wd1U/OU8Or6HoCFzXvu/2K9TExkfBymgLs2zCDNnz2I=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-2.1.0.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-2.1.1.tar.gz"
         },
-        "version": "2.1.0"
+        "version": "2.1.1"
     },
     "timewarrior": {
         "cargoLocks": null,
@@ -5508,9 +5508,9 @@
             "name": null,
             "sha256": "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502212211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502222210/geoip.dat"
         },
-        "version": "202502212211"
+        "version": "202502222210"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5521,11 +5521,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-EU4uhdZTiYKK53K95wWV8gY82/4noGwEK5o8xNh8Xh4=",
+            "sha256": "sha256-EztBeh9EL/TCmfH6jGQqLf77KUf7vhUO3kg6PVWHEhs=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502212211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502222210/geosite.dat"
         },
-        "version": "202502212211"
+        "version": "202502222210"
     },
     "vim-auto-save": {
         "cargoLocks": null,

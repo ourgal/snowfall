@@ -476,21 +476,21 @@
   };
   dela = {
     pname = "dela";
-    version = "05dcd928277e4e08a3684890a251e33966b8f20e";
+    version = "8745fc49c3a570b37857d91bd238a40343d70726";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "05dcd928277e4e08a3684890a251e33966b8f20e";
+      rev = "8745fc49c3a570b37857d91bd238a40343d70726";
       fetchSubmodules = false;
-      sha256 = "sha256-woae9SW4/jw9m0PWUBa+eo0M58QGSbe0ezp/U4WeMSM=";
+      sha256 = "sha256-3wJmM1QbQRKPk+Ab4v00tdMswLO3vfU1JiB+5UKEIkQ=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-05dcd928277e4e08a3684890a251e33966b8f20e/Cargo.lock;
+      lockFile = ./dela-8745fc49c3a570b37857d91bd238a40343d70726/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-19";
+    date = "2025-02-22";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -2731,10 +2731,10 @@
   };
   textual = {
     pname = "textual";
-    version = "2.1.0";
+    version = "2.1.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-2.1.0.tar.gz";
-      sha256 = "sha256-Cx1Fy+NRzNaL/u/SLe+jOlmBFDYIneBIurn7i0ZXvYc=";
+      url = "https://pypi.org/packages/source/t/textual/textual-2.1.1.tar.gz";
+      sha256 = "sha256-wd1U/OU8Or6HoCFzXvu/2K9TExkfBymgLs2zCDNnz2I=";
     };
   };
   timewarrior = {
@@ -3109,18 +3109,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502212211";
+    version = "202502222210";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502212211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502222210/geoip.dat";
       sha256 = "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502212211";
+    version = "202502222210";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502212211/geosite.dat";
-      sha256 = "sha256-EU4uhdZTiYKK53K95wWV8gY82/4noGwEK5o8xNh8Xh4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502222210/geosite.dat";
+      sha256 = "sha256-EztBeh9EL/TCmfH6jGQqLf77KUf7vhUO3kg6PVWHEhs=";
     };
   };
   vim-auto-save = {
