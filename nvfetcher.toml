@@ -1185,3 +1185,7 @@ fetch.github = "perl-ide/perltidy.el"
 [emacs-git-time-metric]
 src.git = "https://github.com/c301/gtm-emacs-plugin"
 fetch.github = "c301/gtm-emacs-plugin"
+
+[emacs-miniflux]
+src.git = "https://git.sr.ht/~rprospero/miniflux"
+fetch.git = "https://git.sr.ht/~rprospero/miniflux"
