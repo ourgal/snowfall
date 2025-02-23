@@ -31,7 +31,10 @@ args.module (
             "emacs-zoxide"
             # keep-sorted end
           ])
-          ++ [ epkgs.move-text ];
+          ++ (with epkgs; [
+            move-text
+            nov
+          ]);
       };
     }
   )
