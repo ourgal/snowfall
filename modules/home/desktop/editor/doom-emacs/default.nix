@@ -17,25 +17,17 @@ args.module (
       progs.doom-emacs = enabled // {
         doomDir = ./config;
         experimentalFetchTree = true; # Disable if there are fetcher issues
-        extraPackages =
-          epkgs:
-          let
-            build =
-              p: builtins.map (x: epkgs.melpaBuild { inherit (args.pkgs._sources.${x}) pname version src; }) p;
-          in
-          (build [
-            # keep-sorted start
-            "emacs-eglot-booster"
-            "emacs-git-time-metric"
-            "emacs-perltidy"
-            "emacs-zoxide"
-            # keep-sorted end
-          ])
-          ++ (with epkgs; [
-            move-text
-            nov
-          ]);
       };
+      enable = [
+        # keep-sorted start
+        "eglot-booster"
+        "git-time-metric"
+        "move-text"
+        "nov"
+        "perltidy"
+        "zoxide"
+        # keep-sorted end
+      ];
     }
   )
 )

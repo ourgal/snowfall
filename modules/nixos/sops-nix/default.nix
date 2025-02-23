@@ -47,6 +47,10 @@ let
           inherit owner mode;
           path = "/home/${owner}/.mpdscribble/mpdscribble.conf";
         };
+        "miniflux/fever" = {
+          inherit owner mode;
+          path = "/home/${owner}/.config/miniflux/fever";
+        };
       };
     };
   };
