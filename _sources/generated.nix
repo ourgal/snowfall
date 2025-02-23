@@ -684,6 +684,18 @@
     };
     date = "2018-11-16";
   };
+  emacs-nov-xwidget = {
+    pname = "emacs-nov-xwidget";
+    version = "07660470da3e61a77553a2802dfeb4d8aaae1880";
+    src = fetchFromGitHub {
+      owner = "chenyanming";
+      repo = "nov-xwidget";
+      rev = "07660470da3e61a77553a2802dfeb4d8aaae1880";
+      fetchSubmodules = false;
+      sha256 = "sha256-9V8mlVA5IlHEIrFZHmLKSG6CZmDRK/JPzi3qCF+c8Yk=";
+    };
+    date = "2025-01-18";
+  };
   emacs-perltidy = {
     pname = "emacs-perltidy";
     version = "78384f4bd3ab0ee5336dd4353db7d69f5f79a7a2";
