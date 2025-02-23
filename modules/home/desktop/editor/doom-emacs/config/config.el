@@ -118,3 +118,5 @@
 (load! "plugins/eglot-booster")
 (load! "plugins/perltidy")
 (load! "plugins/move-text")
+;; (load! "plugins/elfeed")
+;; (load! "plugins/miniflux")
