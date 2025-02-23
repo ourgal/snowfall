@@ -831,7 +831,7 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-8745fc49c3a570b37857d91bd238a40343d70726/Cargo.lock",
+                "./dela-804d73042da9ee390bc696a2866b73da9f957ccf/Cargo.lock",
                 {}
             ]
         },
@@ -847,12 +847,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "8745fc49c3a570b37857d91bd238a40343d70726",
-            "sha256": "sha256-3wJmM1QbQRKPk+Ab4v00tdMswLO3vfU1JiB+5UKEIkQ=",
+            "rev": "804d73042da9ee390bc696a2866b73da9f957ccf",
+            "sha256": "sha256-YzwRgFk2bNfnIa14JDsmgGTV+vcKCJBnigiGHHRFo4s=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8745fc49c3a570b37857d91bd238a40343d70726"
+        "version": "804d73042da9ee390bc696a2866b73da9f957ccf"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -1205,11 +1205,11 @@
         },
         "version": "287108ed1d6885dc795eb3bad4476aa08c626186"
     },
-    "emacs-nov-xwidget": {
+    "emacs-miniflux": {
         "cargoLocks": null,
-        "date": "2025-01-18",
+        "date": "2023-09-13",
         "extract": null,
-        "name": "emacs-nov-xwidget",
+        "name": "emacs-miniflux",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -1217,14 +1217,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "chenyanming",
-            "repo": "nov-xwidget",
-            "rev": "07660470da3e61a77553a2802dfeb4d8aaae1880",
-            "sha256": "sha256-9V8mlVA5IlHEIrFZHmLKSG6CZmDRK/JPzi3qCF+c8Yk=",
+            "rev": "3b0ac10a081ba02fab57eda975a9e3e2635ce37b",
+            "sha256": "sha256-9H+e01mRFSADqalACvMP0q/W6LDKAeisuuXvRe0D2EY=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://git.sr.ht/~rprospero/miniflux"
         },
-        "version": "07660470da3e61a77553a2802dfeb4d8aaae1880"
+        "version": "3b0ac10a081ba02fab57eda975a9e3e2635ce37b"
     },
     "emacs-perltidy": {
         "cargoLocks": null,
