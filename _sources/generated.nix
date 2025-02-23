@@ -476,16 +476,16 @@
   };
   dela = {
     pname = "dela";
-    version = "8745fc49c3a570b37857d91bd238a40343d70726";
+    version = "804d73042da9ee390bc696a2866b73da9f957ccf";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "8745fc49c3a570b37857d91bd238a40343d70726";
+      rev = "804d73042da9ee390bc696a2866b73da9f957ccf";
       fetchSubmodules = false;
-      sha256 = "sha256-3wJmM1QbQRKPk+Ab4v00tdMswLO3vfU1JiB+5UKEIkQ=";
+      sha256 = "sha256-YzwRgFk2bNfnIa14JDsmgGTV+vcKCJBnigiGHHRFo4s=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-8745fc49c3a570b37857d91bd238a40343d70726/Cargo.lock;
+      lockFile = ./dela-804d73042da9ee390bc696a2866b73da9f957ccf/Cargo.lock;
       outputHashes = {
         
       };
@@ -684,17 +684,19 @@
     };
     date = "2018-11-16";
   };
-  emacs-nov-xwidget = {
-    pname = "emacs-nov-xwidget";
-    version = "07660470da3e61a77553a2802dfeb4d8aaae1880";
-    src = fetchFromGitHub {
-      owner = "chenyanming";
-      repo = "nov-xwidget";
-      rev = "07660470da3e61a77553a2802dfeb4d8aaae1880";
+  emacs-miniflux = {
+    pname = "emacs-miniflux";
+    version = "3b0ac10a081ba02fab57eda975a9e3e2635ce37b";
+    src = fetchgit {
+      url = "https://git.sr.ht/~rprospero/miniflux";
+      rev = "3b0ac10a081ba02fab57eda975a9e3e2635ce37b";
       fetchSubmodules = false;
-      sha256 = "sha256-9V8mlVA5IlHEIrFZHmLKSG6CZmDRK/JPzi3qCF+c8Yk=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-9H+e01mRFSADqalACvMP0q/W6LDKAeisuuXvRe0D2EY=";
     };
-    date = "2025-01-18";
+    date = "2023-09-13";
   };
   emacs-perltidy = {
     pname = "emacs-perltidy";
