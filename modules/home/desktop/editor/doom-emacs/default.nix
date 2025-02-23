@@ -24,6 +24,7 @@ args.module (
         "git-time-metric"
         "move-text"
         "nov"
+        "pangu-spacing"
         "perltidy"
         "zoxide"
         # keep-sorted end

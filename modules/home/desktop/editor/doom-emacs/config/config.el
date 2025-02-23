@@ -120,3 +120,4 @@
 (load! "plugins/move-text")
 ;; (load! "plugins/elfeed")
 ;; (load! "plugins/miniflux")
+(load! "plugins/pangu-spacing")
