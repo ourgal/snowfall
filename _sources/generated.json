@@ -1205,6 +1205,27 @@
         },
         "version": "287108ed1d6885dc795eb3bad4476aa08c626186"
     },
+    "emacs-nov-xwidget": {
+        "cargoLocks": null,
+        "date": "2025-01-18",
+        "extract": null,
+        "name": "emacs-nov-xwidget",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "chenyanming",
+            "repo": "nov-xwidget",
+            "rev": "07660470da3e61a77553a2802dfeb4d8aaae1880",
+            "sha256": "sha256-9V8mlVA5IlHEIrFZHmLKSG6CZmDRK/JPzi3qCF+c8Yk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "07660470da3e61a77553a2802dfeb4d8aaae1880"
+    },
     "emacs-perltidy": {
         "cargoLocks": null,
         "date": "2024-08-14",
