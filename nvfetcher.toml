@@ -1189,3 +1189,7 @@ fetch.github = "c301/gtm-emacs-plugin"
 [emacs-miniflux]
 src.git = "https://git.sr.ht/~rprospero/miniflux"
 fetch.git = "https://git.sr.ht/~rprospero/miniflux"
+
+[magit-stats]
+src.git = "https://github.com/LionyxML/magit-stats"
+fetch.github = "LionyxML/magit-stats"

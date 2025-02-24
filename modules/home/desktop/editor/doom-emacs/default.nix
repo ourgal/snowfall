@@ -23,6 +23,7 @@ args.module (
         "eglot-booster"
         "git-time-metric"
         "magit-delta"
+        "magit-stats"
         "magit-todos"
         "move-text"
         "nov"
