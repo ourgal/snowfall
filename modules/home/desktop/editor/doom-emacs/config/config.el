@@ -121,3 +121,4 @@
 ;; (load! "plugins/elfeed")
 ;; (load! "plugins/miniflux")
 (load! "plugins/pangu-spacing")
+(load! "plugins/magit-todos")
