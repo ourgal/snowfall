@@ -123,3 +123,4 @@
 (load! "plugins/pangu-spacing")
 (load! "plugins/magit-todos")
 (load! "plugins/magit-delta")
+(load! "plugins/magit-stats")
