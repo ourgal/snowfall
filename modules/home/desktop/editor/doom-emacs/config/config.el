@@ -122,3 +122,4 @@
 ;; (load! "plugins/miniflux")
 (load! "plugins/pangu-spacing")
 (load! "plugins/magit-todos")
+(load! "plugins/magit-delta")

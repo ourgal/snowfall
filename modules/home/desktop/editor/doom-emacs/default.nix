@@ -22,6 +22,7 @@ args.module (
         # keep-sorted start
         "eglot-booster"
         "git-time-metric"
+        "magit-delta"
         "magit-todos"
         "move-text"
         "nov"
