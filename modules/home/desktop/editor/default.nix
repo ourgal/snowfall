@@ -13,6 +13,7 @@ args.module (
       "doom-emacs"
       "lite-xl"
       "vscode"
+      "zed-editor"
       # keep-sorted end
     ];
   }
