@@ -47,14 +47,49 @@ args.module (
         extraConfig = {
           init.defaultBranch = "main";
           pull.rebase = true;
-          core.editor = config.${namespace}.user.editor;
+          core = {
+            editor = config.${namespace}.user.editor;
+            excludesfile = "~/.gitignore";
+            fsmonitor = true;
+            untrackedCache = true;
+          };
           git-extras = {
             defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
             get.clone-path = "${config.home.homeDirectory}/src";
           };
-          push.useForceIfIncludes = true;
-          rebase.autosquash = true;
+          push = {
+            useForceIfIncludes = true;
+            default = "simple";
+            autoSetupRemote = true;
+            followTags = true;
+          };
+          rebase = {
+            autoSquash = true;
+            autoStash = true;
+            updateRefs = true;
+          };
           maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
+          culumn.ui = "auto";
+          branch.sort = "-committerdate";
+          tag.sort = "version:refname";
+          diff = {
+            algorithm = "histogram";
+            colorMoved = "plain";
+            mnemonicPrefix = true;
+            renames = true;
+          };
+          fetch = {
+            prune = true;
+            pruneTags = true;
+            all = true;
+          };
+          help.autocorrect = "prompt";
+          commit.verbose = true;
+          rerere = {
+            enabled = true;
+            autoupdate = true;
+          };
+          merge.conflictstyle = "zdiff3";
         };
         package = pkgs.gitFull;
       };

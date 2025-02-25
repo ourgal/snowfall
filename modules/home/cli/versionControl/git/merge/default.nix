@@ -17,7 +17,6 @@ args.module (
       progs.git.extraConfig = {
         merge = {
           tool = "vimdiff";
-          conflictstyle = "diff3";
           mergiraf = {
             name = "mergiraf";
             driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P";
