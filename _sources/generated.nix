@@ -752,13 +752,13 @@
   };
   facad = {
     pname = "facad";
-    version = "v2.18.0";
+    version = "v2.20.5";
     src = fetchFromGitHub {
       owner = "yellow-footed-honeyguide";
       repo = "facad";
-      rev = "v2.18.0";
+      rev = "v2.20.5";
       fetchSubmodules = false;
-      sha256 = "sha256-0Z8CDHLWAighRhcVZIlSQAWb9CpeMpmw9ASy9ACep4Q=";
+      sha256 = "sha256-4qg2OLolmumo9ap6wPO7f9R9n6xjeuYfIHYuop+UMbM=";
     };
   };
   fast-anime = {
@@ -1735,16 +1735,16 @@
   };
   mdsf = {
     pname = "mdsf";
-    version = "v0.5.2";
+    version = "v0.5.3";
     src = fetchFromGitHub {
       owner = "hougesen";
       repo = "mdsf";
-      rev = "v0.5.2";
+      rev = "v0.5.3";
       fetchSubmodules = false;
-      sha256 = "sha256-cXfB2N2ZFyun0ongPoBBEi7l9bWiDv0x3RI2+KxtF/0=";
+      sha256 = "sha256-c2rvJGmXP+3vUrlbooNYgZXJSGdvcw22FncU5bo7Er4=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./mdsf-v0.5.2/Cargo.lock;
+      lockFile = ./mdsf-v0.5.3/Cargo.lock;
       outputHashes = {
         
       };
@@ -2041,15 +2041,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "64767f141be0a11a852ca239b77dd64c3fffbcb9";
+    version = "112594d7c57c01f2df523b70cdc504128caed72d";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "64767f141be0a11a852ca239b77dd64c3fffbcb9";
+      rev = "112594d7c57c01f2df523b70cdc504128caed72d";
       fetchSubmodules = false;
-      sha256 = "sha256-9zNeC5+pOvGb1G7SLgwZ0RD7f6h66jaQ1F9LY74b/tY=";
+      sha256 = "sha256-37Dp1QofLnd0L8nW8fmSn/KXkLwxLDOe0sIfPhzqCNs=";
     };
-    date = "2025-02-20";
+    date = "2025-02-24";
   };
   posting = {
     pname = "posting";
@@ -2968,13 +2968,13 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "9ee9359f9303946af4730261b3e4097c9f9faccf";
+    version = "7031d24f37ce908cbe767838d7e82a6e8afb328e";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "9ee9359f9303946af4730261b3e4097c9f9faccf";
+      rev = "7031d24f37ce908cbe767838d7e82a6e8afb328e";
       fetchSubmodules = false;
-      sha256 = "sha256-L0ONJGekxq/aVB824j4Pmq6AyEBDgi74xnqHeIl6398=";
+      sha256 = "sha256-I3aZPyl0sOblv+hOwGiACPxgOIISoH1kEqFawJb5aW4=";
     };
     date = "2025-02-24";
   };
@@ -3135,18 +3135,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502232211";
+    version = "202502242212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502232211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geoip.dat";
       sha256 = "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502232211";
+    version = "202502242212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502232211/geosite.dat";
-      sha256 = "sha256-VVGvrnM3FDqxSvmpsmfP3drFog6R8Tyd/E5l8AWKRKI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geosite.dat";
+      sha256 = "sha256-GKvrfoBBCRcZnOFq7jn5DIhJNaocVc+3+AmuaOiPvwY=";
     };
   };
   vim-auto-save = {
