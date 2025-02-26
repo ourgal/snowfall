@@ -3037,7 +3037,7 @@
     "manga-tui": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./manga-tui-v0.5.0/Cargo.lock",
+                "./manga-tui-v0.6.0/Cargo.lock",
                 {}
             ]
         },
@@ -3053,12 +3053,12 @@
             "name": null,
             "owner": "josueBarretogit",
             "repo": "manga-tui",
-            "rev": "v0.5.0",
-            "sha256": "sha256-kmJrr1Gi1z9v2gkFmvcCAtBST+AkofVJSxyvAFnUZKQ=",
+            "rev": "v0.6.0",
+            "sha256": "sha256-L5KZaBJDG0z6NUGPJfbOkKCp1xQEzqfJ9GREx189VqU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.5.0"
+        "version": "v0.6.0"
     },
     "mdformat-config": {
         "cargoLocks": null,
@@ -4663,11 +4663,11 @@
     "tabry-rs": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./tabry-rs-d24f00a7fd927aa33c5542b8d37c38aabba65a96/Cargo.lock",
+                "./tabry-rs-fedf0234e1e91e45e775dd644012f743a8f6b350/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-01-04",
+        "date": "2025-02-26",
         "extract": null,
         "name": "tabry-rs",
         "passthru": null,
@@ -4679,12 +4679,12 @@
             "name": null,
             "owner": "evanbattaglia",
             "repo": "tabry-rs",
-            "rev": "d24f00a7fd927aa33c5542b8d37c38aabba65a96",
-            "sha256": "sha256-G1lwV5xafd45ZB2kZUlrY4EOYMnTsSeuew3QwbqAt+8=",
+            "rev": "fedf0234e1e91e45e775dd644012f743a8f6b350",
+            "sha256": "sha256-nVy7UK4t6lMWciQFm928j6CD4GosaMbUW+khiq85zJY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d24f00a7fd927aa33c5542b8d37c38aabba65a96"
+        "version": "fedf0234e1e91e45e775dd644012f743a8f6b350"
     },
     "tach": {
         "cargoLocks": null,
@@ -5255,12 +5255,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "90887e03fa4584800c7bb372a669b7f56e3e2ca4",
-            "sha256": "sha256-KNFrG6aVMGYKTj0ewH6BOZ9uOWfWjG2PrJ/AswpX27w=",
+            "rev": "30af7af30c7a4ec516ad9e7effb1d0f8a1742baa",
+            "sha256": "sha256-MygSY6i+dyv5s5wvKcsbstoMwTBCIbFpyhJiS+DUzac=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "90887e03fa4584800c7bb372a669b7f56e3e2ca4"
+        "version": "30af7af30c7a4ec516ad9e7effb1d0f8a1742baa"
     },
     "to-fish": {
         "cargoLocks": null,

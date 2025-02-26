@@ -1707,16 +1707,16 @@
   };
   manga-tui = {
     pname = "manga-tui";
-    version = "v0.5.0";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "josueBarretogit";
       repo = "manga-tui";
-      rev = "v0.5.0";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-kmJrr1Gi1z9v2gkFmvcCAtBST+AkofVJSxyvAFnUZKQ=";
+      sha256 = "sha256-L5KZaBJDG0z6NUGPJfbOkKCp1xQEzqfJ9GREx189VqU=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./manga-tui-v0.5.0/Cargo.lock;
+      lockFile = ./manga-tui-v0.6.0/Cargo.lock;
       outputHashes = {
         
       };
@@ -2630,21 +2630,21 @@
   };
   tabry-rs = {
     pname = "tabry-rs";
-    version = "d24f00a7fd927aa33c5542b8d37c38aabba65a96";
+    version = "fedf0234e1e91e45e775dd644012f743a8f6b350";
     src = fetchFromGitHub {
       owner = "evanbattaglia";
       repo = "tabry-rs";
-      rev = "d24f00a7fd927aa33c5542b8d37c38aabba65a96";
+      rev = "fedf0234e1e91e45e775dd644012f743a8f6b350";
       fetchSubmodules = false;
-      sha256 = "sha256-G1lwV5xafd45ZB2kZUlrY4EOYMnTsSeuew3QwbqAt+8=";
+      sha256 = "sha256-nVy7UK4t6lMWciQFm928j6CD4GosaMbUW+khiq85zJY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./tabry-rs-d24f00a7fd927aa33c5542b8d37c38aabba65a96/Cargo.lock;
+      lockFile = ./tabry-rs-fedf0234e1e91e45e775dd644012f743a8f6b350/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-01-04";
+    date = "2025-02-26";
   };
   tach = {
     pname = "tach";
@@ -2968,13 +2968,13 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "90887e03fa4584800c7bb372a669b7f56e3e2ca4";
+    version = "30af7af30c7a4ec516ad9e7effb1d0f8a1742baa";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "90887e03fa4584800c7bb372a669b7f56e3e2ca4";
+      rev = "30af7af30c7a4ec516ad9e7effb1d0f8a1742baa";
       fetchSubmodules = false;
-      sha256 = "sha256-KNFrG6aVMGYKTj0ewH6BOZ9uOWfWjG2PrJ/AswpX27w=";
+      sha256 = "sha256-MygSY6i+dyv5s5wvKcsbstoMwTBCIbFpyhJiS+DUzac=";
     };
     date = "2025-02-26";
   };
