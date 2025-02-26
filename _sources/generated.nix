@@ -11,13 +11,13 @@
   };
   ahoy = {
     pname = "ahoy";
-    version = "v2.3.0";
+    version = "v2.4.0";
     src = fetchFromGitHub {
       owner = "ahoy-cli";
       repo = "ahoy";
-      rev = "v2.3.0";
+      rev = "v2.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-PLKogNPA3+7wsO02He8xJXx3ki4pRwpVwo+6ELiKuCY=";
+      sha256 = "sha256-wYsPutdO9ZkXQu4mrFV56mrJTeSFF/3oRaHO0ia7DHk=";
     };
   };
   akuse = {
@@ -443,13 +443,13 @@
   };
   curd = {
     pname = "curd";
-    version = "v1.0.9";
+    version = "v1.1.0";
     src = fetchFromGitHub {
       owner = "Wraient";
       repo = "curd";
-      rev = "v1.0.9";
+      rev = "v1.1.0";
       fetchSubmodules = false;
-      sha256 = "sha256-tbFV/sTWVJALL351KmT3vzXsGPIX6uo8+hZgv/q5j5A=";
+      sha256 = "sha256-ApXadsa9Ple2YNCDELL88AnSSEuMMIUsmAX3RV5yjyo=";
     };
   };
   datadash = {
@@ -1922,10 +1922,10 @@
   };
   numara = {
     pname = "numara";
-    version = "5.7.6";
+    version = "5.7.8";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.6/Numara-5.7.6-x86_64.AppImage";
-      sha256 = "sha256-quBmhWA+2bUp42FEpLuLm5TFyPEedr8iQ9WwzIf1t2U=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.8/Numara-5.7.8-x86_64.AppImage";
+      sha256 = "sha256-MpDb91cyrLG6NBv4alIblwQPH8CPaSuaIe+jo9B46LQ=";
     };
   };
   org-export = {
@@ -2105,10 +2105,10 @@
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.29.0";
+    version = "2.30.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.29.0.tar.gz";
-      sha256 = "sha256-BctJ8w7m/UpVTxTcKgZTiTHAOfAjKWIdV7oARlYT0o4=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.30.0.tar.gz";
+      sha256 = "sha256-3QKUmUitYOVeWSbU2kpV33XKsGpMl9pm0HwoXuRByGw=";
     };
   };
   pydantic-settings = {
@@ -2462,21 +2462,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "632fbef52823bb902dda36dedc7c6f05cfaa0ade";
+    version = "44448fc9190aa474ff1b9707b921acbda4afdbcd";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "632fbef52823bb902dda36dedc7c6f05cfaa0ade";
+      rev = "44448fc9190aa474ff1b9707b921acbda4afdbcd";
       fetchSubmodules = false;
-      sha256 = "sha256-qetUUtfB+4JHfRKE7Wm7U2AryxoEJVgMZZ6LvaVoPSA=";
+      sha256 = "sha256-hEnQ/bcDksXvultwucAjoY64FM38J+Err74S5t8EA+g=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-632fbef52823bb902dda36dedc7c6f05cfaa0ade/Cargo.lock;
+      lockFile = ./simple-completion-language-server-44448fc9190aa474ff1b9707b921acbda4afdbcd/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-11";
+    date = "2025-02-25";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -2648,13 +2648,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.26.1";
+    version = "v0.27.0";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.26.1";
+      rev = "v0.27.0";
       fetchSubmodules = false;
-      sha256 = "sha256-XzLceqVZ+1GSMABRTRwklEQC1v78DxVj5oRH4Oxj9nM=";
+      sha256 = "sha256-FcYmQMBIuw3AaEAbUX4ohUK/uFocHdD+8ohbmzUfqBU=";
     };
   };
   task-relative-recur = {
@@ -2968,15 +2968,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "7031d24f37ce908cbe767838d7e82a6e8afb328e";
+    version = "90887e03fa4584800c7bb372a669b7f56e3e2ca4";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "7031d24f37ce908cbe767838d7e82a6e8afb328e";
+      rev = "90887e03fa4584800c7bb372a669b7f56e3e2ca4";
       fetchSubmodules = false;
-      sha256 = "sha256-I3aZPyl0sOblv+hOwGiACPxgOIISoH1kEqFawJb5aW4=";
+      sha256 = "sha256-KNFrG6aVMGYKTj0ewH6BOZ9uOWfWjG2PrJ/AswpX27w=";
     };
-    date = "2025-02-24";
+    date = "2025-02-26";
   };
   to-fish = {
     pname = "to-fish";
@@ -3135,18 +3135,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502242212";
+    version = "202502252212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geoip.dat";
       sha256 = "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502242212";
+    version = "202502252212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geosite.dat";
-      sha256 = "sha256-GKvrfoBBCRcZnOFq7jn5DIhJNaocVc+3+AmuaOiPvwY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geosite.dat";
+      sha256 = "sha256-81+QmZm/lT/aEhzvvq9ZxYz+1IYkFZkxcYpxUUM3CBw=";
     };
   };
   vim-auto-save = {
