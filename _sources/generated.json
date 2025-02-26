@@ -28,12 +28,12 @@
             "name": null,
             "owner": "ahoy-cli",
             "repo": "ahoy",
-            "rev": "v2.3.0",
-            "sha256": "sha256-PLKogNPA3+7wsO02He8xJXx3ki4pRwpVwo+6ELiKuCY=",
+            "rev": "v2.4.0",
+            "sha256": "sha256-wYsPutdO9ZkXQu4mrFV56mrJTeSFF/3oRaHO0ia7DHk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.0"
+        "version": "v2.4.0"
     },
     "akuse": {
         "cargoLocks": null,
@@ -779,12 +779,12 @@
             "name": null,
             "owner": "Wraient",
             "repo": "curd",
-            "rev": "v1.0.9",
-            "sha256": "sha256-tbFV/sTWVJALL351KmT3vzXsGPIX6uo8+hZgv/q5j5A=",
+            "rev": "v1.1.0",
+            "sha256": "sha256-ApXadsa9Ple2YNCDELL88AnSSEuMMIUsmAX3RV5yjyo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.9"
+        "version": "v1.1.0"
     },
     "datadash": {
         "cargoLocks": null,
@@ -3425,11 +3425,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-quBmhWA+2bUp42FEpLuLm5TFyPEedr8iQ9WwzIf1t2U=",
+            "sha256": "sha256-MpDb91cyrLG6NBv4alIblwQPH8CPaSuaIe+jo9B46LQ=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.7.6/Numara-5.7.6-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.7.8/Numara-5.7.8-x86_64.AppImage"
         },
-        "version": "5.7.6"
+        "version": "5.7.8"
     },
     "org-export": {
         "cargoLocks": null,
@@ -3754,11 +3754,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-BctJ8w7m/UpVTxTcKgZTiTHAOfAjKWIdV7oARlYT0o4=",
+            "sha256": "sha256-3QKUmUitYOVeWSbU2kpV33XKsGpMl9pm0HwoXuRByGw=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.29.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.30.0.tar.gz"
         },
-        "version": "2.29.0"
+        "version": "2.30.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -4375,11 +4375,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-632fbef52823bb902dda36dedc7c6f05cfaa0ade/Cargo.lock",
+                "./simple-completion-language-server-44448fc9190aa474ff1b9707b921acbda4afdbcd/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-02-11",
+        "date": "2025-02-25",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4391,12 +4391,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "632fbef52823bb902dda36dedc7c6f05cfaa0ade",
-            "sha256": "sha256-qetUUtfB+4JHfRKE7Wm7U2AryxoEJVgMZZ6LvaVoPSA=",
+            "rev": "44448fc9190aa474ff1b9707b921acbda4afdbcd",
+            "sha256": "sha256-hEnQ/bcDksXvultwucAjoY64FM38J+Err74S5t8EA+g=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "632fbef52823bb902dda36dedc7c6f05cfaa0ade"
+        "version": "44448fc9190aa474ff1b9707b921acbda4afdbcd"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -4700,12 +4700,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.26.1",
-            "sha256": "sha256-XzLceqVZ+1GSMABRTRwklEQC1v78DxVj5oRH4Oxj9nM=",
+            "rev": "v0.27.0",
+            "sha256": "sha256-FcYmQMBIuw3AaEAbUX4ohUK/uFocHdD+8ohbmzUfqBU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.26.1"
+        "version": "v0.27.0"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -5243,7 +5243,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2025-02-24",
+        "date": "2025-02-26",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -5255,12 +5255,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "7031d24f37ce908cbe767838d7e82a6e8afb328e",
-            "sha256": "sha256-I3aZPyl0sOblv+hOwGiACPxgOIISoH1kEqFawJb5aW4=",
+            "rev": "90887e03fa4584800c7bb372a669b7f56e3e2ca4",
+            "sha256": "sha256-KNFrG6aVMGYKTj0ewH6BOZ9uOWfWjG2PrJ/AswpX27w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7031d24f37ce908cbe767838d7e82a6e8afb328e"
+        "version": "90887e03fa4584800c7bb372a669b7f56e3e2ca4"
     },
     "to-fish": {
         "cargoLocks": null,
@@ -5551,9 +5551,9 @@
             "name": null,
             "sha256": "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geoip.dat"
         },
-        "version": "202502242212"
+        "version": "202502252212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5564,11 +5564,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-GKvrfoBBCRcZnOFq7jn5DIhJNaocVc+3+AmuaOiPvwY=",
+            "sha256": "sha256-81+QmZm/lT/aEhzvvq9ZxYz+1IYkFZkxcYpxUUM3CBw=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502242212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geosite.dat"
         },
-        "version": "202502242212"
+        "version": "202502252212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
