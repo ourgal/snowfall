@@ -1,0 +1,19 @@
+---
+name: Update nixpkgs
+on:
+  workflow_dispatch:  # allows manual triggering
+  schedule:
+    - cron: 30 16 * * *
+jobs:
+  update-nixpkgs:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - run: nix flake update nixpkgs
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: auto update nixpkgs'
