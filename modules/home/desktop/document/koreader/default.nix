@@ -20,7 +20,10 @@ args.module (
     {
       path = ./.;
       nixPkgs = "koreader";
-      confs."koreader/data/dict" = dicts;
+      confs = {
+        "koreader/data/dict" = dicts;
+        "koreader/plugins/anki.koplugin" = pkgs._sources."anki.koplugin".src;
+      };
     }
   )
 )
