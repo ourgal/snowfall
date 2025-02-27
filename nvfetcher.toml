@@ -1201,3 +1201,7 @@ fetch.github = "elisemercury/Duplicate-Image-Finder"
 ["anki.koplugin"]
 src.git = "https://github.com/Ajatt-Tools/anki.koplugin"
 fetch.github = "Ajatt-Tools/anki.koplugin"
+
+[wol]
+src.github = "Trugamr/wol"
+fetch.github = "Trugamr/wol"
