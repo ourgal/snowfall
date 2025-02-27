@@ -71,6 +71,27 @@
         },
         "version": "18cc76d9f4c0ee1276d8314d48ffaa0b4640dbf9"
     },
+    "anki.koplugin": {
+        "cargoLocks": null,
+        "date": "2025-02-11",
+        "extract": null,
+        "name": "anki.koplugin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Ajatt-Tools",
+            "repo": "anki.koplugin",
+            "rev": "c6c930043d4fc0fcc110167bb88942fb8663bad8",
+            "sha256": "sha256-aC4Sx3vLS3rEnaLZkKF3QCwxTqTlhaAndT9bQwUeqC4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c6c930043d4fc0fcc110167bb88942fb8663bad8"
+    },
     "antifennel": {
         "cargoLocks": null,
         "date": "2024-09-25",
