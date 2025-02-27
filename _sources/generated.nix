@@ -618,6 +618,17 @@
       };
     };
   };
+  duplicate-image-finder = {
+    pname = "duplicate-image-finder";
+    version = "v4.2.1";
+    src = fetchFromGitHub {
+      owner = "elisemercury";
+      repo = "Duplicate-Image-Finder";
+      rev = "v4.2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-T04qgddJyLQ9aDHbtkEsg6rtS73Wq8zsbXsy91r5pUA=";
+    };
+  };
   easyjump-vim = {
     pname = "easyjump-vim";
     version = "7be7e1b6e8000971d0f6ef9e8480f86094f56635";
@@ -2757,10 +2768,10 @@
   };
   textual = {
     pname = "textual";
-    version = "2.1.1";
+    version = "2.1.2";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-2.1.1.tar.gz";
-      sha256 = "sha256-wd1U/OU8Or6HoCFzXvu/2K9TExkfBymgLs2zCDNnz2I=";
+      url = "https://pypi.org/packages/source/t/textual/textual-2.1.2.tar.gz";
+      sha256 = "sha256-quP5/eAMdEC+AOPDrBieAtAU9SmK/cMhMvk0gPngkUY=";
     };
   };
   timewarrior = {
@@ -3135,18 +3146,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502252212";
+    version = "202502262212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502262212/geoip.dat";
       sha256 = "sha256-46TmnC3rCDCay83FPOQfiBxks1sW/BHJwzHBMnXr/Wk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502252212";
+    version = "202502262212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502252212/geosite.dat";
-      sha256 = "sha256-81+QmZm/lT/aEhzvvq9ZxYz+1IYkFZkxcYpxUUM3CBw=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502262212/geosite.dat";
+      sha256 = "sha256-Wn0aTMa84Vs9gn5I/Nl5SH1ovU4FPNsoERg1KKSmvcU=";
     };
   };
   vim-auto-save = {
