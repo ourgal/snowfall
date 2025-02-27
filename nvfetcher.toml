@@ -1193,3 +1193,7 @@ fetch.git = "https://git.sr.ht/~rprospero/miniflux"
 [magit-stats]
 src.git = "https://github.com/LionyxML/magit-stats"
 fetch.github = "LionyxML/magit-stats"
+
+[duplicate-image-finder]
+src.github = "elisemercury/Duplicate-Image-Finder"
+fetch.github = "elisemercury/Duplicate-Image-Finder"
