@@ -6110,6 +6110,27 @@
         },
         "version": "0.0.6"
     },
+    "wol": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "wol",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Trugamr",
+            "repo": "wol",
+            "rev": "v0.0.5",
+            "sha256": "sha256-1XXAc7paf7SG09Ep/0UuMa2Vnfv6B0hiYKtXAaKZBzc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.5"
+    },
     "x": {
         "cargoLocks": null,
         "date": null,
