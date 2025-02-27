@@ -7,7 +7,7 @@
 buildGoModule {
   inherit (_sources.html-to-markdown) pname version src;
 
-  vendorHash = "sha256-fpwf0a6PgcZmWONbftcR9875qZox6O7+8bToJgz59Z8=";
+  vendorHash = "sha256-6QNnw22KRltVmVEeIn0lec7Moo/Cub3rhwtvIwODw2w=";
 
   ldflags = [
     "-s"
