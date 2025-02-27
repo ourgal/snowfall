@@ -15,7 +15,6 @@ args.module (
         # keep-sorted start
         "calibre"
         "evince"
-        "goldendict-ng"
         "libreoffice"
         "onlyoffice-bin"
         "zeal"
@@ -23,6 +22,7 @@ args.module (
       ];
       enable = [
         # keep-sorted start
+        "goldendict-ng"
         "koreader"
         "sioyek"
         "zathura"
