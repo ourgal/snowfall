@@ -1481,13 +1481,13 @@
   };
   html-to-markdown = {
     pname = "html-to-markdown";
-    version = "v2.2.2";
+    version = "v2.3.0";
     src = fetchFromGitHub {
       owner = "JohannesKaufmann";
       repo = "html-to-markdown";
-      rev = "v2.2.2";
+      rev = "v2.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-RiMQsWuPzmWJf5MpF+fhsitc2qKGkOYYpoLjWVIQtf8=";
+      sha256 = "sha256-JmSSQmha3xMzUonSU03ChwldSNbID40Wyp9S6V1E0Y8=";
     };
   };
   hypergrep = {
@@ -2136,10 +2136,10 @@
   };
   pydantic-settings = {
     pname = "pydantic-settings";
-    version = "2.8.0";
+    version = "2.8.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.8.0.tar.gz";
-      sha256 = "sha256-iOLKKPbmjqECyZw8QB1skHjmil32AOl7Q4kcNOCJUAo=";
+      url = "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.8.1.tar.gz";
+      sha256 = "sha256-1cZj376dudXhxkay4WHaEvDXNNQi7lb1Z9DqLO5OhYU=";
     };
   };
   pyjokes = {
@@ -2741,13 +2741,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v0.6.0";
+    version = "v0.6.1";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v0.6.0";
+      rev = "v0.6.1";
       fetchSubmodules = false;
-      sha256 = "sha256-JMVsmu98WJaeFGAzIKb+dwQ4a70M9ZuaSGYqZ3Tku9M=";
+      sha256 = "sha256-XI4xFEdW+IWQ2vCqMqONpgx+pEFzt8Z08I/13MxJYZY=";
     };
   };
   textimg = {
@@ -2943,15 +2943,15 @@
   };
   tmux-tome = {
     pname = "tmux-tome";
-    version = "122fd17d2bd915dfd489cbf6308eaf60d3273c57";
+    version = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "122fd17d2bd915dfd489cbf6308eaf60d3273c57";
+      rev = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
       fetchSubmodules = false;
-      sha256 = "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=";
+      sha256 = "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=";
     };
-    date = "2025-01-08";
+    date = "2025-02-27";
   };
   tmux-transient-status = {
     pname = "tmux-transient-status";
@@ -3306,15 +3306,15 @@
   };
   vim-tome = {
     pname = "vim-tome";
-    version = "122fd17d2bd915dfd489cbf6308eaf60d3273c57";
+    version = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "122fd17d2bd915dfd489cbf6308eaf60d3273c57";
+      rev = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
       fetchSubmodules = false;
-      sha256 = "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=";
+      sha256 = "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=";
     };
-    date = "2025-01-08";
+    date = "2025-02-27";
   };
   vim-toop = {
     pname = "vim-toop";
