@@ -3454,6 +3454,17 @@
       sha256 = "sha256-PaFZst2O8pNI+LSws31nrbs4ih76r5ouJhFi/cgst80=";
     };
   };
+  wol = {
+    pname = "wol";
+    version = "v0.0.5";
+    src = fetchFromGitHub {
+      owner = "Trugamr";
+      repo = "wol";
+      rev = "v0.0.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-1XXAc7paf7SG09Ep/0UuMa2Vnfv6B0hiYKtXAaKZBzc=";
+    };
+  };
   x = {
     pname = "x";
     version = "v1.1.4";
