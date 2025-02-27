@@ -12,6 +12,7 @@ args.module (
       "recoverpy"
       "sequin"
       "servicer"
+      "wol"
       # keep-sorted end
     ];
     nixPkgs = [
