@@ -40,6 +40,18 @@
     };
     date = "2025-01-08";
   };
+  "anki.koplugin" = {
+    pname = "anki.koplugin";
+    version = "c6c930043d4fc0fcc110167bb88942fb8663bad8";
+    src = fetchFromGitHub {
+      owner = "Ajatt-Tools";
+      repo = "anki.koplugin";
+      rev = "c6c930043d4fc0fcc110167bb88942fb8663bad8";
+      fetchSubmodules = false;
+      sha256 = "sha256-aC4Sx3vLS3rEnaLZkKF3QCwxTqTlhaAndT9bQwUeqC4=";
+    };
+    date = "2025-02-11";
+  };
   antifennel = {
     pname = "antifennel";
     version = "a135f016414517ecb624bad26b39ed56d256beaa";
