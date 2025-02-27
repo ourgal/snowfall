@@ -2645,12 +2645,12 @@
             "name": null,
             "owner": "JohannesKaufmann",
             "repo": "html-to-markdown",
-            "rev": "v2.2.2",
-            "sha256": "sha256-RiMQsWuPzmWJf5MpF+fhsitc2qKGkOYYpoLjWVIQtf8=",
+            "rev": "v2.3.0",
+            "sha256": "sha256-JmSSQmha3xMzUonSU03ChwldSNbID40Wyp9S6V1E0Y8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.2.2"
+        "version": "v2.3.0"
     },
     "hypergrep": {
         "cargoLocks": null,
@@ -3811,11 +3811,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-iOLKKPbmjqECyZw8QB1skHjmil32AOl7Q4kcNOCJUAo=",
+            "sha256": "sha256-1cZj376dudXhxkay4WHaEvDXNNQi7lb1Z9DqLO5OhYU=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.8.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_settings/pydantic_settings-2.8.1.tar.gz"
         },
-        "version": "2.8.0"
+        "version": "2.8.1"
     },
     "pyjokes": {
         "cargoLocks": null,
@@ -4857,12 +4857,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v0.6.0",
-            "sha256": "sha256-JMVsmu98WJaeFGAzIKb+dwQ4a70M9ZuaSGYqZ3Tku9M=",
+            "rev": "v0.6.1",
+            "sha256": "sha256-XI4xFEdW+IWQ2vCqMqONpgx+pEFzt8Z08I/13MxJYZY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.0"
+        "version": "v0.6.1"
     },
     "textimg": {
         "cargoLocks": null,
@@ -5201,7 +5201,7 @@
     },
     "tmux-tome": {
         "cargoLocks": null,
-        "date": "2025-01-08",
+        "date": "2025-02-27",
         "extract": null,
         "name": "tmux-tome",
         "passthru": null,
@@ -5213,12 +5213,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "122fd17d2bd915dfd489cbf6308eaf60d3273c57",
-            "sha256": "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=",
+            "rev": "8a2bf0d7b54aafde25e5519906ab71b91ed71be5",
+            "sha256": "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "122fd17d2bd915dfd489cbf6308eaf60d3273c57"
+        "version": "8a2bf0d7b54aafde25e5519906ab71b91ed71be5"
     },
     "tmux-transient-status": {
         "cargoLocks": null,
@@ -5845,7 +5845,7 @@
     },
     "vim-tome": {
         "cargoLocks": null,
-        "date": "2025-01-08",
+        "date": "2025-02-27",
         "extract": null,
         "name": "vim-tome",
         "passthru": null,
@@ -5857,12 +5857,12 @@
             "name": null,
             "owner": "laktak",
             "repo": "tome",
-            "rev": "122fd17d2bd915dfd489cbf6308eaf60d3273c57",
-            "sha256": "sha256-osrQM5eyzCGTD/8utKU4HE1ammoxSzIbgJpM+hbXeKE=",
+            "rev": "8a2bf0d7b54aafde25e5519906ab71b91ed71be5",
+            "sha256": "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "122fd17d2bd915dfd489cbf6308eaf60d3273c57"
+        "version": "8a2bf0d7b54aafde25e5519906ab71b91ed71be5"
     },
     "vim-toop": {
         "cargoLocks": null,
