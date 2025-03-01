@@ -573,12 +573,12 @@
   };
   docker-lancommander = {
     pname = "docker-lancommander";
-    version = "1.1.1";
+    version = "v1.1.4";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:5427985f273d381ef5c60b8190032e32c9417ff32d7ec7eb13df0add2b48ae2a";
-      sha256 = "sha256-VMPUxhrLg2j8SKwY9ZgudZ3AziqqlFOzc3tTqa/DSN0=";
-      finalImageTag = "1.1.1";
+      imageDigest = "sha256:2d9fd96aa2d4bafff9f595a06f48a13cd36cb8e1272664f1498c7d7f4cf9cd0a";
+      sha256 = "sha256-wtEr9KuWxDUkR7cxAlR+EF5O3ZZwOyag5YeHdxH4RuQ=";
+      finalImageTag = "v1.1.4";
     };
   };
   docker-qd = {
@@ -1441,13 +1441,13 @@
   };
   hl = {
     pname = "hl";
-    version = "v0.30.3";
+    version = "v0.30.4";
     src = fetchFromGitHub {
       owner = "pamburus";
       repo = "hl";
-      rev = "v0.30.3";
+      rev = "v0.30.4";
       fetchSubmodules = false;
-      sha256 = "sha256-18FzXUvpMHu3EfECgcslhReinMM6Oa1qdTKbbqFiv1w=";
+      sha256 = "sha256-xnw0C2UI3bvWqcHXwLdrrpPgZwlkN5LL+1rUPYhX5fY=";
     };
   };
   hledger-fmt = {
@@ -2076,13 +2076,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.3.0";
+    version = "2.3.1";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.3.0";
+      rev = "2.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-lL85gJxFw8/e8Js+UCE9VxBMcmWRUkHh8Cq5wTC93KA=";
+      sha256 = "sha256-ekY29Bzq0V44+gXsGNbVebptej7vfoC1AqvF0DMV00U=";
     };
   };
   powershell-beautifier = {
@@ -2671,13 +2671,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.27.1";
+    version = "v0.27.2";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.27.1";
+      rev = "v0.27.2";
       fetchSubmodules = false;
-      sha256 = "sha256-91maokpI1mH83jHE0oGbKLNR9lG9vDWJDn0QwLKi1pU=";
+      sha256 = "sha256-gV/uuO1YmEdMQ7209RJsTE51YaC9fhdqMz3qRZG7ffA=";
     };
   };
   task-relative-recur = {
@@ -3158,18 +3158,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502272213";
+    version = "202502282212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502272213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502282212/geoip.dat";
       sha256 = "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502272213";
+    version = "202502282212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502272213/geosite.dat";
-      sha256 = "sha256-A4VJqq+Mabw9g4GRJfTX5j9SnhP8voTu4gpk/rKxJUI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502282212/geosite.dat";
+      sha256 = "sha256-TwCunq60wQd4NXlzQeKXbTUvZpeK5w9laNCuHHRkNeM=";
     };
   };
   vim-auto-save = {
@@ -3456,13 +3456,13 @@
   };
   wol = {
     pname = "wol";
-    version = "v0.0.5";
+    version = "v0.0.6";
     src = fetchFromGitHub {
       owner = "Trugamr";
       repo = "wol";
-      rev = "v0.0.5";
+      rev = "v0.0.6";
       fetchSubmodules = false;
-      sha256 = "sha256-1XXAc7paf7SG09Ep/0UuMa2Vnfv6B0hiYKtXAaKZBzc=";
+      sha256 = "sha256-triJfvVUDw5ziNw5MXEXCr3FN6fEtm99NcVHWMIgqD0=";
     };
   };
   x = {
