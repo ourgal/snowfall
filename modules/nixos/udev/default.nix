@@ -33,6 +33,9 @@ let
 
         # kindle
         SUBSYSTEM=="usb", ATTR{idVendor}=="1949", ATTR{idProduct}=="0251", MODE="0666", GROUP="plugdev"
+
+        # iReader
+        SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e41", MODE="0666", GROUP="plugdev"
       '';
     };
   };
