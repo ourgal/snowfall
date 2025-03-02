@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -Dm755 hg -t $out/bin
+    install -Dm755 hg $out/bin/hypergrep
     runHook postInstall
   '';
 
