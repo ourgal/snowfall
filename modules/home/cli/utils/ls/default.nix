@@ -4,6 +4,7 @@ args.module (
   // {
     path = ./.;
     myPkgs = "facad";
+    nixPkgs = "tree";
     enable = [
       # keep-sorted start
       "eza"
