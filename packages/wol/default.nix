@@ -7,7 +7,7 @@
 buildGoModule rec {
   inherit (_sources.wol) pname version src;
 
-  vendorHash = "sha256-ATqeM7JUEMNSyyW/lbl4o7L4xWySlAL2uHbRRutoybY=";
+  vendorHash = "sha256-DRA9PPNohzUtrIzucVIke5FhGvvA6zRuJzHt0qfB7PA=";
 
   ldflags = [
     "-s"
