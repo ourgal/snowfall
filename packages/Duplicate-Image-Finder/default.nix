@@ -18,6 +18,7 @@ stdenv.mkDerivation {
   installPhase = ''
     runHook preInstall
     install -m755 -D difPy/dif.py $out/bin/dif.py
+    patchShebangs $out/bin/dif.py
     runHook postInstall
   '';
 
