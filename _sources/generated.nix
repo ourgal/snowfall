@@ -259,21 +259,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "82030c8522a1759b90857b19f4df5f530f6e7a45";
+    version = "5eb9d59ae3b2878f3d82fb7370087218b425e5d7";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "82030c8522a1759b90857b19f4df5f530f6e7a45";
+      rev = "5eb9d59ae3b2878f3d82fb7370087218b425e5d7";
       fetchSubmodules = false;
-      sha256 = "sha256-devqIvO77lshs3R6acl+Zxs8TbFfccgr12LU91Ri6RI=";
+      sha256 = "sha256-EIqoWfXZNCew6Rx4Deoeu5Dpde8sF1WLrBc3WoI0mt8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-82030c8522a1759b90857b19f4df5f530f6e7a45/Cargo.lock;
+      lockFile = ./cdo-5eb9d59ae3b2878f3d82fb7370087218b425e5d7/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-23";
+    date = "2025-03-01";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -1758,16 +1758,16 @@
   };
   mdsf = {
     pname = "mdsf";
-    version = "v0.6.0";
+    version = "v0.6.1";
     src = fetchFromGitHub {
       owner = "hougesen";
       repo = "mdsf";
-      rev = "v0.6.0";
+      rev = "v0.6.1";
       fetchSubmodules = false;
-      sha256 = "sha256-whs5ABrhMHGq2zPg1QHBtwFiPZ2H7PhO4UQWEsCnxGw=";
+      sha256 = "sha256-GEiGbR/dmbobOJS4XkPnjYgljmVWU5I4sRikjOQmKTE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./mdsf-v0.6.0/Cargo.lock;
+      lockFile = ./mdsf-v0.6.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -1945,10 +1945,10 @@
   };
   numara = {
     pname = "numara";
-    version = "5.7.8";
+    version = "5.8.0";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v5.7.8/Numara-5.7.8-x86_64.AppImage";
-      sha256 = "sha256-MpDb91cyrLG6NBv4alIblwQPH8CPaSuaIe+jo9B46LQ=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v5.8.0/Numara-5.8.0-x86_64.AppImage";
+      sha256 = "sha256-V19KENe8PUeQw6CQKavUS8BuukAQhi6VwLZPa2I/WXA=";
     };
   };
   org-export = {
@@ -2064,15 +2064,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "112594d7c57c01f2df523b70cdc504128caed72d";
+    version = "55d830bc9d044284def324de59168c3b5bc5dd05";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "112594d7c57c01f2df523b70cdc504128caed72d";
+      rev = "55d830bc9d044284def324de59168c3b5bc5dd05";
       fetchSubmodules = false;
-      sha256 = "sha256-37Dp1QofLnd0L8nW8fmSn/KXkLwxLDOe0sIfPhzqCNs=";
+      sha256 = "sha256-p0tOqbU+YaUJdOHxCG6L/1KfwHAj1iGc9u0Zryr1RCw=";
     };
-    date = "2025-02-24";
+    date = "2025-03-01";
   };
   posting = {
     pname = "posting";
@@ -2550,13 +2550,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.6.7";
+    version = "v0.6.8";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.6.7";
+      rev = "v0.6.8";
       fetchSubmodules = false;
-      sha256 = "sha256-G+gArI3FyIu7DxSVIyb25Vw8v9ATgAWlAEuiFjQmuBY=";
+      sha256 = "sha256-KTWZoxjqfwJ8+7FDB9Rt9xVXxgDIQtVw8NIbpH/20Fg=";
     };
   };
   sprite-dicing = {
@@ -3158,18 +3158,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202502282212";
+    version = "202503012211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502282212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geoip.dat";
       sha256 = "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202502282212";
+    version = "202503012211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202502282212/geosite.dat";
-      sha256 = "sha256-TwCunq60wQd4NXlzQeKXbTUvZpeK5w9laNCuHHRkNeM=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geosite.dat";
+      sha256 = "sha256-ZK3m16NWmJvD9g/mbXkeVprQ/JIG3G4jB2cAWu2QCyk=";
     };
   };
   vim-auto-save = {
