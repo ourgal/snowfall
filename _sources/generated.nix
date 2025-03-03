@@ -2064,25 +2064,25 @@
   };
   pnut = {
     pname = "pnut";
-    version = "55d830bc9d044284def324de59168c3b5bc5dd05";
+    version = "dbd555266ac5cfb57d29e999d2395e3d3dd6744b";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "55d830bc9d044284def324de59168c3b5bc5dd05";
+      rev = "dbd555266ac5cfb57d29e999d2395e3d3dd6744b";
       fetchSubmodules = false;
-      sha256 = "sha256-p0tOqbU+YaUJdOHxCG6L/1KfwHAj1iGc9u0Zryr1RCw=";
+      sha256 = "sha256-FpfiSfBr9Ls14e9W5HqRLZWMXH6VdlNbNZKrJkZSYpg=";
     };
-    date = "2025-03-01";
+    date = "2025-03-03";
   };
   posting = {
     pname = "posting";
-    version = "2.3.1";
+    version = "2.4.0";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.3.1";
+      rev = "2.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-ekY29Bzq0V44+gXsGNbVebptej7vfoC1AqvF0DMV00U=";
+      sha256 = "sha256-xDhKNvDZ4yKq+gN2Pjdkn2YFGZ2IMTXBBWNo9S7KEjw=";
     };
   };
   powershell-beautifier = {
@@ -2485,21 +2485,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "44448fc9190aa474ff1b9707b921acbda4afdbcd";
+    version = "8473f2b528b89bec397f0fcfa2ac0d7f96e34b21";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "44448fc9190aa474ff1b9707b921acbda4afdbcd";
+      rev = "8473f2b528b89bec397f0fcfa2ac0d7f96e34b21";
       fetchSubmodules = false;
-      sha256 = "sha256-hEnQ/bcDksXvultwucAjoY64FM38J+Err74S5t8EA+g=";
+      sha256 = "sha256-1cLVP9789c29Dq3pnksHVhnmzUkFoTaI/thsCcdPLT8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-44448fc9190aa474ff1b9707b921acbda4afdbcd/Cargo.lock;
+      lockFile = ./simple-completion-language-server-8473f2b528b89bec397f0fcfa2ac0d7f96e34b21/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-25";
+    date = "2025-03-03";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -3158,18 +3158,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503012211";
+    version = "202503022212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503022212/geoip.dat";
       sha256 = "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503012211";
+    version = "202503022212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geosite.dat";
-      sha256 = "sha256-ZK3m16NWmJvD9g/mbXkeVprQ/JIG3G4jB2cAWu2QCyk=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503022212/geosite.dat";
+      sha256 = "sha256-kQRqzB+AZDDyDVe2XLwnKtRq+4XfQ63J4VsrylfDcIU=";
     };
   };
   vim-auto-save = {
