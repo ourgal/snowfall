@@ -3669,7 +3669,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2025-03-01",
+        "date": "2025-03-03",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3681,12 +3681,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "55d830bc9d044284def324de59168c3b5bc5dd05",
-            "sha256": "sha256-p0tOqbU+YaUJdOHxCG6L/1KfwHAj1iGc9u0Zryr1RCw=",
+            "rev": "dbd555266ac5cfb57d29e999d2395e3d3dd6744b",
+            "sha256": "sha256-FpfiSfBr9Ls14e9W5HqRLZWMXH6VdlNbNZKrJkZSYpg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "55d830bc9d044284def324de59168c3b5bc5dd05"
+        "version": "dbd555266ac5cfb57d29e999d2395e3d3dd6744b"
     },
     "posting": {
         "cargoLocks": null,
@@ -3702,12 +3702,12 @@
             "name": null,
             "owner": "darrenburns",
             "repo": "posting",
-            "rev": "2.3.1",
-            "sha256": "sha256-ekY29Bzq0V44+gXsGNbVebptej7vfoC1AqvF0DMV00U=",
+            "rev": "2.4.0",
+            "sha256": "sha256-xDhKNvDZ4yKq+gN2Pjdkn2YFGZ2IMTXBBWNo9S7KEjw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.3.1"
+        "version": "2.4.0"
     },
     "powershell-beautifier": {
         "cargoLocks": null,
@@ -4417,11 +4417,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-44448fc9190aa474ff1b9707b921acbda4afdbcd/Cargo.lock",
+                "./simple-completion-language-server-8473f2b528b89bec397f0fcfa2ac0d7f96e34b21/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-02-25",
+        "date": "2025-03-03",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -4433,12 +4433,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "44448fc9190aa474ff1b9707b921acbda4afdbcd",
-            "sha256": "sha256-hEnQ/bcDksXvultwucAjoY64FM38J+Err74S5t8EA+g=",
+            "rev": "8473f2b528b89bec397f0fcfa2ac0d7f96e34b21",
+            "sha256": "sha256-1cLVP9789c29Dq3pnksHVhnmzUkFoTaI/thsCcdPLT8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "44448fc9190aa474ff1b9707b921acbda4afdbcd"
+        "version": "8473f2b528b89bec397f0fcfa2ac0d7f96e34b21"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -5593,9 +5593,9 @@
             "name": null,
             "sha256": "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503022212/geoip.dat"
         },
-        "version": "202503012211"
+        "version": "202503022212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5606,11 +5606,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ZK3m16NWmJvD9g/mbXkeVprQ/JIG3G4jB2cAWu2QCyk=",
+            "sha256": "sha256-kQRqzB+AZDDyDVe2XLwnKtRq+4XfQ63J4VsrylfDcIU=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503012211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503022212/geosite.dat"
         },
-        "version": "202503012211"
+        "version": "202503022212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
