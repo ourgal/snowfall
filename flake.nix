@@ -156,6 +156,9 @@
           "openssl-1.1.1w" # for koreader
           "dotnet-sdk-6.0.428" # for sonarr
           "aspnetcore-runtime-6.0.36" # for sonarr
+          "emacs-with-doom-29.4"
+          "emacs-29.4"
+          "emacs-with-packages-29.4"
         ];
       };
 
