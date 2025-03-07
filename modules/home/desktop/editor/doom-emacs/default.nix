@@ -17,7 +17,7 @@ args.module (
       progs.doom-emacs = enabled // {
         doomDir = ./config;
         experimentalFetchTree = true; # Disable if there are fetcher issues
-        emacs = pkgs.emacs29;
+        emacs = pkgs.emacs-pgtk;
       };
       enable = [
         # keep-sorted start
