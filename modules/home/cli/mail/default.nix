@@ -4,6 +4,5 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "meli";
-    enable = "neomutt";
   }
 )
