@@ -1205,3 +1205,7 @@ fetch.github = "Ajatt-Tools/anki.koplugin"
 [wol]
 src.github = "Trugamr/wol"
 fetch.github = "Trugamr/wol"
+
+[emacs-magit-delta]
+src.git = "https://github.com/dandavison/magit-delta"
+fetch.github = "dandavison/magit-delta"
