@@ -9,7 +9,7 @@
   _sources,
 }:
 let
-  hash = "lo2iv5gYAqGOIBKIgOLNVc8qAACzxzTzhXjJdITNRLE=";
+  hash = "sha256-9/uj8W6dPL7ZolP5x0mXFqXuqNLcIUtf/J2rcoWhltU=";
 in
 stdenv.mkDerivation rec {
   inherit (_sources.cmdx) pname version;
