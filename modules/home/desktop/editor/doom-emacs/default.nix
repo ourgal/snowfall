@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) enabled;
+      inherit (args) enabled pkgs;
     in
     {
       path = ./.;
@@ -17,6 +17,7 @@ args.module (
       progs.doom-emacs = enabled // {
         doomDir = ./config;
         experimentalFetchTree = true; # Disable if there are fetcher issues
+        emacs = pkgs.emacs29;
       };
       enable = [
         # keep-sorted start
