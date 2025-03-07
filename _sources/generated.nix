@@ -488,21 +488,21 @@
   };
   dela = {
     pname = "dela";
-    version = "7f57ac6e3ede3e5efe0221e1ef460faca1458bd8";
+    version = "14257a72b4170eb7891d38a5bf27aae810ffa19c";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "7f57ac6e3ede3e5efe0221e1ef460faca1458bd8";
+      rev = "14257a72b4170eb7891d38a5bf27aae810ffa19c";
       fetchSubmodules = false;
-      sha256 = "sha256-p6uwOpTe7rHXeN9tN/zSQIr/8Gknn2jxO2aWVt0Ve6I=";
+      sha256 = "sha256-aaWes6Zx09KElVplosz7JEtBLmqLvNgKuRn/7l8IvAo=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-7f57ac6e3ede3e5efe0221e1ef460faca1458bd8/Cargo.lock;
+      lockFile = ./dela-14257a72b4170eb7891d38a5bf27aae810ffa19c/Cargo.lock;
       outputHashes = {
-        "makefile-lossless-0.1.7" = "sha256-buXPt7bKDXoK3/4ck6Eu6TZWG0dJCZiN2tfBYkz6DfE=";
+        
       };
     };
-    date = "2025-02-23";
+    date = "2025-03-06";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -706,6 +706,18 @@
       sha256 = "sha256-jSCnO6CRUVTlo3iGs8G2tj/vXF3b2lq/h6iyvYWVBDM=";
     };
     date = "2018-11-16";
+  };
+  emacs-magit-delta = {
+    pname = "emacs-magit-delta";
+    version = "5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616";
+    src = fetchFromGitHub {
+      owner = "dandavison";
+      repo = "magit-delta";
+      rev = "5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616";
+      fetchSubmodules = false;
+      sha256 = "sha256-PM79aVdjjuBNgHqiu215EWdjHf6/sWunezcI31Iu8M4=";
+    };
+    date = "2022-01-24";
   };
   emacs-miniflux = {
     pname = "emacs-miniflux";
@@ -950,13 +962,13 @@
   };
   flatpak-compose = {
     pname = "flatpak-compose";
-    version = "0.4.1";
+    version = "0.4.2";
     src = fetchFromGitHub {
       owner = "faan11";
       repo = "flatpak-compose";
-      rev = "0.4.1";
+      rev = "0.4.2";
       fetchSubmodules = false;
-      sha256 = "sha256-lRjH9Kj8WuZdW5eQFmn5La3nmFznoQeRI4KrP64HhsE=";
+      sha256 = "sha256-o3OL+RccbVfjNW8h5nprfUiVpJDgaI1IJior6rq1dEc=";
     };
   };
   focus = {
@@ -2919,15 +2931,15 @@
   };
   tmux-power-zoom = {
     pname = "tmux-power-zoom";
-    version = "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac";
+    version = "84b8e3dd5b7e10db793ac925e1e65fe204a4e47b";
     src = fetchFromGitHub {
       owner = "jaclu";
       repo = "tmux-power-zoom";
-      rev = "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac";
+      rev = "84b8e3dd5b7e10db793ac925e1e65fe204a4e47b";
       fetchSubmodules = false;
-      sha256 = "sha256-WdA4QwqPkUPrCzb/qm3kSKSDD0DtDMIzkwC5wXQ0oKE=";
+      sha256 = "sha256-IddpiE3ZLIRk14O90Ovpc+mbj+74nNtwMhYIci4FLSI=";
     };
-    date = "2024-12-21";
+    date = "2025-03-06";
   };
   tmux-tea = {
     pname = "tmux-tea";
@@ -3158,18 +3170,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503052212";
+    version = "202503062212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503052212/geoip.dat";
-      sha256 = "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geoip.dat";
+      sha256 = "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503052212";
+    version = "202503062212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503052212/geosite.dat";
-      sha256 = "sha256-TcYyi9JnqA8g57w+TKiCe0UM3DxeU7sLJFgU3KhdbaQ=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geosite.dat";
+      sha256 = "sha256-8izNzCpdahx6kVCIoms2ZNjoLerDvw69HfeyQaxTPQ4=";
     };
   };
   vim-auto-save = {

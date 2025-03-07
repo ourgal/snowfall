@@ -852,13 +852,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-7f57ac6e3ede3e5efe0221e1ef460faca1458bd8/Cargo.lock",
-                {
-                    "makefile-lossless-0.1.7": "sha256-buXPt7bKDXoK3/4ck6Eu6TZWG0dJCZiN2tfBYkz6DfE="
-                }
+                "./dela-14257a72b4170eb7891d38a5bf27aae810ffa19c/Cargo.lock",
+                {}
             ]
         },
-        "date": "2025-02-23",
+        "date": "2025-03-06",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -870,12 +868,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "7f57ac6e3ede3e5efe0221e1ef460faca1458bd8",
-            "sha256": "sha256-p6uwOpTe7rHXeN9tN/zSQIr/8Gknn2jxO2aWVt0Ve6I=",
+            "rev": "14257a72b4170eb7891d38a5bf27aae810ffa19c",
+            "sha256": "sha256-aaWes6Zx09KElVplosz7JEtBLmqLvNgKuRn/7l8IvAo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7f57ac6e3ede3e5efe0221e1ef460faca1458bd8"
+        "version": "14257a72b4170eb7891d38a5bf27aae810ffa19c"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -1248,6 +1246,27 @@
             "type": "github"
         },
         "version": "287108ed1d6885dc795eb3bad4476aa08c626186"
+    },
+    "emacs-magit-delta": {
+        "cargoLocks": null,
+        "date": "2022-01-24",
+        "extract": null,
+        "name": "emacs-magit-delta",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dandavison",
+            "repo": "magit-delta",
+            "rev": "5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616",
+            "sha256": "sha256-PM79aVdjjuBNgHqiu215EWdjHf6/sWunezcI31Iu8M4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616"
     },
     "emacs-miniflux": {
         "cargoLocks": null,
@@ -1687,12 +1706,12 @@
             "name": null,
             "owner": "faan11",
             "repo": "flatpak-compose",
-            "rev": "0.4.1",
-            "sha256": "sha256-lRjH9Kj8WuZdW5eQFmn5La3nmFznoQeRI4KrP64HhsE=",
+            "rev": "0.4.2",
+            "sha256": "sha256-o3OL+RccbVfjNW8h5nprfUiVpJDgaI1IJior6rq1dEc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.4.1"
+        "version": "0.4.2"
     },
     "focus": {
         "cargoLocks": null,
@@ -5159,7 +5178,7 @@
     },
     "tmux-power-zoom": {
         "cargoLocks": null,
-        "date": "2024-12-21",
+        "date": "2025-03-06",
         "extract": null,
         "name": "tmux-power-zoom",
         "passthru": null,
@@ -5171,12 +5190,12 @@
             "name": null,
             "owner": "jaclu",
             "repo": "tmux-power-zoom",
-            "rev": "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac",
-            "sha256": "sha256-WdA4QwqPkUPrCzb/qm3kSKSDD0DtDMIzkwC5wXQ0oKE=",
+            "rev": "84b8e3dd5b7e10db793ac925e1e65fe204a4e47b",
+            "sha256": "sha256-IddpiE3ZLIRk14O90Ovpc+mbj+74nNtwMhYIci4FLSI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3a1de2280e9b7ffcb8efd009fc87fd34ecbb14ac"
+        "version": "84b8e3dd5b7e10db793ac925e1e65fe204a4e47b"
     },
     "tmux-tea": {
         "cargoLocks": null,
@@ -5591,11 +5610,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MAe2RwZqHHm63MnMYvOKbsNSLTnfwpl6cvH6d1gyzHU=",
+            "sha256": "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503052212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geoip.dat"
         },
-        "version": "202503052212"
+        "version": "202503062212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5606,11 +5625,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-TcYyi9JnqA8g57w+TKiCe0UM3DxeU7sLJFgU3KhdbaQ=",
+            "sha256": "sha256-8izNzCpdahx6kVCIoms2ZNjoLerDvw69HfeyQaxTPQ4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503052212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geosite.dat"
         },
-        "version": "202503052212"
+        "version": "202503062212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
