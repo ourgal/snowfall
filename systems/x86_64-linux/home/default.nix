@@ -42,6 +42,7 @@ in
       "scrutiny"
       "sops-nix"
       "syncthing"
+      "temp-hosts"
       "tpm"
       "tuptime"
       "udev"
