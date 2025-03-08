@@ -2088,13 +2088,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.4.1";
+    version = "2.5.1";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.4.1";
+      rev = "2.5.1";
       fetchSubmodules = false;
-      sha256 = "sha256-nZ1zlE0xDEs+xY39mnWcqNWPzJjvS5LyMlnxkfh0yds=";
+      sha256 = "sha256-4I1GXRYB9OBlqFwZPYHJewtuAvBNXCdxJw11PAz4J8s=";
     };
   };
   powershell-beautifier = {
@@ -3003,15 +3003,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "95474a154836f1c1577312ae5687256262f8e5a7";
+    version = "fe78338225da3c371255401bb39041cdc33fc709";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "95474a154836f1c1577312ae5687256262f8e5a7";
+      rev = "fe78338225da3c371255401bb39041cdc33fc709";
       fetchSubmodules = false;
-      sha256 = "sha256-ZqXOU1gDk7fDU/Ve7pv9s+T/LZ+AxGarHwf3XIBRYzc=";
+      sha256 = "sha256-gEZ/XdA2n2vScfnVPUTVpeUnsaTVT0kwDbl+Jzv2c7c=";
     };
-    date = "2025-03-06";
+    date = "2025-03-08";
   };
   to-fish = {
     pname = "to-fish";
@@ -3170,18 +3170,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503062212";
+    version = "202503072210";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503072210/geoip.dat";
       sha256 = "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503062212";
+    version = "202503072210";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503062212/geosite.dat";
-      sha256 = "sha256-8izNzCpdahx6kVCIoms2ZNjoLerDvw69HfeyQaxTPQ4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503072210/geosite.dat";
+      sha256 = "sha256-QVjQFHgorbfxwGUMN+9cvDFOwT3eHt0BVZer+2uy+30=";
     };
   };
   vim-auto-save = {
