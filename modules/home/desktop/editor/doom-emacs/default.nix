@@ -26,6 +26,7 @@ args.module (
         "magit-stats"
         "magit-todos"
         "move-text"
+        "nftables-mode"
         "nov"
         "pangu-spacing"
         "perltidy"
