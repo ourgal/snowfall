@@ -1,19 +1,26 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args)
+    namespace
+    lib
+    pkgs
+    config
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
     ip
     domain
+    mkOpt'
+    cfgNixos
     ;
-  port = 53;
+  cfg = cfgNixos config.${namespace} ./.;
   redisPort = 6379;
   geoip = pkgs._sources.v2ray-rules-dat-geoip.src;
   geosite = pkgs._sources.v2ray-rules-dat-geosite.src;
-  config = pkgs.writeText "config.yaml" (
+  configFile = pkgs.writeText "config.yaml" (
     builtins.toJSON {
-      server_addr = ":${toString port}";
+      server_addr = ":${toString cfg.port}";
       cache_size = 0;
       lazy_cache_ttl = 86400;
       lazy_cache_reply_ttl = 30;
@@ -52,10 +59,10 @@ let
       requires = [ "network-online.target" ];
       after = [ "network-online.target" ];
       wantedBy = [ "multi-user.target" ];
-      environment._reloadConfig = "${config}${geoip}${geosite}";
+      environment._reloadConfig = "${configFile}${geoip}${geosite}";
       serviceConfig = rec {
         Type = "simple";
-        ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config ${config}";
+        ExecStart = "${pkgs.${namespace}.mosdns-cn}/bin/mosdns-cn --config ${configFile}";
         Restart = "always";
         DynamicUser = true;
         StateDirectory = "mosdns-cn";
@@ -98,11 +105,21 @@ let
       port = redisPort;
     };
     networking.firewall = {
-      allowedTCPPorts = [ port ];
-      allowedUDPPorts = [ port ];
+      allowedTCPPorts = [ cfg.port ];
+      allowedUDPPorts = [ cfg.port ];
     };
   };
+  extraOpts = {
+    port = mkOpt' lib.types.int 53;
+  };
   path = ./.;
-  _args = { inherit value path args; };
+  _args = {
+    inherit
+      value
+      path
+      args
+      extraOpts
+      ;
+  };
 in
 nixosModule _args
