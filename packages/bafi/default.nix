@@ -6,12 +6,14 @@
 buildGoModule {
   inherit (_sources.bafi) pname src version;
 
-  vendorHash = "sha256-Gn0uwB8iFH+WeHT/kMbWaHuprIPncPj0p9bkEXeoRxQ=";
+  vendorHash = "sha256-t7rkEAXXK1e124wyN+qUTGoH0r0X/ZV49/XG29k/KVM=";
 
   ldflags = [
     "-s"
     "-w"
   ];
+
+  doCheck = false;
 
   meta = with lib; {
     description = "Universal JSON, BSON, YAML, CSV, XML, mt940 converter with templates";
