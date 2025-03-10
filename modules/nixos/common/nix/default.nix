@@ -12,13 +12,21 @@ let
     disabled
     enabled
     ip
+    mkOpt'
+    cfgNixos
     ;
+  cfg = cfgNixos config.${namespace} ./.;
+  mirror =
+    if cfg.mirror == "nju" then
+      "https://mirror.nju.edu.cn/nix-channels/store"
+    else
+      "https://mirrors.cernet.edu.cn/nix-channels/store";
   value = {
     nix =
       let
         mirrors = [
           "http://${ip.home}:50000"
-          "https://mirrors.cernet.edu.cn/nix-channels/store"
+          "${mirror}"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org"
         ];
@@ -74,7 +82,20 @@ let
     };
     systemd.services.nix-daemon.environment = lib.${namespace}.proxy.go;
   };
+  extraOpts = {
+    mirror = mkOpt' (lib.types.enum [
+      "cernet"
+      "nju"
+    ]) "nju";
+  };
   path = ./.;
-  _args = { inherit value path args; };
+  _args = {
+    inherit
+      value
+      path
+      args
+      extraOpts
+      ;
+  };
 in
 nixosModule _args
