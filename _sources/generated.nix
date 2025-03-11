@@ -155,6 +155,17 @@
       sha256 = "sha256-CnUTTjvlVqcHC2OL0/gp+jPx4vULlj8whYA1BAF4NIs=";
     };
   };
+  bilix = {
+    pname = "bilix";
+    version = "0.18.9";
+    src = fetchFromGitHub {
+      owner = "HFrost0";
+      repo = "bilix";
+      rev = "0.18.9";
+      fetchSubmodules = false;
+      sha256 = "sha256-lBCh4T9NEK8JZctwiPQJSirZ/EoTs4hIpoaqt9TSydo=";
+    };
+  };
   blendr = {
     pname = "blendr";
     version = "v1.3.3";
@@ -193,6 +204,14 @@
       rev = "0.3.0";
       fetchSubmodules = false;
       sha256 = "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=";
+    };
+  };
+  bs4 = {
+    pname = "bs4";
+    version = "0.0.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/b/bs4/bs4-0.0.2.tar.gz";
+      sha256 = "sha256-pIaFxY9Q/hJ3IkF7roP+a631ANVLVffjn/5Dt5hlOSU=";
     };
   };
   bt = {
@@ -462,6 +481,14 @@
       rev = "v1.1.1";
       fetchSubmodules = false;
       sha256 = "sha256-Pzw25vnK2FMeVqNyUfPHmysGBbf6i8c6SGYpoT0EgP4=";
+    };
+  };
+  danmakuc = {
+    pname = "danmakuc";
+    version = "0.3.6";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/d/danmakuC/danmakuC-0.3.6.tar.gz";
+      sha256 = "sha256-22t9zz26FZXAijem8n+SX7QLm4wRD/AThyrFdcnDATI=";
     };
   };
   datadash = {
@@ -1770,16 +1797,16 @@
   };
   mdsf = {
     pname = "mdsf";
-    version = "v0.8.0";
+    version = "v0.8.1";
     src = fetchFromGitHub {
       owner = "hougesen";
       repo = "mdsf";
-      rev = "v0.8.0";
+      rev = "v0.8.1";
       fetchSubmodules = false;
-      sha256 = "sha256-fi/xCmyniw0SrE4/EIFFlWzbZWuKWsVAPoEL1nt8/SU=";
+      sha256 = "sha256-5DFuOYy5C8y+pYDCTwcI9uGxh2kahFLwWMUIZ15+fkA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./mdsf-v0.8.0/Cargo.lock;
+      lockFile = ./mdsf-v0.8.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -2165,6 +2192,14 @@
       sha256 = "sha256-HJlzGI7OPjAeLvriWi2ieflP2LIKxRYRaPOG1hXn8qg=";
     };
   };
+  pymp4 = {
+    pname = "pymp4";
+    version = "1.4.0";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/pymp4/pymp4-1.4.0.tar.gz";
+      sha256 = "sha256-vJ53cyqKFD00w4qoYqVBgHFiRpOOS/PgdYXRklK3e7U=";
+    };
+  };
   pypipe = {
     pname = "pypipe";
     version = "v0.4.1";
@@ -2497,21 +2532,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "a235bf7882859c75271bdb76668c4f1275d2fc19";
+    version = "926ad987b8c1c1044f5290f71967326e9f54cb9b";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "a235bf7882859c75271bdb76668c4f1275d2fc19";
+      rev = "926ad987b8c1c1044f5290f71967326e9f54cb9b";
       fetchSubmodules = false;
-      sha256 = "sha256-dJSz1GlMi8DQNWt6N+EnDaH+RrhgFzdvx0IeW9OUBbw=";
+      sha256 = "sha256-3o5PlmyEOtAmM0HvQJven6krK7istEZoJvSGOslsxSo=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-a235bf7882859c75271bdb76668c4f1275d2fc19/Cargo.lock;
+      lockFile = ./simple-completion-language-server-926ad987b8c1c1044f5290f71967326e9f54cb9b/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-03-05";
+    date = "2025-03-11";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -2683,13 +2718,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.27.2";
+    version = "v0.27.3";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.27.2";
+      rev = "v0.27.3";
       fetchSubmodules = false;
-      sha256 = "sha256-gV/uuO1YmEdMQ7209RJsTE51YaC9fhdqMz3qRZG7ffA=";
+      sha256 = "sha256-nqHjbZYcQv5czOUN/m8UAvjRIrIYRHwzbliZSMGFsb8=";
     };
   };
   task-relative-recur = {
@@ -3003,15 +3038,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "704af091961c07904404bcbf8cc87d2ba5b629fb";
+    version = "b4b8a00975205e54f15503031811c2550a0a329d";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "704af091961c07904404bcbf8cc87d2ba5b629fb";
+      rev = "b4b8a00975205e54f15503031811c2550a0a329d";
       fetchSubmodules = false;
-      sha256 = "sha256-SvU6+ZvyiwlMhX0soP1KK++IRstt7XkaM9cT7WZ48O0=";
+      sha256 = "sha256-3Y/0cy86arHc/OenO+Oi92YAWoOgrdXFyCXiXgoknpI=";
     };
-    date = "2025-03-09";
+    date = "2025-03-11";
   };
   to-fish = {
     pname = "to-fish";
@@ -3170,18 +3205,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503092210";
+    version = "202503102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503092210/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503102212/geoip.dat";
       sha256 = "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503092210";
+    version = "202503102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503092210/geosite.dat";
-      sha256 = "sha256-MdJLSKIw257SHmK/OyZziXV09ULRo0E++CgBtFINniE=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503102212/geosite.dat";
+      sha256 = "sha256-/oRJnVkfBLIQ7IfKIUTl8x4fb7Z1/eYSQPfKzw2tKRU=";
     };
   };
   vim-auto-save = {
