@@ -37,6 +37,7 @@ args.module (
       "notification"
       "presentation"
       "prompt"
+      "proxy"
       "qrcode"
       "reader"
       "recording"
