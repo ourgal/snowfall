@@ -155,6 +155,17 @@
       sha256 = "sha256-CnUTTjvlVqcHC2OL0/gp+jPx4vULlj8whYA1BAF4NIs=";
     };
   };
+  bestsub = {
+    pname = "bestsub";
+    version = "v0.2.8";
+    src = fetchFromGitHub {
+      owner = "bestruirui";
+      repo = "BestSub";
+      rev = "v0.2.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-854ozR4zH+ljro1zqqxJtsMc559O3pXH2U8ig7qz7KU=";
+    };
+  };
   bilix = {
     pname = "bilix";
     version = "0.18.9";
