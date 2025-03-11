@@ -1209,3 +1209,19 @@ fetch.github = "Trugamr/wol"
 [emacs-magit-delta]
 src.git = "https://github.com/dandavison/magit-delta"
 fetch.github = "dandavison/magit-delta"
+
+[danmakuc]
+src.pypi = "danmakuC"
+fetch.pypi = "danmakuC"
+
+[bs4]
+src.pypi = "bs4"
+fetch.pypi = "bs4"
+
+[pymp4]
+src.pypi = "pymp4"
+fetch.pypi = "pymp4"
+
+[bilix]
+src.github = "HFrost0/bilix"
+fetch.github = "HFrost0/bilix"
