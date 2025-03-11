@@ -9,6 +9,11 @@ args.module (
         lib
         config
         ;
+      __done_notification_command =
+        if config.${namespace}.user.terminal == "kitty" then
+          ''set -gx __done_notification_command "${pkgs.libnotify}/bin/notify-send \$title \$message"''
+        else
+          null;
     in
     {
       path = ./.;
@@ -22,6 +27,7 @@ args.module (
             # slashslash-fish
             slashslash plugin --unregister buck
             slashslash enable make
+            ${__done_notification_command}
           '';
         shellAbbrs = {
           sc = "systemctl";
