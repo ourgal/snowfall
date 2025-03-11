@@ -1225,3 +1225,7 @@ fetch.pypi = "pymp4"
 [bilix]
 src.github = "HFrost0/bilix"
 fetch.github = "HFrost0/bilix"
+
+[bestsub]
+src.github = "bestruirui/BestSub"
+fetch.github = "bestruirui/BestSub"

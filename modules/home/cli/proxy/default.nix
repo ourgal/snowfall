@@ -3,7 +3,10 @@ args.module (
   args
   // {
     path = ./.;
-    myPkgs = "v2dat";
+    myPkgs = [
+      "bestsub"
+      "v2dat"
+    ];
     nixPkgs = "gg";
   }
 )
