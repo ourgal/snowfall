@@ -1229,3 +1229,7 @@ fetch.github = "HFrost0/bilix"
 [bestsub]
 src.github = "bestruirui/BestSub"
 fetch.github = "bestruirui/BestSub"
+
+[douyin-downloader]
+src.git = "https://github.com/jiji262/douyin-downloader"
+fetch.github = "jiji262/douyin-downloader"
