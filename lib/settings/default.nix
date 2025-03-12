@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, namespace, ... }:
 let
   allHosts = [
     "air"
@@ -34,6 +34,35 @@ in
       windows
       ;
     hostType = lib.types.enum allHosts;
+    laptopModules = lib.${namespace}.enabledList [
+      # keep-sorted start
+      "appimage"
+      "audio"
+      "bandwhich"
+      "bluetooth"
+      "common"
+      "desktop"
+      "envfs"
+      "fonts"
+      "gpu-screen-recorder"
+      "harmonia"
+      "input"
+      "kmonad"
+      "laptop"
+      "location"
+      "logrotate"
+      "nh"
+      "pcscd"
+      "power"
+      "scrutiny"
+      "sops-nix"
+      "syncthing"
+      "tpm"
+      "tuptime"
+      "udev"
+      "udisks2"
+      # keep-sorted end
+    ];
   };
   homeSpecialArgs =
     hosts: args: builtins.foldl' (acc: v: acc // { "zxc@${v}".specialArgs = args; }) { } hosts;
