@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "bilix"
       "dirdl"
+      "douyin-downloader"
       "dra"
       "goodls"
       "imgboxdwl"
