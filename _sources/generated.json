@@ -3781,7 +3781,7 @@
     },
     "pnut": {
         "cargoLocks": null,
-        "date": "2025-03-11",
+        "date": "2025-03-12",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -3793,12 +3793,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "5b922d941fdeacf82506791ba0ca59b4216c2df4",
-            "sha256": "sha256-jhL1yWxwKoC/oHmXzJXNT0E0mYzyT2mCFFsgK2xsHho=",
+            "rev": "2fca563fd871199bf4570ec880d4f4812c69cbca",
+            "sha256": "sha256-UZZXUdaE+rUNauNmH4Vwx1ugLG9ofKynXWKfu2wstD0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5b922d941fdeacf82506791ba0ca59b4216c2df4"
+        "version": "2fca563fd871199bf4570ec880d4f4812c69cbca"
     },
     "posting": {
         "cargoLocks": null,
@@ -4027,6 +4027,27 @@
             "type": "github"
         },
         "version": "87e0bd6813cb9cc66b353bb286b4032f447620c2"
+    },
+    "qute-translate-popup": {
+        "cargoLocks": null,
+        "date": "2025-01-06",
+        "extract": null,
+        "name": "qute-translate-popup",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "l4l4l4l4",
+            "repo": "qute-translate-popup",
+            "rev": "d79c20acc172574731fb700e34c4207f632aa458",
+            "sha256": "sha256-6h+VkPbUaH/x1LDk7Tm0+NRKgNJV7JHuXAl4YuyQ77s=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "d79c20acc172574731fb700e34c4207f632aa458"
     },
     "radio-go-go": {
         "cargoLocks": null,
@@ -5720,9 +5741,9 @@
             "name": null,
             "sha256": "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503112212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geoip.dat"
         },
-        "version": "202503112212"
+        "version": "202503122212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5733,11 +5754,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-tLm/pEJfVUgMCSjpWiCQfxdTOQnBwCSqwFU/NZh3FLE=",
+            "sha256": "sha256-8f+NnSh1Nf+Iesfw11QoUkxz3ELYd7nhCgzt+lLUAfo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503112212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geosite.dat"
         },
-        "version": "202503112212"
+        "version": "202503122212"
     },
     "vim-auto-save": {
         "cargoLocks": null,

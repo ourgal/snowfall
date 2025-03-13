@@ -2126,15 +2126,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "5b922d941fdeacf82506791ba0ca59b4216c2df4";
+    version = "2fca563fd871199bf4570ec880d4f4812c69cbca";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "5b922d941fdeacf82506791ba0ca59b4216c2df4";
+      rev = "2fca563fd871199bf4570ec880d4f4812c69cbca";
       fetchSubmodules = false;
-      sha256 = "sha256-jhL1yWxwKoC/oHmXzJXNT0E0mYzyT2mCFFsgK2xsHho=";
+      sha256 = "sha256-UZZXUdaE+rUNauNmH4Vwx1ugLG9ofKynXWKfu2wstD0=";
     };
-    date = "2025-03-11";
+    date = "2025-03-12";
   };
   posting = {
     pname = "posting";
@@ -2257,6 +2257,18 @@
       sha256 = "sha256-1nZFWCuT8k9siQoIxo4lFzjiFfs3lx2f9bVZjtChdw0=";
     };
     date = "2024-12-20";
+  };
+  qute-translate-popup = {
+    pname = "qute-translate-popup";
+    version = "d79c20acc172574731fb700e34c4207f632aa458";
+    src = fetchFromGitHub {
+      owner = "l4l4l4l4";
+      repo = "qute-translate-popup";
+      rev = "d79c20acc172574731fb700e34c4207f632aa458";
+      fetchSubmodules = false;
+      sha256 = "sha256-6h+VkPbUaH/x1LDk7Tm0+NRKgNJV7JHuXAl4YuyQ77s=";
+    };
+    date = "2025-01-06";
   };
   radio-go-go = {
     pname = "radio-go-go";
@@ -3228,18 +3240,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503112212";
+    version = "202503122212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503112212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geoip.dat";
       sha256 = "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503112212";
+    version = "202503122212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503112212/geosite.dat";
-      sha256 = "sha256-tLm/pEJfVUgMCSjpWiCQfxdTOQnBwCSqwFU/NZh3FLE=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geosite.dat";
+      sha256 = "sha256-8f+NnSh1Nf+Iesfw11QoUkxz3ELYd7nhCgzt+lLUAfo=";
     };
   };
   vim-auto-save = {
