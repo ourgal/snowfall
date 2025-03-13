@@ -2138,13 +2138,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.5.2";
+    version = "2.5.3";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.5.2";
+      rev = "2.5.3";
       fetchSubmodules = false;
-      sha256 = "sha256-m8oDLC6kjIJyWocasTdylMHE1lA/jWrLQX9Dt7Ei7jo=";
+      sha256 = "sha256-ORAr9YSRZi1Ei40ObVrOVz6mS+iXXN0xrf/y/slJUJ8=";
     };
   };
   powershell-beautifier = {
