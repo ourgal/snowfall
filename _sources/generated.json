@@ -3814,12 +3814,12 @@
             "name": null,
             "owner": "darrenburns",
             "repo": "posting",
-            "rev": "2.5.2",
-            "sha256": "sha256-m8oDLC6kjIJyWocasTdylMHE1lA/jWrLQX9Dt7Ei7jo=",
+            "rev": "2.5.3",
+            "sha256": "sha256-ORAr9YSRZi1Ei40ObVrOVz6mS+iXXN0xrf/y/slJUJ8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.5.2"
+        "version": "2.5.3"
     },
     "powershell-beautifier": {
         "cargoLocks": null,
