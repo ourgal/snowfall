@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace pkgs lib;
+      inherit (args) pkgs lib namespace;
     in
     {
       path = ./.;
@@ -51,6 +51,9 @@ args.module (
             "p" = "open -t {clipboard}";
             "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
+            "\\\\q" = "spawn --userscript qr";
+            "\\\\p" = "spawn --userscript qute-pass --mode gopass";
+            "tt" = "spawn --userscript translate --target_lang zh";
           };
         };
         quickmarks = lib.importTOML ./quickmarks.key;
@@ -73,7 +76,13 @@ args.module (
           })
         ];
       };
-      value.${namespace}.dev.python.global.pkgs = p: [ p.adblock ];
+      value = {
+        xdg.configFile = {
+          "qutebrowser/userscripts/translate".source = "${
+            pkgs.${namespace}.qute-translate-popup
+          }/bin/translate";
+        };
+      };
     }
   )
 )

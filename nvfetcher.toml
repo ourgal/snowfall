@@ -1233,3 +1233,7 @@ fetch.github = "bestruirui/BestSub"
 [douyin-downloader]
 src.git = "https://github.com/jiji262/douyin-downloader"
 fetch.github = "jiji262/douyin-downloader"
+
+[qute-translate-popup]
+src.git = "https://github.com/l4l4l4l4/qute-translate-popup"
+fetch.github = "l4l4l4l4/qute-translate-popup"
