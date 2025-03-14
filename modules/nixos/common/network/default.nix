@@ -12,7 +12,7 @@ let
   inherit (lib.${namespace}.settings) laptops;
   value = {
     networking = {
-      networkmanager = enabled // {
+      networkmanager = (if (builtins.elem host laptops) then enabled else disabled) // {
         wifi.backend = "iwd";
       };
       # useDHCP = false;
