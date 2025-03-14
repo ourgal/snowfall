@@ -137,7 +137,7 @@ let
         tag = "🤖 人工智能";
         outbounds = countriesTags ++ [ main.tag ];
       };
-      game = {
+      games = {
         type = "selector";
         tag = "🎮 游戏平台";
         outbounds = [
@@ -230,7 +230,7 @@ let
     foreign
     telegram
     ai
-    game
+    games
     microsoft
     google
     apple
@@ -240,7 +240,7 @@ let
     global
     direct
     block
-    outbounds.dns
+    dns
   ];
   dnsServers = rec {
     direct = {
@@ -280,85 +280,32 @@ let
       detour = outbounds.direct.tag;
     };
   };
-  ruleSet = {
-    private = {
-      type = "remote";
-      tag = "private";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/private.srs";
-      download_detour = outbounds.direct.tag;
+  ruleSet =
+    let
+      go = tag: {
+        inherit tag;
+        type = "remote";
+        format = "binary";
+        url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/${tag}.srs";
+        download_detour = outbounds.direct.tag;
+      };
+    in
+    {
+      private = go "private";
+      ai = go "ai";
+      microsoft = go "microsoft-cn";
+      apple = go "apple-cn";
+      google = go "google-cn";
+      games = go "games-cn";
+      networktest = go "networktest";
+      proxy = go "proxy";
+      cn = go "cn";
+      telegram = go "telegramip";
+      cn_ip = go "cnip";
+      ads = go "ads";
+      netflix = go "netflix";
+      netflix_ip = go "netflixip";
     };
-    ai = {
-      type = "remote";
-      tag = "ai";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/ai.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    microsoft = {
-      type = "remote";
-      tag = "microsoft-cn";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/microsoft-cn.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    apple = {
-      type = "remote";
-      tag = "apple-cn";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/apple-cn.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    google = {
-      type = "remote";
-      tag = "google-cn";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/google-cn.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    games = {
-      type = "remote";
-      tag = "games-cn";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/games-cn.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    networktest = {
-      type = "remote";
-      tag = "networktest";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/networktest.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    proxy = {
-      type = "remote";
-      tag = "proxy";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/proxy.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    cn = {
-      type = "remote";
-      tag = "cn";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/cn.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    telegram_ip = {
-      type = "remote";
-      tag = "telegramip";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/telegramip.srs";
-      download_detour = outbounds.direct.tag;
-    };
-    cn_ip = {
-      type = "remote";
-      tag = "cnip";
-      format = "binary";
-      url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/cnip.srs";
-      download_detour = outbounds.direct.tag;
-    };
-  };
 in
 {
   sing-box = {
@@ -544,47 +491,55 @@ in
         outbound = outbounds.direct.tag;
       }
       {
-        rule_set = "private";
+        rule_set = ruleSet.private.tag;
         outbound = outbounds.foreign.tag;
       }
       {
-        rule_set = "ai";
+        rule_set = ruleSet.ai.tag;
         outbound = outbounds.ai.tag;
       }
       {
-        rule_set = "microsoft-cn";
+        rule_set = ruleSet.microsoft.tag;
         outbound = outbounds.microsoft.tag;
       }
       {
-        rule_set = "apple-cn";
+        rule_set = ruleSet.apple.tag;
         outbound = outbounds.apple.tag;
       }
       {
-        rule_set = "google-cn";
+        rule_set = ruleSet.google.tag;
         outbound = outbounds.google.tag;
       }
       {
-        rule_set = "games-cn";
-        outbound = outbounds.game.tag;
+        rule_set = ruleSet.games.tag;
+        outbound = outbounds.games.tag;
       }
       {
-        rule_set = "networktest";
+        rule_set = ruleSet.networktest.tag;
         outbound = outbounds.networktest.tag;
       }
       {
-        rule_set = "proxy";
+        rule_set = ruleSet.proxy.tag;
         outbound = outbounds.main.tag;
       }
       {
-        rule_set = "cn";
+        rule_set = ruleSet.cn.tag;
         outbound = outbounds.direct.tag;
       }
       {
-        rule_set = "telegramip";
+        rule_set = ruleSet.telegram.tag;
         outbound = outbounds.telegram.tag;
       }
       {
-        rule_set = "cnip";
+        rule_set = ruleSet.netflix.tag;
+        outbound = outbounds.netflix.tag;
+      }
+      {
+        rule_set = ruleSet.netflix_ip.tag;
+        outbound = outbounds.netflix.tag;
+      }
+      {
+        rule_set = ruleSet.cn_ip.tag;
         outbound = outbounds.direct.tag;
       }
     ];
