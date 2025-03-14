@@ -15,7 +15,7 @@ in
     gpu.intel = enabled;
     firewall.disable = enabled;
     disko = enabled;
-  } // settings.laptopModule;
+  } // settings.laptopModules;
 
   snowfallorg.users.${user}.home = disabled;
 
