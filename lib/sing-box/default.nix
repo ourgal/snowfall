@@ -247,11 +247,13 @@ let
       tag = "dns_direct";
       address = "https://223.5.5.5/dns-query";
       address_resolver = resolver.tag;
+      strategy = "prefer_ipv4";
       detour = outbounds.direct.tag;
     };
     proxy = {
       tag = "dns_proxy";
       address = "https://1.0.0.1/dns-query";
+      strategy = "prefer_ipv4";
       address_resolver = resolver.tag;
     };
     resolver = {

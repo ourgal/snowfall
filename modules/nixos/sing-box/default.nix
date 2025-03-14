@@ -41,6 +41,10 @@ let
       ];
       server = dnsServers.hosts_local.tag;
     }
+    {
+      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
+      server = dnsServers.direct.tag;
+    }
   ];
   customRouteRules = [
     {
@@ -68,7 +72,7 @@ let
     8443
   ];
   proxyPorts' = builtins.concatStringsSep "," (builtins.map (x: toString x) proxyPorts);
-  reserved_subnets = [
+  reservedSubnets = [
     "0.0.0.0/8"
     "10.0.0.0/8"
     "127.0.0.0/8"
@@ -79,7 +83,7 @@ let
     "224.0.0.0/4"
     "240.0.0.0/4"
   ];
-  reserved_subnets_v6 = [
+  reservedSubnetsV6 = [
     "fe80::/10"
     "fd00::/8"
     "::/128"
@@ -125,7 +129,7 @@ let
           };
           clash_api = {
             external_controller = "0.0.0.0:${toString apiPort}";
-            external_ui = "${pkgs.metacubexd}";
+            external_ui = pkgs.metacubexd;
             external_ui_download_url = "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip"; # if external_ui is empty
             secret = "";
             default_mode = "Rule";
@@ -273,7 +277,7 @@ let
                   "-A ${natTable} -s ${subnet} -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
                   "-A ${natTable} -s ${subnet} -p udp -j REDIRECT --to-ports ${toString redirectPort}"
                 ]
-                ++ map (x: "-A ${natTable} -d ${x} -j RETURN") reserved_subnets
+                ++ map (x: "-A ${natTable} -d ${x} -j RETURN") reservedSubnets
                 ++ [
                   "-A ${natTableDns} -m mark --mark ${FirewallMark} -j RETURN"
                   "-A ${natTableDns} -s ${subnet} -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
@@ -356,7 +360,7 @@ let
                   "-A ${natTableV6} -p udp -m udp --dport 53 -j RETURN"
                   "-A ${natTableV6} -m mark --mark ${FirewallMark} -j RETURN"
                 ]
-                ++ map (x: "-A ${natTableV6} -d ${x} -j RETURN") reserved_subnets_v6
+                ++ map (x: "-A ${natTableV6} -d ${x} -j RETURN") reservedSubnetsV6
                 ++ [
                   "-A ${natTableV6} -s fe80::/10 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
                   "-A ${natTableV6} -s fd00::/8 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
@@ -419,7 +423,7 @@ let
                 "-A ${mangleTable} -m mark --mark ${toString routingMark} -j RETURN"
                 "-A ${mangleTable} -d ${subnet} -j RETURN"
               ]
-              ++ (map (x: "-A ${mangleTable} -d ${x} -j RETURN") reserved_subnets)
+              ++ (map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets)
               ++ [
                 "-A ${mangleTable} -s ${subnet} -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
                 "-A ${mangleTable} -s ${subnet} -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
@@ -453,7 +457,7 @@ let
                 "-A ${mangleTableV6} -p udp -m udp --dport 53 -j RETURN"
                 "-A ${mangleTableV6} -m mark --mark ${FirewallMark} -j RETURN"
               ]
-              ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reserved_subnets_v6
+              ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reservedSubnetsV6
               ++ [
                 "-A ${mangleTableV6} -s fe80::/10 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
                 "-A ${mangleTableV6} -s fd00::/8 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
@@ -486,8 +490,8 @@ let
         filterStart = pkgs.writeShellScript "filterStart" (
           joinLines (
             map (x: "${pkgs.iptables}/bin/iptables -w -t filter ${x}") (
-              map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reserved_subnets
-              ++ map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reserved_subnets
+              map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
+              ++ map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
               ++ [
                 "-A INPUT -p tcp -m tcp --dport ${toString apiPort} -j REJECT --reject-with icmp-port-unreachable"
                 "-A INPUT -p tcp -m tcp --dport ${toString mixPort} -j REJECT --reject-with icmp-port-unreachable"
@@ -498,8 +502,8 @@ let
         filterStop = pkgs.writeShellScript "filterStop" (
           joinLines (
             map (x: "${pkgs.iptables}/bin/iptables -w -t filter ${x}") (
-              map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reserved_subnets
-              ++ map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reserved_subnets
+              map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
+              ++ map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
               ++ [
                 "-D INPUT -p tcp -m tcp --dport ${toString apiPort} -j REJECT --reject-with icmp-port-unreachable"
                 "-D INPUT -p tcp -m tcp --dport ${toString mixPort} -j REJECT --reject-with icmp-port-unreachable"
