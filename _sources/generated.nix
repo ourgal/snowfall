@@ -641,15 +641,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "cf2acc8402b0059d8f637ea9586e5c7739219440";
+    version = "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "cf2acc8402b0059d8f637ea9586e5c7739219440";
+      rev = "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf";
       fetchSubmodules = false;
-      sha256 = "sha256-0C+/IK9jfgboNiG+vzdPX9mpiNc+aIPDkW8xM3gRXT8=";
+      sha256 = "sha256-jxtRVZTbqj7dYA4M0ZA/JQ7p4613V3TilBx1gMMxNRU=";
     };
-    date = "2025-03-07";
+    date = "2025-03-14";
   };
   dps-ghosttext-vim = {
     pname = "dps-ghosttext-vim";
@@ -3585,6 +3585,17 @@
       rev = "v0.2.2";
       fetchSubmodules = false;
       sha256 = "sha256-SxgjyplbxevXVp4r3HOZE0odzBCtfbO3IeNXB3M+8W8=";
+    };
+  };
+  zashboard = {
+    pname = "zashboard";
+    version = "v1.73.0";
+    src = fetchFromGitHub {
+      owner = "Zephyruso";
+      repo = "zashboard";
+      rev = "v1.73.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-RrT+uMb5mPwY/7Do5uTEe00UxEaIkTLchtDqw/HYy0A=";
     };
   };
 }

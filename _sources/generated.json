@@ -1133,7 +1133,7 @@
     },
     "douyin-downloader": {
         "cargoLocks": null,
-        "date": "2025-03-07",
+        "date": "2025-03-14",
         "extract": null,
         "name": "douyin-downloader",
         "passthru": null,
@@ -1145,12 +1145,12 @@
             "name": null,
             "owner": "jiji262",
             "repo": "douyin-downloader",
-            "rev": "cf2acc8402b0059d8f637ea9586e5c7739219440",
-            "sha256": "sha256-0C+/IK9jfgboNiG+vzdPX9mpiNc+aIPDkW8xM3gRXT8=",
+            "rev": "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf",
+            "sha256": "sha256-jxtRVZTbqj7dYA4M0ZA/JQ7p4613V3TilBx1gMMxNRU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "cf2acc8402b0059d8f637ea9586e5c7739219440"
+        "version": "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf"
     },
     "dps-ghosttext-vim": {
         "cargoLocks": null,
@@ -6346,5 +6346,26 @@
             "type": "github"
         },
         "version": "v0.2.2"
+    },
+    "zashboard": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zashboard",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Zephyruso",
+            "repo": "zashboard",
+            "rev": "v1.73.0",
+            "sha256": "sha256-RrT+uMb5mPwY/7Do5uTEe00UxEaIkTLchtDqw/HYy0A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.73.0"
     }
 }
