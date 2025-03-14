@@ -1241,3 +1241,8 @@ fetch.github = "l4l4l4l4/qute-translate-popup"
 [zashboard]
 src.github = "Zephyruso/zashboard"
 fetch.github = "Zephyruso/zashboard"
+
+[shh]
+src.git = "https://github.com/desbma/shh"
+fetch.github = "desbma/shh"
+cargo_locks = ["Cargo.lock"]

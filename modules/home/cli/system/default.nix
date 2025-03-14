@@ -12,6 +12,7 @@ args.module (
       "recoverpy"
       "sequin"
       "servicer"
+      "shh"
       "wol"
       # keep-sorted end
     ];
