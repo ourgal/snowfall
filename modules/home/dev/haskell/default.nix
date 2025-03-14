@@ -3,6 +3,9 @@ args.module (
   args
   // {
     path = ./.;
+    files.".ghci" = ''
+      :set prompt "λ "
+    '';
     haskellPkgs = [
       # keep-sorted start
       "hasktags"
