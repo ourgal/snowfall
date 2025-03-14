@@ -39,6 +39,7 @@ let
         "time.android.com"
         "time.facebook.com"
       ];
+      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./localDomain.key);
       server = dnsServers.hosts_local.tag;
     }
     {

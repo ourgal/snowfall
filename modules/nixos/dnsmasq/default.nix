@@ -56,8 +56,7 @@ let
         domain = "lan";
         expand-hosts = true;
 
-        # don't use /etc/hosts as this would advertise surfer as localhost
-        no-hosts = true;
+        no-hosts = false;
         address = "/router.lan/${lan}.1";
       };
     };
