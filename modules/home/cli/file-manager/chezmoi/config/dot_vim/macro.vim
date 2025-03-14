@@ -2,7 +2,7 @@ vim9script
 
 def LinovelReg()
     @n = '"z4yy3j"zpkA,j^j$b"+Riqj$be2k^' # new
-    @r = '4yy3jpkA,j^2j$be2k^' # repeat
+    @r = '4yy$%pkA,3j2k' # repeat
     @i = '3yy2jpkA,j^j$3bek^' # add image
     @d = '^yejRe^' # rename file
     @x = '$"ap^yiq%%Riq'
