@@ -1,14 +1,25 @@
 { lib, ... }:
 let
+  inherit (lib.strings) fileContents;
   lan = "192.168.123";
   _ip = {
-    brix = "206";
-    home = "100";
-    router = "1";
-    d2550 = "143";
+    brix = fileContents ./brix_ip.key;
+    home = fileContents ./home_ip.key;
+    onecloud = fileContents ./onecloud_ip.key;
+    d2550 = fileContents ./d2550_ip.key;
+    nuc = fileContents ./nuc_ip.key;
+    ct3003 = fileContents ./ct3003_ip.key;
   };
   ip = lib.attrsets.mapAttrs (_n: v: "${lan}.${v}") _ip;
+  subnet = "${lan}.0/24";
 in
 {
-  inherit ip;
+  inherit ip lan subnet;
+  mac = {
+    brix = fileContents ./brix_mac.key;
+    home = fileContents ./home_mac.key;
+    onecloud = fileContents ./onecloud_mac.key;
+    nuc = fileContents ./nuc_mac.key;
+    ct3003 = fileContents ./ct3003_mac.key;
+  };
 }
