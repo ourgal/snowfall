@@ -34,6 +34,7 @@ in
       };
       sing-box = enabled;
       temp-hosts = enabled;
+      sops-nix = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;

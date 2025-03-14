@@ -2,48 +2,25 @@
 let
   outbounds =
     let
-      HK = {
+      mkOutbound = tag: includes: {
         type = "urltest";
-        tag = "🇭🇰 香港节点";
         use_all_providers = true;
-        includes = "港|HK|Hong Kong";
         tolerance = 100;
+        inherit tag includes;
       };
-      TW = {
+      mkOutboundSub = tag: {
         type = "urltest";
-        tag = "🇹🇼 台湾节点";
-        use_all_providers = true;
-        includes = "台|新北|彰化|TW|Taiwan";
+        providers = tag;
+        includes = ".*";
         tolerance = 100;
+        inherit tag;
       };
-      JP = {
-        type = "urltest";
-        tag = "🇯🇵 日本节点";
-        use_all_providers = true;
-        includes = "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan";
-        tolerance = 100;
-      };
-      KR = {
-        type = "urltest";
-        tag = "🇰🇷 韩国节点";
-        use_all_providers = true;
-        includes = "KR|Korea|KOR|首尔|韩|韓";
-        tolerance = 100;
-      };
-      SG = {
-        type = "urltest";
-        tag = "🇸🇬 新加坡节点";
-        use_all_providers = true;
-        includes = "新加坡|坡|狮城|SG|Singapore";
-        tolerance = 100;
-      };
-      US = {
-        type = "urltest";
-        tag = "🇺🇸 美国节点";
-        use_all_providers = true;
-        includes = "美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States";
-        tolerance = 100;
-      };
+      HK = mkOutbound "🇭🇰 香港节点" "港|HK|Hong Kong";
+      TW = mkOutbound "🇹🇼 台湾节点" "台|新北|彰化|TW|Taiwan";
+      JP = mkOutbound "🇯🇵 日本节点" "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan";
+      KR = mkOutbound "🇰🇷 韩国节点" "KR|Korea|KOR|首尔|韩|韓";
+      SG = mkOutbound "🇸🇬 新加坡节点" "新加坡|坡|狮城|SG|Singapore";
+      US = mkOutbound "🇺🇸 美国节点" "美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States";
       countriesTags = [
         HK.tag
         TW.tag
@@ -52,38 +29,14 @@ let
         SG.tag
         US.tag
       ];
-      nano = {
-        type = "urltest";
-        tag = "nano";
-        providers = "nano";
-        includes = ".*";
-        tolerance = 100;
-      };
-      knjc = {
-        type = "urltest";
-        tag = "knjc";
-        providers = "knjc";
-        includes = ".*";
-        tolerance = 100;
-      };
+      nano = mkOutboundSub "nano";
+      knjc = mkOutboundSub "knjc";
       subsTag = [
         nano.tag
         knjc.tag
       ];
-      cheap = {
-        type = "urltest";
-        tag = "📺 省流节点";
-        use_all_providers = true;
-        includes = "0.[1-5]|低倍率|省流|大流量";
-        tolerance = 100;
-      };
-      expensive = {
-        type = "urltest";
-        tag = "👍 高级节点";
-        use_all_providers = true;
-        includes = "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
-        tolerance = 100;
-      };
+      cheap = mkOutbound "📺 省流节点" "0.[1-5]|低倍率|省流|大流量";
+      expensive = mkOutbound "👍 高级节点" "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
       priceTags = [
         cheap.tag
         expensive.tag
@@ -253,7 +206,6 @@ let
     proxy = {
       tag = "dns_proxy";
       address = "https://1.0.0.1/dns-query";
-      strategy = "prefer_ipv4";
       address_resolver = resolver.tag;
     };
     resolver = {
@@ -543,5 +495,16 @@ in
         outbound = outbounds.direct.tag;
       }
     ];
+    mkProvider = tag: url: time: {
+      type = "remote";
+      download_ua = "clash.meta";
+      download_interval = "${toString time}h0m0s";
+      healthcheck_url = "https://www.gstatic.com/generate_204";
+      healthcheck_interval = "10m0s";
+      download_detour = outbounds.direct.tag;
+      inherit tag;
+      path = "./providers/${tag}.yaml";
+      download_url = url;
+    };
   };
 }

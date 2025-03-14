@@ -20,6 +20,7 @@ let
     routeRules
     dnsRules
     ruleSet
+    mkProvider
     ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
@@ -32,7 +33,7 @@ let
   routingMark = 255;
   fakeIpSubnet = "198.18.0.0/16";
   fakeIp6Subnet = "fc00::/16";
-  fakeIpExclude = [
+  customdnsRules = [
     {
       domain = [
         "localhost"
@@ -105,7 +106,7 @@ let
       settings = {
         dns = {
           servers = builtins.attrValues dnsServers;
-          rules = fakeIpExclude ++ dnsRules;
+          rules = customdnsRules ++ dnsRules;
           final = dnsServers.proxy.tag;
           independent_cache = true;
           reverse_mapping = true;
@@ -120,7 +121,7 @@ let
           rule_set = builtins.attrValues ruleSet;
           final = outbounds.final.tag;
           auto_detect_interface = false;
-          default_mark = 255;
+          default_mark = routingMark;
         };
         experimental = {
           cache_file = {
@@ -175,35 +176,10 @@ let
           timestamp = true;
         };
         outbounds = outboundsSorted;
-        outbound_providers =
-          let
-            default = {
-              type = "remote";
-              download_ua = "clash.meta";
-              download_interval = "24h0m0s";
-              healthcheck_url = "https://www.gstatic.com/generate_204";
-              healthcheck_interval = "10m0s";
-              download_detour = outbounds.direct.tag;
-            };
-          in
-          [
-            (
-              rec {
-                tag = "nano";
-                path = "./providers/${tag}.yaml";
-                download_url = lib.strings.fileContents ./nano.key;
-              }
-              // default
-            )
-            (
-              rec {
-                tag = "knjc";
-                path = "./providers/${tag}.yaml";
-                download_url = lib.strings.fileContents ./knjc.key;
-              }
-              // default
-            )
-          ];
+        outbound_providers = [
+          (mkProvider "nano" { _secret = config.sops.secrets."subs/nano".path; } 4)
+          (mkProvider "knjc" { _secret = config.sops.secrets."subs/knjc".path; } 24)
+        ];
       };
     };
     networking = {
