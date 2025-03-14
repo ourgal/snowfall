@@ -21,6 +21,7 @@ let
         [
           "www.${domain}"
           "res.${domain}"
+          "api.${domain}"
         ];
     }
   ) { } lightnovel;

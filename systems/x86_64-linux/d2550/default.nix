@@ -33,7 +33,7 @@ in
         inherit wan lan;
       };
       sing-box = enabled;
-      # dae = enabled;
+      temp-hosts = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;
