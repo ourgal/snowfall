@@ -10,14 +10,31 @@ let
 in
 {
 
-  dot = {
-    user.host = "d2550";
-    boot.grub = enabled;
-    common = enabled;
-    nh = enabled;
-    disko = enabled;
-    tuptime = enabled;
-  };
+  dot =
+    let
+      lan = "enp2s0";
+      wan = "enp3s0";
+    in
+    {
+      user.host = "d2550";
+      boot.grub = enabled;
+      common = enabled;
+      nh = enabled;
+      disko = enabled;
+      tuptime = enabled;
+      router = enabled // {
+        inherit wan lan;
+      };
+      dnsmasq = enabled // {
+        inherit lan;
+        dns = enabled;
+      };
+      pppd = enabled // {
+        inherit wan lan;
+      };
+      sing-box = enabled;
+      # dae = enabled;
+    };
 
   snowfallorg.users.${user}.home = disabled;
 

@@ -13,7 +13,7 @@
 buildGoModule rec {
   inherit (_sources.sing-box-fork) pname version src;
 
-  vendorHash = "sha256-d2qjuMXZ5M2t6qzDRQiFtHBY9FWdOxfhnIYKWJWyJkQ=";
+  vendorHash = "sha256-ZWFZkVRtybQAK9oZRIMBGeDfxXTV7kzXwNSbkvslMFk=";
 
   tags = [
     "with_quic"
