@@ -2138,13 +2138,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.5.3";
+    version = "2.5.4";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.5.3";
+      rev = "2.5.4";
       fetchSubmodules = false;
-      sha256 = "sha256-ORAr9YSRZi1Ei40ObVrOVz6mS+iXXN0xrf/y/slJUJ8=";
+      sha256 = "sha256-6nFQSGCdmR4qZuleiY0xh76WgBIjs9OZtfpc16b4iws=";
     };
   };
   powershell-beautifier = {
@@ -2753,13 +2753,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.28.0";
+    version = "v0.28.1";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.28.0";
+      rev = "v0.28.1";
       fetchSubmodules = false;
-      sha256 = "sha256-bIQGSqt0T+rEz9rMKihyUApeUtyfSbc1ikadKJ23hwI=";
+      sha256 = "sha256-XeirlRtqQya31BSnsHN+Sff+GQ7Bb29CcD5+7WtqKFs=";
     };
   };
   task-relative-recur = {
@@ -3240,18 +3240,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503122212";
+    version = "202503132212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geoip.dat";
-      sha256 = "sha256-RBRVdGpfNkfX2xSc/S69cG+QunZ5m+Ka3rU+ujkuQpI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503132212/geoip.dat";
+      sha256 = "sha256-4yuAAX0d6pG8NsTn7Qel5/IANWQV5niopvgl+1Ife2g=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503122212";
+    version = "202503132212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503122212/geosite.dat";
-      sha256 = "sha256-8f+NnSh1Nf+Iesfw11QoUkxz3ELYd7nhCgzt+lLUAfo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503132212/geosite.dat";
+      sha256 = "sha256-KTOssf5KzsRlcT66iHSq32Lo21weH1O5pIpMYfO7bZY=";
     };
   };
   vim-auto-save = {
