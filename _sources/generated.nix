@@ -2554,6 +2554,24 @@
       };
     };
   };
+  shh = {
+    pname = "shh";
+    version = "08f880c16064126c11a4671898f98d526c4cb930";
+    src = fetchFromGitHub {
+      owner = "desbma";
+      repo = "shh";
+      rev = "08f880c16064126c11a4671898f98d526c4cb930";
+      fetchSubmodules = false;
+      sha256 = "sha256-snyIof6yGgMWKsR8nmIdeN4LzJw5czAvqOu8nS7NCgc=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./shh-08f880c16064126c11a4671898f98d526c4cb930/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
+    date = "2025-03-12";
+  };
   shipit = {
     pname = "shipit";
     version = "0.4.0";

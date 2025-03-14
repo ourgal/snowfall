@@ -4541,6 +4541,32 @@
         },
         "version": "v0.1.13"
     },
+    "shh": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./shh-08f880c16064126c11a4671898f98d526c4cb930/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2025-03-12",
+        "extract": null,
+        "name": "shh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "desbma",
+            "repo": "shh",
+            "rev": "08f880c16064126c11a4671898f98d526c4cb930",
+            "sha256": "sha256-snyIof6yGgMWKsR8nmIdeN4LzJw5czAvqOu8nS7NCgc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "08f880c16064126c11a4671898f98d526c4cb930"
+    },
     "shipit": {
         "cargoLocks": null,
         "date": null,
