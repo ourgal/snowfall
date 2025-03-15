@@ -34,6 +34,9 @@ let
         # Cache dns queries.
         cache-size = 1000;
 
+        # enable IPv6 Route Advertisements
+        enable-ra = true;
+
         dhcp-range = [
           "${lan}.100,${lan}.249,24h"
           "::f,::ff,constructor:${cfg.lan},ra-stateless"
