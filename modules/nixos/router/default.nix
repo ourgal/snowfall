@@ -62,6 +62,12 @@ let
               prefixLength = 24;
             }
           ];
+          ipv6.addresses = [
+            {
+              address = "fd5e:4f87:237::1";
+              prefixLength = 64;
+            }
+          ];
         };
         ${cfg.wan}.useDHCP = false;
       };
