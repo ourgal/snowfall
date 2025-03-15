@@ -1,16 +1,22 @@
-{ lib, stdenv }:
+{
+  lib,
+  stdenv,
+  unzip,
+}:
 
 stdenv.mkDerivation {
   pname = "frieren-cursors";
   version = "0.1.0";
 
-  src = ./Frieren;
+  src = ./.;
+
+  nativeBuildInputs = [ unzip ];
 
   dontBuild = true;
 
   installPhase = ''
     install -dm 0755 $out/share/icons/frieren-cursors
-    cp -pr ./* $out/share/icons/frieren-cursors
+    unzip frieren.zip -d $out/share/icons
   '';
 
   meta = with lib; {
