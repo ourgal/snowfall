@@ -16,7 +16,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     install -dm 0755 $out/share/icons
-    tar zxvf Ellen-Joe.tar.gz -C $out/share/icons
+    tar zxvf *.tar.gz -C $out/share/icons
   '';
 
   meta = {

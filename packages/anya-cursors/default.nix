@@ -16,7 +16,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     install -dm 0755 $out/share/icons/anya-cursors
-    unzip anya.zip -d $out/share/icons
+    unzip *.zip -d $out/share/icons
   '';
 
   meta = with lib; {

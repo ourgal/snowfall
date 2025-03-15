@@ -16,7 +16,7 @@ stdenv.mkDerivation {
 
   installPhase = ''
     install -dm 0755 $out/share/icons/frieren-cursors
-    unzip frieren.zip -d $out/share/icons
+    unzip *.zip -d $out/share/icons
   '';
 
   meta = with lib; {
