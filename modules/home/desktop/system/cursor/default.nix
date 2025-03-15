@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "taiga";
+    enable = "anya";
   }
 )

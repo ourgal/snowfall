@@ -56,7 +56,7 @@ pre-commit:
         whitespace-format --remove-trailing-whitespace
         --remove-trailing-empty-lines
         {staged_files} --exclude
-        "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico|.xcf|.ogg|.zip)$"
+        "(.gpg|.png|.jpg|.jpeg|.webp|.gif|.dat|.age|.mp3|.mp4|.mkv|.ttf|.ico|.xcf|.ogg|.zip|.tar.gz)$"
       stage_fixed: true
     config-file-validator:
       run: validator {staged_files}
