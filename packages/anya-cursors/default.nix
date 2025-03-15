@@ -1,16 +1,22 @@
-{ lib, stdenv }:
+{
+  lib,
+  stdenv,
+  unzip,
+}:
 
 stdenv.mkDerivation {
   pname = "anya-cursors";
   version = "3.0.0";
 
-  src = ./Anya_cursor_v3;
+  nativeBuildInputs = [ unzip ];
+
+  src = ./.;
 
   dontBuild = true;
 
   installPhase = ''
     install -dm 0755 $out/share/icons/anya-cursors
-    cp -pr ./* $out/share/icons/anya-cursors
+    unzip anya.zip -d $out/share/icons
   '';
 
   meta = with lib; {
