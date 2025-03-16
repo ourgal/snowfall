@@ -13,6 +13,7 @@ args.module (
       # keep-sorted start
       "ffmpeg-full"
       "mediainfo"
+      "youtube-tui"
       # keep-sorted end
     ];
   }
