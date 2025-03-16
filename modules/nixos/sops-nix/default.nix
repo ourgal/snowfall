@@ -54,7 +54,7 @@ let
               path = "/home/${owner}/.config/miniflux/fever";
             };
           }
-        else if host == "d2550" then
+        else if ((host == "d2550") && (config.${namespace}.sing-box.enable)) then
           {
             "subs/nano" = { };
             "subs/knjc" = { };
