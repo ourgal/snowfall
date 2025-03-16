@@ -63,7 +63,7 @@ let
         }
         {
           "args" = [
-            { "exec" = "query_summary reject_adlist"; }
+            { "exec" = "query_summary reject_ad"; }
             { "exec" = "$reject_3"; }
           ];
           "tag" = "reject_ad";
@@ -313,62 +313,12 @@ let
             "upstreams" = [
               {
                 "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::6464";
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::0064";
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::8844";
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::8888";
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
                 "dial_addr" = "8.8.4.4";
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "8.8.8.8";
               }
               {
                 "addr" = "tls://dns.google";
                 "dial_addr" = "8.8.4.4";
                 "enable_pipeline" = true;
-              }
-              {
-                "addr" = "tls://dns.google";
-                "dial_addr" = "2001:4860:4860::8888";
-                "enable_pipeline" = true;
-              }
-              {
-                "addr" = "tls://dns.google";
-                "dial_addr" = "8.8.8.8";
-                "enable_pipeline" = true;
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::8844";
-                "enable_http3" = true;
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "8.8.4.4";
-                "enable_http3" = true;
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "2001:4860:4860::8888";
-                "enable_http3" = true;
-              }
-              {
-                "addr" = "https://dns.google/dns-query";
-                "dial_addr" = "8.8.8.8";
-                "enable_http3" = true;
               }
             ];
           };
@@ -405,12 +355,6 @@ let
               {
                 "addr" = "https://dns.nextdns.io";
                 "dial_addr" = "45.90.28.186";
-                "enable_http3" = true;
-              }
-              {
-                "addr" = "https://dns.nextdns.io";
-                "dial_addr" = "2a07:a8c0::ae:d5cb";
-                "enable_http3" = true;
               }
               {
                 "addr" = "tls://dns.nextdns.io";
@@ -431,17 +375,8 @@ let
                 "dial_addr" = "9.9.9.11";
               }
               {
-                "addr" = "https://dns11.quad9.net/dns-query";
-                "dial_addr" = "2620:fe::11";
-              }
-              {
                 "addr" = "tls://dns11.quad9.net";
                 "dial_addr" = "9.9.9.11";
-                "enable_pipeline" = true;
-              }
-              {
-                "addr" = "tls://dns11.quad9.net";
-                "dial_addr" = "2620:fe::11";
                 "enable_pipeline" = true;
               }
             ];
@@ -467,23 +402,12 @@ let
               }
               {
                 "addr" = "tls://dns.alidns.com";
-                "dial_addr" = "2400:3200:baba::1";
-                "enable_pipeline" = true;
-              }
-              {
-                "addr" = "tls://dns.alidns.com";
                 "dial_addr" = "223.5.5.5";
                 "enable_pipeline" = true;
               }
               {
                 "addr" = "https://dns.alidns.com/dns-query";
                 "dial_addr" = "223.5.5.5";
-                "enable_http3" = true;
-              }
-              {
-                "addr" = "https://dns.alidns.com/dns-query";
-                "dial_addr" = "2400:3200::1";
-                "enable_http3" = true;
               }
             ];
           };
