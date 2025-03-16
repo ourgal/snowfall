@@ -35,6 +35,7 @@ in
       sing-box = enabled;
       temp-hosts = enabled;
       sops-nix = enabled;
+      bpftune = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;

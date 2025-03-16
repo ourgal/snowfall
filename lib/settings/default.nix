@@ -40,6 +40,7 @@ in
       "audio"
       "bandwhich"
       "bluetooth"
+      "bpftune"
       "common"
       "desktop"
       "envfs"

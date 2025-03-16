@@ -53,6 +53,7 @@ in
     scrutiny = enabled;
     jackett = enabled;
     zashboard = enabled;
+    bpftune = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
