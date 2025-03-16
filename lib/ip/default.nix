@@ -2,13 +2,14 @@
 let
   inherit (lib.strings) fileContents;
   lan = "192.168.123";
-  _ip = {
+  _ip = rec {
     brix = fileContents ./brix_ip.key;
     home = fileContents ./home_ip.key;
     onecloud = fileContents ./onecloud_ip.key;
     d2550 = fileContents ./d2550_ip.key;
     nuc = fileContents ./nuc_ip.key;
     ct3003 = fileContents ./ct3003_ip.key;
+    router = d2550;
   };
   ip = lib.attrsets.mapAttrs (_n: v: "${lan}.${v}") _ip;
   subnet = "${lan}.0/24";
