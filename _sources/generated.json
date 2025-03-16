@@ -2652,7 +2652,7 @@
     "hexpatch": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./hexpatch-v1.10.0/Cargo.lock",
+                "./hexpatch-v1.11.0/Cargo.lock",
                 {}
             ]
         },
@@ -2668,12 +2668,12 @@
             "name": null,
             "owner": "Etto48",
             "repo": "HexPatch",
-            "rev": "v1.10.0",
-            "sha256": "sha256-GzDrB0UJxBc2U/JXcJee7dMvlahD2Qqaen14677q+28=",
+            "rev": "v1.11.0",
+            "sha256": "sha256-soiF4JCTOI/3SE53FdyLE0+qF80F0VVklMuUkCVps1g=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.10.0"
+        "version": "v1.11.0"
     },
     "hl": {
         "cargoLocks": null,
@@ -3579,11 +3579,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-V19KENe8PUeQw6CQKavUS8BuukAQhi6VwLZPa2I/WXA=",
+            "sha256": "sha256-1s2qPb1wOI3/RaBVOfiWjp8BKayTPdoe7ZM++Av7ruA=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.8.0/Numara-5.8.0-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.8.1/Numara-5.8.1-x86_64.AppImage"
         },
-        "version": "5.8.0"
+        "version": "5.8.1"
     },
     "org-export": {
         "cargoLocks": null,
@@ -3908,11 +3908,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-qcwvVsuit4tIcyX/PeAWpwZwthXq8AytiMsX8nHgGXE=",
+            "sha256": "sha256-2wu7YBTeb60Sg0BdOtKxShw6yFD/ST6CkrdwUIAzExY=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.31.1.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.32.0.tar.gz"
         },
-        "version": "2.31.1"
+        "version": "2.32.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -5562,6 +5562,27 @@
         },
         "version": "v0.3.3"
     },
+    "touhou-cursors": {
+        "cargoLocks": null,
+        "date": "2024-08-17",
+        "extract": null,
+        "name": "touhou-cursors",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mabequinho",
+            "repo": "touhou-cursors",
+            "rev": "92a5513c5d247fb1813e27ac2986e85def510204",
+            "sha256": "sha256-XYmEpRkvZK7O9F7s3nKFA9rd7xO0ECEWlVyUb8/whq4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "92a5513c5d247fb1813e27ac2986e85def510204"
+    },
     "tp": {
         "cargoLocks": null,
         "date": null,
@@ -5767,9 +5788,9 @@
             "name": null,
             "sha256": "sha256-4yuAAX0d6pG8NsTn7Qel5/IANWQV5niopvgl+1Ife2g=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503132212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503152212/geoip.dat"
         },
-        "version": "202503132212"
+        "version": "202503152212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5780,11 +5801,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KTOssf5KzsRlcT66iHSq32Lo21weH1O5pIpMYfO7bZY=",
+            "sha256": "sha256-mZD37n6WNXdqF87VPp1U4lLcy46cTuyxnu/yycOWKak=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503132212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503152212/geosite.dat"
         },
-        "version": "202503132212"
+        "version": "202503152212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
