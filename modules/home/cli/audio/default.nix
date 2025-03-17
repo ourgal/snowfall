@@ -29,6 +29,7 @@ args.module (
       "mpd"
       "pipewire"
       "pyradio"
+      "termsonic"
       # keep-sorted end
     ];
   }
