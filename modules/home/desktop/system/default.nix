@@ -16,7 +16,6 @@ args.module (
         # keep-sorted start
         "blobdrop"
         "brightnessctl"
-        "clash-verge-rev"
         "fuzzel"
         "hardinfo"
         "libnotify"
