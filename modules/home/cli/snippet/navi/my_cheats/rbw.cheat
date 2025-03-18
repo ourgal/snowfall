@@ -1,0 +1,4 @@
+% rbw
+
+# copy password
+rbw get $(rbw search <name> | sed -E 's/.*@(.*)/\1/' | fzf) | tr -d '\n' | xsel -b
