@@ -76,14 +76,6 @@ in
           inherit nfs;
           inherit (sources.docker-qd) version;
         };
-        lancommander = disabled // {
-          ports = [
-            1337
-            35891
-          ];
-          inherit nfs;
-          inherit (sources.docker-lancommander) version;
-        };
       };
   };
 

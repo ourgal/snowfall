@@ -38,13 +38,17 @@ rec {
     };
 
   dockerVolume = vname: pname: nfs: nfsPath: {
-    "${vname}" = {
-      driver_opts = {
-        type = "nfs";
-        o = "addr=${nfs},nfsvers=4";
-        device = ":${nfsPath}/${pname}_${vname}";
-      };
-    };
+    "${vname}" =
+      if (nfs != "" && nfsPath != "") then
+        {
+          driver_opts = {
+            type = "nfs";
+            o = "addr=${nfs},nfsvers=4";
+            device = ":${nfsPath}/${pname}_${vname}";
+          };
+        }
+      else
+        { };
   };
 
   dockerVolumes =
