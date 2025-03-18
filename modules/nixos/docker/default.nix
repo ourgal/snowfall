@@ -16,7 +16,10 @@ let
         };
       };
       oci-containers.backend = "docker";
-      arion.backend = "docker";
+      arion = {
+        backend = "docker";
+        package = pkgs.arion;
+      };
     };
     users.users.${user}.extraGroups = [ "docker" ];
 
