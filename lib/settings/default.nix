@@ -48,7 +48,6 @@ in
       "gpu-screen-recorder"
       "harmonia"
       "input"
-      "kmonad"
       "laptop"
       "location"
       "logrotate"
