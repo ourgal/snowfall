@@ -13,6 +13,7 @@ args.module (
       "horcrux"
       "opensc"
       "pcsc-tools"
+      "picocrypt-cli"
       "prs"
       "pwgen"
       "rage"
