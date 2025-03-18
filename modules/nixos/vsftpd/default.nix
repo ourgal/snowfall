@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled;
   user = config.${namespace}.user.name;
+  port = 21;
   pasv_max_port = 10100;
   pasv_min_port = 10090;
   value = {
@@ -21,7 +22,7 @@ let
       '';
     };
     networking.firewall = {
-      allowedTCPPorts = [ 21 ];
+      allowedTCPPorts = [ port ];
       allowedTCPPortRanges = [
         {
           from = pasv_min_port;
@@ -29,6 +30,7 @@ let
         }
       ];
     };
+    ${namespace}.user.ports = [ port ] ++ lib.lists.range pasv_min_port pasv_max_port;
   };
   path = ./.;
   _args = { inherit value path args; };

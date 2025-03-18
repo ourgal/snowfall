@@ -12,6 +12,8 @@ let
     lan
     ;
   cfg = cfgNixos config.${namespace} ./.;
+  dhcpPort = 67;
+  dnsPort = 53;
   value = {
     services.dnsmasq = enabled // {
       settings = {
@@ -64,9 +66,10 @@ let
       };
     };
     networking.firewall = {
-      allowedTCPPorts = [ 67 ];
-      allowedUDPPorts = [ 67 ];
+      allowedTCPPorts = [ dhcpPort ];
+      allowedUDPPorts = [ dhcpPort ];
     };
+    ${namespace}.user.ports = [ dhcpPort ] ++ lib.optional cfg.dns.enable dnsPort;
   };
   extraOpts = {
     lan = mkOpt' lib.types.str "";

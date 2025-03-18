@@ -8,16 +8,20 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "orhunp/rustypaste";
-    env = {
-      CONFIG = "/config/config.toml";
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "orhunp/rustypaste";
+      env = {
+        CONFIG = "/config/config.toml";
+      };
+      config = "/config";
+      volumes = "upload:/app/upload";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
     };
-    config = "/config";
-    volumes = "upload:/app/upload";
-    containerPorts = ports;
-  };
   name = "rustypaste";
   ports = 8000;
   extraOpts = dockerOpts { inherit name ports; };

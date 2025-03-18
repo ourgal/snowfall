@@ -8,16 +8,20 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "sigoden/dufs";
-    config = "/data";
-    cmd = [
-      "/data"
-      "-A"
-    ];
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "sigoden/dufs";
+      config = "/data";
+      cmd = [
+        "/data"
+        "-A"
+      ];
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "dufs";
   ports = 5000;
   extraOpts = dockerOpts { inherit name ports; };

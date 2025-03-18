@@ -34,6 +34,7 @@ let
     systemd.services.navidrome.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
     };
+    ${namespace}.user.ports = [ port ];
   };
   path = ./.;
   _args = { inherit value path args; };

@@ -32,6 +32,7 @@ let
         '';
       };
     };
+    ${namespace}.user.ports = [ port ];
   };
   path = ./.;
   _args = { inherit value path args; };

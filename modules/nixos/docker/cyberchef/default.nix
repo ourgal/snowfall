@@ -8,11 +8,15 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "mpepping/cyberchef";
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "mpepping/cyberchef";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "cyberchef";
   ports = 8080;
   extraOpts = dockerOpts { inherit name ports; };

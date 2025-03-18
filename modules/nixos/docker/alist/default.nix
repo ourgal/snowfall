@@ -8,17 +8,21 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "xhofe/alist-aria2";
-    config = "/opt/alist/data";
-    env = {
-      PUID = "0";
-      PGID = "0";
-      UMASK = "022";
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "xhofe/alist-aria2";
+      config = "/opt/alist/data";
+      env = {
+        PUID = "0";
+        PGID = "0";
+        UMASK = "022";
+      };
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
     };
-    containerPorts = ports;
-  };
   name = "alist";
   ports = 5244;
   extraOpts = dockerOpts { inherit name ports; };

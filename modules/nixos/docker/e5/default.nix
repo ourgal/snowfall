@@ -8,15 +8,19 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "hanhongyong/ms365-e5-renew-x";
-    config = "/app/appdata/DataBase";
-    env = {
-      TZ = "Asia/Shanghai";
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "hanhongyong/ms365-e5-renew-x";
+      config = "/app/appdata/DataBase";
+      env = {
+        TZ = "Asia/Shanghai";
+      };
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
     };
-    containerPorts = ports;
-  };
   name = "e5";
   ports = 1066;
   extraOpts = dockerOpts { inherit name ports; };

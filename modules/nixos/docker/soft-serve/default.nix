@@ -9,15 +9,19 @@ let
     ;
   cfg = cfgNixos config.${namespace} ./.;
   sshKeys = config.${namespace}.user.sshKeys.home;
-  value = arionProj {
-    inherit cfg;
-    image = "charmcli/soft-serve";
-    env = {
-      SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "charmcli/soft-serve";
+      env = {
+        SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
+      };
+      config = "/soft-serve";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
     };
-    config = "/soft-serve";
-    containerPorts = ports;
-  };
   name = "soft-serve";
   ports = [
     23232

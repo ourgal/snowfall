@@ -8,16 +8,20 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "linuxserver/kavita";
-    config = "/config";
-    nativeVolumes = [
-      "${cfg.mount}/books:/books:ro"
-      "${cfg.mount}/wenku:/wenku:ro"
-    ];
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "linuxserver/kavita";
+      config = "/config";
+      nativeVolumes = [
+        "${cfg.mount}/books:/books:ro"
+        "${cfg.mount}/wenku:/wenku:ro"
+      ];
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "kavita";
   ports = 5000;
   extraOpts = dockerOpts { inherit name ports; };

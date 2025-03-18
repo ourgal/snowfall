@@ -8,11 +8,15 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "diygod/rsshub";
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "diygod/rsshub";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "rsshub";
   ports = 1200;
   extraOpts = dockerOpts { inherit name ports; };

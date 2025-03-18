@@ -8,14 +8,18 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "linuxserver/syncthing";
-    config = "/config";
-    volumes = "sync:/sync";
-    hostname = config.dot.user.host;
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "linuxserver/syncthing";
+      config = "/config";
+      volumes = "sync:/sync";
+      hostname = config.dot.user.host;
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "syncthing";
   ports = [
     8384

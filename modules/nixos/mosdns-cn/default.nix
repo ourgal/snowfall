@@ -108,6 +108,10 @@ let
       allowedTCPPorts = [ cfg.port ];
       allowedUDPPorts = [ cfg.port ];
     };
+    ${namespace}.user.ports = [
+      cfg.port
+      redisPort
+    ];
   };
   extraOpts = {
     port = mkOpt' lib.types.int 53;

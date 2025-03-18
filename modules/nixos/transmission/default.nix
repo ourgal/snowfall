@@ -47,6 +47,7 @@ let
       "e ${dataDir} 2770 - - - -"
       "e ${dataDir}/Downloads 2770 - - - -"
     ];
+    ${namespace}.user.ports = [ port ];
   };
   path = ./.;
   _args = { inherit value path args; };

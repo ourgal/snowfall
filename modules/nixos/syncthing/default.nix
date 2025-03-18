@@ -100,6 +100,8 @@ let
     };
 
     users.users.${user}.extraGroups = if isDesktop then [ "syncthing" ] else [ ];
+
+    ${namespace}.user.ports = [ port ];
   };
   path = ./.;
   _args = { inherit value path args; };

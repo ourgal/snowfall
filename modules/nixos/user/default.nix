@@ -3,6 +3,7 @@
   lib,
   pkgs,
   namespace,
+  options,
   ...
 }:
 let
@@ -15,6 +16,23 @@ let
   inherit (builtins) attrValues;
   inherit (lib.${namespace}) mkOpt' cfgNixos settings;
   cfg = cfgNixos config.${namespace} ./.;
+  duplicatePorts = lib.pipe options.${namespace}.user.ports.definitionsWithLocations [
+    # Expand entries with multiple ports into individual port entries
+    (lib.concatMap (
+      entry:
+      map (port: {
+        file = entry.file;
+        port = port;
+      }) entry.value
+    ))
+    (lib.groupBy (entry: toString entry.port))
+    (lib.filterAttrs (_port: entries: builtins.length entries > 1))
+    (lib.mapAttrsToList (
+      port: entries:
+      "Duplicate port ${port} found in:\n" + lib.concatMapStrings (entry: "  - ${entry.file}\n") entries
+    ))
+    (lib.concatStrings)
+  ];
 in
 {
   options.${namespace}.user = with types; {
@@ -30,6 +48,11 @@ in
     duckdns = {
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
       domain = mkOpt' str (lib.strings.fileContents ./duckdns_domain.key);
+    };
+    ports = lib.mkOption {
+      type = lib.types.listOf lib.types.port;
+      default = [ ];
+      description = "List of allocated port numbers";
     };
   };
 
@@ -48,5 +71,11 @@ in
         openssh.authorizedKeys.keys = attrValues config.dot.user.sshKeys;
       };
     };
+    assertions = [
+      {
+        assertion = duplicatePorts == "";
+        message = duplicatePorts;
+      }
+    ];
   };
 }

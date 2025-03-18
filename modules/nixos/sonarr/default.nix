@@ -20,6 +20,7 @@ let
       SupplementaryGroups = [ "transmission" ];
     };
     systemd.tmpfiles.rules = [ "d /mnt/anime 2770 sonarr sonarr - -" ];
+    ${namespace}.user.ports = [ port ];
   };
   path = ./.;
   _args = { inherit value path args; };

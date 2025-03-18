@@ -8,12 +8,16 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "neosmemo/memos";
-    config = "/var/opt/memos";
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "neosmemo/memos";
+      config = "/var/opt/memos";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "memos";
   ports = 5230;
   extraOpts = dockerOpts { inherit name ports; };

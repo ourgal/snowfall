@@ -19,6 +19,10 @@ let
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
   host = ip.brix;
+  ports = [
+    80
+    443
+  ];
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
@@ -69,10 +73,8 @@ let
       };
       inherit package;
     };
-    networking.firewall.allowedTCPPorts = [
-      80
-      443
-    ];
+    networking.firewall.allowedTCPPorts = ports;
+    ${namespace}.user.ports = ports;
   };
   extraOpts = {
     xcaddy = switch;

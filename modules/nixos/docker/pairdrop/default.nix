@@ -8,16 +8,20 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "linuxserver/pairdrop";
-    env = {
-      PUID = 1000;
-      PGID = 1000;
-      TZ = "Asia/Shanghai";
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "linuxserver/pairdrop";
+      env = {
+        PUID = 1000;
+        PGID = 1000;
+        TZ = "Asia/Shanghai";
+      };
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
     };
-    containerPorts = ports;
-  };
   name = "pairdrop";
   ports = 3000;
   extraOpts = dockerOpts { inherit name ports; };

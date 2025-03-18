@@ -524,6 +524,13 @@ let
             ];
         };
       };
+    ${namespace}.user.ports = [
+      apiPort
+      tproxyPort
+      redirectPort
+      dnsPort
+      mixPort
+    ];
   };
   extraOpts = {
     mode = mkOpt' (lib.types.enum [

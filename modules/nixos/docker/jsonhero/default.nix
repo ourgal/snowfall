@@ -8,11 +8,15 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProj {
-    inherit cfg;
-    image = "henryclw/jsonhero-web";
-    containerPorts = ports;
-  };
+  value =
+    (arionProj {
+      inherit cfg;
+      image = "henryclw/jsonhero-web";
+      containerPorts = ports;
+    })
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "jsonhero";
   ports = 8787;
   extraOpts = dockerOpts { inherit name ports; };

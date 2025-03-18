@@ -8,30 +8,34 @@ let
     dockerOpts
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  value = arionProjs [
-    {
-      inherit cfg;
-      image = "qdtoday/qd";
-      config = "/usr/src/app/config";
-      env = {
-        COOKIE_SECRET = "binux";
-        PBKDF2_ITERATIONS = 400;
-        AES_KEY = "binux";
-        REDISCLOUD_URL = "redis://redis:6379";
-      };
-      depends = [ "redis" ];
-      containerPorts = ports;
-    }
-    {
-      inherit cfg;
-      ports = [ ];
-      name = "redis";
-      projectName = cfg.name;
-      image = "redis";
-      version = "alpine";
-      volumes = "data:/data";
-    }
-  ];
+  value =
+    (arionProjs [
+      {
+        inherit cfg;
+        image = "qdtoday/qd";
+        config = "/usr/src/app/config";
+        env = {
+          COOKIE_SECRET = "binux";
+          PBKDF2_ITERATIONS = 400;
+          AES_KEY = "binux";
+          REDISCLOUD_URL = "redis://redis:6379";
+        };
+        depends = [ "redis" ];
+        containerPorts = ports;
+      }
+      {
+        inherit cfg;
+        ports = [ ];
+        name = "redis";
+        projectName = cfg.name;
+        image = "redis";
+        version = "alpine";
+        volumes = "data:/data";
+      }
+    ])
+    // {
+      ${namespace}.user.ports = [ cfg.ports ];
+    };
   name = "qd";
   ports = 80;
   extraOpts = dockerOpts { inherit name ports; };
