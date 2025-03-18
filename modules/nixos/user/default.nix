@@ -49,11 +49,7 @@ in
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
       domain = mkOpt' str (lib.strings.fileContents ./duckdns_domain.key);
     };
-    ports = lib.mkOption {
-      type = lib.types.listOf lib.types.port;
-      default = [ ];
-      description = "List of allocated port numbers";
-    };
+    ports = mkOpt' (listOf port) [ ];
   };
 
   config = mkIf (isString cfg.name && isString cfg.host && isAttrs cfg.sshKeys) {
