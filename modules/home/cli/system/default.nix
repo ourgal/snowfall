@@ -20,6 +20,7 @@ args.module (
       # keep-sorted start
       "bkt"
       "charm-freeze"
+      "exfatprogs"
       "geekbench"
       "glib"
       "handlr-regex"
