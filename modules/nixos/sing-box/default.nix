@@ -206,10 +206,10 @@ let
         routeStart = pkgs.writeShellScript "routeStart" (
           if isTproxy then
             ''
-              ${pkgs.iproute2}/bin/ip rule add fwmark ${FirewallMark} lookup ${ipTableMark}
-              ${pkgs.iproute2}/bin/ip route add local default dev lo table ${ipTableMark}
-              ${pkgs.iproute2}/bin/ip -6 rule add fwmark ${FirewallMark} lookup ${ipTableMarkV6}
-              ${pkgs.iproute2}/bin/ip -6 route add local default dev lo table ${ipTableMarkV6}
+              ip rule add fwmark ${FirewallMark} lookup ${ipTableMark}
+              ip route add local default dev lo table ${ipTableMark}
+              ip -6 rule add fwmark ${FirewallMark} lookup ${ipTableMarkV6}
+              ip -6 route add local default dev lo table ${ipTableMarkV6}
             ''
           else
             ""
@@ -217,10 +217,10 @@ let
         routeStop = pkgs.writeShellScript "routeStop" (
           if isTproxy then
             ''
-              ${pkgs.iproute2}/bin/ip rule del fwmark ${FirewallMark} table ${ipTableMark} 2>/dev/null
-              ${pkgs.iproute2}/bin/ip route flush table ${ipTableMark} 2>/dev/null
-              ${pkgs.iproute2}/bin/ip -6 rule del fwmark ${FirewallMark} table ${ipTableMarkV6} 2>/dev/null
-              ${pkgs.iproute2}/bin/ip -6 route flush table ${ipTableMarkV6} 2>/dev/null
+              ip rule del fwmark ${FirewallMark} table ${ipTableMark} 2>/dev/null
+              ip route flush table ${ipTableMark} 2>/dev/null
+              ip -6 rule del fwmark ${FirewallMark} table ${ipTableMarkV6} 2>/dev/null
+              ip -6 route flush table ${ipTableMarkV6} 2>/dev/null
             ''
           else
             ""
@@ -230,7 +230,7 @@ let
         natStart = pkgs.writeShellScript "natStart" (
           joinLines (
             if isTproxy then
-              map (x: "${pkgs.iptables}/bin/iptables -w -t nat ${x}") [
+              map (x: "iptables -w -t nat ${x}") [
                 "-N ${natTable}"
                 "-A PREROUTING -p udp -m udp --dport 53 -j ${natTable}"
                 "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTable}"
@@ -239,7 +239,7 @@ let
                 "-A ${natTable} -s ${subnet} -p udp -j REDIRECT --to-ports ${toString dnsPort}"
               ]
             else
-              map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") (
+              map (x: "ip6tables -w -t nat ${x}") (
                 [
                   "-N ${natTable}"
                   "-N ${natTableDns}"
@@ -266,14 +266,14 @@ let
         natStop = pkgs.writeShellScript "natStop" (
           joinLines (
             if isTproxy then
-              map (x: "${pkgs.iptables}/bin/iptables -w -t nat ${x}") [
+              map (x: "iptables -w -t nat ${x}") [
                 "-D PREROUTING -p udp -m udp --dport 53 -j ${natTable}"
                 "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTable}"
                 "-F ${natTable}"
                 "-X ${natTable}"
               ]
             else
-              map (x: "${pkgs.iptables}/bin/iptables -w -t nat ${x}") [
+              map (x: "iptables -w -t nat ${x}") [
                 "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableDns}"
                 "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableDns}"
                 "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${natTable}"
@@ -298,7 +298,7 @@ let
               ];
             in
             joinLines (
-              map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") (
+              map (x: "ip6tables -w -t nat ${x}") (
                 [
                   "-N ${natTableV6}"
                   "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
@@ -310,22 +310,22 @@ let
             )
             + "\n"
             + ''
-              host_ipv6=$(${pkgs.iproute2}/bin/ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
+              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
               for ip in $host_ipv6; do
-                  ${pkgs.iptables}/bin/ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
-                  ${pkgs.iptables}/bin/ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
+                  ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
+                  ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
               done
             ''
             + "\n"
             + joinLines (
-              map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") [
+              map (x: "ip6tables -w -t nat ${x}") [
                 "-A ${natTableV6} -p tcp -j RETURN"
                 "-A ${natTableV6} -p udp -j RETURN"
               ]
             )
           else
             joinLines (
-              map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") (
+              map (x: "ip6tables -w -t nat ${x}") (
                 [
                   "-N ${natTableV6}"
                   "-N ${natTableV6Dns}"
@@ -351,14 +351,14 @@ let
             )
             + "\n"
             + ''
-              host_ipv6=$(${pkgs.iproute2}/bin/ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
+              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
               for ip in $host_ipv6; do
-                  ${pkgs.iptables}/bin/ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
-                  ${pkgs.iptables}/bin/ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
+                  ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
+                  ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
               done
             ''
             + "\n"
-            + map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") [
+            + map (x: "ip6tables -w -t nat ${x}") [
               "-A ${natTableV6Dns} -p tcp -j RETURN"
               "-A ${natTableV6Dns} -p udp -j RETURN"
             ]
@@ -366,14 +366,14 @@ let
         natStopV6 = pkgs.writeShellScript "natStopV6" (
           joinLines (
             if isTproxy then
-              (map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") ([
+              (map (x: "ip6tables -w -t nat ${x}") ([
                 "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
                 "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6}"
                 "-F ${natTableV6}"
                 "-X ${natTableV6}"
               ]))
             else
-              map (x: "${pkgs.iptables}/bin/ip6tables -w -t nat ${x}") ([
+              map (x: "ip6tables -w -t nat ${x}") ([
                 "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableV6Dns}"
                 "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6Dns}"
                 "-D PREROUTING -d ${fakeIp6Subnet} -p tcp -j ${natTableV6}"
@@ -388,7 +388,7 @@ let
         mangleTable = "sing-box_mangle";
         mangleStart = pkgs.writeShellScript "mangleStart" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/iptables -w -t mangle ${x}") (
+            map (x: "iptables -w -t mangle ${x}") (
               [
                 "-N ${mangleTable}"
                 "-A PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
@@ -410,7 +410,7 @@ let
         );
         mangleStop = pkgs.writeShellScript "mangleStop" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/iptables -w -t mangle ${x}") ([
+            map (x: "iptables -w -t mangle ${x}") ([
               "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
               "-D PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
               "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
@@ -423,7 +423,7 @@ let
         mangleTableV6 = "sing-box_mangle_v6";
         mangleStartV6 = pkgs.writeShellScript "mangleStartV6" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/ip6tables -w -t mangle ${x}") (
+            map (x: "ip6tables -w -t mangle ${x}") (
               [
                 "-N ${mangleTableV6}"
                 "-A PREROUTING -d ${fakeIp6Subnet} -p udp -j ${mangleTableV6}"
@@ -445,16 +445,16 @@ let
           )
           + "\n"
           + ''
-            host_ipv6=$(${pkgs.iproute2}/bin/ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
+            host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
             for ip in $host_ipv6; do
-                ${pkgs.iptables}/bin/ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
-                ${pkgs.iptables}/bin/ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
+                ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
+                ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
             done
           ''
         );
         mangleStopV6 = pkgs.writeShellScript "mangleStopV6" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/ip6tables -w -t mangle ${x}") ([
+            map (x: "ip6tables -w -t mangle ${x}") ([
               "-D PREROUTING -d ${fakeIp6Subnet} -p udp -j ${mangleTableV6}"
               "-D PREROUTING -d ${fakeIp6Subnet} -p tcp -j ${mangleTableV6}"
               "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
@@ -466,7 +466,7 @@ let
         );
         filterStart = pkgs.writeShellScript "filterStart" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/iptables -w -t filter ${x}") (
+            map (x: "iptables -w -t filter ${x}") (
               map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
               ++ map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
               ++ [
@@ -478,7 +478,7 @@ let
         );
         filterStop = pkgs.writeShellScript "filterStop" (
           joinLines (
-            map (x: "${pkgs.iptables}/bin/iptables -w -t filter ${x}") (
+            map (x: "iptables -w -t filter ${x}") (
               map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
               ++ map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
               ++ [
@@ -491,13 +491,17 @@ let
         waitWan = pkgs.writeShellScript "waitWan" ''
           i=1
           while [ "$i" -le "20" ]; do
-              host_ipv6=$(${pkgs.iproute2}/bin/ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
+              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
               [ -n "$host_ipv6" ] && break
               sleep 1 && i=$((i + 1))
           done
         '';
       in
       {
+        path = with pkgs; [
+          iptables
+          iproute2
+        ];
         serviceConfig = {
           ExecStartPre =
             [
