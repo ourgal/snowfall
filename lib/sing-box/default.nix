@@ -31,7 +31,7 @@ let
       ];
       nano = mkOutboundSub "nano";
       knjc = mkOutboundSub "knjc";
-      subsTag = [
+      subsTags = [
         nano.tag
         knjc.tag
       ];
@@ -59,7 +59,7 @@ let
         type = "selector";
         tag = "🚀 节点选择";
         outbounds =
-          subsTag
+          subsTags
           ++ countriesTags
           ++ priceTags
           ++ [
@@ -70,7 +70,7 @@ let
       final = {
         type = "selector";
         tag = "🐟 漏网之鱼";
-        outbounds = [ direct.tag ] ++ subsTag ++ countriesTags ++ priceTags ++ [ manual.tag ];
+        outbounds = [ direct.tag ] ++ subsTags ++ countriesTags ++ priceTags ++ [ manual.tag ];
       };
       foreign = {
         type = "selector";
@@ -125,7 +125,7 @@ let
       networktest = {
         type = "selector";
         tag = "📈 网络测试";
-        outbounds = [ direct.tag ] ++ countriesTags ++ subsTag ++ [ manual.tag ];
+        outbounds = [ direct.tag ] ++ countriesTags ++ subsTags ++ [ manual.tag ];
       };
       netflix = {
         type = "selector";
@@ -138,7 +138,7 @@ let
       global = {
         type = "selector";
         tag = "GLOBAL";
-        outbounds = [ direct.tag ] ++ countriesTags ++ subsTag ++ [ manual.tag ];
+        outbounds = [ direct.tag ] ++ countriesTags ++ subsTags ++ [ manual.tag ];
       };
       dns = {
         type = "dns";
