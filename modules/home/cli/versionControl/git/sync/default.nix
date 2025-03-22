@@ -6,6 +6,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "git-annex"
+      "git-annex-utils"
       "git-annex-remote-rclone"
       "gitfs"
       # keep-sorted end
