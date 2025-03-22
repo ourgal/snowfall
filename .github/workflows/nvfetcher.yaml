@@ -3,8 +3,6 @@ name: Update nix hash
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: 0 16 * * *
 jobs:
   nvfetcher:
     runs-on: ubuntu-latest
