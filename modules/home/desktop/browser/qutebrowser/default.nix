@@ -4,6 +4,16 @@ args.module (
   // (
     let
       inherit (args) pkgs lib namespace;
+      copyHintText = pkgs.writeShellScript "qutebrowserCopyHintText" ''
+        echo -n "$QUTE_SELECTED_TEXT" | xsel -b
+      '';
+      copySelecetText = pkgs.writeShellScript "qutebrowsercopySelecetText" ''
+        if [ -n "$QUTE_SELECTED_TEXT" ]; then
+          echo -n "$QUTE_SELECTED_TEXT" | xsel -b
+        else
+          echo -n "$QUTE_URL" | xsel -b
+        fi
+      '';
     in
     {
       path = ./.;
@@ -18,42 +28,44 @@ args.module (
         searchEngines = lib.importTOML ./searchEngines.key;
         keyBindings = {
           normal = {
-            "M" = "hint links spawn -d mpv {hint-url}";
+            M = "hint links spawn -d mpv {hint-url}";
             "<Ctrl-o>" = lib.mkMerge [
               "session-save"
               "cmd-set-text -s :session-load -c"
             ];
-            "ya" = "hint links yank";
+            ya = "hint links yank";
+            yt = "hint links userscript ${copyHintText}";
+            yy = "spawn --userscript ${copySelecetText}";
             "<Alt-m>" = "tab-mute";
-            "c" = "tab-prev";
-            "v" = "tab-next";
-            "o" = "cmd-set-text -s :open";
-            "g" = "cmd-set-text -s :open -t";
-            "z" = "undo";
-            "x" = "tab-close";
-            "X" = "close";
-            "r" = "reload";
-            "a" = "back";
-            "d" = "forward";
-            "b" = "cmd-set-text -s :quickmark-load -t ";
-            "B" = "cmd-set-text -s :open -t dict ";
-            "e" = "cmd-set-text -s :open {url}";
+            c = "tab-prev";
+            v = "tab-next";
+            o = "cmd-set-text -s :open";
+            g = "cmd-set-text -s :open -t";
+            z = "undo";
+            x = "tab-close";
+            X = "close";
+            r = "reload";
+            a = "back";
+            d = "forward";
+            b = "cmd-set-text -s :quickmark-load -t ";
+            B = "cmd-set-text -s :open -t dict ";
+            e = "cmd-set-text -s :open {url}";
             # "." = "search-next";
             # "," = "search-prev";
             ">" = "tab-move +";
             "<" = "tab-move -";
-            "s" = "scroll-page 0 1";
-            "w" = "scroll-page 0 -1";
-            "S" = "scroll-to-perc 100";
-            "W" = "scroll-to-perc 0";
-            "u" = "navigate up";
+            s = "scroll-page 0 1";
+            w = "scroll-page 0 -1";
+            S = "scroll-to-perc 100";
+            W = "scroll-to-perc 0";
+            u = "navigate up";
             # "p" = "tab-focus last";
-            "p" = "open -t {clipboard}";
+            p = "open -t {clipboard}";
             "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
             "\\\\q" = "spawn --userscript qr";
             "\\\\p" = "spawn --userscript qute-pass --mode gopass";
-            "tt" = "spawn --userscript translate --target_lang zh";
+            tt = "spawn --userscript ${pkgs.${namespace}.qute-translate-popup}/bin/translate --target_lang zh";
           };
         };
         quickmarks = lib.importTOML ./quickmarks.key;
@@ -75,13 +87,6 @@ args.module (
             sha256 = "sha256-tE+rXGzo8gsrYvmVsDaiduW6mjOQVim/bx6cjhV40a0=";
           })
         ];
-      };
-      value = {
-        xdg.configFile = {
-          "qutebrowser/userscripts/translate".source = "${
-            pkgs.${namespace}.qute-translate-popup
-          }/bin/translate";
-        };
       };
     }
   )
