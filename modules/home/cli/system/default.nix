@@ -8,6 +8,7 @@ args.module (
       "cache"
       "ccsum"
       "debounce"
+      "quickbench"
       "is"
       "recoverpy"
       "sequin"

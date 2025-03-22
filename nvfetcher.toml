@@ -1250,3 +1250,7 @@ cargo_locks = ["Cargo.lock"]
 [touhou-cursors]
 src.git = "https://github.com/mabequinho/touhou-cursors"
 fetch.github = "mabequinho/touhou-cursors"
+
+[quickbench]
+src.git = "https://github.com/bearstech/quickbench"
+fetch.github = "bearstech/quickbench"
