@@ -1820,16 +1820,16 @@
   };
   mdsf = {
     pname = "mdsf";
-    version = "v0.8.2";
+    version = "v0.8.1";
     src = fetchFromGitHub {
       owner = "hougesen";
       repo = "mdsf";
-      rev = "v0.8.2";
+      rev = "v0.8.1";
       fetchSubmodules = false;
-      sha256 = "sha256-4Gyuu4NBZxsK7yKXAVo2cshwjzG7d7eR3nwmZ2JcbcI=";
+      sha256 = "sha256-5DFuOYy5C8y+pYDCTwcI9uGxh2kahFLwWMUIZ15+fkA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./mdsf-v0.8.2/Cargo.lock;
+      lockFile = ./mdsf-v0.8.1/Cargo.lock;
       outputHashes = {
         
       };

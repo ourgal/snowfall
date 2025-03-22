@@ -3238,7 +3238,7 @@
     "mdsf": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./mdsf-v0.8.2/Cargo.lock",
+                "./mdsf-v0.8.1/Cargo.lock",
                 {}
             ]
         },
@@ -3254,12 +3254,12 @@
             "name": null,
             "owner": "hougesen",
             "repo": "mdsf",
-            "rev": "v0.8.2",
-            "sha256": "sha256-4Gyuu4NBZxsK7yKXAVo2cshwjzG7d7eR3nwmZ2JcbcI=",
+            "rev": "v0.8.1",
+            "sha256": "sha256-5DFuOYy5C8y+pYDCTwcI9uGxh2kahFLwWMUIZ15+fkA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.8.2"
+        "version": "v0.8.1"
     },
     "mdtt": {
         "cargoLocks": null,
