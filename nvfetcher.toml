@@ -982,7 +982,7 @@ src.git = "https://github.com/purarue/pmark"
 fetch.github = "purarue/pmark"
 
 [mdsf]
-src.github = "hougesen/mdsf"
+src.manual = "v0.8.1"
 fetch.github = "hougesen/mdsf"
 cargo_locks = ["Cargo.lock"]
 

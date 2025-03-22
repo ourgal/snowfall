@@ -340,6 +340,8 @@ dependencies = [
  "lock_api",
  "once_cell",
  "parking_lot_core 0.9.10",
+ "rayon",
+ "serde",
 ]
 
 [[package]]
@@ -2189,7 +2191,7 @@ dependencies = [
 
 [[package]]
 name = "tach"
-version = "0.28.1"
+version = "0.28.3"
 dependencies = [
  "cached",
  "console",
