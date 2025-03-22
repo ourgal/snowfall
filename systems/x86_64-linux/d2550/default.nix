@@ -34,7 +34,9 @@ in
       };
       sing-box = enabled;
       temp-hosts = enabled;
-      sops-nix = enabled;
+      sops-nix = enabled // {
+        router = enabled;
+      };
       bpftune = enabled;
     };
 

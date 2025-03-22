@@ -15,6 +15,9 @@ in
     gpu.amd = enabled;
     firewall.disable = enabled;
     disko = enabled;
+    sops-nix = enabled // {
+      desktops = enabled;
+    };
   } // settings.laptopModules;
 
   snowfallorg.users.${user}.home = disabled;

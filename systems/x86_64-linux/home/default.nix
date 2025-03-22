@@ -18,6 +18,9 @@ in
       gpu.nvidia = enabled;
       autorandr.home = enabled;
       firewall.disable = enabled;
+      sops-nix = enabled // {
+        desktops = enabled;
+      };
     }
     // enabledList [
       # keep-sorted start
@@ -41,7 +44,6 @@ in
       "pcscd"
       "power"
       "scrutiny"
-      "sops-nix"
       "syncthing"
       "temp-hosts"
       "tpm"
