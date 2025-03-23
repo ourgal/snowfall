@@ -14,7 +14,7 @@ let
     subnet
     ip
     ;
-  inherit (lib.${namespace}.mihomo) mkProxyProvider mkRuleProvider mkProxyGroup;
+  inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders mkProxyGroup;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -367,45 +367,23 @@ let
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
     };
     rules = [
-      "RULE-SET,private,🎯 全球直连"
-      "RULE-SET,trackerslist,📥 Trackerslist"
-      "RULE-SET,microsoft-cn,🪟 微软服务"
-      "RULE-SET,apple-cn,🍎 苹果服务"
-      "RULE-SET,google-cn,🇬 谷歌服务"
-      "RULE-SET,games-cn,🎮 游戏服务"
-      "RULE-SET,ai,🤖 人工智能"
-      "RULE-SET,networktest,📈 网络测试"
-      "RULE-SET,proxy,🧱 代理域名"
-      "RULE-SET,tld-cn,🛡️ 直连域名"
-      "RULE-SET,cn,🛡️ 直连域名"
-      "RULE-SET,privateip,🎯 全球直连,no-resolve"
-      "RULE-SET,cnip,🀄️ 直连 IP"
-      "RULE-SET,telegramip,📲 电报消息,no-resolve"
+      "RULE-SET,${RuleProviders.private.tag},🎯 全球直连"
+      "RULE-SET,${RuleProviders.trackerslist.tag},📥 Trackerslist"
+      "RULE-SET,${RuleProviders.microsoft-cn.tag},🪟 微软服务"
+      "RULE-SET,${RuleProviders.apple-cn.tag},🍎 苹果服务"
+      "RULE-SET,${RuleProviders.google-cn.tag},🇬 谷歌服务"
+      "RULE-SET,${RuleProviders.games-cn.tag},🎮 游戏服务"
+      "RULE-SET,${RuleProviders.ai.tag},🤖 人工智能"
+      "RULE-SET,${RuleProviders.networktest.tag},📈 网络测试"
+      "RULE-SET,${RuleProviders.proxy.tag},🧱 代理域名"
+      "RULE-SET,${RuleProviders.tld-cn.tag},🛡️ 直连域名"
+      "RULE-SET,${RuleProviders.cn.tag},🛡️ 直连域名"
+      "RULE-SET,${RuleProviders.privateip.tag},🎯 全球直连,no-resolve"
+      "RULE-SET,${RuleProviders.cnip.tag},🀄️ 直连 IP"
+      "RULE-SET,${RuleProviders.telegramip.tag},📲 电报消息,no-resolve"
       "MATCH,🐟 漏网之鱼"
     ];
-    rule-providers = {
-      private = mkRuleProvider "private";
-      trackerslist = mkRuleProvider "trackerslist";
-      microsoft-cn = mkRuleProvider "microsoft-cn";
-      apple-cn = mkRuleProvider "apple-cn";
-      google-cn = mkRuleProvider "google-cn";
-      games-cn = mkRuleProvider "games-cn";
-      ai = mkRuleProvider "ai";
-      networktest = mkRuleProvider "networktest";
-      proxy = mkRuleProvider "proxy";
-      tld-cn = mkRuleProvider "tld-cn";
-      cn = mkRuleProvider "cn";
-      privateip = mkRuleProvider "privateip";
-      cnip = mkRuleProvider "cnip";
-      telegramip = mkRuleProvider "telegramip";
-      geosite-cn = {
-        type = "http";
-        behavior = "domain";
-        format = "mrs";
-        path = "./rules/geosite-cn.mrs";
-        url = "https://fastly.jsdelivr.net/gh/juewuy/ShellCrash@master/bin/geodata/mrs_geosite_cn.mrs";
-      };
-    };
+    rule-providers = lib.attrsets.filterAttrsRecursive (n: v: n != "tag") RuleProviders;
   };
   value = {
     networking = {
