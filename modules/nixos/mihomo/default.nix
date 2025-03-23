@@ -13,6 +13,7 @@ let
     cfgNixos
     subnet
     ip
+    domain
     ;
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders mkProxyGroup;
   cfg = cfgNixos config.${namespace} ./.;
@@ -247,7 +248,7 @@ let
     hosts = {
       "time.android.com" = "203.107.6.88";
       "time.facebook.com" = "203.107.6.88";
-      "*.zxc.cn" = ip.brix;
+      "*.${domain}" = ip.brix;
     };
     proxy-groups =
       let
@@ -412,7 +413,35 @@ let
         inherit (builtins) map;
         ipTableMark = "100";
         ipTableMarkV6 = "101";
-        routeStart = pkgs.writeShellScript "routeStart" (
+        firewallStart = pkgs.writeShellScript "mihomoFirewallStart" (
+          waitWan
+          + "\n"
+          + routeStart
+          + "\n"
+          + natStart
+          + "\n"
+          + natStartV6
+          + "\n"
+          + mangleStart
+          + "\n"
+          + mangleStartV6
+          + "\n"
+          + filterStart
+        );
+        firewallStop = pkgs.writeShellScript "mihomoFirewallStop" (
+          routeStop
+          + "\n"
+          + natStop
+          + "\n"
+          + natStopV6
+          + "\n"
+          + mangleStop
+          + "\n"
+          + mangleStopV6
+          + "\n"
+          + filterStop
+        );
+        routeStart = (
           if isTproxy then
             ''
               ip rule add fwmark ${FirewallMark} lookup ${ipTableMark}
@@ -423,7 +452,7 @@ let
           else
             ""
         );
-        routeStop = pkgs.writeShellScript "routeStop" (
+        routeStop = (
           if isTproxy then
             ''
               ip rule del fwmark ${FirewallMark} table ${ipTableMark} 2>/dev/null
@@ -436,7 +465,7 @@ let
         );
         natTableDns = "sing-box_nat_dns";
         natTable = "sing-box_nat";
-        natStart = pkgs.writeShellScript "natStart" (
+        natStart = (
           joinLines (
             if isTproxy then
               map (x: "iptables -w -t nat ${x}") [
@@ -472,7 +501,7 @@ let
               )
           )
         );
-        natStop = pkgs.writeShellScript "natStop" (
+        natStop = (
           joinLines (
             if isTproxy then
               map (x: "iptables -w -t nat ${x}") [
@@ -496,7 +525,7 @@ let
         );
         natTableV6 = "sing-box_v6_nat";
         natTableV6Dns = "sing-box_v6_nat_dns";
-        natStartV6 = pkgs.writeShellScript "natStartV6" (
+        natStartV6 = (
           if isTproxy then
             let
               subnets = [
@@ -571,7 +600,7 @@ let
               "-A ${natTableV6Dns} -p udp -j RETURN"
             ]
         );
-        natStopV6 = pkgs.writeShellScript "natStopV6" (
+        natStopV6 = (
           joinLines (
             if isTproxy then
               (map (x: "ip6tables -w -t nat ${x}") ([
@@ -593,81 +622,91 @@ let
           )
         );
         mangleTable = "sing-box_mangle";
-        mangleStart = pkgs.writeShellScript "mangleStart" (
-          joinLines (
-            map (x: "iptables -w -t mangle ${x}") (
-              [
-                "-N ${mangleTable}"
-                "-A PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
-                "-A PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
-                "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                "-A ${mangleTable} -p tcp -m tcp --dport 53 -j RETURN"
-                "-A ${mangleTable} -p udp -m udp --dport 53 -j RETURN"
-                "-A ${mangleTable} -m mark --mark ${toString routingMark} -j RETURN"
-                "-A ${mangleTable} -d ${subnet} -j RETURN"
-              ]
-              ++ (map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets)
-              ++ [
-                "-A ${mangleTable} -s ${subnet} -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-                "-A ${mangleTable} -s ${subnet} -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-              ]
-            )
-          )
-        );
-        mangleStop = pkgs.writeShellScript "mangleStop" (
-          joinLines (
-            map (x: "iptables -w -t mangle ${x}") ([
-              "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
-              "-D PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
-              "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-              "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-              "-F ${mangleTable}"
-              "-X ${mangleTable}"
-            ])
-          )
-        );
+        mangleStart =
+          if isTproxy then
+            (joinLines (
+              map (x: "iptables -w -t mangle ${x}") (
+                [
+                  "-N ${mangleTable}"
+                  "-A PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
+                  "-A PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
+                  "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
+                  "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
+                  "-A ${mangleTable} -p tcp -m tcp --dport 53 -j RETURN"
+                  "-A ${mangleTable} -p udp -m udp --dport 53 -j RETURN"
+                  "-A ${mangleTable} -m mark --mark ${toString routingMark} -j RETURN"
+                  "-A ${mangleTable} -d ${subnet} -j RETURN"
+                ]
+                ++ (map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets)
+                ++ [
+                  "-A ${mangleTable} -s ${subnet} -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
+                  "-A ${mangleTable} -s ${subnet} -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
+                ]
+              )
+            ))
+          else
+            "";
+        mangleStop =
+          if isTproxy then
+            (joinLines (
+              map (x: "iptables -w -t mangle ${x}") ([
+                "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
+                "-D PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
+                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
+                "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
+                "-F ${mangleTable}"
+                "-X ${mangleTable}"
+              ])
+            ))
+          else
+            "";
         mangleTableV6 = "sing-box_mangle_v6";
-        mangleStartV6 = pkgs.writeShellScript "mangleStartV6" (
-          joinLines (
-            map (x: "ip6tables -w -t mangle ${x}") (
-              [
-                "-N ${mangleTableV6}"
-                "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                "-A ${mangleTableV6} -p tcp -m tcp --dport 53 -j RETURN"
-                "-A ${mangleTableV6} -p udp -m udp --dport 53 -j RETURN"
-                "-A ${mangleTableV6} -m mark --mark ${FirewallMark} -j RETURN"
-              ]
-              ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reservedSubnetsV6
-              ++ [
-                "-A ${mangleTableV6} -s fe80::/10 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                "-A ${mangleTableV6} -s fd00::/8 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                "-A ${mangleTableV6} -s fe80::/10 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                "-A ${mangleTableV6} -s fd00::/8 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-              ]
+        mangleStartV6 =
+          if isTproxy then
+            (
+              joinLines (
+                map (x: "ip6tables -w -t mangle ${x}") (
+                  [
+                    "-N ${mangleTableV6}"
+                    "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
+                    "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
+                    "-A ${mangleTableV6} -p tcp -m tcp --dport 53 -j RETURN"
+                    "-A ${mangleTableV6} -p udp -m udp --dport 53 -j RETURN"
+                    "-A ${mangleTableV6} -m mark --mark ${FirewallMark} -j RETURN"
+                  ]
+                  ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reservedSubnetsV6
+                  ++ [
+                    "-A ${mangleTableV6} -s fe80::/10 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
+                    "-A ${mangleTableV6} -s fd00::/8 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
+                    "-A ${mangleTableV6} -s fe80::/10 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
+                    "-A ${mangleTableV6} -s fd00::/8 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
+                  ]
+                )
+              )
+              + "\n"
+              + ''
+                host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
+                for ip in $host_ipv6; do
+                    ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
+                    ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
+                done
+              ''
             )
-          )
-          + "\n"
-          + ''
-            host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
-            for ip in $host_ipv6; do
-                ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
-                ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
-            done
-          ''
-        );
-        mangleStopV6 = pkgs.writeShellScript "mangleStopV6" (
-          joinLines (
-            map (x: "ip6tables -w -t mangle ${x}") ([
-              "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-              "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-              "-F ${mangleTableV6}"
-              "-X ${mangleTableV6}"
-            ])
-          )
-        );
-        filterStart = pkgs.writeShellScript "filterStart" (
+          else
+            "";
+        mangleStopV6 =
+          if isTproxy then
+            (joinLines (
+              map (x: "ip6tables -w -t mangle ${x}") ([
+                "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
+                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
+                "-F ${mangleTableV6}"
+                "-X ${mangleTableV6}"
+              ])
+            ))
+          else
+            "";
+        filterStart = (
           joinLines (
             map (x: "iptables -w -t filter ${x}") (
               map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
@@ -679,7 +718,7 @@ let
             )
           )
         );
-        filterStop = pkgs.writeShellScript "filterStop" (
+        filterStop = (
           joinLines (
             map (x: "iptables -w -t filter ${x}") (
               map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
@@ -691,7 +730,7 @@ let
             )
           )
         );
-        waitWan = pkgs.writeShellScript "waitWan" ''
+        waitWan = ''
           i=1
           while [ "$i" -le "20" ]; do
               host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
@@ -706,38 +745,15 @@ let
           iproute2
         ];
         serviceConfig = {
-          ExecStartPre =
-            [
-              waitWan
-              routeStart
-              natStart
-              natStartV6
-              filterStart
-            ]
-            ++ lib.optionals isTproxy [
-              mangleStart
-              mangleStartV6
-            ];
-          ExecStop =
-            [
-              routeStop
-              natStop
-              natStopV6
-              filterStop
-            ]
-            ++ lib.optionals isTproxy [
-              mangleStop
-              mangleStopV6
-            ];
+          ExecStartPre = [ firewallStart ];
+          ExecStop = [ firewallStop ];
         };
       };
     ${namespace}.user.ports = [
       apiPort
-      tproxyPort
-      redirectPort
       dnsPort
       mixPort
-    ];
+    ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
   };
   path = ./.;
   extraOpts = {
