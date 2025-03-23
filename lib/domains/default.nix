@@ -28,6 +28,7 @@ let
     "vaultwarden"
     "yacd"
     "zashboard"
+    "gonic"
     # keep-sorted end
   ];
   domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
