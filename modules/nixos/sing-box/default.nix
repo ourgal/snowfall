@@ -242,7 +242,7 @@ let
           else
             ""
         );
-        routeStop = pkgs.writeShellScript "routeStop" (
+        routeStop = (
           if isTproxy then
             ''
               ip rule del fwmark ${FirewallMark} table ${ipTableMark} 2>/dev/null
