@@ -11,11 +11,11 @@ let
     enabled
     mkOpt'
     cfgNixos
-    subnet
     ip
     domain
     ;
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders mkProxyGroup;
+  inherit (lib.${namespace}.sing-bxo) mkFirewall;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -24,50 +24,7 @@ let
   dnsPort = 1053;
   mixPort = 7890;
   routingMark = 255;
-  FirewallMark = toString 1;
   fakeIpSubnet = "198.18.0.0/16";
-  proxyPorts = [
-    22
-    80
-    143
-    194
-    443
-    465
-    587
-    853
-    993
-    995
-    5222
-    8080
-    8443
-  ];
-  proxyPorts' = builtins.concatStringsSep "," (builtins.map (x: toString x) proxyPorts);
-  reservedSubnets = [
-    "0.0.0.0/8"
-    "10.0.0.0/8"
-    "127.0.0.0/8"
-    "100.64.0.0/10"
-    "169.254.0.0/16"
-    "172.16.0.0/12"
-    "192.168.0.0/16"
-    "224.0.0.0/4"
-    "240.0.0.0/4"
-  ];
-  reservedSubnetsV6 = [
-    "fe80::/10"
-    "fd00::/8"
-    "::/128"
-    "::1/128"
-    "::ffff:0.0.0.0/96"
-    "64:ff9b::/96"
-    "100::/64"
-    "2001::/32"
-    "2001:20::/28"
-    "2001:db8::/32"
-    "2002::/16"
-    "fe80::/10"
-    "ff00::/8"
-  ];
   settings = {
     mixed-port = mixPort;
     redir-port = redirectPort;
@@ -409,335 +366,25 @@ let
     };
     systemd.services.mihomo =
       let
-        joinLines = builtins.concatStringsSep "\n";
-        inherit (builtins) map;
-        ipTableMark = "100";
-        ipTableMarkV6 = "101";
-        firewallStart = pkgs.writeShellScript "mihomoFirewallStart" (
-          waitWan
-          + "\n"
-          + routeStart
-          + "\n"
-          + natStart
-          + "\n"
-          + natStartV6
-          + "\n"
-          + mangleStart
-          + "\n"
-          + mangleStartV6
-          + "\n"
-          + filterStart
-        );
-        firewallStop = pkgs.writeShellScript "mihomoFirewallStop" (
-          routeStop
-          + "\n"
-          + natStop
-          + "\n"
-          + natStopV6
-          + "\n"
-          + mangleStop
-          + "\n"
-          + mangleStopV6
-          + "\n"
-          + filterStop
-        );
-        routeStart = (
-          if isTproxy then
-            ''
-              ip rule add fwmark ${FirewallMark} lookup ${ipTableMark}
-              ip route add local default dev lo table ${ipTableMark}
-              ip -6 rule add fwmark ${FirewallMark} lookup ${ipTableMarkV6}
-              ip -6 route add local default dev lo table ${ipTableMarkV6}
-            ''
-          else
-            ""
-        );
-        routeStop = (
-          if isTproxy then
-            ''
-              ip rule del fwmark ${FirewallMark} table ${ipTableMark} 2>/dev/null
-              ip route flush table ${ipTableMark} 2>/dev/null
-              ip -6 rule del fwmark ${FirewallMark} table ${ipTableMarkV6} 2>/dev/null
-              ip -6 route flush table ${ipTableMarkV6} 2>/dev/null
-            ''
-          else
-            ""
-        );
-        natTableDns = "sing-box_nat_dns";
-        natTable = "sing-box_nat";
-        natStart = (
-          joinLines (
-            if isTproxy then
-              map (x: "iptables -w -t nat ${x}") [
-                "-N ${natTable}"
-                "-A PREROUTING -p udp -m udp --dport 53 -j ${natTable}"
-                "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTable}"
-                "-A ${natTable} -m mark --mark ${toString routingMark} -j RETURN"
-                "-A ${natTable} -s ${subnet} -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                "-A ${natTable} -s ${subnet} -p udp -j REDIRECT --to-ports ${toString dnsPort}"
-              ]
-            else
-              map (x: "ip6tables -w -t nat ${x}") (
-                [
-                  "-N ${natTable}"
-                  "-N ${natTableDns}"
-                  "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableDns}"
-                  "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTableDns}"
-                  "-A PREROUTING -d ${fakeIpSubnet} -p tcp -j ${natTable}"
-                  "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${natTable}"
-                  "-A ${natTable} -p tcp -m tcp --dport 53 -j RETURN"
-                  "-A ${natTable} -p udp -m udp --dport 53 -j RETURN"
-                  "-A ${natTable} -m mark --mark ${FirewallMark} -j RETURN"
-                  "-A ${natTable} -d ${subnet} -j RETURN"
-                  "-A ${natTable} -s ${subnet} -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
-                  "-A ${natTable} -s ${subnet} -p udp -j REDIRECT --to-ports ${toString redirectPort}"
-                ]
-                ++ map (x: "-A ${natTable} -d ${x} -j RETURN") reservedSubnets
-                ++ [
-                  "-A ${natTableDns} -m mark --mark ${FirewallMark} -j RETURN"
-                  "-A ${natTableDns} -s ${subnet} -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableDns} -s ${subnet} -p udp -j REDIRECT --to-ports ${toString dnsPort}"
-                ]
-              )
-          )
-        );
-        natStop = (
-          joinLines (
-            if isTproxy then
-              map (x: "iptables -w -t nat ${x}") [
-                "-D PREROUTING -p udp -m udp --dport 53 -j ${natTable}"
-                "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTable}"
-                "-F ${natTable}"
-                "-X ${natTable}"
-              ]
-            else
-              map (x: "iptables -w -t nat ${x}") [
-                "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableDns}"
-                "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableDns}"
-                "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${natTable}"
-                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${natTable}"
-                "-F ${natTable}"
-                "-X ${natTable}"
-                "-F ${natTableDns}"
-                "-X ${natTableDns}"
-              ]
-          )
-        );
-        natTableV6 = "sing-box_v6_nat";
-        natTableV6Dns = "sing-box_v6_nat_dns";
-        natStartV6 = (
-          if isTproxy then
-            let
-              subnets = [
-                "fe80::/10"
-                "fe80::/10"
-                "fd00::/8"
-                "fd00::/8"
-              ];
-            in
-            joinLines (
-              map (x: "ip6tables -w -t nat ${x}") (
-                [
-                  "-N ${natTableV6}"
-                  "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
-                  "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6}"
-                  "-A ${natTableV6} -m mark --mark ${FirewallMark} -j RETURN"
-                ]
-                ++ map (x: "-A ${natTableV6} -s ${x} -p tcp -j REDIRECT --to-ports ${toString dnsPort}") subnets
-              )
-            )
-            + "\n"
-            + ''
-              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
-              for ip in $host_ipv6; do
-                  ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
-                  ip6tables -w -t nat -A ${natTableV6} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
-              done
-            ''
-            + "\n"
-            + joinLines (
-              map (x: "ip6tables -w -t nat ${x}") [
-                "-A ${natTableV6} -p tcp -j RETURN"
-                "-A ${natTableV6} -p udp -j RETURN"
-              ]
-            )
-          else
-            joinLines (
-              map (x: "ip6tables -w -t nat ${x}") (
-                [
-                  "-N ${natTableV6}"
-                  "-N ${natTableV6Dns}"
-                  "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableV6Dns}"
-                  "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6Dns}"
-                  "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${natTableV6}"
-                  "-A ${natTableV6} -p tcp -m tcp --dport 53 -j RETURN"
-                  "-A ${natTableV6} -p udp -m udp --dport 53 -j RETURN"
-                  "-A ${natTableV6} -m mark --mark ${FirewallMark} -j RETURN"
-                ]
-                ++ map (x: "-A ${natTableV6} -d ${x} -j RETURN") reservedSubnetsV6
-                ++ [
-                  "-A ${natTableV6} -s fe80::/10 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
-                  "-A ${natTableV6} -s fd00::/8 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
-                  "-A ${natTableV6Dns} -m mark --mark ${FirewallMark} -j RETURN"
-                  "-A ${natTableV6Dns} -s fe80::/10 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fe80::/10 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fd00::/8 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fd00::/8 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
-                ]
-              )
-            )
-            + "\n"
-            + ''
-              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
-              for ip in $host_ipv6; do
-                  ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p tcp -j REDIRECT --to-ports ${toString dnsPort}
-                  ip6tables -w -t nat -A ${natTableV6Dns} -s "$ip" -p udp -j REDIRECT --to-ports ${toString dnsPort}
-              done
-            ''
-            + "\n"
-            + map (x: "ip6tables -w -t nat ${x}") [
-              "-A ${natTableV6Dns} -p tcp -j RETURN"
-              "-A ${natTableV6Dns} -p udp -j RETURN"
-            ]
-        );
-        natStopV6 = (
-          joinLines (
-            if isTproxy then
-              (map (x: "ip6tables -w -t nat ${x}") ([
-                "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
-                "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6}"
-                "-F ${natTableV6}"
-                "-X ${natTableV6}"
-              ]))
-            else
-              map (x: "ip6tables -w -t nat ${x}") ([
-                "-D PREROUTING -p udp -m udp --dport 53 -j ${natTableV6Dns}"
-                "-D PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6Dns}"
-                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${natTableV6}"
-                "-F ${natTableV6}"
-                "-F ${natTableV6Dns}"
-                "-X ${natTableV6}"
-                "-X ${natTableV6Dns}"
-              ])
-          )
-        );
-        mangleTable = "sing-box_mangle";
-        mangleStart =
-          if isTproxy then
-            (joinLines (
-              map (x: "iptables -w -t mangle ${x}") (
-                [
-                  "-N ${mangleTable}"
-                  "-A PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
-                  "-A PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
-                  "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                  "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                  "-A ${mangleTable} -p tcp -m tcp --dport 53 -j RETURN"
-                  "-A ${mangleTable} -p udp -m udp --dport 53 -j RETURN"
-                  "-A ${mangleTable} -m mark --mark ${toString routingMark} -j RETURN"
-                  "-A ${mangleTable} -d ${subnet} -j RETURN"
-                ]
-                ++ (map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets)
-                ++ [
-                  "-A ${mangleTable} -s ${subnet} -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-                  "-A ${mangleTable} -s ${subnet} -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-                ]
-              )
-            ))
-          else
-            "";
-        mangleStop =
-          if isTproxy then
-            (joinLines (
-              map (x: "iptables -w -t mangle ${x}") ([
-                "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
-                "-D PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
-                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTable}"
-                "-F ${mangleTable}"
-                "-X ${mangleTable}"
-              ])
-            ))
-          else
-            "";
-        mangleTableV6 = "sing-box_mangle_v6";
-        mangleStartV6 =
-          if isTproxy then
-            (
-              joinLines (
-                map (x: "ip6tables -w -t mangle ${x}") (
-                  [
-                    "-N ${mangleTableV6}"
-                    "-A PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                    "-A PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                    "-A ${mangleTableV6} -p tcp -m tcp --dport 53 -j RETURN"
-                    "-A ${mangleTableV6} -p udp -m udp --dport 53 -j RETURN"
-                    "-A ${mangleTableV6} -m mark --mark ${FirewallMark} -j RETURN"
-                  ]
-                  ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reservedSubnetsV6
-                  ++ [
-                    "-A ${mangleTableV6} -s fe80::/10 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fd00::/8 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fe80::/10 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fd00::/8 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                  ]
-                )
-              )
-              + "\n"
-              + ''
-                host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
-                for ip in $host_ipv6; do
-                    ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
-                    ip6tables -w -t mangle -A ${mangleTableV6} -s "$ip" -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}
-                done
-              ''
-            )
-          else
-            "";
-        mangleStopV6 =
-          if isTproxy then
-            (joinLines (
-              map (x: "ip6tables -w -t mangle ${x}") ([
-                "-D PREROUTING -p udp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                "-D PREROUTING -p tcp -m multiport --dports ${proxyPorts'} -j ${mangleTableV6}"
-                "-F ${mangleTableV6}"
-                "-X ${mangleTableV6}"
-              ])
-            ))
-          else
-            "";
-        filterStart = (
-          joinLines (
-            map (x: "iptables -w -t filter ${x}") (
-              map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
-              ++ map (x: "-A INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
-              ++ [
-                "-A INPUT -p tcp -m tcp --dport ${toString apiPort} -j REJECT --reject-with icmp-port-unreachable"
-                "-A INPUT -p tcp -m tcp --dport ${toString mixPort} -j REJECT --reject-with icmp-port-unreachable"
-              ]
-            )
-          )
-        );
-        filterStop = (
-          joinLines (
-            map (x: "iptables -w -t filter ${x}") (
-              map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString apiPort} -j ACCEPT") reservedSubnets
-              ++ map (x: "-D INPUT -s ${x} -p tcp -m tcp --dport ${toString mixPort} -j ACCEPT") reservedSubnets
-              ++ [
-                "-D INPUT -p tcp -m tcp --dport ${toString apiPort} -j REJECT --reject-with icmp-port-unreachable"
-                "-D INPUT -p tcp -m tcp --dport ${toString mixPort} -j REJECT --reject-with icmp-port-unreachable"
-              ]
-            )
-          )
-        );
-        waitWan = ''
-          i=1
-          while [ "$i" -le "20" ]; do
-              host_ipv6=$(ip a 2>&1 | grep -w 'inet6' | grep -E 'global' | sed 's/.*inet6.//g' | sed 's/scope.*$//g')
-              [ -n "$host_ipv6" ] && break
-              sleep 1 && i=$((i + 1))
-          done
-        '';
+        firewallScripts = mkFirewall {
+          inherit
+            isTproxy
+            apiPort
+            tproxyPort
+            redirectPort
+            dnsPort
+            mixPort
+            fakeIpSubnet
+            routingMark
+            ;
+          name = "mihomo";
+          fakeIp6Subnet = "";
+          FirewallMark = toString 1;
+          ipTableMark = "100";
+          ipTableMarkV6 = "101";
+        };
+        firewallStart = pkgs.writeShellScript "mihomoFirewallStart" firewallScripts.start;
+        firewallStop = pkgs.writeShellScript "mihomoFirewallStop" firewallScripts.stop;
       in
       {
         path = with pkgs; [
