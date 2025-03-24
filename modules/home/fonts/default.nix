@@ -15,6 +15,7 @@ args.module (
       "quivira"
       "source-code-pro"
       "symbola"
+      "maple-mono-SC-NF"
       # keep-sorted end
     ];
   }
