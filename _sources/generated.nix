@@ -2041,10 +2041,10 @@
   };
   numara = {
     pname = "numara";
-    version = "5.8.1";
+    version = "5.8.2";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v5.8.1/Numara-5.8.1-x86_64.AppImage";
-      sha256 = "sha256-1s2qPb1wOI3/RaBVOfiWjp8BKayTPdoe7ZM++Av7ruA=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v5.8.2/Numara-5.8.2-x86_64.AppImage";
+      sha256 = "sha256-uRulEAXjqm0h7A3mMDLxyiGgaVw1fCczHCzgU0M7IHg=";
     };
   };
   org-export = {
@@ -3316,18 +3316,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503232213";
+    version = "202503242212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503242212/geoip.dat";
       sha256 = "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503232213";
+    version = "202503242212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geosite.dat";
-      sha256 = "sha256-yM7eiCEDELz56EyeQJjLOJDG+WYKH1q7hJDG5rtKfFQ=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503242212/geosite.dat";
+      sha256 = "sha256-VCaMc3Bq7nNExDQNiPEbmc5AD1mHVH6GANzQMxH+IHo=";
     };
   };
   vim-auto-save = {
