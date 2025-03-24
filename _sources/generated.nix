@@ -42,15 +42,15 @@
   };
   "anki.koplugin" = {
     pname = "anki.koplugin";
-    version = "5563ed7f5e662ad14c55b0d99dee98385ed9d483";
+    version = "6b2378b919f232173d96d51f942a3c7a6eac2264";
     src = fetchFromGitHub {
       owner = "Ajatt-Tools";
       repo = "anki.koplugin";
-      rev = "5563ed7f5e662ad14c55b0d99dee98385ed9d483";
+      rev = "6b2378b919f232173d96d51f942a3c7a6eac2264";
       fetchSubmodules = false;
-      sha256 = "sha256-shOGCackn2aZUPMP94ro0p9sI66ft3XPfEjfnCzoR5g=";
+      sha256 = "sha256-dRw+aPvM+MseK6EYwXr7K4RrXr1+mZEFX3Dl2/HImdo=";
     };
-    date = "2025-02-27";
+    date = "2025-03-23";
   };
   antifennel = {
     pname = "antifennel";
@@ -641,15 +641,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf";
+    version = "b8b8363214d012e2eda8a47f689d5ddb9c594dc6";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf";
+      rev = "b8b8363214d012e2eda8a47f689d5ddb9c594dc6";
       fetchSubmodules = false;
-      sha256 = "sha256-jxtRVZTbqj7dYA4M0ZA/JQ7p4613V3TilBx1gMMxNRU=";
+      sha256 = "sha256-Fnct2T/ZjF6pM5T60d1oud3xDUXn8LFj1tAO++IIOOk=";
     };
-    date = "2025-03-14";
+    date = "2025-03-24";
   };
   dps-ghosttext-vim = {
     pname = "dps-ghosttext-vim";
@@ -1248,15 +1248,15 @@
   };
   git-issue = {
     pname = "git-issue";
-    version = "d056998566d30235072b97982756ff607e9ecce9";
+    version = "69e41556ad21333cfc99ce710152dca8ffc0df64";
     src = fetchFromGitHub {
       owner = "dspinellis";
       repo = "git-issue";
-      rev = "d056998566d30235072b97982756ff607e9ecce9";
+      rev = "69e41556ad21333cfc99ce710152dca8ffc0df64";
       fetchSubmodules = false;
-      sha256 = "sha256-VYMIgJRcXKlhX05tfILA8dB8x3lcR6nX6vdls79cAgA=";
+      sha256 = "sha256-y5bYEZo62tpwR5LGKfsAWBLnue7U5QShGHgUDy/OQNw=";
     };
-    date = "2024-05-17";
+    date = "2025-03-22";
   };
   git-lens-vim = {
     pname = "git-lens-vim";
@@ -1971,6 +1971,18 @@
       sha256 = "sha256-udKOyX0/R47wXSmYndhhq38D94gksxZbhx50VjG1HhY=";
     };
   };
+  musicdl = {
+    pname = "musicdl";
+    version = "ae213b2e5867fa12a6fa2789e24ea792aab38540";
+    src = fetchFromGitHub {
+      owner = "CharlesPikachu";
+      repo = "musicdl";
+      rev = "ae213b2e5867fa12a6fa2789e24ea792aab38540";
+      fetchSubmodules = false;
+      sha256 = "sha256-AoMtlyRiceDzNXKz1K/EH5+/yU2B+UlEso5kjL5ojlI=";
+    };
+    date = "2023-02-22";
+  };
   neonmodem = {
     pname = "neonmodem";
     version = "v1.0.6";
@@ -2662,13 +2674,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.6.12";
+    version = "v0.6.13";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.6.12";
+      rev = "v0.6.13";
       fetchSubmodules = false;
-      sha256 = "sha256-xAn54Kx/1bwoyYR4yCsMTSrdipoDYQHdaeGx01GSPLA=";
+      sha256 = "sha256-rSZa6CHIcpLfhg1HB/YtDgcFMox4xAB7FuVdnX/TOmU=";
     };
   };
   sprite-dicing = {
@@ -3282,18 +3294,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503212212";
+    version = "202503232213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503212212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geoip.dat";
       sha256 = "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503212212";
+    version = "202503232213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503212212/geosite.dat";
-      sha256 = "sha256-gR7eWZfPYMWvbGfpbzsgUu0cnZzc0y1JAtYnbOB9aWY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geosite.dat";
+      sha256 = "sha256-yM7eiCEDELz56EyeQJjLOJDG+WYKH1q7hJDG5rtKfFQ=";
     };
   };
   vim-auto-save = {

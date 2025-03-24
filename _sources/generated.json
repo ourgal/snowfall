@@ -73,7 +73,7 @@
     },
     "anki.koplugin": {
         "cargoLocks": null,
-        "date": "2025-02-27",
+        "date": "2025-03-23",
         "extract": null,
         "name": "anki.koplugin",
         "passthru": null,
@@ -85,12 +85,12 @@
             "name": null,
             "owner": "Ajatt-Tools",
             "repo": "anki.koplugin",
-            "rev": "5563ed7f5e662ad14c55b0d99dee98385ed9d483",
-            "sha256": "sha256-shOGCackn2aZUPMP94ro0p9sI66ft3XPfEjfnCzoR5g=",
+            "rev": "6b2378b919f232173d96d51f942a3c7a6eac2264",
+            "sha256": "sha256-dRw+aPvM+MseK6EYwXr7K4RrXr1+mZEFX3Dl2/HImdo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5563ed7f5e662ad14c55b0d99dee98385ed9d483"
+        "version": "6b2378b919f232173d96d51f942a3c7a6eac2264"
     },
     "antifennel": {
         "cargoLocks": null,
@@ -1133,7 +1133,7 @@
     },
     "douyin-downloader": {
         "cargoLocks": null,
-        "date": "2025-03-14",
+        "date": "2025-03-24",
         "extract": null,
         "name": "douyin-downloader",
         "passthru": null,
@@ -1145,12 +1145,12 @@
             "name": null,
             "owner": "jiji262",
             "repo": "douyin-downloader",
-            "rev": "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf",
-            "sha256": "sha256-jxtRVZTbqj7dYA4M0ZA/JQ7p4613V3TilBx1gMMxNRU=",
+            "rev": "b8b8363214d012e2eda8a47f689d5ddb9c594dc6",
+            "sha256": "sha256-Fnct2T/ZjF6pM5T60d1oud3xDUXn8LFj1tAO++IIOOk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f9b8422c2c6cb075135fa4c99afedfcc7299b7bf"
+        "version": "b8b8363214d012e2eda8a47f689d5ddb9c594dc6"
     },
     "dps-ghosttext-vim": {
         "cargoLocks": null,
@@ -2221,7 +2221,7 @@
     },
     "git-issue": {
         "cargoLocks": null,
-        "date": "2024-05-17",
+        "date": "2025-03-22",
         "extract": null,
         "name": "git-issue",
         "passthru": null,
@@ -2233,12 +2233,12 @@
             "name": null,
             "owner": "dspinellis",
             "repo": "git-issue",
-            "rev": "d056998566d30235072b97982756ff607e9ecce9",
-            "sha256": "sha256-VYMIgJRcXKlhX05tfILA8dB8x3lcR6nX6vdls79cAgA=",
+            "rev": "69e41556ad21333cfc99ce710152dca8ffc0df64",
+            "sha256": "sha256-y5bYEZo62tpwR5LGKfsAWBLnue7U5QShGHgUDy/OQNw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d056998566d30235072b97982756ff607e9ecce9"
+        "version": "69e41556ad21333cfc99ce710152dca8ffc0df64"
     },
     "git-lens-vim": {
         "cargoLocks": null,
@@ -3507,6 +3507,27 @@
         },
         "version": "eb2da86b628c512184818b19307632fa71fe7fb9"
     },
+    "musicdl": {
+        "cargoLocks": null,
+        "date": "2023-02-22",
+        "extract": null,
+        "name": "musicdl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "CharlesPikachu",
+            "repo": "musicdl",
+            "rev": "ae213b2e5867fa12a6fa2789e24ea792aab38540",
+            "sha256": "sha256-AoMtlyRiceDzNXKz1K/EH5+/yU2B+UlEso5kjL5ojlI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "ae213b2e5867fa12a6fa2789e24ea792aab38540"
+    },
     "neonmodem": {
         "cargoLocks": null,
         "date": null,
@@ -4733,12 +4754,12 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.6.12",
-            "sha256": "sha256-xAn54Kx/1bwoyYR4yCsMTSrdipoDYQHdaeGx01GSPLA=",
+            "rev": "v0.6.13",
+            "sha256": "sha256-rSZa6CHIcpLfhg1HB/YtDgcFMox4xAB7FuVdnX/TOmU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.12"
+        "version": "v0.6.13"
     },
     "sprite-dicing": {
         "cargoLocks": null,
@@ -5809,9 +5830,9 @@
             "name": null,
             "sha256": "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503212212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geoip.dat"
         },
-        "version": "202503212212"
+        "version": "202503232213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5822,11 +5843,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-gR7eWZfPYMWvbGfpbzsgUu0cnZzc0y1JAtYnbOB9aWY=",
+            "sha256": "sha256-yM7eiCEDELz56EyeQJjLOJDG+WYKH1q7hJDG5rtKfFQ=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503212212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503232213/geosite.dat"
         },
-        "version": "202503212212"
+        "version": "202503232213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
