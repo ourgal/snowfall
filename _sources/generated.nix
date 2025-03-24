@@ -157,13 +157,13 @@
   };
   bestsub = {
     pname = "bestsub";
-    version = "v0.3.1";
+    version = "v0.3.2";
     src = fetchFromGitHub {
       owner = "bestruirui";
       repo = "BestSub";
-      rev = "v0.3.1";
+      rev = "v0.3.2";
       fetchSubmodules = false;
-      sha256 = "sha256-iPbOT7Gk+8Mw3XpooxaN0SLm4cqhwsfip2+RI/nIcGg=";
+      sha256 = "sha256-eiC1Pk/pKtl02WF9aUXtqBpXDmf+/Jdz4zNDQmaMTIE=";
     };
   };
   bilix = {
@@ -526,21 +526,21 @@
   };
   dela = {
     pname = "dela";
-    version = "851431fa982102879520310ef43d87037e35bb03";
+    version = "765872d15ca41680c3311565ea2a82eddbe36c7b";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "851431fa982102879520310ef43d87037e35bb03";
+      rev = "765872d15ca41680c3311565ea2a82eddbe36c7b";
       fetchSubmodules = false;
-      sha256 = "sha256-pI+HvMKiTZABBouZTLCAr+/1Y+UuUxNkg6wy8zTrwp0=";
+      sha256 = "sha256-qBF5aWxW68RHRF8EhTRivh8922jon7fjO6JatWLQw18=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-851431fa982102879520310ef43d87037e35bb03/Cargo.lock;
+      lockFile = ./dela-765872d15ca41680c3311565ea2a82eddbe36c7b/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-03-21";
+    date = "2025-03-23";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -650,6 +650,17 @@
       sha256 = "sha256-Fnct2T/ZjF6pM5T60d1oud3xDUXn8LFj1tAO++IIOOk=";
     };
     date = "2025-03-24";
+  };
+  downdoc = {
+    pname = "downdoc";
+    version = "v1.0.0-rc.2";
+    src = fetchFromGitHub {
+      owner = "opendevise";
+      repo = "downdoc";
+      rev = "v1.0.0-rc.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-Shl2gkSbbLxs8csY5S75fHS7zYJcI35PIg2r+iH3ZpE=";
+    };
   };
   dps-ghosttext-vim = {
     pname = "dps-ghosttext-vim";
@@ -1021,8 +1032,8 @@
       sha256 = "sha256-o3OL+RccbVfjNW8h5nprfUiVpJDgaI1IJior6rq1dEc=";
     };
   };
-  focus = {
-    pname = "focus";
+  focus-timer = {
+    pname = "focus-timer";
     version = "v1.4.3";
     src = fetchFromGitHub {
       owner = "ayoisaiah";
@@ -1875,6 +1886,17 @@
     src = fetchurl {
       url = "https://github.com/ThaUnknown/miru/releases/download/v5.5.10/linux-Miru-5.5.10.AppImage";
       sha256 = "sha256-nLPqEI6u5NNQ/kPbXRWPG0pIwutKNK2J8JeTPN6wHlg=";
+    };
+  };
+  mnamer = {
+    pname = "mnamer";
+    version = "2.5.5";
+    src = fetchFromGitHub {
+      owner = "jkwill87";
+      repo = "mnamer";
+      rev = "2.5.5";
+      fetchSubmodules = false;
+      sha256 = "sha256-qQu5V1GOsbrR00HOrot6TTAkc3KRasBPDEU7ZojUBio=";
     };
   };
   mosdns-cn = {
@@ -3643,13 +3665,13 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.75.1";
+    version = "v1.75.2";
     src = fetchFromGitHub {
       owner = "Zephyruso";
       repo = "zashboard";
-      rev = "v1.75.1";
+      rev = "v1.75.2";
       fetchSubmodules = false;
-      sha256 = "sha256-dtfDvwfZFYT53JurkvmA9GfrhPKxZGRAT9krnZ4rFs0=";
+      sha256 = "sha256-QLICbw6qJEdHDK1XNFK7s9MxtfjZ0MY/aLxt57h0C1o=";
     };
   };
 }

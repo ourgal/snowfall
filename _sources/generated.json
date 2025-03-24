@@ -288,12 +288,12 @@
             "name": null,
             "owner": "bestruirui",
             "repo": "BestSub",
-            "rev": "v0.3.1",
-            "sha256": "sha256-iPbOT7Gk+8Mw3XpooxaN0SLm4cqhwsfip2+RI/nIcGg=",
+            "rev": "v0.3.2",
+            "sha256": "sha256-eiC1Pk/pKtl02WF9aUXtqBpXDmf+/Jdz4zNDQmaMTIE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.1"
+        "version": "v0.3.2"
     },
     "bilix": {
         "cargoLocks": null,
@@ -924,11 +924,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-851431fa982102879520310ef43d87037e35bb03/Cargo.lock",
+                "./dela-765872d15ca41680c3311565ea2a82eddbe36c7b/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-03-21",
+        "date": "2025-03-23",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -940,12 +940,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "851431fa982102879520310ef43d87037e35bb03",
-            "sha256": "sha256-pI+HvMKiTZABBouZTLCAr+/1Y+UuUxNkg6wy8zTrwp0=",
+            "rev": "765872d15ca41680c3311565ea2a82eddbe36c7b",
+            "sha256": "sha256-qBF5aWxW68RHRF8EhTRivh8922jon7fjO6JatWLQw18=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "851431fa982102879520310ef43d87037e35bb03"
+        "version": "765872d15ca41680c3311565ea2a82eddbe36c7b"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -1151,6 +1151,27 @@
             "type": "github"
         },
         "version": "b8b8363214d012e2eda8a47f689d5ddb9c594dc6"
+    },
+    "downdoc": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "downdoc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "opendevise",
+            "repo": "downdoc",
+            "rev": "v1.0.0-rc.2",
+            "sha256": "sha256-Shl2gkSbbLxs8csY5S75fHS7zYJcI35PIg2r+iH3ZpE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0-rc.2"
     },
     "dps-ghosttext-vim": {
         "cargoLocks": null,
@@ -1806,11 +1827,11 @@
         },
         "version": "0.4.2"
     },
-    "focus": {
+    "focus-timer": {
         "cargoLocks": null,
         "date": null,
         "extract": null,
-        "name": "focus",
+        "name": "focus-timer",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -3338,6 +3359,27 @@
             "url": "https://github.com/ThaUnknown/miru/releases/download/v5.5.10/linux-Miru-5.5.10.AppImage"
         },
         "version": "5.5.10"
+    },
+    "mnamer": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mnamer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jkwill87",
+            "repo": "mnamer",
+            "rev": "2.5.5",
+            "sha256": "sha256-qQu5V1GOsbrR00HOrot6TTAkc3KRasBPDEU7ZojUBio=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2.5.5"
     },
     "mosdns-cn": {
         "cargoLocks": null,
@@ -6450,11 +6492,11 @@
             "name": null,
             "owner": "Zephyruso",
             "repo": "zashboard",
-            "rev": "v1.75.1",
-            "sha256": "sha256-dtfDvwfZFYT53JurkvmA9GfrhPKxZGRAT9krnZ4rFs0=",
+            "rev": "v1.75.2",
+            "sha256": "sha256-QLICbw6qJEdHDK1XNFK7s9MxtfjZ0MY/aLxt57h0C1o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.75.1"
+        "version": "v1.75.2"
     }
 }
