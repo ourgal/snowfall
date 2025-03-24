@@ -58,7 +58,7 @@ args.module (
           };
           selection.save_to_clipboard = true;
           font = {
-            normal.family = "Maple Mono SC NF";
+            normal.family = "monospace";
             size = 14.0;
             builtin_box_drawing = true;
           };

@@ -10,7 +10,7 @@ args.module (
       };
       fonts = {
         size = 20;
-        family = "Maple Mono SC NF";
+        family = "monospace";
         extras = [ { family = "Source Han Sans"; } ];
       };
     };

@@ -112,7 +112,7 @@ args.module (
               "margin": 9,
               "border_focus": "3b4252",
               "border_normal": "3b4252",
-              "font": "Maple Mono SC NF",
+              "font": "monospace",
               "grow_amount": 2,
           }
 

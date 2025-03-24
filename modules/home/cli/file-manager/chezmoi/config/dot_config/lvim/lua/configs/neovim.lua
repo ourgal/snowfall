@@ -63,7 +63,7 @@ M.config = function()
   vim.opt.scrolloff = 9999
   vim.opt.shell = "/bin/sh"
 
-  vim.opt.guifont = "FiraCode Nerd Font:h13"
+  vim.opt.guifont = "monospace:h13"
   vim.g.dashboard_enable_session = 0
   vim.g.dashboard_disable_statusline = 1
   vim.opt.pumblend = 10
@@ -171,7 +171,7 @@ M.config = function()
     vim.g.neovide_cursor_trail_length = 0.05
     vim.g.neovide_cursor_antialiasing = true
     vim.g.neovide_remember_window_size = true
-    vim.cmd([[set guifont=FiraCode\ Nerd\ Font:h14]])
+    vim.cmd([[set guifont=monospace:h14]])
   end
 
   local function nvui()

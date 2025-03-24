@@ -81,7 +81,7 @@ args.module (
               render_mode = "lcd";
               strict_spacing = true;
               regular = {
-                family = "Maple Mono SC NF";
+                family = "monospace";
                 weight = "medium";
                 slant = "normal";
                 features = [ ];

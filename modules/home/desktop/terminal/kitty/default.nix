@@ -6,7 +6,7 @@ args.module (
     progs.kitty = {
       themeFile = "Tomorrow_Night_Bright";
       font = {
-        name = "Maple Mono SC NF";
+        name = "monospace";
         size = 14;
       };
       settings = {

@@ -1,7 +1,7 @@
 (let [xresources (require :beautiful.xresources)
       dpi xresources.apply_dpi
       bg_normal "#222222"]
-  {:font "Maple Mono SC NF"
+  {:font :monospace
    : bg_normal
    :bg_focus "#535d6c"
    :bg_urgent "#ff0000"

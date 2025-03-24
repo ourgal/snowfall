@@ -194,7 +194,7 @@ enddef
 set balloonexpr=SimpleBalloon()
 set ballooneval
 
-set guifont=FiraCode\ Nerd\ Font\ 14
+set guifont=monospace 14
 
 # add space to filename, like gf.
 # set isfname+=32

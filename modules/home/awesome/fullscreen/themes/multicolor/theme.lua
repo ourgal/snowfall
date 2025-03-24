@@ -104,7 +104,7 @@ mytextclock.font = theme.font
 theme.cal = lain.widget.cal({
   attach_to = { mytextclock },
   notification_preset = {
-    font = "FiraCode Nerd Font 10",
+    font = "monospace 10",
     fg = theme.fg_normal,
     bg = theme.bg_normal,
   },
