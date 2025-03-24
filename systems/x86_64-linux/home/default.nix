@@ -34,6 +34,7 @@ in
       "envfs"
       "flatpak"
       "gpu-screen-recorder"
+      "fonts"
       "harmonia"
       "kmonad"
       "location"
