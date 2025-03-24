@@ -3,8 +3,12 @@
   python3,
   _sources',
 }:
+let
+  source = _sources' ./.;
+in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources' ./.) pname version src;
+  inherit (source) pname src;
+  version = builtins.replaceStrings [ "unstable-" "-" ] [ "" "." ] source.version;
   pyproject = true;
 
   nativeBuildInputs = [
