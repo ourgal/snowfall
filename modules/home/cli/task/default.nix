@@ -4,7 +4,7 @@ args.module (
   // {
     path = ./.;
     nixPkgs = "grit";
-    myPkgs = "rust-kankan";
+    myPkgs = "rust-kanban";
     enable = [
       # keep-sorted start
       "eureka"

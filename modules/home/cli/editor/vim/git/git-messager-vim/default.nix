@@ -8,7 +8,7 @@ args.module (
     {
       path = ./.;
       progs.vim = {
-        plugins = with pkgs.${namespace}; [ git-messager-vim ];
+        plugins = with pkgs.${namespace}; [ git-messenger-vim ];
         extraConfig = builtins.readFile ./config.vim;
       };
     }
