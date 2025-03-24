@@ -3,11 +3,14 @@
   lib,
   _sources',
 }:
+let
+  source = _sources' ./.;
+in
 writeShellApplication rec {
-  inherit (_sources' ./.) pname version src;
+  name = source.pname;
 
   meta = {
-    mainProgram = pname;
+    mainProgram = name;
     platforms = lib.platforms.linux;
   };
 
@@ -15,5 +18,5 @@ writeShellApplication rec {
 
   runtimeInputs = [ ];
 
-  text = builtins.readFile (src + /git-heatgrid);
+  text = builtins.readFile (source.src + /git-heatgrid);
 }
