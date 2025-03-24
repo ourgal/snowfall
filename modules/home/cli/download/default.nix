@@ -11,6 +11,7 @@ args.module (
       "dra"
       "goodls"
       "imgboxdwl"
+      "musicdl"
       "tstickers"
       # keep-sorted end
     ];
