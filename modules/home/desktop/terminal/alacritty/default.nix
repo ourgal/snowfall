@@ -58,7 +58,7 @@ args.module (
           };
           selection.save_to_clipboard = true;
           font = {
-            normal.family = "FiraCode Nerd Font";
+            normal.family = "Maple Mono SC NF";
             size = 14.0;
             builtin_box_drawing = true;
           };

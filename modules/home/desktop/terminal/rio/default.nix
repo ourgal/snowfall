@@ -10,7 +10,7 @@ args.module (
       };
       fonts = {
         size = 20;
-        family = "FiraCode Nerd Font";
+        family = "Maple Mono SC NF";
         extras = [ { family = "Source Han Sans"; } ];
       };
     };

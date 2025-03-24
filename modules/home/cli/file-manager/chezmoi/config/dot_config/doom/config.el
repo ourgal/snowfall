@@ -79,7 +79,7 @@
 (setq shell-file-name (executable-find "bash"))
 
 ;; set font
-(setq doom-font "FiraCode Nerd Font Mono-14")
+(setq doom-font "Maple Mono SC NF-14")
 
 ;; enable word-wrap (almost) everywhere
 (+global-word-wrap-mode +1)

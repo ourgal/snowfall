@@ -21,7 +21,7 @@ args.module (
         plugins = [ pkgs.rofi-emoji ];
         extraConfig = {
           modes = lib.strings.concatStringsSep "," cfg.modes;
-          font = "FiraCode Mono 14";
+          font = "Maple Mono SC NF 14";
           kb-element-next = "";
           kb-element-prev = "";
           kb-row-select = "Tab";

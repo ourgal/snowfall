@@ -15,7 +15,7 @@
 (auto-save-mode -1)
 
 ;; FiraCode font
-(set-face-attribute 'default nil :family "FiraCode Nerd Font" :height 140)
+(set-face-attribute 'default nil :family "Maple Mono SC NF" :height 140)
 
 ;; if EDITOR is not set already, set it.
 (or (getenv "EDITOR")

@@ -144,7 +144,7 @@ profiles:
     # Sets initial working directory when spawning a new terminal.
     # A leading ~ is expanded to the user's home directory.
     # Default value is the user's home directory.
-    initial_working_directory: '~'
+    initial_working_directory: "~"
     # When this profile is *activated*, this flag decides
     # whether or not the title bar will be shown
     show_title_bar: true
@@ -314,7 +314,7 @@ profiles:
       regular:
         # Font family defines the font family name, such as:
         # Fira Code", "Courier New", or "monospace" (default).
-        family: FiraCode Nerd Font Mono
+        family: Maple Mono SC NF
         # Font weight can be one of:
         #   thin, extra_light, light, demilight, book, normal,
         #   medium, demibold, bold, extra_bold, black, extra_black.
@@ -426,9 +426,9 @@ color_schemes:
     # Default colors
     default:
       # Default background color (this can be made transparent, see above).
-      background: '#1a1716'
+      background: "#1a1716"
       # Default foreground text color.
-      foreground: '#d0d0d0'
+      foreground: "#d0d0d0"
     # Background image support.
     background_image:
       # Full path to the image to use as background.
@@ -462,22 +462,22 @@ color_schemes:
       text: CellBackground
     # color to pick for hyperlinks decoration, when hovering
     hyperlink_decoration:
-      normal: '#f0f000'
-      hover: '#ff0000'
+      normal: "#f0f000"
+      hover: "#ff0000"
     # Color to pick for vi_mode highlights.
     # The value format is equivalent to how selection colors and alpha contribution is defined.
     vi_mode_highlight:
       foreground: CellForeground
       foreground_alpha: 1.0
-      background: '#ffa500'
+      background: "#ffa500"
       background_alpha: 0.5
     # Color override for the current cursor's line when in vi_mode:
     # The value format is equivalent to how selection colors and alpha contribution is defined.
     # To disable cursorline in vi_mode, set foreground to CellForeground and background to CellBackground.
     vi_mode_cursorline:
-      foreground: '#ffffff'
+      foreground: "#ffffff"
       foreground_alpha: 0.2
-      background: '#808080'
+      background: "#808080"
       background_alpha: 0.4
     # The text selection color can be customized here.
     # Leaving a value empty will default to the inverse of the content's color values.
@@ -499,7 +499,7 @@ color_schemes:
       # Specifies the color to be used for the selected background.
       #
       # Default: CellForeground
-      background: '#4040f0'
+      background: "#4040f0"
       # Specifies the alpha value (between 0.0 and 1.0) the configured background color
       # will contribute to the original color.
       #
@@ -523,7 +523,7 @@ color_schemes:
     # The format is similar to selection highlighting.
     word_highlight_current:
       foreground: CellForeground
-      background: '#909090'
+      background: "#909090"
       foreground_alpha: 1.0
       background_alpha: 0.5
     # Coloring for the word that is highlighted due to double-clicking
@@ -532,49 +532,49 @@ color_schemes:
     # The format is similar to selection highlighting.
     word_highlight_other:
       foreground: CellForeground
-      background: '#909090'
+      background: "#909090"
       foreground_alpha: 1.0
       background_alpha: 0.5
     # Defines the colors to be used for the Indicator status line.
     # Values must be in RGB form.
     indicator_statusline:
       # Default: default background
-      foreground: '#808080'
+      foreground: "#808080"
       # Default: default foreground
-      background: '#000000'
+      background: "#000000"
     # Alternate colors to be used for the indicator status line when
     # this terminal is currently not in focus.
     indicator_statusline_inactive:
       # Default: default background
-      foreground: '#808080'
+      foreground: "#808080"
       # Default: default foreground
-      background: '#000000'
+      background: "#000000"
     # Colors for the IME (Input Method Editor) area.
     input_method_editor:
       #  Default: default  # FFFFFF
-      foreground: '#FFFFFF'
+      foreground: "#FFFFFF"
       #  Default: default  # FF0000
-      background: '#FF0000'
+      background: "#FF0000"
     # Normal colors
     normal:
-      black: '#000000'
-      red: '#c63939'
-      green: '#00a000'
-      yellow: '#a0a000'
-      blue: '#4d79ff'
-      magenta: '#ff66ff'
-      cyan: '#00a0a0'
-      white: '#c0c0c0'
+      black: "#000000"
+      red: "#c63939"
+      green: "#00a000"
+      yellow: "#a0a000"
+      blue: "#4d79ff"
+      magenta: "#ff66ff"
+      cyan: "#00a0a0"
+      white: "#c0c0c0"
     # Bright colors
     bright:
-      black: '#707070'
-      red: '#ff0000'
-      green: '#00ff00'
-      yellow: '#ffff00'
-      blue: '#0000ff'
-      magenta: '#ff00ff'
-      cyan: '#00ffff'
-      white: '#ffffff'
+      black: "#707070"
+      red: "#ff0000"
+      green: "#00ff00"
+      yellow: "#ffff00"
+      blue: "#0000ff"
+      magenta: "#ff00ff"
+      cyan: "#00ffff"
+      white: "#ffffff"
       # Dim (faint) colors, if not set, they're automatically computed based on normal colors.
       # dim:
       #     black:   '#1d1f21'
@@ -682,47 +682,53 @@ color_schemes:
 # - ViNormalMode      Enters/Leaves Vi-like normal mode. The cursor can then be moved via h/j/k/l movements in normal mode and text can be selected via v, yanked via y, and clipboard pasted via p.
 # - WriteScreen       Writes VT sequence in `chars` member to the screen (bypassing the application).
 input_mapping:
-  - {mods: [Control], mouse: Left, action: FollowHyperlink}
-  - {mods: [], mouse: Middle, action: PasteSelection}
-  - {mods: [], mouse: WheelDown, action: ScrollDown}
-  - {mods: [], mouse: WheelUp, action: ScrollUp}
-  - {mods: [Alt], key: Enter, action: ToggleFullscreen}
-  - {mods: [Alt], mouse: WheelDown, action: DecreaseOpacity}
-  - {mods: [Alt], mouse: WheelUp, action: IncreaseOpacity}
-  - {mods: [Control, Alt], key: S, action: ScreenshotVT}
-  - {mods: [Control, Shift], key: Plus, action: IncreaseFontSize}
-  - {mods: [Control], key: '0', action: ResetFontSize}
-  - {mods: [Control, Shift], key: Minus, action: DecreaseFontSize}
-  - {mods: [Control, Shift], key: _, action: DecreaseFontSize}
-  - {mods: [Control, Shift], key: N, action: NewTerminal}
-  - {mods: [Control, Shift], key: V, action: PasteClipboard, strip: false}
-  - {mods: [Control, Alt], key: V, action: PasteClipboard, strip: true}
-  - {mods: [Control], key: C, action: CopySelection, mode: Select|Insert}
-  - {mods: [Control], key: C, action: CancelSelection, mode: Select|Insert}
-  - {mods: [Control], key: V, action: PasteClipboard, strip: false, mode: Select|Insert}
-  - {mods: [Control], key: V, action: CancelSelection, mode: Select|Insert}
-  - {mods: [], key: Escape, action: CancelSelection, mode: Select|Insert}
-  - {mods: [Control, Shift], key: Space, action: ViNormalMode, mode: Insert}
-  - {mods: [Control, Shift], key: Comma, action: OpenConfiguration}
-  - {mods: [Control, Shift], key: Q, action: Quit}
-  - {mods: [Control], mouse: WheelDown, action: DecreaseFontSize}
-  - {mods: [Control], mouse: WheelUp, action: IncreaseFontSize}
-  - {mods: [Shift], key: DownArrow, action: ScrollOneDown}
-  - {mods: [Shift], key: End, action: ScrollToBottom}
-  - {mods: [Shift], key: Home, action: ScrollToTop}
-  - {mods: [Shift], key: PageDown, action: ScrollPageDown}
-  - {mods: [Shift], key: PageUp, action: ScrollPageUp}
-  - {mods: [Shift], key: UpArrow, action: ScrollOneUp}
-  - {mods: [Control, Alt], key: K, action: ScrollMarkUp, mode: ~Alt}
-  - {mods: [Control, Alt], key: J, action: ScrollMarkDown, mode: ~Alt}
-  - {mods: [Shift], mouse: WheelDown, action: ScrollPageDown}
-  - {mods: [Shift], mouse: WheelUp, action: ScrollPageUp}
-  - {mods: [Control, Alt], key: O, action: OpenFileManager}
-  - {mods: [Control, Alt], key: ., action: ToggleStatusLine}
-  - {mods: [Control, Shift], key: F, action: SearchReverse}
-  - {mods: [Control, Shift], key: H, action: NoSearchHighlight}
-  - {mods: [], key: F3, action: FocusNextSearchMatch}
-  - {mods: [Shift], key: F3, action: FocusPreviousSearchMatch}
+  - { mods: [Control], mouse: Left, action: FollowHyperlink }
+  - { mods: [], mouse: Middle, action: PasteSelection }
+  - { mods: [], mouse: WheelDown, action: ScrollDown }
+  - { mods: [], mouse: WheelUp, action: ScrollUp }
+  - { mods: [Alt], key: Enter, action: ToggleFullscreen }
+  - { mods: [Alt], mouse: WheelDown, action: DecreaseOpacity }
+  - { mods: [Alt], mouse: WheelUp, action: IncreaseOpacity }
+  - { mods: [Control, Alt], key: S, action: ScreenshotVT }
+  - { mods: [Control, Shift], key: Plus, action: IncreaseFontSize }
+  - { mods: [Control], key: "0", action: ResetFontSize }
+  - { mods: [Control, Shift], key: Minus, action: DecreaseFontSize }
+  - { mods: [Control, Shift], key: _, action: DecreaseFontSize }
+  - { mods: [Control, Shift], key: N, action: NewTerminal }
+  - { mods: [Control, Shift], key: V, action: PasteClipboard, strip: false }
+  - { mods: [Control, Alt], key: V, action: PasteClipboard, strip: true }
+  - { mods: [Control], key: C, action: CopySelection, mode: Select|Insert }
+  - { mods: [Control], key: C, action: CancelSelection, mode: Select|Insert }
+  - {
+      mods: [Control],
+      key: V,
+      action: PasteClipboard,
+      strip: false,
+      mode: Select|Insert,
+    }
+  - { mods: [Control], key: V, action: CancelSelection, mode: Select|Insert }
+  - { mods: [], key: Escape, action: CancelSelection, mode: Select|Insert }
+  - { mods: [Control, Shift], key: Space, action: ViNormalMode, mode: Insert }
+  - { mods: [Control, Shift], key: Comma, action: OpenConfiguration }
+  - { mods: [Control, Shift], key: Q, action: Quit }
+  - { mods: [Control], mouse: WheelDown, action: DecreaseFontSize }
+  - { mods: [Control], mouse: WheelUp, action: IncreaseFontSize }
+  - { mods: [Shift], key: DownArrow, action: ScrollOneDown }
+  - { mods: [Shift], key: End, action: ScrollToBottom }
+  - { mods: [Shift], key: Home, action: ScrollToTop }
+  - { mods: [Shift], key: PageDown, action: ScrollPageDown }
+  - { mods: [Shift], key: PageUp, action: ScrollPageUp }
+  - { mods: [Shift], key: UpArrow, action: ScrollOneUp }
+  - { mods: [Control, Alt], key: K, action: ScrollMarkUp, mode: ~Alt }
+  - { mods: [Control, Alt], key: J, action: ScrollMarkDown, mode: ~Alt }
+  - { mods: [Shift], mouse: WheelDown, action: ScrollPageDown }
+  - { mods: [Shift], mouse: WheelUp, action: ScrollPageUp }
+  - { mods: [Control, Alt], key: O, action: OpenFileManager }
+  - { mods: [Control, Alt], key: ., action: ToggleStatusLine }
+  - { mods: [Control, Shift], key: F, action: SearchReverse }
+  - { mods: [Control, Shift], key: H, action: NoSearchHighlight }
+  - { mods: [], key: F3, action: FocusNextSearchMatch }
+  - { mods: [Shift], key: F3, action: FocusPreviousSearchMatch }
 #   - { mods: [Control, Meta],  key: 'E',           action: TraceEnter,             mode: "~Trace" }
 #   - { mods: [Control, Meta],  key: 'E',           action: TraceLeave,             mode: "Trace" }
 #   - { mods: [Control, Meta],  key: 'N',           action: TraceStep,              mode: "Trace" }

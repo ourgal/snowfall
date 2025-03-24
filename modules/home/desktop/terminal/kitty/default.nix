@@ -6,7 +6,7 @@ args.module (
     progs.kitty = {
       themeFile = "Tomorrow_Night_Bright";
       font = {
-        name = "FiraCode Nerd Font Mono";
+        name = "Maple Mono SC NF";
         size = 14;
       };
       settings = {

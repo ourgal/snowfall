@@ -81,7 +81,7 @@ args.module (
               render_mode = "lcd";
               strict_spacing = true;
               regular = {
-                family = "FiraCode Nerd Font Mono";
+                family = "Maple Mono SC NF";
                 weight = "medium";
                 slant = "normal";
                 features = [ ];

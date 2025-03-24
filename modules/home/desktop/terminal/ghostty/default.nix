@@ -4,7 +4,7 @@ args.module (
   // {
     path = ./.;
     progs.ghostty.settings = {
-      font-family = "FiraCode Nerd Font Mono";
+      font-family = "Maple Mono SC NF";
       font-size = 14;
       cursor-style = "bar";
       background-opacity = 0.8;
