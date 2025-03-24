@@ -33,7 +33,6 @@ in
       "desktop"
       "envfs"
       "flatpak"
-      "fonts"
       "gpu-screen-recorder"
       "harmonia"
       "kmonad"

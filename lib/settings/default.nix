@@ -44,7 +44,6 @@ in
       "common"
       "desktop"
       "envfs"
-      "fonts"
       "gpu-screen-recorder"
       "harmonia"
       "input"
