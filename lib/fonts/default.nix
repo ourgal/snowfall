@@ -12,15 +12,15 @@
       "maple-mono-SC-NF"
       # keep-sorted end
     ];
-    mono = "Fira Code";
+    mono = "Maple Mono SC NF";
     cnSans = "Source Han Sans SC";
     cnSerif = "Source Han Serif SC";
     enSans = "DejaVu Sans";
     enSerif = "DejaVu Serif";
     emoji = [
-      "Symbols Nerd Font"
       "JoyPixels"
       "Twemoji"
+      "Symbols Nerd Font"
     ];
   };
 }
