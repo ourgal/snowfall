@@ -1,10 +1,10 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.git-issue) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   makeFlags = [ "PREFIX=$(out)" ];
 

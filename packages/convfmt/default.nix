@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.convfmt
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = with lib; {
       description = "Cli tool which can convert different formats";

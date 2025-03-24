@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.play) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-9eP0rhsgpTttYrBG/BNk/ICtaM+zKNBz2H2cHuTSt30=";
 

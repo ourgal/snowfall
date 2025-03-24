@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "L4DRzWqMB+wWmbbF54Fuu4LQjfbu9FmAK3pMAmBKpAk=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.hypergrep) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/p-ranav/hypergrep/releases/download/v${version}/hg_${version}.zip";

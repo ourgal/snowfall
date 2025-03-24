@@ -2,10 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.gogitmoji) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-OjYhqYscuybA3BiaoJMdVQpV+m1MLFDZC+F6xB2+g4Y=";
 

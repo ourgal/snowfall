@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.neonmodem) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-pESNARoUgfg5/cTlTvKF3i7dTMIu0gRG/oV4Ov6h2cY=";
 

@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.envset
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = with lib; {
       description = "Set values in .env files the fun way";

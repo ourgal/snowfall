@@ -5,11 +5,11 @@
   nodePackages,
   makeWrapper,
   fuse,
-  _sources,
+  _sources',
 }:
 
 mpvScripts.buildLua {
-  inherit (_sources.mpv-btfs-stream) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   scriptPath = "main.lua";
 

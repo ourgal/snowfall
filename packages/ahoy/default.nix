@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule rec {
-  inherit (_sources.ahoy) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   sourceRoot = "${src.name}/v2";
 

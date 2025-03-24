@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-workspace) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Automated Vim session management with file auto-save and persistent undo history";

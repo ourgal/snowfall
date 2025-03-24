@@ -1,11 +1,11 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-hug-neovim-rpc) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = {
     description = "EXPERIMENTAL";

@@ -1,10 +1,10 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 python3.pkgs.buildPythonApplication rec {
-  inherit (_sources.cat_win) pname src version;
+  inherit (_sources' ./.) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [ python3.pkgs.flit-core ];

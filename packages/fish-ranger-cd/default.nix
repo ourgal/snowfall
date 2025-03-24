@@ -1,11 +1,11 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fish-ranger-cd) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   meta = {
     description = "Automatically change the directory in fish after closing ranger";

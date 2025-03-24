@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-auto-save) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A Vim plugin which saves files to disk automatically";

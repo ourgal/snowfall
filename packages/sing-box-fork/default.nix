@@ -7,11 +7,11 @@
   coreutils,
   nix-update-script,
   nixosTests,
-  _sources,
+  _sources',
 }:
 
 buildGoModule rec {
-  inherit (_sources.sing-box-fork) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-ZWFZkVRtybQAK9oZRIMBGeDfxXTV7kzXwNSbkvslMFk=";
 

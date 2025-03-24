@@ -1,13 +1,13 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
   pnpm_9,
   nodejs,
 }:
 
 stdenv.mkDerivation rec {
-  inherit (_sources.zashboard) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [
     pnpm_9.configHook

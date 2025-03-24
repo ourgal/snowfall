@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.radio-go-go) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-hYEXzKrACpSyvrAYbV0jkX504Ix/ch2PVrhksYKFhwE=";
 

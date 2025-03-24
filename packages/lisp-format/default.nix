@@ -2,11 +2,11 @@
   lib,
   stdenv,
   emacs,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.lisp-format) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   buildInputs = [ emacs ];
 

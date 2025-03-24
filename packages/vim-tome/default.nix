@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-tome) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Script playbooks for frequent commands in any terminal application";

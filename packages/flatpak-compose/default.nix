@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.flatpak-compose) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-1TyFfRL6HTOa+M4CEcHeiReRcPlPNKMneq2AVXS0kX0=";
 

@@ -2,11 +2,11 @@
   lib,
   stdenv,
   perl,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.pmark) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 

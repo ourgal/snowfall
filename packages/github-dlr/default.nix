@@ -2,6 +2,7 @@
   lib,
   python3,
   _sources,
+  _sources',
 }:
 
 let
@@ -26,7 +27,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.github-dlr) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

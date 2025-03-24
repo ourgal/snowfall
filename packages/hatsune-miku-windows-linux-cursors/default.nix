@@ -1,11 +1,11 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.hatsune-miku-windows-linux-cursors) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

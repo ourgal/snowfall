@@ -5,11 +5,11 @@
   openssl,
   stdenv,
   darwin,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.templify
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ pkg-config ];
 

@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "M4syjEBET8ZmGx4dPanyE82w72I8GLxLsDzNLKKNeGo=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.mosdns-cn) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v${version}/mosdns-cn-linux-amd64.zip";

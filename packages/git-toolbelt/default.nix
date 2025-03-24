@@ -4,10 +4,10 @@
   makeWrapper,
   git,
   fzf,
-  _sources,
+  _sources',
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit (_sources.git-toolbelt) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 

@@ -1,10 +1,10 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.advance-touch) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = [

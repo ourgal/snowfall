@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule rec {
-  inherit (_sources.dnspyre) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-ijUGSxPFHON5Gl348VhC3gv9gs7Z3muNIenfka3NHK4=";
 

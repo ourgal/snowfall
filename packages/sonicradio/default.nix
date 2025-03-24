@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.sonicradio) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-SxivHDLYE7MDHbAOGatvPJ5cFQsZ52mxqTKyPpK3XCk=";
 

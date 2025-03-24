@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-silicon) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Vim plugin for generating images of source code using https://github.com/Aloxaf/silicon";

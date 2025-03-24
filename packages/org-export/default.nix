@@ -2,10 +2,10 @@
   lib,
   stdenv,
   emacs,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.org-export) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 

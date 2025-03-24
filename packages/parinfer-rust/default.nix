@@ -1,10 +1,10 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 vimUtils.buildVimPlugin rec {
-  inherit (_sources.parinfer-rust) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A Rust port of parinfer";

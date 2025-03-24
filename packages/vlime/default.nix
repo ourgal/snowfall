@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vlime) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A Common Lisp dev environment for Vim (and Neovim";

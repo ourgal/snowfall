@@ -2,11 +2,11 @@
   lib,
   rustPlatform,
   namespace,
-  _sources,
+  _sources',
 }:
 
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.dela
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     doCheck = false;
 

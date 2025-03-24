@@ -2,11 +2,11 @@
   lib,
   rustPlatform,
   pkg-config,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.rimage
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ pkg-config ];
 

@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "sha256-9/uj8W6dPL7ZolP5x0mXFqXuqNLcIUtf/J2rcoWhltU=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.cmdx) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/suzuki-shunsuke/cmdx/releases/download/v${version}/cmdx_linux_amd64.tar.gz";

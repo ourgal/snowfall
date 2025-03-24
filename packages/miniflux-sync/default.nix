@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule {
-  inherit (_sources.miniflux-sync) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-+Y4MD9HBjKn09+1KhgU9u7xaj/MhG9k7S48g/sprB1o=";
 

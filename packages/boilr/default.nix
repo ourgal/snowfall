@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "HHqQnUXkaDOjWZ2AwZnndGKl/ZuJxzz5N2mVeL5KKPg=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.boilr) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/tmrts/boilr/releases/download/${version}/boilr-${version}-linux_amd64.tgz";

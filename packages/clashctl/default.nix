@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.clashctl
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     doCheck = false;
 

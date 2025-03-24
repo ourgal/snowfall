@@ -1,14 +1,12 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.tuime
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
-    inherit (_sources.tuime) pname version src;
-
     cargoHash = "sha256-0Y/fE1ydvVg/oOwbZ/49zUDD/84FYq8BQ3mfgbtTrSE=";
 
     meta = with lib; {

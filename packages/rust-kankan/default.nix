@@ -5,11 +5,11 @@
   openssl,
   stdenv,
   darwin,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.rust-kanban
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ pkg-config ];
 

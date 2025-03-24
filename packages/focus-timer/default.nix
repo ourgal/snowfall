@@ -3,10 +3,10 @@
   buildGoModule,
   alsa-lib,
   pkg-config,
-  _sources,
+  _sources',
 }:
 buildGoModule rec {
-  inherit (_sources.focus) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   vendorHash = "sha256-wWTDo4zbvQjosI+fsBwEq5wKhJX2gw9VAbih1urRTO8=";
 

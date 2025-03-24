@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-snipewin) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Manipulate windows most quickly like sniper";

@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.chezmoi-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Highlight dotfiles you manage with chezmoi";

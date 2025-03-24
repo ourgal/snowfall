@@ -7,11 +7,11 @@
   stdenv,
   darwin,
   wayland,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.blendr
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ pkg-config ];
 

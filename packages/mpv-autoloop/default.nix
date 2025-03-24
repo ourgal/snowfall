@@ -1,6 +1,6 @@
-{ _sources, mpvScripts }:
+{ _sources', mpvScripts }:
 mpvScripts.buildLua {
-  inherit (_sources.mpv-autoloop) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   scriptPath = "autoloop.lua";
 }

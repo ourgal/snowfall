@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vim-cycle) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A vim plugin to toggle words between pairs or lists of related words";

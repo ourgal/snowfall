@@ -1,10 +1,10 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fish-color-scheme-switcher) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A fish shell :fish: plugin to switch color schemes :rainbow";

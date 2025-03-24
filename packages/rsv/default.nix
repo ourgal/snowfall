@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.rsv
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ rustPlatform.bindgenHook ];
 

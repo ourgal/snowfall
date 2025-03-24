@@ -1,10 +1,10 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources."web-search.fish") pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A plugin to do a web search via fish. Inspired by oh-my-zsh/web-search";

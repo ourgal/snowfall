@@ -6,6 +6,7 @@
   fetchPypi,
   rustc,
   _sources,
+  _sources',
 }:
 let
   textual = python3.pkgs.buildPythonApplication {
@@ -116,7 +117,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.posting) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

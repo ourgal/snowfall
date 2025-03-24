@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.vimsuggest) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Auto-completion for Vim's command-line";

@@ -1,11 +1,11 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 
 python3.pkgs.buildPythonPackage {
-  inherit (_sources.simple-websocket-server) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   build-system = [

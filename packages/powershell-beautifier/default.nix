@@ -3,11 +3,11 @@
   stdenv,
   powershell,
   writeShellScriptBin,
-  _sources,
+  _sources',
 }:
 let
-  powershell-beautifier = stdenv.mkDerivation rec {
-    inherit (_sources.powershell-beautifier) pname version src;
+  powershell-beautifier = stdenv.mkDerivation {
+    inherit (_sources' ./.) pname version src;
 
     dontBuild = true;
 

@@ -175,7 +175,7 @@ fetch.github = "fastgh/fgit"
 src.github = "faan11/flatpak-compose"
 fetch.github = "faan11/flatpak-compose"
 
-[focus]
+[focus-timer]
 src.github = "ayoisaiah/focus"
 fetch.github = "ayoisaiah/focus"
 
@@ -1258,3 +1258,11 @@ fetch.github = "bearstech/quickbench"
 [musicdl]
 src.git = "https://github.com/CharlesPikachu/musicdl"
 fetch.github = "CharlesPikachu/musicdl"
+
+[downdoc]
+src.github_tag = "opendevise/downdoc"
+fetch.github = "opendevise/downdoc"
+
+[mnamer]
+src.github = "jkwill87/mnamer"
+fetch.github = "jkwill87/mnamer"

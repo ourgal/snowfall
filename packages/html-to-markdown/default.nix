@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule {
-  inherit (_sources.html-to-markdown) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-1Rdjv/ayhcWi6FOd/QKgB7TlU9CbF/x8vUdksYRKL1k=";
 

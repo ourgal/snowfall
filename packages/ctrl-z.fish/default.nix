@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   fishPlugins,
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources."ctrl-z.fish") pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Makes it easy to toggle between $EDITOR and the shell using ctrl+z";

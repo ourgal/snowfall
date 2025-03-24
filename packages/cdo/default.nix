@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.cdo
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = with lib; {
       description = "Small command to run other commands in a given directory";

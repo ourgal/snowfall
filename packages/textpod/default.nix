@@ -3,11 +3,11 @@
   rustPlatform,
   pkg-config,
   oniguruma,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.textpod
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ pkg-config ];
 

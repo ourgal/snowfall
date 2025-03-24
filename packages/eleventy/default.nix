@@ -1,10 +1,10 @@
 {
   lib,
   buildNpmPackage,
-  _sources,
+  _sources',
 }:
 buildNpmPackage {
-  inherit (_sources.eleventy) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   npmDepsHash = "sha256-yB111+LFq5DA6MQAMo0EwUNibZUVZUBpVnrZj6u/Xlg=";
 

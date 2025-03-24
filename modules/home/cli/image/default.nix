@@ -26,7 +26,7 @@ args.module (
     ];
     myPkgs = [
       # keep-sorted start
-      "Duplicate-Image-Finder"
+      "duplicate-image-finder"
       "autocrop"
       "gif-progress"
       "manga-tui"

@@ -4,10 +4,10 @@
   cargo,
   rustPlatform,
   rustc,
-  _sources,
+  _sources',
 }:
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.tach) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   cargoDeps = rustPlatform.importCargoLock {
     lockFile = ./Cargo.lock;

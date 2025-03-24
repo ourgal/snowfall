@@ -3,10 +3,10 @@
   stdenv,
   meson,
   ninja,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.facad) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   nativeBuildInputs = [
     meson

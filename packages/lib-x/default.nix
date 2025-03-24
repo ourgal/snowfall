@@ -9,11 +9,11 @@
   gum,
   xdg-utils,
   zathura,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.lib-x) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 

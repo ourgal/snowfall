@@ -5,11 +5,11 @@
   makeWrapper,
   git,
   tmux,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation rec {
-  inherit (_sources.git-mux) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [
     installShellFiles

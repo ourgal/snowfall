@@ -2,10 +2,10 @@
   lib,
   stdenvNoCC,
   gitUpdater,
-  _sources,
+  _sources',
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
-  inherit (_sources.nrf-udev) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontConfigure = true;
   dontBuild = true;

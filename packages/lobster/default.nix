@@ -12,10 +12,10 @@
   makeWrapper,
   mpv,
   openssl,
-  _sources,
+  _sources',
 }:
 stdenvNoCC.mkDerivation {
-  inherit (_sources.lobster) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [ makeWrapper ];
 

@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.tabry-rs
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = with lib; {
       description = "Shell (tab) completion engine";

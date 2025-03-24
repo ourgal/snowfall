@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.git-sumi
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     doCheck = false;
 

@@ -1,12 +1,12 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
   git,
 }:
 
 buildGoModule rec {
-  inherit (_sources.av) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-j/f/j8cYJi1ESmjHQpy+ilpy5Y++n9aNwpe1b02Eusw=";
 

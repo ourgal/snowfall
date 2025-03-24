@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "Jb8JCKJ4WvA7hLwDkywnBIW+xOYrr3Uww3/OUUk+ZDI=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.gtm) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/git-time-metric/gtm/releases/download/v${version}/gtm.v${version}.linux.tar.gz";

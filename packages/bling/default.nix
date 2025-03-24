@@ -2,10 +2,10 @@
   lib,
   stdenv,
   lua,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.bling) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   buildInputs = [ lua ];
 

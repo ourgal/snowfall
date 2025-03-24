@@ -1,13 +1,13 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
   xorg,
   libGL,
 }:
 
 buildGoModule {
-  inherit (_sources.comigo) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   excludedPackages = [ "htmx" ];
 

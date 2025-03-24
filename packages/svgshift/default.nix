@@ -1,10 +1,10 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.svgshift) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   buildPhase = "gcc svgshift.c -o svgshift";
 

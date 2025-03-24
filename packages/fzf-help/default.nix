@@ -1,10 +1,10 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation rec {
-  inherit (_sources.fzf-help) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

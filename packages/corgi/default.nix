@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "kKJ09kJvxBqlGRfbTRRHw4hFpKP0sJqsfYvIuUfrJZQ=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.corgi) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/junyu-w/corgi/releases/download/v${version}/corgi_v${version}_linux_64-bit.tar.gz";

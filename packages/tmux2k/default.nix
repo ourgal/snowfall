@@ -1,9 +1,6 @@
-{ _sources, tmuxPlugins }:
-let
-  pluginName = "tmux2k";
-in
-tmuxPlugins.mkTmuxPlugin {
-  inherit pluginName;
-  inherit (_sources.${pluginName}) version src;
+{ _sources', tmuxPlugins }:
+tmuxPlugins.mkTmuxPlugin rec {
+  pluginName = pname;
+  inherit (_sources' ./.) pname version src;
   rtpFilePath = "2k.tmux";
 }

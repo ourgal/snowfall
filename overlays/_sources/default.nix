@@ -29,4 +29,18 @@ let
 in
 {
   _sources = sources';
+  _sources' =
+    path:
+    let
+      mkModuleCfg =
+        root: path: prefix:
+        let
+          currentDir = toString path;
+          fileRoot = lib.snowfall.fs.get-file prefix;
+          pathSplit = lib.strings.splitString "/" (lib.strings.removePrefix fileRoot currentDir);
+          ret = lib.attrsets.getAttrFromPath pathSplit root;
+        in
+        ret;
+    in
+    mkModuleCfg sources' path "packages/";
 }

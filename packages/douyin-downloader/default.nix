@@ -1,11 +1,11 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.douyin-downloader) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   postPatch = "cp ${./pyproject.toml} pyproject.toml";

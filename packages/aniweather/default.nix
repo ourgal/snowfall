@@ -2,10 +2,10 @@
   lib,
   stdenv,
   python3,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.aniweather) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 

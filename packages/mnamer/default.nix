@@ -1,21 +1,13 @@
 {
   python3Packages,
-  fetchFromGitHub,
+  _sources',
   fetchpatch,
   lib,
 }:
 
-python3Packages.buildPythonApplication rec {
-  pname = "mnamer";
-  version = "2.5.5";
+python3Packages.buildPythonApplication {
+  inherit (_sources' ./.) pname version src;
   format = "pyproject";
-
-  src = fetchFromGitHub {
-    owner = "jkwill87";
-    repo = "mnamer";
-    rev = version;
-    sha256 = "sha256-qQu5V1GOsbrR00HOrot6TTAkc3KRasBPDEU7ZojUBio=";
-  };
 
   build-system = with python3Packages; [
     setuptools

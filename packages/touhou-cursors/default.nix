@@ -1,11 +1,11 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.touhou-cursors) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 

@@ -2,11 +2,11 @@
   lib,
   namespace,
   appimageTools,
-  _sources,
+  _sources',
 }:
 
 let
-  inherit (_sources.miru) pname version src;
+  inherit (_sources' ./.) pname version src;
   pnameCap = lib.${namespace}.capitalize pname;
   appimageContents = appimageTools.extract { inherit pname version src; };
 in

@@ -1,11 +1,11 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 
 vimUtils.buildVimPlugin {
-  inherit (_sources.git-messenger-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Vim and Neovim plugin to reveal the commit messages under the cursor";

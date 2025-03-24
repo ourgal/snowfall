@@ -2,11 +2,11 @@
   lib,
   rustPlatform,
   pkg-config,
-  _sources,
+  _sources',
 }:
 
 rustPlatform.buildRustPackage rec {
-  inherit (_sources.sprite-dicing) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   sourceRoot = "${src.name}/crates";
 

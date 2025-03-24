@@ -1,10 +1,10 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fish-gitnow) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Speed up your Git workflow. :tropical_fish";

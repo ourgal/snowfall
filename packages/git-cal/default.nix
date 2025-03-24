@@ -2,10 +2,10 @@
   lib,
   stdenv,
   perl,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.git-cal) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

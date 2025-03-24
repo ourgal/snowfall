@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.bafi) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   vendorHash = "sha256-t7rkEAXXK1e124wyN+qUTGoH0r0X/ZV49/XG29k/KVM=";
 

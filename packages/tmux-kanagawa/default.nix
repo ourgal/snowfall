@@ -1,9 +1,6 @@
-{ tmuxPlugins, _sources }:
-let
-  pluginName = "tmux-kanagawa";
-in
-tmuxPlugins.mkTmuxPlugin {
-  inherit pluginName;
-  inherit (_sources.${pluginName}) version src;
+{ tmuxPlugins, _sources' }:
+tmuxPlugins.mkTmuxPlugin rec {
+  pluginName = pname;
+  inherit (_sources' ./.) pname version src;
   rtpFilePath = "kanagawa.tmux";
 }

@@ -1,10 +1,10 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.subtotxt) pname version src;
+  inherit (_sources' ./.) pname version src;
   format = "other";
 
   propagatedBuildInputs = with python3.pkgs; [

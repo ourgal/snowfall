@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "uxH/JnCyUM2jANONLtAPyXmVYfdGIPw/WE4VGD27nb4=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.gif-progress) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/nwtgck/gif-progress/releases/download/${version}/gif-progress-linux-amd64.tar.gz";

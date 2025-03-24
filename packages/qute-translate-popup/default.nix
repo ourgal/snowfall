@@ -1,12 +1,12 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
   python3,
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.qute-translate-popup) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 
@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/l4l4l4l4/qute-translate-popup";
     license = lib.licenses.unfree; # FIXME: nix-init did not find a license
     maintainers = with lib.maintainers; [ zxc ];
-    mainProgram = "qute-translate-popup";
     platforms = lib.platforms.all;
   };
 }

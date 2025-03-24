@@ -1,6 +1,6 @@
-{ _sources, mpvScripts }:
+{ _sources', mpvScripts }:
 mpvScripts.buildLua {
-  inherit (_sources.mpv-smartcopypaste_ii) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   scriptPath = "scripts/SmartCopyPaste_II.lua";
 }

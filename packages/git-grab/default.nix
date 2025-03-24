@@ -1,10 +1,10 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
 }:
 rustPlatform.buildRustPackage {
-  inherit (_sources.git-grab) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   cargoHash = "sha256-0HZ27rMA2d+roxxl6mYs9vuIWKAXct/6NezuOILs8p0=";
 

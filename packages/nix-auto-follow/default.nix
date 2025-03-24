@@ -1,11 +1,10 @@
 {
   lib,
   python3,
-  _sources,
+  _sources',
 }:
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.nix-auto-follow) pname src;
-  version = "0.1.0";
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = [

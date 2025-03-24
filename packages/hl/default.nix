@@ -1,7 +1,7 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   pkg-config,
   bzip2,
   xz,
@@ -11,7 +11,7 @@
 }:
 
 rustPlatform.buildRustPackage {
-  inherit (_sources.hl) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   cargoLock = {
     lockFile = ./Cargo.lock;

@@ -2,11 +2,11 @@
   lib,
   rustPlatform,
   namespace,
-  _sources,
+  _sources',
 }:
 
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.ccsum
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = {
       description = "Convenient Checksum";

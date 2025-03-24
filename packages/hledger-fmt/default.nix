@@ -2,10 +2,10 @@
   lib,
   rustPlatform,
   namespace,
-  _sources,
+  _sources',
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.hledger-fmt
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     meta = {
       description = "An opinionated hledger's journal files formatter";

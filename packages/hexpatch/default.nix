@@ -4,11 +4,11 @@
   pkg-config,
   cmake,
   python3,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.hexpatch
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [
       pkg-config

@@ -1,10 +1,10 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.tokyonight-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "A clean, dark vim colorscheme that celebrates the lights of downtown Tokyo at night, based on a VSCode theme by @enkia with the same name [Archived because I'm no longer using this";

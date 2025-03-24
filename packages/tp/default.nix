@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "+ziOARrOL03AuMb9axU9BlPD+ZAp4XC1N0YAJLr0SfA=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.tp) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/minefuto/tp/releases/download/v${version}/tp_Linux_x86_64.tar.gz";

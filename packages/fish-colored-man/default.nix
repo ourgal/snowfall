@@ -1,10 +1,10 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fish-colored-man) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Color-enabled man pages plugin for fish-shell";

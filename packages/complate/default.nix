@@ -2,11 +2,11 @@
   lib,
   rustPlatform,
   installShellFiles,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.complate
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [ installShellFiles ];
 

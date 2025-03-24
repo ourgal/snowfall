@@ -1,14 +1,11 @@
 {
   tmuxPlugins,
   python3,
-  _sources,
+  _sources',
 }:
-let
-  pluginName = "tmux-which-key";
-in
-tmuxPlugins.mkTmuxPlugin {
-  inherit pluginName;
-  inherit (_sources.${pluginName}) version src;
+tmuxPlugins.mkTmuxPlugin rec {
+  pluginName = pname;
+  inherit (_sources' ./.) pname version src;
   rtpFilePath = "plugin.sh.tmux";
 
   preInstall = ''

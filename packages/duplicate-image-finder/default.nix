@@ -2,11 +2,11 @@
   lib,
   stdenv,
   python3,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.duplicate-image-finder) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   postPatch = ''
     chmod +x difPy/dif.py

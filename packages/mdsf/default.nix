@@ -5,11 +5,11 @@
   zstd,
   stdenv,
   darwin,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.mdsf
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
 
     nativeBuildInputs = [ pkg-config ];

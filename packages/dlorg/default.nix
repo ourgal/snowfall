@@ -2,10 +2,10 @@
   lib,
   stdenv,
   python3,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.dlorg) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

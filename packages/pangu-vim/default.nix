@@ -1,10 +1,10 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.pangu-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "盘古之白』中文排版自动规范化的 Vim 插件";

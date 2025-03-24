@@ -1,11 +1,11 @@
 {
   lib,
   buildNpmPackage,
-  _sources,
+  _sources',
 }:
 
 buildNpmPackage {
-  inherit (_sources.magit-stats) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   npmDepsHash = "sha256-Dnf5oDfWRF/0ICQ0/VobSovEJeJcontt63j7ObAn2Fg=";
 

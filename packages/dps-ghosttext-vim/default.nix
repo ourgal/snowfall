@@ -1,11 +1,11 @@
 {
   lib,
   vimUtils,
-  _sources,
+  _sources',
 }:
 
 vimUtils.buildVimPlugin {
-  inherit (_sources.dps-ghosttext-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = {
     description = "GhostText plugin powered by denops.vim";

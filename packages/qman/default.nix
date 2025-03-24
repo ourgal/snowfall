@@ -11,11 +11,11 @@
   inih,
   ninja,
   bzip2,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.qman) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   nativeBuildInputs = [
     meson

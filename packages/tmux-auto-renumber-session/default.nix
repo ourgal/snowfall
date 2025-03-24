@@ -1,9 +1,6 @@
-{ tmuxPlugins, _sources }:
-let
-  pluginName = "tmux-auto-renumber-session";
-in
-tmuxPlugins.mkTmuxPlugin {
-  inherit pluginName;
-  inherit (_sources.${pluginName}) version src;
+{ tmuxPlugins, _sources' }:
+tmuxPlugins.mkTmuxPlugin rec {
+  pluginName = pname;
+  inherit (_sources' ./.) pname version src;
   rtpFilePath = "tmux-auto-renumber-session.tmux";
 }

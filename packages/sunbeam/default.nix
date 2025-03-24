@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule rec {
-  inherit (_sources.sunbeam) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-+RMmbKCY9Q8w58ksK7PgtM2mo5bOc6HJFJsfdWIYDnE=";
 

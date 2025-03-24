@@ -5,13 +5,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "A1G2ECju7ZhnEWTIYkX9S8mDNrytwCOSW3l4CK3OLkI=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.sbsrf-rime-data) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";

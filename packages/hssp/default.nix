@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule {
-  inherit (_sources.hssp) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-Bpu34alpZYyjI0ZQCDKk9WjG/vr3n/xmEaw41G8n/dc=";
 

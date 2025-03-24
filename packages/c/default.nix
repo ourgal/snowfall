@@ -1,10 +1,10 @@
 {
   stdenv,
   lib,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.c) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

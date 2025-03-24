@@ -1,10 +1,10 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.git-ink) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   installPhase = ''
     runHook preInstall

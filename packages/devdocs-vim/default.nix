@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   vimUtils,
 }:
 vimUtils.buildVimPlugin {
-  inherit (_sources.devdocs-vim) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Lookup  API documentation from devdocs.io without leaving Vim";

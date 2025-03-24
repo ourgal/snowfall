@@ -1,10 +1,10 @@
 {
   lib,
   fishPlugins,
-  _sources,
+  _sources',
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fifc) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Configurable fzf completions for fish shell";

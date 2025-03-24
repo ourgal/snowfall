@@ -2,10 +2,10 @@
   lib,
   stdenv,
   luajit,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.antifennel) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   buildInputs = [ luajit ];
 

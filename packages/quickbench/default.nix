@@ -1,11 +1,11 @@
 {
   lib,
   stdenv,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.quickbench) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   postPatch = "chmod +x ./quickbench";
 

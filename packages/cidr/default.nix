@@ -1,11 +1,11 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 
 buildGoModule rec {
-  inherit (_sources.cidr) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-gM3qgRK+L4qg9dnbQWQc/AoWyrcFsNc1r1KpdUug3nU=";
 

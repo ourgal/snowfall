@@ -2,6 +2,7 @@
   lib,
   python3,
   _sources,
+  _sources',
 }:
 let
   textual = python3.pkgs.buildPythonApplication {
@@ -44,7 +45,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.tui-network) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   build-system = [ python3.pkgs.poetry-core ];

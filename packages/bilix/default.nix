@@ -3,6 +3,7 @@
   python3,
   fetchPypi,
   _sources,
+  _sources',
 }:
 let
   construct = python3.pkgs.buildPythonApplication rec {
@@ -96,7 +97,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.bilix) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   build-system = [ python3.pkgs.hatchling ];

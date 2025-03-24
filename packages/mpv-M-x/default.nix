@@ -1,6 +1,6 @@
-{ _sources, mpvScripts }:
+{ _sources', mpvScripts }:
 mpvScripts.buildLua {
-  inherit (_sources.mpv-M-x) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   scriptPath = "M-x.lua";
   extraScripts = [ "script-modules/extended-menu.lua" ];

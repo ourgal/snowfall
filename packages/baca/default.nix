@@ -2,6 +2,7 @@
   lib,
   python3,
   _sources,
+  _sources',
 }:
 let
   kdtree = python3.pkgs.buildPythonApplication {
@@ -49,7 +50,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources.baca) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

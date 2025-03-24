@@ -1,17 +1,13 @@
 {
   writeShellApplication,
   lib,
-  _sources,
+  _sources',
 }:
-let
-  inherit (_sources.git-heatgrid) src;
-  name = _sources.git-heatgrid.pname;
-in
 writeShellApplication rec {
-  inherit name;
+  inherit (_sources' ./.) pname version src;
 
   meta = {
-    mainProgram = name;
+    mainProgram = pname;
     platforms = lib.platforms.linux;
   };
 

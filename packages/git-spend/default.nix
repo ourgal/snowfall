@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.git-spend) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-4ZhAPdENy1fEMKkLLf4RktcKpG8u52G2FG3kpOU3cvY=";
 

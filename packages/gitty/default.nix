@@ -2,10 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.gitty) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   vendorHash = "sha256-xfTwp4SkkITBKmbWdKgDgvExzEjjWdxg4KHVTv/26LI=";
 

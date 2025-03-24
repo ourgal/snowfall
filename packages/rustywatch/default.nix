@@ -4,11 +4,11 @@
   stdenv,
   darwin,
   namespace,
-  _sources,
+  _sources',
 }:
 
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.rustywatch
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     buildInputs = lib.optionals stdenv.isDarwin [
       darwin.apple_sdk.frameworks.CoreFoundation

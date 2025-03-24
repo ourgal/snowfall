@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.treegen) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = null;
 

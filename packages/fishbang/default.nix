@@ -1,10 +1,10 @@
 {
   lib,
-  _sources,
+  _sources',
   fishPlugins,
 }:
 fishPlugins.buildFishPlugin {
-  inherit (_sources.fishbang) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   meta = with lib; {
     description = "Bash bang commands for fish";

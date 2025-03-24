@@ -3,10 +3,10 @@
   buildGoModule,
   ruby,
   python3,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.gaze) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   vendorHash = "sha256-RdTA2HL/wKwqMIvm6gjsUTlaYklSRhyVhgJsGS9QRtY=";
 

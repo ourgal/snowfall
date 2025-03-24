@@ -3,10 +3,10 @@
   stdenv,
   python3,
   socat,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.curd) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   dontBuild = true;
 

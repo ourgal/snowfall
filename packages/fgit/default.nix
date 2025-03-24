@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.fgit) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   vendorHash = "sha256-vCi04OruIuJ0w29TpqTf17GaWvoeJQjCTNQZp1ZqLgs=";
 

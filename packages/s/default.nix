@@ -2,10 +2,10 @@
   lib,
   buildGoModule,
   installShellFiles,
-  _sources,
+  _sources',
 }:
 buildGoModule {
-  inherit (_sources.s) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-0E/9fONanSxb2Tv5wKIpf1J/A6Hdge23xy3r6pFyV9E=";
 

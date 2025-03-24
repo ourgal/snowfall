@@ -8,10 +8,10 @@
   cue,
   shellcheck,
   makeWrapper,
-  _sources,
+  _sources',
 }:
 stdenv.mkDerivation {
-  inherit (_sources.kbgrep) pname src version;
+  inherit (_sources' ./.) pname src version;
 
   nativeBuildInputs = [
     bashly

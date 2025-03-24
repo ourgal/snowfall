@@ -6,11 +6,11 @@
   stdenv,
   darwin,
   alsa-lib,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.code-radio-cli
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     nativeBuildInputs = [
       pkg-config

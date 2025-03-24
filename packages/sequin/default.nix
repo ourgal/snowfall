@@ -6,13 +6,13 @@
   curl,
   jq,
   gnused,
-  _sources,
+  _sources',
 }:
 let
   hash = "sha256-exVp3hrnCR6p2mlmzGBL8IWcY3W7kXnd4uriwNVFtwY=";
 in
 stdenv.mkDerivation rec {
-  inherit (_sources.sequin) pname version;
+  inherit (_sources' ./.) pname version;
 
   src = fetchzip {
     url = "https://github.com/charmbracelet/sequin/releases/download/v${version}/sequin_${version}_Linux_x86_64.tar.gz";

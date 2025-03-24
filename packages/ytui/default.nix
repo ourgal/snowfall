@@ -1,10 +1,10 @@
 {
   lib,
   buildGoModule,
-  _sources,
+  _sources',
 }:
 buildGoModule rec {
-  inherit (_sources.ytui) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   vendorHash = "sha256-TEOGMhGY9TdLm1awKM4e/4x2qA5bcdmHJ9mwI1zdsLI=";
 

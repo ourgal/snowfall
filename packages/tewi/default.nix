@@ -2,6 +2,7 @@
   lib,
   python3,
   _sources,
+  _sources',
 }:
 let
   geoip2fast = python3.pkgs.buildPythonApplication {
@@ -39,7 +40,7 @@ let
   };
 in
 python3.pkgs.buildPythonApplication rec {
-  inherit (_sources.tewi) pname version src;
+  inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = with python3.pkgs; [

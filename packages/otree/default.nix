@@ -3,11 +3,11 @@
   rustPlatform,
   stdenv,
   darwin,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.otree
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     buildInputs = lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.IOKit ];
 

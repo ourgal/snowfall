@@ -1,11 +1,11 @@
 {
   lib,
   rustPlatform,
-  _sources,
+  _sources',
   namespace,
 }:
 rustPlatform.buildRustPackage (
-  lib.${namespace}.mkRustSource _sources.simple-completion-language-server
+  lib.${namespace}.mkRustSource (_sources' ./.)
   // {
     checkFlags = [ "--skip=citations" ];
 

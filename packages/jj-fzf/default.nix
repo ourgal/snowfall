@@ -2,11 +2,11 @@
   lib,
   stdenv,
   bashInteractive,
-  _sources,
+  _sources',
 }:
 
 stdenv.mkDerivation {
-  inherit (_sources.jj-fzf) pname version src;
+  inherit (_sources' ./.) pname version src;
 
   dontBuild = true;
 
