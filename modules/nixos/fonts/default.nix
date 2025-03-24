@@ -1,38 +1,36 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule enabled with';
+  inherit (lib.${namespace}.font)
+    defaults
+    mono
+    cnSans
+    cnSerif
+    enSans
+    enSerif
+    emoji
+    ;
   value = {
     fonts = {
       fontDir = enabled;
-      packages = with pkgs; [
-        fira-code
-        joypixels
-        nerdfonts
-        source-han-sans
-        dejavu_fonts
-        twemoji-color-font
-        maple-mono-SC-NF
-      ];
+      packages = with' pkgs defaults;
       fontconfig = {
-        defaultFonts =
-          let
-            mono = [ "Fira Code" ];
-            cnSans = [ "Source Han Sans SC" ];
-            cnSerif = [ "Source Han Serif SC" ];
-            enSans = [ "DejaVu Sans" ];
-            enSerif = [ "DejaVu Serif" ];
-          in
-          {
-            emoji = [
-              "Symbols Nerd Font"
-              "JoyPixels"
-              "Twemoji"
-            ];
-            monospace = mono ++ cnSans;
-            sansSerif = cnSans ++ enSans;
-            serif = cnSerif ++ enSerif;
-          };
+        defaultFonts = {
+          inherit emoji;
+          monospace = [
+            mono
+            cnSans
+          ];
+          sansSerif = [
+            cnSans
+            enSans
+          ];
+          serif = [
+            cnSerif
+            enSerif
+          ];
+        };
       };
     };
   };
