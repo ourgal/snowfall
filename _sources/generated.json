@@ -1926,16 +1926,16 @@
         },
         "version": "v1.0.0"
     },
-    "game_2048_tui": {
+    "game-2048-tui": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./game_2048_tui-v0.0.2/Cargo.lock",
+                "./game-2048-tui-v0.0.2/Cargo.lock",
                 {}
             ]
         },
         "date": null,
         "extract": null,
-        "name": "game_2048_tui",
+        "name": "game-2048-tui",
         "passthru": null,
         "pinned": false,
         "src": {

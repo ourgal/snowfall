@@ -1085,8 +1085,8 @@
       sha256 = "sha256-Aa+jqcavFber+tAWUqPgV87sKKZS+5rGeJLS7RoYGLA=";
     };
   };
-  game_2048_tui = {
-    pname = "game_2048_tui";
+  game-2048-tui = {
+    pname = "game-2048-tui";
     version = "v0.0.2";
     src = fetchFromGitHub {
       owner = "WanderHuang";
@@ -1096,7 +1096,7 @@
       sha256 = "sha256-/O548IEhGYSOSIG/xTGCi+P75poM5KY2AYW6lXRCtF0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./game_2048_tui-v0.0.2/Cargo.lock;
+      lockFile = ./game-2048-tui-v0.0.2/Cargo.lock;
       outputHashes = {
         
       };
