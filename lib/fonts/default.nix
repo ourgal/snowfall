@@ -58,6 +58,10 @@
         pkg = "font-SentyEtherealWander";
         name = "SentyEtherealWander";
       };
+      fontAwesome = {
+        pkg = "font-awesome";
+        name = "Font Awesome 6 Free";
+      };
     in
     {
       nixPkgs = [
@@ -69,6 +73,7 @@
         dejavu.pkg
         twemoji.pkg
         maple.pkg
+        fontAwesome.pkg
       ];
       myPkgs = [ SentyEtherealWander.pkg ];
       mono = maple.name;
@@ -85,6 +90,7 @@
       enSans = dejavu.sans;
       enSerif = dejavu.serif;
       emoji = [
+        fontAwesome.name
         joypixels.name
         twemoji.name
         nerdfonts.name
