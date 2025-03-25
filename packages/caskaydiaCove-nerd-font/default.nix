@@ -1,10 +1,16 @@
-{ stdenvNoCC, ... }:
+{ stdenvNoCC, p7zip, ... }:
 
 stdenvNoCC.mkDerivation {
   pname = "caskaydiaCove-nerd-font";
   version = "Amitabha37377";
 
-  src = ./fonts;
+  unpackCmd = ''
+    7z x font.7z
+  '';
+
+  src = ./font.7z;
+
+  nativeBuildInputs = [ p7zip ];
 
   installPhase = ''
     runHook preInstall
