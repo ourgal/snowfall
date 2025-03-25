@@ -96,7 +96,25 @@ args.module (
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = "Source Han Sans HC";
+                      string = font.hkSans;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "zh-HK";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.cnSerif;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.hkSerif;
                     };
                   }
                   {
@@ -114,7 +132,25 @@ args.module (
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = "Source Han Sans TC";
+                      string = font.twSans;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "zh-TW";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.cnSerif;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.twSerif;
                     };
                   }
                   {
@@ -132,7 +168,25 @@ args.module (
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = "Source Han Sans HW";
+                      string = font.jaSans;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "ja";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.cnSerif;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.jaSerif;
                     };
                   }
                   {
@@ -150,7 +204,25 @@ args.module (
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = "Source Han Sans K";
+                      string = font.koSans;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "ko";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.cnSerif;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.koSerif;
                     };
                   }
                   {
@@ -190,7 +262,7 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.enSans;
+                      string = font.enSerif;
                     };
                   }
                 ];

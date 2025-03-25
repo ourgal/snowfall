@@ -1,29 +1,95 @@
 { lib, ... }:
 {
-  font = {
-    nixPkgs = [
-      # keep-sorted start
-      "fira-code"
-      "joypixels"
-      "nerdfonts"
-      "source-han-sans"
-      "dejavu_fonts"
-      "twemoji-color-font"
-      "maple-mono-SC-NF"
-      # keep-sorted end
-    ];
-    myPkgs = [ "font-SentyEtherealWander" ];
-    mono = "Maple Mono SC NF";
-    cnSans = "Source Han Sans SC";
-    cnSerif = "Source Han Serif SC";
-    enSans = "DejaVu Sans";
-    enSerif = "DejaVu Serif";
-    emoji = [
-      "JoyPixels"
-      "Twemoji"
-      "Symbols Nerd Font"
-    ];
-  };
+  font =
+    let
+      dejavu =
+        builtins.mapAttrs (_: v: "DejaVu ${v}") {
+          sans = "Sans";
+          serif = "Serif";
+        }
+        // {
+          pkg = "dejavu_fonts";
+        };
+      sourceHan = {
+        sans =
+          (builtins.mapAttrs (_: v: "Source Han Sans ${v}") {
+            cn = "SC";
+            ja = "HW";
+            ko = "K";
+            hk = "HC";
+            tw = "TC";
+          })
+          // {
+            pkg = "source-han-sans";
+          };
+        serif =
+          (builtins.mapAttrs (_: v: "Source Han Serif ${v}") {
+            cn = "SC";
+            ja = "HW";
+            ko = "K";
+            hk = "HC";
+            tw = "TC";
+          })
+          // {
+            pkg = "source-han-serif";
+          };
+      };
+      joypixels = {
+        pkg = "joypixels";
+        name = "JoyPixels";
+      };
+      twemoji = {
+        pkg = "twemoji-color-font";
+        name = "Twemoji";
+      };
+      nerdfonts = {
+        pkg = "nerdfonts";
+        name = "Symbols Nerd Font";
+      };
+      firacode = {
+        pkg = "fira-code";
+        name = "Fira Code";
+      };
+      maple = {
+        pkg = "maple-mono-SC-NF";
+        name = "Maple Mono SC NF";
+      };
+      SentyEtherealWander = {
+        pkg = "font-SentyEtherealWander";
+        name = "SentyEtherealWander";
+      };
+    in
+    {
+      nixPkgs = [
+        firacode.pkg
+        joypixels.pkg
+        nerdfonts.pkg
+        sourceHan.sans.pkg
+        sourceHan.serif.pkg
+        dejavu.pkg
+        twemoji.pkg
+        maple.pkg
+      ];
+      myPkgs = [ SentyEtherealWander.pkg ];
+      mono = maple.name;
+      cnSans = sourceHan.sans.cn;
+      cnSerif = sourceHan.serif.cn;
+      jaSans = sourceHan.sans.ja;
+      jaSerif = sourceHan.serif.ja;
+      koSans = sourceHan.sans.ko;
+      koSerif = sourceHan.serif.ko;
+      hkSans = sourceHan.sans.hk;
+      hkSerif = sourceHan.serif.hk;
+      twSans = sourceHan.sans.tw;
+      twSerif = sourceHan.serif.tw;
+      enSans = dejavu.sans;
+      enSerif = dejavu.serif;
+      emoji = [
+        joypixels.name
+        twemoji.name
+        nerdfonts.name
+      ];
+    };
   mkFontconfig =
     header: json:
     lib.attrsets.foldlAttrs (
