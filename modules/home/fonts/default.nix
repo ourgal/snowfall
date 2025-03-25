@@ -8,7 +8,8 @@ args.module (
     in
     {
       path = ./.;
-      nixPkgs = font.defaults;
+      nixPkgs = font.nixPkgs;
+      myPkgs = font.myPkgs;
       confs = {
         "fontconfig/fonts.conf" =
           let
@@ -162,8 +163,27 @@ args.module (
                       }
                       {
                         "@name" = "family";
+                        string = font.cnSans;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@mode" = "prepend";
+                      "@binding" = "strong";
+                      string = font.enSans;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
                         "@compare" = "contains";
-                        string = "Source Han";
+                        string = "en";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.cnSerif;
                       }
                     ];
                     edit = {

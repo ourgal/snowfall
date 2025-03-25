@@ -3,7 +3,8 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled with';
   inherit (lib.${namespace}.font)
-    defaults
+    nixPkgs
+    myPkgs
     mono
     cnSans
     cnSerif
@@ -14,7 +15,7 @@ let
   value = {
     fonts = {
       fontDir = enabled;
-      packages = with' pkgs defaults;
+      packages = (with' pkgs nixPkgs) ++ (with' pkgs.${namespace} myPkgs);
       fontconfig = {
         defaultFonts = {
           inherit emoji;

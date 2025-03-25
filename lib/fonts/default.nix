@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   font = {
-    defaults = [
+    nixPkgs = [
       # keep-sorted start
       "fira-code"
       "joypixels"
@@ -12,6 +12,7 @@
       "maple-mono-SC-NF"
       # keep-sorted end
     ];
+    myPkgs = [ "font-SentyEtherealWander" ];
     mono = "Maple Mono SC NF";
     cnSans = "Source Han Sans SC";
     cnSerif = "Source Han Serif SC";
