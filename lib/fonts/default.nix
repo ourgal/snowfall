@@ -2,8 +2,9 @@
 {
   font =
     let
+      prefix = p: builtins.mapAttrs (_: v: "${p} ${v}");
       dejavu =
-        builtins.mapAttrs (_: v: "DejaVu ${v}") {
+        prefix "DejaVu" {
           sans = "Sans";
           serif = "Serif";
         }
@@ -12,7 +13,7 @@
         };
       sourceHan = {
         sans =
-          (builtins.mapAttrs (_: v: "Source Han Sans ${v}") {
+          (prefix "Source Han Sans" {
             cn = "SC";
             ja = "HW";
             ko = "K";
@@ -23,7 +24,7 @@
             pkg = "source-han-sans";
           };
         serif =
-          (builtins.mapAttrs (_: v: "Source Han Serif ${v}") {
+          (prefix "Source Han Serif" {
             cn = "SC";
             ja = "HW";
             ko = "K";
@@ -62,6 +63,38 @@
         pkg = "font-awesome";
         name = "Font Awesome 6 Free";
       };
+      noto =
+        (prefix "Noto" {
+          sans = "Sans";
+          serif = "Serif";
+        })
+        // {
+          pkg = "noto-fonts";
+        };
+      notoCJK = {
+        sans =
+          (prefix "Noto Sans CJK" {
+            ko = "KR";
+            hk = "HK";
+            ja = "JP";
+            cn = "SC";
+            tw = "TC";
+          })
+          // {
+            pkg = "noto-fonts-cjk-sans";
+          };
+        serif =
+          (prefix "Noto Serif CJK" {
+            ko = "KR";
+            hk = "HK";
+            ja = "JP";
+            cn = "SC";
+            tw = "TC";
+          })
+          // {
+            pkg = "noto-fonts-cjk-serif";
+          };
+      };
     in
     {
       nixPkgs = [
@@ -74,21 +107,24 @@
         twemoji.pkg
         maple.pkg
         fontAwesome.pkg
+        noto.pkg
+        notoCJK.sans.pkg
+        notoCJK.serif.pkg
       ];
       myPkgs = [ SentyEtherealWander.pkg ];
       mono = maple.name;
-      cnSans = sourceHan.sans.cn;
-      cnSerif = sourceHan.serif.cn;
-      jaSans = sourceHan.sans.ja;
-      jaSerif = sourceHan.serif.ja;
-      koSans = sourceHan.sans.ko;
-      koSerif = sourceHan.serif.ko;
-      hkSans = sourceHan.sans.hk;
-      hkSerif = sourceHan.serif.hk;
-      twSans = sourceHan.sans.tw;
-      twSerif = sourceHan.serif.tw;
-      enSans = dejavu.sans;
-      enSerif = dejavu.serif;
+      cnSans = notoCJK.sans.cn;
+      cnSerif = notoCJK.serif.cn;
+      jaSans = notoCJK.sans.ja;
+      jaSerif = notoCJK.serif.ja;
+      koSans = notoCJK.sans.ko;
+      koSerif = notoCJK.serif.ko;
+      hkSans = notoCJK.sans.hk;
+      hkSerif = notoCJK.serif.hk;
+      twSans = notoCJK.sans.tw;
+      twSerif = notoCJK.serif.tw;
+      enSans = noto.sans;
+      enSerif = noto.serif;
       emoji = [
         fontAwesome.name
         joypixels.name
