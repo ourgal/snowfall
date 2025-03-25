@@ -95,42 +95,29 @@
             pkg = "noto-fonts-cjk-serif";
           };
       };
+      getPkg = builtins.map (x: x.pkg);
     in
-    {
-      nixPkgs = [
-        firacode.pkg
-        joypixels.pkg
-        nerdfonts.pkg
-        sourceHan.sans.pkg
-        sourceHan.serif.pkg
-        dejavu.pkg
-        twemoji.pkg
-        maple.pkg
-        fontAwesome.pkg
-        noto.pkg
-        notoCJK.sans.pkg
-        notoCJK.serif.pkg
-      ];
-      myPkgs = [ SentyEtherealWander.pkg ];
-      mono = maple.name;
-      cnSans = notoCJK.sans.cn;
-      cnSerif = notoCJK.serif.cn;
-      jaSans = notoCJK.sans.ja;
-      jaSerif = notoCJK.serif.ja;
-      koSans = notoCJK.sans.ko;
-      koSerif = notoCJK.serif.ko;
-      hkSans = notoCJK.sans.hk;
-      hkSerif = notoCJK.serif.hk;
-      twSans = notoCJK.sans.tw;
-      twSerif = notoCJK.serif.tw;
-      enSans = noto.sans;
-      enSerif = noto.serif;
+    rec {
+      getName = builtins.map (x: x.name);
+      myPkgs = getPkg [ SentyEtherealWander ];
+      mono = maple;
+      cjk = { inherit (notoCJK) sans serif; };
+      en = { inherit (noto) sans serif pkg; };
       emoji = [
-        fontAwesome.name
-        joypixels.name
-        twemoji.name
-        nerdfonts.name
+        fontAwesome
+        joypixels
+        twemoji
+        nerdfonts
       ];
+      nixPkgs = getPkg (
+        [
+          mono
+          cjk.sans
+          cjk.serif
+          en
+        ]
+        ++ emoji
+      );
     };
   mkFontconfig =
     header: json:
