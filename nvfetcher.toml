@@ -424,7 +424,7 @@ fetch.github = "alajmo/sake"
 
 [sbsrf-rime-data]
 src.github = "sbsrf/sbsrf"
-fetch.github = "sbsrf/sbsrf"
+fetch.url = "https://github.com/sbsrf/sbsrf/releases/download/$ver/sbsrf.zip"
 
 [simple-completion-language-server]
 src.git = "https://github.com/estin/simple-completion-language-server"

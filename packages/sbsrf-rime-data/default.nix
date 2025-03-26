@@ -1,23 +1,15 @@
 {
+  lib,
   stdenv,
-  fetchzip,
-  writeShellScriptBin,
-  curl,
-  jq,
-  gnused,
   _sources',
+  p7zip,
 }:
-let
-  hash = "A1G2ECju7ZhnEWTIYkX9S8mDNrytwCOSW3l4CK3OLkI=";
-in
-stdenv.mkDerivation rec {
-  inherit (_sources' ./.) pname version;
+stdenv.mkDerivation {
+  inherit (_sources' ./.) pname version src;
 
-  src = fetchzip {
-    url = "https://github.com/sbsrf/sbsrf/releases/download/${version}/sbsrf.zip";
-    sha256 = hash;
-    stripRoot = false;
-  };
+  unpackCmd = ''
+    7z x $src -otemp
+  '';
 
   installPhase = ''
     runHook preInstall
@@ -28,11 +20,13 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  passthru.update = writeShellScriptBin "update-package" ''
-    set -euo pipefail
+  nativeBuildInputs = [ p7zip ];
 
-    latest="$(${curl}/bin/curl -s "https://api.github.com/repos/sbsrf/sbsrf/releases?per_page=1" | ${jq}/bin/jq -r ".[0].tag_name" | ${gnused}/bin/sed 's/^v//')"
-
-    drift rewrite --auto-hash --new-version "$latest"
-  '';
+  meta = {
+    description = "声笔输入法";
+    homepage = "https://github.com/sbsrf/sbsrf";
+    license = lib.licenses.bsd3;
+    maintainers = with lib.maintainers; [ zxc ];
+    platforms = lib.platforms.all;
+  };
 }
