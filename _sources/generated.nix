@@ -393,6 +393,17 @@
       };
     };
   };
+  comicneue = {
+    pname = "comicneue";
+    version = "2.51";
+    src = fetchFromGitHub {
+      owner = "crozynski";
+      repo = "comicneue";
+      rev = "2.51";
+      fetchSubmodules = false;
+      sha256 = "sha256-zzfNwRgvK6o/E4j5RelBtYI3lscDMEo6jVsYG1ry3sA=";
+    };
+  };
   comigo = {
     pname = "comigo";
     version = "v0.9.13";
