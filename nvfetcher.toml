@@ -992,7 +992,7 @@ fetch.github = "IrineSistiana/mosdns-cn"
 
 [gif-progress]
 src.github = "nwtgck/gif-progress"
-fetch.github = "nwtgck/gif-progress"
+fetch.url = "https://github.com/nwtgck/gif-progress/releases/download/$ver/gif-progress-linux-amd64.zip"
 
 [mpv-btfs-stream]
 src.git = "https://github.com/noctuid/mpv-btfs-stream"
