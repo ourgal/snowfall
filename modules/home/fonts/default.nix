@@ -5,9 +5,9 @@ args.module (
     let
       inherit (args) lib namespace host;
       inherit (lib.${namespace}) font mkFontconfig;
-      inherit (lib.${namespace}.settings) desktops;
+      inherit (lib.${namespace}.settings) allHosts;
       emoji = font.getName font.emoji;
-      notNixos = lib.optionals (!builtins.elem host desktops);
+      notNixos = lib.optionals (!builtins.elem host allHosts);
     in
     {
       path = ./.;
@@ -79,9 +79,45 @@ args.module (
                       "@mode" = "prepend";
                       "@binding" = "strong";
                       string = [
-                        font.mono.name
-                        font.cjk.sans.cn
+                        font.mono.en
+                        font.mono.cn
                       ] ++ emoji;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "zh-TW";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.mono.cn;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.mono.tw;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "ja";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.mono.cn;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.mono.ja;
                     };
                   }
                   {

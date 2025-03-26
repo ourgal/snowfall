@@ -11,7 +11,7 @@ let
         defaultFonts = {
           emoji = font.getName font.emoji;
           monospace = [
-            font.mono.name
+            font.mono.en
             font.cjk.sans.cn
           ];
           sansSerif = [

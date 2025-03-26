@@ -1299,3 +1299,7 @@ fetch.github = "jeffreyxuan/toneoz-font-pinyin-kai"
 [Chillkai]
 src.github_tag = "Warren2060/Chillkai"
 fetch.url = "https://github.com/Warren2060/Chillkai/releases/download/$ver/ChillKai.zip"
+
+[Shanggu]
+src.github = "GuiWonder/Shanggu"
+fetch.url = "https://github.com/GuiWonder/Shanggu/releases/download/$ver/ShangguMonoTTFs.7z"

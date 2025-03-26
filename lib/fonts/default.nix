@@ -128,14 +128,26 @@
         pkg = "Chillkai";
         name = "ChillKai";
       };
+      Shanggu =
+        (prefix "Shanggu Mono" {
+          cn = "SC";
+          ja = "JP";
+          tw = "TC";
+        })
+        // {
+          pkg = "Shanggu";
+        };
       getPkg = builtins.map (x: x.pkg);
       update = lib.attrsets.recursiveUpdate;
     in
     rec {
       getName = builtins.map (x: x.name);
-      myPkgs = getPkg [ ];
-      mono = maple;
-      cjk = update { inherit (notoCJK) sans serif; } { };
+      myPkgs = getPkg [ Shanggu ];
+      mono = {
+        en = firacode.name;
+        inherit (Shanggu) cn ja tw;
+      };
+      cjk = update { inherit (sourceHan) sans serif; } { };
       en = update { inherit (noto) sans serif pkg; } { };
       emoji = [
         nerdfonts
@@ -145,10 +157,11 @@
       ];
       nixPkgs = getPkg (
         [
-          mono
           cjk.sans
           cjk.serif
           en
+          maple
+          firacode
         ]
         ++ emoji
       );
