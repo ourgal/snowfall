@@ -20,6 +20,6 @@ stdenv.mkDerivation {
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "corgi";
-    platforms = platforms.x86_64-linux;
+    platforms = [ "x86_64-linux" ];
   };
 }

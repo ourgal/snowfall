@@ -23,6 +23,6 @@ stdenv.mkDerivation {
     license = licenses.asl20;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "boilr";
-    platforms = platforms.x86_64-linux;
+    platforms = [ "x86_64-linux" ];
   };
 }

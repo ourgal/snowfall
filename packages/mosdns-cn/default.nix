@@ -25,6 +25,6 @@ stdenv.mkDerivation {
     license = licenses.gpl3Only;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "mosdns-cn";
-    platforms = platforms.x86_64-linux;
+    platforms = [ "x86_64-linux" ];
   };
 }
