@@ -124,6 +124,10 @@
         cn = "ToneOZ\-Pinyin\-Kai\-Simplified";
         tw = "ToneOZ\-Pinyin\-Kai\-Traditional";
       };
+      Chillkai = {
+        pkg = "Chillkai";
+        name = "ChillKai";
+      };
       getPkg = builtins.map (x: x.pkg);
       update = lib.attrsets.recursiveUpdate;
     in

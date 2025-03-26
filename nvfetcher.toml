@@ -1295,3 +1295,7 @@ fetch.github = "SorkinType/Alatsi"
 [toneoz-font-pinyin-kai]
 src.github_tag = "jeffreyxuan/toneoz-font-pinyin-kai"
 fetch.github = "jeffreyxuan/toneoz-font-pinyin-kai"
+
+[Chillkai]
+src.github_tag = "Warren2060/Chillkai"
+fetch.url = "https://github.com/Warren2060/Chillkai/releases/download/$ver/ChillKai.zip"
