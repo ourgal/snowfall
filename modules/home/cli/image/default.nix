@@ -7,6 +7,7 @@ args.module (
       # keep-sorted start
       "dipc"
       "exiftool"
+      "gowall"
       "gifsicle"
       "graphicsmagick"
       "graphviz"
