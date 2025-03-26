@@ -1286,3 +1286,4 @@ fetch.url = "https://github.com/Warren2060/ChillReunion/releases/download/$ver00
 [chinadns-ng]
 src.github = "zfl9/chinadns-ng"
 fetch.url = "https://github.com/zfl9/chinadns-ng/releases/download/$ver/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto"
+url.name = "chinadns-ng"
