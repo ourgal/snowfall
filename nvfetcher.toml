@@ -552,7 +552,7 @@ fetch.docker = "qdtoday/qd"
 
 [tp]
 src.github = "minefuto/tp"
-fetch.github = "minefuto/tp"
+fetch.url = "https://github.com/minefuto/tp/releases/download/$ver/tp_Linux_x86_64.tar.gz"
 
 [hl]
 src.github = "pamburus/hl"
