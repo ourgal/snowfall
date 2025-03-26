@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "bk"
       "jiten"
+      "ccal"
       "cheat"
       "dasht"
       "halp"
