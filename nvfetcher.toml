@@ -989,7 +989,7 @@ cargo_locks = ["Cargo.lock"]
 
 [mosdns-cn]
 src.github = "IrineSistiana/mosdns-cn"
-fetch.github = "IrineSistiana/mosdns-cn"
+fetch.url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/$ver/mosdns-cn-linux-amd64.zip"
 
 [gif-progress]
 src.github = "nwtgck/gif-progress"
