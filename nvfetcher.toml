@@ -617,7 +617,7 @@ cargo_locks = ["Cargo.lock"]
 
 [corgi]
 src.github = "junyu-w/corgi"
-fetch.github = "junyu-w/corgi"
+fetch.url = "https://github.com/junyu-w/corgi/releases/download/$ver/corgi_$ver_linux_64-bit.tar.gz"
 
 [jalm]
 src.git = "https://github.com/neelkarma/jalm"
