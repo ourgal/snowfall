@@ -14,6 +14,7 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "bk"
+      "jiten"
       "cheat"
       "dasht"
       "halp"
