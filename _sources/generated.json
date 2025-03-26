@@ -1,4 +1,19 @@
 {
+    "ChillReunion": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ChillReunion",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-A4Hhq5awfJwyIUsFLrAMVfCAXXHAhgeqUTNqdODsuFY=",
+            "type": "url",
+            "url": "https://github.com/Warren2060/ChillReunion/releases/download/v2.700/ChillReunion_v2.7.zip"
+        },
+        "version": "v2.7"
+    },
     "advance-touch": {
         "cargoLocks": null,
         "date": null,
@@ -204,12 +219,12 @@
             "name": null,
             "owner": "aviator-co",
             "repo": "av",
-            "rev": "v0.1.4",
-            "sha256": "sha256-2sE0AjdFvNf+Su599oVITKoExONXJnUzR9ba3HAKL0o=",
+            "rev": "v0.1.5",
+            "sha256": "sha256-11Te3DwHVWPlQKuj0my8ICruc7qYnxVrja00UKxVNzs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.4"
+        "version": "v0.1.5"
     },
     "awesome-freedesktop": {
         "cargoLocks": null,
@@ -4219,7 +4234,7 @@
     },
     "ranger-zoxide": {
         "cargoLocks": null,
-        "date": "2024-02-08",
+        "date": "2025-03-26",
         "extract": null,
         "name": "ranger-zoxide",
         "passthru": null,
@@ -4231,12 +4246,12 @@
             "name": null,
             "owner": "jchook",
             "repo": "ranger-zoxide",
-            "rev": "281828de060299f73fe0b02fcabf4f2f2bd78ab3",
-            "sha256": "sha256-JEuyYSVa1NS3aftezEJx/k19lwwzf7XhqBCL0jH6VT4=",
+            "rev": "aefff2797b8e3999f659176dc99d76f7186ccc29",
+            "sha256": "sha256-lF0p2cXXutLapYU3vox/OdZSoRHfq+WUnXdxDzd6tx0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "281828de060299f73fe0b02fcabf4f2f2bd78ab3"
+        "version": "aefff2797b8e3999f659176dc99d76f7186ccc29"
     },
     "rat": {
         "cargoLocks": null,
