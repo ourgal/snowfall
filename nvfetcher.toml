@@ -603,8 +603,9 @@ fetch.github = "alexpasmantier/grip-grab"
 pinned = true
 
 [hypergrep]
-src.github = "p-ranav/hypergrep"
-fetch.github = "p-ranav/hypergrep"
+src.github_tag = "p-ranav/hypergrep"
+src.prefix = "v"
+fetch.url = "https://github.com/p-ranav/hypergrep/releases/download/v$ver/hg_$ver.zip"
 
 [gtm]
 src.github = "git-time-metric/gtm"
