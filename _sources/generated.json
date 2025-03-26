@@ -1,4 +1,25 @@
 {
+    "Alatsi": {
+        "cargoLocks": null,
+        "date": "2024-05-02",
+        "extract": null,
+        "name": "Alatsi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "SorkinType",
+            "repo": "Alatsi",
+            "rev": "92b5663a41d41e2912ec46cb4e523303e33f9723",
+            "sha256": "sha256-t9o+C00WlI51IJkq+2tfJBSqqrZrkdfYSM2c8+yAYNI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "92b5663a41d41e2912ec46cb4e523303e33f9723"
+    },
     "ChillReunion": {
         "cargoLocks": null,
         "date": null,
