@@ -5670,6 +5670,27 @@
         },
         "version": "4e82e0f0452a6ce8f387828ec71013015515035a"
     },
+    "toneoz-font-pinyin-kai": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "toneoz-font-pinyin-kai",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jeffreyxuan",
+            "repo": "toneoz-font-pinyin-kai",
+            "rev": "v0.231014",
+            "sha256": "sha256-s8JM3scmOc8dfgwt/XVm3LnDo49vg98FHIhIQXw6n3I=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.231014"
+    },
     "toru": {
         "cargoLocks": null,
         "date": null,

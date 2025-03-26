@@ -3210,6 +3210,17 @@
     };
     date = "2021-04-23";
   };
+  toneoz-font-pinyin-kai = {
+    pname = "toneoz-font-pinyin-kai";
+    version = "v0.231014";
+    src = fetchFromGitHub {
+      owner = "jeffreyxuan";
+      repo = "toneoz-font-pinyin-kai";
+      rev = "v0.231014";
+      fetchSubmodules = false;
+      sha256 = "sha256-s8JM3scmOc8dfgwt/XVm3LnDo49vg98FHIhIQXw6n3I=";
+    };
+  };
   toru = {
     pname = "toru";
     version = "v0.3.3";
