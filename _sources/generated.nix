@@ -1460,12 +1460,9 @@
   gtm = {
     pname = "gtm";
     version = "v1.3.5";
-    src = fetchFromGitHub {
-      owner = "git-time-metric";
-      repo = "gtm";
-      rev = "v1.3.5";
-      fetchSubmodules = false;
-      sha256 = "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=";
+    src = fetchurl {
+      url = "https://github.com/git-time-metric/gtm/releases/download/v1.3.5/gtm.v1.3.5.linux.tar.gz";
+      sha256 = "sha256-e0Pk06MCCSnh4bqK94xh4C37eooK9Vj70ndGqey1B0M=";
     };
   };
   gtm-vim-plugin = {

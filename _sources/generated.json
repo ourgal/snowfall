@@ -2613,16 +2613,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "git-time-metric",
-            "repo": "gtm",
-            "rev": "v1.3.5",
-            "sha256": "sha256-O09wFBT45ExkIYVhnVVOAcHbB4SHeaA+SaDilA8qW3g=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-e0Pk06MCCSnh4bqK94xh4C37eooK9Vj70ndGqey1B0M=",
+            "type": "url",
+            "url": "https://github.com/git-time-metric/gtm/releases/download/v1.3.5/gtm.v1.3.5.linux.tar.gz"
         },
         "version": "v1.3.5"
     },
