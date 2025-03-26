@@ -103,6 +103,10 @@
           tw = "TC";
         };
       };
+      comicneue = {
+        pkg = "comicneue";
+        sans = "Comic Neue";
+      };
       getPkg = builtins.map (x: x.pkg);
     in
     rec {
@@ -110,12 +114,11 @@
       myPkgs = getPkg [
         SentyEtherealWander
         swei-nut-sans
+        comicneue
       ];
       mono = maple;
-      cjk = lib.attrsets.recursiveUpdate { inherit (notoCJK) sans serif; } {
-        inherit (swei-nut-sans) sans;
-      };
-      en = { inherit (noto) sans serif pkg; };
+      cjk = lib.attrsets.recursiveUpdate { inherit (notoCJK) sans serif; } { };
+      en = lib.attrsets.recursiveUpdate { inherit (noto) sans serif pkg; } { inherit (comicneue) sans; };
       emoji = [
         fontAwesome
         joypixels

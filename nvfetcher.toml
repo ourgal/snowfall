@@ -1270,3 +1270,7 @@ fetch.github = "jkwill87/mnamer"
 [swei-nut-sans]
 src.github_tag = "max32002/swei-nut-sans"
 fetch.github = "max32002/swei-nut-sans"
+
+[comicneue]
+src.github_tag = "crozynski/comicneue"
+fetch.github = "crozynski/comicneue"
