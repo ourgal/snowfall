@@ -2173,16 +2173,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "nwtgck",
-            "repo": "gif-progress",
-            "rev": "release-fix-not-moving-progress-bar",
-            "sha256": "sha256-kNWTpvajuZZPSSZeJBP2N+z67OBPuYhaxydcETWDses=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-LnDZFgDHQlQIh7JDVpjqeGsc+r8e6UHu772GiBYirP8=",
+            "type": "url",
+            "url": "https://github.com/nwtgck/gif-progress/releases/download/release-fix-not-moving-progress-bar/gif-progress-linux-amd64.zip"
         },
         "version": "release-fix-not-moving-progress-bar"
     },

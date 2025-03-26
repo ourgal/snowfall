@@ -1220,12 +1220,9 @@
   gif-progress = {
     pname = "gif-progress";
     version = "release-fix-not-moving-progress-bar";
-    src = fetchFromGitHub {
-      owner = "nwtgck";
-      repo = "gif-progress";
-      rev = "release-fix-not-moving-progress-bar";
-      fetchSubmodules = false;
-      sha256 = "sha256-kNWTpvajuZZPSSZeJBP2N+z67OBPuYhaxydcETWDses=";
+    src = fetchurl {
+      url = "https://github.com/nwtgck/gif-progress/releases/download/release-fix-not-moving-progress-bar/gif-progress-linux-amd64.zip";
+      sha256 = "sha256-LnDZFgDHQlQIh7JDVpjqeGsc+r8e6UHu772GiBYirP8=";
     };
   };
   git-cal = {
