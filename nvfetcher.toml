@@ -1034,7 +1034,8 @@ fetch.github = "seachicken/gh-poi"
 
 [sequin]
 src.github = "charmbracelet/sequin"
-fetch.github = "charmbracelet/sequin"
+src.prefix = "v"
+fetch.url = "https://github.com/charmbracelet/sequin/releases/download/v$ver/sequin_$ver_Linux_x86_64.tar.gz"
 
 [miniflux-sync]
 src.github = "revett/miniflux-sync"
