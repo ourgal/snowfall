@@ -7,13 +7,14 @@ jobs:
   nvfetcher:
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: echo '[keys]' >> keyfile.toml
       - run: echo 'github = "${{ secrets.GITHUB_TOKEN }}"' >> keyfile.toml
       - run: nix run github:berberman/nvfetcher -- -k keyfile.toml -j 8
