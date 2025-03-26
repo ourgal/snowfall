@@ -2817,18 +2817,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "p-ranav",
-            "repo": "hypergrep",
-            "rev": "v0.1.1",
-            "sha256": "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-TfxEO2rhOvDmtUJn/xTDSOBOWUkJViUM6iR4QBsXJ5s=",
+            "type": "url",
+            "url": "https://github.com/p-ranav/hypergrep/releases/download/v0.1.1/hg_0.1.1.zip"
         },
-        "version": "v0.1.1"
+        "version": "0.1.1"
     },
     "images-upload-cli": {
         "cargoLocks": null,

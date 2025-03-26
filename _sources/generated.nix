@@ -1578,13 +1578,10 @@
   };
   hypergrep = {
     pname = "hypergrep";
-    version = "v0.1.1";
-    src = fetchFromGitHub {
-      owner = "p-ranav";
-      repo = "hypergrep";
-      rev = "v0.1.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-kzM8MGic/bGGKr7CdCCFbmpVR4TA356lDFMDa+9U25Q=";
+    version = "0.1.1";
+    src = fetchurl {
+      url = "https://github.com/p-ranav/hypergrep/releases/download/v0.1.1/hg_0.1.1.zip";
+      sha256 = "sha256-TfxEO2rhOvDmtUJn/xTDSOBOWUkJViUM6iR4QBsXJ5s=";
     };
   };
   images-upload-cli = {
