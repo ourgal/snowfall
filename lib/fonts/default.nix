@@ -115,18 +115,22 @@
         // {
           pkg = "ChillReunion";
         };
+      Alatsi = {
+        pkg = "Alatsi";
+        sans = "Alatsi";
+      };
       getPkg = builtins.map (x: x.pkg);
       update = lib.attrsets.recursiveUpdate;
     in
     rec {
       getName = builtins.map (x: x.name);
       myPkgs = getPkg [
-        comicneue
         ChillReunion
+        Alatsi
       ];
       mono = maple;
       cjk = update { inherit (notoCJK) sans serif; } { sans.cn = ChillReunion.round; };
-      en = update { inherit (noto) sans serif pkg; } { inherit (comicneue) sans; };
+      en = update { inherit (noto) sans serif pkg; } { inherit (Alatsi) sans; };
       emoji = [
         fontAwesome
         joypixels
