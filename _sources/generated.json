@@ -50,6 +50,21 @@
         },
         "version": "v2.000"
     },
+    "Shanggu": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "Shanggu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-loCNe4OMDRIXyPj66q7rU+oP/4HZlSSJgOoXHvmwyz4=",
+            "type": "url",
+            "url": "https://github.com/GuiWonder/Shanggu/releases/download/1.021/ShangguMonoTTFs.7z"
+        },
+        "version": "1.021"
+    },
     "advance-touch": {
         "cargoLocks": null,
         "date": null,

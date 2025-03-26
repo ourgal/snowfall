@@ -29,6 +29,14 @@
       sha256 = "sha256-siJPtUQ8qTOlZU90xRscV3JPnuhOH8XbvQmgIB8+hqg=";
     };
   };
+  Shanggu = {
+    pname = "Shanggu";
+    version = "1.021";
+    src = fetchurl {
+      url = "https://github.com/GuiWonder/Shanggu/releases/download/1.021/ShangguMonoTTFs.7z";
+      sha256 = "sha256-loCNe4OMDRIXyPj66q7rU+oP/4HZlSSJgOoXHvmwyz4=";
+    };
+  };
   advance-touch = {
     pname = "advance-touch";
     version = "1.0.2";
