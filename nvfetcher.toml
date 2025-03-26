@@ -583,7 +583,7 @@ cargo_locks = ["Cargo.lock"]
 
 [boilr]
 src.github = "tmrts/boilr"
-fetch.github = "tmrts/boilr"
+fetch.url = "https://github.com/tmrts/boilr/releases/download/$ver/boilr-$ver-linux_amd64.tgz"
 
 [eg]
 src.pypi = "eg"
