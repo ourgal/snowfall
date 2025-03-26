@@ -2581,13 +2581,10 @@
   };
   sequin = {
     pname = "sequin";
-    version = "v0.3.1";
-    src = fetchFromGitHub {
-      owner = "charmbracelet";
-      repo = "sequin";
-      rev = "v0.3.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-rszK2UZ3Eq9g+Di1lncDQIT4TlUcWZEu1SU2aE2uFHY=";
+    version = "0.3.1";
+    src = fetchurl {
+      url = "https://github.com/charmbracelet/sequin/releases/download/v0.3.1/sequin_0.3.1_Linux_x86_64.tar.gz";
+      sha256 = "sha256-YqXxN4QhoP7010frKcuehdX4WXRp32Eu4mshwBJVb4I=";
     };
   };
   servicer = {
