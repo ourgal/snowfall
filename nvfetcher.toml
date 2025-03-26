@@ -1274,3 +1274,9 @@ fetch.github = "max32002/swei-nut-sans"
 [comicneue]
 src.github_tag = "crozynski/comicneue"
 fetch.github = "crozynski/comicneue"
+
+[ChillReunion]
+src.github_tag = "Warren2060/ChillReunion"
+src.from_pattern = "(v\d\.\d)\d{2}"
+src.to_pattern = "\1"
+fetch.url = "https://github.com/Warren2060/ChillReunion/releases/download/$ver00/ChillReunion_$ver.zip"

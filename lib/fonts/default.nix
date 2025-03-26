@@ -107,18 +107,26 @@
         pkg = "comicneue";
         sans = "Comic Neue";
       };
+      ChillReunion =
+        (prefix "寒蝉团圆体" {
+          sans = "Sans";
+          round = "Round";
+        })
+        // {
+          pkg = "ChillReunion";
+        };
       getPkg = builtins.map (x: x.pkg);
+      update = lib.attrsets.recursiveUpdate;
     in
     rec {
       getName = builtins.map (x: x.name);
       myPkgs = getPkg [
-        SentyEtherealWander
-        swei-nut-sans
         comicneue
+        ChillReunion
       ];
       mono = maple;
-      cjk = lib.attrsets.recursiveUpdate { inherit (notoCJK) sans serif; } { };
-      en = lib.attrsets.recursiveUpdate { inherit (noto) sans serif pkg; } { inherit (comicneue) sans; };
+      cjk = update { inherit (notoCJK) sans serif; } { sans.cn = ChillReunion.round; };
+      en = update { inherit (noto) sans serif pkg; } { inherit (comicneue) sans; };
       emoji = [
         fontAwesome
         joypixels
