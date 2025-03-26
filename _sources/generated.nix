@@ -526,21 +526,21 @@
   };
   dela = {
     pname = "dela";
-    version = "765872d15ca41680c3311565ea2a82eddbe36c7b";
+    version = "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "765872d15ca41680c3311565ea2a82eddbe36c7b";
+      rev = "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0";
       fetchSubmodules = false;
-      sha256 = "sha256-qBF5aWxW68RHRF8EhTRivh8922jon7fjO6JatWLQw18=";
+      sha256 = "sha256-zLtF4D6F02LREhrCXiGaIaWT9toIBG6ktPPgKX5M5IY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-765872d15ca41680c3311565ea2a82eddbe36c7b/Cargo.lock;
+      lockFile = ./dela-c7c3982006f6bfdb12ce1d66171eabd36a2aeae0/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-03-23";
+    date = "2025-03-25";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -611,12 +611,12 @@
   };
   docker-lancommander = {
     pname = "docker-lancommander";
-    version = "v1.1.4";
+    version = "v1.1.5";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:2d9fd96aa2d4bafff9f595a06f48a13cd36cb8e1272664f1498c7d7f4cf9cd0a";
-      sha256 = "sha256-wtEr9KuWxDUkR7cxAlR+EF5O3ZZwOyag5YeHdxH4RuQ=";
-      finalImageTag = "v1.1.4";
+      imageDigest = "sha256:7d89c1d7621cb05c022c2560d680c52355ad36a1a319c1e385df32048c01a0de";
+      sha256 = "sha256-bEuPag15eGFSXKlUraYCGgVRM/NH+Qd0QHsKYzRrDzs=";
+      finalImageTag = "v1.1.5";
     };
   };
   docker-qd = {
@@ -2797,23 +2797,34 @@
     };
     date = "2024-12-27";
   };
+  swei-nut-sans = {
+    pname = "swei-nut-sans";
+    version = "2.128";
+    src = fetchFromGitHub {
+      owner = "max32002";
+      repo = "swei-nut-sans";
+      rev = "2.128";
+      fetchSubmodules = false;
+      sha256 = "sha256-buc4hMU+iKJR31sJCw88EyOhcwMvclW6n8PefZvQgSk=";
+    };
+  };
   tabry-rs = {
     pname = "tabry-rs";
-    version = "fedf0234e1e91e45e775dd644012f743a8f6b350";
+    version = "834de4c0f29ae0585dc822ab2b4418292765d017";
     src = fetchFromGitHub {
       owner = "evanbattaglia";
       repo = "tabry-rs";
-      rev = "fedf0234e1e91e45e775dd644012f743a8f6b350";
+      rev = "834de4c0f29ae0585dc822ab2b4418292765d017";
       fetchSubmodules = false;
-      sha256 = "sha256-nVy7UK4t6lMWciQFm928j6CD4GosaMbUW+khiq85zJY=";
+      sha256 = "sha256-2yZadvsr99M3t30vWlmC4wj0fl/QOsrUag/3fSIiw80=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./tabry-rs-fedf0234e1e91e45e775dd644012f743a8f6b350/Cargo.lock;
+      lockFile = ./tabry-rs-834de4c0f29ae0585dc822ab2b4418292765d017/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-02-26";
+    date = "2025-03-25";
   };
   tach = {
     pname = "tach";
@@ -3316,18 +3327,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503242212";
+    version = "202503252212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503242212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geoip.dat";
       sha256 = "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503242212";
+    version = "202503252212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503242212/geosite.dat";
-      sha256 = "sha256-VCaMc3Bq7nNExDQNiPEbmc5AD1mHVH6GANzQMxH+IHo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geosite.dat";
+      sha256 = "sha256-fJ5KBj6XsPg6qLTIRs/rF/E8sU6VRMoAX9TO8yXOjkU=";
     };
   };
   vim-auto-save = {
