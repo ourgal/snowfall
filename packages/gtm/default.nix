@@ -6,6 +6,11 @@
 stdenv.mkDerivation {
   inherit (_sources' ./.) pname version src;
 
+  unpackCmd = ''
+    mkdir temp
+    tar -xf $src --directory=temp
+  '';
+
   installPhase = ''
     runHook preInstall
     install -Dm755 gtm -t $out/bin
