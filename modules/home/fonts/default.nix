@@ -3,14 +3,16 @@ args.module (
   args
   // (
     let
-      inherit (args) lib namespace;
+      inherit (args) lib namespace host;
       inherit (lib.${namespace}) font mkFontconfig;
+      inherit (lib.${namespace}.settings) desktops;
       emoji = font.getName font.emoji;
+      notNixos = lib.optionals (!builtins.elem host desktops);
     in
     {
       path = ./.;
-      nixPkgs = font.nixPkgs;
-      myPkgs = font.myPkgs;
+      nixPkgs = notNixos font.nixPkgs;
+      myPkgs = notNixos font.myPkgs;
       confs = {
         "fontconfig/fonts.conf" =
           let
