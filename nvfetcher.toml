@@ -609,7 +609,7 @@ fetch.url = "https://github.com/p-ranav/hypergrep/releases/download/v$ver/hg_$ve
 
 [gtm]
 src.github = "git-time-metric/gtm"
-fetch.github = "git-time-metric/gtm"
+fetch.url = "https://github.com/git-time-metric/gtm/releases/download/$ver/gtm.$ver.linux.tar.gz"
 
 [tabry-rs]
 src.git = "https://github.com/evanbattaglia/tabry-rs"
