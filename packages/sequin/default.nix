@@ -18,5 +18,6 @@ stdenv.mkDerivation {
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
     mainProgram = "sequin";
+    platforms = platforms.x86_64-linux;
   };
 }
