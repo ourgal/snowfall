@@ -95,13 +95,26 @@
             pkg = "noto-fonts-cjk-serif";
           };
       };
+      swei-nut-sans = {
+        pkg = "swei-nut-sans";
+        sans = prefix "Swei Nut Sans CJK" {
+          ja = "JP";
+          cn = "SC";
+          tw = "TC";
+        };
+      };
       getPkg = builtins.map (x: x.pkg);
     in
     rec {
       getName = builtins.map (x: x.name);
-      myPkgs = getPkg [ SentyEtherealWander ];
+      myPkgs = getPkg [
+        SentyEtherealWander
+        swei-nut-sans
+      ];
       mono = maple;
-      cjk = { inherit (notoCJK) sans serif; };
+      cjk = lib.attrsets.recursiveUpdate { inherit (notoCJK) sans serif; } {
+        inherit (swei-nut-sans) sans;
+      };
       en = { inherit (noto) sans serif pkg; };
       emoji = [
         fontAwesome
