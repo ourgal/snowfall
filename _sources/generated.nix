@@ -1909,12 +1909,9 @@
   mosdns-cn = {
     pname = "mosdns-cn";
     version = "v1.4.0";
-    src = fetchFromGitHub {
-      owner = "IrineSistiana";
-      repo = "mosdns-cn";
-      rev = "v1.4.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-l2jqy2rtiQTIHNVR9LoNhTszmhTd8g3JQedbZK9E6hM=";
+    src = fetchurl {
+      url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/v1.4.0/mosdns-cn-linux-amd64.zip";
+      sha256 = "sha256-Q69Y92c/UQqAA/KcJqC8N+G0odJI9STo6L2xj7sSbnM=";
     };
   };
   mpv-M-x = {
@@ -2571,12 +2568,9 @@
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
     version = "20250207";
-    src = fetchFromGitHub {
-      owner = "sbsrf";
-      repo = "sbsrf";
-      rev = "20250207";
-      fetchSubmodules = false;
-      sha256 = "sha256-i3MAzQHff+1IgsdvL5Pkwya3I26GXeuqybCiV+JgEQo=";
+    src = fetchurl {
+      url = "https://github.com/sbsrf/sbsrf/releases/download/20250207/sbsrf.zip";
+      sha256 = "sha256-bQwu2BgH+ZvIbWV1n2ETjx5A/61agwYZYiV00cWGhoU=";
     };
   };
   sequin = {
@@ -3224,12 +3218,9 @@
   tp = {
     pname = "tp";
     version = "v1.0.0";
-    src = fetchFromGitHub {
-      owner = "minefuto";
-      repo = "tp";
-      rev = "v1.0.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-e/G0cN0HKzpgBRajztp/DucgO0JWW/jqi/omvLWsVyQ=";
+    src = fetchurl {
+      url = "https://github.com/minefuto/tp/releases/download/v1.0.0/tp_Linux_x86_64.tar.gz";
+      sha256 = "sha256-FqGZjD+IVSH97NQDE75s9+edGsLje2yCZRblN6qlvhM=";
     };
   };
   treegen = {
@@ -3680,13 +3671,13 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.75.2";
+    version = "v1.76.0";
     src = fetchFromGitHub {
       owner = "Zephyruso";
       repo = "zashboard";
-      rev = "v1.75.2";
+      rev = "v1.76.0";
       fetchSubmodules = false;
-      sha256 = "sha256-QLICbw6qJEdHDK1XNFK7s9MxtfjZ0MY/aLxt57h0C1o=";
+      sha256 = "sha256-V64YvUXgF0hml0Dd8bOEffdAED0Wh8WUoWFa2HRJTWo=";
     };
   };
 }
