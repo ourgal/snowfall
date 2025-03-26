@@ -482,12 +482,9 @@
   corgi = {
     pname = "corgi";
     version = "v0.2.4";
-    src = fetchFromGitHub {
-      owner = "junyu-w";
-      repo = "corgi";
-      rev = "v0.2.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=";
+    src = fetchurl {
+      url = "https://github.com/junyu-w/corgi/releases/download/v0.2.4/corgi_v0.2.4_linux_64-bit.tar.gz";
+      sha256 = "sha256-DYYU02p6/rO6sY1B1BKI/h+IhSdCRQl+YTuor5+dl1M=";
     };
   };
   "ctrl-z.fish" = {

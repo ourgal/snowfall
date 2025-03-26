@@ -845,16 +845,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "junyu-w",
-            "repo": "corgi",
-            "rev": "v0.2.4",
-            "sha256": "sha256-1qG11iuHrf3jg0aPqNU4ItT4rvYxXg5ZDDaJIMOWOUE=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-DYYU02p6/rO6sY1B1BKI/h+IhSdCRQl+YTuor5+dl1M=",
+            "type": "url",
+            "url": "https://github.com/junyu-w/corgi/releases/download/v0.2.4/corgi_v0.2.4_linux_64-bit.tar.gz"
         },
         "version": "v0.2.4"
     },
