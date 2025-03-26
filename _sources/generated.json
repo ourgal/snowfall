@@ -35,6 +35,21 @@
         },
         "version": "v2.7"
     },
+    "Chillkai": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "Chillkai",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-siJPtUQ8qTOlZU90xRscV3JPnuhOH8XbvQmgIB8+hqg=",
+            "type": "url",
+            "url": "https://github.com/Warren2060/Chillkai/releases/download/v2.000/ChillKai.zip"
+        },
+        "version": "v2.000"
+    },
     "advance-touch": {
         "cargoLocks": null,
         "date": null,
@@ -3838,7 +3853,7 @@
     },
     "pls": {
         "cargoLocks": null,
-        "date": "2024-11-18",
+        "date": "2025-03-26",
         "extract": null,
         "name": "pls",
         "passthru": null,
@@ -3850,12 +3865,12 @@
             "name": null,
             "owner": "codevogel",
             "repo": "pls",
-            "rev": "f860b1c7b9fce9800538d5b54dfb0dcd93370604",
-            "sha256": "sha256-wCz91oV1njVVWb1cBEoElsPyTP9Vwkhs1LVD/FbYDeQ=",
+            "rev": "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2",
+            "sha256": "sha256-Ojs/pSPkNH+PxZZIg4O+dD/6fmt052oXBPoKlKo+kCE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f860b1c7b9fce9800538d5b54dfb0dcd93370604"
+        "version": "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2"
     },
     "pmark": {
         "cargoLocks": null,

@@ -21,6 +21,14 @@
       sha256 = "sha256-A4Hhq5awfJwyIUsFLrAMVfCAXXHAhgeqUTNqdODsuFY=";
     };
   };
+  Chillkai = {
+    pname = "Chillkai";
+    version = "v2.000";
+    src = fetchurl {
+      url = "https://github.com/Warren2060/Chillkai/releases/download/v2.000/ChillKai.zip";
+      sha256 = "sha256-siJPtUQ8qTOlZU90xRscV3JPnuhOH8XbvQmgIB8+hqg=";
+    };
+  };
   advance-touch = {
     pname = "advance-touch";
     version = "1.0.2";
@@ -2158,15 +2166,15 @@
   };
   pls = {
     pname = "pls";
-    version = "f860b1c7b9fce9800538d5b54dfb0dcd93370604";
+    version = "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2";
     src = fetchFromGitHub {
       owner = "codevogel";
       repo = "pls";
-      rev = "f860b1c7b9fce9800538d5b54dfb0dcd93370604";
+      rev = "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2";
       fetchSubmodules = false;
-      sha256 = "sha256-wCz91oV1njVVWb1cBEoElsPyTP9Vwkhs1LVD/FbYDeQ=";
+      sha256 = "sha256-Ojs/pSPkNH+PxZZIg4O+dD/6fmt052oXBPoKlKo+kCE=";
     };
-    date = "2024-11-18";
+    date = "2025-03-26";
   };
   pmark = {
     pname = "pmark";
