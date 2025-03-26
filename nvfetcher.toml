@@ -1291,3 +1291,7 @@ url.name = "chinadns-ng"
 [Alatsi]
 src.git = "https://github.com/SorkinType/Alatsi"
 fetch.github = "SorkinType/Alatsi"
+
+[toneoz-font-pinyin-kai]
+src.github_tag = "jeffreyxuan/toneoz-font-pinyin-kai"
+fetch.github = "jeffreyxuan/toneoz-font-pinyin-kai"

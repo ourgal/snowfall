@@ -119,23 +119,25 @@
         pkg = "Alatsi";
         sans = "Alatsi";
       };
+      toneoz-font-pinyin-kai = {
+        pkg = "toneoz-font-pinyin-kai";
+        cn = "ToneOZ\-Pinyin\-Kai\-Simplified";
+        tw = "ToneOZ\-Pinyin\-Kai\-Traditional";
+      };
       getPkg = builtins.map (x: x.pkg);
       update = lib.attrsets.recursiveUpdate;
     in
     rec {
       getName = builtins.map (x: x.name);
-      myPkgs = getPkg [
-        ChillReunion
-        Alatsi
-      ];
+      myPkgs = getPkg [ ];
       mono = maple;
-      cjk = update { inherit (notoCJK) sans serif; } { sans.cn = ChillReunion.round; };
-      en = update { inherit (noto) sans serif pkg; } { inherit (Alatsi) sans; };
+      cjk = update { inherit (notoCJK) sans serif; } { };
+      en = update { inherit (noto) sans serif pkg; } { };
       emoji = [
+        nerdfonts
         fontAwesome
         joypixels
         twemoji
-        nerdfonts
       ];
       nixPkgs = getPkg (
         [
