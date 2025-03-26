@@ -217,12 +217,9 @@
   boilr = {
     pname = "boilr";
     version = "0.3.0";
-    src = fetchFromGitHub {
-      owner = "tmrts";
-      repo = "boilr";
-      rev = "0.3.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=";
+    src = fetchurl {
+      url = "https://github.com/tmrts/boilr/releases/download/0.3.0/boilr-0.3.0-linux_amd64.tgz";
+      sha256 = "sha256-vJTN8g2XcXJjekmV6g3hezck0pgNP6pRSrbulHbqwFU=";
     };
   };
   bs4 = {
@@ -324,6 +321,15 @@
       sha256 = "sha256-S1/myC1dEydi1F9a6XV0lJW3S/wWQe+A2ZXPo8GbtQo=";
     };
     date = "2024-07-26";
+  };
+  chinadns-ng = {
+    pname = "chinadns-ng";
+    version = "2024.12.22";
+    src = fetchurl {
+      url = "https://github.com/zfl9/chinadns-ng/releases/download/2024.12.22/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto";
+      name = "chinadns-ng";
+      sha256 = "sha256-S5VIGRuFZpAYL5i3IVErmlAASYbs6/bu7XHLcJrL0fU=";
+    };
   };
   cidr = {
     pname = "cidr";

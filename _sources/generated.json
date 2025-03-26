@@ -386,16 +386,10 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "tmrts",
-            "repo": "boilr",
-            "rev": "0.3.0",
-            "sha256": "sha256-ITUr1YUgqfrKAY6QEqxzdl3U7IjxYidbKT2eR1qEsPU=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-vJTN8g2XcXJjekmV6g3hezck0pgNP6pRSrbulHbqwFU=",
+            "type": "url",
+            "url": "https://github.com/tmrts/boilr/releases/download/0.3.0/boilr-0.3.0-linux_amd64.tgz"
         },
         "version": "0.3.0"
     },
@@ -570,6 +564,21 @@
             "type": "github"
         },
         "version": "abf37336437867cbd99ce2f8849b717415391cc3"
+    },
+    "chinadns-ng": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "chinadns-ng",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": "chinadns-ng",
+            "sha256": "sha256-S5VIGRuFZpAYL5i3IVErmlAASYbs6/bu7XHLcJrL0fU=",
+            "type": "url",
+            "url": "https://github.com/zfl9/chinadns-ng/releases/download/2024.12.22/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto"
+        },
+        "version": "2024.12.22"
     },
     "cidr": {
         "cargoLocks": null,
