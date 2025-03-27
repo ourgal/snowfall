@@ -1303,3 +1303,7 @@ fetch.url = "https://github.com/Warren2060/Chillkai/releases/download/$ver/Chill
 [Shanggu]
 src.github = "GuiWonder/Shanggu"
 fetch.url = "https://github.com/GuiWonder/Shanggu/releases/download/$ver/ShangguMonoTTFs.7z"
+
+[swei-gothic]
+src.github_tag = "max32002/swei-gothic"
+fetch.github = "max32002/swei-gothic"

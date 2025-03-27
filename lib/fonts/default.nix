@@ -107,6 +107,13 @@ in
           tw = "TC";
         };
       };
+      swei-gothic = {
+        sans = prefix "swei-gothic" "Swei Gothic CJK" {
+          ja = "JP";
+          cn = "SC";
+          tw = "TC";
+        };
+      };
       comicneue = {
         pkg = "comicneue";
         sans = "Comic Neue";
@@ -176,9 +183,11 @@ in
       inherit (lib.attrsets) recursiveUpdate;
 
       # settings
-      extras = [ ];
+      extras = [ maple ];
       overrids = {
-        cjk = { };
+        cjk = {
+          sans = { inherit (swei-gothic.sans) cn ja tw; };
+        };
         en = { };
       };
       emoji = [
@@ -199,7 +208,6 @@ in
         [
           cjk
           en
-          maple
         ]
         ++ emoji
         ++ extras
