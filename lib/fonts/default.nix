@@ -17,9 +17,12 @@ in
       prefix =
         pkg: base:
         mapAttrs (
-          _: v: {
-            name = "${base} ${v}";
-            inherit pkg;
+          _: v:
+          let
+            name = if (lib.strings.hasSuffix "\-" base) then "${base}${v}" else "${base} ${v}";
+          in
+          {
+            inherit pkg name;
           }
         );
       dejavu = prefix "dejavu_fonts" "DejaVu" {
@@ -116,15 +119,9 @@ in
         pkg = "Alatsi";
         sans = "Alatsi";
       };
-      toneoz-font-pinyin-kai = {
-        cn = {
-          name = "ToneOZ\-Pinyin\-Kai\-Simplified";
-          pkg = "toneoz-font-pinyin-kai";
-        };
-        tw = {
-          name = "ToneOZ\-Pinyin\-Kai\-Traditional";
-          pkg = "toneoz-font-pinyin-kai";
-        };
+      toneoz-font-pinyin-kai = prefix "toneoz-font-pinyin-kai" "ToneOZ\-Pinyin\-Kai\-" {
+        cn = "Simplified";
+        tw = "Traditional";
       };
       Chillkai = {
         pkg = "Chillkai";
