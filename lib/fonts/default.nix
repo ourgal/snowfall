@@ -1,50 +1,53 @@
 { lib, ... }:
+let
+  inherit (builtins)
+    isList
+    isString
+    isAttrs
+    map
+    concatStringsSep
+    throw
+    mapAttrs
+    foldl'
+    ;
+in
 {
   font =
     let
-      prefix = p: builtins.mapAttrs (_: v: "${p} ${v}");
-      dejavu =
-        prefix "DejaVu" {
-          sans = "Sans";
-          serif = "Serif";
-        }
-        // {
-          pkg = "dejavu_fonts";
-        };
+      prefix =
+        pkg: base:
+        mapAttrs (
+          _: v: {
+            name = "${base} ${v}";
+            inherit pkg;
+          }
+        );
+      dejavu = prefix "dejavu_fonts" "DejaVu" {
+        sans = "Sans";
+        serif = "Serif";
+      };
       sourceHan = {
-        sans =
-          (prefix "Source Han Sans" {
-            cn = "SC";
-            ja = "HW";
-            ko = "K";
-            hk = "HC";
-            tw = "TC";
-          })
-          // {
-            pkg = "source-han-sans";
-          };
-        serif =
-          (prefix "Source Han Serif" {
-            cn = "SC";
-            ja = "HW";
-            ko = "K";
-            hk = "HC";
-            tw = "TC";
-          })
-          // {
-            pkg = "source-han-serif";
-          };
-        mono =
-          (prefix "Source Han Mono" {
-            cn = "SC";
-            ja = "HW";
-            ko = "K";
-            hk = "HC";
-            tw = "TC";
-          })
-          // {
-            pkg = "source-han-mono";
-          };
+        sans = prefix "source-han-sans" "Source Han Sans" {
+          cn = "SC";
+          ja = "HW";
+          ko = "K";
+          hk = "HC";
+          tw = "TC";
+        };
+        serif = prefix "source-han-serif" "Source Han Serif" {
+          cn = "SC";
+          ja = "HW";
+          ko = "K";
+          hk = "HC";
+          tw = "TC";
+        };
+        mono = prefix "source-han-mono" "Source Han Mono" {
+          cn = "SC";
+          ja = "HW";
+          ko = "K";
+          hk = "HC";
+          tw = "TC";
+        };
       };
       joypixels = {
         pkg = "joypixels";
@@ -74,41 +77,28 @@
         pkg = "font-awesome";
         name = "Font Awesome 6 Free";
       };
-      noto =
-        (prefix "Noto" {
-          sans = "Sans";
-          serif = "Serif";
-        })
-        // {
-          pkg = "noto-fonts";
-        };
+      noto = prefix "noto-fonts" "Noto" {
+        sans = "Sans";
+        serif = "Serif";
+      };
       notoCJK = {
-        sans =
-          (prefix "Noto Sans CJK" {
-            ko = "KR";
-            hk = "HK";
-            ja = "JP";
-            cn = "SC";
-            tw = "TC";
-          })
-          // {
-            pkg = "noto-fonts-cjk-sans";
-          };
-        serif =
-          (prefix "Noto Serif CJK" {
-            ko = "KR";
-            hk = "HK";
-            ja = "JP";
-            cn = "SC";
-            tw = "TC";
-          })
-          // {
-            pkg = "noto-fonts-cjk-serif";
-          };
+        sans = prefix "noto-fonts-cjk-sans" "Noto Sans CJK" {
+          ko = "KR";
+          hk = "HK";
+          ja = "JP";
+          cn = "SC";
+          tw = "TC";
+        };
+        serif = prefix "noto-fonts-cjk-serif" "Noto Serif CJK" {
+          ko = "KR";
+          hk = "HK";
+          ja = "JP";
+          cn = "SC";
+          tw = "TC";
+        };
       };
       swei-nut-sans = {
-        pkg = "swei-nut-sans";
-        sans = prefix "Swei Nut Sans CJK" {
+        sans = prefix "swei-nut-sans" "Swei Nut Sans CJK" {
           ja = "JP";
           cn = "SC";
           tw = "TC";
@@ -118,70 +108,104 @@
         pkg = "comicneue";
         sans = "Comic Neue";
       };
-      ChillReunion =
-        (prefix "寒蝉团圆体" {
-          sans = "Sans";
-          round = "Round";
-        })
-        // {
-          pkg = "ChillReunion";
-        };
+      ChillReunion = prefix "ChillReunion" "寒蝉团圆体" {
+        sans = "Sans";
+        round = "Round";
+      };
       Alatsi = {
         pkg = "Alatsi";
         sans = "Alatsi";
       };
       toneoz-font-pinyin-kai = {
-        pkg = "toneoz-font-pinyin-kai";
-        cn = "ToneOZ\-Pinyin\-Kai\-Simplified";
-        tw = "ToneOZ\-Pinyin\-Kai\-Traditional";
+        cn = {
+          name = "ToneOZ\-Pinyin\-Kai\-Simplified";
+          pkg = "toneoz-font-pinyin-kai";
+        };
+        tw = {
+          name = "ToneOZ\-Pinyin\-Kai\-Traditional";
+          pkg = "toneoz-font-pinyin-kai";
+        };
       };
       Chillkai = {
         pkg = "Chillkai";
         name = "ChillKai";
       };
-      Shanggu =
-        (prefix "Shanggu Mono" {
-          cn = "SC";
-          ja = "JP";
-          tw = "TC";
-        })
-        // {
-          pkg = "Shanggu";
-        };
-      getPkg = builtins.map (x: x.pkg);
-      update = lib.attrsets.recursiveUpdate;
-    in
-    rec {
-      getName = builtins.map (x: x.name);
-      myPkgs = getPkg [ ];
-      mono = {
-        en = firacode.name;
-        inherit (sourceHan.mono)
-          cn
-          ja
-          tw
-          ko
-          hk
-          ;
+      Shanggu = prefix "Shanggu" "Shanggu Mono" {
+        cn = "SC";
+        ja = "JP";
+        tw = "TC";
       };
-      cjk = update { inherit (sourceHan) sans serif; } { };
-      en = update { inherit (noto) sans serif pkg; } { };
+      getPkg =
+        settings: nixPkgs: myPkgs:
+        let
+          go =
+            data:
+            if (isList data) then
+              foldl' (acc: value: acc ++ go value) [ ] data
+            else if (isAttrs data) then
+              lib.attrsets.foldlAttrs (
+                acc: name: value:
+                let
+                  res =
+                    if (name == "pkg") then
+                      [ value ]
+                    else if (isAttrs value) then
+                      go value
+                    else
+                      [ ];
+                in
+                acc ++ res
+              ) [ ] data
+            else if (isString data) then
+              [ data ]
+            else
+              throw "not supported type";
+          pkgList = lib.pipe settings [
+            (go)
+            (map (x: if (myPkgs ? "${x}") then myPkgs."${x}" else nixPkgs."${x}"))
+          ];
+        in
+        pkgList;
+      getName =
+        data:
+        if (isList data) then
+          map (x: x.name) data
+        else if (isString data) then
+          data
+        else if (isAttrs data) then
+          data.name
+        else
+          throw "not supported type";
+      update = lib.attrsets.recursiveUpdate;
+
+      # settings
+      extras = [ ];
+      overrids = {
+        cjk = { };
+        en = { };
+      };
       emoji = [
         nerdfonts
         fontAwesome
         joypixels
         twemoji
       ];
-      nixPkgs = getPkg (
+    in
+    rec {
+      inherit getName emoji;
+      cjk = update { inherit (sourceHan) sans serif mono; } overrids.cjk;
+      en = update {
+        inherit (noto) sans serif;
+        mono = firacode;
+      } overrids.en;
+      allPkgs = getPkg (
         [
-          cjk.sans
-          cjk.serif
+          cjk
           en
           maple
-          firacode
-          sourceHan.mono
         ]
         ++ emoji
+        ++ extras
       );
     };
   mkFontconfig =
@@ -193,12 +217,12 @@
           name: value:
           let
             v =
-              if (builtins.isList value) then
+              if (isList value) then
                 lib.pipe value [
-                  (builtins.map (x: go name x))
-                  (builtins.concatStringsSep "")
+                  (map (x: go name x))
+                  (concatStringsSep "")
                 ]
-              else if (builtins.isAttrs value) then
+              else if (isAttrs value) then
                 let
                   res =
                     lib.attrsets.foldlAttrs
@@ -222,10 +246,10 @@
                       value;
                 in
                 "<${name}${res.attr}>${res.test}${res.edit}${res.other}</${name}>"
-              else if (builtins.isString value) then
+              else if (isString value) then
                 "<${name}>${value}</${name}>"
               else
-                builtins.throw "not supported type";
+                throw "not supported type";
           in
           v;
       in

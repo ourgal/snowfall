@@ -1,24 +1,24 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled with';
+  inherit (lib.${namespace}) nixosModule enabled;
   inherit (lib.${namespace}) font;
   value = {
     fonts = {
       fontDir = enabled;
-      packages = (with' pkgs font.nixPkgs) ++ (with' pkgs.${namespace} font.myPkgs);
+      packages = font.allPkgs pkgs pkgs.${namespace};
       fontconfig = {
         defaultFonts = {
           emoji = font.getName font.emoji;
-          monospace = [
-            font.mono.en
+          monospace = font.getName [
+            font.en.mono
             font.cjk.sans.cn
           ];
-          sansSerif = [
+          sansSerif = font.getName [
             font.cjk.sans.cn
             font.en.sans
           ];
-          serif = [
+          serif = font.getName [
             font.cjk.serif.cn
             font.en.serif
           ];

@@ -3,16 +3,19 @@ args.module (
   args
   // (
     let
-      inherit (args) lib namespace host;
+      inherit (args)
+        lib
+        namespace
+        host
+        pkgs
+        ;
       inherit (lib.${namespace}) font mkFontconfig;
       inherit (lib.${namespace}.settings) allHosts;
-      emoji = font.getName font.emoji;
       notNixos = lib.optionals (!builtins.elem host allHosts);
     in
     {
       path = ./.;
-      nixPkgs = notNixos font.nixPkgs;
-      myPkgs = notNixos font.myPkgs;
+      value.home.packages = notNixos (font.allPkgs pkgs pkgs.${namespace});
       confs = {
         "fontconfig/fonts.conf" =
           let
@@ -46,10 +49,13 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = [
-                        font.cjk.sans.cn
-                        font.en.sans
-                      ] ++ emoji;
+                      string = font.getName (
+                        [
+                          font.cjk.sans.cn
+                          font.en.sans
+                        ]
+                        ++ font.emoji
+                      );
                     };
                   }
                   {
@@ -62,10 +68,13 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = [
-                        font.cjk.serif.cn
-                        font.en.serif
-                      ] ++ emoji;
+                      string = font.getName (
+                        [
+                          font.cjk.serif.cn
+                          font.en.serif
+                        ]
+                        ++ font.emoji
+                      );
                     };
                   }
                   {
@@ -78,10 +87,13 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = [
-                        font.mono.en
-                        font.mono.cn
-                      ] ++ emoji;
+                      string = font.getName (
+                        [
+                          font.en.mono
+                          font.cjk.mono.cn
+                        ]
+                        ++ font.emoji
+                      );
                     };
                   }
                   {
@@ -93,13 +105,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.en;
+                        string = font.getName font.en.mono;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.mono.cn;
+                      string = font.getName font.cjk.mono.cn;
                     };
                   }
                   {
@@ -111,13 +123,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.en;
+                        string = font.getName font.en.mono;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.mono.tw;
+                      string = font.getName font.cjk.mono.tw;
                     };
                   }
                   {
@@ -129,13 +141,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.en;
+                        string = font.getName font.en.mono;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.mono.hk;
+                      string = font.getName font.cjk.mono.hk;
                     };
                   }
                   {
@@ -147,13 +159,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.en;
+                        string = font.getName font.en.mono;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.mono.ja;
+                      string = font.getName font.cjk.mono.ja;
                     };
                   }
                   {
@@ -165,13 +177,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.en;
+                        string = font.getName font.en.mono;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.mono.ko;
+                      string = font.getName font.cjk.mono.ko;
                     };
                   }
                   {
@@ -183,13 +195,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.sans.cn;
+                        string = font.getName font.cjk.sans.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.sans.hk;
+                      string = font.getName font.cjk.sans.hk;
                     };
                   }
                   {
@@ -201,13 +213,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.serif.cn;
+                        string = font.getName font.cjk.serif.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.serif.hk;
+                      string = font.getName font.cjk.serif.hk;
                     };
                   }
                   {
@@ -219,13 +231,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.sans.cn;
+                        string = font.getName font.cjk.sans.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.sans.tw;
+                      string = font.getName font.cjk.sans.tw;
                     };
                   }
                   {
@@ -237,13 +249,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.serif.cn;
+                        string = font.getName font.cjk.serif.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.serif.tw;
+                      string = font.getName font.cjk.serif.tw;
                     };
                   }
                   {
@@ -255,13 +267,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.sans.cn;
+                        string = font.getName font.cjk.sans.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.sans.ja;
+                      string = font.getName font.cjk.sans.ja;
                     };
                   }
                   {
@@ -273,13 +285,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.serif.cn;
+                        string = font.getName font.cjk.serif.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.serif.ja;
+                      string = font.getName font.cjk.serif.ja;
                     };
                   }
                   {
@@ -291,13 +303,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.sans.cn;
+                        string = font.getName font.cjk.sans.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.sans.ko;
+                      string = font.getName font.cjk.sans.ko;
                     };
                   }
                   {
@@ -309,13 +321,13 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.serif.cn;
+                        string = font.getName font.cjk.serif.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@binding" = "strong";
-                      string = font.cjk.serif.ko;
+                      string = font.getName font.cjk.serif.ko;
                     };
                   }
                   {
@@ -328,14 +340,14 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.sans.cn;
+                        string = font.getName font.cjk.sans.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.en.sans;
+                      string = font.getName font.en.sans;
                     };
                   }
                   {
@@ -348,14 +360,14 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.cjk.serif.cn;
+                        string = font.getName font.cjk.serif.cn;
                       }
                     ];
                     edit = {
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.en.serif;
+                      string = font.getName font.en.serif;
                     };
                   }
                 ];
