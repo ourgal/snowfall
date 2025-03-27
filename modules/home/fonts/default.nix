@@ -107,6 +107,24 @@ args.module (
                     test = [
                       {
                         "@name" = "lang";
+                        string = "zh-HK";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.mono.cn;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.mono.hk;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
                         string = "ja";
                       }
                       {
@@ -118,6 +136,24 @@ args.module (
                       "@name" = "family";
                       "@binding" = "strong";
                       string = font.mono.ja;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
+                        string = "ko";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.mono.cn;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.mono.ko;
                     };
                   }
                   {

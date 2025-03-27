@@ -34,6 +34,17 @@
           // {
             pkg = "source-han-serif";
           };
+        mono =
+          (prefix "Source Han Mono" {
+            cn = "SC";
+            ja = "HW";
+            ko = "K";
+            hk = "HC";
+            tw = "TC";
+          })
+          // {
+            pkg = "source-han-mono";
+          };
       };
       joypixels = {
         pkg = "joypixels";
@@ -142,10 +153,16 @@
     in
     rec {
       getName = builtins.map (x: x.name);
-      myPkgs = getPkg [ Shanggu ];
+      myPkgs = getPkg [ ];
       mono = {
         en = firacode.name;
-        inherit (Shanggu) cn ja tw;
+        inherit (sourceHan.mono)
+          cn
+          ja
+          tw
+          ko
+          hk
+          ;
       };
       cjk = update { inherit (sourceHan) sans serif; } { };
       en = update { inherit (noto) sans serif pkg; } { };
@@ -162,6 +179,7 @@
           en
           maple
           firacode
+          sourceHan.mono
         ]
         ++ emoji
       );
