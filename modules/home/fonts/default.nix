@@ -15,7 +15,7 @@ args.module (
     in
     {
       path = ./.;
-      value.home.packages = notNixos (font.allPkgs pkgs pkgs.${namespace});
+      value.home.packages = notNixos (font.allPkgs pkgs namespace);
       confs = {
         "fontconfig/fonts.conf" =
           let

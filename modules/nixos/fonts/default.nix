@@ -6,7 +6,7 @@ let
   value = {
     fonts = {
       fontDir = enabled;
-      packages = font.allPkgs pkgs pkgs.${namespace};
+      packages = font.allPkgs pkgs namespace;
       fontconfig = {
         defaultFonts = {
           emoji = font.getName font.emoji;

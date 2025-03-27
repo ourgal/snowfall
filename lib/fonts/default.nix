@@ -136,7 +136,7 @@ in
         tw = "TC";
       };
       getPkg =
-        settings: nixPkgs: myPkgs:
+        settings: pkgs: namespace:
         let
           go =
             data:
@@ -162,7 +162,7 @@ in
               throw "not supported type";
           pkgList = lib.pipe settings [
             (go)
-            (map (x: if (myPkgs ? "${x}") then myPkgs."${x}" else nixPkgs."${x}"))
+            (map (x: if (pkgs.${namespace} ? "${x}") then pkgs.${namespace}."${x}" else pkgs."${x}"))
           ];
         in
         pkgList;
@@ -176,7 +176,7 @@ in
           data.name
         else
           throw "not supported type";
-      update = lib.attrsets.recursiveUpdate;
+      inherit (lib.attrsets) recursiveUpdate;
 
       # settings
       extras = [ ];
@@ -193,8 +193,8 @@ in
     in
     rec {
       inherit getName emoji;
-      cjk = update { inherit (sourceHan) sans serif mono; } overrids.cjk;
-      en = update {
+      cjk = recursiveUpdate { inherit (sourceHan) sans serif mono; } overrids.cjk;
+      en = recursiveUpdate {
         inherit (noto) sans serif;
         mono = firacode;
       } overrids.en;
