@@ -352,11 +352,11 @@
   };
   chinadns-ng = {
     pname = "chinadns-ng";
-    version = "2024.12.22";
+    version = "2025.03.27";
     src = fetchurl {
-      url = "https://github.com/zfl9/chinadns-ng/releases/download/2024.12.22/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto";
+      url = "https://github.com/zfl9/chinadns-ng/releases/download/2025.03.27/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto";
       name = "chinadns-ng";
-      sha256 = "sha256-S5VIGRuFZpAYL5i3IVErmlAASYbs6/bu7XHLcJrL0fU=";
+      sha256 = "sha256-N7M38QBrhRdoQPG4JQhzGiknUdHulLs3kVeNBNY/hW8=";
     };
   };
   cidr = {
@@ -576,21 +576,21 @@
   };
   dela = {
     pname = "dela";
-    version = "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0";
+    version = "903ec33b18e9ab2cb5b1109e18b27b4570d4592b";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0";
+      rev = "903ec33b18e9ab2cb5b1109e18b27b4570d4592b";
       fetchSubmodules = false;
-      sha256 = "sha256-zLtF4D6F02LREhrCXiGaIaWT9toIBG6ktPPgKX5M5IY=";
+      sha256 = "sha256-pHR76qKRjN5PogfLV9CAR5Qr40KTVLPysjtyjZDeDBA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-c7c3982006f6bfdb12ce1d66171eabd36a2aeae0/Cargo.lock;
+      lockFile = ./dela-903ec33b18e9ab2cb5b1109e18b27b4570d4592b/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-03-25";
+    date = "2025-03-27";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -2254,18 +2254,18 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.10.6";
+    version = "2.11.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.6.tar.gz";
-      sha256 = "sha256-yl2qgnzOM956Qr4UJUiwCWvwWn57Nlrr+l+O7scSgjY=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.0.tar.gz";
+      sha256 = "sha256-1qKHzWA33ucvBZciklbfokbE1hVnolDpn4a3tGJuL0E=";
     };
   };
   pydantic-core = {
     pname = "pydantic-core";
-    version = "2.32.0";
+    version = "2.33.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.32.0.tar.gz";
-      sha256 = "sha256-2wu7YBTeb60Sg0BdOtKxShw6yFD/ST6CkrdwUIAzExY=";
+      url = "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.33.0.tar.gz";
+      sha256 = "sha256-QOuK9mK6QJw8v0qBUK0yrnNRTNfLHxohE685dj3WFrM=";
     };
   };
   pydantic-settings = {
@@ -2829,6 +2829,17 @@
     };
     date = "2024-12-27";
   };
+  swei-gothic = {
+    pname = "swei-gothic";
+    version = "2.129";
+    src = fetchFromGitHub {
+      owner = "max32002";
+      repo = "swei-gothic";
+      rev = "2.129";
+      fetchSubmodules = false;
+      sha256 = "sha256-h9M7LJT1rEOM9hX/LBo63KBuCRXsnk1ljttimTozO0g=";
+    };
+  };
   swei-nut-sans = {
     pname = "swei-nut-sans";
     version = "2.128";
@@ -2860,13 +2871,13 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.28.3";
+    version = "v0.28.4";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.28.3";
+      rev = "v0.28.4";
       fetchSubmodules = false;
-      sha256 = "sha256-ZN7bOVWpiLO/9bHVwWmVM0xnSqhI7VPbN5MV1kB0+r4=";
+      sha256 = "sha256-LNEV9ekcr2ZlZxhLFfJhkwTBfFTnmqu05aQhK+YMQCM=";
     };
   };
   task-relative-recur = {
@@ -2969,10 +2980,10 @@
   };
   textual = {
     pname = "textual";
-    version = "2.1.2";
+    version = "3.0.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-2.1.2.tar.gz";
-      sha256 = "sha256-quP5/eAMdEC+AOPDrBieAtAU9SmK/cMhMvk0gPngkUY=";
+      url = "https://pypi.org/packages/source/t/textual/textual-3.0.0.tar.gz";
+      sha256 = "sha256-C/n4UjVBNA1TV3JNYIaNtlL7KHrHsT5s9FU9RabZqdU=";
     };
   };
   timewarrior = {
@@ -3367,18 +3378,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503252212";
+    version = "202503262212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geoip.dat";
       sha256 = "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503252212";
+    version = "202503262212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geosite.dat";
-      sha256 = "sha256-fJ5KBj6XsPg6qLTIRs/rF/E8sU6VRMoAX9TO8yXOjkU=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geosite.dat";
+      sha256 = "sha256-clOX6T0AQxRpcyIMEG635TzL/TlQimM4np+g99YWwG0=";
     };
   };
   vim-auto-save = {

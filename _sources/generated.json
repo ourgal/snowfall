@@ -625,11 +625,11 @@
         "pinned": false,
         "src": {
             "name": "chinadns-ng",
-            "sha256": "sha256-S5VIGRuFZpAYL5i3IVErmlAASYbs6/bu7XHLcJrL0fU=",
+            "sha256": "sha256-N7M38QBrhRdoQPG4JQhzGiknUdHulLs3kVeNBNY/hW8=",
             "type": "url",
-            "url": "https://github.com/zfl9/chinadns-ng/releases/download/2024.12.22/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto"
+            "url": "https://github.com/zfl9/chinadns-ng/releases/download/2025.03.27/chinadns-ng+wolfssl@x86_64-linux-musl@x86_64@fast+lto"
         },
-        "version": "2024.12.22"
+        "version": "2025.03.27"
     },
     "cidr": {
         "cargoLocks": null,
@@ -1014,11 +1014,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-c7c3982006f6bfdb12ce1d66171eabd36a2aeae0/Cargo.lock",
+                "./dela-903ec33b18e9ab2cb5b1109e18b27b4570d4592b/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-03-25",
+        "date": "2025-03-27",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1030,12 +1030,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0",
-            "sha256": "sha256-zLtF4D6F02LREhrCXiGaIaWT9toIBG6ktPPgKX5M5IY=",
+            "rev": "903ec33b18e9ab2cb5b1109e18b27b4570d4592b",
+            "sha256": "sha256-pHR76qKRjN5PogfLV9CAR5Qr40KTVLPysjtyjZDeDBA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c7c3982006f6bfdb12ce1d66171eabd36a2aeae0"
+        "version": "903ec33b18e9ab2cb5b1109e18b27b4570d4592b"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -4022,11 +4022,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-yl2qgnzOM956Qr4UJUiwCWvwWn57Nlrr+l+O7scSgjY=",
+            "sha256": "sha256-1qKHzWA33ucvBZciklbfokbE1hVnolDpn4a3tGJuL0E=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.10.6.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.0.tar.gz"
         },
-        "version": "2.10.6"
+        "version": "2.11.0"
     },
     "pydantic-core": {
         "cargoLocks": null,
@@ -4037,11 +4037,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-2wu7YBTeb60Sg0BdOtKxShw6yFD/ST6CkrdwUIAzExY=",
+            "sha256": "sha256-QOuK9mK6QJw8v0qBUK0yrnNRTNfLHxohE685dj3WFrM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.32.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.33.0.tar.gz"
         },
-        "version": "2.32.0"
+        "version": "2.33.0"
     },
     "pydantic-settings": {
         "cargoLocks": null,
@@ -5014,6 +5014,27 @@
         },
         "version": "2cb42460e223b878bff97011da879e964cd5cad3"
     },
+    "swei-gothic": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "swei-gothic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "max32002",
+            "repo": "swei-gothic",
+            "rev": "2.129",
+            "sha256": "sha256-h9M7LJT1rEOM9hX/LBo63KBuCRXsnk1ljttimTozO0g=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2.129"
+    },
     "swei-nut-sans": {
         "cargoLocks": null,
         "date": null,
@@ -5075,12 +5096,12 @@
             "name": null,
             "owner": "gauge-sh",
             "repo": "tach",
-            "rev": "v0.28.3",
-            "sha256": "sha256-ZN7bOVWpiLO/9bHVwWmVM0xnSqhI7VPbN5MV1kB0+r4=",
+            "rev": "v0.28.4",
+            "sha256": "sha256-LNEV9ekcr2ZlZxhLFfJhkwTBfFTnmqu05aQhK+YMQCM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.28.3"
+        "version": "v0.28.4"
     },
     "task-relative-recur": {
         "cargoLocks": null,
@@ -5253,11 +5274,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-quP5/eAMdEC+AOPDrBieAtAU9SmK/cMhMvk0gPngkUY=",
+            "sha256": "sha256-C/n4UjVBNA1TV3JNYIaNtlL7KHrHsT5s9FU9RabZqdU=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-2.1.2.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-3.0.0.tar.gz"
         },
-        "version": "2.1.2"
+        "version": "3.0.0"
     },
     "timewarrior": {
         "cargoLocks": null,
@@ -5962,9 +5983,9 @@
             "name": null,
             "sha256": "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geoip.dat"
         },
-        "version": "202503252212"
+        "version": "202503262212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5975,11 +5996,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-fJ5KBj6XsPg6qLTIRs/rF/E8sU6VRMoAX9TO8yXOjkU=",
+            "sha256": "sha256-clOX6T0AQxRpcyIMEG635TzL/TlQimM4np+g99YWwG0=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503252212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geosite.dat"
         },
-        "version": "202503252212"
+        "version": "202503262212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
