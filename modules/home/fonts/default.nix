@@ -11,7 +11,32 @@ args.module (
         ;
       inherit (lib.${namespace}) font mkFontconfig;
       inherit (lib.${namespace}.settings) allHosts;
+      inherit (builtins) head;
       notNixos = lib.optionals (!builtins.elem host allHosts);
+      sansList = font.getName (
+        [
+          font.cjk.sans.cn
+          font.en.sans
+        ]
+        ++ font.emoji
+      );
+      sansFirst = head sansList;
+      serifList = font.getName (
+        [
+          font.cjk.serif.cn
+          font.en.serif
+        ]
+        ++ font.emoji
+      );
+      serifFirst = head serifList;
+      monoList = font.getName (
+        [
+          font.en.mono
+          font.cjk.mono.cn
+        ]
+        ++ font.emoji
+      );
+      monoFirst = head monoList;
     in
     {
       path = ./.;
@@ -49,13 +74,7 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.getName (
-                        [
-                          font.cjk.sans.cn
-                          font.en.sans
-                        ]
-                        ++ font.emoji
-                      );
+                      string = sansList;
                     };
                   }
                   {
@@ -68,13 +87,7 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.getName (
-                        [
-                          font.cjk.serif.cn
-                          font.en.serif
-                        ]
-                        ++ font.emoji
-                      );
+                      string = serifList;
                     };
                   }
                   {
@@ -87,13 +100,7 @@ args.module (
                       "@name" = "family";
                       "@mode" = "prepend";
                       "@binding" = "strong";
-                      string = font.getName (
-                        [
-                          font.en.mono
-                          font.cjk.mono.cn
-                        ]
-                        ++ font.emoji
-                      );
+                      string = monoList;
                     };
                   }
                   {
@@ -105,7 +112,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.en.mono;
+                        string = monoFirst;
                       }
                     ];
                     edit = {
@@ -123,7 +130,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.en.mono;
+                        string = monoFirst;
                       }
                     ];
                     edit = {
@@ -141,7 +148,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.en.mono;
+                        string = monoFirst;
                       }
                     ];
                     edit = {
@@ -159,7 +166,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.en.mono;
+                        string = monoFirst;
                       }
                     ];
                     edit = {
@@ -177,7 +184,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.en.mono;
+                        string = monoFirst;
                       }
                     ];
                     edit = {
@@ -195,7 +202,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.sans.cn;
+                        string = sansFirst;
                       }
                     ];
                     edit = {
@@ -213,7 +220,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.serif.cn;
+                        string = serifFirst;
                       }
                     ];
                     edit = {
@@ -231,7 +238,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.sans.cn;
+                        string = sansFirst;
                       }
                     ];
                     edit = {
@@ -249,7 +256,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.serif.cn;
+                        string = serifFirst;
                       }
                     ];
                     edit = {
@@ -267,7 +274,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.sans.cn;
+                        string = sansFirst;
                       }
                     ];
                     edit = {
@@ -285,7 +292,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.serif.cn;
+                        string = serifFirst;
                       }
                     ];
                     edit = {
@@ -303,7 +310,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.sans.cn;
+                        string = sansFirst;
                       }
                     ];
                     edit = {
@@ -321,7 +328,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.serif.cn;
+                        string = serifFirst;
                       }
                     ];
                     edit = {
@@ -340,7 +347,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.sans.cn;
+                        string = sansFirst;
                       }
                     ];
                     edit = {
@@ -360,7 +367,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.getName font.cjk.serif.cn;
+                        string = serifFirst;
                       }
                     ];
                     edit = {
