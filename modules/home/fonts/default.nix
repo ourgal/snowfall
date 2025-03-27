@@ -89,11 +89,29 @@ args.module (
                     test = [
                       {
                         "@name" = "lang";
+                        string = "zh-CN";
+                      }
+                      {
+                        "@name" = "family";
+                        string = font.mono.en;
+                      }
+                    ];
+                    edit = {
+                      "@name" = "family";
+                      "@binding" = "strong";
+                      string = font.mono.cn;
+                    };
+                  }
+                  {
+                    "@target" = "pattern";
+                    test = [
+                      {
+                        "@name" = "lang";
                         string = "zh-TW";
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.cn;
+                        string = font.mono.en;
                       }
                     ];
                     edit = {
@@ -111,7 +129,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.cn;
+                        string = font.mono.en;
                       }
                     ];
                     edit = {
@@ -129,7 +147,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.cn;
+                        string = font.mono.en;
                       }
                     ];
                     edit = {
@@ -147,7 +165,7 @@ args.module (
                       }
                       {
                         "@name" = "family";
-                        string = font.mono.cn;
+                        string = font.mono.en;
                       }
                     ];
                     edit = {
