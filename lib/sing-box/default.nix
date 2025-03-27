@@ -1,5 +1,6 @@
 { lib, namespace, ... }:
 let
+  inherit (builtins) concatStringsSep map;
   outbounds =
     let
       mkOutbound = tag: includes: {
@@ -566,9 +567,9 @@ in
       let
         validFakeIp = fakeIpSubnet != "";
         validFakeIp6 = fakeIp6Subnet != "";
-        joinLines = builtins.concatStringsSep "\n";
+        joinLines = concatStringsSep "\n";
         inherit (lib.${namespace}) subnet;
-        proxyPorts' = builtins.concatStringsSep "," (builtins.map (x: toString x) proxyPorts);
+        proxyPorts' = concatStringsSep "," (map (x: toString x) proxyPorts);
         waitWan = ''
           i=1
           while [ "$i" -le "20" ]; do

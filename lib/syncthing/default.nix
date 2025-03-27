@@ -1,4 +1,7 @@
 { lib, namespace, ... }:
+let
+  inherit (builtins) elem filter;
+in
 {
   mkSyncthingFolders =
     {
@@ -15,7 +18,7 @@
           hosts ? [ ],
         }:
         let
-          devices = if (builtins.elem host hosts) then builtins.filter (e: e != host) hosts else [ ];
+          devices = if (elem host hosts) then filter (e: e != host) hosts else [ ];
         in
         {
           path = "${dataDir}/${name}";

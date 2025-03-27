@@ -1,13 +1,27 @@
 { lib, namespace, ... }:
+let
+  inherit (builtins)
+    isInt
+    isList
+    throw
+    all
+    foldl'
+    isString
+    map
+    split
+    head
+    elem
+    ;
+in
 rec {
   dockerPorts =
     host: container:
     let
       toStr = x: y: "${toString x}:${toString y}";
     in
-    if builtins.isInt host && builtins.isInt container then
+    if isInt host && isInt container then
       [ (toStr host container) ]
-    else if builtins.isList host && builtins.isList container then
+    else if isList host && isList container then
       lib.lists.zipListsWith toStr host container
     else
       "";
@@ -20,12 +34,12 @@ rec {
         acc: _: value:
         let
           port =
-            if builtins.isInt value.ports then
+            if isInt value.ports then
               [ value.ports ]
-            else if builtins.isList value.ports && builtins.all builtins.isInt value.ports then
+            else if isList value.ports && all isInt value.ports then
               value.ports
             else
-              builtins.throw "not supported port type";
+              throw "not supported port type";
         in
         acc ++ port
       ) [ ] containerEnabled;
@@ -53,12 +67,12 @@ rec {
 
   dockerVolumes =
     vname: pname: nfs: nfsPath:
-    if builtins.isList vname then
-      builtins.foldl' (acc: v: acc // dockerVolume v pname nfs nfsPath) { } vname
-    else if builtins.isString vname then
+    if isList vname then
+      foldl' (acc: v: acc // dockerVolume v pname nfs nfsPath) { } vname
+    else if isString vname then
       dockerVolume vname pname nfs nfsPath
     else
-      builtins.throw "not support volume type";
+      throw "not support volume type";
 
   arionProj =
     {
@@ -86,12 +100,12 @@ rec {
     let
       convert2List =
         v:
-        if builtins.isString v then
+        if isString v then
           [ v ]
-        else if builtins.isList v then
+        else if isList v then
           v
         else
-          builtins.throw "not support value type";
+          throw "not support value type";
       _env =
         if image == "postgres" then
           {
@@ -100,7 +114,7 @@ rec {
           }
           // env
         else if
-          builtins.elem image [
+          elem image [
             "mariadb"
             "mysql"
           ]
@@ -130,7 +144,7 @@ rec {
           healthcheck;
       _name =
         if
-          builtins.elem image [
+          elem image [
             "postgres"
             "mariadb"
             "mysql"
@@ -144,7 +158,7 @@ rec {
         if image == "postgres" then
           [ "db:/var/lib/postgresql/data" ] ++ (convert2List volumes) ++ _config
         else if
-          builtins.elem image [
+          elem image [
             "mariadb"
             "mysql"
           ]
@@ -152,14 +166,14 @@ rec {
           [ "db:/var/lib/mysql" ] ++ (convert2List volumes) ++ _config
         else
           (convert2List volumes) ++ _config;
-      getMount = v: builtins.head (builtins.split ":" v);
+      getMount = v: head (split ":" v);
       mounts =
-        if builtins.isString _volumes then
+        if isString _volumes then
           getMount _volumes
-        else if builtins.isList _volumes then
-          builtins.map getMount _volumes
+        else if isList _volumes then
+          map getMount _volumes
         else
-          builtins.throw "not supported volumes type";
+          throw "not supported volumes type";
     in
     {
       virtualisation.arion.projects.${projectName}.settings = {
@@ -181,8 +195,7 @@ rec {
       };
     };
 
-  arionProjs =
-    args: builtins.foldl' (acc: a: lib.attrsets.recursiveUpdate (arionProj a) acc) { } args;
+  arionProjs = args: foldl' (acc: a: lib.attrsets.recursiveUpdate (arionProj a) acc) { } args;
 
   dockerOpts =
     {

@@ -1,6 +1,7 @@
 { lib, ... }:
 let
   inherit (lib.strings) fileContents;
+  inherit (builtins) mapAttrs;
   lan = "192.168.123";
   _ip = rec {
     brix = fileContents ./brix_ip.key;
@@ -11,7 +12,7 @@ let
     ct3003 = fileContents ./ct3003_ip.key;
     router = d2550;
   };
-  ip = lib.attrsets.mapAttrs (_n: v: "${lan}.${v}") _ip;
+  ip = mapAttrs (_n: v: "${lan}.${v}") _ip;
   subnet = "${lan}.0/24";
 in
 {

@@ -1,5 +1,6 @@
 _:
 let
+  inherit (builtins) foldl';
   domain = "zxc.cn";
   services = [
     # keep-sorted start
@@ -31,7 +32,7 @@ let
     "gonic"
     # keep-sorted end
   ];
-  domains = builtins.foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
+  domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
 in
 {
   inherit domains domain;

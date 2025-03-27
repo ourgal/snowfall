@@ -1,4 +1,7 @@
-{ lib, inputs, ... }:
+{ inputs, ... }:
+let
+  inherit (builtins) attrNames foldl';
+in
 {
   mkDeploy =
     {
@@ -7,8 +10,8 @@
     }:
     let
       hosts = self.nixosConfigurations or { };
-      names = builtins.attrNames hosts;
-      nodes = lib.foldl (
+      names = attrNames hosts;
+      nodes = foldl' (
         result: name:
         let
           host = hosts.${name};

@@ -1,4 +1,22 @@
 { lib, inputs, ... }:
+let
+  inherit (builtins)
+    isString
+    isAttrs
+    throw
+    foldl'
+    map
+    attrNames
+    head
+    isList
+    isPath
+    baseNameOf
+    elem
+    toJSON
+    isFunction
+    listToAttrs
+    ;
+in
 rec {
 
   # misc {{{
@@ -21,34 +39,34 @@ rec {
     let
       handle =
         acc: opt:
-        if (builtins.isString opt) then
+        if (isString opt) then
           acc // { ${opt} = enabled; }
-        else if (builtins.isAttrs opt) then
+        else if (isAttrs opt) then
           acc
           // (lib.attrsets.foldlAttrs (
             _acc: n: v:
             _acc // { ${n} = enabled // v; }
           ) { } opt)
         else
-          builtins.throw "not supported type";
+          throw "not supported type";
     in
-    builtins.foldl' handle { } opts;
+    foldl' handle { } opts;
 
-  enableOpt = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
+  enableOpt = opts: foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
 
   disabled = {
     enable = false;
   };
 
-  disabledList = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = disabled; }) { } opts;
+  disabledList = opts: foldl' (acc: opt: acc // { "${opt}" = disabled; }) { } opts;
 
-  disableOpt = opts: builtins.foldl' (acc: opt: acc // { "${opt}" = false; }) { } opts;
+  disableOpt = opts: foldl' (acc: opt: acc // { "${opt}" = false; }) { } opts;
 
   switch = {
     enable = mkBoolOpt' false;
   };
 
-  with' = prefix: pkgs: builtins.map (p: prefix.${p}) pkgs;
+  with' = prefix: pkgs: map (p: prefix.${p}) pkgs;
 
   inherit (inputs.nix-std.lib.serde) toTOML;
   # }}}
@@ -60,7 +78,7 @@ rec {
   mkRustSource =
     s:
     let
-      firstAttrName = v: builtins.head (builtins.attrNames v);
+      firstAttrName = v: head (attrNames v);
       cargoName = firstAttrName s.cargoLock;
     in
     {
@@ -115,18 +133,15 @@ rec {
       subModule ? [ ],
       ...
     }:
-    let
-      type = builtins.typeOf subModule;
-    in
     mkModuleOpt {
       inherit path;
       value =
-        if (type == "list") then
+        if (isList subModule) then
           enabledList subModule
-        else if (type == "string") then
+        else if (isString subModule) then
           enabledList [ subModule ]
         else
-          builtins.throw "not supported type";
+          throw "not supported type";
       prefix = "modules/home/";
     };
 
@@ -136,18 +151,15 @@ rec {
       subModule ? [ ],
       ...
     }:
-    let
-      type = builtins.typeOf subModule;
-    in
     mkModuleOpt {
       inherit path;
       value =
-        if (type == "list") then
+        if (isList subModule) then
           enabledList subModule
-        else if (type == "string") then
+        else if (isString subModule) then
           enabledList [ subModule ]
         else
-          builtins.throw "not supported type";
+          throw "not supported type";
       prefix = "modules/nixos/";
     };
 
@@ -219,14 +231,14 @@ rec {
             let
               _handle =
                 name: value:
-                if (builtins.isPath value) then
+                if (isPath value) then
                   let
-                    filename = builtins.baseNameOf value;
+                    filename = baseNameOf value;
                     extension = lib.lists.last (lib.strings.splitString "." filename);
                     nameFinal = if (name != "") then name + "/" else "";
                     executable =
                       if
-                        (builtins.elem extension [
+                        (elem extension [
                           "sh"
                           "e"
                         ])
@@ -242,69 +254,69 @@ rec {
                       recursive = true;
                     };
                   }
-                else if (builtins.isList value) then
-                  (builtins.foldl' (acc: v: acc // (setHandle { "${name}" = v; })) { } value)
-                else if (builtins.isString value) then
+                else if (isList value) then
+                  (foldl' (acc: v: acc // (setHandle { "${name}" = v; })) { } value)
+                else if (isString value) then
                   { "${name}".text = value; }
-                else if (builtins.isAttrs value) then
+                else if (isAttrs value) then
                   let
-                    filename = builtins.baseNameOf name;
+                    filename = baseNameOf name;
                     extension = lib.lists.last (lib.strings.splitString "." filename);
                   in
                   if
-                    (builtins.elem extension [
+                    (elem extension [
                       "yaml"
                       "yml"
                       "json"
                     ])
                   then
-                    { "${name}".text = builtins.toJSON value; }
-                  else if (builtins.elem extension [ "toml" ]) then
+                    { "${name}".text = toJSON value; }
+                  else if (elem extension [ "toml" ]) then
                     { "${name}".text = toTOML value; }
                   else
                     { "${name}".source = value; }
                 else
-                  builtins.throw "not supported type";
+                  throw "not supported type";
             in
             lib.attrsets.foldlAttrs (
               acc: n: v:
               acc // (_handle n v)
             ) { } set;
         in
-        if (builtins.isAttrs conf) then
+        if (isAttrs conf) then
           (setHandle conf)
-        else if (builtins.isList conf) then
-          builtins.foldl' (acc: c: acc // (setHandle c)) { } conf
+        else if (isList conf) then
+          foldl' (acc: c: acc // (setHandle c)) { } conf
         else
-          builtins.throw "not supported type";
+          throw "not supported type";
       progsHandle =
         progs:
-        if (builtins.isString progs) then
+        if (isString progs) then
           { ${progs} = enabled; }
-        else if (builtins.isAttrs progs) then
+        else if (isAttrs progs) then
           lib.attrsets.foldlAttrs (
             acc: n: v:
             acc // { ${n} = enabled // v; }
           ) { } progs
-        else if (builtins.isList progs) then
-          builtins.foldl' (acc: p: acc // (progsHandle p)) { } progs
+        else if (isList progs) then
+          foldl' (acc: p: acc // (progsHandle p)) { } progs
         else
-          builtins.throw "not supported type";
+          throw "not supported type";
       pkgHandle =
         prefix: pkgs:
-        if (builtins.isString pkgs) then
+        if (isString pkgs) then
           [ prefix.${pkgs} ]
-        else if (builtins.isFunction pkgs) then
+        else if (isFunction pkgs) then
           (pkgs prefix)
-        else if (builtins.isList pkgs) then
+        else if (isList pkgs) then
           (with' prefix pkgs)
         else
-          builtins.throw "not support type";
+          throw "not support type";
       defaultTypes =
         default: types:
         let
-          defaults = builtins.listToAttrs (
-            builtins.foldl' (
+          defaults = listToAttrs (
+            foldl' (
               acc: type:
               acc
               ++ [
@@ -367,7 +379,7 @@ rec {
                 if (value != { }) then
                   lib.attrsets.filterAttrs (
                     n: _v:
-                    !builtins.elem n [
+                    !elem n [
                       "online"
                       "start"
                       "reload"

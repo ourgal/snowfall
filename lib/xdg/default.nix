@@ -1,4 +1,7 @@
 { ... }:
+let
+  inherit (builtins) listToAttrs foldl';
+in
 {
   mime = {
     html = [
@@ -166,8 +169,8 @@
   defaultTypes =
     default: types:
     let
-      _defaults = builtins.listToAttrs (
-        builtins.foldl' (
+      _defaults = listToAttrs (
+        foldl' (
           acc: type:
           acc
           ++ [

@@ -1,5 +1,13 @@
 { lib, ... }:
-with lib;
+let
+  inherit (lib.attrsets) filterAttrs foldlAttrs;
+  inherit (builtins)
+    isInt
+    isList
+    head
+    throw
+    ;
+in
 {
   webConfig =
     domain: container:
@@ -16,17 +24,17 @@ with lib;
   mkDockerProxy =
     { docker, host }:
     let
-      containerEnabled = attrsets.filterAttrs (n: v: (n != "enable") && v.enable) docker;
-      configs = attrsets.foldlAttrs (
+      containerEnabled = filterAttrs (n: v: (n != "enable") && v.enable) docker;
+      configs = foldlAttrs (
         acc: name: value:
         let
           ports =
-            if builtins.isInt value.ports then
+            if isInt value.ports then
               value.ports
-            else if builtins.isList value.ports then
-              builtins.head value.ports
+            else if isList value.ports then
+              head value.ports
             else
-              builtins.throw "not supported port type";
+              throw "not supported port type";
         in
         acc // { "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString ports}"; }
       ) { } containerEnabled;
@@ -41,19 +49,19 @@ with lib;
       token,
     }:
     let
-      containerEnabled = attrsets.filterAttrs (
+      containerEnabled = lib.attrsets.filterAttrs (
         n: v: (n != "enable") && v.enable && v.duckdns.enable
       ) docker;
-      configs = attrsets.foldlAttrs (
+      configs = lib.attrsets.foldlAttrs (
         acc: name: value:
         let
           ports =
-            if builtins.isInt value.ports then
+            if isInt value.ports then
               value.ports
-            else if builtins.isList value.ports then
-              builtins.head value.ports
+            else if isList value.ports then
+              head value.ports
             else
-              builtins.throw "not supported port type";
+              throw "not supported port type";
         in
         acc
         // {

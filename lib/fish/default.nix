@@ -1,10 +1,13 @@
 { namespace, ... }:
+let
+  inherit (builtins) hasAttr map;
+in
 {
   mkFishPlugins =
     plugins: pkgs:
-    builtins.map (
+    map (
       name:
-      if builtins.hasAttr name pkgs.${namespace} then
+      if hasAttr name pkgs.${namespace} then
         rec {
           inherit name;
           inherit (pkgs.${namespace}.${name}) src;
