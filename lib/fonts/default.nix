@@ -189,9 +189,7 @@ in
       # settings
       extras = [ maple ];
       overrids = {
-        cjk = {
-          sans.cn = ChillRound;
-        };
+        cjk = { };
         en = { };
       };
       emoji = [
