@@ -21,6 +21,14 @@
       sha256 = "sha256-A4Hhq5awfJwyIUsFLrAMVfCAXXHAhgeqUTNqdODsuFY=";
     };
   };
+  ChillRound = {
+    pname = "ChillRound";
+    version = "v3.200";
+    src = fetchurl {
+      url = "https://github.com/Warren2060/ChillRound/releases/download/v3.200/ChillRoundF_v3.200.zip";
+      sha256 = "sha256-egYeOcyPN3zhIvCuaNH+PvQ9eEMTiDYsYeqNaVci0mc=";
+    };
+  };
   Chillkai = {
     pname = "Chillkai";
     version = "v2.000";
@@ -3378,18 +3386,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202503262212";
+    version = "202503272212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geoip.dat";
-      sha256 = "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geoip.dat";
+      sha256 = "sha256-ESJN8OsUdauN4RPBi+1ZSbUoxyQi3jaxGFUXpwKLALA=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202503262212";
+    version = "202503272212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geosite.dat";
-      sha256 = "sha256-clOX6T0AQxRpcyIMEG635TzL/TlQimM4np+g99YWwG0=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geosite.dat";
+      sha256 = "sha256-KYOZho1YR5HR40PASO3UNGsYl+8xPYEcwaEIAZMHc30=";
     };
   };
   vim-auto-save = {

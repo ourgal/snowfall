@@ -35,6 +35,21 @@
         },
         "version": "v2.7"
     },
+    "ChillRound": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "ChillRound",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-egYeOcyPN3zhIvCuaNH+PvQ9eEMTiDYsYeqNaVci0mc=",
+            "type": "url",
+            "url": "https://github.com/Warren2060/ChillRound/releases/download/v3.200/ChillRoundF_v3.200.zip"
+        },
+        "version": "v3.200"
+    },
     "Chillkai": {
         "cargoLocks": null,
         "date": null,
@@ -5981,11 +5996,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-eAYRWUf4pwTTR/oQOqg6rcLNUxpyuCxE2ZHVmKwj6uk=",
+            "sha256": "sha256-ESJN8OsUdauN4RPBi+1ZSbUoxyQi3jaxGFUXpwKLALA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geoip.dat"
         },
-        "version": "202503262212"
+        "version": "202503272212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -5996,11 +6011,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-clOX6T0AQxRpcyIMEG635TzL/TlQimM4np+g99YWwG0=",
+            "sha256": "sha256-KYOZho1YR5HR40PASO3UNGsYl+8xPYEcwaEIAZMHc30=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503262212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geosite.dat"
         },
-        "version": "202503262212"
+        "version": "202503272212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
