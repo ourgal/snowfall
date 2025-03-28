@@ -139,6 +139,10 @@ in
         ja = "JP";
         tw = "TC";
       };
+      ChillRound = {
+        pkg = "ChillRound";
+        name = "ChillRoundF";
+      };
       getPkg =
         settings: pkgs: namespace:
         let
@@ -186,7 +190,7 @@ in
       extras = [ maple ];
       overrids = {
         cjk = {
-          sans = { inherit (swei-gothic.sans) cn ja tw; };
+          sans.cn = ChillRound;
         };
         en = { };
       };
