@@ -37,6 +37,65 @@ args.module (
         ++ font.emoji
       );
       monoFirst = head monoList;
+      system-ui = {
+        "@target" = "pattern";
+        test = {
+          "@name" = "family";
+          string = "system-ui";
+        };
+        edit = {
+          "@name" = "family";
+          "@mode" = "prepend";
+          "@binding" = "strong";
+          string = "sans-serif";
+        };
+      };
+      defaultFont = family: fonts: {
+        "@target" = "pattern";
+        test = {
+          "@name" = "family";
+          string = family;
+        };
+        edit = {
+          "@name" = "family";
+          "@mode" = "prepend";
+          "@binding" = "strong";
+          string = fonts;
+        };
+      };
+      replaceWhen = lang: old: new: {
+        "@target" = "pattern";
+        test = [
+          {
+            "@name" = "lang";
+            string = lang;
+          }
+          {
+            "@name" = "family";
+            string = old;
+          }
+        ];
+        edit = {
+          "@name" = "family";
+          "@binding" = "strong";
+          string = font.getName new;
+        };
+      };
+      langSets =
+        defaultFont: replaceSet:
+        lib.attrsets.foldlAttrs
+          (
+            acc: name: value:
+            acc ++ [ (replaceWhen value defaultFont replaceSet."${name}") ]
+          )
+          [ ]
+          {
+            cn = "zh-CN";
+            tw = "zh-TW";
+            hk = "zh-HK";
+            ja = "ja";
+            ko = "ko";
+          };
     in
     {
       path = ./.;
@@ -50,332 +109,16 @@ args.module (
             '';
             settings = {
               fontconfig = {
-                match = [
-                  {
-                    "@target" = "pattern";
-                    test = {
-                      "@name" = "family";
-                      string = "system-ui";
-                    };
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = "sans-serif";
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = {
-                      "@name" = "family";
-                      string = "sans-serif";
-                    };
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = sansList;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = {
-                      "@name" = "family";
-                      string = "serif";
-                    };
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = serifList;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = {
-                      "@name" = "family";
-                      string = "monospace";
-                    };
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = monoList;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-CN";
-                      }
-                      {
-                        "@name" = "family";
-                        string = monoFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.mono.cn;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-TW";
-                      }
-                      {
-                        "@name" = "family";
-                        string = monoFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.mono.tw;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-HK";
-                      }
-                      {
-                        "@name" = "family";
-                        string = monoFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.mono.hk;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ja";
-                      }
-                      {
-                        "@name" = "family";
-                        string = monoFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.mono.ja;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ko";
-                      }
-                      {
-                        "@name" = "family";
-                        string = monoFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.mono.ko;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-CN";
-                      }
-                      {
-                        "@name" = "family";
-                        string = sansFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.sans.cn;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-HK";
-                      }
-                      {
-                        "@name" = "family";
-                        string = sansFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.sans.hk;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-TW";
-                      }
-                      {
-                        "@name" = "family";
-                        string = sansFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.sans.tw;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ja";
-                      }
-                      {
-                        "@name" = "family";
-                        string = sansFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.sans.ja;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ko";
-                      }
-                      {
-                        "@name" = "family";
-                        string = sansFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.sans.ko;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-CN";
-                      }
-                      {
-                        "@name" = "family";
-                        string = serifFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@mode" = "prepend";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.serif.cn;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-HK";
-                      }
-                      {
-                        "@name" = "family";
-                        string = serifFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.serif.hk;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "zh-TW";
-                      }
-                      {
-                        "@name" = "family";
-                        string = serifFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.serif.tw;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ja";
-                      }
-                      {
-                        "@name" = "family";
-                        string = serifFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.serif.ja;
-                    };
-                  }
-                  {
-                    "@target" = "pattern";
-                    test = [
-                      {
-                        "@name" = "lang";
-                        string = "ko";
-                      }
-                      {
-                        "@name" = "family";
-                        string = serifFirst;
-                      }
-                    ];
-                    edit = {
-                      "@name" = "family";
-                      "@binding" = "strong";
-                      string = font.getName font.cjk.serif.ko;
-                    };
-                  }
-                ];
+                match =
+                  [
+                    system-ui
+                    (defaultFont "sans-serif" sansList)
+                    (defaultFont "serif" serifList)
+                    (defaultFont "monospace" monoList)
+                  ]
+                  ++ langSets monoFirst font.cjk.mono
+                  ++ langSets sansFirst font.cjk.sans
+                  ++ langSets serifFirst font.cjk.serif;
               };
             };
           in
