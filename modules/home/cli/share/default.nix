@@ -29,6 +29,7 @@ args.module (
       "tty-share"
       "webwormhole"
       "wgetpaste"
+      "pastebinit"
       "wush"
       # keep-sorted end
     ];
