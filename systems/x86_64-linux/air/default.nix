@@ -18,6 +18,7 @@ in
     sops-nix = enabled // {
       desktops = enabled;
     };
+    nix-monitored = enabled;
   } // settings.laptopModules;
 
   snowfallorg.users.${user}.home = disabled;

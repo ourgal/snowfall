@@ -51,6 +51,7 @@ in
       "udev"
       "udisks2"
       "virtualbox"
+      "nix-monitored"
       # keep-sorted end
     ];
 

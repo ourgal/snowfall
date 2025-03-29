@@ -107,6 +107,10 @@
       url = "github:marienz/nix-doom-emacs-unstraightened";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-monitored = {
+      url = "github:ners/nix-monitored";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -172,6 +176,7 @@
         caddy-nix.overlays.default
         nur.overlays.default
         # telega-overlay.overlay
+        nix-monitored.overlays.default
       ];
 
       # Add modules to all NixOS systems.
@@ -181,6 +186,7 @@
         disko.nixosModules.disko
         arion.nixosModules.arion
         sops-nix.nixosModules.sops
+        nix-monitored.nixosModules.default
       ];
 
       homes.modules = with inputs; [
