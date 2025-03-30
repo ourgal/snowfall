@@ -30,6 +30,7 @@ let
     "yacd"
     "zashboard"
     "gonic"
+    "immich"
     # keep-sorted end
   ];
   domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
