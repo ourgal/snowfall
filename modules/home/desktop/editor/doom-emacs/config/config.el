@@ -143,3 +143,4 @@
 (load! "plugins/magit-delta")
 (load! "plugins/magit-stats")
 (load! "plugins/nftables-mode")
+(load! "plugins/pass")
