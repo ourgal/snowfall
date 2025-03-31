@@ -2,38 +2,17 @@
   lib,
   stdenv,
   _sources',
-  pnpm_9,
-  nodejs,
+  p7zip,
 }:
 
 stdenv.mkDerivation rec {
   inherit (_sources' ./.) pname version src;
 
-  nativeBuildInputs = [
-    pnpm_9.configHook
-    nodejs
-  ];
-
-  pnpmDeps = pnpm_9.fetchDeps {
-    inherit pname version src;
-    hash = "sha256-O1q0kto5Iod3fIcJ1Fl3EiW8lp9L334pO7fun7ICHAY=";
-  };
-
-  buildPhase = ''
-    runHook preBuild
-
-    pnpm build
-
-    runHook postBuild
+  unpackCmd = ''
+    7z x $src
   '';
 
-  installPhase = ''
-    runHook preInstall
-
-    cp -r ./dist $out
-
-    runHook postInstall
-  '';
+  nativeBuildInputs = [ p7zip ];
 
   meta = {
     description = "A Dashboard Using Clash API";

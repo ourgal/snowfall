@@ -1242,7 +1242,7 @@ fetch.github = "l4l4l4l4/qute-translate-popup"
 
 [zashboard]
 src.github = "Zephyruso/zashboard"
-fetch.github = "Zephyruso/zashboard"
+fetch.url = "https://github.com/Zephyruso/zashboard/releases/download/$ver/dist.zip"
 
 [shh]
 src.git = "https://github.com/desbma/shh"
