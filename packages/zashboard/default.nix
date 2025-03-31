@@ -12,6 +12,8 @@ stdenv.mkDerivation rec {
     7z x $src
   '';
 
+  installPhase = "cp -r . $out";
+
   nativeBuildInputs = [ p7zip ];
 
   meta = {
