@@ -587,11 +587,11 @@
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./cdo-c8a226e97470ccd1e527738c66dcffc1b7095117/Cargo.lock",
+                "./cdo-1361feffdd16e0221ce23b51a9062787d97a9bff/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-03-22",
+        "date": "2025-03-29",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -603,12 +603,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "c8a226e97470ccd1e527738c66dcffc1b7095117",
-            "sha256": "sha256-U05egGsrKTXKjeslDkv9ja2H9LvYNPtKDW+8UjuPcGY=",
+            "rev": "1361feffdd16e0221ce23b51a9062787d97a9bff",
+            "sha256": "sha256-H/nFZcsn80F9hilKIkCxH24cyt9+DncnuhNH/gwo5EQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c8a226e97470ccd1e527738c66dcffc1b7095117"
+        "version": "1361feffdd16e0221ce23b51a9062787d97a9bff"
     },
     "chezmoi-vim": {
         "cargoLocks": null,
@@ -3299,7 +3299,7 @@
     "manga-tui": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./manga-tui-v0.6.0/Cargo.lock",
+                "./manga-tui-v0.7.0/Cargo.lock",
                 {}
             ]
         },
@@ -3315,12 +3315,12 @@
             "name": null,
             "owner": "josueBarretogit",
             "repo": "manga-tui",
-            "rev": "v0.6.0",
-            "sha256": "sha256-L5KZaBJDG0z6NUGPJfbOkKCp1xQEzqfJ9GREx189VqU=",
+            "rev": "v0.7.0",
+            "sha256": "sha256-1WFg2hG3UnOO9+HpUcdPkZNhsNYa2QG1PhzLZ4bQiQM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.0"
+        "version": "v0.7.0"
     },
     "mdformat-config": {
         "cargoLocks": null,
@@ -3874,12 +3874,12 @@
             "name": null,
             "owner": "paololazzari",
             "repo": "play",
-            "rev": "v0.3.5",
-            "sha256": "sha256-31naTjYwCytytKXg9tQo2qx0hVoBwBwL7nVeoAV+/go=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-0ew8iYpNzSsE4fhAIB7NZYDIJitmpS5npJ74Hp6l0E0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.5"
+        "version": "v0.4.0"
     },
     "pls": {
         "cargoLocks": null,
@@ -3958,12 +3958,12 @@
             "name": null,
             "owner": "darrenburns",
             "repo": "posting",
-            "rev": "2.5.4",
-            "sha256": "sha256-6nFQSGCdmR4qZuleiY0xh76WgBIjs9OZtfpc16b4iws=",
+            "rev": "2.6.0",
+            "sha256": "sha256-CEfApa1TfBovmGMSxqtHZC9aSSEGYTyVXGpRGxLI7Vo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.5.4"
+        "version": "2.6.0"
     },
     "powershell-beautifier": {
         "cargoLocks": null,
@@ -4037,11 +4037,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1qKHzWA33ucvBZciklbfokbE1hVnolDpn4a3tGJuL0E=",
+            "sha256": "sha256-RCVX0pEOdcmRw59LSrGJY9V7m1USLIsqnNF22MKc6Wg=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.1.tar.gz"
         },
-        "version": "2.11.0"
+        "version": "2.11.1"
     },
     "pydantic-core": {
         "cargoLocks": null,
@@ -4865,12 +4865,12 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.6.13",
-            "sha256": "sha256-rSZa6CHIcpLfhg1HB/YtDgcFMox4xAB7FuVdnX/TOmU=",
+            "rev": "v0.6.14",
+            "sha256": "sha256-p85b66BizxN2z1+TSzT8ctzRkVM8C/ZigibioLwYvu0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.13"
+        "version": "v0.6.14"
     },
     "sprite-dicing": {
         "cargoLocks": null,
@@ -5996,11 +5996,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ESJN8OsUdauN4RPBi+1ZSbUoxyQi3jaxGFUXpwKLALA=",
+            "sha256": "sha256-A950eTTNI5VlxYsnay3NItet1BN6O/bE6DJ2WKq2KFA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503302212/geoip.dat"
         },
-        "version": "202503272212"
+        "version": "202503302212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6011,11 +6011,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KYOZho1YR5HR40PASO3UNGsYl+8xPYEcwaEIAZMHc30=",
+            "sha256": "sha256-nJZSGIC4UnbSM7GrcNXCCM50+Ulbfq5N1VeD5AzkEMo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503272212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202503302212/geosite.dat"
         },
-        "version": "202503272212"
+        "version": "202503302212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6612,17 +6612,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
             "name": null,
-            "owner": "Zephyruso",
-            "repo": "zashboard",
-            "rev": "v1.76.0",
-            "sha256": "sha256-V64YvUXgF0hml0Dd8bOEffdAED0Wh8WUoWFa2HRJTWo=",
-            "sparseCheckout": [],
-            "type": "github"
+            "sha256": "sha256-h5EV5DHV8vwmeHhH1mIdZJiNBD+8h8BTJbGIwF7H4MQ=",
+            "type": "url",
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.76.1/dist.zip"
         },
-        "version": "v1.76.0"
+        "version": "v1.76.1"
     }
 }
