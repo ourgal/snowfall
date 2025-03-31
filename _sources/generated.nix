@@ -2107,16 +2107,16 @@
   };
   otree = {
     pname = "otree";
-    version = "v0.3.1";
+    version = "v0.4.0";
     src = fetchFromGitHub {
       owner = "fioncat";
       repo = "otree";
-      rev = "v0.3.1";
+      rev = "v0.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-CYobQppNsTg53a/+jVL8kqzfNnTVwW7VTgT+amW+lns=";
+      sha256 = "sha256-1p7Iep61m0mtaSiBj1T9d/wwzVGzXYOvbPv8isjhwjM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./otree-v0.3.1/Cargo.lock;
+      lockFile = ./otree-v0.4.0/Cargo.lock;
       outputHashes = {
         
       };
@@ -3702,6 +3702,14 @@
       rev = "v1.1.4";
       fetchSubmodules = false;
       sha256 = "sha256-sAmyZFX9lZ6UXVCt7st187Ie6aVW0dSUlQQQmLiHUlM=";
+    };
+  };
+  yacd = {
+    pname = "yacd";
+    version = "v0.3.8";
+    src = fetchurl {
+      url = "https://github.com/haishanh/yacd/releases/download/v0.3.8/yacd.tar.xz";
+      sha256 = "sha256-1dfs3pGnCKeThhFnU+MqWfMsjLjuyA3tVsOrlOURulA=";
     };
   };
   ynk = {

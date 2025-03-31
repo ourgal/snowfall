@@ -3753,7 +3753,7 @@
     "otree": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./otree-v0.3.1/Cargo.lock",
+                "./otree-v0.4.0/Cargo.lock",
                 {}
             ]
         },
@@ -3769,12 +3769,12 @@
             "name": null,
             "owner": "fioncat",
             "repo": "otree",
-            "rev": "v0.3.1",
-            "sha256": "sha256-CYobQppNsTg53a/+jVL8kqzfNnTVwW7VTgT+amW+lns=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-1p7Iep61m0mtaSiBj1T9d/wwzVGzXYOvbPv8isjhwjM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.1"
+        "version": "v0.4.0"
     },
     "paclear": {
         "cargoLocks": null,
@@ -6556,6 +6556,21 @@
             "type": "github"
         },
         "version": "v1.1.4"
+    },
+    "yacd": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "yacd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-1dfs3pGnCKeThhFnU+MqWfMsjLjuyA3tVsOrlOURulA=",
+            "type": "url",
+            "url": "https://github.com/haishanh/yacd/releases/download/v0.3.8/yacd.tar.xz"
+        },
+        "version": "v0.3.8"
     },
     "ynk": {
         "cargoLocks": {
