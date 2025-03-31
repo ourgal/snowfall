@@ -56,6 +56,7 @@ in
     bpftune = enabled;
     immich = enabled;
     postgres-update = disabled;
+    yacd = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;

@@ -1311,3 +1311,7 @@ fetch.github = "max32002/swei-gothic"
 [ChillRound]
 src.manual = "v3.200"
 fetch.url = "https://github.com/Warren2060/ChillRound/releases/download/$ver/ChillRoundF_$ver.zip"
+
+[yacd]
+src.github = "haishanh/yacd"
+fetch.url = "https://github.com/haishanh/yacd/releases/download/$ver/yacd.tar.xz"
