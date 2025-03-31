@@ -1,6 +1,19 @@
 { lib, namespace, ... }:
 let
-  inherit (builtins) concatStringsSep map;
+  inherit (builtins) concatStringsSep map attrValues;
+  mkOutboundSub = tag: {
+    type = "urltest";
+    providers = tag;
+    includes = ".*";
+    tolerance = 100;
+    inherit tag;
+  };
+  freeSubs = map (x: mkOutboundSub x.name) (attrValues lib.${namespace}.freeSubs);
+  subs = [
+    (mkOutboundSub "nano")
+    (mkOutboundSub "knjc")
+    (mkOutboundSub "tenCloud")
+  ] ++ freeSubs;
   outbounds =
     let
       mkOutbound = tag: includes: {
@@ -8,13 +21,6 @@ let
         use_all_providers = true;
         tolerance = 100;
         inherit tag includes;
-      };
-      mkOutboundSub = tag: {
-        type = "urltest";
-        providers = tag;
-        includes = ".*";
-        tolerance = 100;
-        inherit tag;
       };
       HK = mkOutbound "🇭🇰 香港节点" "港|HK|Hong Kong";
       TW = mkOutbound "🇹🇼 台湾节点" "台|新北|彰化|TW|Taiwan";
@@ -30,12 +36,7 @@ let
         SG.tag
         US.tag
       ];
-      nano = mkOutboundSub "nano";
-      knjc = mkOutboundSub "knjc";
-      subsTags = [
-        nano.tag
-        knjc.tag
-      ];
+      subsTags = builtins.map (x: x.tag) subs;
       cheap = mkOutbound "📺 省流节点" "0.[1-5]|低倍率|省流|大流量";
       expensive = mkOutbound "👍 高级节点" "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
       priceTags = [
@@ -53,8 +54,6 @@ let
         KR
         SG
         US
-        nano
-        knjc
         ;
       main = {
         type = "selector";
@@ -167,35 +166,37 @@ let
         use_all_providers = true;
       };
     };
-  outboundsSorted = with outbounds; [
-    main
-    final
-    nano
-    knjc
-    manual
-    HK
-    TW
-    JP
-    KR
-    SG
-    US
-    cheap
-    expensive
-    foreign
-    telegram
-    ai
-    games
-    microsoft
-    google
-    apple
-    networktest
-    netflix
-    ad
-    global
-    direct
-    block
-    dns
-  ];
+  outboundsSorted =
+    [
+      outbounds.main
+      outbounds.final
+    ]
+    ++ subs
+    ++ [
+      outbounds.manual
+      outbounds.HK
+      outbounds.TW
+      outbounds.JP
+      outbounds.KR
+      outbounds.SG
+      outbounds.US
+      outbounds.cheap
+      outbounds.expensive
+      outbounds.foreign
+      outbounds.telegram
+      outbounds.ai
+      outbounds.games
+      outbounds.microsoft
+      outbounds.google
+      outbounds.apple
+      outbounds.networktest
+      outbounds.netflix
+      outbounds.ad
+      outbounds.global
+      outbounds.direct
+      outbounds.block
+      outbounds.dns
+    ];
   dnsServers = rec {
     direct = {
       tag = "dns_direct";

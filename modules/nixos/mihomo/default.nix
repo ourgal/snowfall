@@ -13,9 +13,11 @@ let
     cfgNixos
     ip
     domain
+    freeSubs
     ;
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders mkProxyGroup;
   inherit (lib.${namespace}.sing-bxo) mkFirewall;
+  inherit (builtins) mapAttrs toJSON;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -220,10 +222,16 @@ let
           "👑 高级节点"
           "📉 省流节点"
         ];
-        subsTags = [
-          "nano"
-          "knjc"
-        ];
+        subsTags =
+          [
+            "nano"
+            "knjc"
+            "tenCloud"
+          ]
+          ++ lib.attrsets.foldlAttrs (
+            acc: _: value:
+            acc ++ [ value.name ]
+          ) [ ] freeSubs;
         mainTag = [ "🚀 节点选择" ];
         directTag = [ "🎯 全球直连" ];
       in
@@ -319,11 +327,19 @@ let
           lazy = true;
           use = [ "nano" ];
         }
+        {
+          name = "tenCloud";
+          type = "url-test";
+          tolerance = 100;
+          lazy = true;
+          use = [ "tenCloud" ];
+        }
       ];
     proxy-providers = {
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
-    };
+      tenCloud = mkProxyProvider "tenCloud" config.sops.placeholder."subs/tenCloud" 24;
+    } // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
     rules = [
       "RULE-SET,${RuleProviders.private.tag},🎯 全球直连"
       "RULE-SET,${RuleProviders.trackerslist.tag},📥 Trackerslist"
@@ -359,7 +375,7 @@ let
           allowedUDPPorts = p;
         };
     };
-    sops.templates.mihomo.content = builtins.toJSON settings;
+    sops.templates.mihomo.content = toJSON settings;
     services.mihomo = enabled // {
       tunMode = true;
       configFile = config.sops.templates.mihomo.path;

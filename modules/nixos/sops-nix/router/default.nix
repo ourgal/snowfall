@@ -1,12 +1,13 @@
 args:
 let
-  inherit (args) namespace lib ;
+  inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule;
   value = {
     sops = {
       secrets = {
         "subs/nano" = { };
         "subs/knjc" = { };
+        "subs/tenCloud" = { };
       };
     };
   };
