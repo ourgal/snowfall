@@ -9,6 +9,7 @@ args.module (
       "dive"
       "docker-compose"
       "dockerfile-language-server-nodejs"
+      "dockfmt"
       "lazydocker"
       "oxker"
       "podman"
