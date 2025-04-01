@@ -20,6 +20,7 @@ args.module (
       };
       enable = [
         # keep-sorted start
+        "alert"
         "eglot-booster"
         "git-time-metric"
         "magit-delta"

@@ -148,3 +148,4 @@
 (load! "plugins/magit-stats")
 (load! "plugins/nftables-mode")
 (load! "plugins/pass")
+(load! "plugins/alert")
