@@ -21,6 +21,7 @@ args.module (
       enable = [
         # keep-sorted start
         "alert"
+        "annotate"
         "eglot-booster"
         "git-time-metric"
         "magit-delta"
