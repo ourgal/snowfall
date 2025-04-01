@@ -22,4 +22,4 @@
 (map! :leader
       :desc "Kill other buffers" "b O" nil)
 
-(map! :n "g z" #'zoxide-find-file)
+(map! :n "g Z" #'zoxide-find-file)
