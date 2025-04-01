@@ -104,10 +104,14 @@
 
 (setq select-enable-clipboard nil)
 
-(add-hook 'after-save-hook 'git-time-metric-record)
+;; time tracking
+(add-hook! 'after-save-hook 'git-time-metric-record)
 
-(add-hook 'completion-at-point-functions #'cape-dabbrev)
-(add-hook 'completion-at-point-functions #'cape-file)
+;; make script executable
+(add-hook! 'after-save-hook #'executable-make-buffer-file-executable-if-script-p)
+
+(add-hook! 'completion-at-point-functions #'cape-dabbrev)
+(add-hook! 'completion-at-point-functions #'cape-file)
 
 ;; set grammar language-tool jar path
 (setq langtool-language-tool-jar (expand-file-name "~/.nix-profile/share/languagetool-commandline.jar"))
