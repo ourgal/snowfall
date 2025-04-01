@@ -110,6 +110,10 @@
 (add-hook! 'completion-at-point-functions #'cape-dabbrev)
 (add-hook! 'completion-at-point-functions #'cape-file)
 
+;; The filename in the mode line occupies way too much space.
+(after! doom-modeline
+  (setq doom-modeline-buffer-file-name-style 'truncate-with-project))
+
 ;; set grammar language-tool jar path
 (setq langtool-language-tool-jar (expand-file-name "~/.nix-profile/share/languagetool-commandline.jar"))
 
