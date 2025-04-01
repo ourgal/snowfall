@@ -111,3 +111,5 @@ set cursorline
 set scrolloff=5
 
 set shortmess-=S " show she search count
+
+set gdefault
