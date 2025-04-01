@@ -26,6 +26,7 @@ args.module (
         "align"
         "auto-save"
         "command"
+        "multi-cursor"
         "comment"
         "format"
         "git"
