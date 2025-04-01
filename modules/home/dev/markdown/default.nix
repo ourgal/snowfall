@@ -12,6 +12,7 @@ args.module (
       # keep-sorted end
     ];
     nodePkgs = "prettier";
+    pyPkgs = "grip";
     nixPkgs = [
       # keep-sorted start
       "autocorrect"
