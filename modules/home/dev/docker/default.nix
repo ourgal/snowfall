@@ -8,6 +8,7 @@ args.module (
       # keep-sorted start
       "dive"
       "docker-compose"
+      "dockerfile-language-server-nodejs"
       "lazydocker"
       "oxker"
       "podman"
