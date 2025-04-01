@@ -151,3 +151,4 @@
 (load! "plugins/pass")
 (load! "plugins/alert")
 (load! "plugins/annotate")
+(load! "plugins/dotenv-mode")

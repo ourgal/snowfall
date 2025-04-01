@@ -23,6 +23,7 @@ args.module (
         "alert"
         "annotate"
         "eglot-booster"
+        "dotenv-mode"
         "git-time-metric"
         "magit-delta"
         "magit-stats"
