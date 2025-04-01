@@ -64,10 +64,6 @@ syntax enable
 # Set regular expression engine automatically
 set regexpengine=0
 
-if (has("termguicolors"))
-    set termguicolors
-endif
-
 # Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l

@@ -39,10 +39,6 @@ syntax enable
 
 set regexpengine=0
 
-if (has('termguicolors'))
-    set termguicolors
-endif
-
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 

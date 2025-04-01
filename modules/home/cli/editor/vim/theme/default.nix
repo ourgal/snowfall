@@ -3,6 +3,6 @@ args.module (
   args
   // {
     path = ./.;
-    enable = "catppuccin-vim";
+    enable = "tokyonight-vim";
   }
 )
