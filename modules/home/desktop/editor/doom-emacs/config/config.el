@@ -90,11 +90,8 @@
 ;; set font
 (setq +main-font "Fira Code")
 
-(setq doom-font (font-spec :family +main-font :size 18)
-      doom-big-font (font-spec :family +main-font :size 20)
-      doom-variable-pitch-font (font-spec :family +main-font) ;; inherits :size from doom-font
-      doom-serif-font (font-spec :family +main-font)
-      doom-symbol-font (font-spec :family "Symbols Nerd Font"))
+(setq doom-font (font-spec :family "monospace" :size 18)
+      doom-variable-pitch-font (font-spec :family "sans-serif" :size 19))
 
 (setq doom-themes-enable-bold t
       doom-themes-enable-italic t)
