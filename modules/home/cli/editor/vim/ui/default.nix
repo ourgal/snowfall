@@ -10,7 +10,6 @@ args.module (
       "tagbar"
       "vim-gutentags"
       "vim-highlightedyank"
-      "vim-indent-guides"
       "vim-polyglot"
       "vim-which-key"
       "vim-zoom"
@@ -19,6 +18,7 @@ args.module (
     ];
     disable = [
       # keep-sorted start
+      "vim-indent-guides"
       "indentLine"
       "rainbow"
       # keep-sorted end
