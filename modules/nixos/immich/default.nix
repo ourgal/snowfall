@@ -8,6 +8,7 @@ let
     disabled
     ;
   port = 2283;
+  name = "immich";
   value = {
     services = {
       immich = enabled // {
@@ -23,7 +24,15 @@ let
         };
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

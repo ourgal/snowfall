@@ -4,6 +4,7 @@ let
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 5002;
   user = "miniflux";
+  name = "miniflux";
   value = {
     sops.secrets."miniflux/adminCredentialsFile".owner = user;
     services.miniflux = enabled // {
@@ -28,7 +29,15 @@ let
         '';
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

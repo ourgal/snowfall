@@ -23,6 +23,7 @@ let
     80
     443
   ];
+  name = "caddy";
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
@@ -71,7 +72,15 @@ let
       inherit package;
     };
     networking.firewall.allowedTCPPorts = ports;
-    ${namespace}.user.ports = ports;
+    ${namespace} = {
+      user.ports = ports;
+      firehol.services = [
+        {
+          inherit name;
+          tcp = ports;
+        }
+      ];
+    };
   };
   extraOpts = {
     xcaddy = switch;

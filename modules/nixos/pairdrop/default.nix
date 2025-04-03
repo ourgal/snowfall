@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 3000;
+  name = "pairdrop";
   value = {
     systemd.services.pairdrop = {
       description = "Pairdrop service";
@@ -22,6 +23,15 @@ let
           reverse_proxy http://localhost:${toString port}
         '';
       };
+    };
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
     };
   };
   path = ./.;

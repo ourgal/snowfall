@@ -12,7 +12,11 @@ let
     lan
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  dhcpPort = 67;
+  dhcpPort = [
+    67
+    68
+  ];
+  name = "dnsmasq";
   dnsPort = 53;
   value = {
     services.dnsmasq = enabled // {
@@ -66,10 +70,19 @@ let
       };
     };
     networking.firewall = {
-      allowedTCPPorts = [ dhcpPort ];
-      allowedUDPPorts = [ dhcpPort ];
+      allowedTCPPorts = lib.optional cfg.dns.enable dnsPort;
+      allowedUDPPorts = dhcpPort;
     };
-    ${namespace}.user.ports = [ dhcpPort ] ++ lib.optional cfg.dns.enable dnsPort;
+    ${namespace} = {
+      user.ports = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
+      firehol.services = [
+        {
+          inherit name;
+          tcp = lib.optional cfg.dns.enable dnsPort;
+          udp = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
+        }
+      ];
+    };
   };
   extraOpts = {
     lan = mkOpt' lib.types.str "";

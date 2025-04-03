@@ -4,6 +4,7 @@ let
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 4747;
   MusicFolder = "/var/lib/syncthing/music";
+  name = "gonic";
   value = {
     services = {
       gonic = enabled // {
@@ -42,8 +43,15 @@ let
     systemd.services.gonic.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
     };
-
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

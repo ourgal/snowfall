@@ -37,11 +37,8 @@ in
     kavita = enabled;
     vaultwarden = enabled;
     anki-sync-server = enabled;
-    firewall = enabledList [
-      "docker"
-      "mdns"
-      "nfs"
-    ];
+    firewall.disable = enabled;
+    firehol = enabled;
     tuptime = enabled;
     flaresolverr = enabled;
     vsftpd = enabled;

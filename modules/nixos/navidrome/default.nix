@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 4533;
+  name = "navidrome";
   MusicFolder = "/var/lib/syncthing/music";
   value = {
     services = {
@@ -34,7 +35,15 @@ let
     systemd.services.navidrome.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

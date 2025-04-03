@@ -10,6 +10,7 @@ let
   user = config.${namespace}.user.name;
   port = 5001;
   User = "zxc";
+  name = "dufs";
   ExecStart = pkgs.writers.writeBash "dufs-start" ''
     dir="/home/${user}/.local/share/dufs"
     mkdir -p "$dir"
@@ -32,7 +33,15 @@ let
         '';
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

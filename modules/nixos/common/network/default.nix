@@ -32,6 +32,21 @@ let
       };
     };
 
+    ${namespace} =
+      let
+        port = 5353;
+        name = "mdns";
+      in
+      {
+        user.ports = [ port ];
+        firehol.services = [
+          {
+            inherit name;
+            udp = port;
+          }
+        ];
+      };
+
     systemd.network = disabled;
 
     hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;

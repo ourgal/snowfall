@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 5000;
+  name = "kavita";
   value = {
     sops.secrets."kavita/token".owner = "kavita";
 
@@ -37,7 +38,15 @@ let
         };
     };
     networking.firewall.allowedTCPPorts = [ port ];
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

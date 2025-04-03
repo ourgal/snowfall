@@ -14,6 +14,7 @@ let
     ;
   inherit (config.${namespace}.user) duckdns;
   port = 53;
+  name = "mosdns";
   geoLists =
     pkgs.runCommand "mosdns_config"
       {
@@ -642,7 +643,15 @@ let
       allowedTCPPorts = [ port ];
       allowedUDPPorts = [ port ];
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

@@ -14,6 +14,7 @@ let
   gitPort = 9418;
   httpPort = 23232;
   statsPort = 23233;
+  name = "soft-serve";
   configFile = format.generate "config.yaml" cfg.settings;
   value = {
     services.soft-serve = enabled // {
@@ -74,12 +75,25 @@ let
     };
     systemd.tmpfiles.rules = [ "L+ /var/lib/private/soft-serve/config.yaml - - - - ${configFile}" ];
     systemd.services.soft-serve.environment._reloadConfig = "${configFile}";
-    ${namespace}.user.ports = [
-      sshPort
-      httpPort
-      gitPort
-      statsPort
-    ];
+    ${namespace} = {
+      user.ports = [
+        sshPort
+        httpPort
+        gitPort
+        statsPort
+      ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = [
+            sshPort
+            httpPort
+            gitPort
+            statsPort
+          ];
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

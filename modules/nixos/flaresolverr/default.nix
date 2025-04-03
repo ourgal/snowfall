@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8191;
+  name = "flaresolverr";
   value = {
     services.flaresolverr = enabled // {
       openFirewall = true;
@@ -15,7 +16,15 @@ let
         '';
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

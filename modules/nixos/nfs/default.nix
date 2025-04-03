@@ -4,6 +4,11 @@ let
   inherit (lib.${namespace}) nixosModule enabled enableOpt;
   user = config.${namespace}.user.name;
   folder = "/home/${user}/mnt/nfs";
+  ports = [
+    111
+    2049
+    20048
+  ];
   value = {
     services.nfs.server =
       enabled
@@ -18,6 +23,13 @@ let
     fileSystems."/srv/nfs" = {
       device = "${folder}";
       options = [ "bind" ];
+    };
+
+    ${namespace} = {
+      user.ports = ports ++ [
+        36789
+        54598
+      ];
     };
   };
   path = ./.;

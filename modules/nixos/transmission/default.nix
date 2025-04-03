@@ -14,6 +14,7 @@ let
     ;
   user = config.${namespace}.user.name;
   port = 9091;
+  name = "transmission";
   dataDir = "/var/lib/transmission";
   value = {
     services = {
@@ -47,7 +48,15 @@ let
       "e ${dataDir} 2770 - - - -"
       "e ${dataDir}/Downloads 2770 - - - -"
     ];
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

@@ -9,6 +9,7 @@ let
     ;
   port = 8000;
   user = "rustypaste";
+  name = "rustypaste";
   dataDir = "/var/lib/rustypaste";
   value = {
     environment.etc."rustypaste/config.toml".text = toTOML {
@@ -131,7 +132,15 @@ let
       groups.${user} = { };
     };
 
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

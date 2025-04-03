@@ -32,7 +32,15 @@ let
       }
     ])
     // {
-      ${namespace}.user.ports = [ cfg.ports ];
+      ${namespace} = {
+        user.ports = [ cfg.ports ];
+        firehol.services = [
+          {
+            inherit name;
+            tcp = cfg.ports;
+          }
+        ];
+      };
     };
   name = "freshrss";
   ports = 80;

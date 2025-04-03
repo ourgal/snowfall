@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib config;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 8096;
+  name = "jellyfin";
   value = {
     services = {
       jellyfin = enabled // {
@@ -35,7 +36,15 @@ let
         ];
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

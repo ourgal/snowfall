@@ -10,6 +10,7 @@ let
     ;
   inherit (config.${namespace}.user) host;
   port = 8081;
+  name = "scrutiny";
   state = if (host == "brix") then enabled else disabled;
   value = {
     services = {
@@ -36,7 +37,15 @@ let
         };
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

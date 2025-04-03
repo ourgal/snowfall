@@ -4,6 +4,7 @@ let
   inherit (lib.${namespace}) nixosModule enabled domains;
   user = config.${namespace}.user.name;
   port = 27701;
+  name = "anki-sync-server";
   value = {
     sops.secrets."anki-sync-server/password".owner = user;
     services = {
@@ -25,7 +26,15 @@ let
         };
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

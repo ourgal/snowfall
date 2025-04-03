@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 9117;
+  name = "jackett";
   value = {
     services = {
       jackett = enabled // {
@@ -17,7 +18,15 @@ let
         };
       };
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

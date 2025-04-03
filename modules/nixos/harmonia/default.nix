@@ -3,6 +3,7 @@ let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled;
   port = 50000;
+  name = "harmonia";
   value = {
     environment.etc = {
       "harmonia/secret".source = ./secret.key;
@@ -16,7 +17,15 @@ let
       };
       signKeyPaths = [ "/etc/harmonia/secret" ];
     };
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };

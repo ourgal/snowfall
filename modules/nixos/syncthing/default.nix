@@ -22,6 +22,7 @@ let
   group = if isDesktop then "users" else "syncthing";
   dataDir = if isDesktop then "/home/${user}/.local/share/syncthing" else "/var/lib/syncthing";
   port = 8384;
+  name = "syncthing";
   guiAddress = "0.0.0.0:${toString port}";
   updateConfig = pkgs.writers.writeBash "update-syncthing-config" ''
     set -efu
@@ -101,7 +102,15 @@ let
 
     users.users.${user}.extraGroups = if isDesktop then [ "syncthing" ] else [ ];
 
-    ${namespace}.user.ports = [ port ];
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
   };
   path = ./.;
   _args = { inherit value path args; };
