@@ -1,18 +1,20 @@
 { lib, namespace, ... }:
 let
   inherit (builtins) concatStringsSep map attrValues;
-  mkOutboundSub = tag: {
-    type = "urltest";
-    providers = tag;
-    includes = ".*";
-    tolerance = 100;
-    inherit tag;
-  };
-  freeSubs = map (x: mkOutboundSub x.name) (attrValues lib.${namespace}.freeSubs);
+  mkOutboundSub =
+    tag: type:
+    {
+      inherit type;
+      providers = tag;
+      includes = ".*";
+      inherit tag;
+    }
+    // lib.optionalAttrs (type == "urltest") { tolerance = 100; };
+  freeSubs = map (x: mkOutboundSub x.name "selector") (attrValues lib.${namespace}.freeSubs);
   subs = [
-    (mkOutboundSub "nano")
-    (mkOutboundSub "knjc")
-    (mkOutboundSub "tenCloud")
+    (mkOutboundSub "nano" "urltest")
+    (mkOutboundSub "knjc" "urltest")
+    (mkOutboundSub "tenCloud" "selector")
   ] ++ freeSubs;
   outbounds =
     let

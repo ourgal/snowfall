@@ -15,9 +15,14 @@ let
     domain
     freeSubs
     ;
-  inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders mkProxyGroup;
+  inherit (lib.${namespace}.mihomo)
+    mkProxyProvider
+    RuleProviders
+    mkProxyGroup
+    mkSubProxyGroup
+    ;
   inherit (lib.${namespace}.sing-bxo) mkFirewall;
-  inherit (builtins) mapAttrs toJSON;
+  inherit (builtins) mapAttrs toJSON map;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -313,28 +318,11 @@ let
         (mkProxyGroup "🇯🇵 日本节点" "(?i)(🇯🇵|日|jp|japan)")
         (mkProxyGroup "🇸🇬 新加坡节点" "(?i)(🇸🇬|新|sg|singapore)")
         (mkProxyGroup "🇺🇸 美国节点" "(?i)(🇺🇸|美|us|unitedstates|united states)")
-        {
-          name = "knjc";
-          type = "url-test";
-          tolerance = 100;
-          lazy = true;
-          use = [ "knjc" ];
-        }
-        {
-          name = "nano";
-          type = "url-test";
-          tolerance = 100;
-          lazy = true;
-          use = [ "nano" ];
-        }
-        {
-          name = "tenCloud";
-          type = "url-test";
-          tolerance = 100;
-          lazy = true;
-          use = [ "tenCloud" ];
-        }
-      ];
+        (mkSubProxyGroup "knjc" "url-test")
+        (mkSubProxyGroup "nano" "url-test")
+        (mkSubProxyGroup "tenCloud" "select")
+      ]
+      ++ map (v: mkSubProxyGroup v.name "select") (builtins.attrValues freeSubs);
     proxy-providers = {
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;

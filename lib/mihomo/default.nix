@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 let
   mkRuleProvider = name: {
     tag = name;
@@ -28,6 +28,14 @@ in
         skip-cert-verify = true;
       };
     };
+    mkSubProxyGroup =
+      name: type:
+      {
+        inherit name type;
+        lazy = true;
+        use = [ name ];
+      }
+      // lib.optionalAttrs (type == "url-test") { tolerance = 100; };
     mkProxyGroup = name: filter: {
       inherit name filter;
       type = "url-test";
