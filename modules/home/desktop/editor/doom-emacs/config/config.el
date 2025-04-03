@@ -112,7 +112,7 @@
 
 ;; The filename in the mode line occupies way too much space.
 (after! doom-modeline
-  (setq doom-modeline-buffer-file-name-style 'truncate-with-project))
+  (setq doom-modeline-buffer-file-name-style 'relative-to-project))
 
 ;; set grammar language-tool jar path
 (setq langtool-language-tool-jar (expand-file-name "~/.nix-profile/share/languagetool-commandline.jar"))
