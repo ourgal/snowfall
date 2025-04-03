@@ -1,13 +1,15 @@
 {
   lib,
   buildNpmPackage,
+  importNpmLock,
   _sources',
 }:
 
-buildNpmPackage {
+buildNpmPackage rec {
   inherit (_sources' ./.) pname version src;
 
-  npmDepsHash = "sha256-Dnf5oDfWRF/0ICQ0/VobSovEJeJcontt63j7ObAn2Fg=";
+  npmDeps = importNpmLock { npmRoot = src; };
+  inherit (importNpmLock) npmConfigHook;
 
   meta = {
     description = "A git statistics report generator that can be used both as an individual CLI Tool or called from inside Emacs";

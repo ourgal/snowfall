@@ -1,12 +1,14 @@
 {
   lib,
   buildNpmPackage,
+  importNpmLock,
   _sources',
 }:
-buildNpmPackage {
+buildNpmPackage rec {
   inherit (_sources' ./.) pname version src;
 
-  npmDepsHash = "sha256-2Bg/VeJYo6Esm/TgfH/1c3/HU1Tl47xJtGxKyNYbEeo=";
+  npmDeps = importNpmLock { npmRoot = src; };
+  inherit (importNpmLock) npmConfigHook;
 
   dontNpmBuild = true;
 

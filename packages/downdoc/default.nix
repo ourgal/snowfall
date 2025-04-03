@@ -1,15 +1,15 @@
 {
   lib,
   buildNpmPackage,
+  importNpmLock,
   _sources',
 }:
 
 buildNpmPackage rec {
   inherit (_sources' ./.) pname version src;
 
-  npmDepsHash = "sha256-1s0xzQod/6vM3bOxXAqDjjOqp4BpS5G9LAJfSG5osOM";
-
-  dontNpmBuild = true;
+  npmDeps = importNpmLock { npmRoot = src; };
+  inherit (importNpmLock) npmConfigHook;
 
   meta = with lib; {
     description = "Rapidly converts AsciiDoc to Markdown";
