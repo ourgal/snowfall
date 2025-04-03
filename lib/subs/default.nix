@@ -38,56 +38,56 @@
         url = "${prefix}/Barabama/FreeNodes/main/nodes/yudou66.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       clashmeta = {
         name = "clashmeta";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/clashmeta.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       ndnode = {
         name = "ndnode";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/ndnode.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       nodev2ray = {
         name = "nodev2ray";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/nodev2ray.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       nodefree = {
         name = "nodefree";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/nodefree.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       v2rayshare = {
         name = "v2rayshare";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/v2rayshare.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       wenode = {
         name = "wenode";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/wenode.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       openproxylist = {
         name = "openproxylist";
         url = "${prefix}/roosterkid/openproxylist/main/V2RAY_BASE64.txt";
         updateInterval = 6;
         broken = false;
-        enable = false;
+        enable = true;
       };
       V2RayAggregator_public = {
         name = "V2RayAggregator_public";
