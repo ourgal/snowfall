@@ -33,7 +33,6 @@ in
     pairdrop = enabled;
     rustypaste = enabled;
     miniflux = enabled;
-    kavita = enabled;
     vaultwarden = enabled;
     anki-sync-server = enabled;
     firewall.disable = enabled;
