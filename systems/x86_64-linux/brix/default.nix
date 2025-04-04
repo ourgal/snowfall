@@ -54,6 +54,7 @@ in
     postgres-update = disabled;
     yacd = enabled;
     cyberchef = enabled;
+    dokuwiki = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;

@@ -32,6 +32,7 @@ let
     "gonic"
     "immich"
     "cyberchef"
+    "dokuwiki"
     # keep-sorted end
   ];
   domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
