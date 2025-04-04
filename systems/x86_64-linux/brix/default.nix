@@ -55,6 +55,7 @@ in
     cyberchef = enabled;
     dokuwiki = enabled;
     tiddlywiki = enabled;
+    komga = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
