@@ -31,6 +31,7 @@ let
     "zashboard"
     "gonic"
     "immich"
+    "cyberchef"
     # keep-sorted end
   ];
   domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;

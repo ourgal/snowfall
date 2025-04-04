@@ -8,7 +8,6 @@ let
   inherit (lib.${namespace})
     enabled
     disabled
-    enabledList
     sources
     ip
     ;
@@ -54,6 +53,7 @@ in
     immich = enabled;
     postgres-update = disabled;
     yacd = enabled;
+    cyberchef = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
