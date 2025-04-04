@@ -34,6 +34,7 @@ let
     "cyberchef"
     "dokuwiki"
     "tiddlywiki"
+    "calibre-web"
     # keep-sorted end
   ];
   domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;

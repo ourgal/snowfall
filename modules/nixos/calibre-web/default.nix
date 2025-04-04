@@ -1,0 +1,39 @@
+args:
+let
+  inherit (args) namespace lib;
+  inherit (lib.${namespace}) nixosModule enabled domains;
+  port = 8083;
+  name = "calibre-web";
+  value = {
+    services = {
+      calibre-web = enabled // {
+        openFirewall = true;
+        listen.port = port;
+      };
+      caddy = enabled // {
+        virtualHosts = {
+          "http://${domains.calibre-web}".extraConfig = ''
+            reverse_proxy http://localhost:${toString port}
+          '';
+        };
+      };
+    };
+    systemd.services.calibre-web = {
+      serviceConfig = {
+        SupplementaryGroups = [ "syncthing" ];
+      };
+    };
+    ${namespace} = {
+      user.ports = [ port ];
+      firehol.services = [
+        {
+          inherit name;
+          tcp = port;
+        }
+      ];
+    };
+  };
+  path = ./.;
+  _args = { inherit value path args; };
+in
+nixosModule _args
