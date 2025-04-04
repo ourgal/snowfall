@@ -74,4 +74,13 @@ in
       ) { } containerEnabled;
     in
     configs;
+
+  mkFileServer = domain: path: {
+    "http://${domain}".extraConfig = ''
+      root    * ${path}
+      file_server
+
+      encode zstd gzip
+    '';
+  };
 }

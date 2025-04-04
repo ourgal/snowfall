@@ -1,15 +1,15 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    mkFileServer
+    ;
   value = {
     services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.metacubexd}".extraConfig = ''
-          root    * ${pkgs.metacubexd}
-          file_server
-        '';
-      };
+      virtualHosts = mkFileServer domains.metacubexd "${pkgs.metacubexd}";
     };
   };
   path = ./.;

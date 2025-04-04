@@ -1,16 +1,11 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule domains;
+  inherit (lib.${namespace}) nixosModule domains mkFileServer;
   value = {
     services.caddy = {
       enable = true;
-      virtualHosts = {
-        "http://${domains.ariang}".extraConfig = ''
-          root    * ${pkgs.ariang}/share/ariang
-          file_server
-        '';
-      };
+      virtualHosts = mkFileServer domains.ariang "${pkgs.ariang}/share/ariang";
     };
   };
   path = ./.;

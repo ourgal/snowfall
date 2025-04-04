@@ -1,16 +1,11 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule domains;
+  inherit (lib.${namespace}) nixosModule domains mkFileServer;
   value = {
     services.caddy = {
       enable = true;
-      virtualHosts = {
-        "http://${domains.cyberchef}".extraConfig = ''
-          root    * ${pkgs.cyberchef}/share/cyberchef
-          file_server
-        '';
-      };
+      virtualHosts = mkFileServer domains.cyberchef "${pkgs.cyberchef}/share/cyberchef";
     };
   };
   path = ./.;
