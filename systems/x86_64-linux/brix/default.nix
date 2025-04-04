@@ -55,6 +55,7 @@ in
     yacd = enabled;
     cyberchef = enabled;
     dokuwiki = enabled;
+    tiddlywiki = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;

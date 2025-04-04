@@ -33,6 +33,7 @@ let
     "immich"
     "cyberchef"
     "dokuwiki"
+    "tiddlywiki"
     # keep-sorted end
   ];
   domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
