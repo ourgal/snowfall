@@ -21,7 +21,9 @@ in
     boot.systemd = enabled;
     common = enabled;
     nh = enabled;
-    sops-nix = enabled;
+    sops-nix = enabled // {
+      ssh = enabled;
+    };
     nfs = enabled;
     caddy = enabled;
     logrotate = enabled;

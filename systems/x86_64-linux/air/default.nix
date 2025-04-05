@@ -17,6 +17,7 @@ in
     disko = enabled;
     sops-nix = enabled // {
       desktops = enabled;
+      ssh = enabled;
     };
     nix-monitored = enabled;
   } // settings.laptopModules;

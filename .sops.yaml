@@ -5,7 +5,7 @@ keys:
   - &home age1wwpqkge6wjlphheul2hajdh56up9jv0yrnpcufwucy0fwr3nguxsavaewa
   - &air age1x9gcqpe39uf0x5fa5fx0p4w93uw258g4rkddqfv0xtjjn2mgwexqdksaf0
   - &surface age1pz49xyuk4t2sxrfd8thlm3ezy94j08psd543ykx0u257evvtwd3s0p3fsr
-  - &d2550 age1u995cng4e2uvrfl8rd9se3hduh60tuse5njp7weezjufktufm44q25j43y
+  - &d2550 age1nljphfqk5u9rvcft5tuvywe9v0n73mrneqf9k5xle0c55m9qdp5qvu7nzt
 creation_rules:
   - path_regex: secrets/zxc/default.yaml
     key_groups:

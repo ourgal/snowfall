@@ -20,6 +20,7 @@ in
       firewall.disable = enabled;
       sops-nix = enabled // {
         desktops = enabled;
+        ssh = enabled;
       };
     }
     // enabledList [

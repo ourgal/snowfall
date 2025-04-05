@@ -37,6 +37,7 @@ in
       temp-hosts = enabled;
       sops-nix = enabled // {
         router = enabled;
+        ssh = enabled;
       };
       bpftune = enabled;
     };
