@@ -7,12 +7,15 @@ let
   name = "miniflux";
   value = {
     sops.secrets."miniflux/adminCredentialsFile".owner = user;
-    services.miniflux = enabled // {
-      config = {
-        POLLING_PARSING_ERROR_LIMIT = 0;
-        LISTEN_ADDR = "localhost:${toString port}";
+    services = {
+      miniflux = enabled // {
+        config = {
+          POLLING_PARSING_ERROR_LIMIT = 0;
+          LISTEN_ADDR = "localhost:${toString port}";
+        };
+        adminCredentialsFile = config.sops.secrets."miniflux/adminCredentialsFile".path;
       };
-      adminCredentialsFile = config.sops.secrets."miniflux/adminCredentialsFile".path;
+      postgresqlBackup.databases = [ "miniflux" ];
     };
     users = {
       users.${user} = {

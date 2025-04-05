@@ -13,6 +13,7 @@ let
         inherit port;
       };
       postgresql = enabled;
+      postgresqlBackup.databases = [ "atuin" ];
       caddy = enabled // {
         virtualHosts = {
           "http://${domains.atuin}".extraConfig = ''
