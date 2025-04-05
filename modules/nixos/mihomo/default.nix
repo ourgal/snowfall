@@ -231,7 +231,6 @@ let
           [
             "nano"
             "knjc"
-            "tenCloud"
           ]
           ++ lib.attrsets.foldlAttrs (
             acc: _: value:
@@ -320,13 +319,11 @@ let
         (mkProxyGroup "🇺🇸 美国节点" "(?i)(🇺🇸|美|us|unitedstates|united states)")
         (mkSubProxyGroup "knjc" "url-test")
         (mkSubProxyGroup "nano" "url-test")
-        (mkSubProxyGroup "tenCloud" "select")
       ]
       ++ map (v: mkSubProxyGroup v.name "select") (builtins.attrValues freeSubs);
     proxy-providers = {
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
-      tenCloud = mkProxyProvider "tenCloud" config.sops.placeholder."subs/tenCloud" 24;
     } // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
     rules = [
       "RULE-SET,${RuleProviders.private.tag},🎯 全球直连"

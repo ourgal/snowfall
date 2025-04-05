@@ -137,7 +137,6 @@ let
         outbound_providers = [
           (mkProvider "nano" { _secret = config.sops.secrets."subs/nano".path; } 4)
           (mkProvider "knjc" { _secret = config.sops.secrets."subs/knjc".path; } 24)
-          (mkProvider "tenCloud" { _secret = config.sops.secrets."subs/tenCloud".path; } 24)
         ] ++ builtins.map (x: mkProvider x.name x.url x.updateInterval) (builtins.attrValues freeSubs);
       };
     };

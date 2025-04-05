@@ -14,7 +14,6 @@ let
   subs = [
     (mkOutboundSub "nano" "urltest")
     (mkOutboundSub "knjc" "urltest")
-    (mkOutboundSub "tenCloud" "selector")
   ] ++ freeSubs;
   outbounds =
     let

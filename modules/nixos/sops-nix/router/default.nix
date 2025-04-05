@@ -7,7 +7,6 @@ let
       secrets = {
         "subs/nano" = { };
         "subs/knjc" = { };
-        "subs/tenCloud" = { };
       };
     };
   };
