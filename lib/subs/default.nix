@@ -17,7 +17,7 @@
         url = "${prefix}/barry-far/V2ray-Configs/main/Splitted-By-Protocol/vless.txt";
         updateInterval = 4;
         broken = false;
-        enable = true;
+        enable = false;
       };
       awesome-vpn = {
         name = "awesome-vpn";
@@ -38,49 +38,49 @@
         url = "${prefix}/Barabama/FreeNodes/main/nodes/yudou66.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       clashmeta = {
         name = "clashmeta";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/clashmeta.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       ndnode = {
         name = "ndnode";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/ndnode.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       nodev2ray = {
         name = "nodev2ray";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/nodev2ray.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       nodefree = {
         name = "nodefree";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/nodefree.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       v2rayshare = {
         name = "v2rayshare";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/v2rayshare.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       wenode = {
         name = "wenode";
         url = "${prefix}/Barabama/FreeNodes/main/nodes/wenode.txt";
         updateInterval = 6;
         broken = false;
-        enable = true;
+        enable = false;
       };
       openproxylist = {
         name = "openproxylist";
