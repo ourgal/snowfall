@@ -16,6 +16,7 @@ let
           '';
         };
       };
+      borgmatic.settings.source_directories = [ "/var/lib/${name}/.config/NzbDrone/Backups" ];
     };
     systemd.services.sonarr.serviceConfig = {
       SupplementaryGroups = [ "transmission" ];

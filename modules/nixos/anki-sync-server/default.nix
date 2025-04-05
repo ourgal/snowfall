@@ -6,7 +6,7 @@ let
   port = 27701;
   name = "anki-sync-server";
   value = {
-    sops.secrets."anki-sync-server/password".owner = user;
+    sops.secrets."${name}/password".owner = user;
     services = {
       anki-sync-server = enabled // {
         inherit port;
@@ -14,10 +14,11 @@ let
         users = [
           {
             username = user;
-            passwordFile = config.sops.secrets."anki-sync-server/password".path;
+            passwordFile = config.sops.secrets."${name}/password".path;
           }
         ];
       };
+      borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
       caddy = enabled // {
         virtualHosts = {
           "http://${domains.anki}".extraConfig = ''

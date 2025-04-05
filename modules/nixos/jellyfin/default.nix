@@ -26,6 +26,10 @@ let
             '';
           };
       };
+      borgmatic.settings = {
+        source_directories = [ "/var/lib/${name}" ];
+        exclude_patterns = [ "/var/lib/${name}/metadata" ];
+      };
     };
 
     systemd.services.jellyfin = {

@@ -5,32 +5,35 @@ let
   port = 8222;
   name = "vaultwarden";
   value = {
-    sops.secrets."vaultwarden/adminToken".owner = "vaultwarden";
-    services.vaultwarden = enabled // {
-      config = {
-        ROCKET_ADDRESS = "::1";
-        ROCKET_PORT = port;
-      };
-      environmentFile = config.sops.secrets."vaultwarden/adminToken".path;
-    };
-    services.caddy =
-      let
-        inherit (config.${namespace}.user.duckdns) token domain;
-      in
-      enabled
-      // {
-        virtualHosts = {
-          "http://${domains.vaultwarden}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-          "vaultwarden.${domain}.duckdns.org".extraConfig = ''
-            tls {
-                dns duckdns ${token}
-            }
-            reverse_proxy http://localhost:${toString port}
-          '';
+    sops.secrets."${name}/adminToken".owner = name;
+    services = {
+      vaultwarden = enabled // {
+        config = {
+          ROCKET_ADDRESS = "::1";
+          ROCKET_PORT = port;
         };
+        environmentFile = config.sops.secrets."${name}/adminToken".path;
       };
+      borgmatic.settings.source_directories = [ "/var/lib/bitwarden_rs" ];
+      caddy =
+        let
+          inherit (config.${namespace}.user.duckdns) token domain;
+        in
+        enabled
+        // {
+          virtualHosts = {
+            "http://${domains.vaultwarden}".extraConfig = ''
+              reverse_proxy http://localhost:${toString port}
+            '';
+            "${name}.${domain}.duckdns.org".extraConfig = ''
+              tls {
+                  dns duckdns ${token}
+              }
+              reverse_proxy http://localhost:${toString port}
+            '';
+          };
+        };
+    };
     ${namespace} = {
       user.ports = [ port ];
       firehol.services = [

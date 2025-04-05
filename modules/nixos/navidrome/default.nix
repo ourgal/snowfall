@@ -4,7 +4,7 @@ let
   inherit (lib.${namespace}) nixosModule enabled domains;
   port = 4533;
   name = "navidrome";
-  MusicFolder = "/var/lib/syncthing/music";
+  MusicFolder = "${config.services.syncthing.dataDir}/music";
   value = {
     services = {
       navidrome = enabled // {
@@ -31,6 +31,7 @@ let
             '';
           };
       };
+      borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };
     systemd.services.navidrome.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
