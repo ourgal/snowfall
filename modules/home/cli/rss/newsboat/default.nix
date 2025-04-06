@@ -28,7 +28,7 @@ args.module (
           bind-key k up article
 
           urls-source "miniflux"
-          miniflux-url "http://miniflux.zxc.cn/"
+          miniflux-url "http://miniflux.${lib.${namespace}.domain}/"
           miniflux-login "miniflux"
           miniflux-password "${lib.strings.fileContents ./password.key}"
         '';

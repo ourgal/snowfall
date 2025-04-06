@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, namespace, ... }:
 let
   inherit (lib.attrsets) filterAttrs foldlAttrs;
   inherit (builtins)
@@ -36,7 +36,11 @@ in
             else
               throw "not supported port type";
         in
-        acc // { "http://${name}.zxc.cn".extraConfig = "reverse_proxy http://${host}:${toString ports}"; }
+        acc
+        // {
+          "http://${name}.${lib.${namespace}.domain}".extraConfig =
+            "reverse_proxy http://${host}:${toString ports}";
+        }
       ) { } containerEnabled;
     in
     configs;
