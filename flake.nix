@@ -113,6 +113,16 @@
     };
   };
 
+  nixConfig = {
+    extra-substituters = [
+      "http://home.local:50000?priority=101"
+      "https://nix-community.cachix.org?priority=98"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+  };
+
   outputs =
     inputs:
     let

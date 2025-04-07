@@ -11,7 +11,6 @@ let
     enableOpt
     disabled
     enabled
-    ip
     mkOpt'
     cfgNixos
     ;
@@ -25,10 +24,8 @@ let
     nix =
       let
         mirrors = [
-          "http://${ip.home}:50000"
-          "${mirror}"
-          "https://cache.nixos.org"
-          "https://nix-community.cachix.org"
+          "${mirror}?priority=100"
+          "https://cache.nixos.org?priority=99"
         ];
       in
       {
@@ -39,15 +36,8 @@ let
             "pipe-operators"
           ];
           substituters = lib.mkBefore mirrors;
-          trusted-substituters = lib.mkBefore mirrors;
-          trusted-public-keys = [
-            "cache.example.org-1:lFI4YUR1ZKE8dz1JoXTRBvIEHaeKmW3LHBlDTJDW1V8="
-            "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-          ];
-          trusted-users = [
-            "root"
-            config.${namespace}.user.name
-          ];
+          trusted-public-keys = [ "cache.example.org-1:lFI4YUR1ZKE8dz1JoXTRBvIEHaeKmW3LHBlDTJDW1V8=" ];
+          trusted-users = [ config.${namespace}.user.name ];
         };
         gc =
           lib.mkIf (!config.${namespace}.nh.enable) {
