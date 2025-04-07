@@ -75,7 +75,7 @@ let
           folders = mkSyncthingFolders { inherit dataDir host folders; };
         };
       };
-      caddy = lib.mkIf (builtins.elem host syncthing) mkCaddyProxy domains.${name} port;
+      caddy = lib.mkIf (builtins.elem host syncthing) (mkCaddyProxy domains.${name} port);
     };
 
     systemd = {
