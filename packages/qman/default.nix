@@ -11,6 +11,8 @@
   inih,
   ninja,
   bzip2,
+  xz,
+  cunit,
   _sources',
 }:
 
@@ -24,13 +26,24 @@ stdenv.mkDerivation {
     pkg-config
     cmake
     (python3.withPackages (ps: [ ps.cogapp ]))
+    cunit
   ];
+
+  mesonFlags =
+    let
+      inherit (lib.strings) mesonEnable;
+    in
+    [
+      (mesonEnable "tests" false)
+      (mesonEnable "config" false)
+    ];
 
   buildInputs = [
     zlib
     ncurses
     inih
     bzip2
+    xz
   ];
 
   meta = {
