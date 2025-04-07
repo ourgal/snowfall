@@ -115,7 +115,7 @@
 
   nixConfig = {
     extra-substituters = [
-      "http://home.local:50000?priority=101"
+      "http://harmonia.zxc.cn?priority=101"
       "https://nix-community.cachix.org?priority=98"
     ];
     extra-trusted-public-keys = [
