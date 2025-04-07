@@ -16,6 +16,8 @@ let
     ip
     getDirname
     mkFireholRule
+    domains
+    mkCaddyProxy
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
@@ -79,7 +81,13 @@ let
       };
   value = {
     services.caddy = enabled // {
-      virtualHosts = virtualHosts;
+      virtualHosts =
+        virtualHosts
+        // (mkCaddyProxy {
+          domain = domains.harmonia;
+          port = 50000;
+          host = if config.services.resolved.enable then "home.local" else ip.home;
+        }).virtualHosts;
       inherit package;
     };
     networking.firewall.allowedTCPPorts = ports;

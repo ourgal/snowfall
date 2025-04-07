@@ -5,12 +5,9 @@ let
     nixosModule
     enabled
     getDirname
-    domains
-    ip
     mkFireholRule
     mkOpt'
     cfgNixos
-    mkCaddyProxy
     ;
   cfg = cfgNixos config.${namespace} ./.;
   name = getDirname path;
@@ -27,11 +24,6 @@ let
           priority = 30;
         };
         signKeyPaths = [ "/etc/${name}/secret" ];
-      };
-      caddy = mkCaddyProxy {
-        domain = domains.${name};
-        inherit (cfg) port;
-        host = if config.services.resolved.enable then "home.local" else ip.home;
       };
     };
     ${namespace} = mkFireholRule {
