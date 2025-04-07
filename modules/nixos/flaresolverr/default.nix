@@ -1,29 +1,27 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 8191;
-  name = "flaresolverr";
+  name = getDirname path;
   value = {
-    services.flaresolverr = enabled // {
-      openFirewall = true;
-      package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
-    };
-    services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.flaresolverr}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
+    services = {
+      flaresolverr = enabled // {
+        openFirewall = true;
+        package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
       };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

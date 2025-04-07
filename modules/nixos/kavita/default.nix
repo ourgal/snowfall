@@ -1,17 +1,27 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 5000;
-  name = "kavita";
+  name = getDirname path;
   value = {
-    sops.secrets."kavita/token".owner = "kavita";
+    sops.secrets."${name}/token".owner = name;
 
-    services.kavita = enabled // {
-      settings = {
-        Port = port;
+    services = {
+      kavita = enabled // {
+        settings = {
+          Port = port;
+        };
+        tokenKeyFile = config.sops.secrets."${name}/token".path;
       };
-      tokenKeyFile = config.sops.secrets."kavita/token".path;
+      caddy = mkCaddyProxy domains.${name} port;
     };
 
     systemd.services.kavita = {
@@ -20,32 +30,10 @@ let
       };
     };
 
-    services.caddy = enabled // {
-      virtualHosts =
-        let
-          inherit (config.${namespace}.user.duckdns) token domain;
-        in
-        {
-          "http://${domains.kavita}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-          "kavita.${domain}.duckdns.org".extraConfig = ''
-            tls {
-                dns duckdns ${token}
-            }
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-    };
     networking.firewall.allowedTCPPorts = [ port ];
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

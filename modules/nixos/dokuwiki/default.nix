@@ -1,12 +1,18 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule domains enabled;
+  inherit (lib.${namespace})
+    nixosModule
+    domains
+    enabled
+    getDirname
+    ;
+  name = getDirname path;
   value = {
     services.dokuwiki = {
       webserver = "caddy";
       sites = {
-        ${domains.dokuwiki} = enabled;
+        ${domains.${name}} = enabled;
       };
     };
   };

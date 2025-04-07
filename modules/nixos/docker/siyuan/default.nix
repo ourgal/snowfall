@@ -6,13 +6,15 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   authCode = lib.strings.fileContents ./authCode.key;
   value =
     (arionProj {
       inherit cfg;
-      image = "b3log/siyuan";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       config = "/siyuan/workspace";
       user = "1000:100";
       cmd = [
@@ -25,17 +27,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "siyuan";
+  name = getDirname path;
   ports = 6806;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

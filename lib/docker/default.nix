@@ -77,11 +77,12 @@ rec {
   arionProj =
     {
       cfg,
+      src,
       name ? cfg.name,
       projectName ? name,
-      image,
+      image ? src.imageName,
       imageHost ? "docker.io",
-      version ? cfg.version,
+      version ? src.imageTag,
       ports ? cfg.ports,
       env ? { },
       containerPorts ? [ ],

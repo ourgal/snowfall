@@ -6,26 +6,23 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    mkFireholRule
+    getDirname
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "leonismoe/ariang";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "ariang";
+  name = getDirname path;
   ports = 8080;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

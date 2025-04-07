@@ -6,11 +6,18 @@ let
     pkgs
     config
     ;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   user = config.${namespace}.user.name;
   port = 5001;
-  User = "zxc";
-  name = "dufs";
+  User = user;
+  name = getDirname path;
   ExecStart = pkgs.writers.writeBash "dufs-start" ''
     dir="/home/${user}/.local/share/dufs"
     mkdir -p "$dir"
@@ -26,21 +33,10 @@ let
         inherit User ExecStart;
       };
     };
-    services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.dufs}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
-      };
-    };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    services.caddy = mkCaddyProxy domains.${name} port;
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

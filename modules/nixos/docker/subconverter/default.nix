@@ -6,12 +6,14 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "asdlokj1qpi23/subconverter";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       config = "/base";
       env = {
         TZ = "Asia/Shanghai";
@@ -19,17 +21,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "subconverter";
+  name = getDirname path;
   ports = 25500;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

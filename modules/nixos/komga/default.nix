@@ -1,31 +1,27 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 8084;
-  name = "komga";
+  name = getDirname path;
   value = {
     services = {
       komga = enabled // {
         openFirewall = true;
         inherit port;
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.komga}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

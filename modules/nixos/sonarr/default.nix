@@ -1,35 +1,31 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 8989;
-  name = "sonarr";
+  name = getDirname path;
   value = {
     services = {
       sonarr = enabled // {
         openFirewall = true;
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.sonarr}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
       borgmatic.settings.source_directories = [ "/var/lib/${name}/.config/NzbDrone/Backups" ];
     };
     systemd.services.sonarr.serviceConfig = {
       SupplementaryGroups = [ "transmission" ];
     };
-    systemd.tmpfiles.rules = [ "d /mnt/anime 2770 sonarr sonarr - -" ];
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    systemd.tmpfiles.rules = [ "d /mnt/anime 0770 ${name} ${name} - -" ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

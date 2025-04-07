@@ -3,16 +3,18 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace})
     nixosModule
-    enabled
     domains
     toTOML
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
     ;
   port = 8000;
-  user = "rustypaste";
-  name = "rustypaste";
-  dataDir = "/var/lib/rustypaste";
+  name = getDirname path;
+  user = name;
+  dataDir = "/var/lib/${name}";
   value = {
-    environment.etc."rustypaste/config.toml".text = toTOML {
+    environment.etc."${name}/config.toml".text = toTOML {
       config = {
         refresh_rate = "1s";
       };
@@ -110,17 +112,11 @@ let
         WorkingDirectory = dataDir;
       };
       environment = {
-        CONFIG = "/etc/rustypaste/config.toml";
+        CONFIG = "/etc/${name}/config.toml";
         SERVER__ADDRESS = "0.0.0.0:${toString port}";
       };
     };
-    services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.rustypaste}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
-      };
-    };
+    services.caddy = mkCaddyProxy domains.${name} port;
 
     users = {
       users.${user} = {
@@ -132,14 +128,9 @@ let
       groups.${user} = { };
     };
 
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

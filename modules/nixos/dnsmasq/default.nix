@@ -10,13 +10,15 @@ let
     ip
     mac
     lan
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   dhcpPort = [
     67
     68
   ];
-  name = "dnsmasq";
+  name = getDirname path;
   dnsPort = 53;
   value = {
     services.dnsmasq = enabled // {
@@ -73,15 +75,10 @@ let
       allowedTCPPorts = lib.optional cfg.dns.enable dnsPort;
       allowedUDPPorts = dhcpPort;
     };
-    ${namespace} = {
-      user.ports = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
-      firehol.services = [
-        {
-          inherit name;
-          tcp = lib.optional cfg.dns.enable dnsPort;
-          udp = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = lib.optional cfg.dns.enable dnsPort;
+      udp = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
     };
   };
   extraOpts = {

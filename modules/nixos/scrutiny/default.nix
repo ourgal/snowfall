@@ -7,10 +7,13 @@ let
     domains
     ip
     disabled
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
     ;
   inherit (config.${namespace}.user) host;
   port = 8081;
-  name = "scrutiny";
+  name = getDirname path;
   state = if (host == "brix") then enabled else disabled;
   value = {
     services = {
@@ -29,22 +32,11 @@ let
         };
         settings.web.listen.port = port;
       };
-      caddy = state // {
-        virtualHosts = {
-          "http://${domains.scrutiny}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

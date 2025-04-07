@@ -36,9 +36,12 @@ let
     "tiddlywiki"
     "calibre-web"
     "komga"
+    "nix-serve"
     # keep-sorted end
   ];
-  domains = foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services;
+  domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
+    anki-sync-server = "anki.${domain}";
+  };
 in
 {
   inherit domains domain;

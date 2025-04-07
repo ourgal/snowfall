@@ -6,9 +6,12 @@ let
     enabled
     domains
     disabled
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
     ;
   port = 2283;
-  name = "immich";
+  name = getDirname path;
   value = {
     services = {
       immich = enabled // {
@@ -16,22 +19,11 @@ let
         inherit port;
         machine-learning = disabled;
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.immich}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

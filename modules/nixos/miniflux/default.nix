@@ -1,21 +1,29 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 5002;
-  user = "miniflux";
-  name = "miniflux";
+  name = getDirname path;
+  user = name;
   value = {
-    sops.secrets."miniflux/adminCredentialsFile".owner = user;
+    sops.secrets."${name}/adminCredentialsFile".owner = user;
     services = {
       miniflux = enabled // {
         config = {
           POLLING_PARSING_ERROR_LIMIT = 0;
           LISTEN_ADDR = "localhost:${toString port}";
         };
-        adminCredentialsFile = config.sops.secrets."miniflux/adminCredentialsFile".path;
+        adminCredentialsFile = config.sops.secrets."${name}/adminCredentialsFile".path;
       };
-      postgresqlBackup.databases = [ "miniflux" ];
+      postgresqlBackup.databases = [ name ];
+      caddy = mkCaddyProxy domains.${name} port;
     };
     users = {
       users.${user} = {
@@ -25,21 +33,9 @@ let
       };
       groups.${user} = { };
     };
-    services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.miniflux}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
-      };
-    };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

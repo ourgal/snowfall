@@ -1,9 +1,16 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    mkCaddyProxy
+    mkFireholRule
+    getDirname
+    ;
   port = 8888;
-  name = "atuin";
+  name = getDirname path;
   value = {
     services = {
       atuin = enabled // {
@@ -14,22 +21,11 @@ let
       };
       postgresql = enabled;
       postgresqlBackup.databases = [ "atuin" ];
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.atuin}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

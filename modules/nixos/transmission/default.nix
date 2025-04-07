@@ -11,11 +11,14 @@ let
     enabled
     enableOpt
     domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
     ;
   user = config.${namespace}.user.name;
   port = 9091;
-  name = "transmission";
-  dataDir = "/var/lib/transmission";
+  name = getDirname path;
+  dataDir = "/var/lib/${name}";
   value = {
     services = {
       transmission =
@@ -35,27 +38,16 @@ let
             ratio-limit-enabled = true;
           };
         };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.transmission}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    users.users.${user}.extraGroups = [ "transmission" ];
+    users.users.${user}.extraGroups = [ name ];
     systemd.tmpfiles.rules = [
-      "e ${dataDir} 2770 - - - -"
-      "e ${dataDir}/Downloads 2770 - - - -"
+      "e ${dataDir} 0770 - - - -"
+      "e ${dataDir}/Downloads 0770 - - - -"
     ];
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

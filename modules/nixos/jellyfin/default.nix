@@ -1,31 +1,22 @@
 args:
 let
-  inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (args) namespace lib;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 8096;
-  name = "jellyfin";
+  name = getDirname path;
   value = {
     services = {
       jellyfin = enabled // {
         openFirewall = true;
       };
-      caddy = enabled // {
-        virtualHosts =
-          let
-            inherit (config.${namespace}.user.duckdns) token domain;
-          in
-          {
-            "http://${domains.jellyfin}".extraConfig = ''
-              reverse_proxy http://localhost:${toString port}
-            '';
-            "jellyfin.${domain}.duckdns.org".extraConfig = ''
-              tls {
-                  dns duckdns ${token}
-              }
-              reverse_proxy http://localhost:${toString port}
-            '';
-          };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
       borgmatic.settings = {
         source_directories = [ "/var/lib/${name}" ];
         exclude_patterns = [ "/var/lib/${name}/metadata" ];
@@ -40,14 +31,10 @@ let
         ];
       };
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

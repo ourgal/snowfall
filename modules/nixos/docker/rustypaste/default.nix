@@ -6,12 +6,14 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "orhunp/rustypaste";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       env = {
         CONFIG = "/config/config.toml";
       };
@@ -20,17 +22,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "rustypaste";
+  name = getDirname path;
   ports = 8000;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

@@ -6,6 +6,8 @@ let
     cfgNixos
     arionProjs
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   password = lib.strings.fileContents ./password.key;
@@ -13,6 +15,7 @@ let
     (arionProjs [
       {
         inherit cfg;
+        inherit (lib.${namespace}.sources."docker-${name}") src;
         image = "atuinsh/atuin";
         imageHost = "ghcr.io";
         env = {
@@ -30,6 +33,7 @@ let
       }
       {
         inherit cfg;
+        src = { };
         ports = [ ];
         image = "postgres";
         version = "14";
@@ -39,17 +43,12 @@ let
       }
     ])
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "atuin";
+  name = getDirname path;
   ports = 8888;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

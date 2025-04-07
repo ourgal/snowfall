@@ -1,10 +1,17 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   user = config.${namespace}.user.name;
   port = 27701;
-  name = "anki-sync-server";
+  name = getDirname path;
   value = {
     sops.secrets."${name}/password".owner = user;
     services = {
@@ -19,22 +26,11 @@ let
         ];
       };
       borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.anki}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

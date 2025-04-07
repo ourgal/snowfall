@@ -1,10 +1,17 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 4747;
   MusicFolder = "/var/lib/syncthing/music";
-  name = "gonic";
+  name = getDirname path;
   value = {
     services = {
       gonic = enabled // {
@@ -16,41 +23,31 @@ let
           playlists-path = "/var/lib/private/gonic/playlists";
         };
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.gonic}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
 
     systemd.tmpfiles.rules = [
-      "d ${config.services.gonic.settings.podcast-path} 0770 gonic gonic - -"
-      "d ${config.services.gonic.settings.playlists-path} 0770 gonic gonic - -"
+      "d ${config.services.gonic.settings.podcast-path} 0770 ${name} ${name} - -"
+      "d ${config.services.gonic.settings.playlists-path} 0770 ${name} ${name} - -"
     ];
 
-    users.groups.gonic = { };
+    users.groups.${name} = { };
 
-    users.users.gonic = {
+    users.users.${name} = {
       description = "Gonic Service User";
-      home = "/var/lib/gonic";
+      home = "/var/lib/${name}";
       createHome = true;
       isSystemUser = true;
-      group = "gonic";
+      group = name;
     };
 
     systemd.services.gonic.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

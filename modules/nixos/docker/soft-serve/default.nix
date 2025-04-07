@@ -6,13 +6,15 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   sshKeys = config.${namespace}.user.sshKeys.home;
   value =
     (arionProj {
       inherit cfg;
-      image = "charmcli/soft-serve";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       env = {
         SOFT_SERVE_INITIAL_ADMIN_KEYS = sshKeys;
       };
@@ -20,17 +22,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = cfg.ports;
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "soft-serve";
+  name = getDirname path;
   ports = [
     23232
     23231

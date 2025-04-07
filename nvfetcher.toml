@@ -538,17 +538,85 @@ fetch.github = "Benex254/FastAnime"
 src.container = "xhofe/alist-aria2"
 fetch.docker = "xhofe/alist-aria2"
 
+[docker-ariang]
+src.container = "leonismoe/ariang"
+fetch.docker = "leonismoe/ariang"
+
+[docker-cyberchef]
+src.container = "mpepping/cyberchef"
+fetch.docker = "mpepping/cyberchef"
+
+[docker-dufs]
+src.container = "sigoden/dufs"
+fetch.docker = "sigoden/dufs"
+
+[docker-e5]
+src.container = "hanhongyong/ms365-e5-renew-x"
+fetch.docker = "hanhongyong/ms365-e5-renew-x"
+
 [docker-flaresolverr]
 src.container = "flaresolverr/flaresolverr"
 fetch.docker = "flaresolverr/flaresolverr"
+
+[docker-freshrss]
+src.container = "linuxserver/freshrss"
+fetch.docker = "linuxserver/freshrss"
+
+[docker-jsonhero]
+src.container = "henryclw/jsonhero-web"
+fetch.docker = "henryclw/jsonhero-web"
+
+[docker-kavita]
+src.container = "linuxserver/kavita"
+fetch.docker = "linuxserver/kavita"
+
+[docker-lancommander]
+src.container = "lancommander/lancommander"
+fetch.docker = "lancommander/lancommander"
+
+[docker-memos]
+src.container = "neosmemo/memos"
+fetch.docker = "neosmemo/memos"
+
+[docker-miniflux]
+src.container = "miniflux/miniflux"
+fetch.docker = "miniflux/miniflux"
+
+[docker-pairdrop]
+src.container = "linuxserver/pairdrop"
+fetch.docker = "linuxserver/pairdrop"
+
+[docker-qd]
+src.container = "qdtoday/qd"
+fetch.docker = "qdtoday/qd"
+
+[docker-rsshub]
+src.container = "diygod/rsshub"
+fetch.docker = "diygod/rsshub"
+
+[docker-rustypaste]
+src.container = "orhunp/rustypaste"
+fetch.docker = "orhunp/rustypaste"
+
+[docker-siyuan]
+src.container = "b3log/siyuan"
+fetch.docker = "b3log/siyuan"
+
+[docker-soft-serve]
+src.container = "charmcli/soft-serve"
+fetch.docker = "charmcli/soft-serve"
 
 [docker-subconverter]
 src.container = "asdlokj1qpi23/subconverter"
 fetch.docker = "asdlokj1qpi23/subconverter"
 
-[docker-qd]
-src.container = "qdtoday/qd"
-fetch.docker = "qdtoday/qd"
+[docker-syncthing]
+src.container = "linuxserver/syncthing"
+fetch.docker = "linuxserver/syncthing"
+
+[docker-vaultwarden]
+src.container = "vaultwarden/server"
+fetch.docker = "vaultwarden/server"
 
 [tp]
 src.github = "minefuto/tp"
@@ -1092,10 +1160,6 @@ fetch.github = "tim-janik/jj-fzf"
 [slashslash-fish]
 src.git = "https://github.com/ourgal/slashslash.fish"
 fetch.github = "ourgal/slashslash.fish"
-
-[docker-lancommander]
-src.container = "lancommander/lancommander"
-fetch.docker = "lancommander/lancommander"
 
 [stardict-cn-dicts]
 src.git = "https://github.com/shanyouli/stardict"

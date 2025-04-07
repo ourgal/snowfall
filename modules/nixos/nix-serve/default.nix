@@ -1,26 +1,31 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    domains
+    ;
   port = 50000;
-  name = "nix-serve";
+  name = getDirname path;
   value = {
     environment.etc = {
       "nix-serve/secret".source = ./secret;
     };
-    services.nix-serve = enabled // {
-      inherit port;
-      secretKeyFile = "/etc/nix-serve/secret";
-      package = pkgs.nix-serve-ng;
+    services = {
+      nix-serve = enabled // {
+        inherit port;
+        secretKeyFile = "/etc/nix-serve/secret";
+        package = pkgs.nix-serve-ng;
+      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

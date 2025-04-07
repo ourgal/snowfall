@@ -87,4 +87,12 @@ in
       encode zstd gzip
     '';
   };
+
+  mkCaddyProxy = domain: port: {
+    virtualHosts = {
+      "http://${domain}".extraConfig = ''
+        reverse_proxy http://localhost:${toString port}
+      '';
+    };
+  };
 }

@@ -6,12 +6,14 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "xhofe/alist-aria2";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       config = "/opt/alist/data";
       env = {
         PUID = "0";
@@ -21,17 +23,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "alist";
+  name = getDirname path;
   ports = 5244;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

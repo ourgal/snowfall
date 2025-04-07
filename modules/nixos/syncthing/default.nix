@@ -11,6 +11,9 @@ let
     enabled
     mkSyncthingFolders
     domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
     ;
   inherit (lib.${namespace}.settings.servers) syncthing;
   inherit (lib.${namespace}.settings) desktops;
@@ -18,11 +21,11 @@ let
   inherit (lib.${namespace}.syncthing) devices folders;
 
   isDesktop = builtins.elem host desktops;
-  user = if isDesktop then config.${namespace}.user.name else "syncthing";
-  group = if isDesktop then "users" else "syncthing";
-  dataDir = if isDesktop then "/home/${user}/.local/share/syncthing" else "/var/lib/syncthing";
+  user = if isDesktop then config.${namespace}.user.name else name;
+  group = if isDesktop then "users" else name;
+  dataDir = if isDesktop then "/home/${user}/.local/share/${name}" else "/var/lib/${name}";
   port = 8384;
-  name = "syncthing";
+  name = getDirname path;
   guiAddress = "0.0.0.0:${toString port}";
   updateConfig = pkgs.writers.writeBash "update-syncthing-config" ''
     set -efu
@@ -46,39 +49,33 @@ let
     curl -X PUT -d '{"path":"${dataDir}"}' http://${guiAddress}/rest/config/defaults/folder
   '';
   value = {
-    sops.secrets."syncthing/${host}/key".owner = user;
-    sops.secrets."syncthing/${host}/cert".owner = user;
-    services.syncthing = enabled // {
-      inherit user group guiAddress;
-      key = config.sops.secrets."syncthing/${host}/key".path;
-      cert = config.sops.secrets."syncthing/${host}/cert".path;
-      inherit dataDir;
-      configDir = if isDesktop then "/home/${user}/.config/syncthing" else "${dataDir}/.config/syncthing";
-      extraFlags = [ "--no-default-folder" ];
-      openDefaultPorts = true;
-      settings = {
-        gui = {
-          insecureAdminAccess = true;
+    sops.secrets."${name}/${host}/key".owner = user;
+    sops.secrets."${name}/${host}/cert".owner = user;
+    services = {
+      syncthing = enabled // {
+        inherit user group guiAddress;
+        key = config.sops.secrets."${name}/${host}/key".path;
+        cert = config.sops.secrets."${name}/${host}/cert".path;
+        inherit dataDir;
+        configDir = if isDesktop then "/home/${user}/.config/${name}" else "${dataDir}/.config/${name}";
+        extraFlags = [ "--no-default-folder" ];
+        openDefaultPorts = true;
+        settings = {
+          gui = {
+            insecureAdminAccess = true;
+          };
+          options = {
+            relaysEnabled = true;
+            natEnabled = true;
+            localAnnounceEnabled = true;
+            localAnnouncePort = 21027;
+            urAccepted = -1;
+          };
+          devices = lib.attrsets.filterAttrs (n: _: n != host) devices;
+          folders = mkSyncthingFolders { inherit dataDir host folders; };
         };
-        options = {
-          relaysEnabled = true;
-          natEnabled = true;
-          localAnnounceEnabled = true;
-          localAnnouncePort = 21027;
-          urAccepted = -1;
-        };
-        devices = lib.attrsets.filterAttrs (n: _: n != host) devices;
-        folders = mkSyncthingFolders { inherit dataDir host folders; };
       };
-    };
-
-    services.caddy = lib.mkIf (builtins.elem host syncthing) {
-      enable = true;
-      virtualHosts = {
-        "http://${domains.syncthing}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
-      };
+      caddy = lib.mkIf (builtins.elem host syncthing) mkCaddyProxy domains.${name} port;
     };
 
     systemd = {
@@ -102,14 +99,9 @@ let
 
     users.users.${user}.extraGroups = if isDesktop then [ "syncthing" ] else [ ];
 
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

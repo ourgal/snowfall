@@ -11,10 +11,12 @@ let
     _sources
     ip
     domain
+    getDirname
+    mkFireholRule
     ;
   inherit (config.${namespace}.user) duckdns;
   port = 53;
-  name = "mosdns";
+  name = getDirname path;
   geoLists =
     pkgs.runCommand "mosdns_config"
       {
@@ -643,14 +645,10 @@ let
       allowedTCPPorts = [ port ];
       allowedUDPPorts = [ port ];
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
+      udp = port;
     };
   };
   path = ./.;

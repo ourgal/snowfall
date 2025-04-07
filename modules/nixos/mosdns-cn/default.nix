@@ -13,10 +13,12 @@ let
     domain
     mkOpt'
     cfgNixos
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   redisPort = 6379;
-  name = "mosdns-cn";
+  name = getDirname path;
   geoip = pkgs._sources.v2ray-rules-dat-geoip.src;
   geosite = pkgs._sources.v2ray-rules-dat-geosite.src;
   configFile = pkgs.writeText "config.yaml" (
@@ -109,17 +111,10 @@ let
       allowedTCPPorts = [ cfg.port ];
       allowedUDPPorts = [ cfg.port ];
     };
-    ${namespace} = {
-      user.ports = [
-        cfg.port
-        redisPort
-      ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = cfg.port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = cfg.port;
+      udp = cfg.port;
     };
   };
   extraOpts = {

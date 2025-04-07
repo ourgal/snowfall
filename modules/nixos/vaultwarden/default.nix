@@ -1,9 +1,15 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    ;
   port = 8222;
-  name = "vaultwarden";
+  name = getDirname path;
   value = {
     sops.secrets."${name}/adminToken".owner = name;
     services = {
@@ -22,7 +28,7 @@ let
         enabled
         // {
           virtualHosts = {
-            "http://${domains.vaultwarden}".extraConfig = ''
+            "http://${domains.${name}}".extraConfig = ''
               reverse_proxy http://localhost:${toString port}
             '';
             "${name}.${domain}.duckdns.org".extraConfig = ''
@@ -34,14 +40,9 @@ let
           };
         };
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

@@ -15,6 +15,7 @@ let
     toJSON
     isFunction
     listToAttrs
+    isInt
     ;
 in
 rec {
@@ -95,6 +96,14 @@ rec {
       ret = lib.attrsets.getAttrFromPath pathSplit root;
     in
     ret;
+
+  getDirname =
+    path:
+    let
+      currentDir = toString path;
+      pathSplit = lib.strings.splitString "/" currentDir;
+    in
+    lib.lists.last pathSplit;
 
   mkModuleOpt =
     {
@@ -471,4 +480,49 @@ rec {
       config = mkIf cfg.enable value;
     };
   # }}}
+
+  mkFireholRule =
+    {
+      name,
+      tcp ? [ ],
+      udp ? [ ],
+    }:
+    let
+      tcp' = if isInt tcp then [ tcp ] else tcp;
+      udp' = if isInt udp then [ udp ] else udp;
+      convertPorts = foldl' (
+        acc: v:
+        if isInt v then
+          acc // { tcp = acc.tcp ++ [ v ]; }
+        else if isAttrs v then
+          acc // { tcpRange = acc.tcpRange ++ [ v ]; }
+        else
+          throw "not supported type"
+      );
+      tcpPorts = convertPorts {
+        tcp = [ ];
+        tcpRange = [ ];
+      } tcp';
+      udpPorts = convertPorts {
+        udp = [ ];
+        udpRange = [ ];
+      } udp';
+      allPorts =
+        let
+          flat = foldl' (acc: v: acc ++ lib.range v.from v.to) [ ];
+        in
+        lib.lists.unique (
+          tcpPorts.tcp ++ udpPorts.udp ++ (flat tcpPorts.tcpRange) ++ (flat udpPorts.udpRange)
+        );
+    in
+    {
+      user.ports = allPorts;
+      firehol.services = [
+        {
+          inherit name;
+          inherit (tcpPorts) tcp tcpRange;
+          inherit (udpPorts) udp udpRange;
+        }
+      ];
+    };
 }

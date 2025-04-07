@@ -1,9 +1,16 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 4533;
-  name = "navidrome";
+  name = getDirname path;
   MusicFolder = "${config.services.syncthing.dataDir}/music";
   value = {
     services = {
@@ -14,36 +21,15 @@ let
           Port = port;
         };
       };
-      caddy = enabled // {
-        virtualHosts =
-          let
-            inherit (config.${namespace}.user.duckdns) token domain;
-          in
-          {
-            "http://${domains.navidrome}".extraConfig = ''
-              reverse_proxy http://localhost:${toString port}
-            '';
-            "navidrome.${domain}.duckdns.org".extraConfig = ''
-              tls {
-                  dns duckdns ${token}
-              }
-              reverse_proxy http://localhost:${toString port}
-            '';
-          };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
       borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };
     systemd.services.navidrome.serviceConfig = {
       SupplementaryGroups = [ "syncthing" ];
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

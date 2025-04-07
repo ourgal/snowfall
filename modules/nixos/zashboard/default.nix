@@ -3,13 +3,14 @@ let
   inherit (args) namespace lib pkgs;
   inherit (lib.${namespace})
     nixosModule
-    enabled
     domains
     mkFileServer
+    getDirname
     ;
+  name = getDirname path;
   value = {
-    services.caddy = enabled // {
-      virtualHosts = mkFileServer domains.zashboard "${pkgs.${namespace}.zashboard}";
+    services.caddy = {
+      virtualHosts = mkFileServer domains.${name} "${pkgs.${namespace}.${name}}";
     };
   };
   path = ./.;

@@ -6,7 +6,14 @@ let
     config
     pkgs
     ;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   inherit (config.${namespace}.user) host;
   cfg = config.services.soft-serve;
   format = pkgs.formats.yaml { };
@@ -14,7 +21,7 @@ let
   gitPort = 9418;
   httpPort = 23232;
   statsPort = 23233;
-  name = "soft-serve";
+  name = getDirname path;
   configFile = format.generate "config.yaml" cfg.settings;
   value = {
     services = {
@@ -59,13 +66,7 @@ let
           initial_admin_keys = builtins.attrValues config.${namespace}.user.sshKeys;
         };
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.soft-serve}".extraConfig = ''
-            reverse_proxy http://localhost:${toString httpPort}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} httpPort;
       borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
     };
     networking.firewall = {
@@ -78,23 +79,13 @@ let
     };
     systemd.tmpfiles.rules = [ "L+ /var/lib/private/soft-serve/config.yaml - - - - ${configFile}" ];
     systemd.services.soft-serve.environment._reloadConfig = "${configFile}";
-    ${namespace} = {
-      user.ports = [
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = [
         sshPort
         httpPort
         gitPort
         statsPort
-      ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = [
-            sshPort
-            httpPort
-            gitPort
-            statsPort
-          ];
-        }
       ];
     };
   };

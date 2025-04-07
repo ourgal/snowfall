@@ -14,7 +14,8 @@ let
     switch
     mkDockerProxyDuckdns
     ip
-    domains
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
@@ -29,7 +30,7 @@ let
     80
     443
   ];
-  name = "caddy";
+  name = getDirname path;
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
@@ -78,22 +79,13 @@ let
       };
   value = {
     services.caddy = enabled // {
-      virtualHosts = virtualHosts // {
-        "http://${domains.harmonia}".extraConfig = ''
-          reverse_proxy http://${if config.services.resolved.enable then "home.local" else ip.home}:50000
-        '';
-      };
+      virtualHosts = virtualHosts;
       inherit package;
     };
     networking.firewall.allowedTCPPorts = ports;
-    ${namespace} = {
-      user.ports = ports;
-      firehol.services = [
-        {
-          inherit name;
-          tcp = ports;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = ports;
     };
   };
   extraOpts = {

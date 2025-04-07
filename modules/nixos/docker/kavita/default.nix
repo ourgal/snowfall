@@ -6,12 +6,14 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "linuxserver/kavita";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       config = "/config";
       nativeVolumes = [
         "${cfg.mount}/books:/books:ro"
@@ -20,17 +22,12 @@ let
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "kavita";
+  name = getDirname path;
   ports = 5000;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

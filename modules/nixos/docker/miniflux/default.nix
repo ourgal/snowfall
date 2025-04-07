@@ -6,6 +6,8 @@ let
     cfgNixos
     arionProjs
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   dbPass = lib.strings.fileContents ./dbPass.key;
@@ -14,7 +16,7 @@ let
     (arionProjs [
       {
         inherit cfg;
-        image = "miniflux/miniflux";
+        inherit (lib.${namespace}.sources."docker-${name}") src;
         config = "/config";
         env = {
           DATABASE_URL = "postgres://miniflux:${dbPass}@${cfg.name}_db/miniflux?sslmode=disable";
@@ -29,6 +31,7 @@ let
       }
       {
         inherit cfg;
+        src = { };
         ports = [ ];
         image = "postgres";
         version = "15";
@@ -38,17 +41,12 @@ let
       }
     ])
     // {
-      ${namespace} = {
-        user.ports = [ cfg.ports ];
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "miniflux";
+  name = getDirname path;
   ports = 8080;
   extraOpts = dockerOpts { inherit name ports; };
   path = ./.;

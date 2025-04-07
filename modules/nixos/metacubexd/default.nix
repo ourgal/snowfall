@@ -1,14 +1,9 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace})
-    nixosModule
-    enabled
-    domains
-    mkFileServer
-    ;
+  inherit (lib.${namespace}) nixosModule domains mkFileServer;
   value = {
-    services.caddy = enabled // {
+    services.caddy = {
       virtualHosts = mkFileServer domains.metacubexd "${pkgs.metacubexd}";
     };
   };

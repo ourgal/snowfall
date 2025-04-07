@@ -6,29 +6,26 @@ let
     cfgNixos
     arionProj
     dockerOpts
+    getDirname
+    mkFireholRule
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
-      image = "linuxserver/syncthing";
+      inherit (lib.${namespace}.sources."docker-${name}") src;
       config = "/config";
       volumes = "sync:/sync";
       hostname = config.dot.user.host;
       containerPorts = ports;
     })
     // {
-      ${namespace} = {
-        user.ports = cfg.ports;
-        firehol.services = [
-          {
-            inherit name;
-            tcp = cfg.ports;
-          }
-        ];
+      ${namespace} = mkFireholRule {
+        inherit name;
+        tcp = cfg.ports;
       };
     };
-  name = "syncthing";
+  name = getDirname path;
   ports = [
     8384
     22000

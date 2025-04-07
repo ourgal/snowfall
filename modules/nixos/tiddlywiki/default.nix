@@ -1,30 +1,26 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule domains enabled;
+  inherit (lib.${namespace})
+    nixosModule
+    domains
+    enabled
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 3456;
-  name = "tiddlywiki";
+  name = getDirname path;
   value = {
     services = {
       tiddlywiki = enabled // {
         listenOptions = { inherit port; };
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.tiddlywiki}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

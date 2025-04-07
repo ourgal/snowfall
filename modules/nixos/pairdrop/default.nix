@@ -1,9 +1,15 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 3000;
-  name = "pairdrop";
+  name = getDirname path;
   value = {
     systemd.services.pairdrop = {
       description = "Pairdrop service";
@@ -17,21 +23,10 @@ let
         PORT = toString port;
       };
     };
-    services.caddy = enabled // {
-      virtualHosts = {
-        "http://${domains.pairdrop}".extraConfig = ''
-          reverse_proxy http://localhost:${toString port}
-        '';
-      };
-    };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    services.caddy = mkCaddyProxy domains.${name} port;
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;

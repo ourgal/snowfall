@@ -1,36 +1,32 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled domains;
+  inherit (lib.${namespace})
+    nixosModule
+    enabled
+    domains
+    getDirname
+    mkFireholRule
+    mkCaddyProxy
+    ;
   port = 8083;
-  name = "calibre-web";
+  name = getDirname path;
   value = {
     services = {
       calibre-web = enabled // {
         openFirewall = true;
         listen.port = port;
       };
-      caddy = enabled // {
-        virtualHosts = {
-          "http://${domains.calibre-web}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-        };
-      };
+      caddy = mkCaddyProxy domains.${name} port;
     };
     systemd.services.calibre-web = {
       serviceConfig = {
         SupplementaryGroups = [ "syncthing" ];
       };
     };
-    ${namespace} = {
-      user.ports = [ port ];
-      firehol.services = [
-        {
-          inherit name;
-          tcp = port;
-        }
-      ];
+    ${namespace} = mkFireholRule {
+      inherit name;
+      tcp = port;
     };
   };
   path = ./.;
