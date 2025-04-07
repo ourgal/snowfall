@@ -21,7 +21,10 @@ let
           Port = port;
         };
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
       borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };
     systemd.services.navidrome.serviceConfig = {

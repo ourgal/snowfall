@@ -17,7 +17,10 @@ let
         openFirewall = true;
         listen.port = port;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     systemd.services.calibre-web = {
       serviceConfig = {

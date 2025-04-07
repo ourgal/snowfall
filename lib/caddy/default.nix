@@ -88,11 +88,17 @@ in
     '';
   };
 
-  mkCaddyProxy = domain: port: {
-    virtualHosts = {
-      "http://${domain}".extraConfig = ''
-        reverse_proxy http://localhost:${toString port}
-      '';
+  mkCaddyProxy =
+    {
+      domain,
+      port,
+      host ? "localhost",
+    }:
+    {
+      virtualHosts = {
+        "http://${domain}".extraConfig = ''
+          reverse_proxy http://${host}:${toString port}
+        '';
+      };
     };
-  };
 }

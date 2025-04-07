@@ -17,7 +17,10 @@ let
         openFirewall = true;
         package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     ${namespace} = mkFireholRule {
       inherit name;

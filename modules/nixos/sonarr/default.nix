@@ -16,7 +16,10 @@ let
       sonarr = enabled // {
         openFirewall = true;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
       borgmatic.settings.source_directories = [ "/var/lib/${name}/.config/NzbDrone/Backups" ];
     };
     systemd.services.sonarr.serviceConfig = {

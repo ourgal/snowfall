@@ -23,7 +23,10 @@ let
         PORT = toString port;
       };
     };
-    services.caddy = mkCaddyProxy domains.${name} port;
+    services.caddy = mkCaddyProxy {
+      domain = domains.${name};
+      inherit port;
+    };
     ${namespace} = mkFireholRule {
       inherit name;
       tcp = port;

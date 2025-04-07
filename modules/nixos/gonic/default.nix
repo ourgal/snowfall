@@ -23,7 +23,10 @@ let
           playlists-path = "/var/lib/private/gonic/playlists";
         };
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
 
     systemd.tmpfiles.rules = [

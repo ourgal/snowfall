@@ -116,7 +116,10 @@ let
         SERVER__ADDRESS = "0.0.0.0:${toString port}";
       };
     };
-    services.caddy = mkCaddyProxy domains.${name} port;
+    services.caddy = mkCaddyProxy {
+      domain = domains.${name};
+      inherit port;
+    };
 
     users = {
       users.${user} = {

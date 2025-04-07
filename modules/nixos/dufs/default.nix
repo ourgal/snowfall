@@ -8,7 +8,6 @@ let
     ;
   inherit (lib.${namespace})
     nixosModule
-    enabled
     domains
     getDirname
     mkFireholRule
@@ -33,7 +32,10 @@ let
         inherit User ExecStart;
       };
     };
-    services.caddy = mkCaddyProxy domains.${name} port;
+    services.caddy = mkCaddyProxy {
+      domain = domains.${name};
+      inherit port;
+    };
     ${namespace} = mkFireholRule {
       inherit name;
       tcp = port;

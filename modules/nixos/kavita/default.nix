@@ -21,7 +21,10 @@ let
         };
         tokenKeyFile = config.sops.secrets."${name}/token".path;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
 
     systemd.services.kavita = {

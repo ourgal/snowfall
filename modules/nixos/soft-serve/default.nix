@@ -66,7 +66,10 @@ let
           initial_admin_keys = builtins.attrValues config.${namespace}.user.sshKeys;
         };
       };
-      caddy = mkCaddyProxy domains.${name} httpPort;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        port = httpPort;
+      };
       borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
     };
     networking.firewall = {

@@ -8,8 +8,11 @@ let
     domains
     ip
     mkFireholRule
+    mkOpt'
+    cfgNixos
+    mkCaddyProxy
     ;
-  port = 50000;
+  cfg = cfgNixos config.${namespace} ./.;
   name = getDirname path;
   value = {
     environment.etc = {
@@ -18,27 +21,35 @@ let
     services = {
       harmonia = enabled // {
         settings = {
-          bind = "[::]:${toString port}";
+          bind = "[::]:${toString cfg.port}";
           workers = 4;
           max_connection_rate = 256;
           priority = 30;
         };
         signKeyPaths = [ "/etc/${name}/secret" ];
       };
-      caddy = {
-        virtualHosts = {
-          "http://${domains.${name}}".extraConfig = ''
-            reverse_proxy http://${if config.services.resolved.enable then "home.local" else ip.home}:50000
-          '';
-        };
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit (cfg) port;
+        host = if config.services.resolved.enable then "home.local" else ip.home;
       };
     };
     ${namespace} = mkFireholRule {
       inherit name;
-      tcp = port;
+      tcp = cfg.port;
     };
   };
+  extraOpts = {
+    port = mkOpt' lib.types.int 50000;
+  };
   path = ./.;
-  _args = { inherit value path args; };
+  _args = {
+    inherit
+      value
+      path
+      args
+      extraOpts
+      ;
+  };
 in
 nixosModule _args

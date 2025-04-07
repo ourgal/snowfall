@@ -16,7 +16,10 @@ let
       jellyfin = enabled // {
         openFirewall = true;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
       borgmatic.settings = {
         source_directories = [ "/var/lib/${name}" ];
         exclude_patterns = [ "/var/lib/${name}/metadata" ];

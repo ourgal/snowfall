@@ -21,7 +21,10 @@ let
         secretKeyFile = "/etc/nix-serve/secret";
         package = pkgs.nix-serve-ng;
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     ${namespace} = mkFireholRule {
       inherit name;

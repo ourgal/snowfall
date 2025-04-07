@@ -22,7 +22,10 @@ let
           };
         };
       };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     ${namespace} = mkFireholRule {
       inherit name;

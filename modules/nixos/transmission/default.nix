@@ -38,7 +38,10 @@ let
             ratio-limit-enabled = true;
           };
         };
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     users.users.${user}.extraGroups = [ name ];
     systemd.tmpfiles.rules = [

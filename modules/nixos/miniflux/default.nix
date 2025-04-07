@@ -23,7 +23,10 @@ let
         adminCredentialsFile = config.sops.secrets."${name}/adminCredentialsFile".path;
       };
       postgresqlBackup.databases = [ name ];
-      caddy = mkCaddyProxy domains.${name} port;
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     users = {
       users.${user} = {
