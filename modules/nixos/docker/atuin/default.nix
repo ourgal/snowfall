@@ -15,7 +15,7 @@ let
     (arionProjs [
       {
         inherit cfg;
-        inherit (lib.${namespace}.sources."docker-${name}") src;
+        src = { };
         image = "atuinsh/atuin";
         imageHost = "ghcr.io";
         env = {
