@@ -49,9 +49,6 @@ in
     immich = enabled;
     postgres-update = disabled;
     yacd = enabled;
-    cyberchef = enabled;
-    dokuwiki = enabled;
-    tiddlywiki = enabled;
     komga = enabled;
     postgresqlBackup = enabled;
     docker =
