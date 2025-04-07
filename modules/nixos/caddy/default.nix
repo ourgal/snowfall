@@ -18,7 +18,13 @@ let
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
-  host = ip.brix;
+  inherit (config.${namespace}) podman;
+  host =
+    let
+      default = ip.brix;
+      inherit (config.${namespace}.user) host;
+    in
+    if (default == ip.${host}) then "localhost" else default;
   ports = [
     80
     443
@@ -44,6 +50,10 @@ let
   virtualHosts =
     if cfg.xcaddy.enable then
       (mkDockerProxy { inherit docker host; })
+      // (mkDockerProxy {
+        inherit host;
+        docker = podman;
+      })
       // (mkDockerProxyDuckdns {
         inherit
           docker
@@ -53,7 +63,11 @@ let
           ;
       })
     else
-      mkDockerProxy { inherit docker host; };
+      (mkDockerProxy { inherit docker host; })
+      // (mkDockerProxy {
+        inherit host;
+        docker = podman;
+      });
   package =
     if cfg.xcaddy.enable then
       xcaddy

@@ -66,12 +66,10 @@ in
       enabled
       // {
         subconverter = enabled // {
-          ports = 25500;
           inherit nfs;
           inherit (sources.docker-subconverter) version;
         };
         alist = enabled // {
-          ports = 5244;
           inherit nfs;
           inherit (sources.docker-alist) version;
           duckdns = enabled;
@@ -82,6 +80,7 @@ in
           inherit (sources.docker-qd) version;
         };
       };
+    podman = disabled // { };
   };
 
   snowfallorg.users.${user}.home = disabled;
