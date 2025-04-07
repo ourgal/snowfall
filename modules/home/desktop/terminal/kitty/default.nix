@@ -11,7 +11,6 @@ args.module (
       };
       settings = {
         copy_on_select = "yes";
-        allow_remote_contorl = "yes";
         listen_on = "unix:/tmp/kitty";
         enabled_layouts = "splits";
         background_opacity = "0.8";
