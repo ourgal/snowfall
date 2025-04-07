@@ -51,6 +51,7 @@ in
     yacd = enabled;
     komga = enabled;
     postgresqlBackup = enabled;
+    memos = enabled;
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;

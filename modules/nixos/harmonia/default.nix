@@ -32,7 +32,7 @@ let
     };
   };
   extraOpts = {
-    port = mkOpt' lib.types.int 50000;
+    port = mkOpt' lib.types.port 50000;
   };
   path = ./.;
   _args = {

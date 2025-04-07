@@ -37,6 +37,7 @@ let
     "calibre-web"
     "komga"
     "nix-serve"
+    "memos"
     # keep-sorted end
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
