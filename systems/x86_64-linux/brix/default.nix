@@ -5,12 +5,7 @@
   ...
 }:
 let
-  inherit (lib.${namespace})
-    enabled
-    disabled
-    sources
-    ip
-    ;
+  inherit (lib.${namespace}) enabled disabled ip;
   user = config.${namespace}.user.name;
 in
 {
@@ -67,17 +62,14 @@ in
       // {
         subconverter = enabled // {
           inherit nfs;
-          inherit (sources.docker-subconverter) version;
         };
         alist = enabled // {
           inherit nfs;
-          inherit (sources.docker-alist) version;
           duckdns = enabled;
         };
         qd = enabled // {
           ports = 8923;
           inherit nfs;
-          inherit (sources.docker-qd) version;
         };
       };
     podman = disabled // { };
