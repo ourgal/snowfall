@@ -19,6 +19,7 @@ let
     environment.etc = {
       "firehol/firehol.conf".text =
         let
+          lan = "eno1";
           mkRule =
             type: services:
             let
@@ -26,13 +27,27 @@ let
             in
             "${type} \"${concatStringsSep " " services'}\" accept";
           myServices = foldl' (acc: v: acc + "\n" + (lib.${namespace}.firehol.mkService v)) "" cfg.services;
+          dockerNetworks =
+            if config.${namespace}.docker.enable then
+              ''
+                docker_bridge docker0 172.17.0.0/16
+                docker_bridge br-+ 172.18.0.0/16
+
+                containers="docker0,br-+"
+                interface "''${containers}" container
+                    policy accept
+              ''
+            else
+              "";
         in
         ''
           version 6
 
           ${myServices}
 
-          interface eno1 home
+          ${dockerNetworks}
+
+          interface ${lan} home
               policy reject
               ${mkRule "server" (
                 cfg.services
@@ -49,6 +64,7 @@ let
     };
     systemd.services.firehol = {
       description = "FireHol a firewall for humans";
+      environment._reloadConfig = config.environment.etc."firehol/firehol.conf".source;
       path = [ pkgs.iptables ] ++ lib.optional config.services.nfs.server.enable pkgs.rpcbind;
       partOf = lib.optional config.services.nfs.server.enable "nfs-server.service";
       after = [
@@ -72,6 +88,7 @@ let
         ExecReload = "${pkgs.firehol}/bin/firehol start";
       };
     };
+    environment.systemPackages = [ pkgs.iptables ];
   };
   extraOpts =
     let
