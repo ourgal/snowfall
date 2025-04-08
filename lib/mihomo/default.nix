@@ -58,14 +58,12 @@ in
         "google-cn"
         "games-cn"
         "ai"
-        "networktest"
         "proxy"
         "tld-cn"
         "cn"
       ])
       // (go "ipcidr" [
         "privateip"
-        "cnip"
         "telegramip"
       ]);
     proxyGroups =
@@ -106,11 +104,6 @@ in
           proxies = subsTags ++ freeSubsTags ++ countriesTags ++ priceTags ++ directTag;
         };
         mainTag = [ main.name ];
-        networktest = {
-          name = "📈 网络测试";
-          type = "select";
-          proxies = directTag ++ countriesTags ++ priceTags ++ subsTags ++ freeSubsTags;
-        };
         ai = {
           name = "🤖 人工智能";
           type = "select";

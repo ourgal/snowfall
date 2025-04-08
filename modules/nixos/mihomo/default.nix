@@ -53,8 +53,8 @@ let
       use-hosts = true;
       ipv6 = true;
       default-nameserver = [
-        "tls://223.5.5.5"
-        "tls://223.6.6.6"
+        "223.5.5.5"
+        "114.114.114.114"
       ];
       enhanced-mode = "fake-ip";
       fake-ip-range = fakeIpSubnet;
@@ -182,13 +182,16 @@ let
         "+.gcloudsdk.com"
         "rule-set:tld-cn"
         "rule-set:cn"
-        "rule-set:cnip"
       ];
       nameserver-policy = {
         "+.googleapis.cn" = [
           "https://1.0.0.1/dns-query"
           "https://8.8.4.4/dns-query"
           "https://doh.opendns.com/dns-query"
+        ];
+        "+.jsdelivr.net" = [
+          "223.5.5.5"
+          "114.114.114.114"
         ];
       };
       nameserver = [
@@ -252,7 +255,6 @@ let
         "RULE-SET,${RuleProviders.tld-cn.tag},${proxyGroups.private.name}"
         "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
         "RULE-SET,${RuleProviders.privateip.tag},${proxyGroups.direct.name},no-resolve"
-        "RULE-SET,${RuleProviders.cnip.tag},${proxyGroups.privateip.name}"
         "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
         "MATCH,🐟 漏网之鱼"
       ];
