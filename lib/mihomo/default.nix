@@ -7,7 +7,7 @@ let
     behavior = "domain";
     format = "mrs";
     path = "./rules/${name}.mrs";
-    url = "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/${name}.mrs";
+    url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/${name}.mrs";
     interval = 86400;
   };
   mkProxyGroup = name: filter: {
