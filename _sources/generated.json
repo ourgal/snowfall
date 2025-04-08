@@ -285,12 +285,12 @@
             "name": null,
             "owner": "aviator-co",
             "repo": "av",
-            "rev": "v0.1.6",
-            "sha256": "sha256-nUsa+UgTeLNXrtD+/b9goYqLbGz1k44Qnvq6ZBI2sXg=",
+            "rev": "v0.1.7",
+            "sha256": "sha256-rCyNBFj19I/KR5E8gPJNrIzgFHqmqTgalv0IDK/WnJU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.6"
+        "version": "v0.1.7"
     },
     "awesome-freedesktop": {
         "cargoLocks": null,
@@ -1029,11 +1029,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-496520b07ac250fd6e9ba0ff5b1ad872bb7687cc/Cargo.lock",
+                "./dela-2f9ab0e5bb2bd88c3d06845bb89121dbce287a38/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-04-06",
+        "date": "2025-04-08",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1045,12 +1045,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "496520b07ac250fd6e9ba0ff5b1ad872bb7687cc",
-            "sha256": "sha256-Lf4UzPxIlm+aAao0KobB9aTA7xfzrfg5NkywDw7GeeE=",
+            "rev": "2f9ab0e5bb2bd88c3d06845bb89121dbce287a38",
+            "sha256": "sha256-CmcL76Xmcdtf+EB9M7ZQLsG+45hfYpuZX6qmZ+aUe4Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "496520b07ac250fd6e9ba0ff5b1ad872bb7687cc"
+        "version": "2f9ab0e5bb2bd88c3d06845bb89121dbce287a38"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -1307,11 +1307,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:c26647efda507f5ff1addc7e99d91b7db48b8601a41ab2c03a885ad32d336001",
+            "imageDigest": "sha256:f587dd38c7e079de31accb5bb1ff6a2e64b585e9b29236618606c855faabe368",
             "imageName": "linuxserver/kavita",
             "imageTag": "0.8.5",
             "os": null,
-            "sha256": "sha256-sGoRZP98f6JGZ5CkFhS60uG5X3Ts6tP/TzuExQ2R7PE=",
+            "sha256": "sha256-ADajgBhdGjmX8s2Ys310NHYwlxDMksUxCc+HytEOrFU=",
             "tlsVerify": null
         },
         "version": "0.8.5"
@@ -1467,14 +1467,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:748d0633dc37dc72cbc827248cd51f416221e57bda1be467037e8afbb4de44c0",
+            "imageDigest": "sha256:00504b3704d6a697040b700fc42c1c1b163292215d1a4b118b696545654de192",
             "imageName": "b3log/siyuan",
-            "imageTag": "v3.1.26",
+            "imageTag": "v3.1.27",
             "os": null,
-            "sha256": "sha256-Ar0pZpCVTYwu2WCc5v7KC7dGxkGzO08mk3uH4Zdb6cc=",
+            "sha256": "sha256-H68kXBsICPzIXHnZExyYuesL1ItLm248GBpJqY9prOE=",
             "tlsVerify": null
         },
-        "version": "v3.1.26"
+        "version": "v3.1.27"
     },
     "docker-soft-serve": {
         "cargoLocks": null,
@@ -1558,7 +1558,7 @@
     },
     "douyin-downloader": {
         "cargoLocks": null,
-        "date": "2025-03-24",
+        "date": "2025-04-08",
         "extract": null,
         "name": "douyin-downloader",
         "passthru": null,
@@ -1570,12 +1570,12 @@
             "name": null,
             "owner": "jiji262",
             "repo": "douyin-downloader",
-            "rev": "b8b8363214d012e2eda8a47f689d5ddb9c594dc6",
-            "sha256": "sha256-Fnct2T/ZjF6pM5T60d1oud3xDUXn8LFj1tAO++IIOOk=",
+            "rev": "6b23437df7e77910e92a8d76898b2c66bf9095fa",
+            "sha256": "sha256-Hthc3OQ+IC7IIwZbAlYM0HtbY3LI0zg40Q7TgKwe4vk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b8b8363214d012e2eda8a47f689d5ddb9c594dc6"
+        "version": "6b23437df7e77910e92a8d76898b2c66bf9095fa"
     },
     "downdoc": {
         "cargoLocks": null,
@@ -4452,7 +4452,7 @@
     },
     "qman": {
         "cargoLocks": null,
-        "date": "2025-04-02",
+        "date": "2025-04-07",
         "extract": null,
         "name": "qman",
         "passthru": null,
@@ -4464,12 +4464,12 @@
             "name": null,
             "owner": "plp13",
             "repo": "qman",
-            "rev": "4950ebcb8ee1ac78a21dc45dada9110409236236",
-            "sha256": "sha256-K3WuDUQrRNTOuqCU8VPi9+9BGfWWUIkKb7a9F/gqtzs=",
+            "rev": "7fc468b267f28bad6424f1d84c34c1b4b3e99e89",
+            "sha256": "sha256-ruZKayoeau1W/Qz8KYEDk+omNp4gUWh0HHmbj4yI7vU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "4950ebcb8ee1ac78a21dc45dada9110409236236"
+        "version": "7fc468b267f28bad6424f1d84c34c1b4b3e99e89"
     },
     "quartz": {
         "cargoLocks": null,
@@ -5064,11 +5064,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-246b5724543c096d6b5f87809e2991195385f29a/Cargo.lock",
+                "./simple-completion-language-server-53e882e624d057a69d339b6349ca2159443903cb/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-04-01",
+        "date": "2025-04-08",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -5080,12 +5080,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "246b5724543c096d6b5f87809e2991195385f29a",
-            "sha256": "sha256-zgQPm8HFz6GPOqlYdlK1n4RH20YE7Rtf7xR/73i75t8=",
+            "rev": "53e882e624d057a69d339b6349ca2159443903cb",
+            "sha256": "sha256-qqP5eymu7fCDsXQ6iyZdyc/GpbzPBZMZ28Opro7Zrc0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "246b5724543c096d6b5f87809e2991195385f29a"
+        "version": "53e882e624d057a69d339b6349ca2159443903cb"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -5659,7 +5659,7 @@
     },
     "tmux-buoyshell": {
         "cargoLocks": null,
-        "date": "2025-04-06",
+        "date": "2025-04-08",
         "extract": null,
         "name": "tmux-buoyshell",
         "passthru": null,
@@ -5671,12 +5671,12 @@
             "name": null,
             "owner": "cnavajas4",
             "repo": "tmux-buoyshell",
-            "rev": "b87e9b2b3148d75c447a7782cb9751a929f7d70a",
-            "sha256": "sha256-i816haR+jR6NrV4DqAHeHdc8nJRrSAJL5oatHx6RrHM=",
+            "rev": "d3f321f7ff6aa651a4d6cd8a7a247620e13ed2ad",
+            "sha256": "sha256-WCyCI8km063umZLaHaMQNGqRWCToCFTOLz5gDeMHkxI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b87e9b2b3148d75c447a7782cb9751a929f7d70a"
+        "version": "d3f321f7ff6aa651a4d6cd8a7a247620e13ed2ad"
     },
     "tmux-continuum": {
         "cargoLocks": null,
@@ -6318,9 +6318,9 @@
             "name": null,
             "sha256": "sha256-A4OXGrRSvhslqsb23TCXHOAaHs5tTSxVHiQMTY6rvIc=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504062212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504072213/geoip.dat"
         },
-        "version": "202504062212"
+        "version": "202504072213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6331,11 +6331,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ACG9rNihn3QiOfh3H0czqrLpK3ZOZKPm7JrlAelTfd0=",
+            "sha256": "sha256-RACDLDa+PKc1EkvDs6/Y8izSSNu/uKebUfa43nteFxY=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504062212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504072213/geosite.dat"
         },
-        "version": "202504062212"
+        "version": "202504072213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
