@@ -19,6 +19,7 @@ let
     ;
   cfg = cfgNixos config.${namespace} ./.;
   name = getDirname path;
+  dataDir = "/var/opt/${name}";
   value = {
     systemd.services.${name} = {
       description = "${capitalize name} Service";
@@ -39,7 +40,7 @@ let
       };
     };
 
-    systemd.tmpfiles.rules = [ "d /var/opt/${name} 0700 ${name} ${name} - -" ];
+    systemd.tmpfiles.rules = [ "d ${dataDir} 0700 ${name} ${name} - -" ];
 
     services.caddy = mkCaddyProxy {
       domain = domains.${name};
