@@ -12,8 +12,8 @@ let
     // lib.optionalAttrs (type == "urltest") { tolerance = 100; };
   freeSubs = map (x: mkOutboundSub x.name "selector") (attrValues lib.${namespace}.freeSubs);
   subs = [
-    (mkOutboundSub "nano" "urltest")
     (mkOutboundSub "knjc" "urltest")
+    (mkOutboundSub "nano" "urltest")
   ] ++ freeSubs;
   outbounds =
     let

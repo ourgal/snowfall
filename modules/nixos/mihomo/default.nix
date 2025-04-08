@@ -15,14 +15,9 @@ let
     domain
     freeSubs
     ;
-  inherit (lib.${namespace}.mihomo)
-    mkProxyProvider
-    RuleProviders
-    mkProxyGroup
-    mkSubProxyGroup
-    ;
-  inherit (lib.${namespace}.sing-bxo) mkFirewall;
-  inherit (builtins) mapAttrs toJSON map;
+  inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
+  inherit (lib.${namespace}.sing-box) mkFirewall;
+  inherit (builtins) mapAttrs toJSON;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -55,8 +50,8 @@ let
       use-hosts = true;
       ipv6 = true;
       default-nameserver = [
-        "114.114.114.114"
-        "223.5.5.5"
+        "tls://223.5.5.5"
+        "tls://223.6.6.6"
       ];
       enhanced-mode = "fake-ip";
       fake-ip-range = fakeIpSubnet;
@@ -192,22 +187,21 @@ let
         ];
       };
       nameserver = [
-        "https://223.5.5.5/dns-query"
+        "https://dns.alidns.com/dns-query"
         "https://doh.pub/dns-query"
-        "tls://dns.rubyfish.cn:853"
       ];
-      fallback = [
-        "https://1.0.0.1/dns-query"
-        "https://8.8.4.4/dns-query"
-        "https://doh.opendns.com/dns-query"
-      ];
-      fallback-filter = {
-        geoip = true;
-        domain = [
-          "+.bing.com"
-          "+.linkedin.com"
-        ];
-      };
+      # fallback = [
+      #   "https://1.0.0.1/dns-query"
+      #   "https://8.8.4.4/dns-query"
+      #   "https://doh.opendns.com/dns-query"
+      # ];
+      # fallback-filter = {
+      #   geoip = true;
+      #   domain = [
+      #     "+.bing.com"
+      #     "+.linkedin.com"
+      #   ];
+      # };
     };
     hosts = {
       "time.android.com" = "203.107.6.88";
@@ -215,131 +209,45 @@ let
       "*.${domain}" = ip.brix;
     };
     proxy-groups =
-      let
-        countriesTags = [
-          "🇭🇰 香港节点"
-          "🇹🇼 台湾节点"
-          "🇯🇵 日本节点"
-          "🇸🇬 新加坡节点"
-          "🇺🇸 美国节点"
-        ];
-        priceTags = [
-          "👑 高级节点"
-          "📉 省流节点"
-        ];
-        subsTags =
-          [
-            "nano"
-            "knjc"
-          ]
-          ++ lib.attrsets.foldlAttrs (
-            acc: _: value:
-            acc ++ [ value.name ]
-          ) [ ] freeSubs;
-        mainTag = [ "🚀 节点选择" ];
-        directTag = [ "🎯 全球直连" ];
-      in
-      [
-        {
-          name = "🚀 节点选择";
-          type = "select";
-          proxies = subsTags ++ countriesTags ++ priceTags;
-        }
-        {
-          name = "📈 网络测试";
-          type = "select";
-          proxies = directTag ++ countriesTags ++ priceTags ++ subsTags;
-        }
-        {
-          name = "🤖 人工智能";
-          type = "select";
-          proxies = mainTag ++ countriesTags;
-        }
-        {
-          name = "📥 Trackerslist";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🎮 游戏服务";
-          type = "select";
-          proxies = directTag ++ priceTags ++ mainTag;
-        }
-        {
-          name = "🪟 微软服务";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🇬 谷歌服务";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🍎 苹果服务";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🛡️ 直连域名";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🀄️ 直连 IP";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "🧱 代理域名";
-          type = "select";
-          proxies = directTag ++ mainTag;
-        }
-        {
-          name = "📲 电报消息";
-          type = "select";
-          proxies = mainTag ++ countriesTags ++ subsTags;
-        }
-        {
-          name = "🐟 漏网之鱼";
-          type = "select";
-          proxies = mainTag ++ countriesTags ++ priceTags ++ subsTags ++ directTag;
-        }
-        {
-          name = "🎯 全球直连";
-          type = "select";
-          proxies = [ "DIRECT" ];
-        }
-        (mkProxyGroup "👑 高级节点" "(?i)(专线|专用|高级|直连|急速|高倍率|游戏|game|IEPL|IPLC|AIA|CTM|CC|AC)")
-        (mkProxyGroup "📉 省流节点" "(0.[1-5]|低倍率|省流|大流量)")
-        (mkProxyGroup "🇭🇰 香港节点" "(?i)(🇭🇰|港|hk|hongkong|hong kong)")
-        (mkProxyGroup "🇹🇼 台湾节点" "(?i)(🇹🇼|台|tw|taiwan|tai wan)")
-        (mkProxyGroup "🇯🇵 日本节点" "(?i)(🇯🇵|日|jp|japan)")
-        (mkProxyGroup "🇸🇬 新加坡节点" "(?i)(🇸🇬|新|sg|singapore)")
-        (mkProxyGroup "🇺🇸 美国节点" "(?i)(🇺🇸|美|us|unitedstates|united states)")
-        (mkSubProxyGroup "knjc" "url-test")
-        (mkSubProxyGroup "nano" "url-test")
+      [ proxyGroups.main ]
+      ++ proxyGroups.subs
+      ++ proxyGroups.freeSubs
+      ++ [
+        proxyGroups.networktest
+        proxyGroups.ai
+        proxyGroups.trackerslist
+        proxyGroups.game
+        proxyGroups.microsoft
+        proxyGroups.google
+        proxyGroups.apple
+        proxyGroups.private
+        proxyGroups.privateip
+        proxyGroups.proxy
+        proxyGroups.telegram
+        proxyGroups.final
+        proxyGroups.direct
       ]
-      ++ map (v: mkSubProxyGroup v.name "select") (builtins.attrValues freeSubs);
+      ++ proxyGroups.price
+      ++ proxyGroups.countries;
     proxy-providers = {
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
     } // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
     rules = [
-      "RULE-SET,${RuleProviders.private.tag},🎯 全球直连"
-      "RULE-SET,${RuleProviders.trackerslist.tag},📥 Trackerslist"
-      "RULE-SET,${RuleProviders.microsoft-cn.tag},🪟 微软服务"
-      "RULE-SET,${RuleProviders.apple-cn.tag},🍎 苹果服务"
-      "RULE-SET,${RuleProviders.google-cn.tag},🇬 谷歌服务"
-      "RULE-SET,${RuleProviders.games-cn.tag},🎮 游戏服务"
-      "RULE-SET,${RuleProviders.ai.tag},🤖 人工智能"
-      "RULE-SET,${RuleProviders.networktest.tag},📈 网络测试"
-      "RULE-SET,${RuleProviders.proxy.tag},🧱 代理域名"
-      "RULE-SET,${RuleProviders.tld-cn.tag},🛡️ 直连域名"
-      "RULE-SET,${RuleProviders.cn.tag},🛡️ 直连域名"
-      "RULE-SET,${RuleProviders.privateip.tag},🎯 全球直连,no-resolve"
-      "RULE-SET,${RuleProviders.cnip.tag},🀄️ 直连 IP"
-      "RULE-SET,${RuleProviders.telegramip.tag},📲 电报消息,no-resolve"
+      "RULE-SET,${RuleProviders.private.tag},${proxyGroups.direct.name}"
+      "RULE-SET,${RuleProviders.trackerslist.tag},${proxyGroups.trackerslist.name}"
+      "RULE-SET,${RuleProviders.microsoft-cn.tag},${proxyGroups.microsoft.name}"
+      "RULE-SET,${RuleProviders.apple-cn.tag},${proxyGroups.apple.name}"
+      "RULE-SET,${RuleProviders.google-cn.tag},${proxyGroups.google.name}"
+      "RULE-SET,${RuleProviders.games-cn.tag},${proxyGroups.game.name}"
+      "RULE-SET,${RuleProviders.ai.tag},${proxyGroups.ai.name}"
+      "RULE-SET,${RuleProviders.networktest.tag},${proxyGroups.networktest.name}"
+      "RULE-SET,${RuleProviders.proxy.tag},${proxyGroups.proxy.name}"
+      "RULE-SET,${RuleProviders.tld-cn.tag},${proxyGroups.private.name}"
+      "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
+      "RULE-SET,${RuleProviders.privateip.tag},${proxyGroups.direct.name},no-resolve"
+      "RULE-SET,${RuleProviders.cnip.tag},${proxyGroups.privateip.name}"
+      "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
       "MATCH,🐟 漏网之鱼"
     ];
     rule-providers = lib.attrsets.filterAttrsRecursive (n: v: n != "tag") RuleProviders;

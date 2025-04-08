@@ -36,6 +36,7 @@
           path = "Splitted-By-Protocol/vless.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       awesome-vpn = {
         name = "awesome-vpn";
@@ -136,7 +137,6 @@
           path = "V2RAY_BASE64.txt";
         };
         inherit updateInterval;
-        enable = true;
       };
       V2RayAggregator_public = {
         name = "V2RayAggregator_public";
