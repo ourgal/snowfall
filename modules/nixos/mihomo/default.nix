@@ -180,7 +180,9 @@ let
         "+.orayimg.com"
         "+.gcloudcs.com"
         "+.gcloudsdk.com"
-        "rule-set:geosite-cn"
+        "rule-set:tld-cn"
+        "rule-set:cn"
+        "rule-set:cnip"
       ];
       nameserver-policy = {
         "+.googleapis.cn" = [

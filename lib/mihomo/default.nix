@@ -1,11 +1,12 @@
 { lib, namespace, ... }:
 let
-  inherit (builtins) attrNames map;
+  inherit (builtins) attrNames map foldl';
   mkRuleProvider = name: {
     tag = name;
     type = "http";
     behavior = "domain";
     format = "mrs";
+    proxy = "DIRECT";
     path = "./rules/${name}.mrs";
     url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@mihomo-ruleset/${name}.mrs";
     interval = 86400;
@@ -45,30 +46,24 @@ in
         skip-cert-verify = true;
       };
     };
-    RuleProviders = {
-      private = mkRuleProvider "private";
-      trackerslist = mkRuleProvider "trackerslist";
-      microsoft-cn = mkRuleProvider "microsoft-cn";
-      apple-cn = mkRuleProvider "apple-cn";
-      google-cn = mkRuleProvider "google-cn";
-      games-cn = mkRuleProvider "games-cn";
-      ai = mkRuleProvider "ai";
-      networktest = mkRuleProvider "networktest";
-      proxy = mkRuleProvider "proxy";
-      tld-cn = mkRuleProvider "tld-cn";
-      cn = mkRuleProvider "cn";
-      privateip = mkRuleProvider "privateip";
-      cnip = mkRuleProvider "cnip";
-      telegramip = mkRuleProvider "telegramip";
-      geosite-cn = {
-        tag = "geosite-cn";
-        type = "http";
-        behavior = "domain";
-        format = "mrs";
-        path = "./rules/geosite-cn.mrs";
-        url = "https://fastly.jsdelivr.net/gh/juewuy/ShellCrash@master/bin/geodata/mrs_geosite_cn.mrs";
-      };
-    };
+    RuleProviders = (
+      foldl' (acc: v: acc // { ${v} = mkRuleProvider v; }) { } [
+        "private"
+        "trackerslist"
+        "microsoft-cn"
+        "apple-cn"
+        "google-cn"
+        "games-cn"
+        "ai"
+        "networktest"
+        "proxy"
+        "tld-cn"
+        "cn"
+        "privateip"
+        "cnip"
+        "telegramip"
+      ]
+    );
     proxyGroups =
       let
         subs = map (v: mkSubProxyGroup v "url-test") subsTags;
