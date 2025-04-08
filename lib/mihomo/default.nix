@@ -82,12 +82,14 @@ in
         HK = mkProxyGroup "🇭🇰 香港节点" "(?i)(🇭🇰|港|hk|hongkong|hong kong)";
         TW = mkProxyGroup "🇹🇼 台湾节点" "(?i)(🇹🇼|台|tw|taiwan|tai wan)";
         JP = mkProxyGroup "🇯🇵 日本节点" "(?i)(🇯🇵|日|jp|japan)";
+        KR = mkProxyGroup "🇰🇷 韩国节点" "(?i)(🇰🇷|KR|Korea|KOR|首尔|韩|韓)";
         SG = mkProxyGroup "🇸🇬 新加坡节点" "(?i)(🇸🇬|新|sg|singapore)";
         US = mkProxyGroup "🇺🇸 美国节点" "(?i)(🇺🇸|美|us|unitedstates|united states)";
         countries = [
           HK
           TW
           JP
+          KR
           SG
           US
         ];
