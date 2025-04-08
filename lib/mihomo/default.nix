@@ -165,7 +165,7 @@ in
         final = {
           name = "🐟 漏网之鱼";
           type = "select";
-          proxies = mainTag ++ countriesTags ++ priceTags ++ subsTags ++ freeSubsTags ++ directTag;
+          proxies = directTag ++ mainTag ++ countriesTags ++ priceTags ++ subsTags ++ freeSubsTags;
         };
         direct = {
           name = "🎯 全球直连";
