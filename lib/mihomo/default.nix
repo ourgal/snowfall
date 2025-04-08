@@ -1,10 +1,10 @@
 { lib, namespace, ... }:
 let
   inherit (builtins) attrNames map foldl';
-  mkRuleProvider = name: {
+  mkRuleProvider = name: type: {
     tag = name;
     type = "http";
-    behavior = "domain";
+    behavior = type;
     format = "mrs";
     proxy = "DIRECT";
     path = "./rules/${name}.mrs";
@@ -46,8 +46,11 @@ in
         skip-cert-verify = true;
       };
     };
-    RuleProviders = (
-      foldl' (acc: v: acc // { ${v} = mkRuleProvider v; }) { } [
+    RuleProviders =
+      let
+        go = type: foldl' (acc: v: acc // { ${v} = mkRuleProvider v type; }) { };
+      in
+      (go "domain" [
         "private"
         "trackerslist"
         "microsoft-cn"
@@ -59,11 +62,12 @@ in
         "proxy"
         "tld-cn"
         "cn"
+      ])
+      // (go "ipcidr" [
         "privateip"
         "cnip"
         "telegramip"
-      ]
-    );
+      ]);
     proxyGroups =
       let
         subs = map (v: mkSubProxyGroup v "url-test") subsTags;

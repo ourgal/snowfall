@@ -218,7 +218,6 @@ let
       ++ proxyGroups.subs
       ++ proxyGroups.freeSubs
       ++ [
-        proxyGroups.networktest
         proxyGroups.ai
         proxyGroups.trackerslist
         proxyGroups.game
@@ -249,7 +248,6 @@ let
         "RULE-SET,${RuleProviders.google-cn.tag},${proxyGroups.google.name}"
         "RULE-SET,${RuleProviders.games-cn.tag},${proxyGroups.game.name}"
         "RULE-SET,${RuleProviders.ai.tag},${proxyGroups.ai.name}"
-        "RULE-SET,${RuleProviders.networktest.tag},${proxyGroups.networktest.name}"
         "RULE-SET,${RuleProviders.proxy.tag},${proxyGroups.proxy.name}"
         "RULE-SET,${RuleProviders.tld-cn.tag},${proxyGroups.private.name}"
         "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
