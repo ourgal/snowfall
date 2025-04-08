@@ -4357,11 +4357,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-IThijgUL16HnC5HUv0qRFn9K12/bgyCbEHyNhLhUkX4=",
+            "sha256": "sha256-dHFlcTjBatrZMi/jBwwBFt1sOtjWSTAOPL3+kfTbTsM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.2.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.3.tar.gz"
         },
-        "version": "2.11.2"
+        "version": "2.11.3"
     },
     "pydantic-core": {
         "cargoLocks": null,

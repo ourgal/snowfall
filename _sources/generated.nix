@@ -2422,10 +2422,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.11.2";
+    version = "2.11.3";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.2.tar.gz";
-      sha256 = "sha256-IThijgUL16HnC5HUv0qRFn9K12/bgyCbEHyNhLhUkX4=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.3.tar.gz";
+      sha256 = "sha256-dHFlcTjBatrZMi/jBwwBFt1sOtjWSTAOPL3+kfTbTsM=";
     };
   };
   pydantic-core = {
