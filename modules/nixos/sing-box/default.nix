@@ -12,6 +12,8 @@ let
     cfgNixos
     enabled
     freeSubs
+    domainBlackList
+    domainWhiteList
     ;
   inherit (lib.${namespace}.sing-box)
     dnsServers
@@ -22,6 +24,7 @@ let
     ruleSet
     mkProvider
     mkFirewall
+    fakeIpExclude
     ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
@@ -44,17 +47,17 @@ let
       server = dnsServers.hosts_local.tag;
     }
     {
-      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
+      domain_suffix = fakeIpExclude;
       server = dnsServers.direct.tag;
     }
   ];
   customRouteRules = [
     {
-      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./whitelist.key);
+      domain_suffix = domainWhiteList;
       outbound = outbounds.direct.tag;
     }
     {
-      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./blacklist.key);
+      domain_suffix = domainBlackList;
       outbound = outbounds.main.tag;
     }
   ];

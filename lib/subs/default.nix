@@ -36,7 +36,6 @@
           path = "Splitted-By-Protocol/vless.txt";
         };
         inherit updateInterval;
-        enable = true;
       };
       awesome-vpn = {
         name = "awesome-vpn";
@@ -67,6 +66,7 @@
           path = "nodes/yudou66.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       clashmeta = {
         name = "clashmeta";
@@ -77,6 +77,7 @@
           path = "nodes/clashmeta.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       ndnode = {
         name = "ndnode";
@@ -87,6 +88,7 @@
           path = "nodes/ndnode.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       nodev2ray = {
         name = "nodev2ray";
@@ -97,6 +99,7 @@
           path = "nodes/nodev2ray.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       nodefree = {
         name = "nodefree";
@@ -107,6 +110,7 @@
           path = "nodes/nodefree.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       v2rayshare = {
         name = "v2rayshare";
@@ -117,6 +121,7 @@
           path = "nodes/v2rayshare.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       wenode = {
         name = "wenode";
@@ -127,6 +132,7 @@
           path = "nodes/wenode.txt";
         };
         inherit updateInterval;
+        enable = true;
       };
       openproxylist = {
         name = "openproxylist";

@@ -1,4 +1,4 @@
-_:
+{ lib, ... }:
 let
   inherit (builtins) foldl';
   domain = "zxc.cn";
@@ -44,7 +44,16 @@ let
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
     anki-sync-server = "anki.${domain}";
   };
+  fakeIpExclude = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
+  domainBlackList = lib.strings.splitString "\n" (lib.strings.fileContents ./blacklist.key);
+  domainWhiteList = lib.strings.splitString "\n" (lib.strings.fileContents ./whitelist.key);
 in
 {
-  inherit domains domain;
+  inherit
+    domains
+    domain
+    fakeIpExclude
+    domainBlackList
+    domainWhiteList
+    ;
 }

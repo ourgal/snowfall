@@ -14,10 +14,13 @@ let
     ip
     domain
     freeSubs
+    fakeIpExclude
+    domainBlackList
+    domainWhiteList
     ;
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
   inherit (lib.${namespace}.sing-box) mkFirewall;
-  inherit (builtins) mapAttrs toJSON;
+  inherit (builtins) mapAttrs toJSON map;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -55,7 +58,7 @@ let
       ];
       enhanced-mode = "fake-ip";
       fake-ip-range = fakeIpSubnet;
-      fake-ip-filter = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key) ++ [
+      fake-ip-filter = (map (v: "*.${v}") fakeIpExclude) ++ [
         "*.lan"
         "*.localdomain"
         "*.example"
@@ -190,18 +193,18 @@ let
         "https://dns.alidns.com/dns-query"
         "https://doh.pub/dns-query"
       ];
-      # fallback = [
-      #   "https://1.0.0.1/dns-query"
-      #   "https://8.8.4.4/dns-query"
-      #   "https://doh.opendns.com/dns-query"
-      # ];
-      # fallback-filter = {
-      #   geoip = true;
-      #   domain = [
-      #     "+.bing.com"
-      #     "+.linkedin.com"
-      #   ];
-      # };
+      fallback = [
+        "https://1.0.0.1/dns-query"
+        "https://8.8.4.4/dns-query"
+        "https://doh.opendns.com/dns-query"
+      ];
+      fallback-filter = {
+        geoip = true;
+        domain = [
+          "+.bing.com"
+          "+.linkedin.com"
+        ];
+      };
     };
     hosts = {
       "time.android.com" = "203.107.6.88";
@@ -233,23 +236,26 @@ let
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
     } // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
-    rules = [
-      "RULE-SET,${RuleProviders.private.tag},${proxyGroups.direct.name}"
-      "RULE-SET,${RuleProviders.trackerslist.tag},${proxyGroups.trackerslist.name}"
-      "RULE-SET,${RuleProviders.microsoft-cn.tag},${proxyGroups.microsoft.name}"
-      "RULE-SET,${RuleProviders.apple-cn.tag},${proxyGroups.apple.name}"
-      "RULE-SET,${RuleProviders.google-cn.tag},${proxyGroups.google.name}"
-      "RULE-SET,${RuleProviders.games-cn.tag},${proxyGroups.game.name}"
-      "RULE-SET,${RuleProviders.ai.tag},${proxyGroups.ai.name}"
-      "RULE-SET,${RuleProviders.networktest.tag},${proxyGroups.networktest.name}"
-      "RULE-SET,${RuleProviders.proxy.tag},${proxyGroups.proxy.name}"
-      "RULE-SET,${RuleProviders.tld-cn.tag},${proxyGroups.private.name}"
-      "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
-      "RULE-SET,${RuleProviders.privateip.tag},${proxyGroups.direct.name},no-resolve"
-      "RULE-SET,${RuleProviders.cnip.tag},${proxyGroups.privateip.name}"
-      "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
-      "MATCH,🐟 漏网之鱼"
-    ];
+    rules =
+      (map (v: "DOMAIN-SUFFIX,${v},${proxyGroups.direct.name}") domainWhiteList)
+      ++ (map (v: "DOMAIN-SUFFIX,${v},${proxyGroups.proxy.name}") domainBlackList)
+      ++ [
+        "RULE-SET,${RuleProviders.private.tag},${proxyGroups.direct.name}"
+        "RULE-SET,${RuleProviders.trackerslist.tag},${proxyGroups.trackerslist.name}"
+        "RULE-SET,${RuleProviders.microsoft-cn.tag},${proxyGroups.microsoft.name}"
+        "RULE-SET,${RuleProviders.apple-cn.tag},${proxyGroups.apple.name}"
+        "RULE-SET,${RuleProviders.google-cn.tag},${proxyGroups.google.name}"
+        "RULE-SET,${RuleProviders.games-cn.tag},${proxyGroups.game.name}"
+        "RULE-SET,${RuleProviders.ai.tag},${proxyGroups.ai.name}"
+        "RULE-SET,${RuleProviders.networktest.tag},${proxyGroups.networktest.name}"
+        "RULE-SET,${RuleProviders.proxy.tag},${proxyGroups.proxy.name}"
+        "RULE-SET,${RuleProviders.tld-cn.tag},${proxyGroups.private.name}"
+        "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
+        "RULE-SET,${RuleProviders.privateip.tag},${proxyGroups.direct.name},no-resolve"
+        "RULE-SET,${RuleProviders.cnip.tag},${proxyGroups.privateip.name}"
+        "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
+        "MATCH,🐟 漏网之鱼"
+      ];
     rule-providers = lib.attrsets.filterAttrsRecursive (n: v: n != "tag") RuleProviders;
   };
   value = {
