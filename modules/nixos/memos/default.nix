@@ -15,12 +15,13 @@ let
     mkFireholRule
     domains
     mkCaddyProxy
+    capitalize
     ;
   cfg = cfgNixos config.${namespace} ./.;
   name = getDirname path;
   value = {
-    systemd.services.memos = {
-      description = "Memos Service";
+    systemd.services.${name} = {
+      description = "${capitalize name} Service";
       after = [ "network.target" ];
       wantedBy = [ "multi-user.target" ];
       environment = {
@@ -29,7 +30,7 @@ let
       };
 
       serviceConfig = commonServiceConfig // {
-        ExecStart = lib.getExe pkgs.memos;
+        ExecStart = lib.getExe pkgs.${name};
         StateDirectory = name;
         SyslogIdentifier = name;
         RuntimeDirectory = name;
@@ -47,7 +48,7 @@ let
 
     users = {
       users.${name} = {
-        description = "Memos Service User";
+        description = "${capitalize name} Service User";
         home = "/var/lib/${name}";
         createHome = true;
         isSystemUser = true;
