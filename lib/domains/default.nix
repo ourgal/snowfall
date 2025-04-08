@@ -38,6 +38,7 @@ let
     "komga"
     "nix-serve"
     "memos"
+    "qd"
     # keep-sorted end
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
