@@ -14,6 +14,7 @@ let
     freeSubs
     domainBlackList
     domainWhiteList
+    fakeIpExclude
     ;
   inherit (lib.${namespace}.sing-box)
     dnsServers
@@ -24,7 +25,6 @@ let
     ruleSet
     mkProvider
     mkFirewall
-    fakeIpExclude
     ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
