@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs namespace;
     in
     {
       path = ./.;
@@ -21,7 +21,7 @@ args.module (
             script = toString (
               # https://dunst-project.org/documentation/#SCRIPTING
               pkgs.writeShellScript "alert" ''
-                BELL=~/.config/dunst/mp3_CARTOON_BELL_Medium_Size_Ring_Tinkle_Fast_Sequence_02.mp3
+                BELL=${pkgs.${namespace}.soundfx}/bling1.mp3
 
                 [[ $DUNST_SUMMARY == "MPD Notification" ]] && exit
                 [[ $DUNST_SUMMARY == "Espanso" ]] && exit
