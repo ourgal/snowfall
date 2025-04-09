@@ -10,6 +10,7 @@ let
       "i18n"
       "localBin"
       "network"
+      "log"
       "nix"
       "user"
       "ssh"
