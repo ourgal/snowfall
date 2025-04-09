@@ -3,6 +3,7 @@ let
   inherit (lib.${namespace}) domains;
 in
 {
+  subsExcludes = "中国";
   freeSubs =
     {
       isMihomo ? false,

@@ -7,6 +7,7 @@ let
       inherit type;
       providers = tag;
       includes = ".*";
+      excludes = lib.${namespace}.subsExcludes;
       inherit tag;
     }
     // lib.optionalAttrs (type == "urltest") { tolerance = 100; };

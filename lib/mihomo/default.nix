@@ -25,6 +25,7 @@ let
       lazy = true;
       use = [ name ];
       proxy = "DIRECT";
+      exclude-filter = lib.${namespace}.subsExcludes;
     }
     // lib.optionalAttrs (type == "url-test") { tolerance = 100; };
 in
