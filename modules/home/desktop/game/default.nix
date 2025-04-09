@@ -10,12 +10,13 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "bottles"
+        "gamehub"
         "gnome-mahjongg"
+        "lutris"
         "moonlight-qt"
         "prismlauncher"
-        "wine"
         "retroarch"
-        "lutris"
+        "wine"
         # keep-sorted end
       ];
       value = {
