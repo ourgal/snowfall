@@ -30,6 +30,7 @@ args.module (
       "tmate"
       "tran"
       "tty-share"
+      "upterm"
       "webwormhole"
       "wgetpaste"
       "wush"
