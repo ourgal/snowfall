@@ -7,6 +7,8 @@
 stdenv.mkDerivation {
   inherit (_sources' ./.) pname version src;
 
+  dontBuild = true;
+
   installPhase = ''
     runHook preInstall
     cd soundfx.d
