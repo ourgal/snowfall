@@ -20,7 +20,12 @@ let
   freeSubs = lib.${namespace}.freeSubs { isMihomo = true; };
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
   inherit (lib.${namespace}.sing-box) mkFirewall;
-  inherit (builtins) mapAttrs toJSON map;
+  inherit (builtins)
+    mapAttrs
+    toJSON
+    map
+    foldl'
+    ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;
@@ -47,169 +52,174 @@ let
     };
     find-process-mode = "off";
     routing-mark = routingMark;
-    dns = {
-      enable = true;
-      listen = ":${toString dnsPort}";
-      use-hosts = true;
-      ipv6 = true;
-      default-nameserver = [
-        "223.5.5.5"
-        "114.114.114.114"
-      ];
-      enhanced-mode = "fake-ip";
-      fake-ip-range = fakeIpSubnet;
-      fake-ip-filter = (map (v: "*.${v}") fakeIpExclude) ++ [
-        "*.lan"
-        "*.localdomain"
-        "*.example"
-        "*.invalid"
-        "*.localhost"
-        "*.test"
-        "*.local"
-        "*.home.arpa"
-        "time.*.com"
-        "time.*.gov"
-        "time.*.edu.cn"
-        "time.*.apple.com"
-        "time-ios.apple.com"
-        "time1.*.com"
-        "time2.*.com"
-        "time3.*.com"
-        "time4.*.com"
-        "time5.*.com"
-        "time6.*.com"
-        "time7.*.com"
-        "ntp.*.com"
-        "ntp1.*.com"
-        "ntp2.*.com"
-        "ntp3.*.com"
-        "ntp4.*.com"
-        "ntp5.*.com"
-        "ntp6.*.com"
-        "ntp7.*.com"
-        "*.time.edu.cn"
-        "*.ntp.org.cn"
-        "+.pool.ntp.org"
-        "time1.cloud.tencent.com"
-        "music.163.com"
-        "*.music.163.com"
-        "*.126.net"
-        "musicapi.taihe.com"
-        "music.taihe.com"
-        "songsearch.kugou.com"
-        "trackercdn.kugou.com"
-        "*.kuwo.cn"
-        "api-jooxtt.sanook.com"
-        "api.joox.com"
-        "joox.com"
-        "y.qq.com"
-        "*.y.qq.com"
-        "streamoc.music.tc.qq.com"
-        "mobileoc.music.tc.qq.com"
-        "isure.stream.qqmusic.qq.com"
-        "dl.stream.qqmusic.qq.com"
-        "aqqmusic.tc.qq.com"
-        "amobile.music.tc.qq.com"
-        "*.xiami.com"
-        "*.music.migu.cn"
-        "music.migu.cn"
-        "+.msftconnecttest.com"
-        "+.msftncsi.com"
-        "localhost.ptlogin2.qq.com"
-        "localhost.sec.qq.com"
-        "+.qq.com"
-        "+.tencent.com"
-        "+.steamcontent.com"
-        "+.srv.nintendo.net"
-        "*.n.n.srv.nintendo.net"
-        "+.cdn.nintendo.net"
-        "+.stun.playstation.net"
-        "xbox.*.*.microsoft.com"
-        "*.*.xboxlive.com"
-        "xbox.*.microsoft.com"
-        "xnotify.xboxlive.com"
-        "+.battlenet.com.cn"
-        "+.wotgame.cn"
-        "+.wggames.cn"
-        "+.wowsgame.cn"
-        "+.wargaming.net"
-        "proxy.golang.org"
-        "stun.*.*"
-        "stun.*.*.*"
-        "+.stun.*.*"
-        "+.stun.*.*.*"
-        "+.stun.*.*.*.*"
-        "+.stun.*.*.*.*.*"
-        "heartbeat.belkin.com"
-        "*.linksys.com"
-        "*.linksyssmartwifi.com"
-        "*.router.asus.com"
-        "mesu.apple.com"
-        "swscan.apple.com"
-        "swquery.apple.com"
-        "swdownload.apple.com"
-        "swcdn.apple.com"
-        "swdist.apple.com"
-        "lens.l.google.com"
-        "stun.l.google.com"
-        "na.b.g-tun.com"
-        "+.nflxvideo.net"
-        "*.square-enix.com"
-        "*.finalfantasyxiv.com"
-        "*.ffxiv.com"
-        "*.ff14.sdo.com"
-        "ff.dorado.sdo.com"
-        "*.mcdn.bilivideo.cn"
-        "+.media.dssott.com"
-        "shark007.net"
-        "Mijia Cloud"
-        "+.market.xiaomi.com"
-        "+.cmbchina.com"
-        "+.cmbimg.com"
-        "adguardteam.github.io"
-        "adrules.top"
-        "anti-ad.net"
-        "local.adguard.org"
-        "static.adtidy.org"
-        "+.sandai.net"
-        "+.n0808.com"
-        "+.3gppnetwork.org"
-        "+.uu.163.com"
-        "ps.res.netease.com"
-        "+.oray.com"
-        "+.orayimg.com"
-        "+.gcloudcs.com"
-        "+.gcloudsdk.com"
-        "rule-set:geosite-cn"
-      ];
-      nameserver-policy = {
-        "+.googleapis.cn" = [
+    dns =
+      let
+        defaultDns = [
+          "223.5.5.5"
+          "114.114.114.114"
+        ];
+        directDomains = [
+          "jsdelivr.net"
+          "mynixos.com"
+        ];
+        directDomainsPolicy = foldl' (acc: v: acc // { "+.${v}" = defaultDns; }) { } directDomains;
+      in
+      {
+        enable = true;
+        listen = ":${toString dnsPort}";
+        use-hosts = true;
+        ipv6 = true;
+        default-nameserver = defaultDns;
+        nameserver-policy = {
+          "+.googleapis.cn" = [
+            "https://1.0.0.1/dns-query"
+            "https://8.8.4.4/dns-query"
+            "https://doh.opendns.com/dns-query"
+          ];
+        } // directDomainsPolicy;
+        nameserver = [
+          "https://dns.alidns.com/dns-query"
+          "https://doh.pub/dns-query"
+        ];
+        fallback = [
           "https://1.0.0.1/dns-query"
           "https://8.8.4.4/dns-query"
           "https://doh.opendns.com/dns-query"
         ];
-        "+.jsdelivr.net" = [
-          "223.5.5.5"
-          "114.114.114.114"
+        fallback-filter = {
+          geoip = true;
+          domain = [
+            "+.bing.com"
+            "+.linkedin.com"
+          ];
+        };
+        enhanced-mode = "fake-ip";
+        fake-ip-range = fakeIpSubnet;
+        fake-ip-filter = (map (v: "*.${v}") fakeIpExclude) ++ [
+          "*.lan"
+          "*.localdomain"
+          "*.example"
+          "*.invalid"
+          "*.localhost"
+          "*.test"
+          "*.local"
+          "*.home.arpa"
+          "time.*.com"
+          "time.*.gov"
+          "time.*.edu.cn"
+          "time.*.apple.com"
+          "time-ios.apple.com"
+          "time1.*.com"
+          "time2.*.com"
+          "time3.*.com"
+          "time4.*.com"
+          "time5.*.com"
+          "time6.*.com"
+          "time7.*.com"
+          "ntp.*.com"
+          "ntp1.*.com"
+          "ntp2.*.com"
+          "ntp3.*.com"
+          "ntp4.*.com"
+          "ntp5.*.com"
+          "ntp6.*.com"
+          "ntp7.*.com"
+          "*.time.edu.cn"
+          "*.ntp.org.cn"
+          "+.pool.ntp.org"
+          "time1.cloud.tencent.com"
+          "music.163.com"
+          "*.music.163.com"
+          "*.126.net"
+          "musicapi.taihe.com"
+          "music.taihe.com"
+          "songsearch.kugou.com"
+          "trackercdn.kugou.com"
+          "*.kuwo.cn"
+          "api-jooxtt.sanook.com"
+          "api.joox.com"
+          "joox.com"
+          "y.qq.com"
+          "*.y.qq.com"
+          "streamoc.music.tc.qq.com"
+          "mobileoc.music.tc.qq.com"
+          "isure.stream.qqmusic.qq.com"
+          "dl.stream.qqmusic.qq.com"
+          "aqqmusic.tc.qq.com"
+          "amobile.music.tc.qq.com"
+          "*.xiami.com"
+          "*.music.migu.cn"
+          "music.migu.cn"
+          "+.msftconnecttest.com"
+          "+.msftncsi.com"
+          "localhost.ptlogin2.qq.com"
+          "localhost.sec.qq.com"
+          "+.qq.com"
+          "+.tencent.com"
+          "+.steamcontent.com"
+          "+.srv.nintendo.net"
+          "*.n.n.srv.nintendo.net"
+          "+.cdn.nintendo.net"
+          "+.stun.playstation.net"
+          "xbox.*.*.microsoft.com"
+          "*.*.xboxlive.com"
+          "xbox.*.microsoft.com"
+          "xnotify.xboxlive.com"
+          "+.battlenet.com.cn"
+          "+.wotgame.cn"
+          "+.wggames.cn"
+          "+.wowsgame.cn"
+          "+.wargaming.net"
+          "proxy.golang.org"
+          "stun.*.*"
+          "stun.*.*.*"
+          "+.stun.*.*"
+          "+.stun.*.*.*"
+          "+.stun.*.*.*.*"
+          "+.stun.*.*.*.*.*"
+          "heartbeat.belkin.com"
+          "*.linksys.com"
+          "*.linksyssmartwifi.com"
+          "*.router.asus.com"
+          "mesu.apple.com"
+          "swscan.apple.com"
+          "swquery.apple.com"
+          "swdownload.apple.com"
+          "swcdn.apple.com"
+          "swdist.apple.com"
+          "lens.l.google.com"
+          "stun.l.google.com"
+          "na.b.g-tun.com"
+          "+.nflxvideo.net"
+          "*.square-enix.com"
+          "*.finalfantasyxiv.com"
+          "*.ffxiv.com"
+          "*.ff14.sdo.com"
+          "ff.dorado.sdo.com"
+          "*.mcdn.bilivideo.cn"
+          "+.media.dssott.com"
+          "shark007.net"
+          "Mijia Cloud"
+          "+.market.xiaomi.com"
+          "+.cmbchina.com"
+          "+.cmbimg.com"
+          "adguardteam.github.io"
+          "adrules.top"
+          "anti-ad.net"
+          "local.adguard.org"
+          "static.adtidy.org"
+          "+.sandai.net"
+          "+.n0808.com"
+          "+.3gppnetwork.org"
+          "+.uu.163.com"
+          "ps.res.netease.com"
+          "+.oray.com"
+          "+.orayimg.com"
+          "+.gcloudcs.com"
+          "+.gcloudsdk.com"
+          "rule-set:geosite-cn"
         ];
       };
-      nameserver = [
-        "https://dns.alidns.com/dns-query"
-        "https://doh.pub/dns-query"
-      ];
-      fallback = [
-        "https://1.0.0.1/dns-query"
-        "https://8.8.4.4/dns-query"
-        "https://doh.opendns.com/dns-query"
-      ];
-      fallback-filter = {
-        geoip = true;
-        domain = [
-          "+.bing.com"
-          "+.linkedin.com"
-        ];
-      };
-    };
     hosts = {
       "time.android.com" = "203.107.6.88";
       "time.facebook.com" = "203.107.6.88";
