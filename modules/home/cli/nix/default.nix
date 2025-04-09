@@ -23,6 +23,7 @@ args.module (
       "nvd"
       "nvfetcher"
       "toml2nix"
+      "attic-client"
       # keep-sorted end
     ];
     snowPkgs = [

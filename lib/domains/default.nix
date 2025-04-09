@@ -39,6 +39,7 @@ let
     "nix-serve"
     "memos"
     "qd"
+    "atticd"
     # keep-sorted end
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {

@@ -18,6 +18,7 @@ in
     nh = enabled;
     sops-nix = enabled // {
       ssh = enabled;
+      atticd = enabled;
     };
     nfs = enabled;
     caddy = enabled;
@@ -52,6 +53,9 @@ in
     komga = enabled;
     postgresqlBackup = enabled;
     memos = enabled;
+    atticd = enabled // {
+      port = 5320;
+    };
     docker =
       let
         nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
