@@ -584,16 +584,16 @@
   };
   dela = {
     pname = "dela";
-    version = "2f9ab0e5bb2bd88c3d06845bb89121dbce287a38";
+    version = "3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "2f9ab0e5bb2bd88c3d06845bb89121dbce287a38";
+      rev = "3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56";
       fetchSubmodules = false;
-      sha256 = "sha256-CmcL76Xmcdtf+EB9M7ZQLsG+45hfYpuZX6qmZ+aUe4Y=";
+      sha256 = "sha256-3bJB72n8q3m4EeokXdD3eYLD9s9R4nGtboVTsVnukEk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-2f9ab0e5bb2bd88c3d06845bb89121dbce287a38/Cargo.lock;
+      lockFile = ./dela-3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56/Cargo.lock;
       outputHashes = {
         
       };
@@ -859,15 +859,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "6b23437df7e77910e92a8d76898b2c66bf9095fa";
+    version = "36bb5eab55e97c1decd10e6ecaa2ceee6c50b272";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "6b23437df7e77910e92a8d76898b2c66bf9095fa";
+      rev = "36bb5eab55e97c1decd10e6ecaa2ceee6c50b272";
       fetchSubmodules = false;
-      sha256 = "sha256-Hthc3OQ+IC7IIwZbAlYM0HtbY3LI0zg40Q7TgKwe4vk=";
+      sha256 = "sha256-2x+LLNpQkTd/5rOrWNisNPgfgO+6VRrNtCg95ctLqQk=";
     };
-    date = "2025-04-08";
+    date = "2025-04-09";
   };
   downdoc = {
     pname = "downdoc";
@@ -2476,15 +2476,15 @@
   };
   qman = {
     pname = "qman";
-    version = "7fc468b267f28bad6424f1d84c34c1b4b3e99e89";
+    version = "9d2539e78ff11d5c09c4bca7da3779ffd21787aa";
     src = fetchFromGitHub {
       owner = "plp13";
       repo = "qman";
-      rev = "7fc468b267f28bad6424f1d84c34c1b4b3e99e89";
+      rev = "9d2539e78ff11d5c09c4bca7da3779ffd21787aa";
       fetchSubmodules = false;
-      sha256 = "sha256-ruZKayoeau1W/Qz8KYEDk+omNp4gUWh0HHmbj4yI7vU=";
+      sha256 = "sha256-cLRmXvg/sOg0va3CYi7pWyLI7FwDWDyg3XhbOf7TI6I=";
     };
-    date = "2025-04-07";
+    date = "2025-04-09";
   };
   quartz = {
     pname = "quartz";
@@ -2903,6 +2903,17 @@
       rev = "v0.6.14";
       fetchSubmodules = false;
       sha256 = "sha256-p85b66BizxN2z1+TSzT8ctzRkVM8C/ZigibioLwYvu0=";
+    };
+  };
+  soundfx = {
+    pname = "soundfx";
+    version = "1.1.3";
+    src = fetchFromGitHub {
+      owner = "rse";
+      repo = "soundfx";
+      rev = "1.1.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-oUWXRMD1UZxYbczAu/b2DugG9bTDNLi7cdHc/5Hp+f4=";
     };
   };
   sprite-dicing = {
@@ -3546,18 +3557,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202504072213";
+    version = "202504082213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504072213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504082213/geoip.dat";
       sha256 = "sha256-A4OXGrRSvhslqsb23TCXHOAaHs5tTSxVHiQMTY6rvIc=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202504072213";
+    version = "202504082213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504072213/geosite.dat";
-      sha256 = "sha256-RACDLDa+PKc1EkvDs6/Y8izSSNu/uKebUfa43nteFxY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504082213/geosite.dat";
+      sha256 = "sha256-0PF8DEmhMX2Z95zE2t2K8jH7paWeYULcUlWDBS8mV1A=";
     };
   };
   vim-auto-save = {
