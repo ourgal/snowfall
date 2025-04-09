@@ -8,6 +8,7 @@ args.module (
       "btop"
       "gotop"
       "htop"
+      "top"
       # keep-sorted end
     ];
     nvtopPkgs = "full";
