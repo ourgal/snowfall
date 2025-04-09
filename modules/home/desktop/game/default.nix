@@ -10,6 +10,7 @@ args.module (
       "moonlight-qt"
       "prismlauncher"
       "wine"
+      "retroarch"
       # keep-sorted end
     ];
   }
