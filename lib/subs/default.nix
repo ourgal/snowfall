@@ -23,159 +23,233 @@ in
         _: v: (!(v ? broken) || v.broken == false) && (v ? enable && v.enable == true)
       );
       updateInterval = 6;
+      mihomoSupport = {
+        free-trojan = {
+          name = "free-trojan";
+          url = mkUrl {
+            user = "barry-far";
+            repo = "V2ray-Configs";
+            branch = "main";
+            path = "Splitted-By-Protocol/trojan.txt";
+          };
+          inherit updateInterval;
+        };
+        free-vmess = {
+          name = "free-vmess";
+          url = mkUrl {
+            user = "barry-far";
+            repo = "V2ray-Configs";
+            branch = "main";
+            path = "Splitted-By-Protocol/vmess.txt";
+          };
+          inherit updateInterval;
+        };
+        openproxylist = {
+          name = "openproxylist";
+          url = mkUrl {
+            user = "roosterkid";
+            repo = "openproxylist";
+            branch = "main";
+            path = "V2RAY_BASE64.txt";
+          };
+          inherit updateInterval;
+        };
+        yudou66 = {
+          name = "yudou66";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/yudou66.txt";
+          };
+          inherit updateInterval;
+        };
+        clashmeta = {
+          name = "clashmeta";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/clashmeta.txt";
+          };
+          inherit updateInterval;
+        };
+        ndnode = {
+          name = "ndnode";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/ndnode.txt";
+          };
+          inherit updateInterval;
+        };
+        nodev2ray = {
+          name = "nodev2ray";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/nodev2ray.txt";
+          };
+          inherit updateInterval;
+        };
+        nodefree = {
+          name = "nodefree";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/nodefree.txt";
+          };
+          inherit updateInterval;
+        };
+        v2rayshare = {
+          name = "v2rayshare";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/v2rayshare.txt";
+          };
+          inherit updateInterval;
+        };
+        wenode = {
+          name = "wenode";
+          url = mkUrl {
+            user = "Barabama";
+            repo = "FreeNodes";
+            branch = "main";
+            path = "nodes/wenode.txt";
+          };
+          inherit updateInterval;
+        };
+        V2RayAggregator_public = {
+          name = "V2RayAggregator_public";
+          url = mkUrl {
+            user = "mahdibland";
+            repo = "ShadowsocksAggregator";
+            branch = "master";
+            path = "Eternity";
+          };
+          inherit updateInterval;
+        };
+        free18 = {
+          name = "free18";
+          url = mkUrl {
+            user = "free18";
+            repo = "v2ray";
+            branch = "master";
+            path = "v.txt";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+      };
     in
-    filter {
-      free-servers = {
-        name = "free-servers";
-        url = mkUrl {
-          user = "Pawdroid";
-          repo = "Free-servers";
-          branch = "main";
-          path = "sub";
+    filter (
+      mihomoSupport
+      // {
+        free-servers = {
+          name = "free-servers";
+          url = mkUrl {
+            user = "Pawdroid";
+            repo = "Free-servers";
+            branch = "main";
+            path = "sub";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      free-vless = {
-        name = "free-vless";
-        url = mkUrl {
-          user = "barry-far";
-          repo = "V2ray-Configs";
-          branch = "main";
-          path = "Splitted-By-Protocol/vless.txt";
+        free-vless = {
+          name = "free-vless";
+          url = mkUrl {
+            user = "barry-far";
+            repo = "V2ray-Configs";
+            branch = "main";
+            path = "Splitted-By-Protocol/vless.txt";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-        enable = true;
-      };
-      awesome-vpn = {
-        name = "awesome-vpn";
-        url = mkUrl {
-          user = "awesome-vpn";
-          repo = "awesome-vpn";
-          branch = "master";
-          path = "all";
+        free-ss = {
+          name = "free-ss";
+          url = mkUrl {
+            user = "barry-far";
+            repo = "V2ray-Configs";
+            branch = "main";
+            path = "Splitted-By-Protocol/ss.txt";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      free18 = {
-        name = "free18";
-        url = mkUrl {
-          user = "free18";
-          repo = "v2ray";
-          branch = "master";
-          path = "v.txt";
+        awesome-vpn = {
+          name = "awesome-vpn";
+          url = mkUrl {
+            user = "awesome-vpn";
+            repo = "awesome-vpn";
+            branch = "master";
+            path = "all";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      yudou66 = {
-        name = "yudou66";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/yudou66.txt";
+        V2RayAggregator_airports = {
+          name = "V2RayAggregator_airports";
+          url = mkUrl {
+            user = "mahdibland";
+            repo = "ShadowsocksAggregator";
+            branch = "master";
+            path = "EternityAir";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      clashmeta = {
-        name = "clashmeta";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/clashmeta.txt";
+        ".proxy" = {
+          name = ".prorxy";
+          url = mkUrl {
+            user = "mheidari98";
+            repo = ".proxy";
+            branch = "main";
+            path = "vless";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      ndnode = {
-        name = "ndnode";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/ndnode.txt";
+        xray-proxy-grabber-telegram = {
+          name = "xray-proxy-grabber-telegram";
+          url = mkUrl {
+            user = "MrMohebi";
+            repo = "xray-proxy-grabber-telegram";
+            branch = "master";
+            path = "collected-proxies/row-url/all.txt";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      nodev2ray = {
-        name = "nodev2ray";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/nodev2ray.txt";
+        node = {
+          name = "node";
+          url = mkUrl {
+            user = "Vauth";
+            repo = "node";
+            branch = "main";
+            path = "Main";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      nodefree = {
-        name = "nodefree";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/nodefree.txt";
+        proxy-minging = {
+          name = "proxy-minging";
+          url = mkUrl {
+            user = "yitong2333";
+            repo = "proxy-minging";
+            branch = "main";
+            path = "v2ray.txt";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      v2rayshare = {
-        name = "v2rayshare";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/v2rayshare.txt";
+        V2rayCollector_Py = {
+          name = "V2rayCollector_Py";
+          url = mkUrl {
+            user = "MhdiTaheri";
+            repo = "V2rayCollector_Py";
+            branch = "main";
+            path = "sub/Mix/mix.txt";
+          };
+          inherit updateInterval;
         };
-        inherit updateInterval;
-      };
-      wenode = {
-        name = "wenode";
-        url = mkUrl {
-          user = "Barabama";
-          repo = "FreeNodes";
-          branch = "main";
-          path = "nodes/wenode.txt";
-        };
-        inherit updateInterval;
-      };
-      openproxylist = {
-        name = "openproxylist";
-        url = mkUrl {
-          user = "roosterkid";
-          repo = "openproxylist";
-          branch = "main";
-          path = "V2RAY_BASE64.txt";
-        };
-        inherit updateInterval;
-        enable = true;
-      };
-      V2RayAggregator_public = {
-        name = "V2RayAggregator_public";
-        url = mkUrl {
-          user = "mahdibland";
-          repo = "ShadowsocksAggregator";
-          branch = "master";
-          path = "Eternity";
-        };
-        inherit updateInterval;
-      };
-      V2RayAggregator_airports = {
-        name = "V2RayAggregator_airports";
-        url = mkUrl {
-          user = "mahdibland";
-          repo = "ShadowsocksAggregator";
-          branch = "master";
-          path = "EternityAir";
-        };
-        inherit updateInterval;
-      };
-      ".proxy" = {
-        name = ".prorxy";
-        url = mkUrl {
-          user = "mheidari98";
-          repo = ".proxy";
-          branch = "main";
-          path = "vless";
-        };
-        inherit updateInterval;
-      };
-    };
+      }
+    );
 }
