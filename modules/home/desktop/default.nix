@@ -11,7 +11,6 @@ args.module (
       "chat"
       "document"
       "flashcard"
-      "game"
       "image"
       "math"
       "search"

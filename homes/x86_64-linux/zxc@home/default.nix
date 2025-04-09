@@ -13,6 +13,7 @@ in
     desktop = enabled // {
       editor = enabled;
       flatpak = enabled;
+      game = enabled;
     };
     dev = enabled;
   };

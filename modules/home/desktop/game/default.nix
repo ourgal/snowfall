@@ -11,6 +11,7 @@ args.module (
       "prismlauncher"
       "wine"
       "retroarch"
+      "lutris"
       # keep-sorted end
     ];
   }
