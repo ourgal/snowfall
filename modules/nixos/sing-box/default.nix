@@ -11,7 +11,6 @@ let
     mkOpt'
     cfgNixos
     enabled
-    freeSubs
     domainBlackList
     domainWhiteList
     fakeIpExclude
@@ -26,6 +25,7 @@ let
     mkProvider
     mkFirewall
     ;
+  freeSubs = lib.${namespace}.freeSubs { isMihomo = false; };
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   apiPort = 9999;

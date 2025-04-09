@@ -1,8 +1,16 @@
-{ lib, ... }:
+{ lib, namespace, ... }:
+let
+  inherit (lib.${namespace}) domains;
+in
 {
   freeSubs =
+    {
+      isMihomo ? false,
+    }:
     let
-      prefix = "https://fastly.jsdelivr.net/gh";
+      subconverter = "http://${domains.subconverter}/sub?target=clash&config=config/ACL4SSR_Mini.ini&url=";
+      cdn = "https://fastly.jsdelivr.net/gh";
+      prefix = if isMihomo then subconverter + cdn else cdn;
       mkUrl =
         {
           user,

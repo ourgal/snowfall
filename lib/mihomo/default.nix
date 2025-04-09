@@ -84,7 +84,7 @@ in
           "knjc"
           "nano"
         ];
-        freeSubsTags = attrNames lib.${namespace}.freeSubs;
+        freeSubsTags = attrNames (lib.${namespace}.freeSubs { isMihomo = true; });
         freeSubs = map (v: mkSubProxyGroup v "select") freeSubsTags;
       in
       rec {

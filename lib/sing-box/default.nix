@@ -10,7 +10,9 @@ let
       inherit tag;
     }
     // lib.optionalAttrs (type == "urltest") { tolerance = 100; };
-  freeSubs = map (x: mkOutboundSub x.name "selector") (attrValues lib.${namespace}.freeSubs);
+  freeSubs = map (x: mkOutboundSub x.name "selector") (
+    attrValues lib.${namespace}.freeSubs { isMihomo = false; }
+  );
   subs = [
     (mkOutboundSub "knjc" "urltest")
     (mkOutboundSub "nano" "urltest")

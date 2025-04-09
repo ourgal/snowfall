@@ -13,11 +13,11 @@ let
     cfgNixos
     ip
     domain
-    freeSubs
     fakeIpExclude
     domainBlackList
     domainWhiteList
     ;
+  freeSubs = lib.${namespace}.freeSubs { isMihomo = true; };
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
   inherit (lib.${namespace}.sing-box) mkFirewall;
   inherit (builtins) mapAttrs toJSON map;
