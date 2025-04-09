@@ -22,6 +22,7 @@ args.module (
       "pcp"
       "portal"
       "rsync"
+      "screego" # TODO
       "sfz"
       "sharing"
       "simple-http-server"
