@@ -230,6 +230,7 @@ let
       ++ proxyGroups.subs
       ++ proxyGroups.freeSubs
       ++ [
+        proxyGroups.final
         proxyGroups.ai
         proxyGroups.trackerslist
         proxyGroups.game
@@ -240,7 +241,6 @@ let
         proxyGroups.privateip
         proxyGroups.proxy
         proxyGroups.telegram
-        proxyGroups.final
         proxyGroups.direct
       ]
       ++ proxyGroups.price
