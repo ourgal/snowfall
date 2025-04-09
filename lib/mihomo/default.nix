@@ -65,7 +65,18 @@ in
       // (go "ipcidr" [
         "privateip"
         "telegramip"
-      ]);
+      ])
+      // {
+        geosite-cn = {
+          tag = "geosite-cn";
+          type = "http";
+          behavior = "domain";
+          format = "mrs";
+          proxy = "DIRECT";
+          path = "./rules/geosite-cn.mrs";
+          url = "https://fastly.jsdelivr.net/gh/juewuy/ShellCrash@master/bin/geodata/mrs_geosite_cn.mrs";
+        };
+      };
     proxyGroups =
       let
         subs = map (v: mkSubProxyGroup v "url-test") subsTags;

@@ -32,8 +32,8 @@ in
       pppd = enabled // {
         inherit wan lan;
       };
-      sing-box = enabled;
-      mihomo = disabled;
+      sing-box = disabled;
+      mihomo = enabled;
       temp-hosts = enabled;
       sops-nix = enabled // {
         router = enabled;
