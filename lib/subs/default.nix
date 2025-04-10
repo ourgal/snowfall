@@ -220,6 +220,7 @@ in
             path = "collected-proxies/row-url/all.txt";
           };
           inherit updateInterval;
+          enable = true;
         };
         node = {
           name = "node";
@@ -230,6 +231,7 @@ in
             path = "Main";
           };
           inherit updateInterval;
+          enable = true;
         };
         proxy-minging = {
           name = "proxy-minging";
@@ -240,6 +242,7 @@ in
             path = "v2ray.txt";
           };
           inherit updateInterval;
+          enable = true;
         };
         V2rayCollector_Py = {
           name = "V2rayCollector_Py";
@@ -250,6 +253,73 @@ in
             path = "sub/Mix/mix.txt";
           };
           inherit updateInterval;
+          enable = true;
+        };
+        Proxy-sorter = {
+          name = "Proxy-sorter";
+          url = mkUrl {
+            user = "Surfboardv2ray";
+            repo = "Proxy-sorter";
+            branch = "main";
+            path = "submerge/converted.txt";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+        free-proxy-list_vless = {
+          name = "free-proxy-list_vless";
+          url = mkUrl {
+            user = "gfpcom";
+            repo = "free-proxy-list";
+            branch = "main";
+            path = "list/vless.txt";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+        free-proxy-list_vmess = {
+          name = "free-proxy-list_vmess";
+          url = mkUrl {
+            user = "gfpcom";
+            repo = "free-proxy-list";
+            branch = "main";
+            path = "list/vmess.txt";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+        free-proxy-list_trojan = {
+          name = "free-proxy-list_trojan";
+          url = mkUrl {
+            user = "gfpcom";
+            repo = "free-proxy-list";
+            branch = "main";
+            path = "list/trojan.txt";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+        TGParse = {
+          name = "TGParse";
+          url = mkUrl {
+            user = "Surfboardv2ray";
+            repo = "TGParse";
+            branch = "main";
+            path = "splitted/mixed";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
+        Mineral = {
+          name = "Mineral";
+          url = mkUrl {
+            user = "LalatinaHub";
+            repo = "Mineral";
+            branch = "master";
+            path = "result/nodes";
+          };
+          inherit updateInterval;
+          enable = true;
         };
       }
     );
