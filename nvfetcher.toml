@@ -1383,3 +1383,7 @@ fetch.url = "https://github.com/haishanh/yacd/releases/download/$ver/yacd.tar.xz
 [soundfx]
 src.github_tag = "rse/soundfx"
 fetch.github = "rse/soundfx"
+
+[emacs-zeal-at-point]
+src.git = "https://github.com/jinzhu/zeal-at-point"
+fetch.github = "jinzhu/zeal-at-point"
