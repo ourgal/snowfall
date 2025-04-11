@@ -584,21 +584,21 @@
   };
   dela = {
     pname = "dela";
-    version = "3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56";
+    version = "bc1112efbc32d545bc50132535142c3b96a3a935";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56";
+      rev = "bc1112efbc32d545bc50132535142c3b96a3a935";
       fetchSubmodules = false;
-      sha256 = "sha256-3bJB72n8q3m4EeokXdD3eYLD9s9R4nGtboVTsVnukEk=";
+      sha256 = "sha256-CaGEVObNDVyGIrli2Q+PNWVPvQkPGnG3MfDiaPqZXs0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-3ff75b0aaa7daa071e97d6ec24a76969c1eb4c56/Cargo.lock;
+      lockFile = ./dela-bc1112efbc32d545bc50132535142c3b96a3a935/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-04-08";
+    date = "2025-04-10";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -859,15 +859,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "36bb5eab55e97c1decd10e6ecaa2ceee6c50b272";
+    version = "de2460d1b1d495400e54ea8fdc5d2bcc6e0821f1";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "36bb5eab55e97c1decd10e6ecaa2ceee6c50b272";
+      rev = "de2460d1b1d495400e54ea8fdc5d2bcc6e0821f1";
       fetchSubmodules = false;
-      sha256 = "sha256-2x+LLNpQkTd/5rOrWNisNPgfgO+6VRrNtCg95ctLqQk=";
+      sha256 = "sha256-I4w/BErMqSmklmG2LiqhyIIRUN4SJF3FpCddide/+1Y=";
     };
-    date = "2025-04-09";
+    date = "2025-04-11";
   };
   downdoc = {
     pname = "downdoc";
@@ -1023,6 +1023,18 @@
       sha256 = "sha256-TXMa7fFnDqoj/5dt4ls2CXybBxjMnSDNI67z9nAk7VA=";
     };
     date = "2024-08-14";
+  };
+  emacs-zeal-at-point = {
+    pname = "emacs-zeal-at-point";
+    version = "0fc3263f44e95acd3e9d91057677621ce4d297ee";
+    src = fetchFromGitHub {
+      owner = "jinzhu";
+      repo = "zeal-at-point";
+      rev = "0fc3263f44e95acd3e9d91057677621ce4d297ee";
+      fetchSubmodules = false;
+      sha256 = "sha256-zaNp0tkYDimnzHQ6Vzsbew8yDbzQOQ6Hca99L2/iCSs=";
+    };
+    date = "2018-02-01";
   };
   emacs-zoxide = {
     pname = "emacs-zoxide";
@@ -1709,16 +1721,16 @@
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.11.0";
+    version = "v1.11.1";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.11.0";
+      rev = "v1.11.1";
       fetchSubmodules = false;
-      sha256 = "sha256-soiF4JCTOI/3SE53FdyLE0+qF80F0VVklMuUkCVps1g=";
+      sha256 = "sha256-/wPRCqHvRiH8snD6D9qyk7YdbchOi0BUz/kI5EitOls=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./hexpatch-v1.11.0/Cargo.lock;
+      lockFile = ./hexpatch-v1.11.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -2476,15 +2488,15 @@
   };
   qman = {
     pname = "qman";
-    version = "9d2539e78ff11d5c09c4bca7da3779ffd21787aa";
+    version = "99f46bc5656d7762c6f0e5b99c865e1c1c4ec8c0";
     src = fetchFromGitHub {
       owner = "plp13";
       repo = "qman";
-      rev = "9d2539e78ff11d5c09c4bca7da3779ffd21787aa";
+      rev = "99f46bc5656d7762c6f0e5b99c865e1c1c4ec8c0";
       fetchSubmodules = false;
-      sha256 = "sha256-cLRmXvg/sOg0va3CYi7pWyLI7FwDWDyg3XhbOf7TI6I=";
+      sha256 = "sha256-JKzuYk9Jh/KB/VPOKu1NygVbD0nItBx/3MS3OIChYA4=";
     };
-    date = "2025-04-09";
+    date = "2025-04-10";
   };
   quartz = {
     pname = "quartz";
@@ -2802,21 +2814,21 @@
   };
   shh = {
     pname = "shh";
-    version = "08f880c16064126c11a4671898f98d526c4cb930";
+    version = "a625d11d4edbc14eb81c07a9ab197375ae4e989f";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "08f880c16064126c11a4671898f98d526c4cb930";
+      rev = "a625d11d4edbc14eb81c07a9ab197375ae4e989f";
       fetchSubmodules = false;
-      sha256 = "sha256-snyIof6yGgMWKsR8nmIdeN4LzJw5czAvqOu8nS7NCgc=";
+      sha256 = "sha256-XTktLD0qIUv9jWGVPT6RScIF0CKVTQ8xjk1DCFJh+lw=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./shh-08f880c16064126c11a4671898f98d526c4cb930/Cargo.lock;
+      lockFile = ./shh-a625d11d4edbc14eb81c07a9ab197375ae4e989f/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-03-12";
+    date = "2025-04-10";
   };
   shipit = {
     pname = "shipit";
@@ -2831,21 +2843,21 @@
   };
   simple-completion-language-server = {
     pname = "simple-completion-language-server";
-    version = "53e882e624d057a69d339b6349ca2159443903cb";
+    version = "8ade648e1471131c476f38158bf25a0372330946";
     src = fetchFromGitHub {
       owner = "estin";
       repo = "simple-completion-language-server";
-      rev = "53e882e624d057a69d339b6349ca2159443903cb";
+      rev = "8ade648e1471131c476f38158bf25a0372330946";
       fetchSubmodules = false;
-      sha256 = "sha256-qqP5eymu7fCDsXQ6iyZdyc/GpbzPBZMZ28Opro7Zrc0=";
+      sha256 = "sha256-SuhWzdF6ikhzL7YqczVFsXHA7E+DXfHEvAYPmuSexXM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./simple-completion-language-server-53e882e624d057a69d339b6349ca2159443903cb/Cargo.lock;
+      lockFile = ./simple-completion-language-server-8ade648e1471131c476f38158bf25a0372330946/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-04-08";
+    date = "2025-04-10";
   };
   simple-websocket-server = {
     pname = "simple-websocket-server";
@@ -3190,15 +3202,15 @@
   };
   tmux-buoyshell = {
     pname = "tmux-buoyshell";
-    version = "d3f321f7ff6aa651a4d6cd8a7a247620e13ed2ad";
+    version = "c18860ba02e487effcbff99202652e290c565a7b";
     src = fetchFromGitHub {
       owner = "cnavajas4";
       repo = "tmux-buoyshell";
-      rev = "d3f321f7ff6aa651a4d6cd8a7a247620e13ed2ad";
+      rev = "c18860ba02e487effcbff99202652e290c565a7b";
       fetchSubmodules = false;
-      sha256 = "sha256-WCyCI8km063umZLaHaMQNGqRWCToCFTOLz5gDeMHkxI=";
+      sha256 = "sha256-5E2+RQuIsS7QOySZSONKCtqpyyO6ei+qXzDtrj7ePCY=";
     };
-    date = "2025-04-08";
+    date = "2025-04-10";
   };
   tmux-continuum = {
     pname = "tmux-continuum";
@@ -3557,18 +3569,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202504082213";
+    version = "202504102214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504082213/geoip.dat";
-      sha256 = "sha256-A4OXGrRSvhslqsb23TCXHOAaHs5tTSxVHiQMTY6rvIc=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geoip.dat";
+      sha256 = "sha256-OTa3AF7g6ijQldJeHL3dzypNniML1IIUgqpAxGDt4B4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202504082213";
+    version = "202504102214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504082213/geosite.dat";
-      sha256 = "sha256-0PF8DEmhMX2Z95zE2t2K8jH7paWeYULcUlWDBS8mV1A=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geosite.dat";
+      sha256 = "sha256-dF7VqhevH0UAYa26oFDc5VBJ6ntzXJ2oKDvFqFulgMw=";
     };
   };
   vim-auto-save = {
@@ -3914,10 +3926,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.76.2";
+    version = "v1.77.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.76.2/dist.zip";
-      sha256 = "sha256-uW4gOSFjeNGgxZz45JQZ8oTSLRi07LR5SYjm1yCuDGI=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.77.0/dist.zip";
+      sha256 = "sha256-/WPBfd4JttHncR1z5QOgi58nMKrAvIsAl1tVc3gruGE=";
     };
   };
 }
