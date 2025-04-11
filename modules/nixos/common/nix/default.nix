@@ -11,22 +11,11 @@ let
     enableOpt
     disabled
     enabled
-    mkOpt'
-    cfgNixos
     ;
-  cfg = cfgNixos config.${namespace} ./.;
-  mirror =
-    if cfg.mirror == "nju" then
-      "https://mirror.nju.edu.cn/nix-channels/store"
-    else
-      "https://mirrors.cernet.edu.cn/nix-channels/store";
   value = {
     nix =
       let
-        mirrors = [
-          "${mirror}?priority=100"
-          "https://cache.nixos.org?priority=99"
-        ];
+        mirrors = [ "https://cache.nixos.org?priority=100" ];
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
@@ -72,20 +61,7 @@ let
     };
     systemd.services.nix-daemon.environment = lib.${namespace}.proxy.go;
   };
-  extraOpts = {
-    mirror = mkOpt' (lib.types.enum [
-      "cernet"
-      "nju"
-    ]) "nju";
-  };
   path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value path args; };
 in
 nixosModule _args
