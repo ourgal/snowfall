@@ -102,6 +102,7 @@ args.module (
         # keep-sorted start
         "android"
         "ansible"
+        "blog"
         "cpp"
         "editorconfig"
         "efm"
