@@ -22,8 +22,8 @@ args.module (
         # keep-sorted start
         "alert"
         "annotate"
-        "eglot-booster"
         "dotenv-mode"
+        "eglot-booster"
         "git-time-metric"
         "magit-delta"
         "magit-stats"
@@ -33,6 +33,7 @@ args.module (
         "nov"
         "pangu-spacing"
         "perltidy"
+        "zeal-at-point"
         "zoxide"
         # keep-sorted end
       ];
