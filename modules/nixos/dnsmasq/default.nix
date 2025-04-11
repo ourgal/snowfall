@@ -12,7 +12,9 @@ let
     lan
     getDirname
     mkFireholRule
+    redirectDomains
     ;
+  inherit (builtins) map;
   cfg = cfgNixos config.${namespace} ./.;
   dhcpPort = [
     67
@@ -68,7 +70,7 @@ let
         expand-hosts = true;
 
         no-hosts = false;
-        address = "/router.lan/${lan}.1";
+        cname = map (v: "${v.from},${v.to}") redirectDomains;
       };
     };
     networking.firewall = {

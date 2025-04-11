@@ -220,7 +220,6 @@ in
             path = "collected-proxies/row-url/all.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         node = {
           name = "node";
@@ -231,7 +230,6 @@ in
             path = "Main";
           };
           inherit updateInterval;
-          enable = true;
         };
         proxy-minging = {
           name = "proxy-minging";
@@ -242,7 +240,6 @@ in
             path = "v2ray.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         V2rayCollector_Py = {
           name = "V2rayCollector_Py";
@@ -253,7 +250,6 @@ in
             path = "sub/Mix/mix.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         Proxy-sorter = {
           name = "Proxy-sorter";
@@ -264,7 +260,6 @@ in
             path = "submerge/converted.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         free-proxy-list_vless = {
           name = "free-proxy-list_vless";
@@ -275,7 +270,6 @@ in
             path = "list/vless.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         free-proxy-list_vmess = {
           name = "free-proxy-list_vmess";
@@ -286,7 +280,6 @@ in
             path = "list/vmess.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         free-proxy-list_trojan = {
           name = "free-proxy-list_trojan";
@@ -297,7 +290,6 @@ in
             path = "list/trojan.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         TGParse = {
           name = "TGParse";
@@ -308,7 +300,6 @@ in
             path = "splitted/mixed";
           };
           inherit updateInterval;
-          enable = true;
         };
         Mineral = {
           name = "Mineral";
@@ -319,7 +310,6 @@ in
             path = "result/nodes";
           };
           inherit updateInterval;
-          enable = true;
         };
       }
     );

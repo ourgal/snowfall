@@ -58,8 +58,11 @@ let
           "tls://223.5.5.5"
           "tls://114.114.114.114"
         ];
+        systemDns = [ "system" ];
         directDomains = [ ];
-        directDomainsPolicy = foldl' (acc: v: acc // { "+.${v}" = defaultDns; }) { } directDomains;
+        directDomainsPolicy =
+          (foldl' (acc: v: acc // { "+.${v}" = defaultDns; }) { } directDomains)
+          // (foldl' (acc: v: acc // { "+.${v.from}" = systemDns; }) { } lib.${namespace}.redirectDomains);
       in
       {
         enable = true;
@@ -260,7 +263,7 @@ let
         "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
         "MATCH,🐟 漏网之鱼"
       ];
-    rule-providers = lib.attrsets.filterAttrsRecursive (n: v: n != "tag") RuleProviders;
+    rule-providers = lib.attrsets.filterAttrsRecursive (n: _v: n != "tag") RuleProviders;
   };
   value = {
     networking = {

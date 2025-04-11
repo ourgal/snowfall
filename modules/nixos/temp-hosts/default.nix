@@ -2,7 +2,8 @@ args:
 let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule;
-  lightnovel = [
+  inherit (builtins) foldl';
+  cloudflare = [
     "2606:4700:20:0:0:0:681a:c0"
     "2606:4700:20:0:0:0:681a:1c0"
     "2606:4700:20:0:0:0:ac43:46ba"
@@ -16,15 +17,22 @@ let
     // {
       ${x} =
         let
-          domain = "lightnovel.us";
+          domains = [
+            "lightnovel.us"
+            "lightnovel.fun"
+          ];
         in
-        [
-          "www.${domain}"
-          "res.${domain}"
-          "api.${domain}"
-        ];
+        foldl' (
+          acc: v:
+          acc
+          ++ [
+            "www.${v}"
+            "res.${v}"
+            "api.${v}"
+          ]
+        ) [ ] domains;
     }
-  ) { } lightnovel;
+  ) { } cloudflare;
   value = {
     networking.hosts = lightnovelHosts;
   };

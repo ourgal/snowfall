@@ -12,7 +12,7 @@ let
     }
     // lib.optionalAttrs (type == "urltest") { tolerance = 100; };
   freeSubs = map (x: mkOutboundSub x.name "selector") (
-    attrValues lib.${namespace}.freeSubs { isMihomo = false; }
+    attrValues (lib.${namespace}.freeSubs { isMihomo = false; })
   );
   subs = [
     (mkOutboundSub "knjc" "urltest")

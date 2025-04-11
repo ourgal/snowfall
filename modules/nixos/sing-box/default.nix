@@ -25,6 +25,7 @@ let
     mkProvider
     mkFirewall
     ;
+  inherit (builtins) map attrValues;
   freeSubs = lib.${namespace}.freeSubs { isMihomo = false; };
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
@@ -43,7 +44,9 @@ let
         "time.android.com"
         "time.facebook.com"
       ];
-      domain_suffix = lib.strings.splitString "\n" (lib.strings.fileContents ./localDomain.key);
+      domain_suffix =
+        (lib.strings.splitString "\n" (lib.strings.fileContents ./localDomain.key))
+        ++ (map (v: v.from) lib.${namespace}.redirectDomains);
       server = dnsServers.hosts_local.tag;
     }
     {
@@ -66,7 +69,7 @@ let
       package = pkgs.${namespace}.sing-box-fork;
       settings = {
         dns = {
-          servers = builtins.attrValues dnsServers;
+          servers = attrValues dnsServers;
           rules = customdnsRules ++ dnsRules;
           final = dnsServers.proxy.tag;
           independent_cache = true;
@@ -79,7 +82,7 @@ let
         };
         route = {
           rules = customRouteRules ++ routeRules;
-          rule_set = builtins.attrValues ruleSet;
+          rule_set = attrValues ruleSet;
           final = outbounds.final.tag;
           auto_detect_interface = false;
           default_mark = routingMark;
@@ -140,7 +143,7 @@ let
         outbound_providers = [
           (mkProvider "nano" { _secret = config.sops.secrets."subs/nano".path; } 4)
           (mkProvider "knjc" { _secret = config.sops.secrets."subs/knjc".path; } 24)
-        ] ++ builtins.map (x: mkProvider x.name x.url x.updateInterval) (builtins.attrValues freeSubs);
+        ] ++ map (x: mkProvider x.name x.url x.updateInterval) (attrValues freeSubs);
       };
     };
     networking = {

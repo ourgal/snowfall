@@ -7,17 +7,27 @@ let
     "alist"
     "anki"
     "ariang"
+    "atticd"
     "atuin"
+    "calibre-web"
+    "cyberchef"
+    "dokuwiki"
     "dufs"
     "flaresolverr"
+    "gonic"
     "harmonia"
+    "immich"
     "jackett"
     "jellyfin"
     "kavita"
+    "komga"
+    "memos"
     "metacubexd"
     "miniflux"
     "navidrome"
+    "nix-serve"
     "pairdrop"
+    "qd"
     "rustypaste"
     "scrutiny"
     "searx"
@@ -25,21 +35,11 @@ let
     "sonarr"
     "subconverter"
     "syncthing"
+    "tiddlywiki"
     "transmission"
     "vaultwarden"
     "yacd"
     "zashboard"
-    "gonic"
-    "immich"
-    "cyberchef"
-    "dokuwiki"
-    "tiddlywiki"
-    "calibre-web"
-    "komga"
-    "nix-serve"
-    "memos"
-    "qd"
-    "atticd"
     # keep-sorted end
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
@@ -48,6 +48,12 @@ let
   fakeIpExclude = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
   domainBlackList = lib.strings.splitString "\n" (lib.strings.fileContents ./blacklist.key);
   domainWhiteList = lib.strings.splitString "\n" (lib.strings.fileContents ./whitelist.key);
+  redirectDomains = [
+    {
+      from = "lightnovel.us";
+      to = "lightnovel.fun";
+    }
+  ];
 in
 {
   inherit
@@ -56,5 +62,6 @@ in
     fakeIpExclude
     domainBlackList
     domainWhiteList
+    redirectDomains
     ;
 }
