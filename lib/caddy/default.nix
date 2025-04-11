@@ -73,7 +73,10 @@ in
             tls {
                 dns duckdns ${token}
             }
-            reverse_proxy http://${host}:${toString ports}'';
+            reverse_proxy http://${host}:${toString ports}
+
+            encode zstd gzip
+          '';
         }
       ) { } containerEnabled;
     in
