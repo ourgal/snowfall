@@ -64,7 +64,11 @@ let
           ];
           ipv6.addresses = [
             {
-              address = "fe08:aa:bb:cc::1";
+              address = "fe80:aa:bb:cc::1";
+              prefixLength = 64;
+            }
+            {
+              address = "fd5e:4f87:237::1";
               prefixLength = 64;
             }
           ];
