@@ -65,7 +65,6 @@ args.module (
         };
         fish = {
           plugins = lib.${namespace}.mkFishPlugins [ "fish-ranger-cd" ] pkgs;
-          shellAbbrs.ra = "ranger-cd";
         };
       };
     }
