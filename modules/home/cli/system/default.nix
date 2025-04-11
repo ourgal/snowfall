@@ -8,12 +8,11 @@ args.module (
       "cache"
       "ccsum"
       "debounce"
-      "quickbench"
       "is"
+      "quickbench"
       "recoverpy"
       "sequin"
       "servicer"
-      "shh"
       "wol"
       # keep-sorted end
     ];
