@@ -9,9 +9,11 @@ in
       isMihomo ? false,
     }:
     let
-      subconverter = "http://${domains.subconverter}/sub?target=clash&config=config/ACL4SSR_Mini.ini&url=";
+      subconverter = "http://${domains.subconverter}/sub?target=${
+        if isMihomo then "clash" else "singbox"
+      }&config=config/ACL4SSR_Mini.ini&url=";
       cdn = "https://fastly.jsdelivr.net/gh";
-      prefix = if isMihomo then subconverter + cdn else cdn;
+      prefix = subconverter + cdn;
       mkUrl =
         {
           user,
@@ -54,6 +56,7 @@ in
             path = "V2RAY_BASE64.txt";
           };
           inherit updateInterval;
+          enable = true;
         };
         yudou66 = {
           name = "yudou66";
