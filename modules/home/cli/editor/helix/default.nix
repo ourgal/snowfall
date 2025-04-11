@@ -443,7 +443,6 @@ args.module (
                 language-servers = [
                   "scls"
                   "yaml-language-server"
-                  "ansible-language-server"
                 ];
                 formatter = {
                   command = "yamlfix";
@@ -626,6 +625,45 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "ansible";
+                comment-token = "#";
+                file-types = [
+                  { glob = "playbooks/*.yaml"; }
+                  { glob = "playbooks/*.yml"; }
+                  { glob = "group_vars/*.yaml"; }
+                  { glob = "group_vars/*.yml"; }
+                  { glob = "host_vars/*.yaml"; }
+                  { glob = "host_vars/*.yml"; }
+                  { glob = "vars/*.yaml"; }
+                  { glob = "vars/*.yml"; }
+                  { glob = "defaults/*.yaml"; }
+                  { glob = "defaults/*.yml"; }
+                  { glob = "tasks/*.yaml"; }
+                  { glob = "tasks/*.yml"; }
+                  { glob = "handlers/*.yaml"; }
+                  { glob = "handlers/*.yml"; }
+                  { glob = "meta/*.yaml"; }
+                  { glob = "meta/*.yml"; }
+                ];
+                formatter = {
+                  command = "yamlfix";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+                grammar = "yaml";
+                indent = {
+                  tab-width = 2;
+                  unit = "  ";
+                };
+                injection-regex = "ansible";
+                language-servers = [
+                  "scls"
+                  "ansible-language-server"
+                ];
+                scope = "source.yaml";
+                shebangs = [ "ansible-playbook" ];
+              }
             ];
             language-server = {
               pyright = {
@@ -770,6 +808,10 @@ args.module (
         };
         "helix/external-snippets/github.com/rafamadriz/friendly-snippets.git" =
           pkgs._sources.friendly-snippets.src;
+        "helix/runtime/queries/ansible/highlights.scm" = "; inherits: yaml";
+        "helix/runtime/queries/ansible/indents.scm" = "; inherits: yaml";
+        "helix/runtime/queries/ansible/textobjects.scm" = "; inherits: yaml";
+        "helix/runtime/queries/ansible/injections.scm" = ''grammar = "yaml"'';
       };
       extraOpts = {
         broot = switch;
