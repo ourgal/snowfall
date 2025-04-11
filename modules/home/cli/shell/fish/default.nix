@@ -19,6 +19,9 @@ args.module (
       path = ./.;
       progs.fish = {
         interactiveShellInit = # fish
+          let
+            fileManager = "ranger";
+          in
           ''
             set fish_greeting
             scheme set tokyonight
@@ -28,6 +31,12 @@ args.module (
             slashslash plugin --unregister buck
             slashslash enable make
             ${__done_notification_command}
+
+            if test $fish_key_bindings = fish_vi_key_bindings
+              bind --mode insert \cf '${fileManager}; commandline -f cancel'
+            else
+              bind \cf '${fileManager}; commandline -f cancel'
+            end
           '';
         shellAbbrs = {
           sc = "systemctl";
