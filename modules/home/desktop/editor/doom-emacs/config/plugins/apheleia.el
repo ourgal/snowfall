@@ -7,3 +7,4 @@
 (set-formatter! 'fnlfmt '("fnlfmt" "-") :modes '(fennel-mode))
 (set-formatter! 'nixfmt '("nixfmt" "--strict" "-") :modes '(nix-mode))
 (set-formatter! 'taplo '("taplo" "fmt" "-") :modes '(conf-toml-mode))
+(set-formatter! 'yamlfix '("yamlfix" "-") :modes '(yaml-mode))
