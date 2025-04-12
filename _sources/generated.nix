@@ -2814,21 +2814,21 @@
   };
   shh = {
     pname = "shh";
-    version = "a625d11d4edbc14eb81c07a9ab197375ae4e989f";
+    version = "ca293dac64c6022d802439ad6bfeffb4490fca68";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "a625d11d4edbc14eb81c07a9ab197375ae4e989f";
+      rev = "ca293dac64c6022d802439ad6bfeffb4490fca68";
       fetchSubmodules = false;
-      sha256 = "sha256-XTktLD0qIUv9jWGVPT6RScIF0CKVTQ8xjk1DCFJh+lw=";
+      sha256 = "sha256-FvidwjNMeM/Y0fmEJke/JjCVZRnZ+MUCvE8Ehu5T/YE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./shh-a625d11d4edbc14eb81c07a9ab197375ae4e989f/Cargo.lock;
+      lockFile = ./shh-ca293dac64c6022d802439ad6bfeffb4490fca68/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-04-10";
+    date = "2025-04-11";
   };
   shipit = {
     pname = "shipit";
@@ -3320,6 +3320,18 @@
     };
     date = "2025-03-06";
   };
+  tmux-ssh-split = {
+    pname = "tmux-ssh-split";
+    version = "0be7da85c69858806f59c168cdf6734c978ef51f";
+    src = fetchFromGitHub {
+      owner = "ourgal";
+      repo = "tmux-ssh-split";
+      rev = "0be7da85c69858806f59c168cdf6734c978ef51f";
+      fetchSubmodules = false;
+      sha256 = "sha256-OyAY+qq4LDpi1qFL4RUoRErsTW+20Pr9mDHhjUQfAlY=";
+    };
+    date = "2025-04-12";
+  };
   tmux-tea = {
     pname = "tmux-tea";
     version = "345af747c36e94344cbb360310f1d746f1517b6a";
@@ -3569,18 +3581,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202504102214";
+    version = "202504112213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504112213/geoip.dat";
       sha256 = "sha256-OTa3AF7g6ijQldJeHL3dzypNniML1IIUgqpAxGDt4B4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202504102214";
+    version = "202504112213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geosite.dat";
-      sha256 = "sha256-dF7VqhevH0UAYa26oFDc5VBJ6ntzXJ2oKDvFqFulgMw=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504112213/geosite.dat";
+      sha256 = "sha256-FgyB5CL/lOGFnGaU1DSIZKCGe5LAqD1NL7cPGu0rWPw=";
     };
   };
   vim-auto-save = {
@@ -3897,21 +3909,21 @@
   };
   ynk = {
     pname = "ynk";
-    version = "a7eebd75f6179420207a9247f1524198880f8335";
+    version = "05349baaad56e6417c43f895c0af5602bc905f42";
     src = fetchFromGitHub {
       owner = "newtoallofthis123";
       repo = "ynk";
-      rev = "a7eebd75f6179420207a9247f1524198880f8335";
+      rev = "05349baaad56e6417c43f895c0af5602bc905f42";
       fetchSubmodules = false;
-      sha256 = "sha256-tEqrl8FGhojrrgru7R9Ttslla65q/AIYxAJJKCEINSk=";
+      sha256 = "sha256-wffkVnpGcMhxrz55SQ599PaaGRyxIVnMs8FeZYpLNK4=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./ynk-a7eebd75f6179420207a9247f1524198880f8335/Cargo.lock;
+      lockFile = ./ynk-05349baaad56e6417c43f895c0af5602bc905f42/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-01-06";
+    date = "2025-04-11";
   };
   ytui = {
     pname = "ytui";

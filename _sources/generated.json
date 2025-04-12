@@ -5038,11 +5038,11 @@
     "shh": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./shh-a625d11d4edbc14eb81c07a9ab197375ae4e989f/Cargo.lock",
+                "./shh-ca293dac64c6022d802439ad6bfeffb4490fca68/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-04-10",
+        "date": "2025-04-11",
         "extract": null,
         "name": "shh",
         "passthru": null,
@@ -5054,12 +5054,12 @@
             "name": null,
             "owner": "desbma",
             "repo": "shh",
-            "rev": "a625d11d4edbc14eb81c07a9ab197375ae4e989f",
-            "sha256": "sha256-XTktLD0qIUv9jWGVPT6RScIF0CKVTQ8xjk1DCFJh+lw=",
+            "rev": "ca293dac64c6022d802439ad6bfeffb4490fca68",
+            "sha256": "sha256-FvidwjNMeM/Y0fmEJke/JjCVZRnZ+MUCvE8Ehu5T/YE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a625d11d4edbc14eb81c07a9ab197375ae4e989f"
+        "version": "ca293dac64c6022d802439ad6bfeffb4490fca68"
     },
     "shipit": {
         "cargoLocks": null,
@@ -5909,6 +5909,27 @@
         },
         "version": "84b8e3dd5b7e10db793ac925e1e65fe204a4e47b"
     },
+    "tmux-ssh-split": {
+        "cargoLocks": null,
+        "date": "2025-04-12",
+        "extract": null,
+        "name": "tmux-ssh-split",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ourgal",
+            "repo": "tmux-ssh-split",
+            "rev": "0be7da85c69858806f59c168cdf6734c978ef51f",
+            "sha256": "sha256-OyAY+qq4LDpi1qFL4RUoRErsTW+20Pr9mDHhjUQfAlY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0be7da85c69858806f59c168cdf6734c978ef51f"
+    },
     "tmux-tea": {
         "cargoLocks": null,
         "date": "2024-09-10",
@@ -6360,9 +6381,9 @@
             "name": null,
             "sha256": "sha256-OTa3AF7g6ijQldJeHL3dzypNniML1IIUgqpAxGDt4B4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504112213/geoip.dat"
         },
-        "version": "202504102214"
+        "version": "202504112213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6373,11 +6394,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-dF7VqhevH0UAYa26oFDc5VBJ6ntzXJ2oKDvFqFulgMw=",
+            "sha256": "sha256-FgyB5CL/lOGFnGaU1DSIZKCGe5LAqD1NL7cPGu0rWPw=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504102214/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504112213/geosite.dat"
         },
-        "version": "202504102214"
+        "version": "202504112213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6937,11 +6958,11 @@
     "ynk": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./ynk-a7eebd75f6179420207a9247f1524198880f8335/Cargo.lock",
+                "./ynk-05349baaad56e6417c43f895c0af5602bc905f42/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-01-06",
+        "date": "2025-04-11",
         "extract": null,
         "name": "ynk",
         "passthru": null,
@@ -6953,12 +6974,12 @@
             "name": null,
             "owner": "newtoallofthis123",
             "repo": "ynk",
-            "rev": "a7eebd75f6179420207a9247f1524198880f8335",
-            "sha256": "sha256-tEqrl8FGhojrrgru7R9Ttslla65q/AIYxAJJKCEINSk=",
+            "rev": "05349baaad56e6417c43f895c0af5602bc905f42",
+            "sha256": "sha256-wffkVnpGcMhxrz55SQ599PaaGRyxIVnMs8FeZYpLNK4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "a7eebd75f6179420207a9247f1524198880f8335"
+        "version": "05349baaad56e6417c43f895c0af5602bc905f42"
     },
     "ytui": {
         "cargoLocks": null,
