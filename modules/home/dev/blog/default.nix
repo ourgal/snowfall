@@ -7,7 +7,6 @@ args.module (
     nixPkgs = [
       # keep-sorted start
       "antora"
-      "hexo-cli"
       "hugo"
       "jekyll"
       # keep-sorted end

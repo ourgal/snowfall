@@ -22,8 +22,8 @@ args.module (
       toggleBool = pkgs.writeShellScript "toggle_boolean" ''
         awk '{if ($0 ~ /true/) printf "false"; else if ($0 ~ /false/) printf "true";else if ($0 ~ /True/) printf "False"; else if ($0 ~ /False/) printf "True"; else printf $0;}'
       '';
-
       zellijEnter = "zellij action write 13";
+      generalLsp = [ "scls" ];
     in
     {
       path = ./.;
@@ -367,8 +367,7 @@ args.module (
                     name = "pyright";
                     except-features = [ "format" ];
                   }
-                  "scls"
-                ];
+                ] ++ generalLsp;
                 indent = {
                   tab-width = 4;
                   unit = "    ";
@@ -382,10 +381,7 @@ args.module (
               }
               {
                 name = "lua";
-                language-servers = [
-                  "scls"
-                  "lua-language-server"
-                ];
+                language-servers = [ "lua-language-server" ] ++ generalLsp;
                 formatter = {
                   command = "stylua";
                   args = [ "-" ];
@@ -425,10 +421,9 @@ args.module (
               {
                 name = "nix";
                 language-servers = [
-                  "scls"
                   "nil"
                   "typos-lsp"
-                ];
+                ] ++ generalLsp;
                 formatter = {
                   command = "nixfmt";
                   args = [
@@ -452,10 +447,7 @@ args.module (
               }
               {
                 name = "bash";
-                language-servers = [
-                  "scls"
-                  "bash-language-server"
-                ];
+                language-servers = [ "bash-language-server" ] ++ generalLsp;
                 formatter = {
                   command = "shfmt";
                   args = [ "-" ];
@@ -480,10 +472,7 @@ args.module (
               }
               {
                 name = "perl";
-                language-servers = [
-                  "scls"
-                  "pls"
-                ];
+                language-servers = [ "pls" ] ++ generalLsp;
                 auto-format = true;
               }
               {
@@ -572,26 +561,17 @@ args.module (
               }
               {
                 name = "fish";
-                language-servers = [
-                  "scls"
-                  "fish-lsp"
-                ];
+                language-servers = [ "fish-lsp" ] ++ generalLsp;
                 auto-format = true;
               }
               {
                 name = "html";
-                language-servers = [
-                  "scls"
-                  "superhtml"
-                ];
+                language-servers = [ "superhtml" ] ++ generalLsp;
                 auto-format = true;
               }
               {
                 name = "cpp";
-                language-servers = [
-                  "scls"
-                  "ccls"
-                ];
+                language-servers = [ "ccls" ] ++ generalLsp;
                 formatter = {
                   command = "clang-format";
                   args = [
@@ -763,10 +743,18 @@ args.module (
               ccls = {
                 command = "ccls";
               };
+              gpt = {
+                command = "helix-gpt";
+                args = [
+                  "--handler"
+                  "codeium"
+                ];
+              };
             };
           };
         };
       };
+      nixPkgs = "helix-gpt";
       myPkgs = [
         "simple-completion-language-server"
         "live-grep"
