@@ -63,6 +63,9 @@ pre-commit:
     gitleaks:
       run: gitleaks protect -v --staged
 commit-msg:
+  commands:
+    commitmsgfmt:
+      run: commitmsgfmt-wrapper {1}
   scripts:
     commitlint.sh:
       runner: bash
