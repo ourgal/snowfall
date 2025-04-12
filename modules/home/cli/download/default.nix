@@ -23,6 +23,7 @@ args.module (
       "libgen-cli"
       "lux"
       "mangal"
+      "mloader"
       "tdl"
       "tremc"
       "wget"
