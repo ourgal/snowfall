@@ -22,6 +22,7 @@ args.module (
       "btfs"
       "libgen-cli"
       "lux"
+      "mangal"
       "tdl"
       "tremc"
       "wget"
