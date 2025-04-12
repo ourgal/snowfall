@@ -34,6 +34,7 @@ let
     "soft-serve"
     "sonarr"
     "subconverter"
+    "suwayomi-server"
     "syncthing"
     "tiddlywiki"
     "transmission"
