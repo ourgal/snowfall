@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "yacreader";
+    nixPkgs = [
+      # keep-sorted start
+      "mokuro"
+      "yacreader"
+      # keep-sorted end
+    ];
   }
 )
