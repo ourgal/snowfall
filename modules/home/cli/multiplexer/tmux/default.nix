@@ -183,6 +183,7 @@ args.module (
         "tea"
         "termsand"
         "thumbs"
+        "tmux-sessionizer"
         "tome"
         "which-key"
         "yank"
