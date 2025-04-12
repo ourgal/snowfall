@@ -1387,3 +1387,7 @@ fetch.github = "rse/soundfx"
 [emacs-zeal-at-point]
 src.git = "https://github.com/jinzhu/zeal-at-point"
 fetch.github = "jinzhu/zeal-at-point"
+
+[tmux-ssh-split]
+src.git = "https://github.com/ourgal/tmux-ssh-split"
+fetch.github = "ourgal/tmux-ssh-split"

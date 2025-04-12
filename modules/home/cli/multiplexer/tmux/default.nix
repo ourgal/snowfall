@@ -179,6 +179,7 @@ args.module (
         "power-zoom"
         "sesh"
         "session-wizard"
+        "ssh-split"
         "tea"
         "termsand"
         "thumbs"

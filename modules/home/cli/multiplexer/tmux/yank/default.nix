@@ -3,7 +3,8 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs config namespace;
+      isSshSplit = config.${namespace}.cli.multiplexer.tmux.ssh-split.enable;
       baseConf = ''
         set -g default-terminal "tmux-256color"
         set -ag terminal-overrides ",xterm-256color:RGB"
@@ -76,7 +77,7 @@ args.module (
         # new window and retain cwd
         bind n new-session
         bind p paste-buffer
-        bind-key "c" new-window -c "#{pane_current_path}"
+        ${if isSshSplit then "" else ''bind-key "c" new-window - c "#{pane_current_path}"''}
 
         # Rename session and window
         bind r command-prompt -I "#{window_name}" "rename-window '%%'"
@@ -89,9 +90,9 @@ args.module (
         bind-key -r ">" swap-window -d -t +1
 
         # Split panes
-        bind-key "v" split-window -h -c "#{pane_current_path}"
+        ${if isSshSplit then "" else ''bind-key "v" split-window -h -c "#{pane_current_path}"''}
         bind-key "V" split-window -fh -c "#{pane_current_path}"
-        bind-key "s" split-window -v -c "#{pane_current_path}"
+        ${if isSshSplit then "" else ''bind-key "s" split-window -v -c "#{pane_current_path}"''}
         bind-key "S" split-window -fv -c "#{pane_current_path}"
 
         # Kill pane/window/session shortcuts
