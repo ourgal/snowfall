@@ -3,6 +3,11 @@ args.module (
   args
   // {
     path = ./.;
-    nixPkgs = "superhtml";
+    nixPkgs = [
+      # keep-sorted start
+      "superhtml"
+      "templ"
+      # keep-sorted end
+    ];
   }
 )
