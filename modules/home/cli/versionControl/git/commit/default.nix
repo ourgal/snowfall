@@ -27,7 +27,12 @@ args.module (
         "koji"
         # keep-sorted end
       ];
-      enable = "geminicommit";
+      enable = [
+        # keep-sorted start
+        "commitlint-rs"
+        "geminicommit"
+        # keep-sorted end
+      ];
     }
   )
 )
