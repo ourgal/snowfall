@@ -118,11 +118,9 @@
       "http://harmonia.zxc.cn?priority=102"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=101"
       "https://nix-community.cachix.org?priority=99"
-      "http://atticd.zxc.cn/sing-box-fork?priority=98"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "sing-box-fork:41s6YdRNjJVDO3b4cx/3OFHt1uAS8/xbxDON1SedzQs="
     ];
   };
 

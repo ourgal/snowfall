@@ -22,13 +22,9 @@ in
       boot.systemd = enabled;
       sops-nix = enabled // {
         ssh = enabled;
-        atticd = enabled;
       };
       postgres-update = disabled;
       firewall.disable = enabled;
-      atticd = enabled // {
-        port = 5320;
-      };
       docker =
         let
           nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
