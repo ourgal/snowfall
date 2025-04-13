@@ -466,6 +466,7 @@ rec {
       value ? { },
       path,
       extraOpts ? { },
+      enable ? [ ],
       ...
     }:
     let
@@ -477,7 +478,14 @@ rec {
     {
       options.${namespace} = optNixos { inherit path extraOpts; };
 
-      config = mkIf cfg.enable value;
+      config = mkIf cfg.enable (
+        lib.attrsets.recursiveUpdate {
+          ${namespace} = enableNixosSubModule {
+            inherit path;
+            subModule = enable;
+          };
+        } value
+      );
     };
   # }}}
 

@@ -95,7 +95,12 @@ let
       inherit (lib.types) listOf attrs;
     in
     {
-      services = mkOpt' (listOf attrs) [ ];
+      services = mkOpt' (listOf attrs) [
+        {
+          name = "mdns";
+          udp = 5353;
+        }
+      ];
     };
   path = ./.;
   _args = {

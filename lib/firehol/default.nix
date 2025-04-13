@@ -36,7 +36,7 @@ in
           else
             throw "not supported type";
         serverPorts =
-          if (tcp == [ ]) && (udp == [ ] && (tcpRange == [ ]) && (udpRange == [ ])) then
+          if (tcp == [ ] && udp == [ ] && tcpRange == [ ] && udpRange == [ ]) then
             throw "no port definition"
           else
             concatStringsSep " " (
