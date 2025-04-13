@@ -16,6 +16,7 @@ let
     "flaresolverr"
     "gonic"
     "harmonia"
+    "homebox"
     "immich"
     "jackett"
     "jellyfin"

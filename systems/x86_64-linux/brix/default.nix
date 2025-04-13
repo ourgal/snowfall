@@ -56,6 +56,7 @@ in
       "dufs"
       "firehol"
       "flaresolverr"
+      "homebox"
       "immich"
       "jackett"
       "jellyfin"
