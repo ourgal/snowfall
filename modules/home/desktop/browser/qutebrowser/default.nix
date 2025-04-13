@@ -7,11 +7,18 @@ args.module (
       copyHintText = pkgs.writeShellScript "qutebrowserCopyHintText" ''
         echo -n "$QUTE_SELECTED_TEXT" | xsel -b
       '';
-      copySelecetText = pkgs.writeShellScript "qutebrowsercopySelecetText" ''
+      copySelecetText = pkgs.writeShellScript "qutebrowserCopySelecetText" ''
         if [ -n "$QUTE_SELECTED_TEXT" ]; then
           echo -n "$QUTE_SELECTED_TEXT" | xsel -b
         else
           echo -n "$QUTE_URL" | xsel -b
+        fi
+      '';
+      pasteSelecetText = pkgs.writeShellScript "qutebrowserPasteSelecetText" ''
+        if [ -n "$QUTE_SELECTED_TEXT" ]; then
+          qutebrowser "$QUTE_SELECTED_TEXT"
+        else
+          qutebrowser $(xsel -b)
         fi
       '';
     in
@@ -60,7 +67,7 @@ args.module (
             W = "scroll-to-perc 0";
             u = "navigate up";
             # "p" = "tab-focus last";
-            p = "open -t {clipboard}";
+            p = "spawn --userscript ${pasteSelecetText}";
             "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
             "\\\\q" = "spawn --userscript qr";
