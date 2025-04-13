@@ -57,8 +57,8 @@ args.module (
             b = "cmd-set-text -s :quickmark-load -t ";
             B = "cmd-set-text -s :open -t dict ";
             e = "cmd-set-text -s :open {url}";
-            # "." = "search-next";
-            # "," = "search-prev";
+            "." = "search-next";
+            "," = "search-prev";
             ">" = "tab-move +";
             "<" = "tab-move -";
             s = "scroll-page 0 1";
@@ -66,7 +66,6 @@ args.module (
             S = "scroll-to-perc 100";
             W = "scroll-to-perc 0";
             u = "navigate up";
-            # "p" = "tab-focus last";
             p = "spawn --userscript ${pasteSelecetText}";
             "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
