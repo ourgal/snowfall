@@ -70,5 +70,5 @@ commit-msg:
   commands:
     commitmsgfmt:
       run: commitmsgfmt-wrapper {1}
-    commitlint-rs:
-      run: commitlint --config ~/.config/commitlint-rs/config.yaml
+    commitlint:
+      run: commitlint --edit {1}
