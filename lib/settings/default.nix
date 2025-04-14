@@ -5,7 +5,7 @@ let
     "brix"
     "home"
     "surface"
-    "d2550"
+    "router"
     "yanyu"
     "nixos-mbr"
     "nixos-uefi"

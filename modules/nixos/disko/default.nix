@@ -81,7 +81,7 @@ let
             (builtins.elem host [
               "brix"
               "home"
-              "d2550"
+              "router"
               "yanyu"
               "nixos-mbr"
             ])
@@ -94,7 +94,7 @@ let
           if
             (builtins.elem host [
               "nixos-mbr"
-              "d2550"
+              "router"
             ])
           then
             msdos

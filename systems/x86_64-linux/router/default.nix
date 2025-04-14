@@ -16,7 +16,7 @@ in
       wan = "enp3s0";
     in
     {
-      user.host = "d2550";
+      user.host = "router";
       boot.grub = enabled;
       common = enabled;
       nh = enabled;
