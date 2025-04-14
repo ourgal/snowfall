@@ -87,6 +87,11 @@ let
           domain = domains.harmonia;
           port = 50000;
           host = if config.services.resolved.enable then "home.local" else ip.home;
+        }).virtualHosts
+        // (mkCaddyProxy {
+          domain = domains.restic-server;
+          port = 3457;
+          host = if config.services.resolved.enable then "home.local" else ip.yanyu;
         }).virtualHosts;
       inherit package;
     };

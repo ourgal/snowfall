@@ -29,6 +29,7 @@ let
     "nix-serve"
     "pairdrop"
     "qd"
+    "restic-server"
     "rustypaste"
     "scrutiny"
     "searx"

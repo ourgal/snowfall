@@ -7,6 +7,8 @@ let
     config
     ;
   inherit (lib.${namespace}) nixosModule mkOpt' cfgNixos;
+  inherit (config.${namespace}.user) host;
+  inherit (lib.${namespace}.interface.${host}) lan;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (builtins)
     foldl'
@@ -19,7 +21,6 @@ let
     environment.etc = {
       "firehol/firehol.conf".text =
         let
-          lan = "eno1";
           mkRule =
             type: services:
             let
