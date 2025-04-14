@@ -10,6 +10,7 @@ let
     d2550 = fileContents ./d2550_ip.key;
     nuc = fileContents ./nuc_ip.key;
     ct3003 = fileContents ./ct3003_ip.key;
+    yanyu = fileContents ./yanyu_ip.key;
     router = d2550;
   };
   ip = mapAttrs (_n: v: "${lan}.${v}") _ip;
@@ -23,5 +24,6 @@ in
     onecloud = fileContents ./onecloud_mac.key;
     nuc = fileContents ./nuc_mac.key;
     ct3003 = fileContents ./ct3003_mac.key;
+    yanyu = fileContents ./yanyu_mac.key;
   };
 }

@@ -82,6 +82,7 @@ let
               "brix"
               "home"
               "d2550"
+              "yanyu"
               "nixos-mbr"
             ])
           then

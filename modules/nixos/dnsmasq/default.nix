@@ -61,6 +61,7 @@ let
           "${mac.onecloud},${ip.onecloud},onecloud"
           "${mac.nuc},${ip.nuc},nuc"
           "${mac.ct3003},${ip.ct3003},CT3003"
+          "${mac.yanyu},${ip.yanyu},yanyu"
         ];
         interface = cfg.lan;
 

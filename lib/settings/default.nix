@@ -6,6 +6,7 @@ let
     "home"
     "surface"
     "d2550"
+    "yanyu"
     "nixos-mbr"
     "nixos-uefi"
   ];
