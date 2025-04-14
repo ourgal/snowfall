@@ -62,14 +62,32 @@ let
                 cfg.services
                 ++ [
                   "icmp"
+                  "icmpv6"
                   "mdns"
+                  "ipv6neigh"
                 ]
                 ++ lib.optional config.services.openssh.enable "ssh"
                 ++ lib.optional config.services.nfs.server.enable "nfs"
               )}
-              ${mkRule "client" ([
-                "all"
-              ])}
+              ${mkRule "client" (
+                cfg.services
+                ++ [
+                  "icmp"
+                  "icmpv6"
+                  "mdns"
+                  "ipv6neigh"
+                  "ipv6mld"
+                  "ipv6router"
+                  "dns"
+                  "http"
+                  "https"
+                  "dhcp"
+                  "dhcpv6"
+                  "multicast"
+                ]
+                ++ lib.optional config.services.openssh.enable "ssh"
+                ++ lib.optional config.services.nfs.server.enable "nfs"
+              )}
         '';
     };
     systemd.services.firehol = {

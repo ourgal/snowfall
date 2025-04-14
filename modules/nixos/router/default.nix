@@ -11,7 +11,9 @@ let
     mkOpt'
     cfgNixos
     lan
+    lan6
     ;
+  inherit (builtins) map;
   cfg = cfgNixos config.${namespace} ./.;
   ports = [
     22
@@ -62,16 +64,10 @@ let
               prefixLength = 24;
             }
           ];
-          ipv6.addresses = [
-            {
-              address = "fe80:aa:bb:cc::1";
-              prefixLength = 64;
-            }
-            {
-              address = "fd5e:4f87:237::1";
-              prefixLength = 64;
-            }
-          ];
+          ipv6.addresses = map (v: {
+            address = "${v}::1";
+            prefixLength = 64;
+          }) lan6;
         };
         ${cfg.wan}.useDHCP = false;
       };
