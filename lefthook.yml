@@ -70,5 +70,5 @@ commit-msg:
   commands:
     commitmsgfmt:
       run: commitmsgfmt-wrapper {1}
-    commitlint:
-      run: commitlint --edit {1}
+    commitizen:
+      run: cz check --commit-msg-file {1}
