@@ -26,7 +26,15 @@ let
               services' = map (v: replaceStrings [ "-" ] [ "_" ] (if (isAttrs v) then v.name else v)) services;
             in
             "${type} \"${concatStringsSep " " services'}\" accept";
-          myServices = foldl' (acc: v: acc + "\n" + (lib.${namespace}.firehol.mkService v)) "" cfg.services;
+          myServices = foldl' (acc: v: acc + "\n" + (lib.${namespace}.firehol.mkService v)) "" (
+            cfg.services
+            ++ [
+              {
+                name = "mdns";
+                udp = 5353;
+              }
+            ]
+          );
           dockerNetworks =
             if config.${namespace}.docker.enable then
               ''
@@ -53,6 +61,7 @@ let
                 cfg.services
                 ++ [
                   "icmp"
+                  "mdns"
                 ]
                 ++ lib.optional config.services.openssh.enable "ssh"
                 ++ lib.optional config.services.nfs.server.enable "nfs"
@@ -95,12 +104,7 @@ let
       inherit (lib.types) listOf attrs;
     in
     {
-      services = mkOpt' (listOf attrs) [
-        {
-          name = "mdns";
-          udp = 5353;
-        }
-      ];
+      services = mkOpt' (listOf attrs) [ ];
     };
   path = ./.;
   _args = {
