@@ -7,12 +7,16 @@ args.module (
       enable = true;
       settings = {
         format_on_save = {
-          timeoutMs = 5000;
-          lspFallback = true;
+          timeout_ms = 5000;
+          lsp_fallback = true;
         };
-        formattersByFt = {
+        formatters_by_ft = {
+          bash = [
+            "shellcheck"
+            "shellharden"
+            "shfmt"
+          ];
           lua = [ "stylua" ];
-          # Conform will run multiple formatters sequentially
           python = [
             "ruff_fix"
             "ruff_format"
