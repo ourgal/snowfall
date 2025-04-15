@@ -22,6 +22,7 @@ args.module (
         # keep-sorted start
         "commitizen"
         "git-fire"
+        "git-smash"
         "gitlint"
         "gitmoji-cli"
         "glitter"
