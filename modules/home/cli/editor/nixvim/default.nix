@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace enabled;
+      inherit (args) namespace enabled pkgs;
     in
     {
       path = ./.;
@@ -40,7 +40,7 @@ args.module (
 
             extraConfigLua = builtins.readFile ./extraConfig.lua;
 
-            extraPlugins = with args.pkgs.vimPlugins; [
+            extraPlugins = with pkgs.vimPlugins; [
               clipboard-image-nvim
               friendly-snippets # Should load this in at LuaSnip's initialisation, no clue how tho yet...
               glow-nvim # Glow inside of Neovim

@@ -54,7 +54,10 @@ args.module (
         "visual"
         # keep-sorted end
       ];
-      tmpfiles = [ "d ${config.xdg.dataHome}/vim - - - - -" ];
+      tmpfiles = [
+        "d ${config.xdg.dataHome}/vim - - - - -"
+        "d ${config.home.homeDirectory}/.cache/vim - - - - -"
+      ];
     }
   )
 )
