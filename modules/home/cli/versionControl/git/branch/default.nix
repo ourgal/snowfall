@@ -17,6 +17,7 @@ args.module (
         "git-branchless"
         "git-my"
         "git-recent"
+        "git-trim"
         # keep-sorted end
       ];
       progs.git.aliases.bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
