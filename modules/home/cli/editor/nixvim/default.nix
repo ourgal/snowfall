@@ -8,11 +8,13 @@ args.module (
     {
       path = ./.;
       nixPkgs = [
+        # keep-sorted start
         "fd"
+        "neovim-node-client"
         "ripgrep"
         "tree-sitter"
         "ueberzugpp"
-        "neovim-node-client"
+        # keep-sorted end
       ];
       progs = [
         {
@@ -83,6 +85,7 @@ args.module (
         }
       ];
       enable = [
+        # keep-sorted start
         "alpha-nvim"
         "auto-save-nvim"
         "auto-session"
@@ -104,9 +107,10 @@ args.module (
         "nvim-ts-autotag"
         "settings"
         "telescope-nvim"
-        "web-devicons"
         "vim-floaterm"
+        "web-devicons"
         "which-key-nvim"
+        # keep-sorted end
       ];
       value = {
         ${namespace} = {
