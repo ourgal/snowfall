@@ -40,7 +40,7 @@ let
         SG.tag
         US.tag
       ];
-      subsTags = builtins.map (x: x.tag) subs;
+      subsTags = map (x: x.tag) subs;
       cheap = mkOutbound "📺 省流节点" "0.[1-5]|低倍率|省流|大流量";
       expensive = mkOutbound "👍 高级节点" "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
       priceTags = [

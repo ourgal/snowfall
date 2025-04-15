@@ -1,5 +1,6 @@
 { lib, namespace, ... }:
 let
+  inherit (builtins) foldl';
   allHosts = [
     "air"
     "brix"
@@ -65,6 +66,5 @@ in
       # keep-sorted end
     ];
   };
-  homeSpecialArgs =
-    hosts: args: builtins.foldl' (acc: v: acc // { "zxc@${v}".specialArgs = args; }) { } hosts;
+  homeSpecialArgs = hosts: args: foldl' (acc: v: acc // { "zxc@${v}".specialArgs = args; }) { } hosts;
 }

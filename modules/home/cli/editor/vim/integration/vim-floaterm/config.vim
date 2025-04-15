@@ -9,4 +9,5 @@ command Lf FloatermNew lf
 
 let g:which_key_map = get(g:, 'which_key_map', { 'f': { 'name': 'Picker' } })
 let g:which_key_map['f']['f'] = [':FloatermNew broot', 'Broot']
+let g:which_key_map[' '] = [':FloatermNew broot', 'Broot']
 let g:which_key_map['e'] = [':FloatermNew lf', 'Lf']

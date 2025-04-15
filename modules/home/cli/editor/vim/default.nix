@@ -5,13 +5,14 @@ args.module (
     let
       inherit (args) config namespace;
       inherit (config.${namespace}.cli.editor.vim.motion.n) is-vim;
+      inherit (builtins) readFile;
     in
     {
       path = ./.;
       progs.vim.extraConfig =
-        (builtins.readFile ./option.vim)
-        + (builtins.readFile ./keymap.vim)
-        + (builtins.readFile ./macro.vim)
+        (readFile ./option.vim)
+        + (readFile ./keymap.vim)
+        + (readFile ./macro.vim)
         + (
           if is-vim.enable then
             ""
@@ -27,7 +28,6 @@ args.module (
         "annotate"
         "auto-save"
         "command"
-        "multi-cursor"
         "comment"
         "format"
         "git"
@@ -38,6 +38,7 @@ args.module (
         "lsp"
         "mark"
         "motion"
+        "multi-cursor"
         "pair"
         "picker"
         "quickfix"

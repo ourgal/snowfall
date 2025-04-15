@@ -1,6 +1,7 @@
 { lib, ... }:
 final: _prev:
 let
+  inherit (builtins) mapAttrs hasAttr;
   sources = import ../../_sources/generated.nix {
     inherit (final)
       fetchurl
@@ -9,7 +10,7 @@ let
       dockerTools
       ;
   };
-  sources' = builtins.mapAttrs (
+  sources' = mapAttrs (
     _n: v:
     v
     // (
@@ -18,7 +19,7 @@ let
           pname = lib.strings.removePrefix "emacs-" v.pname;
           version = v.date;
         }
-      else if builtins.hasAttr "date" v then
+      else if hasAttr "date" v then
         { version = "unstable-${v.date}"; }
       else if final.lib.strings.hasPrefix "v" v.version then
         { version = final.lib.substring 1 (-1) v.version; }

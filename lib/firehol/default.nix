@@ -6,6 +6,7 @@ let
     isString
     isList
     concatStringsSep
+    replaceStrings
     ;
 in
 {
@@ -48,7 +49,7 @@ in
                 "udp/" + concatStringsSep "," (convertPorts udp ++ convertPortRange udpRange)
               )
             );
-        name' = builtins.replaceStrings [ "-" ] [ "_" ] name;
+        name' = replaceStrings [ "-" ] [ "_" ] name;
       in
       ''
         server_${name'}_ports="${serverPorts}"
