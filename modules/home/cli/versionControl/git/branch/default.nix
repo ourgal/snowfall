@@ -15,6 +15,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "git-branchless"
+        "git-gone"
         "git-my"
         "git-recent"
         "git-trim"
