@@ -1,2 +1,2 @@
-map l <CR>
-map h -
+nmap <buffer> l <CR>
+nmap <buffer> h -

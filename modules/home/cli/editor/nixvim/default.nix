@@ -40,6 +40,11 @@ args.module (
               };
             };
 
+            extraFiles = {
+              "ftplugin/help.lua".source = ./help.lua;
+              "ftplugin/git.lua".source = ./git.lua;
+            };
+
             extraConfigLua = builtins.readFile ./extraConfig.lua;
 
             extraPlugins = with pkgs.vimPlugins; [
@@ -89,8 +94,10 @@ args.module (
         "alpha-nvim"
         "auto-save-nvim"
         "auto-session"
+        "blink-cmp"
         "bufferline-nvim"
         "conform-nvim"
+        "fugitive"
         "gitsigns-nvim"
         "keymaps"
         "lsp"
@@ -99,7 +106,6 @@ args.module (
         "mini-nvim"
         "noice-nvim"
         "nvim-autopairs"
-        "nvim-cmp"
         "nvim-lint"
         "nvim-notify"
         "nvim-treesitter"
@@ -107,6 +113,7 @@ args.module (
         "nvim-ts-autotag"
         "settings"
         "telescope-nvim"
+        "vim-dirvish"
         "vim-floaterm"
         "web-devicons"
         "which-key-nvim"
