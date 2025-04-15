@@ -22,7 +22,7 @@ args.module (
             action = "<cmd>FloatermNew lf<cr>";
           }
           {
-            key = "<leader>ff";
+            key = "<leader><space>";
             action = "<cmd>FloatermNew broot<cr>";
           }
           {
