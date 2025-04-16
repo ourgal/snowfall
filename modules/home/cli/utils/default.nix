@@ -4,11 +4,12 @@ args.module (
   // {
     path = ./.;
     myPkgs = "wait-for";
+    perlPkgs = "vidir";
     nixPkgs = [
       # keep-sorted start
       "coreutils-full"
       "loop"
-      "moreutils"
+      "parallel-full"
       "progress"
       "retry"
       "wait4x"
