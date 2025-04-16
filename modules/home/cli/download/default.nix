@@ -36,6 +36,7 @@ args.module (
       "aria2"
       "eget"
       "gallery-dl"
+      "manga"
       "nyaa"
       "raw_novel_illustrations"
       "rtorrent"
