@@ -19,8 +19,8 @@ args.module (
             set-option -g @ssh-split-strip-cmd "true"
             set-option -g @ssh-split-verbose "true"
             set-option -g @ssh-split-debug "false"
-            set-option -g @ssh-split-h-key "s"
-            set-option -g @ssh-split-v-key "v"
+            set-option -g @ssh-split-h-key "v"
+            set-option -g @ssh-split-v-key "s"
             set-option -g @ssh-split-w-key "c"
           '';
         }
