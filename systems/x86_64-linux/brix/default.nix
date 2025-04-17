@@ -24,7 +24,6 @@ in
         ssh = enabled;
       };
       postgres-update = disabled;
-      firewall.disable = enabled;
       docker =
         let
           nfs = if config.services.resolved.enable then "brix.local" else ip.brix;
@@ -54,13 +53,11 @@ in
       "caddy"
       "common"
       "dufs"
-      "firehol"
       "flaresolverr"
       "homebox"
       "immich"
       "jackett"
       "jellyfin"
-      "komga"
       "logrotate"
       "memos"
       "metacubexd"
