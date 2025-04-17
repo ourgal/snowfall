@@ -43,5 +43,6 @@ args.module (
       "which"
       # keep-sorted end
     ];
+    files.".parallel/will-cite" = "";
   }
 )
