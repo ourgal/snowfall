@@ -41,7 +41,7 @@ function qute() {
 }
 
 case "$1" in
-https://pbs.twimg.com* | *.jpg | *.png)
+https://pbs.twimg.com* | *.jpg | *.png | *.webp)
   image "$@"
   ;;
 https://www.youtube.com/watch*)
