@@ -14,14 +14,12 @@ args.module (
           ''set -gx __done_notification_command "${pkgs.libnotify}/bin/notify-send \$title \$message"''
         else
           null;
+      fileManager = "ranger";
     in
     {
       path = ./.;
       progs.fish = {
         interactiveShellInit = # fish
-          let
-            fileManager = "ranger";
-          in
           ''
             set fish_greeting
             scheme set tokyonight
@@ -112,6 +110,21 @@ args.module (
             wraps = "tstickers";
             body = ''
               command tstickers --token (cat ${config.xdg.configHome}/telegram/bot1) --pack $argv
+            '';
+          };
+          ranger = lib.mkIf (fileManager == "ranger") {
+            body = ''
+              set tempfile (mktemp -t tmp.XXXXXX)
+              set command_argument "map Q chain shell echo %d > $tempfile; quitall"
+              command ranger --cmd="$command_argument" $argv
+              if test -s $tempfile
+                set ranger_pwd (cat $tempfile)
+                if test -n $ranger_pwd -a -d $ranger_pwd
+                  builtin cd -- $ranger_pwd
+                end
+              end
+
+              command rm -f -- $tempfile
             '';
           };
         };
