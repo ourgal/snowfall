@@ -13,6 +13,15 @@ args.module (
           curl 'http://192.168.123.1:9999/proxies/%F0%9F%90%9F%20%E6%BC%8F%E7%BD%91%E4%B9%8B%E9%B1%BC' -X PUT --data-raw $'{"name":"DIRECT"}'
         fi
       '';
+      unzipManga = pkgs.writeShellScript "unzip manga" ''
+        mv ~/Downloads/*.zip .
+        rm ~/Downloads/*.torrent
+        fish -c "aria2p purge"
+        aunpack -e ./*.zip
+        find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print | parallel --eta --bar magick {} {.}.avif
+        find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -delete
+        rm ./*.zip
+      '';
     in
     {
       path = ./.;
@@ -54,6 +63,9 @@ args.module (
 
           mpv:
             @mpv "$(xclip -o -sel clip)"
+
+          unzipManga:
+            @${unzipManga}
 
           help:
             @just --list --justfile ~/.user.justfile

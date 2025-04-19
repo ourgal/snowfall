@@ -1,0 +1,4 @@
+% manga
+
+# unzip to avif
+mv ~/Downloads/*.zip .; rm ~/Downloads/*.torrent; fish -c "aria2p purge"; aunpack -e ./*.zip; find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print | parallel --eta --bar magick {} {.}.avif; find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -delete; rm ./*.zip
