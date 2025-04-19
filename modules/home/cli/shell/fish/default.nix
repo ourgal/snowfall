@@ -33,9 +33,9 @@ args.module (
             ${__done_notification_command}
 
             if test $fish_key_bindings = fish_vi_key_bindings
-              bind --mode insert \cf '${fileManager}; commandline -f cancel'
+              bind --mode insert \cf '${fileManager}'
             else
-              bind \cf '${fileManager}; commandline -f cancel'
+              bind \cf '${fileManager}'
             end
           '';
         shellAbbrs = {
