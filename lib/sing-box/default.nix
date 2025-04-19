@@ -18,47 +18,82 @@ let
     (mkOutboundSub "knjc" "urltest")
     (mkOutboundSub "nano" "urltest")
   ] ++ freeSubs;
+  getTag = map (x: x.tag);
   outbounds =
     let
       mkOutbound = tag: includes: {
         type = "urltest";
         use_all_providers = true;
-        tolerance = 100;
         inherit tag includes;
       };
+      toSelector =
+        origin:
+        (lib.attrsets.filterAttrs (n: _v: n != "tolerance") origin)
+        // {
+          type = "selector";
+          tag = origin.tag + " 手动";
+        };
       HK = mkOutbound "🇭🇰 香港节点" "港|HK|Hong Kong";
+      HKSelector = toSelector HK;
       TW = mkOutbound "🇹🇼 台湾节点" "台|新北|彰化|TW|Taiwan";
+      TWSelector = toSelector TW;
       JP = mkOutbound "🇯🇵 日本节点" "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan";
+      JPSelector = toSelector JP;
       KR = mkOutbound "🇰🇷 韩国节点" "KR|Korea|KOR|首尔|韩|韓";
+      KRSelector = toSelector KR;
       SG = mkOutbound "🇸🇬 新加坡节点" "新加坡|坡|狮城|SG|Singapore";
+      SGSelector = toSelector SG;
       US = mkOutbound "🇺🇸 美国节点" "美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States";
-      countriesTags = [
-        HK.tag
-        TW.tag
-        JP.tag
-        KR.tag
-        SG.tag
-        US.tag
-      ];
-      subsTags = map (x: x.tag) subs;
-      cheap = mkOutbound "📺 省流节点" "0.[1-5]|低倍率|省流|大流量";
-      expensive = mkOutbound "👍 高级节点" "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
-      priceTags = [
-        cheap.tag
-        expensive.tag
-      ];
-    in
-    rec {
-      inherit
-        cheap
-        expensive
+      USSelector = toSelector US;
+      VN = mkOutbound "🇻🇳 越南节点" "越南|VN|Vlet Nam";
+      VNSelector = toSelector VN;
+      FR = mkOutbound "🇫🇷 法国节点" "法国|FR|FRA|France";
+      FRSelector = toSelector FR;
+      ES = mkOutbound "🇪🇸 西班牙节点" "西班牙|ES|Spain";
+      ESSelector = toSelector ES;
+      DE = mkOutbound "🇩🇪 德国节点" "德国|DE|Germany";
+      DESelector = toSelector DE;
+      IN = mkOutbound "🇮🇳 印度节点" "印度|IN|India";
+      INSelector = toSelector IN;
+      BR = mkOutbound "🇧🇷 巴西节点" "巴西|BR|Brazil";
+      BRSelector = toSelector BR;
+      countries = [
         HK
         TW
         JP
         KR
         SG
         US
-        ;
+        VN
+        FR
+        ES
+        DE
+        IN
+        BR
+        HKSelector
+        TWSelector
+        JPSelector
+        KRSelector
+        SGSelector
+        USSelector
+        VNSelector
+        FRSelector
+        ESSelector
+        DESelector
+        INSelector
+        BRSelector
+      ];
+      countriesTags = getTag countries;
+      subsTags = getTag subs;
+      cheap = mkOutbound "📺 省流节点" "0.[1-5]|低倍率|省流|大流量";
+      expensive = mkOutbound "👍 高级节点" "专线|专用|高级|直连|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC";
+      priceTags = getTag [
+        cheap
+        expensive
+      ];
+    in
+    rec {
+      inherit cheap expensive countries;
       main = {
         type = "selector";
         tag = "🚀 节点选择";
@@ -79,9 +114,9 @@ let
       foreign = {
         type = "selector";
         tag = "🎯 全球直连";
-        outbounds = [
-          direct.tag
-          main.tag
+        outbounds = getTag [
+          direct
+          main
         ];
       };
       telegram = {
@@ -97,33 +132,33 @@ let
       games = {
         type = "selector";
         tag = "🎮 游戏平台";
-        outbounds = [
-          direct.tag
-          main.tag
+        outbounds = getTag [
+          direct
+          main
         ];
       };
       microsoft = {
         type = "selector";
         tag = "🪟 微软服务";
-        outbounds = [
-          direct.tag
-          main.tag
+        outbounds = getTag [
+          direct
+          main
         ];
       };
       google = {
         type = "selector";
         tag = "🇬 谷歌服务";
-        outbounds = [
-          direct.tag
-          main.tag
+        outbounds = getTag [
+          direct
+          main
         ];
       };
       apple = {
         type = "selector";
         tag = "🍎 苹果服务";
-        outbounds = [
-          direct.tag
-          main.tag
+        outbounds = getTag [
+          direct
+          main
         ];
       };
       networktest = {
@@ -134,9 +169,9 @@ let
       netflix = {
         type = "selector";
         tag = "🎥 奈飞解锁";
-        outbounds = [
-          expensive.tag
-          main.tag
+        outbounds = getTag [
+          expensive
+          main
         ];
       };
       global = {
@@ -155,9 +190,9 @@ let
       ad = {
         type = "selector";
         tag = "🛑 广告拦截";
-        outbounds = [
-          direct.tag
-          block.tag
+        outbounds = getTag [
+          direct
+          block
         ];
       };
       block = {
@@ -176,14 +211,9 @@ let
       outbounds.final
     ]
     ++ subs
+    ++ [ outbounds.manual ]
+    ++ outbounds.countries
     ++ [
-      outbounds.manual
-      outbounds.HK
-      outbounds.TW
-      outbounds.JP
-      outbounds.KR
-      outbounds.SG
-      outbounds.US
       outbounds.cheap
       outbounds.expensive
       outbounds.foreign

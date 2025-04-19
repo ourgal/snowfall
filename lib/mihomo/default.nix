@@ -87,16 +87,41 @@ in
         ];
         freeSubsTags = attrNames (lib.${namespace}.freeSubs { isMihomo = true; });
         freeSubs = map (v: mkSubProxyGroup v "select") freeSubsTags;
+        toSelect =
+          origin:
+          (lib.attrsets.filterAttrs (n: _v: n != "tolerance") origin)
+          // {
+            type = "select";
+            tag = origin.tag + " 手动";
+          };
       in
       rec {
         expensive = mkProxyGroup "👑 高级节点" "(?i)(专线|专用|高级|直连|急速|高倍率|游戏|game|IEPL|IPLC|AIA|CTM|CC|AC)";
         cheap = mkProxyGroup "📉 省流节点" "(0.[1-5]|低倍率|省流|大流量)";
         HK = mkProxyGroup "🇭🇰 香港节点" "(?i)(🇭🇰|港|hk|hongkong|hong kong)";
+        HKSelect = toSelect HK;
         TW = mkProxyGroup "🇹🇼 台湾节点" "(?i)(🇹🇼|台|tw|taiwan|tai wan)";
+        TWSelect = toSelect TW;
         JP = mkProxyGroup "🇯🇵 日本节点" "(?i)(🇯🇵|日|jp|japan)";
+        JPSelect = toSelect JP;
         KR = mkProxyGroup "🇰🇷 韩国节点" "(?i)(🇰🇷|KR|Korea|KOR|首尔|韩|韓)";
+        KRSelect = toSelect KR;
         SG = mkProxyGroup "🇸🇬 新加坡节点" "(?i)(🇸🇬|新|sg|singapore)";
+        SGSelect = toSelect SG;
         US = mkProxyGroup "🇺🇸 美国节点" "(?i)(🇺🇸|美|us|unitedstates|united states)";
+        USSelect = toSelect US;
+        VN = mkProxyGroup "🇻🇳 越南节点" "(?!)(越南|VN|Vlet Nam)";
+        VNSelector = toSelect VN;
+        FR = mkProxyGroup "🇫🇷 法国节点" "(?!)(法国|FR|FRA|France)";
+        FRSelector = toSelect FR;
+        ES = mkProxyGroup "🇪🇸 西班牙节点" "(?!)(西班牙|ES|Spain)";
+        ESSelector = toSelect ES;
+        DE = mkProxyGroup "🇩🇪 德国节点" "(?!)(德国|DE|Germany)";
+        DESelector = toSelect DE;
+        IN = mkProxyGroup "🇮🇳 印度节点" "(?!)(印度|IN|India)";
+        INSelector = toSelect IN;
+        BR = mkProxyGroup "🇧🇷 巴西节点" "(?!)(巴西|BR|Brazil)";
+        BRSelector = toSelect BR;
         countries = [
           HK
           TW
@@ -104,6 +129,12 @@ in
           KR
           SG
           US
+          HKSelect
+          TWSelect
+          JPSelect
+          KRSelect
+          SGSelect
+          USSelect
         ];
         price = [
           expensive
