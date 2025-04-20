@@ -121,8 +121,23 @@ rec {
     in
     ret;
 
+  mkModuleOpt' =
+    {
+      path,
+      extraOpts ? { },
+      value ? switch,
+      ...
+    }:
+    let
+      pathSplit = lib.strings.splitString "/" path;
+      ret = lib.attrsets.setAttrByPath pathSplit (value // extraOpts);
+    in
+    ret;
+
   # cfgHome config.${namespace} ./. => config.${namespace}.cli.anime.adl
   cfgHome = root: path: (mkModuleCfg root path "modules/home/");
+
+  cfgHome' = root: path: lib.attrsets.getAttrFromPath (lib.strings.splitString "/" path) root;
 
   # optHome ./. => { cli.anime.adl = switch; }
   optHome =
@@ -135,6 +150,18 @@ rec {
       inherit path extraOpts;
       prefix = "modules/home/";
     });
+
+  optHome' =
+    {
+      path,
+      extraOpts ? { },
+      ...
+    }:
+    let
+      pathSplit = lib.strings.splitString "/" path;
+      ret = lib.attrsets.setAttrByPath pathSplit (switch // extraOpts);
+    in
+    ret;
 
   enableHomeSubModule =
     {
@@ -152,6 +179,23 @@ rec {
         else
           throw "not supported type";
       prefix = "modules/home/";
+    };
+
+  enableHomeSubModule' =
+    {
+      path,
+      subModule ? [ ],
+      ...
+    }:
+    mkModuleOpt' {
+      inherit path;
+      value =
+        if (isList subModule) then
+          enabledList subModule
+        else if (isString subModule) then
+          enabledList [ subModule ]
+        else
+          throw "not supported type";
     };
 
   enableNixosSubModule =
@@ -191,7 +235,7 @@ rec {
   homeModule =
     {
       # args,
-      path,
+      path ? "",
       value ? { },
       myPkgs ? [ ],
       nixPkgs ? [ ],
@@ -220,6 +264,7 @@ rec {
       tmpfiles ? [ ],
       defaultApps ? { },
       systemdServices ? { },
+      _name ? "",
       ...
     }@args:
     let
@@ -231,7 +276,7 @@ rec {
         ;
       inherit (lib) mkIf;
       inherit (lib.${namespace}) cfgHome optHome;
-      cfg = cfgHome config.${namespace} path;
+      cfg = if _name == "" then cfgHome config.${namespace} path else cfgHome' config.${namespace} _name;
       confHandle =
         conf:
         let
@@ -410,7 +455,14 @@ rec {
         ret;
     in
     {
-      options.${namespace} = optHome { inherit path extraOpts; };
+      options.${namespace} =
+        if _name == "" then
+          optHome { inherit path extraOpts; }
+        else
+          optHome' {
+            path = _name;
+            inherit extraOpts;
+          };
 
       config = mkIf cfg.enable (
         lib.attrsets.recursiveUpdate {
@@ -446,10 +498,17 @@ rec {
           };
           programs = progsHandle progs;
           services = progsHandle servs;
-          ${namespace} = enableHomeSubModule {
-            inherit path;
-            subModule = enable;
-          };
+          ${namespace} =
+            if _name == "" then
+              enableHomeSubModule {
+                inherit path;
+                subModule = enable;
+              }
+            else
+              enableHomeSubModule' {
+                path = _name;
+                subModule = enable;
+              };
           systemd.user = {
             services = _systemdServices;
             tmpfiles.rules = tmpfiles;
