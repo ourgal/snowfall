@@ -7,7 +7,6 @@ args.module (
       port = 8001;
     in
     {
-      path = ./.;
       systemdServices.ympd = {
         Unit = {
           Requires = "dbus.socket";

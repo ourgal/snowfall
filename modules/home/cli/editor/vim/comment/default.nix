@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "caw-vim";
-}
+{ enable = "caw-vim"; }

@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-bookmarks";
-}
+{ enable = "vim-bookmarks"; }

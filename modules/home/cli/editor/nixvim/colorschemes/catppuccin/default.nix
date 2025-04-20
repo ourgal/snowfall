@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs = {
     nixvim.colorschemes.catppuccin = {
       enable = true;

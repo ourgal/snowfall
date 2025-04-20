@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.navi = {
     enableFishIntegration = false;
     enableZshIntegration = false;

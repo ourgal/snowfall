@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = [
     "android-tools"
     "apkleaks"

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.pet = {
     settings = {
       General = {

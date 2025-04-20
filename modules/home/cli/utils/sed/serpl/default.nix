@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "serpl";
   confs."serpl/config.toml" = {
     keybindings = {

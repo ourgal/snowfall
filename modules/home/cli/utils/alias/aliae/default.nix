@@ -13,7 +13,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       nixPkgs = "aliae";
       files.".aliae.yaml" = {
         "alias" = lib.${namespace}.mkAliaeAlias cfg.alias;

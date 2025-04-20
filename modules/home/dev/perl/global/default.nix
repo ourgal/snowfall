@@ -14,7 +14,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       value = {
         home.packages = [
           (pkgs.perl.withPackages (

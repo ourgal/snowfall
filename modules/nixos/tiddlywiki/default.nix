@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib _name;
   inherit (lib.${namespace})
     nixosModule
     domains
@@ -10,7 +10,7 @@ let
     mkCaddyProxy
     ;
   port = 3456;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services = {
       tiddlywiki = enabled // {
@@ -26,7 +26,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

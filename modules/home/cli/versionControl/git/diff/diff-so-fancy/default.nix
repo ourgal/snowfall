@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.git.diff-so-fancy.enable = true;
-}
+{ progs.git.diff-so-fancy.enable = true; }

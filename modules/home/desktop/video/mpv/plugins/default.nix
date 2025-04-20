@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) with';
     in
     {
-      path = ./.;
       progs.mpv = {
         scripts =
           with' pkgs.mpvScripts [

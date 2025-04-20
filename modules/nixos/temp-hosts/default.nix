@@ -36,7 +36,6 @@ let
   value = {
     networking.hosts = lightnovelHosts;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

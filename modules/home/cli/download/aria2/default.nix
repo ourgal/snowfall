@@ -26,7 +26,6 @@ args.module (
       source = pkgs._sources."aria2.conf".src;
     in
     {
-      path = ./.;
       progs = {
         fish.functions.aria2p = {
           body = ''

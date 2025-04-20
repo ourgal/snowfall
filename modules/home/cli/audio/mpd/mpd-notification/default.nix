@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       systemdServices.mpd-notification = {
         Unit = {
           Requires = "dbus.socket";

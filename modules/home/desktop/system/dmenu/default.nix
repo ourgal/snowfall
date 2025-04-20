@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "dmenu";
   files.".local/bin" = [
     ./colors

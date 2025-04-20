@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.vim.plugins = with pkgs.vimPlugins; [
         vim-ghost
         nvim-yarp # broken

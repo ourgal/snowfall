@@ -6,7 +6,6 @@ args.module (
       inherit (args) enabled pkgs;
     in
     {
-      path = ./.;
       value = {
         # Theme GTK
         gtk = enabled // {

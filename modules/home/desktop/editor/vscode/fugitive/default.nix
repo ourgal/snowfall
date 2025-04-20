@@ -15,7 +15,6 @@ args.module (
       ];
     in
     {
-      path = ./.;
       progs.vscode.extensions = fugitive;
     }
   )

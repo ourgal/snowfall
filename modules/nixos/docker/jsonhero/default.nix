@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     cfgNixos
@@ -22,17 +27,9 @@ let
         tcp = cfg.ports;
       };
     };
-  name = getDirname path;
+  name = getDirname _name;
   ports = 8787;
   extraOpts = dockerOpts { inherit name ports; };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

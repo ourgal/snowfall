@@ -23,7 +23,6 @@ args.module (
       };
     in
     {
-      path = ./.;
       nixPkgs = "brotab";
       confs = {
         "BraveSoftware/Brave-Browser/NativeMessagingHosts/brotab_mediator.json" = chromiumNative;

@@ -31,7 +31,6 @@ let
       "net.ipv4.conf.default.log_martians" = false;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

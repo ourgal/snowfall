@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs = "mpd-mpris";
-}
+{ servs = "mpd-mpris"; }

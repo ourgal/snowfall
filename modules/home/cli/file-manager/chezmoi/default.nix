@@ -8,7 +8,6 @@ args.module (
       dir = "${config.home.homeDirectory}/workspace/snowfall/modules/home/cli/file-manager/chezmoi/config";
     in
     {
-      path = ./.;
       nixPkgs = "chezmoi";
       dataFiles = {
         chezmoi = ln dir;

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "focus-timer";
   confs."focus/config.yml" = {
     "auto_start_break" = true;

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   enable = "udiskie";
   nixPkgs = [
     # keep-sorted start

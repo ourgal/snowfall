@@ -6,7 +6,6 @@ args.module (
       inherit (args) lib config;
     in
     {
-      path = ./.;
       progs.zathura = {
         options =
           {

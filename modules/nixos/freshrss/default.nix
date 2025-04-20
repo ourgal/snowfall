@@ -9,7 +9,6 @@ let
     };
     environment.etc."freshrss/secret".text = lib.strings.fileContents ./secret.key;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

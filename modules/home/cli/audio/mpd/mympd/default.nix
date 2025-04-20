@@ -10,7 +10,6 @@ args.module (
       port = 8002;
     in
     {
-      path = ./.;
       confs = {
         "mympd/config/ssl" = "false";
         "mympd/config/http_port" = toString port;

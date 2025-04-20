@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.doom-emacs.extraPackages = epkgs: [ epkgs.move-text ];
-}
+{ progs.doom-emacs.extraPackages = epkgs: [ epkgs.move-text ]; }

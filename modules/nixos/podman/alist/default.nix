@@ -13,15 +13,7 @@ let
       volumes = [ "${dataDir}:/opt/alist/data" ];
     };
   };
-  path = ./.;
   extraOpts = mkPodmanOpts { ports = port; };
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "clipster";
-}
+{ enable = "clipster"; }

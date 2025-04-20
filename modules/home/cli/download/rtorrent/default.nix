@@ -7,7 +7,6 @@ args.module (
       port = 50001;
     in
     {
-      path = ./.;
       progs.rtorrent.extraConfig = ''
         #############################################################################
         # A minimal rTorrent configuration that provides the basic features

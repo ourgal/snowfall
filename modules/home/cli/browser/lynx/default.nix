@@ -7,7 +7,6 @@ args.module (
       configPath = "${config.xdg.configHome}/lynx/config";
     in
     {
-      path = ./.;
       nixPkgs = "lynx";
       confs.lynx = ./config;
       env.LYNX_CFG = configPath;

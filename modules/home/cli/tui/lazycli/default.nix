@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "lazycli";
   confs = {
     "lazycli/config.yml" = {

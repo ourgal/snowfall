@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "superfile";
   # confs = {
   #   "superfile/config.toml" =  {

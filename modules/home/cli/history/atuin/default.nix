@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.atuin.settings = {
     enter_accept = true;
     sync_address = "https://api.atuin.sh";

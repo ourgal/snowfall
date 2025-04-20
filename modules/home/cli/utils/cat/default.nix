@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "batwhich";
   nixPkgs = [
     # keep-sorted start

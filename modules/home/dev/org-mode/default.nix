@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "org-export";
-}
+{ myPkgs = "org-export"; }

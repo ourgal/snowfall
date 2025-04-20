@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.bat = {
         extraPackages = with pkgs.bat-extras; [
           batdiff

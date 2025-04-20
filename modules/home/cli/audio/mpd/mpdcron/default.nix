@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       files.".mpdcron/mpdcron.conf" = ''
         [main]
         modules = notification

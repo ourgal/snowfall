@@ -12,7 +12,6 @@ args.module (
       inherit (lib.${namespace}.settings) laptops;
     in
     {
-      path = ./.;
       nixPkgs = "kmonad";
       systemdServices."kmonad@miryoku" =
         if (builtins.elem host laptops) then

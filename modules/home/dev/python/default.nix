@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "tach";
   pyPkgs = [
     # keep-sorted start

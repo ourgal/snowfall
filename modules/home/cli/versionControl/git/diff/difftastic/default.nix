@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.git.difftastic.enable = true;
-}
+{ progs.git.difftastic.enable = true; }

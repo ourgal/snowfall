@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs = "volnoti";
-}
+{ servs = "volnoti"; }

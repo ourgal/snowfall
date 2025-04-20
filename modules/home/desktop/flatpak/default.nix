@@ -159,7 +159,6 @@ args.module (
       };
     in
     {
-      path = ./.;
       myPkgs = "flatpak-compose";
       confs = {
         "flatpak-compose/config.yaml" = conf;

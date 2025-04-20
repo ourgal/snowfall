@@ -2,7 +2,6 @@ args:
 args.module (
   args
   // {
-    path = ./.;
     value = {
       sops = {
         secrets = {

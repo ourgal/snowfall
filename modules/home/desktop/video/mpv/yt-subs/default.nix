@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.mpv.config = {
     osd-bar-align-y = 0.92;
     sub-ass = "yes";

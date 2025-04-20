@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "aliae";
-}
+{ enable = "aliae"; }

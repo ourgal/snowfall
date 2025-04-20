@@ -1,5 +1,4 @@
 {
-  path = ./.;
   value = {
     # Theme QT -> GTK
     qt = {

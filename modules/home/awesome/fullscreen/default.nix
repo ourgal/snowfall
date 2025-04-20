@@ -34,7 +34,6 @@ args.module (
       finalConfig = baseConfig + hostConfig + dcnntConfig;
     in
     {
-      path = ./.;
       value = {
         xdg.configFile = {
           "awesome/rc.lua".text = finalConfig;

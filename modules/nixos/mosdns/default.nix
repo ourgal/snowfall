@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -16,7 +17,7 @@ let
     ;
   inherit (config.${namespace}.user) duckdns;
   port = 53;
-  name = getDirname path;
+  name = getDirname _name;
   geoLists =
     pkgs.runCommand "mosdns_config"
       {
@@ -651,7 +652,6 @@ let
       udp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

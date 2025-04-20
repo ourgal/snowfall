@@ -24,7 +24,6 @@ args.module (
           '';
     in
     {
-      path = ./.;
       confs.awesome = conf;
     }
   )

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.freetube.settings = {
     checkForUpdates = false;
     defaultQuality = "1080";

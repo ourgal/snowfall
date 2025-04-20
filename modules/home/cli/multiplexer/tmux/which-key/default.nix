@@ -28,7 +28,6 @@ args.module (
         ;
     in
     {
-      path = ./.;
       progs.tmux.plugins = [
         {
           plugin = pkgs.${namespace}.tmux-which-key;

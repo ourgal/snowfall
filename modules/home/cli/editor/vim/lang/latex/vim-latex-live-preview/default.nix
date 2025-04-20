@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ vim-latex-live-preview ];
         extraConfig = builtins.readFile ./config.vim;

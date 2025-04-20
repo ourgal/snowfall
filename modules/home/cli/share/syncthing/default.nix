@@ -8,7 +8,6 @@ args.module (
       sync = "${config.xdg.dataHome}/syncthing";
     in
     {
-      path = ./.;
       progs.fish.functions.stc = {
         body = "${pkgs.stc-cli}/bin/stc --homedir=${config.xdg.configHome}/syncthing $argv";
       };

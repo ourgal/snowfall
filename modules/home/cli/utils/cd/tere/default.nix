@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.fish.functions.tere = {
         body = # fish
           ''

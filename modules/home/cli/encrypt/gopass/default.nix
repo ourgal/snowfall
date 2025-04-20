@@ -42,7 +42,6 @@ args.module (
       };
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "git-credential-gopass"

@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       inputPkgs = p: [ p.gitwatch.packages."${pkgs.system}".default ];
       myPkgs = [
         # keep-sorted start

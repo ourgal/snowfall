@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       systemdServices.jellyfin-mpv-shim = {
         online = true;
         gui = true;

@@ -44,7 +44,6 @@ args.module (
       yacd = pkgs.writeShellScriptBin "yacd" ''${webapp_sh} "yacd" "http://192.168.123.1:9999/ui/#/proxies"'';
     in
     {
-      path = ./.;
       value = {
         home.packages =
           [

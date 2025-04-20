@@ -1,5 +1,4 @@
 {
-  path = ./.;
   enable = "clipmenu";
   nixPkgs = [
     # keep-sorted start

@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs lib namespace;
     in
     {
-      path = ./.;
       progs = {
         ranger = {
           mappings = {

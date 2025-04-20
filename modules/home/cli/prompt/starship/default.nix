@@ -18,7 +18,6 @@ args.module (
       ];
     in
     {
-      path = ./.;
       progs.starship.settings =
         if (cfg.style == "fancy") then
           lib.importTOML ./fancy.toml

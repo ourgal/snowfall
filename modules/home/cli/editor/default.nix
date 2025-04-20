@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "v";
   nixPkgs = [
     # keep-sorted start

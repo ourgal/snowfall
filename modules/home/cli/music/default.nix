@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "piano-rs";
-}
+{ nixPkgs = "piano-rs"; }

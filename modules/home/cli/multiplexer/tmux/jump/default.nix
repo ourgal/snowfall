@@ -14,7 +14,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       progs.tmux.plugins = [ pkgs.tmuxPlugins.jump ];
       extraOpts = {
         key = mkOpt' lib.types.str "j";

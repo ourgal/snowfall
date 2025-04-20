@@ -6,7 +6,6 @@ args.module (
       inherit (args) config namespace pkgs;
     in
     {
-      path = ./.;
       progs = {
         zk.settings = {
           note = {

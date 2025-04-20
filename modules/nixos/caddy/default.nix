@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -32,7 +33,7 @@ let
     80
     443
   ];
-  name = getDirname path;
+  name = getDirname _name;
   inherit (config.${namespace}.user.duckdns) token domain;
   xcaddy =
     pkgs.callPackage
@@ -104,14 +105,6 @@ let
   extraOpts = {
     xcaddy = switch;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

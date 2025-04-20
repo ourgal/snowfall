@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.mpv = {
     bindings = {
       p = "set speed 3.0";

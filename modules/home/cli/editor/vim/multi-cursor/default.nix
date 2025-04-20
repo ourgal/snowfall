@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-visual-multi";
-}
+{ enable = "vim-visual-multi"; }

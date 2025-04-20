@@ -13,7 +13,6 @@ args.module (
       name = "alist";
     in
     {
-      path = ./.;
       nixPkgs = "rclone";
       value = {
         systemd.user.tmpfiles.rules = [ "d ${dir} - - - -" ];

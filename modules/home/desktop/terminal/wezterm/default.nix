@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.wezterm.extraConfig = builtins.readFile ./config.lua;
-}
+{ progs.wezterm.extraConfig = builtins.readFile ./config.lua; }

@@ -14,7 +14,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       progs.tmux.plugins = [
         {
           plugin = pkgs.tmuxPlugins.extrakto;

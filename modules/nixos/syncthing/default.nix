@@ -5,6 +5,7 @@ let
     lib
     config
     pkgs
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -25,7 +26,7 @@ let
   group = if isDesktop then "users" else name;
   dataDir = if isDesktop then "/home/${user}/.local/share/${name}" else "/var/lib/${name}";
   port = 8384;
-  name = getDirname path;
+  name = getDirname _name;
   guiAddress = "0.0.0.0:${toString port}";
   updateConfig = pkgs.writers.writeBash "update-syncthing-config" ''
     set -efu
@@ -107,7 +108,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

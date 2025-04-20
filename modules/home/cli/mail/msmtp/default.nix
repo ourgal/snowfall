@@ -7,7 +7,6 @@ args.module (
       hotmail = lib.strings.fileContents ./hotmail.key;
     in
     {
-      path = ./.;
       nixPkgs = "oama";
       progs.msmtp = {
         extraConfig = ''

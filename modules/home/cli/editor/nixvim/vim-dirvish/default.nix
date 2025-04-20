@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.nixvim = {
         extraPlugins = [
           pkgs.vimPlugins.vim-dirvish

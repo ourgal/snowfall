@@ -1,5 +1,4 @@
 {
-  path = ./.;
   rubyPkgs = "solargraph";
   nixPkgs = [
     # keep-sorted start

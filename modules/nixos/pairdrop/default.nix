@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args)
+    namespace
+    lib
+    pkgs
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     domains
@@ -9,7 +14,7 @@ let
     mkCaddyProxy
     ;
   port = 3000;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     systemd.services.pairdrop = {
       description = "Pairdrop service";
@@ -32,7 +37,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -26,7 +26,6 @@ args.module (
       generalLsp = [ "scls" ];
     in
     {
-      path = ./.;
       progs = {
         helix = {
           settings = {

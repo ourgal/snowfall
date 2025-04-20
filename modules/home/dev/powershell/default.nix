@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "powershell-beautifier";
   nixPkgs = [
     # keep-sorted start

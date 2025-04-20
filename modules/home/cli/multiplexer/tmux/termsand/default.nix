@@ -15,7 +15,6 @@ args.module (
       source = pkgs._sources.termsand.src;
     in
     {
-      path = ./.;
       myPkgs = "termsand";
       progs.tmux.extraConfig = "bind ${cfg.key} ${cfg.command}";
       extraOpts = {

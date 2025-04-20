@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.kakoune = {
     config = {
       autoComplete = [

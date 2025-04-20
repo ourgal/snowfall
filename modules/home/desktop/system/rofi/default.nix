@@ -13,7 +13,6 @@ args.module (
       cfg = config.${namespace}.desktop.system.rofi;
     in
     {
-      path = ./.;
       progs.rofi = {
         cycle = true;
         terminal = "${pkgs.kitty}/bin/kitty";

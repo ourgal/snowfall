@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "nitrogen";
       systemdServices.nitrogen = {
         gui = true;

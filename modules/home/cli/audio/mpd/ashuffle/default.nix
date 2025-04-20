@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "ashuffle";
       systemdServices.ashuffle = {
         Unit = {

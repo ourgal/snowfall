@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "ssh-tpm-agent";
       value = {
         home.sessionVariablesExtra = ''

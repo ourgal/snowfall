@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "deno";
-}
+{ nixPkgs = "deno"; }

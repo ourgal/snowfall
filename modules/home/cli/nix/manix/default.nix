@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "manix";
   progs.fish.functions.fzf-manix = {
     body = ''

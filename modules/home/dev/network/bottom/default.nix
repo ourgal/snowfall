@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "bottom";
-}
+{ progs = "bottom"; }

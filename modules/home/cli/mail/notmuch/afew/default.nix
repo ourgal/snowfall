@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "afew";
-}
+{ progs = "afew"; }

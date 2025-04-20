@@ -6,7 +6,6 @@ args.module (
       inherit (args) lib pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "gpg-tui";
       servs.gpg-agent = {
         enableSshSupport = false;

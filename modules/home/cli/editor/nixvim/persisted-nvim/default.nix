@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.nixvim.extraPlugins = [ pkgs.vimPlugins.persisted-nvim ];
     }
   )

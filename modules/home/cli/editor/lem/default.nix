@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       inputPkgs = p: [ p.lem.packages."${pkgs.system}".default ];
     }
   )

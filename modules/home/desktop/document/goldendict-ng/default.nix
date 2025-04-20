@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "goldendict-ng";
       confs = {
         "goldendict/dicts/ecdict" = pkgs.fetchzip {

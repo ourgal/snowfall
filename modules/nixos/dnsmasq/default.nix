@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -20,7 +25,7 @@ let
     67
     68
   ];
-  name = getDirname path;
+  name = getDirname _name;
   dnsPort = 53;
   value = {
     services.dnsmasq = enabled // {
@@ -88,14 +93,6 @@ let
     lan = mkOpt' lib.types.str "";
     dns = switch;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

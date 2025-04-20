@@ -406,7 +406,6 @@ args.module (
         '';
     in
     {
-      path = ./.;
       confs = {
         "qtile/config.py" = conf;
         qtile = [ ./Assets ];

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs.random-background = {
     interval = "10m";
     enableXinerama = false;

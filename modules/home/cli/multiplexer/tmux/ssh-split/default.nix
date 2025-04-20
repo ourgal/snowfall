@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.tmux.plugins = [
         {
           plugin = pkgs.${namespace}.tmux-ssh-split;

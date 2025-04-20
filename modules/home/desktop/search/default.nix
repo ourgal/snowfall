@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "s";
-}
+{ enable = "s"; }

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.auto-save = {
     enable = true;
     settings = {

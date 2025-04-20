@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "blendr";
-}
+{ myPkgs = "blendr"; }

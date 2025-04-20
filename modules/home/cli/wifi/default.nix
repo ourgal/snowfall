@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "tui-network";
-}
+{ myPkgs = "tui-network"; }

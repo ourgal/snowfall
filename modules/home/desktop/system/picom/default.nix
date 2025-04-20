@@ -27,7 +27,6 @@ args.module (
           { minimal = enabled; };
     in
     {
-      path = ./.;
       value = {
         ${namespace}.desktop.system.picom = conf // {
           yoru = disabled;

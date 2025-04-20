@@ -8,7 +8,6 @@ let
       location = "/var/backup/postgresql";
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

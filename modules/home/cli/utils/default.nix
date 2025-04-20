@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "wait-for";
   perlPkgs = "vidir";
   nixPkgs = [

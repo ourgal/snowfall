@@ -1,5 +1,4 @@
 {
-  path = ./.;
   confs = {
     awesome = [
       ./rc.lua

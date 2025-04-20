@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.conform-nvim = {
     enable = true;
     settings = {

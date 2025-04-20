@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -18,7 +19,7 @@ let
     capitalize
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  name = getDirname path;
+  name = getDirname _name;
   dataDir = "/var/opt/${name}";
   value = {
     systemd.services.${name} = {
@@ -66,14 +67,6 @@ let
   extraOpts = {
     port = mkOpt' lib.types.port 5230;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

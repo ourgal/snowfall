@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "i3lock-color";
-}
+{ enable = "i3lock-color"; }

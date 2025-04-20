@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "ki-editor";
   progs.fish.functions.ki = {
     body = ''

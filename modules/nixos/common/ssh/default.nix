@@ -12,7 +12,6 @@ let
     programs.mosh = enabled;
     environment.systemPackages = [ pkgs.${namespace}.trzsz-go ];
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

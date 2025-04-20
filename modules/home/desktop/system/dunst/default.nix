@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       servs.dunst = {
         iconTheme = {
           name = "Adwaita";

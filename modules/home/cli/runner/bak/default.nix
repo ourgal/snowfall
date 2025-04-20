@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = [
     "nq"
     "go-task"

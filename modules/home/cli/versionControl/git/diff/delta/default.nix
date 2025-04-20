@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.git.delta = {
     enable = true;
     catppuccin.enable = false;

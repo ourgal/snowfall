@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "meme-image-generator";
-}
+{ nixPkgs = "meme-image-generator"; }

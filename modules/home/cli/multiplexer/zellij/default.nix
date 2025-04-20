@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs = {
     zellij = {
       enableFishIntegration = true;

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.lsp = {
     enable = true;
     servers = {

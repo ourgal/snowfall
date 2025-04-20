@@ -1,5 +1,4 @@
 {
-  path = ./.;
   value = {
     editorconfig = {
       enable = true;

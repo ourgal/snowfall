@@ -1,5 +1,4 @@
 {
-  path = ./.;
   pyPkgs = [
     # keep-sorted start
     "jupyterlab"

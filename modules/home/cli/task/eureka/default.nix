@@ -6,7 +6,6 @@ args.module (
       inherit (args) config namespace;
     in
     {
-      path = ./.;
       nixPkgs = "eureka-ideas";
       confs = {
         "eureka/config.json" = # json

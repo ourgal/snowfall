@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) mime;
     in
     {
-      path = ./.;
       defaultApps."mpv.desktop" = mime.video_audio;
     }
   )

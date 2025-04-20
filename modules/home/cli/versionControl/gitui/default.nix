@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.gitui.keyConfig = ''
     (
         move_left: Some(( code: Char('h'), modifiers: "")),

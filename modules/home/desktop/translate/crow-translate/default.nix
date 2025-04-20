@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "crow-translate";
       systemdServices.crow-translate = {
         online = true;

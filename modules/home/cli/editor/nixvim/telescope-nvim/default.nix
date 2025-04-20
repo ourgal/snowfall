@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim = {
     plugins.telescope = {
       enable = true;

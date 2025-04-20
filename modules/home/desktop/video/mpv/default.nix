@@ -1,5 +1,4 @@
 {
-  path = ./.;
   enable = [
     "base"
     "mime"

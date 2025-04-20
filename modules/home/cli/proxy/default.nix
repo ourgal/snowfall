@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = [
     "bestsub"
     "v2dat"

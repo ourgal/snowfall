@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nyaa = {
     default_theme = "Catppuccin Macchiato";
     download_client = "Transmission";

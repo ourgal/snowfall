@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -13,7 +18,7 @@ let
     ;
   inherit (config.${namespace}.user) host;
   port = 8081;
-  name = getDirname path;
+  name = getDirname _name;
   state = if (host == "brix") then enabled else disabled;
   value = {
     services = {
@@ -42,7 +47,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

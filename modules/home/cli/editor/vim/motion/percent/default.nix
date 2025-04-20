@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-matchup";
-}
+{ enable = "vim-matchup"; }

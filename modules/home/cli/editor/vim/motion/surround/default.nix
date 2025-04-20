@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-surround";
-}
+{ enable = "vim-surround"; }

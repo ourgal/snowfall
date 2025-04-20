@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs enabled;
     in
     {
-      path = ./.;
       dataFiles."fcitx5/rime/sbfm.custom.yaml" = {
         patch = {
           switches = [

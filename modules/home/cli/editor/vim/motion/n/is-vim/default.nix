@@ -8,7 +8,6 @@ args.module (
       inherit (config.${namespace}.cli.editor.vim.motion.asterisk) vim-asterisk;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ is-vim ];
         extraConfig =

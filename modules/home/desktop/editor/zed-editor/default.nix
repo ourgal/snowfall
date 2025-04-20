@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.zed-editor = {
     extensions = [
       # keep-sorted start

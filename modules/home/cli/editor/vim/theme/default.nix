@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "tokyonight-vim";
-}
+{ enable = "tokyonight-vim"; }

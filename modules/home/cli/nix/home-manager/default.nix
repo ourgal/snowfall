@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs = [ "home-manager" ];
   value = {
     manual.html.enable = true;

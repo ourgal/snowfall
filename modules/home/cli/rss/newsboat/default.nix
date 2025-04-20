@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace lib;
     in
     {
-      path = ./.;
       progs.newsboat = {
         enable = true;
         autoReload = true;

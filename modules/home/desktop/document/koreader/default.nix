@@ -18,7 +18,6 @@ args.module (
           '';
     in
     {
-      path = ./.;
       nixPkgs = "koreader";
       confs = {
         "koreader/data/dict" = dicts;

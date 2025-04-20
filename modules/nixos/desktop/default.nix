@@ -5,13 +5,14 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
     enabled
     disabled
     with'
-    enableNixosSubModule
+    enableNixosSubModule'
     ;
   value = {
     security.rtkit = enabled;
@@ -50,8 +51,8 @@ let
       };
     };
 
-    ${namespace} = enableNixosSubModule {
-      inherit path;
+    ${namespace} = enableNixosSubModule' {
+      path = _name;
       subModule = "ly";
     };
 
@@ -76,7 +77,6 @@ let
       config.common.default = "*";
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -10,7 +15,7 @@ let
     mkCaddyProxy
     ;
   port = 5002;
-  name = getDirname path;
+  name = getDirname _name;
   user = name;
   value = {
     sops.secrets."${name}/adminCredentialsFile".owner = user;
@@ -41,7 +46,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

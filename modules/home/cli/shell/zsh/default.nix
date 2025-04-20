@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.zsh = {
     autocd = true;
     syntaxHighlighting.enable = true;

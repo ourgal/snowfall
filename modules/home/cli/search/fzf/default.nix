@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.fzf = {
     defaultOptions = [ "--height 40%" ];
   };

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.lint = {
     enable = true;
     lintersByFt = {

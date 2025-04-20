@@ -6,7 +6,6 @@ args.module (
       inherit (args) namespace enabled pkgs;
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "fd"

@@ -22,7 +22,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       nixPkgs = "feh";
       confs."feh/themes" = ''
         feh -B black \

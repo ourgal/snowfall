@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "gg";
-}
+{ myPkgs = "gg"; }

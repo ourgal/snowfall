@@ -6,7 +6,6 @@ args.module (
       inherit (args) namespace;
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "inotify-tools"

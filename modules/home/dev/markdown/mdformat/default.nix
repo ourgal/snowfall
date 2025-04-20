@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       value = {
         home.packages = [
           (pkgs.mdformat.withPlugins (ps: [

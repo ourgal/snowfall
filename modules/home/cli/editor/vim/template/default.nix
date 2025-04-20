@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-templates";
-}
+{ enable = "vim-templates"; }

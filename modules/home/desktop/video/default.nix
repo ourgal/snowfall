@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nodePkgs = [
     # keep-sorted start
     "peerflix"

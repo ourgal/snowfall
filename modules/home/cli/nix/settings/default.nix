@@ -15,7 +15,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       value = {
         nix = {
           channels = { inherit (inputs) nixpkgs; };

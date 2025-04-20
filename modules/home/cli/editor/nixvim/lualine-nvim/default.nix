@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.plugins.lualine.enable = true;
-}
+{ progs.nixvim.plugins.lualine.enable = true; }

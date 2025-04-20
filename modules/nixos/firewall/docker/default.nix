@@ -4,7 +4,6 @@ let
   inherit (lib.${namespace}) nixosModule dockerOpenFirewall;
   inherit (config.${namespace}) docker;
   value = dockerOpenFirewall docker;
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

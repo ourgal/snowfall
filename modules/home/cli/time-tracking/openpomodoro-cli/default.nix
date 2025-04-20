@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "openpomodoro-cli";
-}
+{ nixPkgs = "openpomodoro-cli"; }

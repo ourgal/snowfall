@@ -6,7 +6,6 @@ args.module (
       inherit (args) namespace pkgs;
     in
     {
-      path = ./.;
       myPkgs = "espanso";
       confs = {
         "espanso/config/default.yml" = { };

@@ -7,7 +7,6 @@ args.module (
       inherit (config.${namespace}.desktop.editor) emacs;
     in
     {
-      path = ./.;
       progs.emacs = {
         extraPackages =
           epkgs: with epkgs; [

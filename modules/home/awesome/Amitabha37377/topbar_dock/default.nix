@@ -44,7 +44,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       myPkgs = [
         # keep-sorted start
         "caskaydiaCove-nerd-font"

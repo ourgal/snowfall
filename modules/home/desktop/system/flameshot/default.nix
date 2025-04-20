@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs = "flameshot";
   value = {
     xdg.desktopEntries = {

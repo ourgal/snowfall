@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "contour";
   confs = {
     "contour/contour.yml" = {

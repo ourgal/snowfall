@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs = "lorri";
   nixPkgs = [
     # keep-sorted start

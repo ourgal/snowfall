@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "cook-cli";
-}
+{ nixPkgs = "cook-cli"; }

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.librewolf.settings = {
     "identity.fxaccounts.enabled" = true;
     "webgl.disabled" = false;

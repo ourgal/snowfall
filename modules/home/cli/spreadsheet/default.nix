@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "sc-im";
-}
+{ nixPkgs = "sc-im"; }

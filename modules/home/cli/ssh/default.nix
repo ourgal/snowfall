@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) mkSshConfig ip;
     in
     {
-      path = ./.;
       myPkgs = [
         # keep-sorted start
         "lssh"

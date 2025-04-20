@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       myPkgs = "hledger-fmt";
       nixPkgs = [
         # keep-sorted start

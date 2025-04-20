@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "posting";
   nixPkgs = [
     # keep-sorted start

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "oneshot";
   confs = {
     "oneshot/config.yaml" = {

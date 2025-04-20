@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.lazygit.settings = {
         gui.sidePanelWidth = 0.2;
         git.paging = {

@@ -2,7 +2,6 @@ args:
 args.module (
   args
   // {
-    path = ./.;
     progs = {
       fish.functions = {
         n = {

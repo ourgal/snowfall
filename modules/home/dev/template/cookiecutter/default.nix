@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "cookiecutter";
   files = {
     ".cookiecutterrc" = ''

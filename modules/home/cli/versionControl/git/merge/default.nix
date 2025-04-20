@@ -12,7 +12,6 @@ args.module (
         + "/gitattributes";
     in
     {
-      path = ./.;
       nixPkgs = "mergiraf";
       progs.git.extraConfig = {
         merge = {

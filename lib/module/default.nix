@@ -157,11 +157,7 @@ rec {
       extraOpts ? { },
       ...
     }:
-    let
-      pathSplit = lib.strings.splitString "/" path;
-      ret = lib.attrsets.setAttrByPath pathSplit (switch // extraOpts);
-    in
-    ret;
+    mkModuleOpt' { inherit path extraOpts; };
 
   enableHomeSubModule =
     {
@@ -216,8 +212,26 @@ rec {
       prefix = "modules/nixos/";
     };
 
+  enableNixosSubModule' =
+    {
+      path,
+      subModule ? [ ],
+      ...
+    }:
+    mkModuleOpt' {
+      inherit path;
+      value =
+        if (isList subModule) then
+          enabledList subModule
+        else if (isString subModule) then
+          enabledList [ subModule ]
+        else
+          throw "not supported type";
+    };
   # cfgNixos config.${namespace} ./. => config.${namespace}.cli.anime.adl
   cfgNixos = root: path: (mkModuleCfg root path "modules/nixos/");
+
+  cfgNixos' = root: path: lib.attrsets.getAttrFromPath (lib.strings.splitString "/" path) root;
 
   # optNixos ./. => { cli.anime.adl = switch; }
   optNixos =
@@ -226,10 +240,18 @@ rec {
       extraOpts ? { },
       ...
     }:
-    (mkModuleOpt {
+    mkModuleOpt {
       inherit path extraOpts;
       prefix = "modules/nixos/";
-    });
+    };
+
+  optNixos' =
+    {
+      path,
+      extraOpts ? { },
+      ...
+    }:
+    mkModuleOpt' { inherit path extraOpts; };
 
   # home manager module {{{
   homeModule =
@@ -523,26 +545,46 @@ rec {
     {
       args,
       value ? { },
-      path,
+      path ? "",
       extraOpts ? { },
       enable ? [ ],
       ...
     }:
     let
-      inherit (args) lib namespace config;
+      inherit (args)
+        lib
+        namespace
+        config
+        _name
+        ;
       inherit (lib) mkIf;
       inherit (lib.${namespace}) optNixos cfgNixos;
-      cfg = cfgNixos config.${namespace} path;
+      cfg =
+        if _name == "" then cfgNixos config.${namespace} path else cfgNixos' config.${namespace} _name;
     in
     {
-      options.${namespace} = optNixos { inherit path extraOpts; };
+      options.${namespace} =
+        if _name == "" then
+          optNixos { inherit path extraOpts; }
+        else
+          optNixos' {
+            path = _name;
+            inherit extraOpts;
+          };
 
       config = mkIf cfg.enable (
         lib.attrsets.recursiveUpdate {
-          ${namespace} = enableNixosSubModule {
-            inherit path;
-            subModule = enable;
-          };
+          ${namespace} =
+            if _name == "" then
+              enableNixosSubModule {
+                inherit path;
+                subModule = enable;
+              }
+            else
+              enableNixosSubModule' {
+                path = _name;
+                subModule = enable;
+              };
         } value
       );
     };

@@ -36,7 +36,6 @@ args.module (
         '';
     in
     {
-      path = ./.;
       confs = {
         "awesome/rc.lua" = finalConfig;
         "awesome/settings.lua" = settingConfig;

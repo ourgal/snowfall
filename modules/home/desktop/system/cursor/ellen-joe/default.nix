@@ -11,7 +11,6 @@ args.module (
         ;
     in
     {
-      path = ./.;
       value = {
         home.pointerCursor = {
           gtk = enabled;

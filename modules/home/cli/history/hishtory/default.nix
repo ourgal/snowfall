@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "hishtory";
   progs = {
     fish.interactiveShellInit = builtins.readFile ./config.fish;

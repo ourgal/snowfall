@@ -14,7 +14,6 @@ args.module (
       inherit (config.colorScheme) palette;
     in
     {
-      path = ./.;
       progs = {
         waybar = {
           settings = [

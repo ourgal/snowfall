@@ -5,6 +5,7 @@ let
     lib
     config
     pkgs
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -21,7 +22,7 @@ let
   gitPort = 9418;
   httpPort = 23232;
   statsPort = 23233;
-  name = getDirname path;
+  name = getDirname _name;
   configFile = format.generate "config.yaml" cfg.settings;
   value = {
     services = {
@@ -92,7 +93,6 @@ let
       ];
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

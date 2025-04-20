@@ -7,7 +7,6 @@ args.module (
       ln = config.lib.file.mkOutOfStoreSymlink;
     in
     {
-      path = ./.;
       progs.fish.plugins = [
         rec {
           name = "tmux.fish";

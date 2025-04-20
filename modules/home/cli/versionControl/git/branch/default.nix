@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       myPkgs = [
         # keep-sorted start
         "git-ink"

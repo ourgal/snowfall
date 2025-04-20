@@ -5,7 +5,6 @@ let
   value = {
     services.auto-cpufreq = enabled;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

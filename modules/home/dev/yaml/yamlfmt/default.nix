@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "yamlfmt";
   confs."yamlfmt/yamlfmt.yaml" = {
     "formatter" = {

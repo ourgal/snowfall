@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs.mpd.extraConfig = ''
     audio_output {
         type        "httpd"

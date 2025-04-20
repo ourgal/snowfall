@@ -7,7 +7,6 @@ args.module (
       relative-recur = pkgs._sources.task-relative-recur.src;
     in
     {
-      path = ./.;
       value = {
         home.file = {
           ".local/share/task/hooks/on-modify.relative-recur".source =

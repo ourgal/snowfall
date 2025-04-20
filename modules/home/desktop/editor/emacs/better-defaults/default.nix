@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.emacs.extraConfig = builtins.readFile ./config.el;
-}
+{ progs.emacs.extraConfig = builtins.readFile ./config.el; }

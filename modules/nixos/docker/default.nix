@@ -47,7 +47,6 @@ let
 
     environment.systemPackages = lib.optional isDocker pkgs.docker-compose;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

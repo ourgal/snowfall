@@ -6,7 +6,6 @@ args.module (
       inherit (args) config pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "clipcat";
       confs = {
         "clipcat/clipcatd.toml" = {

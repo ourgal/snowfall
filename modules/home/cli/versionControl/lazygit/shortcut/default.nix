@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs = {
     fish.interactiveShellInit = ''
       if test $fish_key_bindings = fish_vi_key_bindings

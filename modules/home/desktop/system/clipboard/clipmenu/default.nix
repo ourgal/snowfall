@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs.clipmenu.launcher = "rofi";
-}
+{ servs.clipmenu.launcher = "rofi"; }

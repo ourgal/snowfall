@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       nixPkgs = "safeeyes";
       systemdServices.safeeyes = {
         start = "${pkgs.safeeyes}/bin/safeeyes";

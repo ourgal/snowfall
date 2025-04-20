@@ -14,7 +14,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       value = {
         home.packages = [ (pkgs.python3.withPackages (ps: [ ps.websockets ] ++ (cfg.pkgs ps))) ];
       };

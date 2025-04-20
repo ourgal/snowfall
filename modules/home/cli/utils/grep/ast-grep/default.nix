@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "ast-grep";
   progs.fish.functions.sg = {
     body = ''

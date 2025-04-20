@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "antifennel";
   nixPkgs = [
     # keep-sorted start

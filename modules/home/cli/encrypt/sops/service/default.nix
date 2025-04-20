@@ -11,7 +11,6 @@ args.module (
         ;
     in
     {
-      path = ./.;
       value = {
         systemd.user.services.udiskie = {
           Unit.Before = [ "sops-nix.service" ];

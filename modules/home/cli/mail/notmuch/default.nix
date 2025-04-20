@@ -7,7 +7,6 @@ args.module (
       user = config.${namespace}.user.name;
     in
     {
-      path = ./.;
       progs.notmuch = {
         new.tags = [ "new" ];
         search.excludeTags = [

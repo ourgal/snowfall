@@ -1,11 +1,10 @@
 args:
 let
-  inherit (args) namespace lib ;
+  inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled;
   value = {
     nix.monitored = enabled;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "grit";
   myPkgs = "rust-kanban";
   enable = [

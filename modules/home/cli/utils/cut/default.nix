@@ -1,5 +1,4 @@
 {
-  path = ./.;
   pyPkgs = "percol";
   nixPkgs = [
     # keep-sorted start

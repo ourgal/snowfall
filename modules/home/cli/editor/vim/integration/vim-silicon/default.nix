@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.${namespace}; [ vim-silicon ];
         extraConfig = builtins.readFile ./config.vim;

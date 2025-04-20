@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.dap = {
     enable = true;
     signs = {

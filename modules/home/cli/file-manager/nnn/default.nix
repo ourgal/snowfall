@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs config namespace;
     in
     {
-      path = ./.;
       progs = {
         nnn = {
           extraPackages = [

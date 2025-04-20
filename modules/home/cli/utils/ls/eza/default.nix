@@ -15,7 +15,6 @@ args.module (
       ];
     in
     {
-      path = ./.;
       nixPkgs = "eza";
       value = {
         ${namespace}.cli.utils.alias.aliae.alias = {

@@ -32,7 +32,6 @@ let
     };
     ${namespace}.user.ports = [ port ] ++ lib.lists.range pasv_min_port pasv_max_port;
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -6,7 +6,6 @@ args.module (
       inherit (args) namespace pkgs;
     in
     {
-      path = ./.;
       systemdServices.feh-wallsetter = {
         gui = true;
         type = "oneshot";

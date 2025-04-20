@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  disable = "vim-ipython";
-}
+{ disable = "vim-ipython"; }

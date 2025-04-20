@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "coc-nvim";
-}
+{ enable = "coc-nvim"; }

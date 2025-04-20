@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.rofi = {
         plugins = [ pkgs.rofi-emoji ];
       };

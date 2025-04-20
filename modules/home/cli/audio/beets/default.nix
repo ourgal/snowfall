@@ -9,7 +9,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       progs.beets = {
         settings = {
           plugins = "fromfilename chroma lyrics fish convert fetchart embedart";

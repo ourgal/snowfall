@@ -6,7 +6,6 @@ args.module (
       inherit (args) config namespace;
     in
     {
-      path = ./.;
       nixPkgs = "nix-init";
       confs."nix-init/config.toml" = {
         maintainers = [ config.${namespace}.user.name ];

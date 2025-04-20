@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) ip;
     in
     {
-      path = ./.;
       confs = {
         "pipewire/pipewire.conf.d" = ./sink-eq6.conf;
       };

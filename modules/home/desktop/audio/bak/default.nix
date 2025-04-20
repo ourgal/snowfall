@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "eartag";
-}
+{ nixPkgs = "eartag"; }

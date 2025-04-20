@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "ynk";
   nixPkgs = [
     # keep-sorted start

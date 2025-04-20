@@ -6,7 +6,6 @@ args.module (
       inherit (args) lib namespace pkgs;
     in
     {
-      path = ./.;
       progs.fish.plugins = lib.${namespace}.mkFishPlugins [
         # keep-sorted start
         "fifc"

@@ -23,7 +23,6 @@ args.module (
       finalConfig = baseConfig + hostConfig;
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "blueman"

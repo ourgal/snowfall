@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nodePkgs = "fkill-cli";
   nixPkgs = [
     # keep-sorted start

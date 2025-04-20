@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "gtm";
   progs.fish = {
     interactiveShellInit = "__gtm";

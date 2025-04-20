@@ -29,14 +29,6 @@ let
     "sysctl"
     "avahi"
   ];
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      enable
-      ;
-  };
+  _args = { inherit value args enable; };
 in
 nixosModule _args

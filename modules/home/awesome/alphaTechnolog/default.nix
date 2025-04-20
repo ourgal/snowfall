@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = [
     "jetbrains-mono"
     "product-sans"

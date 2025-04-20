@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "execline";
-}
+{ nixPkgs = "execline"; }

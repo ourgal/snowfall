@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       nixPkgs = "tmux-sessionizer";
       confs."tms/config.toml" = {
         search_dirs = [

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "transmission_4";
   myPkgs = [
     # keep-sorted start

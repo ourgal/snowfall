@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       nixPkgs = "deno";
       progs.vim.plugins = with pkgs.vimPlugins; [
         denops-vim

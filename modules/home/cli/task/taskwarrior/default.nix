@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "tasksh"

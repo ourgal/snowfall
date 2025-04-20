@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -11,7 +16,7 @@ let
     ;
   user = config.${namespace}.user.name;
   port = 27701;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     sops.secrets."${name}/password".owner = user;
     services = {
@@ -36,7 +41,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

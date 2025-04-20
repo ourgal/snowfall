@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = (
     p:
     with p;

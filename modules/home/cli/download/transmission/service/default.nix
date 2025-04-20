@@ -6,7 +6,6 @@ args.module (
       inherit (args) config pkgs;
     in
     {
-      path = ./.;
       systemdServices.transmission = {
         online = true;
         start = "${pkgs.transmission_4}/bin/transmission-daemon -f -g ${config.xdg.configHome}/transmission/transmission-daemon";

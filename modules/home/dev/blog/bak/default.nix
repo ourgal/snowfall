@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "hexo-cli";
-}
+{ nixPkgs = "hexo-cli"; }

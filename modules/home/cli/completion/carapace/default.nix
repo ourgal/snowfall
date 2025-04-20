@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "carapace";
-}
+{ progs = "carapace"; }

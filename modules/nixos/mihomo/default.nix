@@ -324,20 +324,12 @@ let
       mixPort
     ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
   };
-  path = ./.;
   extraOpts = {
     mode = mkOpt' (lib.types.enum [
       "tproxy"
       "redirect"
     ]) "tproxy";
   };
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

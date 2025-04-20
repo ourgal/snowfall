@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs = "gromit-mpx";
-}
+{ servs = "gromit-mpx"; }

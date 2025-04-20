@@ -1,18 +1,23 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
-    cfgNixos
+    cfgNixos'
     mkOpt'
     getDirname
     mkFireholRule
     mkCaddyProxy
     domains
     ;
-  name = getDirname path;
-  cfg = cfgNixos config.${namespace} path;
+  name = getDirname _name;
+  cfg = cfgNixos' config.${namespace} _name;
   value = {
     services = {
       suwayomi-server = enabled // {
@@ -38,14 +43,6 @@ let
   extraOpts = {
     port = mkOpt' lib.types.port 8080;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

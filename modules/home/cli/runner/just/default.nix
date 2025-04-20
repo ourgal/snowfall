@@ -24,7 +24,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       nixPkgs = "just";
       progs.fish.functions.".j" = {
         body = "just --justfile ~/.user.justfile --working-directory . $argv";

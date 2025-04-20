@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "gallery-dl";
-}
+{ progs = "gallery-dl"; }

@@ -12,7 +12,6 @@ args.module (
         ;
     in
     {
-      path = ./.;
       value = {
         wayland.windowManager.sway = enabled // {
           config = {

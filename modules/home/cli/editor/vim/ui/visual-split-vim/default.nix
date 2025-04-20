@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.${namespace}; [ visual-split-vim ];
         extraConfig = builtins.readFile ./config.vim;

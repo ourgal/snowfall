@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "stego";
   nixPkgs = [
     # keep-sorted start

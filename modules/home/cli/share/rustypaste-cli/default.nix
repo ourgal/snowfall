@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) domains;
     in
     {
-      path = ./.;
       nixPkgs = "rustypaste-cli";
       confs."rustypaste/config.toml" = {
         server.address = "http://${domains.rustypaste}";

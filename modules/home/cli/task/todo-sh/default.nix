@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "todo-txt-cli";
   files.".todo" = ./config;
   env.TODOTXT_DEFAULT_ACTION = "ls";

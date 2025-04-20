@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -11,7 +16,7 @@ let
     ;
   port = 4747;
   MusicFolder = "/var/lib/syncthing/music";
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services = {
       gonic = enabled // {
@@ -53,7 +58,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

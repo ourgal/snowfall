@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "cloneit";
   myPkgs = [
     # keep-sorted start

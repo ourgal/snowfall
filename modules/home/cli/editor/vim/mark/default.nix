@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-signature";
-}
+{ enable = "vim-signature"; }

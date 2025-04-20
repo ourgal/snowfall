@@ -1,5 +1,4 @@
 {
-  path = ./.;
   enable = [
     # keep-sorted start
     "delimitMate" # auto quotes

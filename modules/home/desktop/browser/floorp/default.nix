@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.floorp = {
     policies = {
       "3rdparty" = { };

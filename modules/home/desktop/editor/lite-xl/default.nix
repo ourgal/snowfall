@@ -11,7 +11,6 @@ args.module (
       };
     in
     {
-      path = ./.;
       nixPkgs = "lite-xl";
       value = {
         xdg.configFile = {

@@ -7,7 +7,6 @@ args.module (
       user = config.${namespace}.user.name;
     in
     {
-      path = ./.;
       nixPkgs = "git-ftp";
       progs.git.extraConfig.git-ftp = {
         url = "brix.local";

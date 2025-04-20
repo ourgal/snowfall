@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "ytui";
   confs."ytui/config.yaml" = {
     channels = {

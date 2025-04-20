@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "taboo-vim";
-}
+{ enable = "taboo-vim"; }

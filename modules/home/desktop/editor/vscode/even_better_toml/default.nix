@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.vscode = {
         extensions = [ pkgs.open-vsx.tamasfe.even-better-toml ];
       };

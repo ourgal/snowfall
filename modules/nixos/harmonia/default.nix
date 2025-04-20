@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args)
+    namespace
+    lib
+    config
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -10,7 +15,7 @@ let
     cfgNixos
     ;
   cfg = cfgNixos config.${namespace} ./.;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     environment.etc = {
       "${name}/secret".source = ./secret.key;
@@ -34,14 +39,6 @@ let
   extraOpts = {
     port = mkOpt' lib.types.port 50000;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

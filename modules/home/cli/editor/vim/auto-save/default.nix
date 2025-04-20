@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-auto-save";
-}
+{ enable = "vim-auto-save"; }

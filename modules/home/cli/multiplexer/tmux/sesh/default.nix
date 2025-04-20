@@ -14,7 +14,6 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      path = ./.;
       nixPkgs = "sesh";
       progs.tmux.extraConfig = "bind ${cfg.key} ${cfg.command}";
       confs = {

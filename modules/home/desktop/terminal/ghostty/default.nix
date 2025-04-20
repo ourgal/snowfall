@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.ghostty.settings = {
     font-family = "monospace";
     font-size = 14;

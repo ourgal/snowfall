@@ -5,7 +5,6 @@ let
   value = {
     boot.loader.grub.device = "/dev/sda";
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

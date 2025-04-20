@@ -6,7 +6,6 @@ args.module (
       inherit (args) host;
     in
     {
-      path = ./.;
       value = {
         home.file = {
           ".xprofile".text =

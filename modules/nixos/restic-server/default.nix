@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib _name;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -8,7 +8,7 @@ let
     mkFireholRule
     ;
   port = 3457;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services = {
       restic.server = enabled // {
@@ -21,7 +21,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

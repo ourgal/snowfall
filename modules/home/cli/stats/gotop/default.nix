@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "gotop";
   progs.fish.functions.gotop = {
     body = ''

@@ -29,7 +29,6 @@ let
   };
 in
 {
-  path = ./.;
   progs.alacritty = {
     settings = {
       general.live_config_reload = true;

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "grex";
   myPkgs = [
     # keep-sorted start

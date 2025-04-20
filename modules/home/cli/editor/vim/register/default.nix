@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  disable = "vim-peekaboo";
-}
+{ disable = "vim-peekaboo"; }

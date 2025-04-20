@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.tealdeer.settings = {
     display = {
       compact = false;

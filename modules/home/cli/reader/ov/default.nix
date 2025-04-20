@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "ov";
   progs.git.extraConfig = {
     delta = {

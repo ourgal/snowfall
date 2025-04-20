@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       inputPkgs = (
         p: with p.aagl.packages."${pkgs.system}"; [
           anime-borb-launcher

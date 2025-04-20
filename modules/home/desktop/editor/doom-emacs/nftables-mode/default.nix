@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.doom-emacs.extraPackages = epkgs: [ epkgs.nftables-mode ];
-}
+{ progs.doom-emacs.extraPackages = epkgs: [ epkgs.nftables-mode ]; }

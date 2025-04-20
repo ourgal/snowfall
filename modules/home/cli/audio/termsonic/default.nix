@@ -7,7 +7,6 @@ args.module (
       inherit (lib.${namespace}) domains;
     in
     {
-      path = ./.;
       nixPkgs = "termsonic";
       confs."termsonic.toml" = {
         BaseURL = "http://${domains.navidrome}";

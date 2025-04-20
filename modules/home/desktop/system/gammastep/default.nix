@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       servs.gammastep.provider = "geoclue2";
       value = {
         systemd.user.services.gammastep = {

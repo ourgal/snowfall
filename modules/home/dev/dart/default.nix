@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "flutter";
-}
+{ nixPkgs = "flutter"; }

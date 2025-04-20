@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.todo-comments = {
     enable = true;
     colors = {

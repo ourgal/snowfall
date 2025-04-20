@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "vgrep";
   progs.fish.functions = {
     vgf = {

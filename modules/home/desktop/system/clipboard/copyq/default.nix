@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs = "copyq";
-}
+{ servs = "copyq"; }

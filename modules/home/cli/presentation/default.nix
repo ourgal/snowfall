@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "lookatme";
   haskellPkgs = "patat";
   nixPkgs = [

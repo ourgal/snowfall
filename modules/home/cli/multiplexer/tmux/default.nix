@@ -91,7 +91,6 @@ args.module (
           "";
     in
     {
-      path = ./.;
       nixPkgs = [
         # keep-sorted start
         "smug"

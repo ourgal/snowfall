@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       progs.git = {
         signing = {
           key = "${config.home.homeDirectory}/.ssh/id_ed25519.pub";

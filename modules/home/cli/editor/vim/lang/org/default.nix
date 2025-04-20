@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-orgmode";
-}
+{ enable = "vim-orgmode"; }

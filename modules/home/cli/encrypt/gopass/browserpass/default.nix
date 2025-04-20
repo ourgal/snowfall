@@ -1,8 +1,1 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs = "browserpass";
-  }
-)
+args: args.module (args // { progs = "browserpass"; })

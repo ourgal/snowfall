@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  servs.batsignal.extraArgs = [ "-p" ];
-}
+{ servs.batsignal.extraArgs = [ "-p" ]; }

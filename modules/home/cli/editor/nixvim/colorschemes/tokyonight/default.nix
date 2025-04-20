@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.colorschemes.tokyonight.enable = true;
-}
+{ progs.nixvim.colorschemes.tokyonight.enable = true; }

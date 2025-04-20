@@ -127,7 +127,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       progs.tmux.plugins = [
         {
           plugin = pkgs.tmuxPlugins.yank;

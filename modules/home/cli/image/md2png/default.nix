@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "wkhtmltopdf";
   myPkgs = "md2png";
   progs.fish.functions.md2png = {

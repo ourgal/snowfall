@@ -20,7 +20,6 @@ args.module (
       };
     in
     {
-      path = ./.;
       nixPkgs = [
         "buku"
         "bukubrow"

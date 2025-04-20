@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.doom-emacs.extraPackages = epkgs: [ epkgs.annotate ];
-}
+{ progs.doom-emacs.extraPackages = epkgs: [ epkgs.annotate ]; }

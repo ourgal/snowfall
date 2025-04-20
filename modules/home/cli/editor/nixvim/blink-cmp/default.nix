@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins = {
     blink-cmp = {
       enable = true;

@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-asterisk";
-}
+{ enable = "vim-asterisk"; }

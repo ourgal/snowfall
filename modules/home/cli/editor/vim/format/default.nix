@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "neoformat";
-}
+{ enable = "neoformat"; }

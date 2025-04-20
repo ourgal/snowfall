@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.kitty = {
     themeFile = "Tomorrow_Night_Bright";
     font = {

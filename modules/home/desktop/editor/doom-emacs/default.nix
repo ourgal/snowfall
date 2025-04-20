@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs = "emacs";
   nixPkgs = [
     # keep-sorted start

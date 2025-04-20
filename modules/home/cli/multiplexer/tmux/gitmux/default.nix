@@ -47,7 +47,6 @@ let
   };
 in
 {
-  path = ./.;
   nixPkgs = "gitmux";
   files.".gitmux.conf" = gitmuxConf;
   confs."gitmux/config.yaml" = gitmuxConf;

@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "autojump";
-}
+{ progs = "autojump"; }

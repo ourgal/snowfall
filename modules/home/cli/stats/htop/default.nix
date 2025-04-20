@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       progs.htop.settings =
         {
           color_scheme = 6;

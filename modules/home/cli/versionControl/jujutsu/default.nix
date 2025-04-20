@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "jj-fzf";
   progs = {
     jujutsu.settings = {

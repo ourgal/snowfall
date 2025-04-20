@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "fish-lsp";
-}
+{ nixPkgs = "fish-lsp"; }

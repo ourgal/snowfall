@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.globalOpts = {
     # Line numbers
     number = true;

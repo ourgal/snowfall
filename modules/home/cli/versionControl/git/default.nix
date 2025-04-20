@@ -11,7 +11,6 @@ args.module (
         ;
     in
     {
-      path = ./.;
       enable = [
         # keep-sorted start
         "add"

@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.plugins.web-devicons.enable = true;
-}
+{ progs.nixvim.plugins.web-devicons.enable = true; }

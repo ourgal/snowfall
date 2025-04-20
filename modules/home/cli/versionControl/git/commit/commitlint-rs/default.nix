@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "commitlint-rs";
   confs."commitlint-rs/config.yaml" = {
     rules = {

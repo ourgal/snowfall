@@ -15,7 +15,6 @@ args.module (
       isServer = host == "home";
     in
     {
-      path = ./.;
       nixPkgs = "barrier";
       value = {
         xdg.dataFile = lib.mkIf isServer { "barrier/.barrier.conf".source = ./barrier.conf; };

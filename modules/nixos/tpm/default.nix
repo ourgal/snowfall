@@ -10,7 +10,6 @@ let
     };
     users.users.${user}.extraGroups = [ "tss" ]; # tss group has access to TPM devices
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

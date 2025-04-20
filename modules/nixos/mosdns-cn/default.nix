@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -18,7 +19,7 @@ let
     ;
   cfg = cfgNixos config.${namespace} ./.;
   redisPort = 6379;
-  name = getDirname path;
+  name = getDirname _name;
   geoip = pkgs._sources.v2ray-rules-dat-geoip.src;
   geosite = pkgs._sources.v2ray-rules-dat-geosite.src;
   configFile = pkgs.writeText "config.yaml" (
@@ -120,14 +121,6 @@ let
   extraOpts = {
     port = mkOpt' lib.types.port 53;
   };
-  path = ./.;
-  _args = {
-    inherit
-      value
-      path
-      args
-      extraOpts
-      ;
-  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

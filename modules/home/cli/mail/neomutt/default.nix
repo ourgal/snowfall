@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "neomutt";
   confs.neomutt = [
     ./neomuttrc

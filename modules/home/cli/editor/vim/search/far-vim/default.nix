@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ far-vim ];
         extraConfig = builtins.readFile ./config.vim;

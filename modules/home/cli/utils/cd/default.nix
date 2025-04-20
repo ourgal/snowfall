@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "cdwe";
   enable = [
     # keep-sorted start

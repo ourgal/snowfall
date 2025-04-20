@@ -1,5 +1,4 @@
 {
-  path = ./.;
   servs.easyeffects.preset = "LoudnessEqualizer";
   confs."easyeffects/output" = [
     ./LoudnessEqualizer.json

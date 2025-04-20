@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "git-crecord";
-}
+{ nixPkgs = "git-crecord"; }

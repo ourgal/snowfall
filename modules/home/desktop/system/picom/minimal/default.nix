@@ -6,7 +6,6 @@ args.module (
       inherit (args) enableOpt disableOpt;
     in
     {
-      path = ./.;
       servs = {
         picom = {
           settings =

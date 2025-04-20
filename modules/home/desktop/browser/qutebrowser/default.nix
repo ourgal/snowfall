@@ -23,7 +23,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       progs.qutebrowser = {
         settings = {
           auto_save.session = true;

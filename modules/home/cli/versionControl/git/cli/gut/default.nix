@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       nixPkgs = "gut";
       files = {
         ".gut/consent.toml" = {

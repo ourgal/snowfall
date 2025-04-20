@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = [
     "xsettingsd"
     "elogind"

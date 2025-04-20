@@ -2000,11 +2000,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745167976,
-        "narHash": "sha256-Ud4mHUtGIpZtON/sRxbEHF95B3/JEMVe8wgDxVTt4c0=",
+        "lastModified": 1745171956,
+        "narHash": "sha256-fJ1jBiWkke8HFS8TDpi8BhoV7zwGFwhhkxnDCok6NIs=",
         "owner": "ourgal",
         "repo": "lib",
-        "rev": "62ae243d04f1a3435a9058d4d5040a6820b42acd",
+        "rev": "3ecb4631d179739dfa3bf13ef64bf4f0f4bbd595",
         "type": "github"
       },
       "original": {

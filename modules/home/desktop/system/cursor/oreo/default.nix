@@ -6,7 +6,6 @@ args.module (
       inherit (args) enabled pkgs disabled;
     in
     {
-      path = ./.;
       value = {
         home.pointerCursor = {
           gtk = enabled;

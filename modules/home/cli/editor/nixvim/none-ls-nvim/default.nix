@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.none-ls = {
     enable = true;
     cmd = [ "bash -c nvim" ];

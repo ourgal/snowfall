@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    _name
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -16,7 +17,7 @@ let
   user = config.${namespace}.user.name;
   port = 5001;
   User = user;
-  name = getDirname path;
+  name = getDirname _name;
   ExecStart = pkgs.writers.writeBash "dufs-start" ''
     dir="/home/${user}/.local/share/dufs"
     mkdir -p "$dir"
@@ -41,7 +42,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -1,19 +1,23 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args)
+    namespace
+    lib
+    pkgs
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     domains
     mkFileServer
     getDirname
     ;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services.caddy = {
       virtualHosts = mkFileServer domains.${name} "${pkgs.${namespace}.${name}}";
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "ttdl";
   confs = {
     "ttdl/ttdl.toml" = {

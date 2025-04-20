@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.plugins.nix.enable = true;
-}
+{ progs.nixvim.plugins.nix.enable = true; }

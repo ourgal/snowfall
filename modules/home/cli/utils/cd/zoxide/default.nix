@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "zoxide";
-}
+{ progs = "zoxide"; }

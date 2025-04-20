@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       servs.sxhkd.keybindings = {
         "F2" = pkgs.writeShellScript "image name" ''
           xdotool click 3

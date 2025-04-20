@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib _name;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -10,7 +10,7 @@ let
     getDirname
     ;
   port = 8888;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services = {
       atuin = enabled // {
@@ -31,7 +31,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

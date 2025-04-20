@@ -1,5 +1,4 @@
 {
-  path = ./.;
   confs."procps/toprc" = ''
     top's Config File (Linux processes with windows)
     Id:k, Mode_altscr=0, Mode_irixps=1, Delay_time=3.0, Curwin=0

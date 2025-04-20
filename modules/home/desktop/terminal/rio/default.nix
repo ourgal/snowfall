@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.rio.settings = {
     window = {
       background-opacity = 0.5;

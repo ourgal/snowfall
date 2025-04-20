@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = [
     # keep-sorted start
     "cache"

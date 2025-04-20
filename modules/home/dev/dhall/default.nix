@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = [
     "dhall"
     "dhall-json"

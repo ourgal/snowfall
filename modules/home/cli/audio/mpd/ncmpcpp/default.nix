@@ -6,7 +6,6 @@ args.module (
       inherit (args) lib namespace;
     in
     {
-      path = ./.;
       progs.ncmpcpp.bindings = lib.${namespace}.mkNcmpcppBindings {
         j = "scroll_down";
         k = "scroll_up";

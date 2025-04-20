@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "television";
   confs."television/config.toml" = {
     ui = {

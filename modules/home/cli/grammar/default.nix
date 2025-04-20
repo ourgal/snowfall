@@ -6,7 +6,6 @@ args.module (
       inherit (args) pkgs;
     in
     {
-      path = ./.;
       value = {
         home.packages = [
           # keep-sorted start

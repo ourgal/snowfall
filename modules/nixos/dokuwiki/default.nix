@@ -1,13 +1,13 @@
 args:
 let
-  inherit (args) namespace lib;
+  inherit (args) namespace lib _name;
   inherit (lib.${namespace})
     nixosModule
     domains
     enabled
     getDirname
     ;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     services.dokuwiki = {
       webserver = "caddy";
@@ -16,7 +16,6 @@ let
       };
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

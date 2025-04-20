@@ -98,7 +98,6 @@ args.module (
           };
     in
     {
-      path = ./.;
       value.home.packages = notNixos (font.allPkgs pkgs namespace);
       confs = {
         "fontconfig/fonts.conf" =

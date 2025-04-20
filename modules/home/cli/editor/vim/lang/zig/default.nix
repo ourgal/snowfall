@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "zig-vim";
-}
+{ enable = "zig-vim"; }

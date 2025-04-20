@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = [
     # keep-sorted start
     "antiword"

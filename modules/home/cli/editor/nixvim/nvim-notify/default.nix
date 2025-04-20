@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.notify = {
     enable = true;
     backgroundColour = "#1e1e2e";

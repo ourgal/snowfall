@@ -6,7 +6,6 @@ args.module (
       inherit (args) host config;
     in
     {
-      path = ./.;
       value = {
         sops = {
           secrets =

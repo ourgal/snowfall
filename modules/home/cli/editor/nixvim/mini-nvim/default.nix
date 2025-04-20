@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.nixvim.plugins.mini = {
     enable = true;
     modules = {

@@ -1,5 +1,4 @@
 {
-  path = ./.;
   confs = {
     yazi = ./init.lua;
     "yazi/plugins" = [

@@ -17,7 +17,6 @@ args.module (
       fileManager = "ranger";
     in
     {
-      path = ./.;
       progs.fish = {
         interactiveShellInit = # fish
           ''

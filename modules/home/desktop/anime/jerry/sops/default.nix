@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       value.sops.secrets = {
         "jerry/token" = {
           mode = "0600";

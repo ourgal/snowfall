@@ -15,7 +15,6 @@ args.module (
       '';
     in
     {
-      path = ./.;
       nixPkgs = "mouse-actions";
       confs."mouse-actions.json" = {
         "bindings" = [

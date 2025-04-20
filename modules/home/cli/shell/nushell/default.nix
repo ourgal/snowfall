@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs = "nushell";
-}
+{ progs = "nushell"; }

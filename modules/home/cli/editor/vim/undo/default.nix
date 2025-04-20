@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "undotree";
-}
+{ enable = "undotree"; }

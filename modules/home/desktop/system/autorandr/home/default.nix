@@ -1,5 +1,4 @@
 {
-  path = ./.;
   progs.autorandr =
     let
       display1 = {

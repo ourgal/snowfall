@@ -6,7 +6,6 @@ args.module (
       inherit (args) config;
     in
     {
-      path = ./.;
       files."Pictures/manga" = [
         ./Makefile
         ./unarchive.sh

@@ -8,7 +8,6 @@ args.module (
       inherit (builtins) readFile;
     in
     {
-      path = ./.;
       progs.vim.extraConfig =
         (readFile ./option.vim)
         + (readFile ./keymap.vim)

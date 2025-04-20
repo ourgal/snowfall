@@ -1,5 +1,4 @@
 {
-  path = ./.;
   files.".ghci" = ''
     :set prompt "λ "
   '';

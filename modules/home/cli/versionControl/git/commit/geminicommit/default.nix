@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "geminicommit";
-}
+{ myPkgs = "geminicommit"; }

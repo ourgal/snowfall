@@ -1,5 +1,4 @@
 {
-  path = ./.;
   nixPkgs = "pay-respects";
   progs = {
     bash.bashrcExtra = ''

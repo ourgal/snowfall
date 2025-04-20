@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.plugins.auto-session.enable = true;
-}
+{ progs.nixvim.plugins.auto-session.enable = true; }

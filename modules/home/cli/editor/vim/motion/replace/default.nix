@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-subversive";
-}
+{ enable = "vim-subversive"; }

@@ -19,7 +19,6 @@ args.module (
       modifier = "SUPER";
     in
     {
-      path = ./.;
       value = {
         wayland.windowManager.hyprland = enabled // {
           xwayland = enabled;

@@ -7,7 +7,6 @@ args.module (
       inherit (config.${namespace}.cli.editor.vim.motion.n) is-vim;
     in
     {
-      path = ./.;
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ vim-anzu ];
         extraConfig =

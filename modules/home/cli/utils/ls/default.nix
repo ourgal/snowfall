@@ -1,5 +1,4 @@
 {
-  path = ./.;
   myPkgs = "facad";
   nixPkgs = "tree";
   enable = [

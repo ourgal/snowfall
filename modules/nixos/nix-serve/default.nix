@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args)
+    namespace
+    lib
+    pkgs
+    _name
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -10,7 +15,7 @@ let
     domains
     ;
   port = 50000;
-  name = getDirname path;
+  name = getDirname _name;
   value = {
     environment.etc = {
       "nix-serve/secret".source = ./secret;
@@ -31,7 +36,6 @@ let
       tcp = port;
     };
   };
-  path = ./.;
-  _args = { inherit value path args; };
+  _args = { inherit value args; };
 in
 nixosModule _args

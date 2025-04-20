@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  progs.nixvim.plugins.which-key.enable = true;
-}
+{ progs.nixvim.plugins.which-key.enable = true; }

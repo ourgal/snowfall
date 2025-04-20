@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  myPkgs = "grip-grab";
-}
+{ myPkgs = "grip-grab"; }

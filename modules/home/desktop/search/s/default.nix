@@ -7,7 +7,6 @@ args.module (
       inherit (config.${namespace}.user) browser;
     in
     {
-      path = ./.;
       myPkgs = "s";
       progs.fish.functions.sp = {
         body = ''

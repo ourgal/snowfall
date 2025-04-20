@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  enable = "vim-repeat";
-}
+{ enable = "vim-repeat"; }

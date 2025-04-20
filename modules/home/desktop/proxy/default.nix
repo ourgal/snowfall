@@ -1,4 +1,1 @@
-{
-  path = ./.;
-  nixPkgs = "clash-verge-rev";
-}
+{ nixPkgs = "clash-verge-rev"; }

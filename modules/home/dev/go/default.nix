@@ -6,7 +6,6 @@ args.module (
       inherit (args) lib namespace;
     in
     {
-      path = ./.;
       progs = "go";
       nixPkgs = [
         # keep-sorted start
