@@ -144,6 +144,7 @@ args.module (
           "puffer"
           "rgg.fish"
           "slashslash-fish"
+          "smartcd.fish"
           "sponge"
           "to-fish"
           "todo-comments.fish"
