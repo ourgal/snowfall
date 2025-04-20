@@ -34,4 +34,5 @@
     "textimg"
     # keep-sorted end
   ];
+  disable = "md2png";
 }
