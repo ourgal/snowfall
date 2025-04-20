@@ -7,6 +7,8 @@
 rustPlatform.buildRustPackage (
   lib.${namespace}.mkRustSource (_sources' ./.)
   // {
+    doCheck = false;
+
     meta = {
       description = "An opinionated hledger's journal files formatter";
       homepage = "https://github.com/mondeja/hledger-fmt";

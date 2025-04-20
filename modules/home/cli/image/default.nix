@@ -28,7 +28,6 @@
     "duplicate-image-finder"
     "gif-progress"
     "manga-tui"
-    "rimage"
     "sprite-dicing"
     "svgshift"
     "textimg"

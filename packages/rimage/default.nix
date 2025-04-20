@@ -4,11 +4,21 @@
   pkg-config,
   _sources',
   namespace,
+  cmake,
+  yasm,
+  nasm,
+  perl,
 }:
 rustPlatform.buildRustPackage (
   lib.${namespace}.mkRustSource (_sources' ./.)
   // {
-    nativeBuildInputs = [ pkg-config ];
+    nativeBuildInputs = [
+      pkg-config
+      cmake
+      yasm
+      nasm
+      perl
+    ];
 
     doCheck = false;
 
