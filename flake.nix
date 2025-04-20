@@ -5,7 +5,7 @@
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     snowfall-lib = {
-      url = "github:snowfallorg/lib";
+      url = "github:ourgal/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -220,5 +220,7 @@
       homes.users = homeSpecialArgsFinal;
 
       deploy = lib.mkDeploy { inherit (inputs) self; };
+
+      modules.home-transform = lib.homeModule;
     };
 }

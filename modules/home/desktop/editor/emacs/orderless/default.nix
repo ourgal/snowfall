@@ -1,11 +1,7 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs.emacs = {
-      extraPackages = epkgs: [ epkgs.orderless ];
-      extraConfig = builtins.readFile ./config.el;
-    };
-  }
-)
+{
+  path = ./.;
+  progs.emacs = {
+    extraPackages = epkgs: [ epkgs.orderless ];
+    extraConfig = builtins.readFile ./config.el;
+  };
+}

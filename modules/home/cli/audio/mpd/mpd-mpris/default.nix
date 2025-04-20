@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    servs = "mpd-mpris";
-  }
-)
+{
+  path = ./.;
+  servs = "mpd-mpris";
+}

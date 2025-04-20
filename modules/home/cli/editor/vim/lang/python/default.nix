@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    disable = "vim-ipython";
-  }
-)
+{
+  path = ./.;
+  disable = "vim-ipython";
+}

@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "dcnnt";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "dcnnt";
+}

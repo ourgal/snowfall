@@ -1,18 +1,14 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = [
-      # keep-sorted start
-      "emanote"
-      "hledger-ui"
-      "hledger-web"
-      "jrnl"
-      "nb"
-      "pandoc"
-      # keep-sorted end
-    ];
-    enable = "hledger";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = [
+    # keep-sorted start
+    "emanote"
+    "hledger-ui"
+    "hledger-web"
+    "jrnl"
+    "nb"
+    "pandoc"
+    # keep-sorted end
+  ];
+  enable = "hledger";
+}

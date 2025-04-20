@@ -1,12 +1,8 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = [
-      "bestsub"
-      "v2dat"
-    ];
-    nixPkgs = "gg";
-  }
-)
+{
+  path = ./.;
+  myPkgs = [
+    "bestsub"
+    "v2dat"
+  ];
+  nixPkgs = "gg";
+}

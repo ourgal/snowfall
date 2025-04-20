@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vim-cycle";
-    disable = "vim-visual-increment"; # using g Ctrl-A instead
-  }
-)
+{
+  path = ./.;
+  enable = "vim-cycle";
+  disable = "vim-visual-increment"; # using g Ctrl-A instead
+}

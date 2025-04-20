@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vim-matchup";
-  }
-)
+{
+  path = ./.;
+  enable = "vim-matchup";
+}

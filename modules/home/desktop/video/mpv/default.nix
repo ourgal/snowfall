@@ -1,12 +1,8 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = [
-      "base"
-      "mime"
-      "plugins"
-    ];
-  }
-)
+{
+  path = ./.;
+  enable = [
+    "base"
+    "mime"
+    "plugins"
+  ];
+}

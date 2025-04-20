@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vim-auto-save";
-  }
-)
+{
+  path = ./.;
+  enable = "vim-auto-save";
+}

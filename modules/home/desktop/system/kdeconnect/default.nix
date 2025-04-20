@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = "phone";
-    servs.kdeconnect.indicator = true;
-  }
-)
+{
+  path = ./.;
+  myPkgs = "phone";
+  servs.kdeconnect.indicator = true;
+}

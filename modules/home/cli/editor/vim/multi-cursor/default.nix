@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vim-visual-multi";
-  }
-)
+{
+  path = ./.;
+  enable = "vim-visual-multi";
+}

@@ -1,11 +1,7 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = [
-      "cue"
-      "cuelsp"
-    ];
-  }
-)
+{
+  path = ./.;
+  nixPkgs = [
+    "cue"
+    "cuelsp"
+  ];
+}

@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs = "gallery-dl";
-  }
-)
+{
+  path = ./.;
+  progs = "gallery-dl";
+}

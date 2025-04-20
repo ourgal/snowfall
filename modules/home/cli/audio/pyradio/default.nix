@@ -1,17 +1,13 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = [
-      "mplayer"
-      "pyradio"
+{
+  path = ./.;
+  nixPkgs = [
+    "mplayer"
+    "pyradio"
+  ];
+  confs = {
+    pyradio = [
+      ./config
+      ./stations.csv
     ];
-    confs = {
-      pyradio = [
-        ./config
-        ./stations.csv
-      ];
-    };
-  }
-)
+  };
+}

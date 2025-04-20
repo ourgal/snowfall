@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = "sunbeam";
-    enable = "buku";
-  }
-)
+{
+  path = ./.;
+  myPkgs = "sunbeam";
+  enable = "buku";
+}

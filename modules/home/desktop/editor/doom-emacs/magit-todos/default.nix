@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs.doom-emacs.extraPackages = epkgs: [ epkgs.magit-todos ];
-  }
-)
+{
+  path = ./.;
+  progs.doom-emacs.extraPackages = epkgs: [ epkgs.magit-todos ];
+}

@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vis";
-  }
-)
+{
+  path = ./.;
+  enable = "vis";
+}

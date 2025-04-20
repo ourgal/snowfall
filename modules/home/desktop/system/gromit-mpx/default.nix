@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    servs = "gromit-mpx";
-  }
-)
+{
+  path = ./.;
+  servs = "gromit-mpx";
+}

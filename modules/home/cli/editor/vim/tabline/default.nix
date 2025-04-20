@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "taboo-vim";
-  }
-)
+{
+  path = ./.;
+  enable = "taboo-vim";
+}

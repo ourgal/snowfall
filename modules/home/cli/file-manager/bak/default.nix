@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = "bt";
-    nixPkgs = "projectable";
-  }
-)
+{
+  path = ./.;
+  myPkgs = "bt";
+  nixPkgs = "projectable";
+}

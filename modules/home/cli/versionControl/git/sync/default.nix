@@ -1,20 +1,16 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = [
-      # keep-sorted start
-      "datalad"
-      "git-annex"
-      "git-annex-remote-rclone"
-      "git-annex-utils"
-      "gitfs"
-      # keep-sorted end
-    ];
-    progs.git.extraConfig = {
-      annex.security.allowed-ip-addresses = "all";
-    };
-    enable = "git-ftp";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = [
+    # keep-sorted start
+    "datalad"
+    "git-annex"
+    "git-annex-remote-rclone"
+    "git-annex-utils"
+    "gitfs"
+    # keep-sorted end
+  ];
+  progs.git.extraConfig = {
+    annex.security.allowed-ip-addresses = "all";
+  };
+  enable = "git-ftp";
+}

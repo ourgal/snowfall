@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "vim-asterisk";
-  }
-)
+{
+  path = ./.;
+  enable = "vim-asterisk";
+}

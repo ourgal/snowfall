@@ -1,14 +1,10 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "grex";
-    myPkgs = [
-      # keep-sorted start
-      "rexi"
-      "rx"
-      # keep-sorted end
-    ];
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "grex";
+  myPkgs = [
+    # keep-sorted start
+    "rexi"
+    "rx"
+    # keep-sorted end
+  ];
+}

@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = "blendr";
-  }
-)
+{
+  path = ./.;
+  myPkgs = "blendr";
+}

@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "jq-vim";
-  }
-)
+{
+  path = ./.;
+  enable = "jq-vim";
+}

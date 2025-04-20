@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    servs = "pueue";
-  }
-)
+{
+  path = ./.;
+  servs = "pueue";
+}

@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "pot";
-    enable = "crow-translate";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "pot";
+  enable = "crow-translate";
+}

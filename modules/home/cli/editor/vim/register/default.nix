@@ -1,1 +1,4 @@
-args: args.module (args // { path = ./.; })
+{
+  path = ./.;
+  disable = "vim-peekaboo";
+}

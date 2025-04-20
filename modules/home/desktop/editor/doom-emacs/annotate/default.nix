@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs.doom-emacs.extraPackages = epkgs: [ epkgs.annotate ];
-  }
-)
+{
+  path = ./.;
+  progs.doom-emacs.extraPackages = epkgs: [ epkgs.annotate ];
+}

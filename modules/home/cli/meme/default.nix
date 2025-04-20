@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "meme-image-generator";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "meme-image-generator";
+}

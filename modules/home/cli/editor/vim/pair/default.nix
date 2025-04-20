@@ -1,15 +1,11 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = [
-      # keep-sorted start
-      "delimitMate" # auto quotes
-      "switch-vim"
-      "vim-endwise"
-      # keep-sorted end
-    ];
-    disable = "lexima-vim"; # auto quotes
-  }
-)
+{
+  path = ./.;
+  enable = [
+    # keep-sorted start
+    "delimitMate" # auto quotes
+    "switch-vim"
+    "vim-endwise"
+    # keep-sorted end
+  ];
+  disable = "lexima-vim"; # auto quotes
+}

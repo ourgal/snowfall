@@ -1,15 +1,11 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = [
-      # keep-sorted start
-      "traces-vim"
-      "vim-mkdir"
-      "vim-suda"
-      "vimsuggest"
-      # keep-sorted end
-    ];
-  }
-)
+{
+  path = ./.;
+  enable = [
+    # keep-sorted start
+    "traces-vim"
+    "vim-mkdir"
+    "vim-suda"
+    "vimsuggest"
+    # keep-sorted end
+  ];
+}

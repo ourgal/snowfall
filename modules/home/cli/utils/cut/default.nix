@@ -1,15 +1,11 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    pyPkgs = "percol";
-    nixPkgs = [
-      # keep-sorted start
-      "choose"
-      "hck"
-      "tuc"
-      # keep-sorted end
-    ];
-  }
-)
+{
+  path = ./.;
+  pyPkgs = "percol";
+  nixPkgs = [
+    # keep-sorted start
+    "choose"
+    "hck"
+    "tuc"
+    # keep-sorted end
+  ];
+}

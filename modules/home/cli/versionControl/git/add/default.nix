@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "git-crecord";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "git-crecord";
+}

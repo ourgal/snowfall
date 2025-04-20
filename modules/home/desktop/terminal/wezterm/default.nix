@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    progs.wezterm.extraConfig = builtins.readFile ./config.lua;
-  }
-)
+{
+  path = ./.;
+  progs.wezterm.extraConfig = builtins.readFile ./config.lua;
+}

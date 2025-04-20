@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    myPkgs = "tui-network";
-  }
-)
+{
+  path = ./.;
+  myPkgs = "tui-network";
+}

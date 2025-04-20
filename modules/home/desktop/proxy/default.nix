@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "clash-verge-rev";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "clash-verge-rev";
+}

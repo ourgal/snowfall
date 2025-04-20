@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "riv-vim";
-  }
-)
+{
+  path = ./.;
+  enable = "riv-vim";
+}

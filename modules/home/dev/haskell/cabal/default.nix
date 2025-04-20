@@ -1,9 +1,5 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "cabal-install";
-    confs."cabal" = ./config;
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "cabal-install";
+  confs."cabal" = ./config;
+}

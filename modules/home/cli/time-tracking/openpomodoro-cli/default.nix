@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    nixPkgs = "openpomodoro-cli";
-  }
-)
+{
+  path = ./.;
+  nixPkgs = "openpomodoro-cli";
+}

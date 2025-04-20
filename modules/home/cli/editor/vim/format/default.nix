@@ -1,8 +1,4 @@
-args:
-args.module (
-  args
-  // {
-    path = ./.;
-    enable = "neoformat";
-  }
-)
+{
+  path = ./.;
+  enable = "neoformat";
+}
