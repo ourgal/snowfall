@@ -626,11 +626,6 @@ fetch.url = "https://github.com/minefuto/tp/releases/download/$ver/tp_Linux_x86_
 src.github = "pamburus/hl"
 fetch.github = "pamburus/hl"
 
-[rustywatch]
-src.github = "ak9024/rustywatch"
-fetch.github = "ak9024/rustywatch"
-cargo_locks = ["Cargo.lock"]
-
 [images-upload-cli]
 src.github = "DeadNews/images-upload-cli"
 fetch.github = "DeadNews/images-upload-cli"

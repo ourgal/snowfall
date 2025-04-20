@@ -1,6 +1,5 @@
 {
   path = ./.;
-  myPkgs = "rustywatch";
   nixPkgs = [
     # keep-sorted start
     "funzzy"
