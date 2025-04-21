@@ -1,0 +1,4 @@
+% bar
+
+# year progress bar
+jalm "0 0 0 1 1 * *" -t "Year Progress" -c green
