@@ -24,9 +24,6 @@ args.module (
             scheme set tokyonight
             set -Ux fish_key_bindings fish_vi_key_bindings
 
-            # slashslash-fish
-            slashslash plugin --unregister buck
-            slashslash enable make
             ${__done_notification_command}
 
             if test $fish_key_bindings = fish_vi_key_bindings
@@ -142,8 +139,6 @@ args.module (
           "fzf"
           "puffer"
           "rgg.fish"
-          "slashslash-fish"
-          "smartcd.fish"
           "sponge"
           "to-fish"
           "todo-comments.fish"
@@ -176,7 +171,12 @@ args.module (
           scuo = "systemctl --user stop";
         };
       };
-      enable = "fzf-help";
+      enable = [
+        # keep-sorted start
+        "fzf-help"
+        "slashslash.fish"
+        # keep-sorted end
+      ];
     }
   )
 )
