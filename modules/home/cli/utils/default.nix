@@ -4,6 +4,7 @@
   nixPkgs = [
     # keep-sorted start
     "coreutils-full"
+    "empty"
     "loop"
     "parallel-full"
     "progress"
