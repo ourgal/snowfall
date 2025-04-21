@@ -95,6 +95,7 @@
     "android"
     "ansible"
     "blog"
+    "cook"
     "cpp"
     "editorconfig"
     "efm"
