@@ -7,6 +7,7 @@
     "calf"
     "dfasma"
     "goattracker"
+    "muse"
     # keep-sorted end
   ];
 }
