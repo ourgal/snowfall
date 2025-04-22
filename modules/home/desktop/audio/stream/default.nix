@@ -10,6 +10,7 @@
     "hydrogen"
     "master_me"
     "mixxx"
+    "padthv1"
     # keep-sorted end
   ];
 }
