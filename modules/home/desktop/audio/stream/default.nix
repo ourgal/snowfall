@@ -11,6 +11,7 @@
     "master_me"
     "mixxx"
     "padthv1"
+    "patchance"
     # keep-sorted end
   ];
 }
