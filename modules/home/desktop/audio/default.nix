@@ -1,7 +1,6 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "alsa-utils"
     "audacity"
     "blanket"
     "easytag"
