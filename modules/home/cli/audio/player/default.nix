@@ -1,1 +1,4 @@
-{ enable = "mpd"; }
+{
+  nixPkgs = "cmus";
+  enable = "mpd";
+}
