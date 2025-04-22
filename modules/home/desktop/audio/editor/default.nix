@@ -9,6 +9,7 @@
     "goattracker"
     "muse"
     "musescore"
+    "non"
     # keep-sorted end
   ];
 }
