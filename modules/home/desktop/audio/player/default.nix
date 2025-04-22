@@ -1,1 +1,8 @@
-{ nixPkgs = "netease-cloud-music-gtk"; }
+{
+  nixPkgs = [
+    # keep-sorted start
+    "amarok"
+    "netease-cloud-music-gtk"
+    # keep-sorted end
+  ];
+}
