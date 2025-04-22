@@ -8,6 +8,7 @@
     "dfasma"
     "goattracker"
     "muse"
+    "musescore"
     # keep-sorted end
   ];
 }
