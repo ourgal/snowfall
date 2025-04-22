@@ -9,6 +9,7 @@
     "guitarix"
     "hydrogen"
     "master_me"
+    "mixxx"
     # keep-sorted end
   ];
 }
