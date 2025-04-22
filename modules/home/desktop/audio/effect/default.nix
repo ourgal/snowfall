@@ -1,1 +1,4 @@
-{ enable = "easyeffects"; }
+{
+  nixPkgs = "jamesdsp";
+  enable = "easyeffects";
+}
