@@ -25,10 +25,26 @@ in
             inherit pkg name;
           }
         );
-      dejavu = prefix "dejavu_fonts" "DejaVu" {
+
+      # english
+      noto = prefix "noto-fonts" "Noto" {
         sans = "Sans";
         serif = "Serif";
       };
+
+      # english monospace
+      firacode = {
+        pkg = "fira-code";
+        name = "Fira Code";
+      };
+
+      # english serif
+      chunk = {
+        pkg = "chunk";
+        name = "ChunkFive";
+      };
+
+      # cjk
       sourceHan = {
         sans = prefix "source-han-sans" "Source Han Sans" {
           cn = "SC";
@@ -52,6 +68,16 @@ in
           tw = "TC";
         };
       };
+
+      # cjk monospace
+      maple = {
+        pkg = "maple-mono-SC-NF";
+        name = "Maple Mono SC NF";
+      };
+
+      # cjk sans
+
+      # emoji
       joypixels = {
         pkg = "joypixels";
         name = "JoyPixels";
@@ -64,85 +90,11 @@ in
         pkg = "nerdfonts";
         name = "Symbols Nerd Font";
       };
-      firacode = {
-        pkg = "fira-code";
-        name = "Fira Code";
-      };
-      maple = {
-        pkg = "maple-mono-SC-NF";
-        name = "Maple Mono SC NF";
-      };
-      SentyEtherealWander = {
-        pkg = "font-SentyEtherealWander";
-        name = "SentyEtherealWander";
-      };
       fontAwesome = {
         pkg = "font-awesome";
         name = "Font Awesome 6 Free";
       };
-      noto = prefix "noto-fonts" "Noto" {
-        sans = "Sans";
-        serif = "Serif";
-      };
-      notoCJK = {
-        sans = prefix "noto-fonts-cjk-sans" "Noto Sans CJK" {
-          ko = "KR";
-          hk = "HK";
-          ja = "JP";
-          cn = "SC";
-          tw = "TC";
-        };
-        serif = prefix "noto-fonts-cjk-serif" "Noto Serif CJK" {
-          ko = "KR";
-          hk = "HK";
-          ja = "JP";
-          cn = "SC";
-          tw = "TC";
-        };
-      };
-      swei-nut-sans = {
-        sans = prefix "swei-nut-sans" "Swei Nut Sans CJK" {
-          ja = "JP";
-          cn = "SC";
-          tw = "TC";
-        };
-      };
-      swei-gothic = {
-        sans = prefix "swei-gothic" "Swei Gothic CJK" {
-          ja = "JP";
-          cn = "SC";
-          tw = "TC";
-        };
-      };
-      comicneue = {
-        pkg = "comicneue";
-        sans = "Comic Neue";
-      };
-      ChillReunion = prefix "ChillReunion" "寒蝉团圆体" {
-        sans = "Sans";
-        round = "Round";
-      };
-      Alatsi = {
-        pkg = "Alatsi";
-        sans = "Alatsi";
-      };
-      toneoz-font-pinyin-kai = prefix "toneoz-font-pinyin-kai" "ToneOZ\-Pinyin\-Kai\-" {
-        cn = "Simplified";
-        tw = "Traditional";
-      };
-      Chillkai = {
-        pkg = "Chillkai";
-        name = "ChillKai";
-      };
-      Shanggu = prefix "Shanggu" "Shanggu Mono" {
-        cn = "SC";
-        ja = "JP";
-        tw = "TC";
-      };
-      ChillRound = {
-        pkg = "ChillRound";
-        name = "ChillRoundF";
-      };
+
       getPkg =
         settings: pkgs: namespace:
         let
@@ -190,7 +142,9 @@ in
       extras = [ maple ];
       overrids = {
         cjk = { };
-        en = { };
+        en = {
+          serif = chunk;
+        };
       };
       emoji = [
         nerdfonts
