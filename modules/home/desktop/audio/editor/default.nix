@@ -4,6 +4,7 @@
     "ardour"
     "audacity"
     "bitwig-studio"
+    "calf"
     # keep-sorted end
   ];
 }
