@@ -8,6 +8,7 @@
     "ft2-clone"
     "guitarix"
     "hydrogen"
+    "master_me"
     # keep-sorted end
   ];
 }
