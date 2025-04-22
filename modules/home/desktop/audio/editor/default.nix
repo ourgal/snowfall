@@ -5,6 +5,7 @@
     "audacity"
     "bitwig-studio"
     "calf"
+    "dfasma"
     # keep-sorted end
   ];
 }
