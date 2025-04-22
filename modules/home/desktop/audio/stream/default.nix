@@ -6,6 +6,7 @@
     "fmit"
     "freqtweak"
     "ft2-clone"
+    "guitarix"
     # keep-sorted end
   ];
 }
