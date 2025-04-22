@@ -7,6 +7,7 @@
     "freqtweak"
     "ft2-clone"
     "guitarix"
+    "hydrogen"
     # keep-sorted end
   ];
 }
