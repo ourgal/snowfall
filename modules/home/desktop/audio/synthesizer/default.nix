@@ -13,6 +13,7 @@
     "padthv1"
     "patchance"
     "pianoteq"
+    "polyphone"
     # keep-sorted end
   ];
 }
