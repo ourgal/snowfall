@@ -12,6 +12,7 @@
     "mixxx"
     "padthv1"
     "patchance"
+    "pianoteq"
     # keep-sorted end
   ];
 }
