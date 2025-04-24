@@ -7,6 +7,7 @@
     "lmms"
     "netease-cloud-music-gtk"
     "pragha"
+    "qmmp"
     # keep-sorted end
   ];
 }
