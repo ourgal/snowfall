@@ -6,6 +6,7 @@
     "deadbeef"
     "lmms"
     "netease-cloud-music-gtk"
+    "pragha"
     # keep-sorted end
   ];
 }
