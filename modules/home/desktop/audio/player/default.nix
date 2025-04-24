@@ -10,6 +10,7 @@
     "qmmp"
     "quodlibet"
     "sayonara"
+    "spotify-qt"
     # keep-sorted end
   ];
 }
