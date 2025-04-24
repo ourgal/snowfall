@@ -18,6 +18,7 @@
     "qsampler"
     "qsynth"
     "rakarrack"
+    "reaper"
     # keep-sorted end
   ];
 }
