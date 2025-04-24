@@ -16,12 +16,13 @@ in
       prefix = subconverter + cdn;
       mkUrl =
         {
-          user,
-          repo,
-          branch,
-          path,
+          raw ? "",
+          user ? "",
+          repo ? "",
+          branch ? "",
+          path ? "",
         }:
-        "${prefix}/${user}/${repo}@${branch}/${path}";
+        if raw != "" then "${subconverter}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}";
       filter = lib.attrsets.filterAttrs (
         _: v: (!(v ? broken) || v.broken == false) && (v ? enable && v.enable == true)
       );
@@ -312,6 +313,12 @@ in
             branch = "master";
             path = "result/nodes";
           };
+          inherit updateInterval;
+        };
+        SCP1 = {
+          name = "SCP1";
+          url = mkUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
+          enable = true;
           inherit updateInterval;
         };
       }
