@@ -15,6 +15,7 @@
     "pianoteq"
     "polyphone"
     "puredata"
+    "qsampler"
     # keep-sorted end
   ];
 }
