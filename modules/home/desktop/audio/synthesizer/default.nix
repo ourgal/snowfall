@@ -14,6 +14,7 @@
     "patchance"
     "pianoteq"
     "polyphone"
+    "puredata"
     # keep-sorted end
   ];
 }
