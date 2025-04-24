@@ -16,6 +16,7 @@
     "polyphone"
     "puredata"
     "qsampler"
+    "qsynth"
     # keep-sorted end
   ];
 }
