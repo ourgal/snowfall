@@ -23,6 +23,7 @@
     "samplv1"
     "schismtracker"
     "seq66"
+    "sfxr-qt"
     # keep-sorted end
   ];
 }
