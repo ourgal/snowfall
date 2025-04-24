@@ -17,6 +17,7 @@
     "puredata"
     "qsampler"
     "qsynth"
+    "rakarrack"
     # keep-sorted end
   ];
 }
