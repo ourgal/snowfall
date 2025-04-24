@@ -19,6 +19,7 @@
     "qsynth"
     "rakarrack"
     "reaper"
+    "samplebrain"
     # keep-sorted end
   ];
 }
