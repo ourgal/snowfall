@@ -9,6 +9,7 @@
     "pragha"
     "qmmp"
     "quodlibet"
+    "sayonara"
     # keep-sorted end
   ];
 }
