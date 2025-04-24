@@ -52,6 +52,7 @@
     "timezone"
     "translate"
     "tui"
+    "typing"
     "utils"
     "versionControl"
     "video"
