@@ -20,6 +20,7 @@
     "rakarrack"
     "reaper"
     "samplebrain"
+    "samplv1"
     # keep-sorted end
   ];
 }
