@@ -21,6 +21,7 @@
     "reaper"
     "samplebrain"
     "samplv1"
+    "schismtracker"
     # keep-sorted end
   ];
 }
