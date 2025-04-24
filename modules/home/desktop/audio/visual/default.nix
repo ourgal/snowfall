@@ -4,6 +4,7 @@
     "midivisualizer"
     "sonic-lineup"
     "sonic-visualiser"
+    "spek"
     # keep-sorted end
   ];
 }
