@@ -22,6 +22,7 @@
     "samplebrain"
     "samplv1"
     "schismtracker"
+    "seq66"
     # keep-sorted end
   ];
 }
