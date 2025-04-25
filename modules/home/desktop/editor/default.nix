@@ -2,6 +2,7 @@
   nixPkgs = [
     # keep-sorted start
     "bluefish"
+    "cpeditor"
     "neovide"
     # keep-sorted end
   ];
