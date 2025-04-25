@@ -15,6 +15,7 @@
     "neovide"
     "notepadqq"
     "rednotebook"
+    "retext"
     # keep-sorted end
   ];
   enable = [
