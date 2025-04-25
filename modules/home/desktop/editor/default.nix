@@ -10,6 +10,7 @@
     "geany"
     "lapce"
     "leo-editor"
+    "manuskript"
     "neovide"
     # keep-sorted end
   ];
