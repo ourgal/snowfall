@@ -26,6 +26,7 @@
     "sfxr-qt"
     "surge"
     "synthv1"
+    "tony"
     # keep-sorted end
   ];
 }
