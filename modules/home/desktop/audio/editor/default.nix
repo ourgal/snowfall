@@ -10,6 +10,7 @@
     "muse"
     "musescore"
     "non"
+    "traverso"
     # keep-sorted end
   ];
 }
