@@ -28,6 +28,7 @@
     "synthv1"
     "tony"
     "zrythm"
+    "zynaddsubfx"
     # keep-sorted end
   ];
 }
