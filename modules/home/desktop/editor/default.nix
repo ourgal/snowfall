@@ -4,6 +4,7 @@
     "bluefish"
     "cpeditor"
     "cudatext"
+    "featherpad"
     "neovide"
     # keep-sorted end
   ];
