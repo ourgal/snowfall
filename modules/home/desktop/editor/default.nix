@@ -11,6 +11,7 @@
     "lapce"
     "leo-editor"
     "manuskript"
+    "mindforger"
     "neovide"
     # keep-sorted end
   ];
