@@ -11,6 +11,7 @@
     "quodlibet"
     "sayonara"
     "spotify-qt"
+    "strawberry"
     # keep-sorted end
   ];
 }
