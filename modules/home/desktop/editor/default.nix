@@ -8,6 +8,7 @@
     "focuswriter"
     "formiko"
     "geany"
+    "lapce"
     "neovide"
     # keep-sorted end
   ];
