@@ -14,6 +14,7 @@
     "mindforger"
     "neovide"
     "notepadqq"
+    "rednotebook"
     # keep-sorted end
   ];
   enable = [
