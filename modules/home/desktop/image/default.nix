@@ -7,7 +7,6 @@
   ];
   nixPkgs = [
     # keep-sorted start
-    "gimp"
     "nomacs"
     "qview"
     "sxiv"
@@ -16,6 +15,7 @@
   ];
   enable = [
     # keep-sorted start
+    "editor"
     "feh"
     "imv"
     "random-background"
