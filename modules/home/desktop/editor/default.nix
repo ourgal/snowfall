@@ -9,6 +9,7 @@
     "formiko"
     "geany"
     "lapce"
+    "leo-editor"
     "neovide"
     # keep-sorted end
   ];
