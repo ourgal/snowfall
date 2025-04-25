@@ -3,6 +3,7 @@
     # keep-sorted start
     "bluefish"
     "cpeditor"
+    "cudatext"
     "neovide"
     # keep-sorted end
   ];
