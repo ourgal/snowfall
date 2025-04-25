@@ -15,10 +15,10 @@
   ];
   enable = [
     # keep-sorted start
+    "diagram"
     "editor"
-    "feh"
-    "imv"
     "random-background"
+    "viewer"
     "wallpapers"
     # keep-sorted end
   ];
