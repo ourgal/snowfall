@@ -25,6 +25,7 @@
     "seq66"
     "sfxr-qt"
     "surge"
+    "synthv1"
     # keep-sorted end
   ];
 }
