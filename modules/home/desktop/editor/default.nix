@@ -1,7 +1,6 @@
 {
   nixPkgs = [
     # keep-sorted start
-
     "bluefish"
     "cpeditor"
     "cudatext"
