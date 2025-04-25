@@ -1,6 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
+    "bluefish"
     "neovide"
     # keep-sorted end
   ];
