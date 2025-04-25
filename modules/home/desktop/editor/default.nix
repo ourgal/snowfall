@@ -5,6 +5,7 @@
     "cpeditor"
     "cudatext"
     "featherpad"
+    "focuswriter"
     "neovide"
     # keep-sorted end
   ];
