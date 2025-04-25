@@ -6,6 +6,7 @@
     "cudatext"
     "featherpad"
     "focuswriter"
+    "formiko"
     "neovide"
     # keep-sorted end
   ];
