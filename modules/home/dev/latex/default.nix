@@ -5,6 +5,7 @@
     "tex-fmt"
     "texlab"
     "texmaker"
+    "texworks"
     # keep-sorted end
   ];
   enable = "texlive";
