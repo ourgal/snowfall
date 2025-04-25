@@ -13,6 +13,7 @@
     "manuskript"
     "mindforger"
     "neovide"
+    "notepadqq"
     # keep-sorted end
   ];
   enable = [
