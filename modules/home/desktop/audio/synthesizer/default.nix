@@ -24,6 +24,7 @@
     "schismtracker"
     "seq66"
     "sfxr-qt"
+    "surge"
     # keep-sorted end
   ];
 }
