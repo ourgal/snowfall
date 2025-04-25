@@ -7,6 +7,7 @@
     "featherpad"
     "focuswriter"
     "formiko"
+    "geany"
     "neovide"
     # keep-sorted end
   ];
