@@ -12,6 +12,7 @@
     "sayonara"
     "spotify-qt"
     "strawberry"
+    "youtube-music"
     # keep-sorted end
   ];
 }
