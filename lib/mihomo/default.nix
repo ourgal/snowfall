@@ -62,6 +62,7 @@ in
         "proxy"
         "tld-cn"
         "cn"
+        "ads"
       ])
       // (go "ipcidr" [
         "privateip"
@@ -208,6 +209,11 @@ in
           name = "🎯 全球直连";
           type = "select";
           proxies = [ "DIRECT" ];
+        };
+        ad = {
+          name = "🛑 广告拦截";
+          type = "select";
+          proxies = [ "REJECT" ];
         };
         directTag = [ direct.name ];
       };

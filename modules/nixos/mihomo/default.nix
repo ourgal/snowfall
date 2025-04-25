@@ -261,6 +261,7 @@ let
         "RULE-SET,${RuleProviders.cn.tag},${proxyGroups.private.name}"
         "RULE-SET,${RuleProviders.privateip.tag},${proxyGroups.direct.name},no-resolve"
         "RULE-SET,${RuleProviders.telegramip.tag},${proxyGroups.telegram.name},no-resolve"
+        "RULE-SET,${RuleProviders.ads.tag},${proxyGroups.ad.name},no-resolve"
         "MATCH,🐟 漏网之鱼"
       ];
     rule-providers = lib.attrsets.filterAttrsRecursive (n: _v: n != "tag") RuleProviders;
