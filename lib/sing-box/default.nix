@@ -191,8 +191,8 @@ let
         type = "selector";
         tag = "🛑 广告拦截";
         outbounds = getTag [
-          direct
           block
+          direct
         ];
       };
       block = {
@@ -529,6 +529,10 @@ in
       {
         rule_set = ruleSet.cn_ip.tag;
         outbound = outbounds.direct.tag;
+      }
+      {
+        rule_set = ruleSet.ads.tag;
+        outbound = outbounds.ad.tag;
       }
     ];
     mkProvider = tag: url: time: {
