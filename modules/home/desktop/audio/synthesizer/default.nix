@@ -27,6 +27,7 @@
     "surge"
     "synthv1"
     "tony"
+    "zrythm"
     # keep-sorted end
   ];
 }
