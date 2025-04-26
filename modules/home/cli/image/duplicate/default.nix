@@ -1,0 +1,1 @@
+{ myPkgs = "duplicate-image-finder"; }
