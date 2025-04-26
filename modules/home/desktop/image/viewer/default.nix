@@ -1,4 +1,5 @@
 {
+  nixPkgs = "emulsion";
   enable = [
     # keep-sorted start
     "feh"
