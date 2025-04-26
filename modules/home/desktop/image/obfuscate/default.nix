@@ -1,0 +1,1 @@
+{ nixPkgs = "gnome-obfuscate"; }
