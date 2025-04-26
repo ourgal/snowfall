@@ -318,7 +318,6 @@ in
         SCP1 = {
           name = "SCP1";
           url = mkUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
-          enable = true;
           inherit updateInterval;
         };
       }
