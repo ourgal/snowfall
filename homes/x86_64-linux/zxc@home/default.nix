@@ -14,6 +14,7 @@ in
       editor = enabled;
       flatpak = enabled;
       game = enabled;
+      time-tracker.activitywatch = enabled;
     };
     dev = enabled;
   };
