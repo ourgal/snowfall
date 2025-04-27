@@ -1,1 +1,4 @@
-{ nixPkgs = "qcomicbook"; }
+{
+  nixPkgs = "qcomicbook";
+  myPkgs = "comigo";
+}
