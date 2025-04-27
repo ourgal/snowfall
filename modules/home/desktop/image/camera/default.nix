@@ -1,0 +1,1 @@
+{ nixPkgs = "rapid-photo-downloader"; }
