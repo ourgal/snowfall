@@ -34,14 +34,15 @@ in
       "desktop"
       "envfs"
       "flatpak"
-      "gpu-screen-recorder"
       "fonts"
+      "gpu-screen-recorder"
       "harmonia"
       "kmonad"
       "location"
       "logrotate"
       "nfsMount"
       "nh"
+      "nix-monitored"
       "pcscd"
       "power"
       "scrutiny"
@@ -52,7 +53,7 @@ in
       "udev"
       "udisks2"
       "virtualbox"
-      "nix-monitored"
+      "weylus"
       # keep-sorted end
     ];
 
