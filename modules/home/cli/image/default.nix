@@ -6,7 +6,6 @@
     "crop"
     "metadata"
     "screenshot"
-    "viewer"
     # keep-sorted end
   ];
 }

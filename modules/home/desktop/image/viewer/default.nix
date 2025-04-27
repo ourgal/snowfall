@@ -5,10 +5,14 @@
     "nomacs"
     "phototonic"
     "pineapple-pictures"
+    "pqiv"
     "qimgv"
+    "qiv"
     "qview"
     "sxiv"
     "viewnior"
+    "viu"
+    "xv"
     # keep-sorted end
   ];
   enable = [
