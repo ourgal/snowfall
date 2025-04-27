@@ -4,6 +4,7 @@
     "f3d"
     "fstl"
     "mandelbulber"
+    "paraview"
     # keep-sorted end
   ];
 }
