@@ -3,6 +3,7 @@
     # keep-sorted start
     "emulsion"
     "phototonic"
+    "pineapple-pictures"
     # keep-sorted end
   ];
   enable = [
