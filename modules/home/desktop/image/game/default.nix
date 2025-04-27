@@ -4,6 +4,7 @@
     "evilpixie"
     "libresprite"
     "tiled"
+    "vengi-tools"
     # keep-sorted end
   ];
 }
