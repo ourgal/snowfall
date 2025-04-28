@@ -8,6 +8,7 @@ args.module (
     {
       nixPkgs = [
         # keep-sorted start
+        "avalonia-ilspy"
         "csharp-ls"
         "dotnet-sdk_8"
         "omnisharp-roslyn"
