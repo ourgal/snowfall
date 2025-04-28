@@ -1,9 +1,9 @@
 {
+  nixPkgs = "pipeline";
   enable = [
     # keep-sorted start
-    "jellyfin"
-    "player"
-    "upnp"
+    "freetube"
+    "ytui"
     # keep-sorted end
   ];
 }

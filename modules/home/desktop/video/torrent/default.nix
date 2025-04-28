@@ -1,0 +1,1 @@
+{ nodePkgs = "peerflix"; }

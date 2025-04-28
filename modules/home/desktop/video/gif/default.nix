@@ -1,9 +1,8 @@
 {
-  enable = [
+  nixPkgs = [
     # keep-sorted start
-    "jellyfin"
-    "player"
-    "upnp"
+    "gifski"
+    "peek"
     # keep-sorted end
   ];
 }

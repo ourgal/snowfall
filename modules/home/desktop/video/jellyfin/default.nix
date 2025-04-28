@@ -1,0 +1,1 @@
+{ enable = "jellyfin-mpv-shim"; }

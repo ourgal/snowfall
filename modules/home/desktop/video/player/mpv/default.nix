@@ -1,4 +1,5 @@
 {
+  nixPkgs = "mpvc";
   enable = [
     "base"
     "mime"
