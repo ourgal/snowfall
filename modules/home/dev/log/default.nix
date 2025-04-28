@@ -8,6 +8,7 @@
     # keep-sorted start
     "fblog"
     "lnav"
+    "sosreport"
     "toolong"
     # keep-sorted end
   ];
