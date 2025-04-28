@@ -8,6 +8,7 @@
   nixPkgs = [
     # keep-sorted start
     "aegisub"
+    "gerbera"
     "gifski"
     "gpu-screen-recorder"
     "memento"
