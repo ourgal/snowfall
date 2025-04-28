@@ -13,6 +13,7 @@
     "viewnior"
     "viu"
     "xv"
+    "xzgv"
     # keep-sorted end
   ];
   enable = [
