@@ -14,6 +14,7 @@
     "mpvc"
     "peek"
     "pipeline"
+    "rygel"
     "shotcut"
     "stremio"
     "vlc"
