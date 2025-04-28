@@ -120,6 +120,9 @@ args.module (
             addons = with pkgs; [
               fcitx5-rime
               fcitx5-nord
+              fcitx5-mozc
+              fcitx5-tokyonight
+              fcitx5-rose-pine
               fcitx5-configtool
               fcitx5-material-color
             ];
