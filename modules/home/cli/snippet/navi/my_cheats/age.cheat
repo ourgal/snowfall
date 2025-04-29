@@ -1,0 +1,6 @@
+% age
+
+# encrypt file
+rage --encrypt -i ~/.config/sops/age/keys.txt -o <file>.age <file>
+
+$ file: ls
