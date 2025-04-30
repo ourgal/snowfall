@@ -4,6 +4,7 @@
     "compress"
     "convert"
     "crop"
+    "generator"
     "metadata"
     "screenshot"
     # keep-sorted end
