@@ -27,6 +27,22 @@ args.module (
           };
         };
       };
+      value = {
+        systemd.user.services = {
+          activitywatch-watcher-aw-watcher-window = {
+            Service = {
+              Restart = "always";
+              RestartSec = 10;
+            };
+          };
+          activitywatch-watcher-aw-watcher-afk = {
+            Service = {
+              Restart = "always";
+              RestartSec = 10;
+            };
+          };
+        };
+      };
     }
   )
 )
