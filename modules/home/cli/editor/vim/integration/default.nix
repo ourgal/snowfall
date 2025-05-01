@@ -26,6 +26,7 @@
     "tup"
     "vim-ghost" # broken
     "vim-ledger"
+    "vim-orgmode"
     "vim-tmux-clipboard"
     # keep-sorted end
   ];
