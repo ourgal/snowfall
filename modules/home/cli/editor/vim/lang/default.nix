@@ -1,7 +1,6 @@
 {
   enable = [
     # keep-sorted start
-    "just"
     "lisp"
     "markdown"
     "python"
@@ -15,6 +14,7 @@
     "go"
     "html"
     "jq"
+    "just" # builtin https://github.com/casey/just?tab=readme-ov-file#vim-and-neovim
     "latex"
     "rst"
     "sql"
