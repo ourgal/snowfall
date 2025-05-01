@@ -14,13 +14,6 @@ args.module (
           echo -n "$QUTE_URL" | xsel -b
         fi
       '';
-      pasteSelecetText = pkgs.writeShellScript "qutebrowserPasteSelecetText" ''
-        if [ -n "$QUTE_SELECTED_TEXT" ]; then
-          qutebrowser "$QUTE_SELECTED_TEXT"
-        else
-          qutebrowser $(xsel -b)
-        fi
-      '';
     in
     {
       progs.qutebrowser = {
@@ -65,7 +58,7 @@ args.module (
             S = "scroll-to-perc 100";
             W = "scroll-to-perc 0";
             u = "navigate up";
-            p = "spawn --userscript ${pasteSelecetText}";
+            p = "open -t {clipboard}";
             "\\\\r" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 2'';
             "\\\\z" = ''clear-messages ;; jseval document.querySelector("video, audio").playbackRate = 1'';
             "\\\\q" = "spawn --userscript qr";
