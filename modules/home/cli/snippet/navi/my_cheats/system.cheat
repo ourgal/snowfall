@@ -5,3 +5,6 @@ sudo dmidecode -t 2
 
 # sum memory
 ps -eo size,command --sort -size | grep <name> | awk '{ hr=$1/1024 ; sum +=hr} END {print sum}'
+
+# update betterlockscreen pic
+betterlockscreen -u $(find ~/Pictures/wallpapers/ -type f | shuf -n 1)

@@ -35,4 +35,5 @@
     "xdotool"
     # keep-sorted end
   ];
+  enable = "betterlockscreen";
 }
