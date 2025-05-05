@@ -2,6 +2,7 @@
   enable = [
     # keep-sorted start
     "AI"
+    "android"
     "anime"
     "audio"
     "bluetooth"

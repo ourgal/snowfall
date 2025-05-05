@@ -1394,3 +1394,7 @@ fetch.github = "ficcdaf/smartcd.fish"
 [pfp-generator]
 src.github = "trumully/pfp_generator"
 fetch.github = "trumully/pfp_generator"
+
+[fdroidcl]
+src.github = "Hoverth/fdroidcl"
+fetch.github = "Hoverth/fdroidcl"
