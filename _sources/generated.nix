@@ -201,13 +201,13 @@
   };
   bestsub = {
     pname = "bestsub";
-    version = "v0.3.3";
+    version = "v0.3.4";
     src = fetchFromGitHub {
       owner = "bestruirui";
       repo = "BestSub";
-      rev = "v0.3.3";
+      rev = "v0.3.4";
       fetchSubmodules = false;
-      sha256 = "sha256-UMAScToMCxAThvDtj+PsWeSvYX++Z89cfV+Tf4gGxuk=";
+      sha256 = "sha256-0o24CEYilRJXs7CSDO7HEKY3SmRArUcSSOcDGiYtxr4=";
     };
   };
   bilix = {
@@ -330,21 +330,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "51ccf8eacb7032538cb662da2cd6a83d31deee88";
+    version = "adb985374b521e6b430ff8ae9b05c1be4b319c80";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "51ccf8eacb7032538cb662da2cd6a83d31deee88";
+      rev = "adb985374b521e6b430ff8ae9b05c1be4b319c80";
       fetchSubmodules = false;
-      sha256 = "sha256-FgNFIm8d5VVFwrJ3SHzzbbdpAGB8j7VnJUkoNuotrW0=";
+      sha256 = "sha256-PiKUcyFhTsVwqGyonEdIhR2DVHj2E3NbdFoof1yGDO8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-51ccf8eacb7032538cb662da2cd6a83d31deee88/Cargo.lock;
+      lockFile = ./cdo-adb985374b521e6b430ff8ae9b05c1be4b319c80/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-04-26";
+    date = "2025-05-03";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -739,12 +739,12 @@
   };
   docker-lancommander = {
     pname = "docker-lancommander";
-    version = "v1.1.5";
+    version = "v1.1.6";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:7d89c1d7621cb05c022c2560d680c52355ad36a1a319c1e385df32048c01a0de";
-      sha256 = "sha256-bEuPag15eGFSXKlUraYCGgVRM/NH+Qd0QHsKYzRrDzs=";
-      finalImageTag = "v1.1.5";
+      imageDigest = "sha256:22454c82d24dcc109393eb260e3b07ec705c7fd29379c5e6fc3cb4f488606798";
+      sha256 = "sha256-zPswW+8nESmdSNkZLnpWG2j3acDbypuDAq1zQ3Vy8Fo=";
+      finalImageTag = "v1.1.6";
     };
   };
   docker-memos = {
@@ -859,15 +859,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "a4ffc55a8bd9756af79a3bd3551e321c86d7e1ee";
+    version = "c37da06fca88e1691ce642c00bca1bf2aa09ba11";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "a4ffc55a8bd9756af79a3bd3551e321c86d7e1ee";
+      rev = "c37da06fca88e1691ce642c00bca1bf2aa09ba11";
       fetchSubmodules = false;
-      sha256 = "sha256-nEb5qoTf9UAYofTdWKU06+nB5g3Qtswnl0BVF1KWg7o=";
+      sha256 = "sha256-a+0X5kRb39maceUcrZdRDtk+CCc6uLorcEl9fSoNPdw=";
     };
-    date = "2025-04-27";
+    date = "2025-05-04";
   };
   downdoc = {
     pname = "downdoc";
@@ -1109,6 +1109,17 @@
       sha256 = "sha256-DQQofY5FPdy5kWctlKmi2SRTH7zL9ZpBdrdMx+iX+dA=";
     };
     date = "2023-04-07";
+  };
+  fdroidcl = {
+    pname = "fdroidcl";
+    version = "v0.8.0";
+    src = fetchFromGitHub {
+      owner = "Hoverth";
+      repo = "fdroidcl";
+      rev = "v0.8.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-ZEgJ49cwUS1ETWGOvUc6TguZrwmxzZ2hscWwfrcHmSo=";
+    };
   };
   fetch = {
     pname = "fetch";
@@ -1721,16 +1732,16 @@
   };
   hexpatch = {
     pname = "hexpatch";
-    version = "v1.11.1";
+    version = "v1.11.2";
     src = fetchFromGitHub {
       owner = "Etto48";
       repo = "HexPatch";
-      rev = "v1.11.1";
+      rev = "v1.11.2";
       fetchSubmodules = false;
-      sha256 = "sha256-/wPRCqHvRiH8snD6D9qyk7YdbchOi0BUz/kI5EitOls=";
+      sha256 = "sha256-xeHOViakCRMXQqmuUCeekL0tyYyh61OnU0zDk767NPU=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./hexpatch-v1.11.1/Cargo.lock;
+      lockFile = ./hexpatch-v1.11.2/Cargo.lock;
       outputHashes = {
         
       };
@@ -2389,15 +2400,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "b63eca8dbf106c6450805c84d19c1b0261635743";
+    version = "1632f1b6ace52170f956e36e0c1e9870c8c21d08";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "b63eca8dbf106c6450805c84d19c1b0261635743";
+      rev = "1632f1b6ace52170f956e36e0c1e9870c8c21d08";
       fetchSubmodules = false;
-      sha256 = "sha256-xXH/BGoxdEGHEHIGM5mYoGn8pwGSOueMzvbkbsyW77U=";
+      sha256 = "sha256-1GOSNlncOHqxK1GDEOppQ7LQUaffr+us+32vTpyF3v8=";
     };
-    date = "2025-04-27";
+    date = "2025-05-03";
   };
   posting = {
     pname = "posting";
@@ -2808,21 +2819,21 @@
   };
   shh = {
     pname = "shh";
-    version = "1efed23a5fa90889669435b6fdd16086d72fd3b0";
+    version = "849b9a6646981c83a72a977b6398371e29d3b928";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "1efed23a5fa90889669435b6fdd16086d72fd3b0";
+      rev = "849b9a6646981c83a72a977b6398371e29d3b928";
       fetchSubmodules = false;
-      sha256 = "sha256-+JWz0ya6gi8pPERnpAcQIe7zZUzWGxha+9/gizMVtEw=";
+      sha256 = "sha256-tdWcMmysbN+EmRaS2ILTmxJTh+Ui8qoqPEZOqv0CagI=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./shh-1efed23a5fa90889669435b6fdd16086d72fd3b0/Cargo.lock;
+      lockFile = ./shh-849b9a6646981c83a72a977b6398371e29d3b928/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-04-12";
+    date = "2025-05-03";
   };
   shipit = {
     pname = "shipit";
@@ -3177,10 +3188,10 @@
   };
   textual = {
     pname = "textual";
-    version = "3.1.1";
+    version = "3.2.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-3.1.1.tar.gz";
-      sha256 = "sha256-z7QKgg7fd8rhwR+hUFbZ4acxx7y8arKTqvzBOaTka2o=";
+      url = "https://pypi.org/packages/source/t/textual/textual-3.2.0.tar.gz";
+      sha256 = "sha256-0vOww54CU1u18q7BxF4QvT7nUI7R4kC3UFw88CpvAO0=";
     };
   };
   timewarrior = {
@@ -3208,15 +3219,15 @@
   };
   tmux-buoyshell = {
     pname = "tmux-buoyshell";
-    version = "9115e248cbcae30f751ec3f426a4bd9a6d38dbe9";
+    version = "5aa892bd2eb459f7e3b5987de5534668bf36a86d";
     src = fetchFromGitHub {
       owner = "cnavajas4";
       repo = "tmux-buoyshell";
-      rev = "9115e248cbcae30f751ec3f426a4bd9a6d38dbe9";
+      rev = "5aa892bd2eb459f7e3b5987de5534668bf36a86d";
       fetchSubmodules = false;
-      sha256 = "sha256-K3g8a39GknJcnWHh81gdZ7L6tPaM7DLjZtW3RyrC/OE=";
+      sha256 = "sha256-u/0Xz8ExWD+gMA4TmL5BMXWDoE0lXuls/PeXPXr6qTU=";
     };
-    date = "2025-04-23";
+    date = "2025-05-02";
   };
   tmux-continuum = {
     pname = "tmux-continuum";
@@ -3587,18 +3598,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202504292213";
+    version = "202505042212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504292213/geoip.dat";
-      sha256 = "sha256-OvPcmHo60P42ROd62FO5mNHP3hxiRW3I7OGvVCZN3eU=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geoip.dat";
+      sha256 = "sha256-I9JdIkugMNqxT3FQffo4yc5WzBonjtEQcyf6bwNvCH4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202504292213";
+    version = "202505042212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202504292213/geosite.dat";
-      sha256 = "sha256-V13CR9soCldKKSn4vnu0UxIfuUN1CmTxZ6MiVKG6qew=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geosite.dat";
+      sha256 = "sha256-PaOSd6k0XAvs1mfiNJ8bmWd4ns9Y2NuufuEXZVv1SmU=";
     };
   };
   vim-auto-save = {
@@ -3830,15 +3841,15 @@
   };
   vlime = {
     pname = "vlime";
-    version = "46d46c1f4bb6f9cdb5759e297fb592ffb458ef93";
+    version = "e9dbf3f0818e0f76a1f2b20b6a39ac2e8b942c55";
     src = fetchFromGitHub {
       owner = "vlime";
       repo = "vlime";
-      rev = "46d46c1f4bb6f9cdb5759e297fb592ffb458ef93";
+      rev = "e9dbf3f0818e0f76a1f2b20b6a39ac2e8b942c55";
       fetchSubmodules = false;
-      sha256 = "sha256-/jLGxDtSIM/+RLFxHHiSv0jGG2FddPQPJZ8Vsg77y3c=";
+      sha256 = "sha256-eVNNmW7lrfNkEnUBl/9IIPzO8R93zoMizp0XXHNAyBk=";
     };
-    date = "2025-04-24";
+    date = "2025-04-30";
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
