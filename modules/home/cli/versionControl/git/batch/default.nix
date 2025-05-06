@@ -1,8 +1,4 @@
 {
-  nixPkgs = [
-    # keep-sorted start
-    "fw"
-    "mani"
-    # keep-sorted end
-  ];
+  nixPkgs = "mani";
+  enable = "fw";
 }

@@ -121,6 +121,9 @@
                          ("nongnu" . "https://mirrors.sjtug.sjtu.edu.cn/docs/emacs-elpa/nongnu/")
                          ("melpa"  . "https://mirrors.sjtug.sjtu.edu.cn/docs/emacs-elpa/melpa/")))
 
+;; fw projectile file
+(setq projectile-known-projects-file (expand-file-name "~/.emacs.d/projectile-bookmarks.eld"))
+
 (load! "keymap")
 
 (load! "plugins/vimrc-mode")
