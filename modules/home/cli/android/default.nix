@@ -1,1 +1,4 @@
-{ enable = "fdroidcl"; }
+{
+  nixPkgs = "apkeep";
+  enable = "fdroidcl";
+}
