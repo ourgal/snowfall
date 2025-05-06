@@ -27,6 +27,20 @@ args.module (
           };
         };
       };
+      value = {
+        systemd.user.services = {
+          activitywatch-watcher-aw-watcher-window = {
+            Service = {
+              ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
+            };
+          };
+          activitywatch-watcher-aw-watcher-afk = {
+            Service = {
+              ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
+            };
+          };
+        };
+      };
     }
   )
 )
