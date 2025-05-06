@@ -1,6 +1,6 @@
-{ ... }:
+_:
 let
-  inherit (builtins) listToAttrs foldl';
+  inherit (builtins) foldl';
 in
 {
   mime = {
@@ -169,18 +169,7 @@ in
   defaultTypes =
     default: types:
     let
-      _defaults = listToAttrs (
-        foldl' (
-          acc: type:
-          acc
-          ++ [
-            {
-              name = type;
-              value = default;
-            }
-          ]
-        ) [ ] types
-      );
+      _defaults = foldl' (acc: type: acc // { ${type} = default; }) { } types;
       defaults = {
         xdg.mimeApps = {
           enable = true;
