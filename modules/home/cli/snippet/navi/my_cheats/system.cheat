@@ -8,3 +8,6 @@ ps -eo size,command --sort -size | grep <name> | awk '{ hr=$1/1024 ; sum +=hr} E
 
 # update betterlockscreen pic
 betterlockscreen -u $(find ~/Pictures/wallpapers/ -type f | shuf -n 1)
+
+# test ntp server
+nix-shell -p ntp --run "ntpdate -q <server>"
