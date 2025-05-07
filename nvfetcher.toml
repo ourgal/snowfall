@@ -1398,3 +1398,7 @@ fetch.github = "trumully/pfp_generator"
 [fdroidcl]
 src.github = "Hoverth/fdroidcl"
 fetch.github = "Hoverth/fdroidcl"
+
+[dish]
+src.github = "thevxn/dish"
+fetch.github = "thevxn/dish"

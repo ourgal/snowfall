@@ -2,6 +2,7 @@
   myPkgs = [
     # keep-sorted start
     "cidr"
+    "dish"
     "dnspyre"
     "get_cert"
     "hssp"
