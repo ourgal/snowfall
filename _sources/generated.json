@@ -811,12 +811,12 @@
             "name": null,
             "owner": "yumenaka",
             "repo": "comigo",
-            "rev": "v0.9.13",
-            "sha256": "sha256-Ck8DZMcVQSMm6udYwMe9FxfxEmGmQWYO1y3yqyjnV2Y=",
+            "rev": "v1.0.0",
+            "sha256": "sha256-foFN/ppXJsR72qshX83flBFr9/gElQ4dw+hF9pRhDVQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.9.13"
+        "version": "v1.0.0"
     },
     "complate": {
         "cargoLocks": {
@@ -1094,6 +1094,27 @@
         },
         "version": "03691dfc96c99a5dddc7171bae5d19739aac2b82"
     },
+    "dish": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "dish",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "thevxn",
+            "repo": "dish",
+            "rev": "v1.10.4",
+            "sha256": "sha256-UNAJyEOxv7ORzYks1zvqUCa9ZdOO0suqeqw91FSnrqY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.10.4"
+    },
     "dlorg": {
         "cargoLocks": null,
         "date": "2024-08-18",
@@ -1327,11 +1348,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:22454c82d24dcc109393eb260e3b07ec705c7fd29379c5e6fc3cb4f488606798",
+            "imageDigest": "sha256:d7c213f4320ba0d42763ce62850caa7d0e043e4d7a156d32780a12b7996a05fe",
             "imageName": "lancommander/lancommander",
             "imageTag": "v1.1.6",
             "os": null,
-            "sha256": "sha256-zPswW+8nESmdSNkZLnpWG2j3acDbypuDAq1zQ3Vy8Fo=",
+            "sha256": "sha256-tptTARdJHvw3qs6/WftGmSSAV9+ZAVv+TeowtC128Zs=",
             "tlsVerify": null
         },
         "version": "v1.1.6"
@@ -5054,11 +5075,11 @@
     "shh": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./shh-849b9a6646981c83a72a977b6398371e29d3b928/Cargo.lock",
+                "./shh-74914dc8cfd74dbd7e051a090cc4c1f561b8cdde/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-05-03",
+        "date": "2025-05-06",
         "extract": null,
         "name": "shh",
         "passthru": null,
@@ -5070,12 +5091,12 @@
             "name": null,
             "owner": "desbma",
             "repo": "shh",
-            "rev": "849b9a6646981c83a72a977b6398371e29d3b928",
-            "sha256": "sha256-tdWcMmysbN+EmRaS2ILTmxJTh+Ui8qoqPEZOqv0CagI=",
+            "rev": "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde",
+            "sha256": "sha256-pv2e2zvYFVhijdaK9IUkVeQ/Aw+gpILxhjpmAxd5+l8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "849b9a6646981c83a72a977b6398371e29d3b928"
+        "version": "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde"
     },
     "shipit": {
         "cargoLocks": null,
@@ -6418,9 +6439,9 @@
             "name": null,
             "sha256": "sha256-I9JdIkugMNqxT3FQffo4yc5WzBonjtEQcyf6bwNvCH4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505062213/geoip.dat"
         },
-        "version": "202505042212"
+        "version": "202505062213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6431,11 +6452,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-PaOSd6k0XAvs1mfiNJ8bmWd4ns9Y2NuufuEXZVv1SmU=",
+            "sha256": "sha256-BDlNStq8Lw55S4GQABJNqwQnZr/1yIZG3RfRNQ67jk8=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505062213/geosite.dat"
         },
-        "version": "202505042212"
+        "version": "202505062213"
     },
     "vim-auto-save": {
         "cargoLocks": null,

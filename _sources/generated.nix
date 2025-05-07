@@ -456,13 +456,13 @@
   };
   comigo = {
     pname = "comigo";
-    version = "v0.9.13";
+    version = "v1.0.0";
     src = fetchFromGitHub {
       owner = "yumenaka";
       repo = "comigo";
-      rev = "v0.9.13";
+      rev = "v1.0.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Ck8DZMcVQSMm6udYwMe9FxfxEmGmQWYO1y3yqyjnV2Y=";
+      sha256 = "sha256-foFN/ppXJsR72qshX83flBFr9/gElQ4dw+hF9pRhDVQ=";
     };
   };
   complate = {
@@ -624,6 +624,17 @@
     };
     date = "2023-04-23";
   };
+  dish = {
+    pname = "dish";
+    version = "v1.10.4";
+    src = fetchFromGitHub {
+      owner = "thevxn";
+      repo = "dish";
+      rev = "v1.10.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-UNAJyEOxv7ORzYks1zvqUCa9ZdOO0suqeqw91FSnrqY=";
+    };
+  };
   dlorg = {
     pname = "dlorg";
     version = "d4966d6d1e4384e8f6c7f33b473a24cf6cdd0617";
@@ -742,8 +753,8 @@
     version = "v1.1.6";
     src = dockerTools.pullImage {
       imageName = "lancommander/lancommander";
-      imageDigest = "sha256:22454c82d24dcc109393eb260e3b07ec705c7fd29379c5e6fc3cb4f488606798";
-      sha256 = "sha256-zPswW+8nESmdSNkZLnpWG2j3acDbypuDAq1zQ3Vy8Fo=";
+      imageDigest = "sha256:d7c213f4320ba0d42763ce62850caa7d0e043e4d7a156d32780a12b7996a05fe";
+      sha256 = "sha256-tptTARdJHvw3qs6/WftGmSSAV9+ZAVv+TeowtC128Zs=";
       finalImageTag = "v1.1.6";
     };
   };
@@ -2819,21 +2830,21 @@
   };
   shh = {
     pname = "shh";
-    version = "849b9a6646981c83a72a977b6398371e29d3b928";
+    version = "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "849b9a6646981c83a72a977b6398371e29d3b928";
+      rev = "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde";
       fetchSubmodules = false;
-      sha256 = "sha256-tdWcMmysbN+EmRaS2ILTmxJTh+Ui8qoqPEZOqv0CagI=";
+      sha256 = "sha256-pv2e2zvYFVhijdaK9IUkVeQ/Aw+gpILxhjpmAxd5+l8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./shh-849b9a6646981c83a72a977b6398371e29d3b928/Cargo.lock;
+      lockFile = ./shh-74914dc8cfd74dbd7e051a090cc4c1f561b8cdde/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-05-03";
+    date = "2025-05-06";
   };
   shipit = {
     pname = "shipit";
@@ -3598,18 +3609,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202505042212";
+    version = "202505062213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505062213/geoip.dat";
       sha256 = "sha256-I9JdIkugMNqxT3FQffo4yc5WzBonjtEQcyf6bwNvCH4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202505042212";
+    version = "202505062213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505042212/geosite.dat";
-      sha256 = "sha256-PaOSd6k0XAvs1mfiNJ8bmWd4ns9Y2NuufuEXZVv1SmU=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505062213/geosite.dat";
+      sha256 = "sha256-BDlNStq8Lw55S4GQABJNqwQnZr/1yIZG3RfRNQ67jk8=";
     };
   };
   vim-auto-save = {
