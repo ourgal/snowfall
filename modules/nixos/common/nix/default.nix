@@ -5,6 +5,7 @@ let
     lib
     pkgs
     config
+    inputs
     ;
   inherit (lib.${namespace})
     nixosModule
@@ -34,6 +35,7 @@ let
             options = "--delete-older-than 7d";
           }
           // enableOpt [ "automatic" ];
+        nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
 
     nixpkgs.config.allowUnfree = true;
