@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib config;
+  inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule;
   value = {
     networking.timeServers = [
@@ -14,8 +14,8 @@ let
       "cn.ntp.org.cn" # NTP ORG CN
       "ntp.ntsc.ac.cn" # NTSC NTP Server
     ];
-    services.timesyncd.servers = config.networking.timeServers;
   };
-  _args = { inherit value args; };
+  enable = "ntp";
+  _args = { inherit value args enable; };
 in
 nixosModule _args
