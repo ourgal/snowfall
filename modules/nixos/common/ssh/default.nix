@@ -8,6 +8,7 @@ let
       # settings.PasswordAuthentication = false;
       # settings.KbdInteractiveAuthentication = false;
       settings.PermitRootLogin = "yes";
+      startWhenNeeded = true;
     };
     programs.mosh = enabled;
     environment.systemPackages = [ pkgs.${namespace}.trzsz-go ];
