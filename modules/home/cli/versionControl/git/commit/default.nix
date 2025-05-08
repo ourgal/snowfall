@@ -32,6 +32,7 @@ args.module (
         # keep-sorted start
         "commitlint-rs"
         "geminicommit"
+        "sign"
         # keep-sorted end
       ];
     }
