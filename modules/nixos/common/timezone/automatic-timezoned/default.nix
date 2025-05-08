@@ -3,7 +3,7 @@ let
   inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule;
   value = {
-    time.timeZone = lib.mkDefault "Asia/Taipei";
+    services.automatic-timezoned.enable = true;
   };
   _args = { inherit value args; };
 in
