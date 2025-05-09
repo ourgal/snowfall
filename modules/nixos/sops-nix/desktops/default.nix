@@ -7,14 +7,6 @@ let
   value = {
     sops = {
       secrets = {
-        "jerry/token" = {
-          inherit owner mode;
-          path = "/home/${owner}/.local/share/jerry/anilist_token.txt";
-        };
-        "jerry/id" = {
-          inherit owner mode;
-          path = "/home/${owner}/.local/share/jerry/anilist_user_id.txt";
-        };
         phone = { };
         "espanso/mail.yml" = {
           inherit owner mode;
