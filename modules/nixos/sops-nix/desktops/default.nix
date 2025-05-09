@@ -54,11 +54,21 @@ let
         };
         aichat = {
           content = builtins.toJSON {
-            model = "gemini:gemini-1.5-pro-latest";
+            model = "deno:gemini-2.0-flash";
             clients = [
               {
                 type = "gemini";
                 api_key = config.sops.placeholder.gemini;
+                extra = {
+                  connect_timeout = 120;
+                };
+              }
+              {
+                type = "openai-compatible"; # https://github.com/trueai-org/gemini
+                name = "deno";
+                api_base = lib.strings.fileContents ./deno_domain.key;
+                api_key = config.sops.placeholder.gemini;
+                models = [ { name = "gemini-2.0-flash"; } ];
                 extra = {
                   connect_timeout = 120;
                 };
