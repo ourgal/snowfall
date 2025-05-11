@@ -1,0 +1,7 @@
+---
+matches:
+  - replace: amazon_jp:{{clipboard}}
+    trigger: :ajp
+    vars:
+      - name: clipboard
+        type: clipboard
