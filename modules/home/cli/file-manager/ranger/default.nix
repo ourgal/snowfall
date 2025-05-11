@@ -28,6 +28,10 @@ args.module (
               condition = "label pager";
               command = ''"$PAGER" -- "$@"'';
             }
+            {
+              condition = "label calibre";
+              command = ''"calibre" -- "$@"'';
+            }
           ];
           plugins = [
             {
