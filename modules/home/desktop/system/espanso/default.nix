@@ -14,7 +14,6 @@ args.module (
           ./git.yml
           ./translate.yml
           ./markdown.yml
-          ./calibre.yml
         ];
       };
       systemdServices.espanso = {
