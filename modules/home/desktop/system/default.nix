@@ -27,6 +27,7 @@ args.module (
         "xclip"
         "xcolor"
         "xdragon"
+        "xmagnify"
         "xsel"
         "zenity"
         # keep-sorted end
