@@ -28,6 +28,7 @@ let
     "navidrome"
     "nix-serve"
     "pairdrop"
+    "pyload"
     "qd"
     "restic-server"
     "rustypaste"
