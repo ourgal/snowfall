@@ -1,1 +1,4 @@
-{ nixPkgs = "tty-clock"; }
+{
+  nixPkgs = "tty-clock";
+  myPkgs = "clock-tui";
+}

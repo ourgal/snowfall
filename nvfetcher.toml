@@ -1402,3 +1402,8 @@ fetch.github = "Hoverth/fdroidcl"
 [dish]
 src.github = "thevxn/dish"
 fetch.github = "thevxn/dish"
+
+[clock-tui]
+src.github = "race604/clock-tui"
+fetch.github = "race604/clock-tui"
+cargo_locks = ["Cargo.lock"]
