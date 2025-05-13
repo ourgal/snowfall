@@ -10,6 +10,7 @@
     "browser"
     "chat"
     "clipboard"
+    "clock"
     "completion"
     "correction"
     "dashboard"
