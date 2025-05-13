@@ -415,6 +415,23 @@
       sha256 = "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=";
     };
   };
+  clock-tui = {
+    pname = "clock-tui";
+    version = "v0.6.0";
+    src = fetchFromGitHub {
+      owner = "race604";
+      repo = "clock-tui";
+      rev = "v0.6.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-IsJxKCR3yBuwv33FYfHF+Xuu8zgu4mxx3RBnxJkR4rI=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./clock-tui-v0.6.0/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
+  };
   cmdx = {
     pname = "cmdx";
     version = "v2.0.1";
@@ -456,13 +473,13 @@
   };
   comigo = {
     pname = "comigo";
-    version = "v1.0.0";
+    version = "v1.0.1";
     src = fetchFromGitHub {
       owner = "yumenaka";
       repo = "comigo";
-      rev = "v1.0.0";
+      rev = "v1.0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-foFN/ppXJsR72qshX83flBFr9/gElQ4dw+hF9pRhDVQ=";
+      sha256 = "sha256-KfYFCi5MT2DBBRJhcTTAvzQsaRU7K7pqjg05dhDTW4k=";
     };
   };
   complate = {
@@ -584,21 +601,21 @@
   };
   dela = {
     pname = "dela";
-    version = "b2178bbac159806e20f6ac324b648e4a8504c430";
+    version = "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "b2178bbac159806e20f6ac324b648e4a8504c430";
+      rev = "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2";
       fetchSubmodules = false;
-      sha256 = "sha256-46FV2noMN7Drh/mkrFgojPGHeGwkY/9Wr+cyu1v6Ye0=";
+      sha256 = "sha256-chq/bj4wmHfGjWFI7XVGArZmG8EMcd0qOwlQBbOjO9I=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-b2178bbac159806e20f6ac324b648e4a8504c430/Cargo.lock;
+      lockFile = ./dela-1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-05-07";
+    date = "2025-05-09";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -760,12 +777,12 @@
   };
   docker-memos = {
     pname = "docker-memos";
-    version = "0.24.2";
+    version = "0.24.3";
     src = dockerTools.pullImage {
       imageName = "neosmemo/memos";
-      imageDigest = "sha256:12529e2117ad7a52d8aaba6e8d07218fcd1d8868b346b9585f583553b04f8533";
-      sha256 = "sha256-U/aJqyYA7d2nvDH0/RB/qKZzFD37o1JEC1gqIrMMYXQ=";
-      finalImageTag = "0.24.2";
+      imageDigest = "sha256:e5022ebfbe176164928dc2ea8c196a077e8b35f28e7206e99a99ccd55f332f6f";
+      sha256 = "sha256-9G+ZkQrt4rrcTgbCFfA+ba8JY/CBnPuOdSMtd0B6OGE=";
+      finalImageTag = "0.24.3";
     };
   };
   docker-miniflux = {
@@ -783,8 +800,8 @@
     version = "1.11.2";
     src = dockerTools.pullImage {
       imageName = "linuxserver/pairdrop";
-      imageDigest = "sha256:8c44eb377026d425cede5e7acca57ff75ee5a6a7088c7bf222fb4614cd451f6a";
-      sha256 = "sha256-dfWE1Jq2RPER1rtyU6RW2fVkjyLHwEDX//nIPJyMk6Q=";
+      imageDigest = "sha256:ee3cc4d2d888bc764654c85a4b362d0a5d2e4d57d91cb88c7bd3cd8f2fb6dc84";
+      sha256 = "sha256-n43WgakVJkuSIJte+dS0DQBxjMyV3+neBe1AUrqeqMk=";
       finalImageTag = "1.11.2";
     };
   };
@@ -870,15 +887,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "c37da06fca88e1691ce642c00bca1bf2aa09ba11";
+    version = "e7557dea78fd7eb52a7b7c87d3d4ce31ff735c2e";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "c37da06fca88e1691ce642c00bca1bf2aa09ba11";
+      rev = "e7557dea78fd7eb52a7b7c87d3d4ce31ff735c2e";
       fetchSubmodules = false;
-      sha256 = "sha256-a+0X5kRb39maceUcrZdRDtk+CCc6uLorcEl9fSoNPdw=";
+      sha256 = "sha256-+aYx1WEvbOZ29NFEZG9Y3PuBZkjvLegI8AmZxbLExcA=";
     };
-    date = "2025-05-04";
+    date = "2025-05-11";
   };
   downdoc = {
     pname = "downdoc";
@@ -1662,13 +1679,13 @@
   };
   goji = {
     pname = "goji";
-    version = "v0.1.3";
+    version = "v0.1.5";
     src = fetchFromGitHub {
       owner = "muandane";
       repo = "goji";
-      rev = "v0.1.3";
+      rev = "v0.1.5";
       fetchSubmodules = false;
-      sha256 = "sha256-By4BQN7ftja4VMdxaksbQqtUcgjaQhF0ORUWZspmho8=";
+      sha256 = "sha256-aQJf4Me/pMf9sCR3AsNd9TUod7dl0irUT4eM6+1bxxM=";
     };
   };
   goodls = {
@@ -1830,13 +1847,13 @@
   };
   is = {
     pname = "is";
-    version = "v0.7.0";
+    version = "v0.8.0";
     src = fetchFromGitHub {
       owner = "oalders";
       repo = "is";
-      rev = "v0.7.0";
+      rev = "v0.8.0";
       fetchSubmodules = false;
-      sha256 = "sha256-F5XhcjXX4PqhKBPgFLqYci90re4MIxWG79vHRsz2X8Y=";
+      sha256 = "sha256-lcqAh0vQoPsL5VMb4gHDEyMGnd0c/nRYFu9FWN7MCdM=";
     };
   };
   jalm = {
@@ -2200,27 +2217,27 @@
   };
   mpv-smartcopypaste_ii = {
     pname = "mpv-smartcopypaste_ii";
-    version = "4701419f9b9063a5425f3942ec62cc029599430d";
+    version = "082797789eabc68fbe71de2cd0eee46a6b073503";
     src = fetchFromGitHub {
       owner = "Eisa01";
       repo = "mpv-scripts";
-      rev = "4701419f9b9063a5425f3942ec62cc029599430d";
+      rev = "082797789eabc68fbe71de2cd0eee46a6b073503";
       fetchSubmodules = false;
-      sha256 = "sha256-P4leX7FTg39JhcfE9bOqVxH4UIyF7f3HNe+9a7a+POs=";
+      sha256 = "sha256-krHyufDHVwuPdcotkbYnunKeEYHHb+08GqaruIzHclM=";
     };
-    date = "2025-05-08";
+    date = "2025-05-11";
   };
   mpv-smartskip = {
     pname = "mpv-smartskip";
-    version = "4701419f9b9063a5425f3942ec62cc029599430d";
+    version = "082797789eabc68fbe71de2cd0eee46a6b073503";
     src = fetchFromGitHub {
       owner = "Eisa01";
       repo = "mpv-scripts";
-      rev = "4701419f9b9063a5425f3942ec62cc029599430d";
+      rev = "082797789eabc68fbe71de2cd0eee46a6b073503";
       fetchSubmodules = false;
-      sha256 = "sha256-P4leX7FTg39JhcfE9bOqVxH4UIyF7f3HNe+9a7a+POs=";
+      sha256 = "sha256-krHyufDHVwuPdcotkbYnunKeEYHHb+08GqaruIzHclM=";
     };
-    date = "2025-05-08";
+    date = "2025-05-11";
   };
   mpv-webtorrent-hook = {
     pname = "mpv-webtorrent-hook";
@@ -2411,15 +2428,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "1632f1b6ace52170f956e36e0c1e9870c8c21d08";
+    version = "602954e06bdc7433173bbf2896ba3f24de3ec296";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "1632f1b6ace52170f956e36e0c1e9870c8c21d08";
+      rev = "602954e06bdc7433173bbf2896ba3f24de3ec296";
       fetchSubmodules = false;
-      sha256 = "sha256-1GOSNlncOHqxK1GDEOppQ7LQUaffr+us+32vTpyF3v8=";
+      sha256 = "sha256-W3zf59V4N45pi6Q9aoKxq0rTHb+sc9n3ok3GBzBy/Uk=";
     };
-    date = "2025-05-03";
+    date = "2025-05-12";
   };
   posting = {
     pname = "posting";
@@ -2925,11 +2942,11 @@
   };
   soba = {
     pname = "soba";
-    version = "1.3.2";
+    version = "1.3.3";
     src = fetchFromGitHub {
       owner = "jonhadfield";
       repo = "soba";
-      rev = "1.3.2";
+      rev = "1.3.3";
       fetchSubmodules = false;
       sha256 = "sha256-Lfb0D19UgxFUQJyifPBgicry2yRc4X33e0R6Ts68Fyw=";
     };
@@ -3290,15 +3307,15 @@
   };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
-    version = "5440b9476627bf5f7f3526156a17ae0e3fd232dd";
+    version = "7731445126b949ae5644c3f36d6567da36338638";
     src = fetchFromGitHub {
       owner = "Nybkox";
       repo = "tmux-kanagawa";
-      rev = "5440b9476627bf5f7f3526156a17ae0e3fd232dd";
+      rev = "7731445126b949ae5644c3f36d6567da36338638";
       fetchSubmodules = false;
-      sha256 = "sha256-sFL9/PMdPJxN7tgpc4YbUHW4PkCXlKmY7a7gi7PLcn8=";
+      sha256 = "sha256-QLB4UVkR+ascvbwSFXyJ81MbP0wYZfLxsoUWCMbDUvI=";
     };
-    date = "2025-02-10";
+    date = "2025-05-09";
   };
   tmux-loadavg = {
     pname = "tmux-loadavg";
@@ -3326,15 +3343,15 @@
   };
   tmux-pane-focus = {
     pname = "tmux-pane-focus";
-    version = "cacfe6d98767efa06e9dce9e3357677734553598";
+    version = "5ffeeb0f56da336f7400725e5993bcc9616e700d";
     src = fetchFromGitHub {
       owner = "graemedavidson";
       repo = "tmux-pane-focus";
-      rev = "cacfe6d98767efa06e9dce9e3357677734553598";
+      rev = "5ffeeb0f56da336f7400725e5993bcc9616e700d";
       fetchSubmodules = false;
-      sha256 = "sha256-uLzcX0Aonca39EuEYucWWFKe1daq9b323TR+/PCMy/s=";
+      sha256 = "sha256-5tIo21rpvUusfDHm26eP8CyDf8TzNTc90FVZr7r9BiE=";
     };
-    date = "2025-03-19";
+    date = "2025-05-09";
   };
   tmux-power-zoom = {
     pname = "tmux-power-zoom";
@@ -3609,18 +3626,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202505072214";
+    version = "202505122213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505072214/geoip.dat";
-      sha256 = "sha256-I9JdIkugMNqxT3FQffo4yc5WzBonjtEQcyf6bwNvCH4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505122213/geoip.dat";
+      sha256 = "sha256-PaLr1PPCyhpqZXWdLKGhtjgTl7SLn5WyNc5k73fD0XA=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202505072214";
+    version = "202505122213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505072214/geosite.dat";
-      sha256 = "sha256-XQfNvQjcYcAQTO9rPyBo3c+n+szyEUDuVUwIkykQ9yM=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505122213/geosite.dat";
+      sha256 = "sha256-DPsIWzyFZvSW7UWvT91Dlp4ex9E4N3/5i/SZjlrzByA=";
     };
   };
   vim-auto-save = {
@@ -3864,11 +3881,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.1.1";
+    version = "0.2.0";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.1.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.1.1.zip";
-      sha256 = "sha256-HextrR6GxZJws7uUkR2omkJzkQOMbaSA3SPNLQb4wsU=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.2.0.zip";
+      sha256 = "sha256-Ph3mDreAc06zfcfRjej+Mkt1HwnVpLppQLVniFHrFKg=";
     };
   };
   wait-for = {
@@ -3966,10 +3983,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.82.0";
+    version = "v1.83.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.82.0/dist.zip";
-      sha256 = "sha256-SRL3/6y6XiPxqiiN2/fznzqFU7SduyXomUgEcyEkkdM=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.83.0/dist.zip";
+      sha256 = "sha256-XP+7nBKLJWNhOh39MsOGeST0Px2iizxGSfpfacLRmnk=";
     };
   };
 }
