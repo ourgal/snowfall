@@ -35,5 +35,6 @@
     "xdotool"
     # keep-sorted end
   ];
+  xorgPkgs = "xkill";
   enable = "betterlockscreen";
 }
