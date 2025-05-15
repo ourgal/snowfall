@@ -10,6 +10,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "errcheck"
+        "go-critic"
         "go-tools"
         "golint"
         "gopls"
