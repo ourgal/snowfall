@@ -8,11 +8,6 @@
     "mdcat"
     # keep-sorted end
   ];
-  myPkgs = [
-    # keep-sorted start
-    "baca"
-    "reader"
-    # keep-sorted end
-  ];
+  myPkgs = "baca";
   enable = "ov";
 }
