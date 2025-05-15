@@ -11,6 +11,7 @@ args.module (
         # keep-sorted start
         "golint"
         "gopls"
+        "unparam"
         # keep-sorted end
       ];
       env = {
