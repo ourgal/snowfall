@@ -9,6 +9,7 @@ args.module (
       progs = "go";
       nixPkgs = [
         # keep-sorted start
+        "go-tools"
         "golint"
         "gopls"
         "unparam"
