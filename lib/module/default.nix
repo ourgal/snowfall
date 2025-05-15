@@ -270,6 +270,7 @@ rec {
       luaPkgs ? [ ],
       rubyPkgs ? [ ],
       haskellPkgs ? [ ],
+      rPkgs ? [ ],
       xfcePkgs ? [ ],
       gnomePkgs ? [ ],
       inputPkgs ? _p: [ ],
@@ -499,6 +500,7 @@ rec {
               ++ (pkgHandle pkgs.luaPackages luaPkgs)
               ++ (pkgHandle pkgs.rubyPackages rubyPkgs)
               ++ (pkgHandle pkgs.haskellPackages haskellPkgs)
+              ++ (pkgHandle pkgs.rPackages rPkgs)
               ++ (pkgHandle pkgs.xorg xorgPkgs)
               ++ (pkgHandle pkgs.xfce xfcePkgs)
               ++ (pkgHandle pkgs.gnome gnomePkgs)
