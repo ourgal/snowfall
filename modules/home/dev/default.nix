@@ -19,6 +19,7 @@
     "dep-tree"
     "devbox"
     "devenv"
+    "dotenv-linter"
     "dtool"
     "eclint"
     "exercism"
