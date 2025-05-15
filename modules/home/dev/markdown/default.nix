@@ -5,6 +5,7 @@
     "mdtt"
     "pmark"
     "textpod"
+    "zhlint"
     # keep-sorted end
   ];
   nodePkgs = "prettier";

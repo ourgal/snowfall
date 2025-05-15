@@ -1412,3 +1412,7 @@ cargo_locks = ["Cargo.lock"]
 src.github = "qltysh/qlty"
 fetch.github = "qltysh/qlty"
 cargo_locks = ["Cargo.lock"]
+
+[zhlint]
+src.github = "zhlint-project/zhlint"
+fetch.github = "zhlint-project/zhlint"
