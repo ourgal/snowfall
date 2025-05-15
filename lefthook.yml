@@ -66,6 +66,9 @@ pre-commit:
       run: validator {staged_files}
     gitleaks:
       run: gitleaks protect -v --staged
+    checkmake:
+      glob: Makefile
+      run: checkmake {staged_files}
 commit-msg:
   commands:
     commitmsgfmt:
