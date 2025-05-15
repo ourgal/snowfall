@@ -3,6 +3,7 @@
   pyPkgs = [
     # keep-sorted start
     "black"
+    "flynt"
     "ipython"
     "ptpython"
     # keep-sorted end
