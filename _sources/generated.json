@@ -6491,11 +6491,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-PaLr1PPCyhpqZXWdLKGhtjgTl7SLn5WyNc5k73fD0XA=",
+            "sha256": "sha256-nrfcqsQzzv2WxfXYPojsSJwXxYqQX4WIJLr9xl9jrZI=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505152213/geoip.dat"
         },
-        "version": "202505142211"
+        "version": "202505152213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6506,11 +6506,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-EkpIrh/yDA67v+istDW/J/8sxKu7UyIGstUWhp/kbEo=",
+            "sha256": "sha256-kkKCUwiuhcRkkkEo9jc+clQ6yj/eHZ6lMsJDNauhndA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505152213/geosite.dat"
         },
-        "version": "202505142211"
+        "version": "202505152213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6940,12 +6940,12 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscode-fugitive-0.2.0.zip",
-            "sha256": "sha256-Ph3mDreAc06zfcfRjej+Mkt1HwnVpLppQLVniFHrFKg=",
+            "name": "vscode-fugitive-0.2.2.zip",
+            "sha256": "sha256-9vryI8g6DbTvH1Fxr98A9hOzConFLe7m4R2xcBSlhJ0=",
             "type": "url",
-            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.2.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "0.2.0"
+        "version": "0.2.2"
     },
     "wait-for": {
         "cargoLocks": null,
@@ -7128,5 +7128,26 @@
             "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.86.0/dist.zip"
         },
         "version": "v1.86.0"
+    },
+    "zhlint": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zhlint",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zhlint-project",
+            "repo": "zhlint",
+            "rev": "v0.8.1",
+            "sha256": "sha256-IWTwehwW+i8LNRgSSQwij1NaoxMOGfVjjs87vrIoyA8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.8.1"
     }
 }

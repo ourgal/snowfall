@@ -3643,18 +3643,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202505142211";
+    version = "202505152213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geoip.dat";
-      sha256 = "sha256-PaLr1PPCyhpqZXWdLKGhtjgTl7SLn5WyNc5k73fD0XA=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505152213/geoip.dat";
+      sha256 = "sha256-nrfcqsQzzv2WxfXYPojsSJwXxYqQX4WIJLr9xl9jrZI=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202505142211";
+    version = "202505152213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geosite.dat";
-      sha256 = "sha256-EkpIrh/yDA67v+istDW/J/8sxKu7UyIGstUWhp/kbEo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505152213/geosite.dat";
+      sha256 = "sha256-kkKCUwiuhcRkkkEo9jc+clQ6yj/eHZ6lMsJDNauhndA=";
     };
   };
   vim-auto-save = {
@@ -3898,11 +3898,11 @@
   };
   vsc-fugitive = {
     pname = "vsc-fugitive";
-    version = "0.2.0";
+    version = "0.2.2";
     src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.2.0.zip";
-      sha256 = "sha256-Ph3mDreAc06zfcfRjej+Mkt1HwnVpLppQLVniFHrFKg=";
+      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.2.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+      name = "vscode-fugitive-0.2.2.zip";
+      sha256 = "sha256-9vryI8g6DbTvH1Fxr98A9hOzConFLe7m4R2xcBSlhJ0=";
     };
   };
   wait-for = {
@@ -4004,6 +4004,17 @@
     src = fetchurl {
       url = "https://github.com/Zephyruso/zashboard/releases/download/v1.86.0/dist.zip";
       sha256 = "sha256-ai2zXzQpYfDQgOuQThIFBoEjytX7LjBIicR0HKkdWWw=";
+    };
+  };
+  zhlint = {
+    pname = "zhlint";
+    version = "v0.8.1";
+    src = fetchFromGitHub {
+      owner = "zhlint-project";
+      repo = "zhlint";
+      rev = "v0.8.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-IWTwehwW+i8LNRgSSQwij1NaoxMOGfVjjs87vrIoyA8=";
     };
   };
 }
