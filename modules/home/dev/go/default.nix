@@ -12,6 +12,7 @@ args.module (
         "go-tools"
         "golint"
         "gopls"
+        "revive"
         "unparam"
         # keep-sorted end
       ];
