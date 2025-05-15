@@ -5,6 +5,7 @@
     "envset"
     "gaze"
     "lab"
+    "qlty"
     "whitespace-format"
     # keep-sorted end
   ];

@@ -1407,3 +1407,8 @@ fetch.github = "thevxn/dish"
 src.github = "race604/clock-tui"
 fetch.github = "race604/clock-tui"
 cargo_locks = ["Cargo.lock"]
+
+[qlty]
+src.github = "qltysh/qlty"
+fetch.github = "qltysh/qlty"
+cargo_locks = ["Cargo.lock"]
