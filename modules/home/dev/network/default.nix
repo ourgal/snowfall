@@ -25,6 +25,7 @@
     "ipinfo"
     "lychee"
     "mitmproxy"
+    "muffet"
     "nali"
     "netop"
     "oha"
