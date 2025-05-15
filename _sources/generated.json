@@ -1514,14 +1514,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:69e167eff47566e6f69e717df37b282d62e979751e0301526c989cb32cb9c17b",
+            "imageDigest": "sha256:97dd1e60084174f3b281cc39d73576413b5c78295febd32e50f310a577e0faf5",
             "imageName": "b3log/siyuan",
-            "imageTag": "v3.1.28",
+            "imageTag": "v3.1.29",
             "os": null,
-            "sha256": "sha256-rpMDy5UIVjqQKrPkzqPgo5IUP2N7mqBwmtnjbv83TCA=",
+            "sha256": "sha256-je0q7suNCiNNeqrsZqKXV9uVY4ug0A9QyTh//SkYz/w=",
             "tlsVerify": null
         },
-        "version": "v3.1.28"
+        "version": "v3.1.29"
     },
     "docker-soft-serve": {
         "cargoLocks": null,
@@ -1784,12 +1784,12 @@
             "name": null,
             "owner": "11ty",
             "repo": "eleventy",
-            "rev": "v3.0.0",
-            "sha256": "sha256-0xyVski+WTfTdYfNUBMKX4fnorGSsbi95WMR8ocSU2Q=",
+            "rev": "v3.1.0",
+            "sha256": "sha256-ZkADU7ytOc0I+9rEzkkGxNK8Ixu24diunoYsUNy5TIU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v3.0.0"
+        "version": "v3.1.0"
     },
     "emacs-eglot-booster": {
         "cargoLocks": null,
@@ -3978,7 +3978,7 @@
     },
     "mpv-smartcopypaste_ii": {
         "cargoLocks": null,
-        "date": "2025-05-11",
+        "date": "2025-05-14",
         "extract": null,
         "name": "mpv-smartcopypaste_ii",
         "passthru": null,
@@ -3990,16 +3990,16 @@
             "name": null,
             "owner": "Eisa01",
             "repo": "mpv-scripts",
-            "rev": "082797789eabc68fbe71de2cd0eee46a6b073503",
-            "sha256": "sha256-krHyufDHVwuPdcotkbYnunKeEYHHb+08GqaruIzHclM=",
+            "rev": "100fea81ae8560c6fb113b1f6bb20857a41a5705",
+            "sha256": "sha256-rb8bd7KjON2+aZ2pE9yyjNT2jaZPIbzVPDYW7dvJMLU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "082797789eabc68fbe71de2cd0eee46a6b073503"
+        "version": "100fea81ae8560c6fb113b1f6bb20857a41a5705"
     },
     "mpv-smartskip": {
         "cargoLocks": null,
-        "date": "2025-05-11",
+        "date": "2025-05-14",
         "extract": null,
         "name": "mpv-smartskip",
         "passthru": null,
@@ -4011,12 +4011,12 @@
             "name": null,
             "owner": "Eisa01",
             "repo": "mpv-scripts",
-            "rev": "082797789eabc68fbe71de2cd0eee46a6b073503",
-            "sha256": "sha256-krHyufDHVwuPdcotkbYnunKeEYHHb+08GqaruIzHclM=",
+            "rev": "100fea81ae8560c6fb113b1f6bb20857a41a5705",
+            "sha256": "sha256-rb8bd7KjON2+aZ2pE9yyjNT2jaZPIbzVPDYW7dvJMLU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "082797789eabc68fbe71de2cd0eee46a6b073503"
+        "version": "100fea81ae8560c6fb113b1f6bb20857a41a5705"
     },
     "mpv-webtorrent-hook": {
         "cargoLocks": null,
@@ -4560,6 +4560,34 @@
         },
         "version": "v0.4.1"
     },
+    "qlty": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./qlty-v0.527.0/Cargo.lock",
+                {
+                    "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
+                }
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "qlty",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "qltysh",
+            "repo": "qlty",
+            "rev": "v0.527.0",
+            "sha256": "sha256-nwniqe0SUZwLW9Iilg3f7aeRVYhwf3O52Lu/YWpJV+4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.527.0"
+    },
     "qman": {
         "cargoLocks": null,
         "date": "2025-04-26",
@@ -4763,12 +4791,12 @@
             "name": null,
             "owner": "mrusme",
             "repo": "reader",
-            "rev": "v0.4.7",
-            "sha256": "sha256-Xg6ndfxKOfiIz654HcnhdvBGydOSSODBp8LnYxmqb4o=",
+            "rev": "v0.5.0",
+            "sha256": "sha256-qu48ikqm4EmoeL9j67tGkX3EFBd1JdrLWhhmoElCoJY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.7"
+        "version": "v0.5.0"
     },
     "recoverpy": {
         "cargoLocks": null,
@@ -5148,11 +5176,11 @@
     "simple-completion-language-server": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./simple-completion-language-server-ff33d965e28004800ace2449a73f7dc74cdbe815/Cargo.lock",
+                "./simple-completion-language-server-a5dc8f5a60417a8d0c1d6a30b858471510562d9d/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-04-29",
+        "date": "2025-05-13",
         "extract": null,
         "name": "simple-completion-language-server",
         "passthru": null,
@@ -5164,12 +5192,12 @@
             "name": null,
             "owner": "estin",
             "repo": "simple-completion-language-server",
-            "rev": "ff33d965e28004800ace2449a73f7dc74cdbe815",
-            "sha256": "sha256-jb4VEHJCCqYVS4llXJoyZpAy9OdwVD8isChhYe0Jr4I=",
+            "rev": "a5dc8f5a60417a8d0c1d6a30b858471510562d9d",
+            "sha256": "sha256-UTWnahQxZjGB/rCv+k15tkPJpkNQIkAjFocHu5mqL4c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ff33d965e28004800ace2449a73f7dc74cdbe815"
+        "version": "a5dc8f5a60417a8d0c1d6a30b858471510562d9d"
     },
     "simple-websocket-server": {
         "cargoLocks": null,
@@ -6465,9 +6493,9 @@
             "name": null,
             "sha256": "sha256-PaLr1PPCyhpqZXWdLKGhtjgTl7SLn5WyNc5k73fD0XA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505122213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geoip.dat"
         },
-        "version": "202505122213"
+        "version": "202505142211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6478,11 +6506,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-DPsIWzyFZvSW7UWvT91Dlp4ex9E4N3/5i/SZjlrzByA=",
+            "sha256": "sha256-EkpIrh/yDA67v+istDW/J/8sxKu7UyIGstUWhp/kbEo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505122213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505142211/geosite.dat"
         },
-        "version": "202505122213"
+        "version": "202505142211"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6549,7 +6577,7 @@
     },
     "vim-floaterm": {
         "cargoLocks": null,
-        "date": "2025-04-28",
+        "date": "2025-05-14",
         "extract": null,
         "name": "vim-floaterm",
         "passthru": null,
@@ -6561,12 +6589,12 @@
             "name": null,
             "owner": "voldikss",
             "repo": "vim-floaterm",
-            "rev": "204a01a3868cbe4549640dca857fb3880ee92b17",
-            "sha256": "sha256-/RNUIHaMJHks0/upletAamojDTZGNq45dZ2QCPvqfzs=",
+            "rev": "3bc4a5002906f500dea0a69407754109d4bd4950",
+            "sha256": "sha256-YZ46w015LVTdNnyALtM5dZU9d8c349spD+MOPTsX6Rs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "204a01a3868cbe4549640dca857fb3880ee92b17"
+        "version": "3bc4a5002906f500dea0a69407754109d4bd4950"
     },
     "vim-ghost": {
         "cargoLocks": null,
@@ -7095,10 +7123,10 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-XP+7nBKLJWNhOh39MsOGeST0Px2iizxGSfpfacLRmnk=",
+            "sha256": "sha256-ai2zXzQpYfDQgOuQThIFBoEjytX7LjBIicR0HKkdWWw=",
             "type": "url",
-            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.83.0/dist.zip"
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.86.0/dist.zip"
         },
-        "version": "v1.83.0"
+        "version": "v1.86.0"
     }
 }
