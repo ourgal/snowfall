@@ -12,6 +12,7 @@ args.module (
         "errcheck"
         "go-critic"
         "go-tools"
+        "golangci-lint"
         "golint"
         "gopls"
         "revive"
