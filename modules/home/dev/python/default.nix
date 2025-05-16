@@ -10,6 +10,7 @@
   ];
   nixPkgs = [
     # keep-sorted start
+    "mypy"
     "poetry"
     "pylint"
     "pypy"
