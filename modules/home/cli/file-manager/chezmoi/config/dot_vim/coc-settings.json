@@ -103,6 +103,13 @@
         "perl"
       ]
     },
+    "sqls": {
+      "command": "sqls",
+      "filetypes": [
+        "sql"
+      ],
+      "shell": true
+    },
     "fish-lsp": {
       "command": "fish-lsp",
       "arguments": "start",
