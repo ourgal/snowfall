@@ -22,6 +22,7 @@
     "mdsh"
     "mmdoc"
     "proselint"
+    "textlint"
     "vale"
     "vale-ls"
     # keep-sorted end
