@@ -643,6 +643,18 @@ args.module (
                 scope = "source.yaml";
                 shebangs = [ "ansible-playbook" ];
               }
+              {
+                name = "sql";
+                language-servers = [
+                  "scls"
+                  "sqls"
+                ];
+                formatter = {
+                  command = "sqlfmt";
+                  args = [ "-" ];
+                };
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -748,6 +760,9 @@ args.module (
                   "--handler"
                   "codeium"
                 ];
+              };
+              sqls = {
+                command = "sqls";
               };
             };
           };
