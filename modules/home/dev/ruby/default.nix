@@ -1,5 +1,10 @@
 {
-  rubyPkgs = "solargraph";
+  rubyPkgs = [
+    # keep-sorted start
+    "solargraph"
+    "standard"
+    # keep-sorted end
+  ];
   nixPkgs = [
     # keep-sorted start
     "rubocop"
