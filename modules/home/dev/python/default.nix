@@ -17,6 +17,7 @@
     "pypy"
     "pyright"
     "python-launcher"
+    "pyupgrade"
     "rye"
     "uv"
     "zxpy"
