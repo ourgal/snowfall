@@ -1384,13 +1384,13 @@
   };
   geminicommit = {
     pname = "geminicommit";
-    version = "v0.2.6";
+    version = "v0.2.7";
     src = fetchFromGitHub {
       owner = "tfkhdyt";
       repo = "geminicommit";
-      rev = "v0.2.6";
+      rev = "v0.2.7";
       fetchSubmodules = false;
-      sha256 = "sha256-7LZUfipJi6gR2zHSv9HoVvSSd+QWKnY0wn3US3vAifA=";
+      sha256 = "sha256-dWJzS9vfEEvfPA5IS5WZDwoNMaXXNuVIb3p2xZvSbbQ=";
     };
   };
   geoip2fast = {
@@ -3288,15 +3288,15 @@
   };
   tmux-edgelord = {
     pname = "tmux-edgelord";
-    version = "a390528534bf8e0f050daa1776db555eba4fadd9";
+    version = "f398800a3a482c33f1ea1cd74553ea879a7b9052";
     src = fetchFromGitHub {
       owner = "ourgal";
       repo = "tmux-edgelord";
-      rev = "a390528534bf8e0f050daa1776db555eba4fadd9";
+      rev = "f398800a3a482c33f1ea1cd74553ea879a7b9052";
       fetchSubmodules = false;
-      sha256 = "sha256-jermraRckdUz3BQCJVKcF1DyuKhnUzfSBJcCicXC7Q4=";
+      sha256 = "sha256-VHxaTsIl1DZ75YFdBOkM1LPb5C1keUMJ/N2lOTIlOfc=";
     };
-    date = "2024-07-08";
+    date = "2025-05-16";
   };
   tmux-floax = {
     pname = "tmux-floax";
@@ -4000,10 +4000,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.86.0";
+    version = "v1.87.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.86.0/dist.zip";
-      sha256 = "sha256-ai2zXzQpYfDQgOuQThIFBoEjytX7LjBIicR0HKkdWWw=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.87.0/dist.zip";
+      sha256 = "sha256-GQNKSUUUCpnksacRddVl8ktLZd02jYpjk+6dnOR3r3E=";
     };
   };
   zhlint = {
