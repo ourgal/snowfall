@@ -21,6 +21,7 @@
     "mdbook"
     "mdsh"
     "mmdoc"
+    "proselint"
     "vale"
     "vale-ls"
     # keep-sorted end
