@@ -6,7 +6,7 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      progs.tmux.plugins = [ pkgs.${namespace}.tmux-edgelord ];
+      progs.tmux.plugins = [ { plugin = pkgs.${namespace}.tmux-edgelord; } ];
     }
   )
 )

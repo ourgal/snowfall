@@ -89,6 +89,16 @@ args.module (
         bind-key -r "<" swap-window -d -t -1
         bind-key -r ">" swap-window -d -t +1
 
+        bind-key -n M-1 select-window -t 1
+        bind-key -n M-2 select-window -t 2
+        bind-key -n M-3 select-window -t 3
+        bind-key -n M-4 select-window -t 4
+        bind-key -n M-5 select-window -t 5
+        bind-key -n M-6 select-window -t 6
+        bind-key -n M-7 select-window -t 7
+        bind-key -n M-8 select-window -t 8
+        bind-key -n M-9 select-window -t 9
+
         # Split panes
         ${if isSshSplit then "" else ''bind-key "v" split-window -h -c "#{pane_current_path}"''}
         bind-key "V" split-window -fh -c "#{pane_current_path}"
