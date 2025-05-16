@@ -1,6 +1,7 @@
 ---
 name: Update nix hash
 on:
+  workflow_dispatch:  # allows manual triggering
   push:
     branches: [main]
 jobs:
@@ -21,4 +22,4 @@ jobs:
       - run: rm keyfile.toml
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto update nix hash"
+          commit_message: 'chore: auto update nix hash'
