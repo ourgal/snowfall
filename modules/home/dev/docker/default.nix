@@ -6,6 +6,7 @@
     "docker-compose"
     "dockerfile-language-server-nodejs"
     "dockfmt"
+    "dockle"
     "hadolint"
     "lazydocker"
     "oxker"
