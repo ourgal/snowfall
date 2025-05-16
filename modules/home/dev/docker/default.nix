@@ -6,6 +6,7 @@
     "docker-compose"
     "dockerfile-language-server-nodejs"
     "dockfmt"
+    "hadolint"
     "lazydocker"
     "oxker"
     "podman"
