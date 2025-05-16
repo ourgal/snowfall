@@ -124,6 +124,7 @@
     "sh"
     "share"
     "spell"
+    "sqlite"
     "template"
     "toml"
     "vagrant"

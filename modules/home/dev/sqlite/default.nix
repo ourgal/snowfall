@@ -9,6 +9,7 @@
     "lazysql"
     "litecli"
     "sql-studio"
+    "sqlite-interactive"
     "sqls"
     "sqruff"
     "usql"
