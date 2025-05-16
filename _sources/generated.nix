@@ -3288,13 +3288,13 @@
   };
   tmux-edgelord = {
     pname = "tmux-edgelord";
-    version = "f398800a3a482c33f1ea1cd74553ea879a7b9052";
+    version = "1941ecb6ab989747c11c8dddd8fedd0341ee3c6e";
     src = fetchFromGitHub {
       owner = "ourgal";
       repo = "tmux-edgelord";
-      rev = "f398800a3a482c33f1ea1cd74553ea879a7b9052";
+      rev = "1941ecb6ab989747c11c8dddd8fedd0341ee3c6e";
       fetchSubmodules = false;
-      sha256 = "sha256-VHxaTsIl1DZ75YFdBOkM1LPb5C1keUMJ/N2lOTIlOfc=";
+      sha256 = "sha256-UNKahF9l2sfeibkAw/IA9behqwSK7uYywyhzO0CurCU=";
     };
     date = "2025-05-16";
   };
