@@ -11,6 +11,7 @@ args.module (
         # keep-sorted start
         "errcheck"
         "go-critic"
+        "go-errorlint"
         "go-tools"
         "goconst"
         "golangci-lint"
