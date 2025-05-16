@@ -6,7 +6,7 @@
   nodejs,
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   inherit (_sources' ./.) pname version src;
 
   buildInputs = [ nodejs ];
