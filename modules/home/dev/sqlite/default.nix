@@ -1,4 +1,5 @@
 {
+  pyPkgs = "sqlfmt";
   nixPkgs = [
     # keep-sorted start
     "beekeeper-studio"
