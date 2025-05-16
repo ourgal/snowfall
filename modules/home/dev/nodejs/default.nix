@@ -10,6 +10,7 @@ args.module (
         # keep-sorted start
         "nodejs"
         "pnpm"
+        "quick-lint-js"
         "yarn"
         # keep-sorted end
       ];
