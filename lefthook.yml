@@ -22,9 +22,13 @@ pre-commit:
       glob: '*.nix'
       run: deadnix -eq {staged_files}
       stage_fixed: true
-    python:
+    ruff:
       glob: '*.py'
       run: ruff check --fix {staged_files} && ruff format {staged_files}
+      stage_fixed: true
+    pyupgrade:
+      glob: '*.py'
+      run: pyupgrade --py312-plus {staged_files}
       stage_fixed: true
     lua:
       glob: '*.lua'
