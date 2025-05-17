@@ -10,6 +10,7 @@ args.module (
       confs = {
         "espanso/config/default.yml" = { };
         "espanso/match" = [
+          ./base.yml
           ./github.yml
           ./git.yml
           ./translate.yml
