@@ -9,6 +9,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "eslint"
+        "flow"
         "nodejs"
         "pnpm"
         "quick-lint-js"
