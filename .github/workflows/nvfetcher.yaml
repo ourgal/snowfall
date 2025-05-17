@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: echo '[keys]' >> keyfile.toml
       - run: echo 'github = "${{ secrets.GITHUB_TOKEN }}"' >> keyfile.toml
       - run: nix run github:berberman/nvfetcher -- -k keyfile.toml -j 8
