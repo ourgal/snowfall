@@ -1,10 +1,5 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "lobtui"
-    "neonmodem"
-    # keep-sorted end
-  ];
+  myPkgs = "neonmodem";
   nixPkgs = [
     # keep-sorted start
     "amfora"
