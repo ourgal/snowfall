@@ -17,6 +17,7 @@ args.module (
         "brightnessctl"
         "fuzzel"
         "hardinfo"
+        "hardinfo2"
         "libnotify"
         "polkit"
         "qtscrcpy"
