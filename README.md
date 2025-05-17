@@ -1,1 +1,0 @@
-# My simple NixOS config
