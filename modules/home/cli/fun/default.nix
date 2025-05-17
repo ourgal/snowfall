@@ -16,6 +16,7 @@
     "cfonts"
     "confetty"
     "cowsay"
+    "ditaa"
     "doge"
     "figlet"
     "figurine"
