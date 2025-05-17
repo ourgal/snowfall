@@ -7,6 +7,7 @@
     "typst-lsp"
     "typst-preview"
     "typstfmt"
+    "utpm"
     # keep-sorted end
   ];
 }
