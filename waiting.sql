@@ -15,7 +15,7 @@ CREATE TABLE categories (
 
 CREATE TABLE packages (
     id integer PRIMARY KEY,
-    name text NOT NULL,
+    name text NOT NULL UNIQUE,
     description text NOT NULL,
     url text NOT NULL,
     categories integer NOT NULL,
