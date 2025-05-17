@@ -4,7 +4,7 @@
 
 #+name: waiting list
 #+begin_src sqlite :db waiting.db :colnames yes
-select '[[' || url || '][' || name || ']]' as package, description from packages where waiting_status = 1 order by added_date
+select * from v_packages
 #+end_src
 
 #+RESULTS: waiting list

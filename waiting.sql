@@ -131,3 +131,7 @@ VALUES
 ('textidote',
 'Spelling, grammar and style checking on LaTeX documents',
 'https://github.com/sylvainhalle/textidote',12,'05/17/2025',null,1);
+
+CREATE VIEW v_packages
+AS
+SELECT '[[' || url || '][' || name || ']]' AS package, description FROM packages WHERE waiting_status = 1 ORDER BY added_date
