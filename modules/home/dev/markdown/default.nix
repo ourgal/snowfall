@@ -25,6 +25,7 @@
     "textlint"
     "vale"
     "vale-ls"
+    "vault-tasks"
     # keep-sorted end
   ];
   enable = [
