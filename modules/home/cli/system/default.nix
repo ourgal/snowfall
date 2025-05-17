@@ -20,6 +20,7 @@
     "geekbench"
     "glib"
     "handlr-regex"
+    "intentrace"
     "inxi"
     "kbt" # keyboard tester
     "kmon"
