@@ -587,11 +587,11 @@
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./cdo-adb985374b521e6b430ff8ae9b05c1be4b319c80/Cargo.lock",
+                "./cdo-2651319c0ed961a8e96c6ade9c29acb26f1264de/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-05-03",
+        "date": "2025-05-17",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -603,12 +603,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "adb985374b521e6b430ff8ae9b05c1be4b319c80",
-            "sha256": "sha256-PiKUcyFhTsVwqGyonEdIhR2DVHj2E3NbdFoof1yGDO8=",
+            "rev": "2651319c0ed961a8e96c6ade9c29acb26f1264de",
+            "sha256": "sha256-K3qmf/rMIpnPjNShDv0p2o35sdgoNsPV/MGmWbrZysk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "adb985374b521e6b430ff8ae9b05c1be4b319c80"
+        "version": "2651319c0ed961a8e96c6ade9c29acb26f1264de"
     },
     "chezmoi-vim": {
         "cargoLocks": null,
@@ -837,12 +837,12 @@
             "name": null,
             "owner": "yumenaka",
             "repo": "comigo",
-            "rev": "v1.0.1",
-            "sha256": "sha256-KfYFCi5MT2DBBRJhcTTAvzQsaRU7K7pqjg05dhDTW4k=",
+            "rev": "v1.0.3",
+            "sha256": "sha256-zB1hBlSgTS5jZEtSAPiz6XJfYwmZ9misfrIEkhGepkQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.1"
+        "version": "v1.0.3"
     },
     "complate": {
         "cargoLocks": {
@@ -1055,11 +1055,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2/Cargo.lock",
+                "./dela-54a5bc6cf6a65ec7101929ddeed85982ed6e6d29/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-05-09",
+        "date": "2025-05-17",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1071,12 +1071,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2",
-            "sha256": "sha256-chq/bj4wmHfGjWFI7XVGArZmG8EMcd0qOwlQBbOjO9I=",
+            "rev": "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29",
+            "sha256": "sha256-zxEf9Y3tQ+++g3j7GxB8ZQ1c8V9w5SrSnEyFKauI88Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2"
+        "version": "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29"
     },
     "devdocs-vim": {
         "cargoLocks": null,

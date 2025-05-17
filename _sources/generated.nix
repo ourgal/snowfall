@@ -330,21 +330,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "adb985374b521e6b430ff8ae9b05c1be4b319c80";
+    version = "2651319c0ed961a8e96c6ade9c29acb26f1264de";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "adb985374b521e6b430ff8ae9b05c1be4b319c80";
+      rev = "2651319c0ed961a8e96c6ade9c29acb26f1264de";
       fetchSubmodules = false;
-      sha256 = "sha256-PiKUcyFhTsVwqGyonEdIhR2DVHj2E3NbdFoof1yGDO8=";
+      sha256 = "sha256-K3qmf/rMIpnPjNShDv0p2o35sdgoNsPV/MGmWbrZysk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./cdo-adb985374b521e6b430ff8ae9b05c1be4b319c80/Cargo.lock;
+      lockFile = ./cdo-2651319c0ed961a8e96c6ade9c29acb26f1264de/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-05-03";
+    date = "2025-05-17";
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
@@ -473,13 +473,13 @@
   };
   comigo = {
     pname = "comigo";
-    version = "v1.0.1";
+    version = "v1.0.3";
     src = fetchFromGitHub {
       owner = "yumenaka";
       repo = "comigo";
-      rev = "v1.0.1";
+      rev = "v1.0.3";
       fetchSubmodules = false;
-      sha256 = "sha256-KfYFCi5MT2DBBRJhcTTAvzQsaRU7K7pqjg05dhDTW4k=";
+      sha256 = "sha256-zB1hBlSgTS5jZEtSAPiz6XJfYwmZ9misfrIEkhGepkQ=";
     };
   };
   complate = {
@@ -601,21 +601,21 @@
   };
   dela = {
     pname = "dela";
-    version = "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2";
+    version = "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2";
+      rev = "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29";
       fetchSubmodules = false;
-      sha256 = "sha256-chq/bj4wmHfGjWFI7XVGArZmG8EMcd0qOwlQBbOjO9I=";
+      sha256 = "sha256-zxEf9Y3tQ+++g3j7GxB8ZQ1c8V9w5SrSnEyFKauI88Y=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-1017a3d0b9cd215ee4aadbf687720a9a8cc4ead2/Cargo.lock;
+      lockFile = ./dela-54a5bc6cf6a65ec7101929ddeed85982ed6e6d29/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-05-09";
+    date = "2025-05-17";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
