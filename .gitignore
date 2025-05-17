@@ -5,3 +5,4 @@ keyfile.toml
 out
 .env
 tags
+waiting.db
