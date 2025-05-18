@@ -1055,7 +1055,7 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-54a5bc6cf6a65ec7101929ddeed85982ed6e6d29/Cargo.lock",
+                "./dela-ec61d14d3bec5bae1d4e21d6644c849cd0288e24/Cargo.lock",
                 {}
             ]
         },
@@ -1071,12 +1071,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29",
-            "sha256": "sha256-zxEf9Y3tQ+++g3j7GxB8ZQ1c8V9w5SrSnEyFKauI88Y=",
+            "rev": "ec61d14d3bec5bae1d4e21d6644c849cd0288e24",
+            "sha256": "sha256-lHHJhY7MgTi0vO7qbq13FD0pNvIrBpU4i5KsQLq0abw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "54a5bc6cf6a65ec7101929ddeed85982ed6e6d29"
+        "version": "ec61d14d3bec5bae1d4e21d6644c849cd0288e24"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -2501,12 +2501,12 @@
             "name": null,
             "owner": "tfkhdyt",
             "repo": "geminicommit",
-            "rev": "v0.2.7",
-            "sha256": "sha256-dWJzS9vfEEvfPA5IS5WZDwoNMaXXNuVIb3p2xZvSbbQ=",
+            "rev": "v0.3.1",
+            "sha256": "sha256-G28vwH9i4eqr4vxidRYLgdFL6y5VztpvrI2UK+6aS8M=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.7"
+        "version": "v0.3.1"
     },
     "geoip2fast": {
         "cargoLocks": null,
@@ -3792,12 +3792,12 @@
             "name": null,
             "owner": "szktkfm",
             "repo": "mdtt",
-            "rev": "v0.2.1",
-            "sha256": "sha256-OFS/ZhXdvdmlpfCNutsvlhMv1krFlx4Xju8RSl3GS2s=",
+            "rev": "v0.3.0",
+            "sha256": "sha256-YjHW/DKqDXhou4QKzgvLIMip0QO3ItofV/XjmZTLLyg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.2.1"
+        "version": "v0.3.0"
     },
     "miniflux-sync": {
         "cargoLocks": null,
@@ -6149,7 +6149,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2025-03-31",
+        "date": "2025-05-18",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -6161,12 +6161,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "d944b8ef41119b9c3a7910161c3b2db9f06a2be4",
-            "sha256": "sha256-3xPFw148Xthb25pQMl0OUVBLCXiNMp9OAvSL3UwvUo8=",
+            "rev": "8768fe1e5ca6be2401f1ca876f43456bb2abfd38",
+            "sha256": "sha256-2gJgZcFY69Bxskxs/mBjR6tif9JU7v+NugmWku3tK9U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d944b8ef41119b9c3a7910161c3b2db9f06a2be4"
+        "version": "8768fe1e5ca6be2401f1ca876f43456bb2abfd38"
     },
     "to-fish": {
         "cargoLocks": null,
@@ -6493,9 +6493,9 @@
             "name": null,
             "sha256": "sha256-nrfcqsQzzv2WxfXYPojsSJwXxYqQX4WIJLr9xl9jrZI=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505162213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505172212/geoip.dat"
         },
-        "version": "202505162213"
+        "version": "202505172212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6506,11 +6506,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Y/zaDqGCvSOwN3jhHyag4JmIhuZkHDeE0et/oOroZUg=",
+            "sha256": "sha256-IJu3htNyeDMfDCWvZt0LN9qc00O+ocw8ZMc8iKmRQNs=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505162213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505172212/geosite.dat"
         },
-        "version": "202505162213"
+        "version": "202505172212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6913,7 +6913,7 @@
     },
     "vlime": {
         "cargoLocks": null,
-        "date": "2025-04-30",
+        "date": "2025-05-18",
         "extract": null,
         "name": "vlime",
         "passthru": null,
@@ -6925,12 +6925,12 @@
             "name": null,
             "owner": "vlime",
             "repo": "vlime",
-            "rev": "e9dbf3f0818e0f76a1f2b20b6a39ac2e8b942c55",
-            "sha256": "sha256-eVNNmW7lrfNkEnUBl/9IIPzO8R93zoMizp0XXHNAyBk=",
+            "rev": "e276e9a6f37d2699a3caa63be19314f5a19a1481",
+            "sha256": "sha256-tCqN80lgj11ggzGmuGF077oqL5ByjUp6jVmRUTrIWJA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e9dbf3f0818e0f76a1f2b20b6a39ac2e8b942c55"
+        "version": "e276e9a6f37d2699a3caa63be19314f5a19a1481"
     },
     "vsc-fugitive": {
         "cargoLocks": null,
