@@ -60,6 +60,7 @@ args.module (
         "com.predidit.kazumi" # Kazumi, An anime collection APP based on custom rules.
         "com.example.knkpanime" # knkpanime, Anime app with multiple source and danmaku support
         "org.github.henryquan.animeone" # AnimeOne, Unofficial AnimeOne client
+        "io.github.jica98"
       ];
       ebook = [
         "org.koreader.launcher.fdroid" # KOReader, Ebook reader
