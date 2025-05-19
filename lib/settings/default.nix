@@ -51,6 +51,7 @@ in
       "gpu-screen-recorder"
       "harmonia"
       "input"
+      "iotop"
       "laptop"
       "logrotate"
       "nh"

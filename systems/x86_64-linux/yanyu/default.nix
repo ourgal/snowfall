@@ -21,6 +21,7 @@ in
       "common"
       "disko"
       "firehol"
+      "iotop"
       "nh"
       "restic-server"
       "tuptime"

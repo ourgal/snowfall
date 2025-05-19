@@ -40,6 +40,7 @@ in
         ssh = enabled;
       };
       bpftune = enabled;
+      iotop = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;

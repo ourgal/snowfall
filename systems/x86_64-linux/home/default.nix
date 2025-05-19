@@ -38,6 +38,7 @@ in
       "geoclue2"
       "gpu-screen-recorder"
       "harmonia"
+      "iotop"
       "kmonad"
       "logrotate"
       "nfsMount"
