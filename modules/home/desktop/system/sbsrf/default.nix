@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs enabled;
+      inherit (args) pkgs disabled;
     in
     {
       dataFiles."fcitx5/rime/sbfm.custom.yaml" = {
@@ -113,7 +113,7 @@ args.module (
         };
       };
       value = {
-        catppuccin.fcitx5 = enabled;
+        catppuccin.fcitx5 = disabled;
         i18n.inputMethod = {
           enabled = "fcitx5";
           fcitx5 = {
