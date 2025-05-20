@@ -13,7 +13,18 @@ in
     user.host = "air";
     boot.systemd = enabled;
     gpu.amd = enabled;
-    firewall.disable = enabled;
+    firewall = {
+      aria2 = enabled;
+      barrier = enabled;
+      docker = enabled;
+      dufs = enabled;
+      kdeconnect = enabled;
+      mdns = enabled;
+      roc = enabled;
+      scream = enabled;
+      syncthing = enabled;
+      transmission = enabled;
+    };
     disko = enabled;
     sops-nix = enabled // {
       desktops = enabled;

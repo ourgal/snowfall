@@ -17,7 +17,18 @@ in
       boot.systemd = enabled;
       gpu.nvidia = enabled;
       autorandr.home = enabled;
-      firewall.disable = enabled;
+      firewall = {
+        aria2 = enabled;
+        barrier = enabled;
+        docker = enabled;
+        dufs = enabled;
+        kdeconnect = enabled;
+        mdns = enabled;
+        roc = enabled;
+        scream = enabled;
+        syncthing = enabled;
+        transmission = enabled;
+      };
       sops-nix = enabled // {
         desktops = enabled;
         ssh = enabled;

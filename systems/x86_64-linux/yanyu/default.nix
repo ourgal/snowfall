@@ -14,7 +14,10 @@ in
     {
       user.host = "yanyu";
       boot.systemd = enabled;
-      firewall.disable = enabled;
+      firewall = {
+        docker = enabled;
+        mdns = enabled;
+      };
     }
     // enabledList [
       # keep-sorted start
