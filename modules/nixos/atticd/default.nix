@@ -60,6 +60,7 @@ let
       inherit name;
       tcp = cfg.port;
     };
+    networking.firewall.allowedTCPPorts = [ cfg.port ];
   };
   extraOpts = {
     port = mkOpt' lib.types.port 8080;

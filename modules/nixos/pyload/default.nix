@@ -26,6 +26,7 @@ let
       inherit name;
       tcp = port;
     };
+    networking.firewall.allowedTCPPorts = [ port ];
 
     systemd.services.pyload.serviceConfig.ProtectSystem = lib.mkForce "full";
   };

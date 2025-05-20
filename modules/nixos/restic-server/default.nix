@@ -20,6 +20,7 @@ let
       inherit name;
       tcp = port;
     };
+    networking.firewall.allowedTCPPorts = [ port ];
   };
   _args = { inherit value args; };
 in
