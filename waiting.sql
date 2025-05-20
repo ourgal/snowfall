@@ -53,7 +53,7 @@ INSERT INTO waiting_status  VALUES (1,'waiting'), (2,'done'), (3, 'not packaged'
 
 INSERT INTO types VALUES (1,'package'), (2,'module');
 
-INSERT INTO categories  VALUES
+INSERT INTO categories VALUES
 (1,'music'),
 (2,'nix'),
 (3,'shell'),
@@ -628,4 +628,7 @@ VALUES
 'https://github.com/zladovan/gorched',16,'05/18/2025',null,1,1),
 ('kompanion',
 'a self hosted backend for bookworms, tightly coupled with KOReader',
-'https://github.com/vanadium23/kompanion',7,'05/18/2025',null,3,1);
+'https://github.com/vanadium23/kompanion',7,'05/18/2025',null,3,1),
+('mkbrr',
+'⚡ mkbrr is a tool to create, modify and inspect torrent files. Fast.',
+'https://github.com/autobrr/mkbrr',18,'05/20/2025',null,1,1);
