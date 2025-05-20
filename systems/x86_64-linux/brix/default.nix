@@ -72,6 +72,7 @@ in
       "soft-serve"
       "sonarr"
       "syncthing"
+      "systemd-resolved"
       "transmission"
       "tuptime"
       "vaultwarden"

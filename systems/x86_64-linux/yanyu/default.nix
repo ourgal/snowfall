@@ -24,6 +24,7 @@ in
       "iotop"
       "nh"
       "restic-server"
+      "systemd-resolved"
       "tuptime"
       # keep-sorted end
     ];

@@ -17,6 +17,7 @@ in
     nh = enabled;
     disko = enabled;
     tuptime = enabled;
+    systemd-resolved = enabled;
   };
 
   snowfallorg.users.${user}.home = disabled;

@@ -25,10 +25,7 @@ let
 
     hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;
   };
-  enable = [
-    "sysctl"
-    "avahi"
-  ];
+  enable = "sysctl";
   _args = { inherit value args enable; };
 in
 nixosModule _args

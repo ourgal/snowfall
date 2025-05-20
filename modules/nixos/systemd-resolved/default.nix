@@ -8,8 +8,8 @@ let
     };
     networking.firewall = {
       allowedUDPPorts = [
-        5353
-        5355
+        5353 # mdns
+        5355 # LLMNR
       ];
     };
   };

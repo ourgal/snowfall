@@ -48,6 +48,7 @@ in
       "power"
       "scrutiny"
       "syncthing"
+      "systemd-resolved"
       "temp-hosts"
       "tpm"
       "tuptime"

@@ -60,6 +60,7 @@ in
       "scrutiny"
       "sops-nix"
       "syncthing"
+      "systemd-resolved"
       "tpm"
       "tuptime"
       "udev"

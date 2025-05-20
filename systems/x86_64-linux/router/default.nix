@@ -29,6 +29,7 @@ in
         inherit lan;
         dns = enabled;
       };
+      avahi = enabled;
       pppd = enabled // {
         inherit wan lan;
       };
