@@ -1416,3 +1416,7 @@ cargo_locks = ["Cargo.lock"]
 [zhlint]
 src.github = "zhlint-project/zhlint"
 fetch.github = "zhlint-project/zhlint"
+
+[mp3-loop]
+src.github = "LjubeC-dev/mp3-loop"
+fetch.github = "LjubeC-dev/mp3-loop"
