@@ -15,7 +15,7 @@ let
       "ntp.ntsc.ac.cn" # NTSC NTP Server
     ];
   };
-  enable = "ntp";
+  enable = "timesyncd";
   _args = { inherit value args enable; };
 in
 nixosModule _args
