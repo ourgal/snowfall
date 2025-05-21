@@ -38,6 +38,7 @@ in
       # keep-sorted start
       "appimage"
       "audio"
+      "avahi"
       "bandwhich"
       "bluetooth"
       "bpftune"
@@ -59,7 +60,6 @@ in
       "power"
       "scrutiny"
       "syncthing"
-      "systemd-resolved"
       "temp-hosts"
       "tpm"
       "tuptime"

@@ -21,13 +21,13 @@ in
     }
     // enabledList [
       # keep-sorted start
+      "avahi"
       "common"
       "disko"
       "firehol"
       "iotop"
       "nh"
       "restic-server"
-      "systemd-resolved"
       "tuptime"
       # keep-sorted end
     ];

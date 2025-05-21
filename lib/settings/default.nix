@@ -40,6 +40,7 @@ in
       # keep-sorted start
       "appimage"
       "audio"
+      "avahi"
       "bandwhich"
       "bluetooth"
       "bpftune"
@@ -60,7 +61,6 @@ in
       "scrutiny"
       "sops-nix"
       "syncthing"
-      "systemd-resolved"
       "tpm"
       "tuptime"
       "udev"
