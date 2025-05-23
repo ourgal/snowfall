@@ -4,6 +4,7 @@
     "classifier"
     "dext"
     "dlorg"
+    "files-sort"
     "mnamer"
     # keep-sorted end
   ];

@@ -1429,3 +1429,7 @@ fetch.github = "kristopolous/tmux-gentrify"
 [trre]
 src.git = "https://github.com/c0stya/trre"
 fetch.github = "c0stya/trre"
+
+[files-sort]
+src.git = "https://github.com/AfzGit/Files-Sort-py"
+fetch.github = "AfzGit/Files-Sort-py"
