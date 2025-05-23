@@ -3584,6 +3584,18 @@
       sha256 = "sha256-PPWUEfX7OXKZnghiVXU+eCjveA1VszA3uS8C3uI3pFM=";
     };
   };
+  trre = {
+    pname = "trre";
+    version = "c474a6849153762530810d91667c192c5e53341a";
+    src = fetchFromGitHub {
+      owner = "c0stya";
+      repo = "trre";
+      rev = "c474a6849153762530810d91667c192c5e53341a";
+      fetchSubmodules = false;
+      sha256 = "sha256-vjjHwkiMeb7ywSWWCdy0hDUJVCT+bvpqdL1hW5fy/6Q=";
+    };
+    date = "2025-05-15";
+  };
   trzsz-go = {
     pname = "trzsz-go";
     version = "v1.1.8";

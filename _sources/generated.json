@@ -6379,6 +6379,27 @@
         },
         "version": "v1.1.0"
     },
+    "trre": {
+        "cargoLocks": null,
+        "date": "2025-05-15",
+        "extract": null,
+        "name": "trre",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "c0stya",
+            "repo": "trre",
+            "rev": "c474a6849153762530810d91667c192c5e53341a",
+            "sha256": "sha256-vjjHwkiMeb7ywSWWCdy0hDUJVCT+bvpqdL1hW5fy/6Q=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c474a6849153762530810d91667c192c5e53341a"
+    },
     "trzsz-go": {
         "cargoLocks": null,
         "date": null,
