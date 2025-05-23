@@ -1176,12 +1176,12 @@
             "name": null,
             "owner": "Tantalor93",
             "repo": "dnspyre",
-            "rev": "v3.5.0",
-            "sha256": "sha256-bcBVpCX7n0IpdLn5VqG+1yDiH5Yy8Kn9UGd8KVwDYhI=",
+            "rev": "v3.5.1",
+            "sha256": "sha256-2FN/3cEIm92OCX0V+5XmcRy9EP4e162Bc0SbcJ5jPG4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v3.5.0"
+        "version": "v3.5.1"
     },
     "docker-alist": {
         "cargoLocks": null,
@@ -2825,12 +2825,12 @@
             "name": null,
             "owner": "benelan",
             "repo": "git-mux",
-            "rev": "v0.3.0",
-            "sha256": "sha256-rqWLnp8OaNFaM7jfplfsnVotkBpDhCfIVOk8W83GjPM=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-PYe2hWNfQ5y8sIIHp8veY0EN3Gzq5pg1RBjqPtt68Hw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.0"
+        "version": "v0.4.0"
     },
     "git-of-theseus": {
         "cargoLocks": null,
@@ -4488,11 +4488,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MnONGdY6ImpS7tdmRamO4HwfQQ7kHZO0r7+oXtgRHC0=",
+            "sha256": "sha256-f4U9s9DOeM6LuxSMQBws3WQxs0c8DN/ydVx2kJUqe3o=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.4.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.5.tar.gz"
         },
-        "version": "2.11.4"
+        "version": "2.11.5"
     },
     "pydantic-core": {
         "cargoLocks": null,
@@ -4584,7 +4584,7 @@
     "qlty": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./qlty-v0.531.0/Cargo.lock",
+                "./qlty-v0.534.0/Cargo.lock",
                 {
                     "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
                 }
@@ -4602,12 +4602,12 @@
             "name": null,
             "owner": "qltysh",
             "repo": "qlty",
-            "rev": "v0.531.0",
-            "sha256": "sha256-Eh1bEts6ozUFeVZ2sa2TIGJAkCi4UvDJCDz9dqgNH7g=",
+            "rev": "v0.534.0",
+            "sha256": "sha256-de3YEw4ukYh4IE4aMeN+q+LPoaPdIqdvvLf7mtrz9S8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.531.0"
+        "version": "v0.534.0"
     },
     "qman": {
         "cargoLocks": null,
@@ -5937,6 +5937,27 @@
         },
         "version": "16381dce1c30fedd75fc775f887be7ea6c7cbf55"
     },
+    "tmux-gentrify": {
+        "cargoLocks": null,
+        "date": "2025-05-22",
+        "extract": null,
+        "name": "tmux-gentrify",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kristopolous",
+            "repo": "tmux-gentrify",
+            "rev": "46eabde31c6a19ea11f6a6d48e7aa0e8567f13b4",
+            "sha256": "sha256-iYoz2eqONtVdgO2M8RRrJKWM/JFFqIpI9xuxlXvrUzU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "46eabde31c6a19ea11f6a6d48e7aa0e8567f13b4"
+    },
     "tmux-kanagawa": {
         "cargoLocks": null,
         "date": "2025-05-09",
@@ -6454,12 +6475,12 @@
             "name": null,
             "owner": "Owloops",
             "repo": "updo",
-            "rev": "v0.1.5",
-            "sha256": "sha256-LZcPp+H/i7WePtvUzBhFufdN0aJGxwxdozhYqNB3Nl4=",
+            "rev": "v0.1.7",
+            "sha256": "sha256-NtT/16eEAS+YnW9SBMo0m8uOjNFRBg737XvknV7/3Yk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.5"
+        "version": "v0.1.7"
     },
     "v": {
         "cargoLocks": null,
@@ -6512,11 +6533,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-nrfcqsQzzv2WxfXYPojsSJwXxYqQX4WIJLr9xl9jrZI=",
+            "sha256": "sha256-MOGovqFWEHgd/J1tB92F7OjgqbZHFW4uNH9HKn/Cb7o=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505202213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geoip.dat"
         },
-        "version": "202505202213"
+        "version": "202505222213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6527,11 +6548,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-oOG7X1uqe9sCOdLjjz3eGqcYKLKocIStYENHTUobaOg=",
+            "sha256": "sha256-ovQ7QdbT/GBcY25+FNqUsGWh1We2aIeFiFnzxrbiKDk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505202213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geosite.dat"
         },
-        "version": "202505202213"
+        "version": "202505222213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -7144,11 +7165,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-uH3qH7cydda9F/VRztTq3zwZ8I/urTT7XqFQ75Rje6o=",
+            "sha256": "sha256-OeRir/v9dHRlIv4pLB044SArsKDTjnh9wr9ZU4rtttA=",
             "type": "url",
-            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.89.0/dist.zip"
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.90.0/dist.zip"
         },
-        "version": "v1.89.0"
+        "version": "v1.90.0"
     },
     "zhlint": {
         "cargoLocks": null,

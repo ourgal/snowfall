@@ -666,13 +666,13 @@
   };
   dnspyre = {
     pname = "dnspyre";
-    version = "v3.5.0";
+    version = "v3.5.1";
     src = fetchFromGitHub {
       owner = "Tantalor93";
       repo = "dnspyre";
-      rev = "v3.5.0";
+      rev = "v3.5.1";
       fetchSubmodules = false;
-      sha256 = "sha256-bcBVpCX7n0IpdLn5VqG+1yDiH5Yy8Kn9UGd8KVwDYhI=";
+      sha256 = "sha256-2FN/3cEIm92OCX0V+5XmcRy9EP4e162Bc0SbcJ5jPG4=";
     };
   };
   docker-alist = {
@@ -1561,13 +1561,13 @@
   };
   git-mux = {
     pname = "git-mux";
-    version = "v0.3.0";
+    version = "v0.4.0";
     src = fetchFromGitHub {
       owner = "benelan";
       repo = "git-mux";
-      rev = "v0.3.0";
+      rev = "v0.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-rqWLnp8OaNFaM7jfplfsnVotkBpDhCfIVOk8W83GjPM=";
+      sha256 = "sha256-PYe2hWNfQ5y8sIIHp8veY0EN3Gzq5pg1RBjqPtt68Hw=";
     };
   };
   git-of-theseus = {
@@ -2495,10 +2495,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.11.4";
+    version = "2.11.5";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.4.tar.gz";
-      sha256 = "sha256-MnONGdY6ImpS7tdmRamO4HwfQQ7kHZO0r7+oXtgRHC0=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.5.tar.gz";
+      sha256 = "sha256-f4U9s9DOeM6LuxSMQBws3WQxs0c8DN/ydVx2kJUqe3o=";
     };
   };
   pydantic-core = {
@@ -2549,16 +2549,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.531.0";
+    version = "v0.534.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.531.0";
+      rev = "v0.534.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Eh1bEts6ozUFeVZ2sa2TIGJAkCi4UvDJCDz9dqgNH7g=";
+      sha256 = "sha256-de3YEw4ukYh4IE4aMeN+q+LPoaPdIqdvvLf7mtrz9S8=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./qlty-v0.531.0/Cargo.lock;
+      lockFile = ./qlty-v0.534.0/Cargo.lock;
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };
@@ -3333,6 +3333,18 @@
     };
     date = "2025-01-07";
   };
+  tmux-gentrify = {
+    pname = "tmux-gentrify";
+    version = "46eabde31c6a19ea11f6a6d48e7aa0e8567f13b4";
+    src = fetchFromGitHub {
+      owner = "kristopolous";
+      repo = "tmux-gentrify";
+      rev = "46eabde31c6a19ea11f6a6d48e7aa0e8567f13b4";
+      fetchSubmodules = false;
+      sha256 = "sha256-iYoz2eqONtVdgO2M8RRrJKWM/JFFqIpI9xuxlXvrUzU=";
+    };
+    date = "2025-05-22";
+  };
   tmux-kanagawa = {
     pname = "tmux-kanagawa";
     version = "7731445126b949ae5644c3f36d6567da36338638";
@@ -3619,13 +3631,13 @@
   };
   updo = {
     pname = "updo";
-    version = "v0.1.5";
+    version = "v0.1.7";
     src = fetchFromGitHub {
       owner = "Owloops";
       repo = "updo";
-      rev = "v0.1.5";
+      rev = "v0.1.7";
       fetchSubmodules = false;
-      sha256 = "sha256-LZcPp+H/i7WePtvUzBhFufdN0aJGxwxdozhYqNB3Nl4=";
+      sha256 = "sha256-NtT/16eEAS+YnW9SBMo0m8uOjNFRBg737XvknV7/3Yk=";
     };
   };
   v = {
@@ -3654,18 +3666,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202505202213";
+    version = "202505222213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505202213/geoip.dat";
-      sha256 = "sha256-nrfcqsQzzv2WxfXYPojsSJwXxYqQX4WIJLr9xl9jrZI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geoip.dat";
+      sha256 = "sha256-MOGovqFWEHgd/J1tB92F7OjgqbZHFW4uNH9HKn/Cb7o=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202505202213";
+    version = "202505222213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505202213/geosite.dat";
-      sha256 = "sha256-oOG7X1uqe9sCOdLjjz3eGqcYKLKocIStYENHTUobaOg=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geosite.dat";
+      sha256 = "sha256-ovQ7QdbT/GBcY25+FNqUsGWh1We2aIeFiFnzxrbiKDk=";
     };
   };
   vim-auto-save = {
@@ -4011,10 +4023,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v1.89.0";
+    version = "v1.90.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.89.0/dist.zip";
-      sha256 = "sha256-uH3qH7cydda9F/VRztTq3zwZ8I/urTT7XqFQ75Rje6o=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v1.90.0/dist.zip";
+      sha256 = "sha256-OeRir/v9dHRlIv4pLB044SArsKDTjnh9wr9ZU4rtttA=";
     };
   };
   zhlint = {
