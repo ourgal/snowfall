@@ -6,8 +6,6 @@ let
     throw
     foldl'
     map
-    attrNames
-    head
     isList
     isPath
     baseNameOf
@@ -76,16 +74,10 @@ rec {
 
   _sources = import ../../_sources/generated.nix;
 
-  mkRustSource =
-    s:
-    let
-      firstAttrName = v: head (attrNames v);
-      cargoName = firstAttrName s.cargoLock;
-    in
-    {
-      inherit (s) pname version src;
-      cargoLock = s.cargoLock.${cargoName};
-    };
+  mkRustSource = s: {
+    inherit (s) pname version src;
+    cargoLock = s.cargoLock."Cargo.lock";
+  };
 
   mkModuleCfg =
     root: path: prefix:
