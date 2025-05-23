@@ -6,15 +6,13 @@
   rustc,
   _sources',
 }:
+let
+  source = _sources' ./.;
+in
 python3.pkgs.buildPythonApplication {
-  inherit (_sources' ./.) pname src version;
+  inherit (source) pname src version;
 
-  cargoDeps = rustPlatform.importCargoLock {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "ruff_annotate_snippets-0.1.0" = "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0=";
-    };
-  };
+  cargoDeps = rustPlatform.importCargoLock source.cargoLock."Cargo.lock";
 
   nativeBuildInputs = [
     cargo
