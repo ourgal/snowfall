@@ -906,6 +906,7 @@ cargo_locks = ["Cargo.lock"]
 [tach]
 src.github = "gauge-sh/tach"
 fetch.github = "gauge-sh/tach"
+cargo_locks = ["Cargo.lock"]
 
 [templify]
 src.github = "cophilot/templify"
