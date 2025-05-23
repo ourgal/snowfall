@@ -5593,7 +5593,14 @@
         "version": "834de4c0f29ae0585dc822ab2b4418292765d017"
     },
     "tach": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./tach-v0.29.0/Cargo.lock",
+                {
+                    "ruff_annotate_snippets-0.1.0": "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0="
+                }
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "tach",

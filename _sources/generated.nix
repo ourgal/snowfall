@@ -3143,6 +3143,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-G/gEVn7pPl/dVDtB/QgBxHw/lHWzLkyto+w+o8Wsj+c=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./tach-v0.29.0/Cargo.lock;
+      outputHashes = {
+        "ruff_annotate_snippets-0.1.0" = "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0=";
+      };
+    };
   };
   task-relative-recur = {
     pname = "task-relative-recur";
