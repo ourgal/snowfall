@@ -1183,6 +1183,18 @@
     };
     date = "2024-12-04";
   };
+  files-sort = {
+    pname = "files-sort";
+    version = "fbbf0716be84ffd83e8cc3a4891a967774251fae";
+    src = fetchFromGitHub {
+      owner = "AfzGit";
+      repo = "Files-Sort-py";
+      rev = "fbbf0716be84ffd83e8cc3a4891a967774251fae";
+      fetchSubmodules = false;
+      sha256 = "sha256-o1lYK9kF+vgpvNuxFZmqjO9Va7awZ0YVw5UIJPATNKo=";
+    };
+    date = "2025-05-21";
+  };
   fingerpaint = {
     pname = "fingerpaint";
     version = "v1.2.7";
@@ -1977,13 +1989,13 @@
   };
   lobster = {
     pname = "lobster";
-    version = "v4.3.0";
+    version = "v4.4.0";
     src = fetchFromGitHub {
       owner = "justchokingaround";
       repo = "Lobster";
-      rev = "v4.3.0";
+      rev = "v4.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-ch91LYKs6MswTC08Xi8VcIxooWvDprGuIn0B2Yo3ufo=";
+      sha256 = "sha256-RmsoSoEZ9PdKU/zH8KU178SFJdAjXEv/6IbvitPvIRs=";
     };
   };
   lobtui = {

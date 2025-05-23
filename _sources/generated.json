@@ -2131,6 +2131,27 @@
         },
         "version": "a01650cd432becdc6e36feeff5e8d657bd7ee84a"
     },
+    "files-sort": {
+        "cargoLocks": null,
+        "date": "2025-05-21",
+        "extract": null,
+        "name": "files-sort",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AfzGit",
+            "repo": "Files-Sort-py",
+            "rev": "fbbf0716be84ffd83e8cc3a4891a967774251fae",
+            "sha256": "sha256-o1lYK9kF+vgpvNuxFZmqjO9Va7awZ0YVw5UIJPATNKo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "fbbf0716be84ffd83e8cc3a4891a967774251fae"
+    },
     "fingerpaint": {
         "cargoLocks": null,
         "date": null,
@@ -3567,12 +3588,12 @@
             "name": null,
             "owner": "justchokingaround",
             "repo": "Lobster",
-            "rev": "v4.3.0",
-            "sha256": "sha256-ch91LYKs6MswTC08Xi8VcIxooWvDprGuIn0B2Yo3ufo=",
+            "rev": "v4.4.0",
+            "sha256": "sha256-RmsoSoEZ9PdKU/zH8KU178SFJdAjXEv/6IbvitPvIRs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v4.3.0"
+        "version": "v4.4.0"
     },
     "lobtui": {
         "cargoLocks": {
