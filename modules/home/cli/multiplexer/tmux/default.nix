@@ -171,6 +171,7 @@ args.module (
         "fuzzback"
         "fzf"
         "fzf-url"
+        "gentrify"
         "gitmux"
         "jump"
         "mouse-swipe"
