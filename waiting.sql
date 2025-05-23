@@ -652,4 +652,10 @@ VALUES
 'https://github.com/sysid/bkmr',3,'05/24/2025',null,3,1),
 ('nocjk',
 'Detect CJK text',
-'https://github.com/aethiopicuschan/nocjk',4,'05/24/2025',null,3,1);
+'https://github.com/aethiopicuschan/nocjk',4,'05/24/2025',null,3,1),
+('zeitgrep',
+'sorted grep',
+'https://github.com/kantord/zeitgrep',3,'05/24/2025',null,3,1),
+('mcat',
+'cat command for documents / images / videos and more!',
+'https://github.com/Skardyy/mcat',3,'05/24/2025',null,3,1);
