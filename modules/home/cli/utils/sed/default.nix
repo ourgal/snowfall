@@ -1,5 +1,10 @@
 {
-  myPkgs = "play";
+  myPkgs = [
+    # keep-sorted start
+    "play"
+    "trre"
+    # keep-sorted end
+  ];
   nixPkgs = [
     # keep-sorted start
     "amber"
