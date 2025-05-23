@@ -635,9 +635,6 @@ VALUES
 ('plant-it',
 '🪴 Self-hosted, open source gardening companion app',
 'https://github.com/MDeLuise/plant-it',7,'05/23/2025',null,1,1),
-('schemat',
-'Code formatter for Scheme, Lisp, and any S-expressions',
-'https://github.com/raviqqe/schemat',4,'05/23/2025',null,1,1),
 ('dix',
 'Diff Nix',
 'https://github.com/bloxx12/dix',4,'05/23/2025',null,1,1),
@@ -658,4 +655,7 @@ VALUES
 'https://github.com/kantord/zeitgrep',3,'05/24/2025',null,3,1),
 ('mcat',
 'cat command for documents / images / videos and more!',
-'https://github.com/Skardyy/mcat',3,'05/24/2025',null,3,1);
+'https://github.com/Skardyy/mcat',3,'05/24/2025',null,3,1),
+('lexy',
+'Lexy is a lightweight CLI tool that fetches programming tutorials from "Learn X in Y Minutes" directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow.',
+'https://github.com/antoniorodr/lexy',12,'05/24/2025',null,3,1);
