@@ -430,7 +430,7 @@ VALUES
 'https://www.roomarranger.com/',4,'05/18/2025',null,1,1),
 ('nyaa',
 'A tui tool for browsing and downloading torrents',
-'https://github.com/Beastwick18/nyaa',7,'05/18/2025',null,1,1),
+'https://github.com/Beastwick18/nyaa',7,'05/18/2025',null,2,1),
 ('mouseless',
 'A replacement for the mouse in Linux',
 'https://github.com/jbensmann/mouseless',5,'05/18/2025',null,1,1),
