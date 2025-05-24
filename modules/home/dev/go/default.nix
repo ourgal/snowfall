@@ -14,6 +14,7 @@ args.module (
         "go-errorlint"
         "go-tools"
         "goconst"
+        "gofumpt"
         "golangci-lint"
         "golint"
         "gopls"
