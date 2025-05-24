@@ -24,7 +24,7 @@ args.module (
         fish.interactiveShellInit = ''
           aliae init fish | source
         '';
-        zsh.initExtra = ''
+        zsh.initContent = ''
           eval "$(aliae init zsh)"
         '';
       };

@@ -1,11 +1,15 @@
 {
-  myPkgs = "wait-for";
+  myPkgs = [
+    # keep-sorted start
+    "loop"
+    "wait-for"
+    # keep-sorted end
+  ];
   perlPkgs = "vidir";
   nixPkgs = [
     # keep-sorted start
     "coreutils-full"
     "empty"
-    "loop"
     "parallel-full"
     "progress"
     "retry"

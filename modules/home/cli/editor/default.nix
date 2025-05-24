@@ -12,7 +12,6 @@
     # keep-sorted start
     "helix"
     "kakoune"
-    "ki"
     "nixvim"
     "vim"
     # keep-sorted end

@@ -1,9 +1,12 @@
 args:
 args.module (
   args
-  // {
-    progs.doom-emacs.extraPackages = epkgs: [
-      (epkgs.melpaBuild { inherit (args.pkgs._sources.emacs-zeal-at-point) pname version src; })
-    ];
-  }
+  // (
+    let
+      inherit (args) pkgs namespace;
+    in
+    {
+      progs.doom-emacs.extraPackages = _: [ pkgs.${namespace}.emacs-zeal-at-point ];
+    }
+  )
 )

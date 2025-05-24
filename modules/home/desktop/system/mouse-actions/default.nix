@@ -62,7 +62,7 @@ args.module (
                   pkgs.pulseaudio
                   pkgs.mouse-actions
                   pkgs.pamixer
-                  pkgs.volnoti
+                  pkgs.${namespace}.volnoti
                 ]
               }
               mouse-actions

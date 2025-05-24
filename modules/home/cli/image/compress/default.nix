@@ -1,9 +1,9 @@
 {
-  nixPkgs = [
+  nixPkgs = "image_optim";
+  myPkgs = [
     # keep-sorted start
-    "image_optim"
     "pio"
+    "sprite-dicing"
     # keep-sorted end
   ];
-  myPkgs = "sprite-dicing";
 }

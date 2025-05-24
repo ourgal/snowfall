@@ -25,12 +25,7 @@ python3Packages.buildPythonApplication {
     teletype
   ];
 
-  pythonRelaxDeps = [
-    "guessit"
-    "requests-cache"
-    "setuptools-scm"
-    "typing-extensions"
-  ];
+  pythonRelaxDeps = true;
 
   patches = [
     # https://github.com/jkwill87/mnamer/pull/291

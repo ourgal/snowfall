@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix/release-24.11";
+      url = "github:ezKEa/aagl-gtk-on-nix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
@@ -51,7 +51,7 @@
     catppuccin.url = "github:catppuccin/nix";
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
+      url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
@@ -171,6 +171,8 @@
           "openssl-1.1.1w" # for koreader
           "dotnet-sdk-6.0.428" # for sonarr
           "aspnetcore-runtime-6.0.36" # for sonarr
+          "beekeeper-studio-5.1.5"
+          "ventoy-1.1.05"
         ];
       };
 
@@ -206,7 +208,7 @@
         nix-colors.homeManagerModules.default
         wired.homeManagerModules.default
         nix-index-database.hmModules.nix-index
-        catppuccin.homeManagerModules.catppuccin
+        catppuccin.homeModules.catppuccin
         nixvim.homeManagerModules.nixvim
         nyaa.homeManagerModule
         nvchad4nix.homeManagerModule

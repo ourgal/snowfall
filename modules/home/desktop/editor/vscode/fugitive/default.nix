@@ -15,7 +15,7 @@ args.module (
       ];
     in
     {
-      progs.vscode.extensions = fugitive;
+      progs.vscode.profiles.default.extensions = fugitive;
     }
   )
 )

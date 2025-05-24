@@ -10,13 +10,13 @@ args.module (
         mkOpt'
         namespace
         ;
-      cfg = config.${namespace}.desktop.system.rofi;
+      cfg = lib.${namespace}.cfgHome config.${namespace} ./.;
     in
     {
       progs.rofi = {
         cycle = true;
-        terminal = "${pkgs.kitty}/bin/kitty";
-        theme = lib.mkIf (!config.catppuccin.enable) "spotlight";
+        terminal = lib.getExe pkgs.kitty;
+        theme = "spotlight";
         plugins = [ pkgs.rofi-emoji ];
         extraConfig = {
           modes = lib.strings.concatStringsSep "," cfg.modes;
@@ -35,6 +35,7 @@ args.module (
           name = "Rofi-screenshot";
           exec = "rofi-screenshot";
         };
+        catppuccin.rofi.enable = false;
       };
       enable = "power-menu";
       extraOpts = {

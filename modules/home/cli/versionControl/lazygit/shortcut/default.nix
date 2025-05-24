@@ -7,7 +7,7 @@
         bind \cg 'lazygit; commandline -f cancel'
       end
     '';
-    zsh.initExtra = ''
+    zsh.initContent = ''
       __lazygit () { lazygit; zle redisplay }
       zle -N __lazygit
       bindkey "^g" __lazygit

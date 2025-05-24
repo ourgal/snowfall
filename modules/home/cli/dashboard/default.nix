@@ -1,1 +1,1 @@
-{ nixPkgs = "wtf"; }
+{ nixPkgs = "wtfutil"; }

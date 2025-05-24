@@ -16,7 +16,6 @@ args.module (
         "blobdrop"
         "brightnessctl"
         "fuzzel"
-        "hardinfo"
         "hardinfo2"
         "libnotify"
         "polkit"

@@ -4,7 +4,6 @@
     "datalad"
     "git-annex"
     "git-annex-remote-rclone"
-    "git-annex-utils"
     "gitfs"
     # keep-sorted end
   ];

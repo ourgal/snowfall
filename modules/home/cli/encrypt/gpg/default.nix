@@ -10,7 +10,7 @@ args.module (
       servs.gpg-agent = {
         enableSshSupport = false;
         enableFishIntegration = true;
-        pinentryPackage = pkgs.pinentry-all;
+        pinentry.package = pkgs.pinentry-all;
       };
       progs.gpg = {
         settings = {

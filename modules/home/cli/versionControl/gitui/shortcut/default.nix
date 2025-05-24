@@ -7,7 +7,7 @@
         bind \cg 'gitui; commandline -f cancel'
       end
     '';
-    zsh.initExtra = ''
+    zsh.initContent = ''
       __lazygit () { gitui; zle redisplay }
       zle -N __lazygit
       bindkey "^g" __lazygit

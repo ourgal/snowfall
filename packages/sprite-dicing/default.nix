@@ -4,13 +4,15 @@
   pkg-config,
   _sources',
 }:
-
+let
+  source = _sources' ./.;
+in
 rustPlatform.buildRustPackage rec {
-  inherit (_sources' ./.) pname version src;
+  inherit (source) pname version src;
+
+  cargoLock = source.cargoLock."crates/Cargo.lock";
 
   sourceRoot = "${src.name}/crates";
-
-  cargoHash = "sha256-CMvLApS/Rd82+AtlcHWi/TqJzGBCiSxXzYaMsYO0RyY=";
 
   nativeBuildInputs = [ pkg-config ];
 

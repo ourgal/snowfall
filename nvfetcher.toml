@@ -222,6 +222,7 @@ fetch.github = "k4rthik/git-cal"
 [git-grab]
 src.github = "wezm/git-grab"
 fetch.github = "wezm/git-grab"
+cargo_locks = ["Cargo.lock"]
 
 [git-ink]
 src.github_tag = "davidosomething/git-ink"
@@ -999,6 +1000,7 @@ cargo_locks = ["Cargo.lock"]
 [sprite-dicing]
 src.github = "elringus/sprite-dicing"
 fetch.github = "elringus/sprite-dicing"
+cargo_locks = ["crates/Cargo.lock"]
 
 [servicer]
 src.github = "servicer-labs/servicer"
@@ -1433,3 +1435,13 @@ fetch.github = "c0stya/trre"
 [files-sort]
 src.git = "https://github.com/AfzGit/Files-Sort-py"
 fetch.github = "AfzGit/Files-Sort-py"
+
+[pio]
+src.github = "siiptuo/pio"
+fetch.github = "siiptuo/pio"
+cargo_locks = ["Cargo.lock"]
+
+[loop]
+src.git = "https://github.com/Miserlou/Loop"
+fetch.github = "Miserlou/Loop"
+cargo_locks = ["Cargo.lock"]

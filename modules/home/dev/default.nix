@@ -28,7 +28,7 @@
     "ls-lint"
     "process-compose"
     "reuse"
-    "treefmt2"
+    "treefmt"
     "tup"
     "universal-ctags"
     # keep-sorted end

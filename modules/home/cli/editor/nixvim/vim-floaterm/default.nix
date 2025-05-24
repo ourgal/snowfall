@@ -9,10 +9,12 @@ args.module (
       progs.nixvim = {
         plugins.floaterm = {
           enable = true;
-          opener = "edit";
-          width = 0.99;
-          height = 0.999;
-          shell = "$SHELL";
+          settings = {
+            width = 0.99;
+            shell = "$SHELL";
+            opener = "edit";
+            height = 0.999;
+          };
           package = pkgs.${namespace}.vim-floaterm;
         };
         keymaps = [

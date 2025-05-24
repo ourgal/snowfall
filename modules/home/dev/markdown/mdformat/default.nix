@@ -9,7 +9,6 @@ args.module (
       value = {
         home.packages = [
           (pkgs.mdformat.withPlugins (ps: [
-            ps.mdformat-toc
             ps.mdformat-tables
             ps.mdformat-footnote
             ps.mdformat-frontmatter

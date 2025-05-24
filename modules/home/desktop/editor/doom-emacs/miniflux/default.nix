@@ -1,12 +1,12 @@
 args:
 args.module (
   args
-  // {
-    progs.doom-emacs.extraPackages = epkgs: [
-      (epkgs.melpaBuild {
-        inherit (args.pkgs._sources.emacs-miniflux) pname version src;
-        packageRequires = [ epkgs.request ];
-      })
-    ];
-  }
+  // (
+    let
+      inherit (args) pkgs namespace;
+    in
+    {
+      progs.doom-emacs.extraPackages = _: [ pkgs.${namespace}.emacs-miniflux ];
+    }
+  )
 )

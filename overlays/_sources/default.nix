@@ -17,7 +17,7 @@ let
       if lib.strings.hasPrefix "emacs-" v.pname then
         {
           pname = lib.strings.removePrefix "emacs-" v.pname;
-          version = v.date;
+          version = (builtins.replaceStrings [ "-" ] [ "" ] v.date);
         }
       else if hasAttr "date" v then
         { version = "unstable-${v.date}"; }

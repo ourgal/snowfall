@@ -7,7 +7,7 @@
     fish.interactiveShellInit = ''
       pay-respects fish --alias fxck | source
     '';
-    zsh.initExtra = ''
+    zsh.initContent = ''
       eval "$(pay-respects zsh --alias fxck)"
     '';
   };
