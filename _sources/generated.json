@@ -587,11 +587,11 @@
     "cdo": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./cdo-2651319c0ed961a8e96c6ade9c29acb26f1264de/Cargo.lock",
+                "./cdo-8c73942e6d22f7c60a8c4e54b1cdf5153175fb52/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-05-17",
+        "date": "2025-05-24",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -603,12 +603,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "2651319c0ed961a8e96c6ade9c29acb26f1264de",
-            "sha256": "sha256-K3qmf/rMIpnPjNShDv0p2o35sdgoNsPV/MGmWbrZysk=",
+            "rev": "8c73942e6d22f7c60a8c4e54b1cdf5153175fb52",
+            "sha256": "sha256-5aXp5fj8HG6Rn5Tr5jfbCUfVtLovRnSYrcedqOSqb48=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2651319c0ed961a8e96c6ade9c29acb26f1264de"
+        "version": "8c73942e6d22f7c60a8c4e54b1cdf5153175fb52"
     },
     "chezmoi-vim": {
         "cargoLocks": null,
@@ -1434,11 +1434,11 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:ee3cc4d2d888bc764654c85a4b362d0a5d2e4d57d91cb88c7bd3cd8f2fb6dc84",
+            "imageDigest": "sha256:1cc218d2ca4b07e3ec3bdfcb1866c135a8e5f4ec851dd9d011d405cb42f52ad7",
             "imageName": "linuxserver/pairdrop",
             "imageTag": "1.11.2",
             "os": null,
-            "sha256": "sha256-n43WgakVJkuSIJte+dS0DQBxjMyV3+neBe1AUrqeqMk=",
+            "sha256": "sha256-EjqI4K8chxrInViSIlBAGSPvxHU2Q7Dh7/itebojHi4=",
             "tlsVerify": null
         },
         "version": "1.11.2"
@@ -1605,7 +1605,7 @@
     },
     "douyin-downloader": {
         "cargoLocks": null,
-        "date": "2025-05-20",
+        "date": "2025-05-24",
         "extract": null,
         "name": "douyin-downloader",
         "passthru": null,
@@ -1617,12 +1617,12 @@
             "name": null,
             "owner": "jiji262",
             "repo": "douyin-downloader",
-            "rev": "6fde9538f60bbc5b7fbb7ea10f2ad9784469e069",
-            "sha256": "sha256-DaMmGDPmKlsS0/TwSTYCsGTo44Zyj52KG1RiLfRcl1o=",
+            "rev": "3641837532352e7a944aba9f5fd666fe8f50e778",
+            "sha256": "sha256-E9U2e05G+Qz1g/i6OU1hJpC3FoUPZMTs+LvPnA4EElU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6fde9538f60bbc5b7fbb7ea10f2ad9784469e069"
+        "version": "3641837532352e7a944aba9f5fd666fe8f50e778"
     },
     "downdoc": {
         "cargoLocks": null,
@@ -2522,12 +2522,12 @@
             "name": null,
             "owner": "tfkhdyt",
             "repo": "geminicommit",
-            "rev": "v0.3.2",
-            "sha256": "sha256-GOVLuLu7o66BvyGvja3dMfdgS/N83yFhPWsptzgzhws=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-hJevJkniyICUUr1UyS0A5SKuuYRU0dGHMWzF99Yr2Eo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.2"
+        "version": "v0.4.0"
     },
     "geoip2fast": {
         "cargoLocks": null,
@@ -2707,7 +2707,12 @@
         "version": "v0.9.1"
     },
     "git-grab": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./git-grab-3.0.0/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "git-grab",
@@ -3642,6 +3647,32 @@
         },
         "version": "v2.5.0"
     },
+    "loop": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./loop-209927c4bd02cc801c336353d8fcea32dfad1fd6/Cargo.lock",
+                {}
+            ]
+        },
+        "date": "2020-11-17",
+        "extract": null,
+        "name": "loop",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Miserlou",
+            "repo": "Loop",
+            "rev": "209927c4bd02cc801c336353d8fcea32dfad1fd6",
+            "sha256": "sha256-0nUZP7PRhsw+BOnDF3E7Mb8qngUVHjFdh8PFgJbDFy0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "209927c4bd02cc801c336353d8fcea32dfad1fd6"
+    },
     "lssh": {
         "cargoLocks": null,
         "date": null,
@@ -4174,11 +4205,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-X+XMQxcGuqxOfw6ab62Fd0Wd7ir1NwcvEjRn3ekDlLg=",
+            "sha256": "sha256-USEHYtFuvGtb6de9BwcEeSJ3zhafNCz7hT7g5mYgaGg=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v5.8.4/Numara-5.8.4-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v6.0.0/Numara-6.0.0-x86_64.AppImage"
         },
-        "version": "5.8.4"
+        "version": "6.0.0"
     },
     "org-export": {
         "cargoLocks": null,
@@ -4331,6 +4362,32 @@
             "type": "github"
         },
         "version": "fcb9d7eb7dfcb62d0c93e32dd462be1728c3096e"
+    },
+    "pio": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./pio-0.4.0/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "pio",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "siiptuo",
+            "repo": "pio",
+            "rev": "0.4.0",
+            "sha256": "sha256-iR6G+G1UOT1ThLI3yhz3na1HmN6z2qUiI6NSKT0krtY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.4.0"
     },
     "play": {
         "cargoLocks": null,
@@ -5389,7 +5446,12 @@
         "version": "1.1.3"
     },
     "sprite-dicing": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "crates/Cargo.lock": [
+                "./sprite-dicing-v2.1.0/crates/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "sprite-dicing",
@@ -6219,7 +6281,7 @@
     },
     "tmux2k": {
         "cargoLocks": null,
-        "date": "2025-05-18",
+        "date": "2025-05-24",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -6231,12 +6293,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "8768fe1e5ca6be2401f1ca876f43456bb2abfd38",
-            "sha256": "sha256-2gJgZcFY69Bxskxs/mBjR6tif9JU7v+NugmWku3tK9U=",
+            "rev": "337fc033d8d8705ccc25a823ef8f7bf576608019",
+            "sha256": "sha256-j1GIgsAtrxFW4mI/8gY0kIVaAR4CrepgQmEpO0fgBgk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8768fe1e5ca6be2401f1ca876f43456bb2abfd38"
+        "version": "337fc033d8d8705ccc25a823ef8f7bf576608019"
     },
     "to-fish": {
         "cargoLocks": null,
@@ -6584,9 +6646,9 @@
             "name": null,
             "sha256": "sha256-MOGovqFWEHgd/J1tB92F7OjgqbZHFW4uNH9HKn/Cb7o=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505232213/geoip.dat"
         },
-        "version": "202505222213"
+        "version": "202505232213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6597,11 +6659,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ovQ7QdbT/GBcY25+FNqUsGWh1We2aIeFiFnzxrbiKDk=",
+            "sha256": "sha256-Z8cCj/mnfSrysM8eghBEMiLdf9M6CjCFJMLO04K9faQ=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505222213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505232213/geosite.dat"
         },
-        "version": "202505222213"
+        "version": "202505232213"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -6668,7 +6730,7 @@
     },
     "vim-floaterm": {
         "cargoLocks": null,
-        "date": "2025-05-14",
+        "date": "2025-05-24",
         "extract": null,
         "name": "vim-floaterm",
         "passthru": null,
@@ -6680,12 +6742,12 @@
             "name": null,
             "owner": "voldikss",
             "repo": "vim-floaterm",
-            "rev": "3bc4a5002906f500dea0a69407754109d4bd4950",
-            "sha256": "sha256-YZ46w015LVTdNnyALtM5dZU9d8c349spD+MOPTsX6Rs=",
+            "rev": "b02d1f4a87ad6f5b300d225e5ac62bde9d86086b",
+            "sha256": "sha256-vnaNHfvUVh2KlRnXkpOA8i7TPdbJVefA3xUiHHtbaPE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3bc4a5002906f500dea0a69407754109d4bd4950"
+        "version": "b02d1f4a87ad6f5b300d225e5ac62bde9d86086b"
     },
     "vim-ghost": {
         "cargoLocks": null,
