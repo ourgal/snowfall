@@ -38,6 +38,7 @@
     "whois"
     "wirelesstools"
     "wuzz"
+    "xurls"
     # keep-sorted end
   ];
   enable = "bottom";
