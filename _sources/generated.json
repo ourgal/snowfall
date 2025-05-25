@@ -3238,12 +3238,12 @@
             "name": null,
             "owner": "pamburus",
             "repo": "hl",
-            "rev": "v0.31.1",
-            "sha256": "sha256-rKvcJ7mPCuX+QGdDDeYIk+PtojFgIde5IA7mORmDekw=",
+            "rev": "v0.31.2",
+            "sha256": "sha256-SYPzYdbrXltBk/A5T/yZo3IJXdowsHk38yL86BreF0k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.31.1"
+        "version": "v0.31.2"
     },
     "hledger-fmt": {
         "cargoLocks": {
@@ -3646,32 +3646,6 @@
             "type": "github"
         },
         "version": "v2.5.0"
-    },
-    "loop": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./loop-209927c4bd02cc801c336353d8fcea32dfad1fd6/Cargo.lock",
-                {}
-            ]
-        },
-        "date": "2020-11-17",
-        "extract": null,
-        "name": "loop",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "Miserlou",
-            "repo": "Loop",
-            "rev": "209927c4bd02cc801c336353d8fcea32dfad1fd6",
-            "sha256": "sha256-0nUZP7PRhsw+BOnDF3E7Mb8qngUVHjFdh8PFgJbDFy0=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "209927c4bd02cc801c336353d8fcea32dfad1fd6"
     },
     "lssh": {
         "cargoLocks": null,
@@ -4174,6 +4148,32 @@
             "type": "github"
         },
         "version": "0200e8c3affced235d8f14fad8b93bae687ee597"
+    },
+    "nix-editor": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./nix-editor-0.3.0/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "nix-editor",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "snowfallorg",
+            "repo": "nix-editor",
+            "rev": "0.3.0",
+            "sha256": "sha256-U0xGyRFvSxWrDdwWwauZ2U8J8jJjssBOefhWOSavo7A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.3.0"
     },
     "nrf-udev": {
         "cargoLocks": null,
@@ -6646,9 +6646,9 @@
             "name": null,
             "sha256": "sha256-MOGovqFWEHgd/J1tB92F7OjgqbZHFW4uNH9HKn/Cb7o=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505232213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505242212/geoip.dat"
         },
-        "version": "202505232213"
+        "version": "202505242212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6659,11 +6659,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Z8cCj/mnfSrysM8eghBEMiLdf9M6CjCFJMLO04K9faQ=",
+            "sha256": "sha256-vCWNxV/lEDpJ8g+2sVmdmgZv7ZFBdwOHCDN/WRP/OiM=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505232213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505242212/geosite.dat"
         },
-        "version": "202505232213"
+        "version": "202505242212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
