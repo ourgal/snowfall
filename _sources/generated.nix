@@ -64,6 +64,17 @@
       sha256 = "sha256-wYsPutdO9ZkXQu4mrFV56mrJTeSFF/3oRaHO0ia7DHk=";
     };
   };
+  aicommit2 = {
+    pname = "aicommit2";
+    version = "v2.2.16";
+    src = fetchFromGitHub {
+      owner = "tak-bro";
+      repo = "aicommit2";
+      rev = "v2.2.16";
+      fetchSubmodules = false;
+      sha256 = "sha256-5FHzoMhr9fdTSrPbcQRfkU7Y5Z+D0PyfxV+t2oC2B68=";
+    };
+  };
   akuse = {
     pname = "akuse";
     version = "1.10.1";
@@ -1846,13 +1857,13 @@
   };
   html-to-markdown = {
     pname = "html-to-markdown";
-    version = "v2.3.2";
+    version = "v2.3.3";
     src = fetchFromGitHub {
       owner = "JohannesKaufmann";
       repo = "html-to-markdown";
-      rev = "v2.3.2";
+      rev = "v2.3.3";
       fetchSubmodules = false;
-      sha256 = "sha256-3Ww28RXFP9Su2+MJYufCCAjseWaF2JgEoigwY93KcqM=";
+      sha256 = "sha256-B+ZJk86VJUscaf91tv5uuTeL6u9HN6cS+5+4TOiNC+E=";
     };
   };
   hypergrep = {
