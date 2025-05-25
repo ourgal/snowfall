@@ -85,7 +85,7 @@ VALUES
 'https://github.com/snowfallorg/nix-editor',2,'05/17/2025',null,2,1),
 ('jumper',
 'Accurate and fast files/directories jumper',
-'https://github.com/homerours/jumper',3,'05/17/2025',null,1,1),
+'https://github.com/homerours/jumper',3,'05/17/2025',null,2,1),
 ('schemat',
 'Code formatter for Scheme, Lisp, and any S-expressions',
 'https://github.com/raviqqe/schemat',4,'05/17/2025',null,1,1),

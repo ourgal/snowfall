@@ -1,4 +1,5 @@
 {
+  myPkgs = "jumper";
   nixPkgs = "cdwe";
   enable = [
     # keep-sorted start

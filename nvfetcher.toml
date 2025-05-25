@@ -1449,3 +1449,7 @@ cargo_locks = ["Cargo.lock"]
 [duckdns]
 src.github = "caddy-dns/duckdns"
 fetch.github = "caddy-dns/duckdns"
+
+[jumper]
+src.github = "homerours/jumper"
+fetch.github = "homerours/jumper"
