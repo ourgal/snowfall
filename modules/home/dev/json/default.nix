@@ -23,6 +23,7 @@
     "jtbl"
     "jtc"
     "miller"
+    "otree"
     "remarshal"
     "rq"
     "spruce"
@@ -43,7 +44,6 @@
     "bafi"
     "config-file-validator"
     "convfmt"
-    "otree"
     "vscode-json-language-server"
     # keep-sorted end
   ];

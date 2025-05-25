@@ -342,11 +342,6 @@ fetch.github = "fzakaria/nix-auto-follow"
 src.github = "NordicSemiconductor/nrf-udev"
 fetch.github = "NordicSemiconductor/nrf-udev"
 
-[otree]
-src.github = "fioncat/otree"
-fetch.github = "fioncat/otree"
-cargo_locks = ["Cargo.lock"]
-
 [pik]
 src.git = "https://github.com/immanelg/pik"
 fetch.github = "immanelg/pik"

@@ -115,7 +115,7 @@ VALUES
 'https://voicevox.hiroshiba.jp/',10,'05/17/2025',null,2,1),
 ('otree',
 'A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget.',
-'https://github.com/fioncat/otree',4,'05/17/2025',null,1,1),
+'https://github.com/fioncat/otree',4,'05/17/2025',null,2,1),
 ('azote',
 'Wallpaper manager for wlroots-based compositors and some other WMs',
 'https://github.com/nwg-piotr/azote',5,'05/17/2025',null,1,1),

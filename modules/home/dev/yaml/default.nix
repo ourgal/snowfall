@@ -4,7 +4,6 @@
     "bafi"
     "config-file-validator"
     "convfmt"
-    "otree"
     # keep-sorted end
   ];
   nixPkgs = [
@@ -12,6 +11,7 @@
     "dasel"
     "dyff"
     "faq"
+    "otree"
     "remarshal"
     "spruce"
     "yamale"
