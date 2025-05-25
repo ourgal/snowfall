@@ -82,7 +82,7 @@ VALUES
 'https://github.com/squell/id3',1,'05/17/2025',null,2,1),
 ('nix-editor',
 'A simple rust program to edit NixOS configuration files with just a command',
-'https://github.com/snowfallorg/nix-editor',2,'05/17/2025',null,1,1),
+'https://github.com/snowfallorg/nix-editor',2,'05/17/2025',null,2,1),
 ('jumper',
 'Accurate and fast files/directories jumper',
 'https://github.com/homerours/jumper',3,'05/17/2025',null,1,1),

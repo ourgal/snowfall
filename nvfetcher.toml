@@ -1440,3 +1440,8 @@ fetch.github = "AfzGit/Files-Sort-py"
 src.github = "siiptuo/pio"
 fetch.github = "siiptuo/pio"
 cargo_locks = ["Cargo.lock"]
+
+[nix-editor]
+src.github_tag = "snowfallorg/nix-editor"
+fetch.github = "snowfallorg/nix-editor"
+cargo_locks = ["Cargo.lock"]

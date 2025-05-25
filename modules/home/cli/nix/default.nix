@@ -32,6 +32,7 @@
   myPkgs = [
     # keep-sorted start
     "nix-auto-follow"
+    "nix-editor"
     "nix-repl"
     "nix-searchc"
     # keep-sorted end
