@@ -1007,10 +1007,6 @@ src.git = "https://github.com/ajmwagar/stego"
 fetch.github = "ajmwagar/stego"
 cargo_locks = ["Cargo.lock"]
 
-[ahoy]
-src.github = "ahoy-cli/ahoy"
-fetch.github = "ahoy-cli/ahoy"
-
 [updo]
 src.github = "Owloops/updo"
 fetch.github = "Owloops/updo"

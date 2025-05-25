@@ -1,6 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
+    "ahoy"
     "await"
     "gnumake"
     "mask"
@@ -11,7 +12,6 @@
   ];
   myPkgs = [
     # keep-sorted start
-    "ahoy"
     "cdo"
     "cmdx"
     "machma"
