@@ -111,9 +111,9 @@
 
   nixConfig = {
     extra-substituters = [
-      "http://harmonia.zxc.cn?priority=102"
-      "https://mirror.nju.edu.cn/nix-channels/store?priority=101"
-      "https://nix-community.cachix.org?priority=99"
+      "http://harmonia.zxc.cn?priority=9"
+      "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
+      "https://nix-community.cachix.org?priority=100"
     ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="

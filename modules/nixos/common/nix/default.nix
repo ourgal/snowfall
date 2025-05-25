@@ -16,7 +16,12 @@ let
   value = {
     nix =
       let
-        mirrors = [ "https://cache.nixos.org?priority=100" ];
+        mirrors = [
+          "http://harmonia.zxc.cn?priority=9"
+          "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
+          "https://cache.nixos.org"
+          "https://nix-community.cachix.org?priority=100"
+        ];
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
