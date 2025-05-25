@@ -37,4 +37,5 @@
     # keep-sorted end
   ];
   xorgPkgs = "xkill";
+  enable = "i3lock-color";
 }
