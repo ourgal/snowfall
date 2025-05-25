@@ -79,7 +79,7 @@ packages (name,description,url,categories,added_date,finished_date,waiting_statu
 VALUES
 ('id3',
 'ID3 mass tagger',
-'https://github.com/squell/id3',1,'05/17/2025',null,1,1),
+'https://github.com/squell/id3',1,'05/17/2025',null,2,1),
 ('nix-editor',
 'A simple rust program to edit NixOS configuration files with just a command',
 'https://github.com/snowfallorg/nix-editor',2,'05/17/2025',null,1,1),
