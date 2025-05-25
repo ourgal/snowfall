@@ -1453,3 +1453,7 @@ fetch.github = "caddy-dns/duckdns"
 [jumper]
 src.github = "homerours/jumper"
 fetch.github = "homerours/jumper"
+
+[proxytunnel]
+src.github = "proxytunnel/proxytunnel"
+fetch.github = "proxytunnel/proxytunnel"
