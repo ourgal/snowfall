@@ -97,7 +97,7 @@ let
     inherit (_sources.pydantic-core) pname version src;
     pyproject = true;
 
-    cargoDeps = rustPlatform.fetchCargoTarball {
+    cargoDeps = rustPlatform.fetchCargoVendor {
       inherit src;
       name = "${pname}-${version}";
       hash = "sha256-qTQ23hFhIYQSioz791kDG2fdIMlCsIvm29TB0KqocGY=";
