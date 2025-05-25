@@ -268,7 +268,7 @@ VALUES
 'https://github.com/glennj/exercism-cli-fish-wrapper',3,'05/17/2025',null,1,1),
 ('posting',
 'The API client that lives in your terminal.',
-'https://posting.sh/',4,'05/17/2025',null,1,1),
+'https://posting.sh/',4,'05/17/2025',null,2,1),
 ('clashtui',
 'Mihomo (Clash.Meta) TUI Client',
 'https://github.com/JohanChane/clashtui',3,'05/17/2025',null,1,1),

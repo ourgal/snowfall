@@ -1,5 +1,4 @@
 {
-  myPkgs = "posting";
   nixPkgs = [
     # keep-sorted start
     "atac"
@@ -8,6 +7,7 @@
     "htmlq"
     "httpie"
     "minify"
+    "posting"
     "restish"
     "slumber"
     "trurl"
