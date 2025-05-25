@@ -937,6 +937,17 @@
       };
     };
   };
+  duckdns = {
+    pname = "duckdns";
+    version = "v0.5.0";
+    src = fetchFromGitHub {
+      owner = "caddy-dns";
+      repo = "duckdns";
+      rev = "v0.5.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-re0xfdLXesXi7oBTmxLytuTKU8VAqDU+KoVdoahcIaU=";
+    };
+  };
   duplicate-image-finder = {
     pname = "duplicate-image-finder";
     version = "v4.2.1";
