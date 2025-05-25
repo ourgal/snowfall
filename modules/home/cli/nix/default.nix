@@ -16,6 +16,7 @@
     "nix-tree"
     "nix-update"
     "nixos-anywhere"
+    "nixpkgs-track"
     "nurl"
     "nvd"
     "nvfetcher"

@@ -424,7 +424,7 @@ VALUES
 'https://github.com/vaaandark/dioxionary',7,'05/18/2025',null,1,1),
 ('nixpkgs-track',
 '📦 Track where Nixpkgs pull requests have reached.',
-'https://github.com/uncenter/nixpkgs-track',4,'05/18/2025',null,1,1),
+'https://github.com/uncenter/nixpkgs-track',4,'05/18/2025',null,2,1),
 ('roomarranger',
 'Room Arranger is a 3D room / apartment / floor planner with a simple user interface.',
 'https://www.roomarranger.com/',4,'05/18/2025',null,1,1),
