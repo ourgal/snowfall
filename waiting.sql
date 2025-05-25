@@ -148,7 +148,7 @@ VALUES
 'https://github.com/deskflow/deskflow',5,'05/17/2025',null,1,1),
 ('lla',
 'blazing fast `ls` replacement with superpowers',
-'https://github.com/triyanox/lla',3,'05/17/2025',null,1,1),
+'https://github.com/triyanox/lla',3,'05/17/2025',null,2,1),
 ('ahoy',
 'Create self-documenting cli programs from YAML files. Easily wrap bash, grunt, npm, docker, (anything) to standardize your processes and make the lives of the people working on your project better.',
 'https://github.com/ahoy-cli/ahoy',3,'05/17/2025',null,1,1),
