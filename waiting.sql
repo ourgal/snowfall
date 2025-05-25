@@ -112,7 +112,7 @@ VALUES
 'https://github.com/SergioRibera/simplemoji',3,'05/17/2025',null,1,1),
 ('voicevox',
 '無料で使える中品質なテキスト読み上げ・歌声合成ソフトウェア',
-'https://voicevox.hiroshiba.jp/',10,'05/17/2025',null,1,1),
+'https://voicevox.hiroshiba.jp/',10,'05/17/2025',null,2,1),
 ('otree',
 'A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget.',
 'https://github.com/fioncat/otree',4,'05/17/2025',null,1,1),

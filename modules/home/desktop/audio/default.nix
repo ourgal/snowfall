@@ -1,1 +1,4 @@
-{ enable = "effect"; }
+{
+  nixPkgs = "voicevox";
+  enable = "effect";
+}
