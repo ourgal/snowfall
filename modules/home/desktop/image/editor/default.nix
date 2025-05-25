@@ -1,7 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "gimp"
+    "gimp3"
     "kodelife"
     "photoflare"
     # keep-sorted end
