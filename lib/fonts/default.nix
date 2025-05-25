@@ -71,7 +71,10 @@ in
 
       # cjk monospace
       maple = {
-        pkg = "maple-mono-SC-NF";
+        pkg = [
+          "maple-mono"
+          "NF-CN"
+        ];
         name = "Maple Mono SC NF";
       };
 
@@ -87,7 +90,10 @@ in
         name = "Twemoji";
       };
       nerdfonts = {
-        pkg = "nerdfonts";
+        pkg = [
+          "nerd-fonts"
+          "symbols-only"
+        ];
         name = "Symbols Nerd Font";
       };
       fontAwesome = {
@@ -108,7 +114,12 @@ in
                 let
                   res =
                     if (name == "pkg") then
-                      [ value ]
+                      if builtins.isString value then
+                        [ value ]
+                      else if builtins.isList value then
+                        [ (lib.attrsets.getAttrFromPath value pkgs) ]
+                      else
+                        builtins.throw "unknow font pkg name type"
                     else if (isAttrs value) then
                       go value
                     else
@@ -122,7 +133,13 @@ in
               throw "not supported type";
           pkgList = lib.pipe settings [
             (go)
-            (map (x: if (pkgs.${namespace} ? "${x}") then pkgs.${namespace}."${x}" else pkgs."${x}"))
+            (map (
+              x:
+              if builtins.isString x then
+                if (pkgs.${namespace} ? "${x}") then pkgs.${namespace}."${x}" else pkgs."${x}"
+              else
+                x
+            ))
           ];
         in
         pkgList;
