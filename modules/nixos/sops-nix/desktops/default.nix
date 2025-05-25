@@ -44,6 +44,16 @@ let
           inherit owner mode;
           path = "/home/${owner}/.config/geminicommit/config.toml";
         };
+        aicommit2 = {
+          content = toTOML {
+            GEMINI = {
+              key = config.sops.placeholder.gemini;
+              model = "gemini-2.0-flash";
+            };
+          };
+          inherit owner mode;
+          path = "/home/${owner}/.aicommit2";
+        };
         aichat = {
           content = builtins.toJSON {
             model = "deno:gemini-2.0-flash";

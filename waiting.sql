@@ -100,7 +100,7 @@ VALUES
 'https://github.com/varbhat/cvtek',7,'05/17/2025',null,1,1),
 ('aicommit2',
 'A Reactive CLI that generates git commit messages with Ollama, ChatGPT, Gemini, Claude, Mistral and other AI',
-'https://github.com/tak-bro/aicommit2',6,'05/17/2025',null,1,1),
+'https://github.com/tak-bro/aicommit2',6,'05/17/2025',null,2,1),
 ('AngryOxide',
 '802.11 Attack Tool',
 'https://github.com/Ragnt/AngryOxide',8,'05/17/2025',null,1,1),

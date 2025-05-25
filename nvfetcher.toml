@@ -1457,3 +1457,7 @@ fetch.github = "homerours/jumper"
 [proxytunnel]
 src.github = "proxytunnel/proxytunnel"
 fetch.github = "proxytunnel/proxytunnel"
+
+[aicommit2]
+src.github = "tak-bro/aicommit2"
+fetch.github = "tak-bro/aicommit2"

@@ -1,4 +1,5 @@
 {
+  myPkgs = "aicommit2";
   nixPkgs = [
     # keep-sorted start
     "gollama"
