@@ -1926,6 +1926,17 @@
       sha256 = "sha256-StF0TKXTgtglFDbNTAU1c7Vw+6m70Mz2RvFon3difsk=";
     };
   };
+  jumper = {
+    pname = "jumper";
+    version = "v1.0";
+    src = fetchFromGitHub {
+      owner = "homerours";
+      repo = "jumper";
+      rev = "v1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-GxZmdmyVAOCa2Cdj5bRYalwN3cq+NDY10eu9Pu2/2+c=";
+    };
+  };
   kbgrep = {
     pname = "kbgrep";
     version = "v0.2.3";
