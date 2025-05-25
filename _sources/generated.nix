@@ -2556,6 +2556,17 @@
       sha256 = "sha256-6nclWKouYp6ENGK23DQ6Wq9gpIQQjXHyLSOxyKV1i8A=";
     };
   };
+  proxytunnel = {
+    pname = "proxytunnel";
+    version = "v1.12.3";
+    src = fetchFromGitHub {
+      owner = "proxytunnel";
+      repo = "proxytunnel";
+      rev = "v1.12.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-+IRbL3VcnW+uYLIkwvaFJ8zBYbQAkqmzVluDsCrdURk=";
+    };
+  };
   pryrite = {
     pname = "pryrite";
     version = "0.10.20";
