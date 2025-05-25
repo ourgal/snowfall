@@ -18,10 +18,7 @@ args.module (
       nixPkgs = "eza";
       value = {
         ${namespace}.cli.utils.alias.aliae.alias = {
-          ls = "eza ${extOpts}";
-          la = "eza -a ${extOpts}";
           ll = "eza -l ${extOpts}";
-          lla = "eza -al ${extOpts}";
           lt = "eza --tree ${extOpts}";
         };
       };
