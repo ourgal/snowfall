@@ -35,6 +35,12 @@ args.module (
           hostname = ip.brix;
           port = 23231;
         };
+        github = {
+          host = "github.com";
+          hostname = "ssh.github.com";
+          port = 443;
+          user = "git";
+        };
       } // mkSshConfig;
     }
   )
