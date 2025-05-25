@@ -19,6 +19,7 @@ let
     mkFireholRule
     domains
     mkCaddyProxy
+    sources
     ;
   cfg = cfgNixos config.${namespace} ./.;
   inherit (config.${namespace}) docker;
@@ -77,8 +78,8 @@ let
       xcaddy
     else
       pkgs.caddy.withPlugins {
-        plugins = [ "github.com/caddy-dns/duckdns@v0.4.0" ];
-        hash = "sha256-K2amMwRcC5ENo/s65khiGYkkpK9asHMC3CTgJ/dWGkg=";
+        plugins = [ "github.com/caddy-dns/duckdns@${sources.duckdns.version}" ];
+        hash = "sha256-ZdvxtHiJAyKIOVUAFns7WsfQddfO/fD1euyGFaBp9W8=";
       };
   value = {
     services.caddy = enabled // {

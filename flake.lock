@@ -60,21 +60,6 @@
         "type": "github"
       }
     },
-    "caddy-nix": {
-      "locked": {
-        "lastModified": 1748037045,
-        "narHash": "sha256-EaXolTeBp2xVXFsivNatx82+VkIVbxIsMzIcc4p+N6c=",
-        "owner": "vincentbernat",
-        "repo": "caddy-nix",
-        "rev": "b65dce2399a40a4213508e5c1bfa81cb7d0956c5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vincentbernat",
-        "repo": "caddy-nix",
-        "type": "github"
-      }
-    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -1703,7 +1688,6 @@
       "inputs": {
         "aagl": "aagl",
         "arion": "arion",
-        "caddy-nix": "caddy-nix",
         "catppuccin": "catppuccin",
         "deploy-rs": "deploy-rs",
         "disko": "disko",

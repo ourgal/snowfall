@@ -87,10 +87,6 @@
       url = "github:snowfallorg/drift";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    caddy-nix = {
-      url = "github:vincentbernat/caddy-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     lem = {
       url = "github:lem-project/lem";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -186,7 +182,6 @@
         nvfetcher.overlays.default
         nix-vscode-extensions.overlays.default
         pog.overlays.${system}.default
-        caddy-nix.overlays.default
         nur.overlays.default
         # telega-overlay.overlay
         nix-monitored.overlays.default

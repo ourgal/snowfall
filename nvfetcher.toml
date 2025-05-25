@@ -1445,3 +1445,7 @@ cargo_locks = ["Cargo.lock"]
 src.github_tag = "snowfallorg/nix-editor"
 fetch.github = "snowfallorg/nix-editor"
 cargo_locks = ["Cargo.lock"]
+
+[duckdns]
+src.github = "caddy-dns/duckdns"
+fetch.github = "caddy-dns/duckdns"
