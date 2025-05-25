@@ -160,7 +160,7 @@ VALUES
 'https://github.com/ShadowBlip/InputPlumber',5,'05/17/2025',null,1,1),
 ('mago',
 'Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code.',
-'https://github.com/carthage-software/mago',4,'05/17/2025',null,1,1),
+'https://github.com/carthage-software/mago',4,'05/17/2025',null,2,1),
 ('ffpb',
 'A progress bar for ffmpeg. Yay !',
 'https://github.com/althonos/ffpb',3,'05/17/2025',null,1,1),
