@@ -1,7 +1,7 @@
 {
   lib,
   mpvScripts,
-  nodePackages,
+  # nodePackages,
   xidel,
   jq,
   makeWrapper,
@@ -29,7 +29,7 @@ mpvScripts.buildLua {
   postInstall = ''
     wrapProgram $out/share/mpv/scripts/webtorrent-wrap.sh --prefix PATH:${
       lib.makeBinPath [
-        nodePackages.webtorrent-cli
+        # nodePackages.webtorrent-cli
         xidel
         jq
       ]

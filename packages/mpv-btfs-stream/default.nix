@@ -2,7 +2,6 @@
   lib,
   mpvScripts,
   btfs,
-  nodePackages,
   makeWrapper,
   fuse,
   _sources',
@@ -24,8 +23,7 @@ mpvScripts.buildLua {
     patchShebangs .
     substituteInPlace main.lua \
       --replace-fail 'mp.get_script_directory()' "\"$out/share/mpv/scripts\"" \
-      --replace-fail '"btfs"' "\"${btfs}/bin/btfs\"" \
-      --replace-fail '"webtorrent"' "\"${nodePackages.webtorrent-cli}/bin/webtorrent\""
+      --replace-fail '"btfs"' "\"${btfs}/bin/btfs\""
   '';
 
   postInstall = ''
