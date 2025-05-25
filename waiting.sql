@@ -130,7 +130,7 @@ VALUES
 'https://github.com/Duckonaut/split-monitor-workspaces',5,'05/17/2025',null,1,1),
 ('sss',
 'SSS (Super ScreenShot) is a WIP: CLI/Lib to take amazing screenshot of code or screen',
-'https://github.com/SergioRibera/sss',13,'05/17/2025',null,1,1),
+'https://github.com/SergioRibera/sss',13,'05/17/2025',null,2,1),
 ('Diagon',
 'Interactive ASCII art diagram generators. 🌟',
 'https://github.com/ArthurSonzogni/Diagon',3,'05/17/2025',null,1,1),
