@@ -178,7 +178,7 @@ VALUES
 'https://github.com/fogleman/primitive',13,'05/17/2025',null,2,1),
 ('textidote',
 'Spelling, grammar and style checking on LaTeX documents',
-'https://github.com/sylvainhalle/textidote',12,'05/17/2025',null,1,1),
+'https://github.com/sylvainhalle/textidote',12,'05/17/2025',null,2,1),
 ('urlfinder',
 'A high-speed tool for passively gathering URLs, optimized for efficient and comprehensive web asset discovery without active scanning.',
 'https://github.com/projectdiscovery/urlfinder',8,'05/17/2025',null,1,1),
