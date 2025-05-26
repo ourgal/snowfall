@@ -5,6 +5,7 @@
     "image_optim"
     "imagemagick"
     "imgp"
+    "primitive"
     # keep-sorted end
   ];
 }

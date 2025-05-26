@@ -175,7 +175,7 @@ VALUES
 'https://github.com/hashicorp/copywrite',4,'05/17/2025',null,2,1),
 ('primitive',
 'Reproducing images with geometric primitives.',
-'https://github.com/fogleman/primitive',13,'05/17/2025',null,1,1),
+'https://github.com/fogleman/primitive',13,'05/17/2025',null,2,1),
 ('textidote',
 'Spelling, grammar and style checking on LaTeX documents',
 'https://github.com/sylvainhalle/textidote',12,'05/17/2025',null,1,1),
