@@ -229,7 +229,7 @@ VALUES
 'https://git.sr.ht/~gsthnz/gssg',7,'05/17/2025',null,2,1),
 ('PowerShellEditorServices',
 'Common platform for PowerShell development support in any editor or application',
-'https://github.com/PowerShell/PowerShellEditorServices',4,'05/17/2025',null,1,1),
+'https://github.com/PowerShell/PowerShellEditorServices',4,'05/17/2025',null,2,1),
 ('tmux-which-key',
 'Tmux plugin that allows users to select actions from a customizable popup menu',
 'https://github.com/alexwforsythe/tmux-which-key',3,'05/17/2025',null,1,1),
