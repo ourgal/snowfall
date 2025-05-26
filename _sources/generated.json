@@ -95,27 +95,6 @@
         },
         "version": "1.0.2"
     },
-    "ahoy": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "ahoy",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "ahoy-cli",
-            "repo": "ahoy",
-            "rev": "v2.4.0",
-            "sha256": "sha256-wYsPutdO9ZkXQu4mrFV56mrJTeSFF/3oRaHO0ia7DHk=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v2.4.0"
-    },
     "aicommit2": {
         "cargoLocks": null,
         "date": null,
@@ -130,12 +109,12 @@
             "name": null,
             "owner": "tak-bro",
             "repo": "aicommit2",
-            "rev": "v2.2.16",
-            "sha256": "sha256-5FHzoMhr9fdTSrPbcQRfkU7Y5Z+D0PyfxV+t2oC2B68=",
+            "rev": "v2.2.17",
+            "sha256": "sha256-2QZU4ODPsMEZXo6pbbyr96uOiBpNpKDDTAoTjoJcww0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.2.16"
+        "version": "v2.2.17"
     },
     "akuse": {
         "cargoLocks": null,
@@ -4295,32 +4274,6 @@
         },
         "version": "64ac299c041877620c2cadba83ded44f46c4e124"
     },
-    "otree": {
-        "cargoLocks": {
-            "Cargo.lock": [
-                "./otree-v0.4.0/Cargo.lock",
-                {}
-            ]
-        },
-        "date": null,
-        "extract": null,
-        "name": "otree",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "fioncat",
-            "repo": "otree",
-            "rev": "v0.4.0",
-            "sha256": "sha256-1p7Iep61m0mtaSiBj1T9d/wwzVGzXYOvbPv8isjhwjM=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.4.0"
-    },
     "paclear": {
         "cargoLocks": null,
         "date": null,
@@ -4475,7 +4428,7 @@
     },
     "pls": {
         "cargoLocks": null,
-        "date": "2025-03-26",
+        "date": "2025-05-26",
         "extract": null,
         "name": "pls",
         "passthru": null,
@@ -4487,12 +4440,12 @@
             "name": null,
             "owner": "codevogel",
             "repo": "pls",
-            "rev": "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2",
-            "sha256": "sha256-Ojs/pSPkNH+PxZZIg4O+dD/6fmt052oXBPoKlKo+kCE=",
+            "rev": "403c0fda629146f1562781becefd7ecf6f5c2de9",
+            "sha256": "sha256-FhGJnyxv1YX/O2JKGTZwCgkGbXgKDuDeost/lubnsSo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fcdb50d44bbbaa42cefd3c68e640f922ad890ec2"
+        "version": "403c0fda629146f1562781becefd7ecf6f5c2de9"
     },
     "pmark": {
         "cargoLocks": null,
@@ -5312,11 +5265,11 @@
     "shh": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./shh-74914dc8cfd74dbd7e051a090cc4c1f561b8cdde/Cargo.lock",
+                "./shh-57c91bbe7523ee8958d68d7ef7c3977f5480c3e8/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-05-06",
+        "date": "2025-05-26",
         "extract": null,
         "name": "shh",
         "passthru": null,
@@ -5328,12 +5281,12 @@
             "name": null,
             "owner": "desbma",
             "repo": "shh",
-            "rev": "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde",
-            "sha256": "sha256-pv2e2zvYFVhijdaK9IUkVeQ/Aw+gpILxhjpmAxd5+l8=",
+            "rev": "57c91bbe7523ee8958d68d7ef7c3977f5480c3e8",
+            "sha256": "sha256-5ll0g/Egx7zmANeY3sGrKjY6t4rNk+YzwYppSBGL55Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "74914dc8cfd74dbd7e051a090cc4c1f561b8cdde"
+        "version": "57c91bbe7523ee8958d68d7ef7c3977f5480c3e8"
     },
     "shipit": {
         "cargoLocks": null,
@@ -5402,6 +5355,32 @@
             "type": "github"
         },
         "version": "7a9b03766d3a9b1dbbdf671a3bbc6f555806dffe"
+    },
+    "simplemoji": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./simplemoji-v0.2.1/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "simplemoji",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "SergioRibera",
+            "repo": "simplemoji",
+            "rev": "v0.2.1",
+            "sha256": "sha256-JVLPwmPBD1GveHh8NX9Z9ALTgfLWdsDRqKFApCL5y38=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.2.1"
     },
     "sing-box-fork": {
         "cargoLocks": null,
@@ -6730,9 +6709,9 @@
             "name": null,
             "sha256": "sha256-MOGovqFWEHgd/J1tB92F7OjgqbZHFW4uNH9HKn/Cb7o=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505242212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505252212/geoip.dat"
         },
-        "version": "202505242212"
+        "version": "202505252212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6743,11 +6722,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-vCWNxV/lEDpJ8g+2sVmdmgZv7ZFBdwOHCDN/WRP/OiM=",
+            "sha256": "sha256-hAb1hfWpKdcCosZw8whPcEGjKVnzy+k5CyLzGBUbuUY=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505242212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202505252212/geosite.dat"
         },
-        "version": "202505242212"
+        "version": "202505252212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
@@ -7360,11 +7339,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-OeRir/v9dHRlIv4pLB044SArsKDTjnh9wr9ZU4rtttA=",
+            "sha256": "sha256-3S3Vf8y6yhW9mmRIPNTEzDTmgvMO0ryAxZZrgE8W+BI=",
             "type": "url",
-            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.90.0/dist.zip"
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.91.0/dist.zip"
         },
-        "version": "v1.90.0"
+        "version": "v1.91.0"
     },
     "zhlint": {
         "cargoLocks": null,
