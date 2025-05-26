@@ -22,6 +22,7 @@
     "handlr-regex"
     "intentrace"
     "inxi"
+    "isd"
     "kbt" # keyboard tester
     "kmon"
     "nixos-facter"
