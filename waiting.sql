@@ -259,7 +259,7 @@ VALUES
 'https://github.com/medialab/xan',4,'05/17/2025',null,2,1),
 ('tooling-language-server',
 'A language server for tools & package managers',
-'https://github.com/filiptibell/tooling-language-server',4,'05/17/2025',null,1,1),
+'https://github.com/filiptibell/tooling-language-server',4,'05/17/2025',null,2,1),
 ('telegram-integration',
 'Memogram is an easy to use integration service for syncing messages and images from a Telegram bot into your Memos.',
 'https://github.com/usememos/telegram-integration',7,'05/17/2025',null,1,1),

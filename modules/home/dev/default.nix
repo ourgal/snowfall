@@ -30,6 +30,7 @@
     "ls-lint"
     "process-compose"
     "reuse"
+    "tooling-language-server"
     "treefmt"
     "tup"
     "universal-ctags"
