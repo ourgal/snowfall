@@ -11,6 +11,7 @@
   nixPkgs = [
     # keep-sorted start
     "bandit"
+    "migrate-to-uv"
     "mypy"
     "poetry"
     "pylint"
