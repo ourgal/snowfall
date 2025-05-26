@@ -109,7 +109,7 @@ VALUES
 'https://github.com/robertpsoane/ducker',9,'05/17/2025',null,1,1),
 ('simplemoji',
 'Fast Application for look your amazing emojis write in Rust',
-'https://github.com/SergioRibera/simplemoji',3,'05/17/2025',null,1,1),
+'https://github.com/SergioRibera/simplemoji',3,'05/17/2025',null,2,1),
 ('voicevox',
 '無料で使える中品質なテキスト読み上げ・歌声合成ソフトウェア',
 'https://voicevox.hiroshiba.jp/',10,'05/17/2025',null,2,1),

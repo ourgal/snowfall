@@ -1452,3 +1452,8 @@ fetch.github = "proxytunnel/proxytunnel"
 [aicommit2]
 src.github = "tak-bro/aicommit2"
 fetch.github = "tak-bro/aicommit2"
+
+[simplemoji]
+src.github = "SergioRibera/simplemoji"
+fetch.github = "SergioRibera/simplemoji"
+cargo_locks = ["Cargo.lock"]

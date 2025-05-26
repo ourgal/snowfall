@@ -1,1 +1,4 @@
-{ enable = "s"; }
+{
+  myPkgs = "simplemoji";
+  enable = "s";
+}
