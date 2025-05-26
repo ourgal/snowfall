@@ -25,6 +25,7 @@
     "exercism"
     "honcho"
     "keep-sorted"
+    "license-cli"
     "ls-lint"
     "process-compose"
     "reuse"

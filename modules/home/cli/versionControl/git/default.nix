@@ -28,7 +28,6 @@ args.module (
         "hook"
         "ignore"
         "issue"
-        "license"
         "merge"
         "rebase"
         "security"
