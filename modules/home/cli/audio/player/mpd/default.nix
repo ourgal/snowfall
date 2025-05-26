@@ -1,6 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
+    "inori"
     "mmtc"
     "mpc-cli"
     "pms"

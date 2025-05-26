@@ -205,7 +205,7 @@ VALUES
 'https://github.com/rustic-rs/rustic',14,'05/17/2025',null,1,2),
 ('inori',
 'mpd client',
-'https://github.com/eshrh/inori',1,'05/17/2025',null,1,1),
+'https://github.com/eshrh/inori',1,'05/17/2025',null,2,1),
 ('itgmania',
 'A fork of StepMania 5.1, improved for the post-ITG community!',
 'https://www.itgmania.com/',16,'05/17/2025',null,1,1),
