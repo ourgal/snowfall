@@ -337,6 +337,7 @@ rec {
                       "yaml"
                       "yml"
                       "json"
+                      "jsonc"
                     ])
                   then
                     { "${name}".text = toJSON value; }
