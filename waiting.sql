@@ -166,7 +166,7 @@ VALUES
 'https://github.com/althonos/ffpb',3,'05/17/2025',null,2,1),
 ('awk-language-server',
 'Language Server for AWK and associated VSCode client extension',
-'https://github.com/Beaglefoot/awk-language-server',4,'05/17/2025',null,1,1),
+'https://github.com/Beaglefoot/awk-language-server',4,'05/17/2025',null,2,1),
 ('Lilex',
 '🤘Open source programming font',
 'https://github.com/mishamyrt/Lilex',15,'05/17/2025',null,1,1),

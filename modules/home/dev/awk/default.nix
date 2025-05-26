@@ -1,0 +1,1 @@
+{ nixPkgs = "awk-language-server"; }
