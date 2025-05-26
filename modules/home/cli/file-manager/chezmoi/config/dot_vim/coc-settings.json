@@ -44,6 +44,12 @@
         "dhall"
       ]
     },
+    "powershell": {
+      "command": "powershell-editor-services",
+      "filetypes": [
+        "ps1"
+      ]
+    },
     "jsonnet": {
       "command": "jsonnet-language-server",
       "args": [

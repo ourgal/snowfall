@@ -655,6 +655,13 @@ args.module (
                 };
                 auto-format = true;
               }
+              {
+                name = "powershell";
+                language-servers = [
+                  "scls"
+                  "powershell-editor-services"
+                ];
+              }
             ];
             language-server = {
               pyright = {
@@ -763,6 +770,9 @@ args.module (
               };
               sqls = {
                 command = "sqls";
+              };
+              powershell-editor-services = {
+                command = "powershell-editor-services";
               };
             };
           };
