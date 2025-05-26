@@ -172,7 +172,7 @@ VALUES
 'https://github.com/mishamyrt/Lilex',15,'05/17/2025',null,2,1),
 ('copywrite',
 'Automate copyright headers and license files at scale',
-'https://github.com/hashicorp/copywrite',4,'05/17/2025',null,1,1),
+'https://github.com/hashicorp/copywrite',4,'05/17/2025',null,2,1),
 ('primitive',
 'Reproducing images with geometric primitives.',
 'https://github.com/fogleman/primitive',13,'05/17/2025',null,1,1),

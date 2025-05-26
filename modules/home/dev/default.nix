@@ -15,6 +15,7 @@
     "cachix"
     "checkmake"
     "commitmsgfmt"
+    "copywrite"
     "datefmt"
     "dep-tree"
     "devbox"
