@@ -199,7 +199,7 @@ VALUES
 'https://github.com/neurocyte/flow',4,'05/17/2025',null,2,1),
 ('watcher',
 'Filesystem watcher. Works anywhere. Simple, efficient and friendly.',
-'https://github.com/e-dant/watcher',5,'05/17/2025',null,1,1),
+'https://github.com/e-dant/watcher',5,'05/17/2025',null,2,1),
 ('rustic',
 'rustic - fast, encrypted, and deduplicated backups powered by Rust',
 'https://github.com/rustic-rs/rustic',14,'05/17/2025',null,1,2),
