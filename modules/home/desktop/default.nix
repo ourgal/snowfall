@@ -7,6 +7,7 @@
     "chat"
     "document"
     "flashcard"
+    "git"
     "image"
     "math"
     "search"
