@@ -145,7 +145,7 @@ VALUES
 'https://github.com/thomasschafer/scooter',5,'05/17/2025',null,2,1),
 ('deskflow',
 'Deskflow lets you share one mouse and keyboard between multiple computers on Windows, macOS and Linux. Its like a software KVM (but without video).',
-'https://github.com/deskflow/deskflow',5,'05/17/2025',null,1,1),
+'https://github.com/deskflow/deskflow',5,'05/17/2025',null,2,1),
 ('lla',
 'blazing fast `ls` replacement with superpowers',
 'https://github.com/triyanox/lla',3,'05/17/2025',null,2,1),

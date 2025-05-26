@@ -15,6 +15,7 @@ args.module (
         # keep-sorted start
         "blobdrop"
         "brightnessctl"
+        "deskflow"
         "fuzzel"
         "hardinfo2"
         "libnotify"
