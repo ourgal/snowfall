@@ -190,7 +190,7 @@ VALUES
 'https://suyu.dev',16,'05/17/2025',null,1,1),
 ('astroterm',
 'A planetarium for your terminal! Explore stars, planets, constellations, and more, all rendered right in the command line—no telescope required. ✨🪐',
-'https://github.com/da-luce/astroterm/',3,'05/17/2025',null,1,1),
+'https://github.com/da-luce/astroterm/',3,'05/17/2025',null,2,1),
 ('isd',
 'isd (interactive systemd) – a better way to work with systemd units',
 'https://github.com/isd-project/isd',5,'05/17/2025',null,1,1),

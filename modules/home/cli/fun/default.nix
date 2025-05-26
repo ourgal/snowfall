@@ -12,6 +12,7 @@
   pyPkgs = "tqdm";
   nixPkgs = [
     # keep-sorted start
+    "astroterm"
     "boxes"
     "cfonts"
     "confetty"
