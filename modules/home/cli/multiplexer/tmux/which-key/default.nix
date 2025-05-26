@@ -30,7 +30,7 @@ args.module (
     {
       progs.tmux.plugins = [
         {
-          plugin = pkgs.${namespace}.tmux-which-key;
+          plugin = pkgs.tmuxPlugins.tmux-which-key;
           extraConfig = ''
             set -g @tmux-which-key-xdg-enable 1;
           '';

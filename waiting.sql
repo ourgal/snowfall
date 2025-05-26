@@ -232,7 +232,7 @@ VALUES
 'https://github.com/PowerShell/PowerShellEditorServices',4,'05/17/2025',null,2,1),
 ('tmux-which-key',
 'Tmux plugin that allows users to select actions from a customizable popup menu',
-'https://github.com/alexwforsythe/tmux-which-key',3,'05/17/2025',null,1,1),
+'https://github.com/alexwforsythe/tmux-which-key',3,'05/17/2025',null,2,1),
 ('readeck',
 'Readeck is a simple web application that lets you save the precious readable content of web pages you like and want to keep forever.',
 'https://codeberg.org/readeck/readeck',7,'05/17/2025',null,1,2),
