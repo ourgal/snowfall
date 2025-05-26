@@ -169,7 +169,7 @@ VALUES
 'https://github.com/Beaglefoot/awk-language-server',4,'05/17/2025',null,2,1),
 ('Lilex',
 '🤘Open source programming font',
-'https://github.com/mishamyrt/Lilex',15,'05/17/2025',null,1,1),
+'https://github.com/mishamyrt/Lilex',15,'05/17/2025',null,2,1),
 ('copywrite',
 'Automate copyright headers and license files at scale',
 'https://github.com/hashicorp/copywrite',4,'05/17/2025',null,1,1),

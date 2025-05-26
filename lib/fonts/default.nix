@@ -33,10 +33,6 @@ in
       };
 
       # english monospace
-      firacode = {
-        pkg = "fira-code";
-        name = "Fira Code";
-      };
 
       # english serif
       chunk = {
@@ -99,6 +95,10 @@ in
       fontAwesome = {
         pkg = "font-awesome";
         name = "Font Awesome 6 Free";
+      };
+      lilex = {
+        pkg = "lilex";
+        name = "Lilex";
       };
 
       getPkg =
@@ -175,7 +175,7 @@ in
       cjk = recursiveUpdate { inherit (sourceHan) sans serif mono; } overrids.cjk;
       en = recursiveUpdate {
         inherit (noto) sans serif;
-        mono = firacode;
+        mono = lilex;
       } overrids.en;
       allPkgs = getPkg (
         [
