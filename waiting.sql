@@ -49,7 +49,7 @@ CREATE VIEW v_need_packaging
 AS
 SELECT '[[' || url || '][' || name || ']]' AS package, description FROM packages WHERE waiting_status = 3 ORDER BY added_date;
 
-INSERT INTO waiting_status  VALUES (1,'waiting'), (2,'done'), (3, 'not packaged');
+INSERT INTO waiting_status  VALUES (1,'waiting'), (2,'done'), (3, 'not packaged'), (4, 'removed');
 
 INSERT INTO types VALUES (1,'package'), (2,'module');
 
@@ -121,7 +121,7 @@ VALUES
 'https://github.com/nwg-piotr/azote',5,'05/17/2025',null,1,1),
 ('cloudpan189-go',
 '天翼云盘命令行客户端(CLI)，基于 GO 语言实现',
-'https://github.com/tickstep/cloudpan189-go',11,'05/17/2025',null,1,1),
+'https://github.com/tickstep/cloudpan189-go',11,'05/17/2025',null,4,1),
 ('cppman',
 'C++ 98/11/14 manual pages for Linux/MacOS',
 'https://github.com/aitjcize/cppman',12,'05/17/2025',null,1,1),
