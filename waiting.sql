@@ -241,7 +241,7 @@ VALUES
 'https://github.com/ShadowBlip/PowerStation',5,'05/17/2025',null,1,2),
 ('jellyfin-tui',
 '🪼 Music streaming client for the terminal',
-'https://github.com/dhonus/jellyfin-tui',17,'05/17/2025',null,1,1),
+'https://github.com/dhonus/jellyfin-tui',17,'05/17/2025',null,2,1),
 ('fum',
 'A fully customizable tui-based mpris music client.',
 'https://github.com/qxb3/fum',1,'05/17/2025',null,1,1),
