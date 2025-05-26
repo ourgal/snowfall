@@ -136,7 +136,7 @@ VALUES
 'https://github.com/ArthurSonzogni/Diagon',3,'05/17/2025',null,1,1),
 ('Kryptor',
 'A simple, modern, and secure encryption and signing tool that aims to be a better version of age and Minisign.',
-'https://github.com/samuel-lucas6/Kryptor',14,'05/17/2025',null,1,1),
+'https://github.com/samuel-lucas6/Kryptor',14,'05/17/2025',null,2,1),
 ('gfie',
 'Greenfish Icon Editor Pro (GFIE Pro) is a powerful freeware image editor, especially suitable for creating icons, cursors, animations and icon libraries.',
 'http://greenfishsoftware.org/gfie.php',13,'05/17/2025',null,1,1),

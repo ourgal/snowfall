@@ -7,6 +7,7 @@
     "genpass"
     "hashcat"
     "horcrux"
+    "kryptor"
     "opensc"
     "pcsc-tools"
     "picocrypt-cli"
