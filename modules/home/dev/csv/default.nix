@@ -24,6 +24,7 @@
     "tidy-viewer"
     "usql"
     "visidata"
+    "xan"
     "xsv"
     "zsv"
     # keep-sorted end

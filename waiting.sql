@@ -256,7 +256,7 @@ VALUES
 'https://github.com/3timeslazy/nix-search-tv',3,'05/17/2025',null,2,1),
 ('xan',
 'The CSV magician',
-'https://github.com/medialab/xan',4,'05/17/2025',null,1,1),
+'https://github.com/medialab/xan',4,'05/17/2025',null,2,1),
 ('tooling-language-server',
 'A language server for tools & package managers',
 'https://github.com/filiptibell/tooling-language-server',4,'05/17/2025',null,1,1),
