@@ -226,7 +226,7 @@ VALUES
 'https://github.com/ffizer/ffizer',5,'05/17/2025',null,2,1),
 ('gssg',
 'A gemini static site generator',
-'https://git.sr.ht/~gsthnz/gssg',7,'05/17/2025',null,1,1),
+'https://git.sr.ht/~gsthnz/gssg',7,'05/17/2025',null,2,1),
 ('PowerShellEditorServices',
 'Common platform for PowerShell development support in any editor or application',
 'https://github.com/PowerShell/PowerShellEditorServices',4,'05/17/2025',null,1,1),
