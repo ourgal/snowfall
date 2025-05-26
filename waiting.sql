@@ -250,7 +250,7 @@ VALUES
 'https://github.com/sourcegit-scm/sourcegit',6,'05/17/2025',null,2,1),
 ('clock-rs',
 'clock-rs - A clock for your terminal!',
-'https://github.com/Oughie/clock-rs',5,'05/17/2025',null,1,1),
+'https://github.com/Oughie/clock-rs',5,'05/17/2025',null,2,1),
 ('nix-search-tv',
 'Fuzzy search for Nix packages.',
 'https://github.com/3timeslazy/nix-search-tv',3,'05/17/2025',null,1,1),

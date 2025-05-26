@@ -1,0 +1,1 @@
+{ progs = "clock-rs"; }
