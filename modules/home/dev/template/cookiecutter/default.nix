@@ -1,5 +1,10 @@
 {
-  nixPkgs = "cookiecutter";
+  nixPkgs = [
+    # keep-sorted start
+    "cookiecutter"
+    "ffizer"
+    # keep-sorted end
+  ];
   files = {
     ".cookiecutterrc" = ''
       default_context:

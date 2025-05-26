@@ -223,7 +223,7 @@ VALUES
 'https://github.com/diced/zipline',11,'05/17/2025',null,1,2),
 ('ffizer',
 'ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template.',
-'https://github.com/ffizer/ffizer',5,'05/17/2025',null,1,1),
+'https://github.com/ffizer/ffizer',5,'05/17/2025',null,2,1),
 ('gssg',
 'A gemini static site generator',
 'https://git.sr.ht/~gsthnz/gssg',7,'05/17/2025',null,1,1),
