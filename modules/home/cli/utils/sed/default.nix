@@ -13,6 +13,7 @@
     "repgrep"
     "ruplacer"
     "sad"
+    "scooter"
     "sd"
     "teip"
     # keep-sorted end

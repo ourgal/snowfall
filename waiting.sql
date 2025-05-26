@@ -142,7 +142,7 @@ VALUES
 'http://greenfishsoftware.org/gfie.php',13,'05/17/2025',null,1,1),
 ('scooter',
 'Interactive find and replace in the terminal',
-'https://github.com/thomasschafer/scooter',5,'05/17/2025',null,1,1),
+'https://github.com/thomasschafer/scooter',5,'05/17/2025',null,2,1),
 ('deskflow',
 'Deskflow lets you share one mouse and keyboard between multiple computers on Windows, macOS and Linux. Its like a software KVM (but without video).',
 'https://github.com/deskflow/deskflow',5,'05/17/2025',null,1,1),
