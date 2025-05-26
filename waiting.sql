@@ -253,7 +253,7 @@ VALUES
 'https://github.com/Oughie/clock-rs',5,'05/17/2025',null,2,1),
 ('nix-search-tv',
 'Fuzzy search for Nix packages.',
-'https://github.com/3timeslazy/nix-search-tv',3,'05/17/2025',null,1,1),
+'https://github.com/3timeslazy/nix-search-tv',3,'05/17/2025',null,2,1),
 ('xan',
 'The CSV magician',
 'https://github.com/medialab/xan',4,'05/17/2025',null,1,1),
