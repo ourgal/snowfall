@@ -184,7 +184,7 @@ VALUES
 'https://github.com/projectdiscovery/urlfinder',8,'05/17/2025',null,1,1),
 ('moxide',
 'A tmux session manager with a modular config',
-'https://github.com/dlurak/moxide',3,'05/17/2025',null,1,1),
+'https://github.com/dlurak/moxide',3,'05/17/2025',null,2,1),
 ('suyu',
 'Experimental Nintendo Switch emulator written in C++',
 'https://suyu.dev',16,'05/17/2025',null,1,1),

@@ -175,6 +175,7 @@ args.module (
         "gitmux"
         "jump"
         "mouse-swipe"
+        "moxide"
         "open"
         "power-zoom"
         "sesh"
