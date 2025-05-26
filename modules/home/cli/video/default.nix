@@ -8,6 +8,7 @@
   nixPkgs = [
     # keep-sorted start
     "ffmpeg-full"
+    "ffpb"
     "mediainfo"
     "youtube-tui"
     # keep-sorted end

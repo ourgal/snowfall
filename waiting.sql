@@ -163,7 +163,7 @@ VALUES
 'https://github.com/carthage-software/mago',4,'05/17/2025',null,2,1),
 ('ffpb',
 'A progress bar for ffmpeg. Yay !',
-'https://github.com/althonos/ffpb',3,'05/17/2025',null,1,1),
+'https://github.com/althonos/ffpb',3,'05/17/2025',null,2,1),
 ('awk-language-server',
 'Language Server for AWK and associated VSCode client extension',
 'https://github.com/Beaglefoot/awk-language-server',4,'05/17/2025',null,1,1),
