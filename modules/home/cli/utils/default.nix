@@ -31,6 +31,7 @@
     "ps"
     "rm"
     "sed"
+    "tee"
     "time"
     "touch"
     "tree"

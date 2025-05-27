@@ -280,7 +280,7 @@ VALUES
 'https://github.com/YS-L/flamelens',4,'05/17/2025',null,2,1),
 ('t3',
 'Next generation tee with colorized output streams and precise time stamping',
-'https://github.com/flox/t3',3,'05/17/2025',null,1,1),
+'https://github.com/flox/t3',3,'05/17/2025',null,2,1),
 ('umu-launcher',
 '',
 'https://github.com/Open-Wine-Components/umu-launcher',16,'05/17/2025',null,1,1),
