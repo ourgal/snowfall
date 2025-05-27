@@ -298,7 +298,7 @@ VALUES
 'https://github.com/biliup/biliup-rs',18,'05/17/2025',null,2,1),
 ('world-wall-clock',
 'world-wall-clock is a TUI application that provides a multi-timezone graphical clock in a terminal environment.',
-'https://github.com/ddelabru/world-wall-clock',3,'05/17/2025',null,1,1),
+'https://github.com/ddelabru/world-wall-clock',3,'05/17/2025',null,2,1),
 ('aonsoku',
 'A modern desktop client for Navidrome/Subsonic servers built with React and Rust.',
 'https://github.com/victoralvesf/aonsoku',1,'05/17/2025',null,1,1),
