@@ -286,7 +286,7 @@ VALUES
 'https://github.com/Open-Wine-Components/umu-launcher',16,'05/17/2025',null,1,1),
 ('xdg-desktop-portal-termfilechooser',
 'xdg-desktop-portal backend for choosing files with your favorite file chooser',
-'https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser',5,'05/17/2025',null,1,1),
+'https://github.com/hunkyburrito/xdg-desktop-portal-termfilechooser',5,'05/17/2025',null,2,1),
 ('ni',
 '💡 Use the right package manager',
 'https://github.com/antfu-collective/ni',5,'05/17/2025',null,1,1),
