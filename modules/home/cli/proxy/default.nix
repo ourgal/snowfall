@@ -6,5 +6,10 @@
     "v2dat"
     # keep-sorted end
   ];
-  nixPkgs = "gg";
+  nixPkgs = [
+    # keep-sorted start
+    "clashtui"
+    "gg"
+    # keep-sorted end
+  ];
 }

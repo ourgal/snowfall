@@ -271,7 +271,7 @@ VALUES
 'https://posting.sh/',4,'05/17/2025',null,2,1),
 ('clashtui',
 'Mihomo (Clash.Meta) TUI Client',
-'https://github.com/JohanChane/clashtui',3,'05/17/2025',null,1,1),
+'https://github.com/JohanChane/clashtui',3,'05/17/2025',null,2,1),
 ('mpls',
 'Markdown Preview Language Server',
 'https://github.com/mhersson/mpls',4,'05/17/2025',null,1,1),
