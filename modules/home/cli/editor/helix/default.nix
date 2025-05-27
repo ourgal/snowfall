@@ -753,6 +753,9 @@ args.module (
               fish-lsp = {
                 command = "fish-lsp";
                 args = [ "start" ];
+                environment = {
+                  "fish_lsp_show_client_popups" = "false";
+                };
               };
               superhtml = {
                 command = "superhtml";
