@@ -301,7 +301,7 @@ VALUES
 'https://github.com/ddelabru/world-wall-clock',3,'05/17/2025',null,2,1),
 ('aonsoku',
 'A modern desktop client for Navidrome/Subsonic servers built with React and Rust.',
-'https://github.com/victoralvesf/aonsoku',1,'05/17/2025',null,1,1),
+'https://github.com/victoralvesf/aonsoku',1,'05/17/2025',null,2,1),
 ('simple-completion-language-server',
 'Language server to enable word completion and snippets for Helix editor',
 'https://github.com/estin/simple-completion-language-server',4,'05/17/2025',null,1,1),
