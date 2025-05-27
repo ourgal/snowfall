@@ -574,7 +574,7 @@ VALUES
 'https://www.xnview.com/en/xnviewmp/',13,'05/18/2025',null,1,1),
 ('nix-converter',
 'All-in-one converter configuration language to Nix and vice versa',
-'https://github.com/theobori/nix-converter',4,'05/18/2025',null,1,1),
+'https://github.com/theobori/nix-converter',4,'05/18/2025',null,2,1),
 ('Poliedros',
 'Multi-type dice roller',
 'https://github.com/kriptolix/Poliedros',16,'05/18/2025',null,1,1),
