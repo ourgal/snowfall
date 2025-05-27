@@ -31,6 +31,15 @@ args.module (
             else
               bind \cf '${fileManager}'
             end
+
+            set exercism_wrapper_home /path/to/the/exercism/wrapper/root
+            if not contains $exercism_wrapper_home/functions $fish_function_path
+                set fish_function_path $exercism_wrapper_home/functions $fish_function_path
+            end
+            if not contains $exercism_wrapper_home/completions $fish_complete_path
+                set fish_complete_path $exercism_wrapper_home/completions $fish_complete_path
+            end
+            set -e exercism_wrapper_home
           '';
         shellAbbrs = {
           sc = "systemctl";
@@ -130,6 +139,7 @@ args.module (
           "clownfish"
           "ctrl-z.fish"
           "done"
+          "exercism-cli-fish-wrapper"
           "fc-fish"
           "fish-abbreviation-tips"
           "fish-bd"
@@ -145,6 +155,10 @@ args.module (
           # keep-sorted end
         ] pkgs;
       };
+      nixPkgs = [
+        "pup"
+        "miller"
+      ];
       env = {
         FZF_LEGACY_KEYBINDINGS = "1";
         FZF_COMPLETE = "2";

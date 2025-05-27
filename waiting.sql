@@ -265,7 +265,7 @@ VALUES
 'https://github.com/usememos/telegram-integration',7,'05/17/2025',null,1,1),
 ('exercism-cli-fish-wrapper',
 'A fish wrapper for the Exercism CLI',
-'https://github.com/glennj/exercism-cli-fish-wrapper',3,'05/17/2025',null,1,1),
+'https://github.com/glennj/exercism-cli-fish-wrapper',3,'05/17/2025',null,2,1),
 ('posting',
 'The API client that lives in your terminal.',
 'https://posting.sh/',4,'05/17/2025',null,2,1),
