@@ -304,7 +304,7 @@ VALUES
 'https://github.com/victoralvesf/aonsoku',1,'05/17/2025',null,2,1),
 ('simple-completion-language-server',
 'Language server to enable word completion and snippets for Helix editor',
-'https://github.com/estin/simple-completion-language-server',4,'05/17/2025',null,1,1),
+'https://github.com/estin/simple-completion-language-server',4,'05/17/2025',null,2,1),
 ('taze',
 '🥦 A modern cli tool that keeps your deps fresh',
 'https://github.com/antfu-collective/taze',4,'05/17/2025',null,1,1),

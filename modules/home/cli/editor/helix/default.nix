@@ -778,11 +778,13 @@ args.module (
           };
         };
       };
-      nixPkgs = "helix-gpt";
-      myPkgs = [
+      nixPkgs = [
+        # keep-sorted start
+        "helix-gpt"
         "simple-completion-language-server"
-        "live-grep"
+        # keep-sorted end
       ];
+      myPkgs = "live-grep";
       confs = {
         "helix/external-snippets.toml" = {
           "sources" = [
