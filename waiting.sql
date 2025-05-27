@@ -313,7 +313,7 @@ VALUES
 'https://github.com/Levizor/tray-tui',5,'05/17/2025',null,2,1),
 ('hot-resize',
 'A tool for hot resizing (without reboot) disk partitions and filesystems.',
-'https://github.com/liberodark/hot-resize',5,'05/17/2025',null,1,1),
+'https://github.com/liberodark/hot-resize',5,'05/17/2025',null,2,1),
 ('N_m3u8DL-RE',
 'Cross-Platform, modern and powerful stream downloader for MPD/M3U8/ISM. English/简体中文/繁體中文.',
 'https://github.com/nilaoda/N_m3u8DL-RE',18,'05/17/2025',null,1,1),

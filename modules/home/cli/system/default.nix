@@ -21,6 +21,7 @@
     "geekbench"
     "glib"
     "handlr-regex"
+    "hot-resize"
     "intentrace"
     "inxi"
     "isd"
