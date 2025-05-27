@@ -12,14 +12,18 @@ let
     enableOpt
     disabled
     enabled
+    ip
     ;
   value = {
     nix =
       let
         mirrors = [
+          "http://${ip.home}?priority=10"
           "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org?priority=100"
+          "http://${ip.brix}?priority=100"
+          "http://${ip.router}?priority=100"
         ];
       in
       {
