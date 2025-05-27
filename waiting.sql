@@ -274,7 +274,7 @@ VALUES
 'https://github.com/JohanChane/clashtui',3,'05/17/2025',null,2,1),
 ('mpls',
 'Markdown Preview Language Server',
-'https://github.com/mhersson/mpls',4,'05/17/2025',null,1,1),
+'https://github.com/mhersson/mpls',4,'05/17/2025',null,2,1),
 ('flamelens',
 'Flamegraph viewer in the terminal',
 'https://github.com/YS-L/flamelens',4,'05/17/2025',null,1,1),

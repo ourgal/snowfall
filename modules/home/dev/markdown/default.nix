@@ -21,6 +21,7 @@
     "mdbook"
     "mdsh"
     "mmdoc"
+    "mpls"
     "proselint"
     "textlint"
     "vale"
