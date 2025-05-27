@@ -295,7 +295,7 @@ VALUES
 'https://github.com/uros-5/jinja-lsp',4,'05/17/2025',null,2,1),
 ('biliup-rs',
 '命令行投稿(B站)和视频下载工具，提供多种登录方式，支持多p。',
-'https://github.com/biliup/biliup-rs',18,'05/17/2025',null,1,1),
+'https://github.com/biliup/biliup-rs',18,'05/17/2025',null,2,1),
 ('world-wall-clock',
 'world-wall-clock is a TUI application that provides a multi-timezone graphical clock in a terminal environment.',
 'https://github.com/ddelabru/world-wall-clock',3,'05/17/2025',null,1,1),

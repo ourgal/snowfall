@@ -6,6 +6,7 @@
   ];
   nixPkgs = [
     # keep-sorted start
+    "biliup-rs"
     "croc"
     "dufs"
     "ffsend"
