@@ -15,7 +15,7 @@ let
   name = getDirname _name;
   value = {
     services.caddy = {
-      virtualHosts = mkFileServer domains.${name} "${pkgs.${namespace}.${name}}";
+      virtualHosts = mkFileServer domains.${name} "${pkgs.${name}}";
     };
   };
   _args = { inherit value args; };

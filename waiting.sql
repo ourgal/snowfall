@@ -472,7 +472,7 @@ VALUES
 'https://github.com/Equationzhao/g',5,'05/18/2025',null,1,1),
 ('zashboard',
 'A Dashboard Using Clash API',
-'https://github.com/Zephyruso/zashboard',19,'05/18/2025',null,1,1),
+'https://github.com/Zephyruso/zashboard',19,'05/18/2025',null,2,1),
 ('ggh',
 'Recall your SSH sessions (also search your SSH config file)',
 'https://github.com/byawitz/ggh',5,'05/18/2025',null,1,1),
