@@ -2,25 +2,26 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = "sha256-L6bjPZ2d7aXzPw+p3X4s0h6YV1Wf4IRbj9ADV6GCOOY=";
 
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  vendorHash = "sha256-L6bjPZ2d7aXzPw+p3X4s0h6YV1Wf4IRbj9ADV6GCOOY=";
+    doCheck = false;
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  doCheck = false;
-
-  meta = with lib; {
-    description = "Pryrite, interactively execute shell code blocks in a markdown file";
-    homepage = "https://github.com/1xyz/pryrite";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "pryrite";
-  };
-}
+    meta = with lib; {
+      description = "Pryrite, interactively execute shell code blocks in a markdown file";
+      homepage = "https://github.com/1xyz/pryrite";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "pryrite";
+    };
+  }
+)

@@ -2,29 +2,33 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
+let
+  source = _sources' ./.;
+in
+buildGoModule (
+  lib.${namespace}.mkGoSource source
+  // {
+    vendorHash = "sha256-30evUM2l7Q7dbep8EMD/B9znp3h2ntnoBty67MXVovU=";
 
-buildGoModule rec {
-  inherit (_sources' ./.) pname version src;
-
-  vendorHash = "sha256-30evUM2l7Q7dbep8EMD/B9znp3h2ntnoBty67MXVovU=";
-
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  doCheck = false;
-
-  meta = {
-    description = "An inspector for your environment";
-    homepage = "https://github.com/oalders/is";
-    changelog = "https://github.com/oalders/is/blob/${src.rev}/CHANGELOG.md";
-    license = with lib.licenses; [
-      asl20
-      mit
+    ldflags = [
+      "-s"
+      "-w"
     ];
-    maintainers = with lib.maintainers; [ zxc ];
-    mainProgram = "is";
-  };
-}
+
+    doCheck = false;
+
+    meta = {
+      description = "An inspector for your environment";
+      homepage = "https://github.com/oalders/is";
+      changelog = "https://github.com/oalders/is/blob/${source.src.rev}/CHANGELOG.md";
+      license = with lib.licenses; [
+        asl20
+        mit
+      ];
+      maintainers = with lib.maintainers; [ zxc ];
+      mainProgram = "is";
+    };
+  }
+)

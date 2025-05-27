@@ -2,22 +2,24 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = "sha256-9eP0rhsgpTttYrBG/BNk/ICtaM+zKNBz2H2cHuTSt30=";
 
-  vendorHash = "sha256-9eP0rhsgpTttYrBG/BNk/ICtaM+zKNBz2H2cHuTSt30=";
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  meta = with lib; {
-    description = "A TUI playground to experiment with your favorite programs, such as grep, sed, awk, jq and yq";
-    homepage = "https://github.com/paololazzari/play";
-    license = licenses.asl20;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "play";
-  };
-}
+    meta = with lib; {
+      description = "A TUI playground to experiment with your favorite programs, such as grep, sed, awk, jq and yq";
+      homepage = "https://github.com/paololazzari/play";
+      license = licenses.asl20;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "play";
+    };
+  }
+)

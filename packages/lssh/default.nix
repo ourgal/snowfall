@@ -2,24 +2,26 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = null;
 
-  vendorHash = null;
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
+    doCheck = false;
 
-  doCheck = false;
-
-  meta = with lib; {
-    description = "List selection type ssh/scp/sftp client command. Supports single connection and parallel connection. Local bashrc can also be used without placing it on a remote machine. Written in Golang";
-    homepage = "https://github.com/blacknon/lssh";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "lssh";
-  };
-}
+    meta = with lib; {
+      description = "List selection type ssh/scp/sftp client command. Supports single connection and parallel connection. Local bashrc can also be used without placing it on a remote machine. Written in Golang";
+      homepage = "https://github.com/blacknon/lssh";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "lssh";
+    };
+  }
+)

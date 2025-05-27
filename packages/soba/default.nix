@@ -2,29 +2,34 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule rec {
-  inherit (_sources' ./.) pname version src;
+let
+  source = _sources' ./.;
+in
+buildGoModule (
+  lib.${namespace}.mkGoSource source
+  // {
+    vendorHash = "sha256-iFal4ZkKJMWn6OOuhka76N6u/PSce1L+KFmCqTQC/8s=";
 
-  vendorHash = "sha256-iFal4ZkKJMWn6OOuhka76N6u/PSce1L+KFmCqTQC/8s=";
+    ldflags = [
+      "-s"
+      "-w"
+      "-X=main.version=${source.version}"
+      "-X=main.sha=${source.src.rev}"
+      "-X=main.buildDate=1970-01-01T00:00:00Z"
+      "-X=main.tag=${source.src.rev}"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-    "-X=main.version=${version}"
-    "-X=main.sha=${src.rev}"
-    "-X=main.buildDate=1970-01-01T00:00:00Z"
-    "-X=main.tag=${src.rev}"
-  ];
+    doCheck = false;
 
-  doCheck = false;
-
-  meta = with lib; {
-    description = "Backup github, gitlab, bitbucket, azure devops, and gitea repositories";
-    homepage = "https://github.com/jonhadfield/soba";
-    changelog = "https://github.com/jonhadfield/soba/blob/${src.rev}/CHANGELOG.md";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "soba";
-  };
-}
+    meta = with lib; {
+      description = "Backup github, gitlab, bitbucket, azure devops, and gitea repositories";
+      homepage = "https://github.com/jonhadfield/soba";
+      changelog = "https://github.com/jonhadfield/soba/blob/${source.src.rev}/CHANGELOG.md";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "soba";
+    };
+  }
+)

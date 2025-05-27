@@ -15,6 +15,11 @@ buildGoModule rec {
     hash = "sha256-u+KDMYdpiAhH6NvS0N6ATO4oy9otxvnXK7Q0mJFFdZY=";
   };
 
+  env = {
+    GO111MODULE = "on";
+    GOPROXY = "https://goproxy.cn";
+  };
+
   vendorHash = "sha256-jzCzK//pw7AAra5JBVmjUn3DPJzU9e+Nof/LqapEwjA=";
 
   postPatch = ''

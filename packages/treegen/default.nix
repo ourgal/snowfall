@@ -2,22 +2,24 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = null;
 
-  vendorHash = null;
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  meta = with lib; {
-    description = "ASCII Tree to Directory and File Structure Generator";
-    homepage = "https://github.com/bilbilak/treegen";
-    license = licenses.gpl3Only;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "treegen";
-  };
-}
+    meta = with lib; {
+      description = "ASCII Tree to Directory and File Structure Generator";
+      homepage = "https://github.com/bilbilak/treegen";
+      license = licenses.gpl3Only;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "treegen";
+    };
+  }
+)

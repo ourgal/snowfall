@@ -2,22 +2,24 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule {
-  inherit (_sources' ./.) pname src version;
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = "sha256-kqo2iGk5omOqGtmKPak70PaMJPxKvOGFnSBZX0++WQk=";
 
-  vendorHash = "sha256-kqo2iGk5omOqGtmKPak70PaMJPxKvOGFnSBZX0++WQk=";
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  meta = with lib; {
-    description = "GitHub stargazers in your terminal";
-    homepage = "https://github.com/aymanbagabas/gh-stars";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "gh-stars";
-  };
-}
+    meta = with lib; {
+      description = "GitHub stargazers in your terminal";
+      homepage = "https://github.com/aymanbagabas/gh-stars";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "gh-stars";
+    };
+  }
+)

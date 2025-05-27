@@ -2,28 +2,30 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = "sha256-1TyFfRL6HTOa+M4CEcHeiReRcPlPNKMneq2AVXS0kX0=";
 
-  vendorHash = "sha256-1TyFfRL6HTOa+M4CEcHeiReRcPlPNKMneq2AVXS0kX0=";
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
+    postInstall = ''
+      mv $out/bin/cmd $out/bin/flatpak-compose
+    '';
 
-  postInstall = ''
-    mv $out/bin/cmd $out/bin/flatpak-compose
-  '';
+    subPackages = [ "./cmd" ];
 
-  subPackages = [ "./cmd" ];
-
-  meta = with lib; {
-    description = "Define your flatpak applications and permissions";
-    homepage = "https://github.com/faan11/flatpak-compose";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "flatpak-compose";
-  };
-}
+    meta = with lib; {
+      description = "Define your flatpak applications and permissions";
+      homepage = "https://github.com/faan11/flatpak-compose";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "flatpak-compose";
+    };
+  }
+)

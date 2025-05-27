@@ -8,57 +8,61 @@
   nix-update-script,
   nixosTests,
   _sources',
+  namespace,
 }:
+let
+  source = _sources' ./.;
+in
+buildGoModule (
+  lib.${namespace}.mkGoSource source
+  // {
+    vendorHash = "sha256-ZWFZkVRtybQAK9oZRIMBGeDfxXTV7kzXwNSbkvslMFk=";
 
-buildGoModule rec {
-  inherit (_sources' ./.) pname version src;
+    tags = [
+      "with_quic"
+      "with_dhcp"
+      "with_wireguard"
+      "with_ech"
+      "with_utls"
+      "with_reality_server"
+      "with_acme"
+      "with_clash_api"
+      "with_gvisor"
+    ];
 
-  vendorHash = "sha256-ZWFZkVRtybQAK9oZRIMBGeDfxXTV7kzXwNSbkvslMFk=";
+    subPackages = [ "cmd/sing-box" ];
 
-  tags = [
-    "with_quic"
-    "with_dhcp"
-    "with_wireguard"
-    "with_ech"
-    "with_utls"
-    "with_reality_server"
-    "with_acme"
-    "with_clash_api"
-    "with_gvisor"
-  ];
+    nativeBuildInputs = [ installShellFiles ];
 
-  subPackages = [ "cmd/sing-box" ];
+    ldflags = [ "-X=github.com/sagernet/sing-box/constant.Version=${source.version}" ];
 
-  nativeBuildInputs = [ installShellFiles ];
+    postInstall =
+      let
+        emulator = stdenv.hostPlatform.emulator buildPackages;
+      in
+      ''
+        installShellCompletion --cmd sing-box \
+          --bash <(${emulator} $out/bin/sing-box completion bash) \
+          --fish <(${emulator} $out/bin/sing-box completion fish) \
+          --zsh  <(${emulator} $out/bin/sing-box completion zsh )
 
-  ldflags = [ "-X=github.com/sagernet/sing-box/constant.Version=${version}" ];
+        substituteInPlace release/config/sing-box{,@}.service \
+          --replace-fail "/usr/bin/sing-box" "$out/bin/sing-box" \
+          --replace-fail "/bin/kill" "${coreutils}/bin/kill"
+        install -Dm444 -t "$out/lib/systemd/system/" release/config/sing-box{,@}.service
+      '';
 
-  postInstall =
-    let
-      emulator = stdenv.hostPlatform.emulator buildPackages;
-    in
-    ''
-      installShellCompletion --cmd sing-box \
-        --bash <(${emulator} $out/bin/sing-box completion bash) \
-        --fish <(${emulator} $out/bin/sing-box completion fish) \
-        --zsh  <(${emulator} $out/bin/sing-box completion zsh )
+    passthru = {
+      updateScript = nix-update-script { };
+      tests = { inherit (nixosTests) sing-box; };
+    };
 
-      substituteInPlace release/config/sing-box{,@}.service \
-        --replace-fail "/usr/bin/sing-box" "$out/bin/sing-box" \
-        --replace-fail "/bin/kill" "${coreutils}/bin/kill"
-      install -Dm444 -t "$out/lib/systemd/system/" release/config/sing-box{,@}.service
-    '';
-
-  passthru = {
-    updateScript = nix-update-script { };
-    tests = { inherit (nixosTests) sing-box; };
-  };
-
-  meta = with lib; {
-    homepage = "https://sing-box.sagernet.org";
-    description = "Universal proxy platform";
-    license = licenses.gpl3Plus;
-    maintainers = with maintainers; [ nickcao ];
-    mainProgram = "sing-box";
-  };
-}
+    meta = with lib; {
+      homepage = "https://sing-box.sagernet.org";
+      description = "Universal proxy platform";
+      license = licenses.gpl3Plus;
+      maintainers = with maintainers; [ nickcao ];
+      mainProgram = "sing-box";
+    };
+  }
+)

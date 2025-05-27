@@ -79,6 +79,14 @@ rec {
     cargoLock = s.cargoLock."Cargo.lock";
   };
 
+  mkGoSource = s: {
+    inherit (s) pname version src;
+    env = {
+      GO111MODULE = "on";
+      GOPROXY = "https://goproxy.cn";
+    };
+  };
+
   mkModuleCfg =
     root: path: prefix:
     let

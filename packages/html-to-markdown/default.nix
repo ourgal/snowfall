@@ -2,23 +2,24 @@
   lib,
   buildGoModule,
   _sources',
+  namespace,
 }:
+buildGoModule (
+  lib.${namespace}.mkGoSource (_sources' ./.)
+  // {
+    vendorHash = "sha256-nMb4moiTMzLSWfe8JJwlH6H//cOHbKWfnM9SM366ey0=";
 
-buildGoModule {
-  inherit (_sources' ./.) pname version src;
+    ldflags = [
+      "-s"
+      "-w"
+    ];
 
-  vendorHash = "sha256-nMb4moiTMzLSWfe8JJwlH6H//cOHbKWfnM9SM366ey0=";
-
-  ldflags = [
-    "-s"
-    "-w"
-  ];
-
-  meta = with lib; {
-    description = "Convert HTML to Markdown. Even works with entire websites and can be extended through rules";
-    homepage = "https://github.com/JohannesKaufmann/html-to-markdown";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
-    mainProgram = "html-to-markdown";
-  };
-}
+    meta = with lib; {
+      description = "Convert HTML to Markdown. Even works with entire websites and can be extended through rules";
+      homepage = "https://github.com/JohannesKaufmann/html-to-markdown";
+      license = licenses.mit;
+      maintainers = with maintainers; [ zxc ];
+      mainProgram = "html-to-markdown";
+    };
+  }
+)
