@@ -307,7 +307,7 @@ VALUES
 'https://github.com/estin/simple-completion-language-server',4,'05/17/2025',null,2,1),
 ('taze',
 '🥦 A modern cli tool that keeps your deps fresh',
-'https://github.com/antfu-collective/taze',4,'05/17/2025',null,1,1),
+'https://github.com/antfu-collective/taze',4,'05/17/2025',null,2,1),
 ('tray-tui',
 'System tray in your terminal',
 'https://github.com/Levizor/tray-tui',5,'05/17/2025',null,1,1),

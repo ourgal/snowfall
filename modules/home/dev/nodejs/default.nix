@@ -13,6 +13,7 @@ args.module (
         "nodejs"
         "pnpm"
         "quick-lint-js"
+        "taze"
         "yarn"
         # keep-sorted end
       ];
