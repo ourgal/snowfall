@@ -73,6 +73,9 @@ pre-commit:
     checkmake:
       glob: Makefile
       run: checkmake {staged_files}
+    uv-sort:
+      glob: pyproject.toml
+      run: uv-sort {staged_files}
 commit-msg:
   commands:
     commitmsgfmt:

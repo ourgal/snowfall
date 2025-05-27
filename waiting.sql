@@ -355,7 +355,7 @@ VALUES
 'https://github.com/hangyav/textLSP',4,'05/18/2025',null,1,1),
 ('uv-sort',
 'Sort uv''s dependencies alphabetically',
-'https://github.com/ninoseki/uv-sort',4,'05/18/2025',null,1,1),
+'https://github.com/ninoseki/uv-sort',4,'05/18/2025',null,2,1),
 ('vim-apathy',
 'apathy.vim: Set the ''path'' option for miscellaneous file types',
 'https://github.com/tpope/vim-apathy/',4,'05/18/2025',null,1,1),

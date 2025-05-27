@@ -21,6 +21,7 @@
     "pyupgrade"
     "rye"
     "uv"
+    "uv-sort"
     "zxpy"
     # keep-sorted end
   ];
