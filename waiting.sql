@@ -292,7 +292,7 @@ VALUES
 'https://github.com/antfu-collective/ni',5,'05/17/2025',null,1,1),
 ('jinja-lsp',
 'Language Server for jinja',
-'https://github.com/uros-5/jinja-lsp',4,'05/17/2025',null,1,1),
+'https://github.com/uros-5/jinja-lsp',4,'05/17/2025',null,2,1),
 ('biliup-rs',
 '命令行投稿(B站)和视频下载工具，提供多种登录方式，支持多p。',
 'https://github.com/biliup/biliup-rs',18,'05/17/2025',null,1,1),
