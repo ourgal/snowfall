@@ -17,7 +17,6 @@ let
     nix =
       let
         mirrors = [
-          "http://harmonia.zxc.cn?priority=9"
           "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org?priority=100"

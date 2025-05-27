@@ -55,6 +55,7 @@ in
       "common"
       "dufs"
       "flaresolverr"
+      "harmonia"
       "homebox"
       "immich"
       "jackett"

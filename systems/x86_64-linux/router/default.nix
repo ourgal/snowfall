@@ -42,6 +42,7 @@ in
       };
       bpftune = enabled;
       iotop = enabled;
+      harmonia = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;
