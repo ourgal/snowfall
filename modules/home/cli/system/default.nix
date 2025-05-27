@@ -33,6 +33,7 @@
     "sysz"
     "toolbox"
     "topgrade"
+    "tray-tui"
     "ugm"
     "wmctrl"
     "xdotool"

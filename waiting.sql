@@ -310,7 +310,7 @@ VALUES
 'https://github.com/antfu-collective/taze',4,'05/17/2025',null,2,1),
 ('tray-tui',
 'System tray in your terminal',
-'https://github.com/Levizor/tray-tui',5,'05/17/2025',null,1,1),
+'https://github.com/Levizor/tray-tui',5,'05/17/2025',null,2,1),
 ('hot-resize',
 'A tool for hot resizing (without reboot) disk partitions and filesystems.',
 'https://github.com/liberodark/hot-resize',5,'05/17/2025',null,1,1),
