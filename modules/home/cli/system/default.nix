@@ -17,6 +17,7 @@
     "bkt"
     "charm-freeze"
     "exfatprogs"
+    "flamelens"
     "geekbench"
     "glib"
     "handlr-regex"

@@ -277,7 +277,7 @@ VALUES
 'https://github.com/mhersson/mpls',4,'05/17/2025',null,2,1),
 ('flamelens',
 'Flamegraph viewer in the terminal',
-'https://github.com/YS-L/flamelens',4,'05/17/2025',null,1,1),
+'https://github.com/YS-L/flamelens',4,'05/17/2025',null,2,1),
 ('t3',
 'Next generation tee with colorized output streams and precise time stamping',
 'https://github.com/flox/t3',3,'05/17/2025',null,1,1),
