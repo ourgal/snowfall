@@ -158,4 +158,5 @@
 (load! "plugins/evil")
 (load! "plugins/zeal-at-point")
 (load! "plugins/just-mode")
+(load! "plugins/just-ts-mode")
 (load! "plugins/treesit-auto")
