@@ -100,6 +100,7 @@
     # keep-sorted start
     "android"
     "ansible"
+    "autoconf"
     "blog"
     "cook"
     "cpp"
