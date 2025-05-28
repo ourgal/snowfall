@@ -12,6 +12,7 @@ args.module (
         "errcheck"
         "go-critic"
         "go-errorlint"
+        "go-import-lint"
         "go-tools"
         "goconst"
         "gofumpt"

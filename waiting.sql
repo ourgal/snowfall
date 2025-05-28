@@ -592,7 +592,7 @@ VALUES
 'https://github.com/freref/fancy-cat',3,'05/18/2025',null,1,1),
 ('go-import-lint',
 'Golang source code analyzer that checks imports order. It verifies that standard, current package, and vendor imports are separated by a line.',
-'https://github.com/hedhyw/go-import-lint',4,'05/18/2025',null,1,1),
+'https://github.com/hedhyw/go-import-lint',4,'05/18/2025',null,2,1),
 ('luau-lsp',
 'Language Server Implementation for Luau',
 'https://github.com/JohnnyMorganz/luau-lsp',4,'05/18/2025',null,1,1),
