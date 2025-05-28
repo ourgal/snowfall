@@ -1,9 +1,7 @@
 {
-  nixPkgs = "grex";
-  myPkgs = [
-    # keep-sorted start
+  nixPkgs = [
     "rexi"
-    "rx"
-    # keep-sorted end
+    "grex"
   ];
+  myPkgs = "rx";
 }

@@ -556,7 +556,7 @@ VALUES
 'https://github.com/Xmarmalade/alisthelper',11,'05/18/2025',null,1,1),
 ('rexi',
 'Terminal UI for Regex Testing',
-'https://github.com/royreznik/rexi',4,'05/18/2025',null,1,1),
+'https://github.com/royreznik/rexi',4,'05/18/2025',null,2,1),
 ('nwg-icon-picker',
 'GTK icon chooser with a text search option',
 'https://github.com/nwg-piotr/nwg-icon-picker',4,'05/18/2025',null,1,1),

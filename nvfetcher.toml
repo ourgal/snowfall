@@ -391,10 +391,6 @@ src.git = "https://github.com/martinn/repoblame"
 fetch.github = "martinn/repoblame"
 cargo_locks = ["Cargo.lock"]
 
-[rexi]
-src.github = "royreznik/rexi"
-fetch.github = "royreznik/rexi"
-
 [rimage]
 src.github = "SalOne22/rimage"
 fetch.github = "SalOne22/rimage"
