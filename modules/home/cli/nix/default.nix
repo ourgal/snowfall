@@ -4,6 +4,7 @@
     "attic-client"
     "cached-nix-shell"
     "deploy-rs"
+    "lon"
     "nix-converter"
     "nix-du"
     "nix-generate-from-cpan"
