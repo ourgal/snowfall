@@ -12,6 +12,7 @@
   nixPkgs = [
     # keep-sorted start
     "actionlint"
+    "autotools-language-server"
     "cachix"
     "checkmake"
     "commitmsgfmt"

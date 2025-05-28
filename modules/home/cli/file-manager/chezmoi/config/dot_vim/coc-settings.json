@@ -44,6 +44,18 @@
         "dhall"
       ]
     },
+    "make": {
+      "command": "autoconf-language-server",
+      "filetypes": [
+        "config"
+      ]
+    },
+    "config": {
+      "command": "make-language-server",
+      "filetypes": [
+        "make"
+      ]
+    },
     "powershell": {
       "command": "powershell-editor-services",
       "filetypes": [

@@ -662,6 +662,14 @@ args.module (
                   "powershell-editor-services"
                 ];
               }
+              {
+                name = "make";
+                language-servers = [
+                  "scls"
+                  "make-language-server"
+                ];
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -776,6 +784,12 @@ args.module (
               };
               powershell-editor-services = {
                 command = "powershell-editor-services";
+              };
+              autoconf-language-server = {
+                command = "autoconf-language-server";
+              };
+              make-language-server = {
+                command = "make-language-server";
               };
             };
           };
