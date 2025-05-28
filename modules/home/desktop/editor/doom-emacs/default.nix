@@ -18,6 +18,7 @@
     "dotenv-mode"
     "eglot-booster"
     "git-time-metric"
+    "just-ts-mode"
     "magit-delta"
     "magit-stats"
     "magit-todos"
