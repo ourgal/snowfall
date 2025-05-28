@@ -1,5 +1,6 @@
 {
   myPkgs = "jj-fzf";
+  nixPkgs = "jjui";
   progs = {
     jujutsu.settings = {
       user = {
