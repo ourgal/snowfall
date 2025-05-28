@@ -595,7 +595,7 @@ VALUES
 'https://github.com/hedhyw/go-import-lint',4,'05/18/2025',null,2,1),
 ('luau-lsp',
 'Language Server Implementation for Luau',
-'https://github.com/JohnnyMorganz/luau-lsp',4,'05/18/2025',null,1,1),
+'https://github.com/JohnnyMorganz/luau-lsp',4,'05/18/2025',null,2,1),
 ('gitsnip',
 'A CLI tool to download specific folders from a git repository.',
 'https://github.com/dagimg-dot/gitsnip/',6,'05/18/2025',null,1,1),

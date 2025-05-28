@@ -116,6 +116,7 @@
     "json"
     "lisp"
     "lua"
+    "luau"
     "markdown"
     "nix"
     "nodejs"
