@@ -2,6 +2,7 @@
   nixPkgs = [
     # keep-sorted start
     "tinymist"
+    "typship"
     "typst"
     "typst-live"
     "typst-lsp"
