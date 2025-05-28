@@ -526,7 +526,7 @@ VALUES
 'https://github.com/bahdotsh/wrkflw',4,'05/18/2025',null,1,1),
 ('mdsf',
 'Format markdown code blocks using your favorite tools',
-'https://github.com/hougesen/mdsf',4,'05/18/2025',null,1,1),
+'https://github.com/hougesen/mdsf',4,'05/18/2025',null,2,1),
 ('OliveTin',
 'OliveTin gives safe and simple access to predefined shell commands from a web interface. ',
 'https://github.com/OliveTin/OliveTin',7,'05/18/2025',null,1,2),

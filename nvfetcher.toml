@@ -1034,11 +1034,6 @@ fetch.vsmarketplace = "hnrk-str.vscode-fugitive"
 src.git = "https://github.com/purarue/pmark"
 fetch.github = "purarue/pmark"
 
-[mdsf]
-src.manual = "v0.8.1"
-fetch.github = "hougesen/mdsf"
-cargo_locks = ["Cargo.lock"]
-
 [mosdns-cn]
 src.github = "IrineSistiana/mosdns-cn"
 fetch.url = "https://github.com/IrineSistiana/mosdns-cn/releases/download/$ver/mosdns-cn-linux-amd64.zip"
