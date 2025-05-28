@@ -13,4 +13,7 @@
   (add-to-list 'eglot-server-programs
                '(just-ts-mode . ("just-lsp")))
   (add-hook 'just-ts-mode-hook 'eglot-ensure)
+  (add-to-list 'eglot-server-programs
+               '(makefile-gmake-mode . ("make-language-server")))
+  (add-hook 'makefile-gmake-mode-hook 'eglot-ensure)
   (setq lua-lsp-dir (expand-file-name "~/.local/share/lua-language-server/")))
