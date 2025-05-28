@@ -18,5 +18,5 @@
     "wiki-tui"
     # keep-sorted end
   ];
-  enable = "tealdeer";
+  enable = "outfieldr";
 }

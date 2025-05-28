@@ -613,7 +613,7 @@ VALUES
 'https://github.com/sjfhsjfh/typship',4,'05/18/2025',null,2,1),
 ('outfieldr',
 'A TLDR client written in Zig',
-'https://gitlab.com/ve-nt/outfieldr',12,'05/18/2025',null,1,1),
+'https://gitlab.com/ve-nt/outfieldr',12,'05/18/2025',null,2,1),
 ('darkly',
 'A modern style for qt applications.',
 'https://github.com/Bali10050/Darkly',5,'05/18/2025',null,1,1),
