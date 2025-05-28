@@ -334,7 +334,7 @@ VALUES
 'https://github.com/wangyu-/UDPspeeder',5,'05/18/2025',null,1,1),
 ('tmux-sessionx',
 'A Tmux session manager, with preview, fuzzy finding, and MORE',
-'https://github.com/omerxx/tmux-sessionx',3,'05/18/2025',null,1,1),
+'https://github.com/omerxx/tmux-sessionx',3,'05/18/2025',null,2,1),
 ('bunster',
 'Compile shell scripts to static binaries.',
 'https://github.com/yassinebenaid/bunster',3,'05/18/2025',null,1,1),
