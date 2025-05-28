@@ -670,6 +670,14 @@ args.module (
                 ];
                 auto-format = true;
               }
+              {
+                name = "just";
+                language-servers = [
+                  "scls"
+                  "just-lsp"
+                ];
+                auto-format = true;
+              }
             ];
             language-server = {
               pyright = {
@@ -790,6 +798,9 @@ args.module (
               };
               make-language-server = {
                 command = "make-language-server";
+              };
+              just-lsp = {
+                command = "just-lsp";
               };
             };
           };

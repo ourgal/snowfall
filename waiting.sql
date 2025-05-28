@@ -490,7 +490,7 @@ VALUES
 'https://github.com/blopker/codebook',4,'05/18/2025',null,1,1),
 ('just-lsp',
 'A language server for just',
-'https://github.com/terror/just-lsp',4,'05/18/2025',null,1,1),
+'https://github.com/terror/just-lsp',4,'05/18/2025',null,2,1),
 ('animeko',
 '集找番、追番、看番的一站式弹幕追番平台，云收藏同步 (Bangumi)，离线缓存，BitTorrent，弹幕云过滤。100% Kotlin/Compose Multiplatform',
 'https://github.com/open-ani/animeko',17,'05/18/2025',null,1,1),

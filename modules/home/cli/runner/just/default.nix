@@ -24,7 +24,12 @@ args.module (
       '';
     in
     {
-      nixPkgs = "just";
+      nixPkgs = [
+        # keep-sorted start
+        "just"
+        "just-lsp"
+        # keep-sorted end
+      ];
       progs.fish.functions.".j" = {
         body = "just --justfile ~/.user.justfile --working-directory . $argv";
         description = "user just";

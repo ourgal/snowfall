@@ -135,6 +135,12 @@
         "fish"
       ]
     },
+    "just-lsp": {
+      "command": "just-lsp",
+      "filetypes": [
+        "just"
+      ]
+    },
     "superhtml": {
       "command": "superhtml",
       "arguments": "lsp",
