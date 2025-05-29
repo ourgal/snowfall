@@ -541,7 +541,7 @@ VALUES
 'https://github.com/flattool/warehouse',5,'05/18/2025',null,1,1),
 ('goverter',
 'Generate type-safe Go converters by defining function signatures.',
-'https://github.com/jmattheis/goverter',4,'05/18/2025',null,1,1),
+'https://github.com/jmattheis/goverter',4,'05/18/2025',null,2,1),
 ('bootdev',
 'A CLI used to complete coding challenges and lessons on Boot.dev',
 'https://github.com/bootdotdev/bootdev',4,'05/18/2025',null,1,1),

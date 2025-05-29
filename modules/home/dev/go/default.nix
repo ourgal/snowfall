@@ -19,6 +19,7 @@ args.module (
         "golangci-lint"
         "golint"
         "gopls"
+        "goverter"
         "revive"
         "unparam"
         # keep-sorted end
