@@ -1215,10 +1215,6 @@ cargo_locks = ["Cargo.lock"]
 src.git = "https://github.com/jdtsmith/eglot-booster"
 fetch.github = "jdtsmith/eglot-booster"
 
-[emacs-zoxide]
-src.git = "https://github.com/Vonfry/zoxide.el"
-fetch.github = "Vonfry/zoxide.el"
-
 [emacs-perltidy]
 src.git = "https://github.com/perl-ide/perltidy.el"
 fetch.github = "perl-ide/perltidy.el"
