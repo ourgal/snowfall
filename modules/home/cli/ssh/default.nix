@@ -17,6 +17,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "fast-ssh"
+        "ggh"
         "openssl"
         "ssh-tools"
         "sshpass"

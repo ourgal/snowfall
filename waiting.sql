@@ -475,7 +475,7 @@ VALUES
 'https://github.com/Zephyruso/zashboard',19,'05/18/2025',null,2,1),
 ('ggh',
 'Recall your SSH sessions (also search your SSH config file)',
-'https://github.com/byawitz/ggh',5,'05/18/2025',null,1,1),
+'https://github.com/byawitz/ggh',5,'05/18/2025',null,2,1),
 ('hevi',
 'Hex viewer',
 'https://github.com/Arnau478/hevi',4,'05/18/2025',null,1,1),
