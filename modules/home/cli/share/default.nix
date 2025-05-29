@@ -10,6 +10,7 @@
     "croc"
     "dufs"
     "ffsend"
+    "goshs"
     "gossa"
     "imgurbash2"
     "magic-wormhole-rs"

@@ -484,7 +484,7 @@ VALUES
 'https://github.com/KNawm/speed-cloudflare-cli',8,'05/18/2025',null,2,1),
 ('goshs',
 'A SimpleHTTPServer written in Go, enhanced with features and with a nice design - https://goshs.de',
-'https://github.com/patrickhener/goshs',11,'05/18/2025',null,1,1),
+'https://github.com/patrickhener/goshs',11,'05/18/2025',null,2,1),
 ('codebook',
 'Spell Checker for Code',
 'https://github.com/blopker/codebook',4,'05/18/2025',null,1,1),
