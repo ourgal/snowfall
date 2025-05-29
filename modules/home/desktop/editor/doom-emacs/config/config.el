@@ -160,4 +160,3 @@
 (load! "plugins/just-mode")
 (load! "plugins/just-ts-mode")
 (load! "plugins/treesit-auto")
-(load! "plugins/nix-ts-mode")
