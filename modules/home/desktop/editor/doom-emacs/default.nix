@@ -30,6 +30,7 @@
     "pangu-spacing"
     "perltidy"
     "treesit-grammars"
+    "vimscript-ts-mode"
     "zeal-at-point"
     "zoxide"
     # keep-sorted end

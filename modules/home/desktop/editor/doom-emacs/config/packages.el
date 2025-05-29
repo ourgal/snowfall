@@ -49,9 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; vim
-(package! vimrc-mode)
-
 ;; auto save
 (package! super-save)
 

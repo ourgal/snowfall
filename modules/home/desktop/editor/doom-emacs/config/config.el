@@ -126,7 +126,7 @@
 
 (load! "keymap")
 
-(load! "plugins/vimrc-mode")
+(load! "plugins/vimscript-ts-mode")
 (load! "plugins/super-save")
 (load! "plugins/persp-mode")
 (load! "plugins/apheleia")
