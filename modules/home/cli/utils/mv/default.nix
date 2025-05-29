@@ -5,7 +5,6 @@
     "dext"
     "dlorg"
     "files-sort"
-    "mnamer"
     # keep-sorted end
   ];
   nixPkgs = [
@@ -15,6 +14,7 @@
     "f2"
     "massren"
     "mmv-go"
+    "mnamer"
     "nomino"
     "regname"
     "ren-find"
