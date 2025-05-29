@@ -1,6 +1,6 @@
 ;;; plugins/treesit-auto.el -*- lexical-binding: t; -*-
 
-(use-package treesit-auto
+(use-package! treesit-auto
   :custom
   (treesit-auto-install 'prompt)
   :config
