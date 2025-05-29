@@ -517,7 +517,7 @@ VALUES
 'https://github.com/nkanaev/yarr',7,'05/18/2025',null,1,2),
 ('regname',
 'Mass renamer TUI written in Rust',
-'https://github.com/linkdd/regname?tab=readme-ov-file',3,'05/18/2025',null,1,1),
+'https://github.com/linkdd/regname?tab=readme-ov-file',3,'05/18/2025',null,2,1),
 ('repro-env',
 'Dependency lockfiles for reproducible build environments 📦🔒',
 'https://github.com/kpcyrd/repro-env',4,'05/18/2025',null,1,1),

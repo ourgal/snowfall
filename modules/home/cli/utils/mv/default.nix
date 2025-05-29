@@ -16,6 +16,7 @@
     "massren"
     "mmv-go"
     "nomino"
+    "regname"
     "ren-find"
     "rnr"
     # keep-sorted end
