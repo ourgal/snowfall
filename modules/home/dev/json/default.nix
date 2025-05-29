@@ -17,6 +17,7 @@
     "jo"
     "jp"
     "jq"
+    "jqfmt"
     "jql"
     "jqp"
     "jsonfmt"

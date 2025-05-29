@@ -535,7 +535,7 @@ VALUES
 'https://github.com/Breakthrough/PySceneDetect',17,'05/18/2025',null,1,1),
 ('jqfmt',
 'like gofmt, but for jq',
-'https://github.com/noperator/jqfmt',4,'05/18/2025',null,1,1),
+'https://github.com/noperator/jqfmt',4,'05/18/2025',null,2,1),
 ('warehouse',
 'A versatile toolbox for viewing flatpak info, managing user data, and batch managing installed flatpaks',
 'https://github.com/flattool/warehouse',5,'05/18/2025',null,1,1),
