@@ -553,7 +553,7 @@ VALUES
 'https://github.com/tiny-craft/tiny-rdm',4,'05/18/2025',null,1,1),
 ('alisthelper',
 'Alist Helper is an application developed using Flutter, designed to simplify the use of the desktop version of alist. It can manage alist, allowing you to easily start and stop the alist program.',
-'https://github.com/Xmarmalade/alisthelper',11,'05/18/2025',null,1,1),
+'https://github.com/Xmarmalade/alisthelper',11,'05/18/2025',null,2,1),
 ('rexi',
 'Terminal UI for Regex Testing',
 'https://github.com/royreznik/rexi',4,'05/18/2025',null,2,1),
