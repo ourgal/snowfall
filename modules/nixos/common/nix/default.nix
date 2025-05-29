@@ -14,17 +14,21 @@ let
     enabled
     ip
     ;
+  inherit (config.${namespace}.user) host;
   value = {
     nix =
       let
-        mirrors = [
-          "http://${ip.home}?priority=10"
-          "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
-          "https://cache.nixos.org"
-          "https://nix-community.cachix.org?priority=100"
-          "http://${ip.brix}?priority=100"
-          "http://${ip.router}?priority=100"
-        ];
+        mirrors =
+          [
+            "http://${ip.home}:50000?priority=10"
+            "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
+            "https://cache.nixos.org"
+            "https://nix-community.cachix.org?priority=100"
+          ]
+          ++ lib.optionals (host == "home") [
+            "http://${ip.brix}:50000?priority=100"
+            "http://${ip.router}:50000?priority=100"
+          ];
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
