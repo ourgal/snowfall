@@ -28,6 +28,7 @@
     "nov"
     "pangu-spacing"
     "perltidy"
+    "treesit-grammars"
     "zeal-at-point"
     "zoxide"
     # keep-sorted end
