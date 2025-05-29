@@ -175,7 +175,6 @@
       };
 
       overlays = with inputs; [
-        wired.overlays.default
         # neovim-nightly-overlay.overlays.default
         snowfall-flake.overlays."package/flake"
         snowfall-thaw.overlays."package/thaw"
