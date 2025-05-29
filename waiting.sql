@@ -481,7 +481,7 @@ VALUES
 'https://github.com/Arnau478/hevi',4,'05/18/2025',null,2,1),
 ('speed-cloudflare-cli',
 '📈 Measure the speed and consistency of your internet connection using speed.cloudflare.com',
-'https://github.com/KNawm/speed-cloudflare-cli',8,'05/18/2025',null,1,1),
+'https://github.com/KNawm/speed-cloudflare-cli',8,'05/18/2025',null,2,1),
 ('goshs',
 'A SimpleHTTPServer written in Go, enhanced with features and with a nice design - https://goshs.de',
 'https://github.com/patrickhener/goshs',11,'05/18/2025',null,1,1),
