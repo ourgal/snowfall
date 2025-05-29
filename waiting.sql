@@ -565,7 +565,7 @@ VALUES
 'https://github.com/fannheyward/coc-basedpyright',4,'05/18/2025',null,1,1),
 ('pkl',
 'Configuration-as-code language with rich validation and tooling',
-'https://pkl-lang.org/',4,'05/18/2025',null,1,1),
+'https://pkl-lang.org/',4,'05/18/2025',null,2,1),
 ('SkyEmu',
 'Game Boy Advance, Game Boy, Game Boy Color, and DS Emulator',
 'https://github.com/skylersaleh/SkyEmu',16,'05/18/2025',null,1,1),
