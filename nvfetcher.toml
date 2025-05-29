@@ -275,11 +275,6 @@ src.github = "daniel7grant/gw"
 fetch.github = "daniel7grant/gw"
 cargo_locks = ["Cargo.lock"]
 
-[hexpatch]
-src.github = "Etto48/HexPatch"
-fetch.github = "Etto48/HexPatch"
-cargo_locks = ["Cargo.lock"]
-
 [jerry]
 src.git = "https://github.com/justchokingaround/jerry"
 fetch.github = "justchokingaround/Jerry"
