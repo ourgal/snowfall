@@ -478,7 +478,7 @@ VALUES
 'https://github.com/byawitz/ggh',5,'05/18/2025',null,2,1),
 ('hevi',
 'Hex viewer',
-'https://github.com/Arnau478/hevi',4,'05/18/2025',null,1,1),
+'https://github.com/Arnau478/hevi',4,'05/18/2025',null,2,1),
 ('speed-cloudflare-cli',
 '📈 Measure the speed and consistency of your internet connection using speed.cloudflare.com',
 'https://github.com/KNawm/speed-cloudflare-cli',8,'05/18/2025',null,1,1),
