@@ -15,6 +15,7 @@
     # keep-sorted start
     "alert"
     "annotate"
+    "chinese-conv"
     "dotenv-mode"
     "eglot-booster"
     "git-time-metric"
