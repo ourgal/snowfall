@@ -2,6 +2,7 @@
   enable = [
     # keep-sorted start
     "traces-vim"
+    "vim-eunuch"
     "vim-mkdir"
     "vim-suda"
     "vimsuggest"
