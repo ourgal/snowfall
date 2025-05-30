@@ -658,4 +658,7 @@ VALUES
 'https://github.com/Skardyy/mcat',3,'05/24/2025',null,3,1),
 ('lexy',
 'Lexy is a lightweight CLI tool that fetches programming tutorials from "Learn X in Y Minutes" directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow.',
-'https://github.com/antoniorodr/lexy',12,'05/24/2025',null,3,1);
+'https://github.com/antoniorodr/lexy',12,'05/24/2025',null,3,1),
+('zlint',
+'A linter for the Zig programming language',
+'https://github.com/DonIsaac/zlint',4,'05/30/2025',null,1,1);
