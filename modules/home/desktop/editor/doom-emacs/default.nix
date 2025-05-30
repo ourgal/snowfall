@@ -15,6 +15,7 @@
     # keep-sorted start
     "alert"
     "annotate"
+    "bing-dict"
     "chinese-conv"
     "chinese-number"
     "dotenv-mode"
