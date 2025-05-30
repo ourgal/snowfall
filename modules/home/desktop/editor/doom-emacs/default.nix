@@ -16,6 +16,7 @@
     "alert"
     "annotate"
     "chinese-conv"
+    "chinese-number"
     "dotenv-mode"
     "eglot-booster"
     "git-time-metric"

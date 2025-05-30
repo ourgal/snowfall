@@ -161,3 +161,4 @@
 (load! "plugins/just-ts-mode")
 (load! "plugins/treesit-auto")
 (load! "plugins/chinese-conv")
+(load! "plugins/chinese-number")
