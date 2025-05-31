@@ -98,6 +98,10 @@ args.module (
           trusted = false;
           git = "soft:work";
         };
+        "fw/projects/default/epub-blog" = toTOML {
+          trusted = false;
+          git = "soft:epub-blog";
+        };
       };
       value = {
         systemd.user.tmpfiles.rules = [ "d ${config.home.homeDirectory}/.emacs.d - - - -" ];
