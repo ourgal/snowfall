@@ -4,6 +4,7 @@
     "bear"
     "ccls"
     "clang-tools"
+    "cmake"
     "cppcheck"
     "cpplint"
     "flawfinder"
