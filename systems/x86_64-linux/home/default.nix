@@ -28,6 +28,7 @@ in
         scream = enabled;
         syncthing = enabled;
         transmission = enabled;
+        disable = enabled;
       };
       sops-nix = enabled // {
         desktops = enabled;
