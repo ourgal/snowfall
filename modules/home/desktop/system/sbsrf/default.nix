@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs disabled enabled;
+      inherit (args)
+        pkgs
+        disabled
+        enabled
+        namespace
+        ;
     in
     {
       dataFiles."fcitx5/rime/sbfm.custom.yaml" = {
@@ -118,7 +123,7 @@ args.module (
           type = "fcitx5";
           fcitx5 = {
             addons = with pkgs; [
-              fcitx5-rime
+              (fcitx5-rime.override { rimeDataPkgs = [ pkgs.${namespace}.sbsrf-rime-data ]; })
               fcitx5-nord
               fcitx5-mozc
               fcitx5-tokyonight
