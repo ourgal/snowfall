@@ -7,17 +7,12 @@ args.module (
     in
     {
       myPkgs = "git-toolbelt";
-      progs = [
-        "scmpuff"
-        {
-          git.aliases = {
-            f = "!${pkgs.zsh-forgit}/bin/git-forgit";
-            fa = "!${pkgs.zsh-forgit}/bin/git-forgit add";
-            fr = "!${pkgs.zsh-forgit}/bin/git-forgit reset_head";
-            fchf = "!${pkgs.zsh-forgit}/bin/git-forgit checkout_file";
-          };
-        }
-      ];
+      progs.git.aliases = {
+        f = "!${pkgs.zsh-forgit}/bin/git-forgit";
+        fa = "!${pkgs.zsh-forgit}/bin/git-forgit add";
+        fr = "!${pkgs.zsh-forgit}/bin/git-forgit reset_head";
+        fchf = "!${pkgs.zsh-forgit}/bin/git-forgit checkout_file";
+      };
       nixPkgs = [
         # keep-sorted start
         "bit"
@@ -25,7 +20,12 @@ args.module (
         "zsh-forgit"
         # keep-sorted end
       ];
-      enable = "gut";
+      enable = [
+        # keep-sorted start
+        "gut"
+        "scmpuff"
+        # keep-sorted end
+      ];
     }
   )
 )

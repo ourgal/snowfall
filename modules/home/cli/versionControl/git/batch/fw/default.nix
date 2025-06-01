@@ -3,7 +3,15 @@ args.module (
   args
   // (
     let
-      inherit (args) config toTOML;
+      inherit (args)
+        config
+        toTOML
+        lib
+        namespace
+        ;
+      soft = lib.${namespace}.git.hostAliases.soft.name;
+      myGithub = lib.${namespace}.git.hostAliases.myGithub.name;
+      github = lib.${namespace}.git.hostAliases.github.name;
     in
     {
       nixPkgs = "fw";
@@ -36,7 +44,7 @@ args.module (
         };
         "fw/projects/default/chezmoi-windows" = toTOML {
           trusted = false;
-          git = "soft:chezmoi-windows";
+          git = "${soft}:chezmoi-windows";
           # after_clone = "echo BROCODE!!";
           # after_workon = "echo workon fw";
           # override_path = "/some/fancy/path/to/fw";
@@ -54,53 +62,53 @@ args.module (
         };
         "fw/projects/default/docker" = toTOML {
           trusted = false;
-          git = "soft:docker";
+          git = "${soft}:docker";
         };
         "fw/projects/default/home-manager" = toTOML {
           trusted = false;
-          git = "soft:home-manager";
+          git = "${soft}:home-manager";
         };
         "fw/projects/default/k3s" = toTOML {
           trusted = false;
-          git = "soft:k3s";
+          git = "${soft}:k3s";
         };
         "fw/projects/default/learning" = toTOML {
           trusted = false;
-          git = "soft:learning";
+          git = "${soft}:learning";
         };
         "fw/projects/default/linovel" = toTOML {
           trusted = false;
-          git = "soft:linovel";
+          git = "${soft}:linovel";
         };
         "fw/projects/default/nb" = toTOML {
           trusted = false;
-          git = "git@github.com:ourgal/nb.git";
+          git = "${myGithub}:nb";
         };
         "fw/projects/default/nixpkgs" = toTOML {
           trusted = false;
-          git = "git@github.com:NixOS/nixpkgs.git";
+          git = "${github}:NixOS/nixpkgs";
         };
         "fw/projects/default/snowfall" = toTOML {
           trusted = false;
-          git = "soft:snowfall";
+          git = "${soft}:snowfall";
           additional_remotes = [
             {
               name = "github";
-              git = "git@github.com:ourgal/snowfall.git";
+              git = "${myGithub}:snowfall";
             }
           ];
         };
         "fw/projects/default/wiki" = toTOML {
           trusted = false;
-          git = "soft:wiki";
+          git = "${soft}:wiki";
         };
         "fw/projects/default/work" = toTOML {
           trusted = false;
-          git = "soft:work";
+          git = "${soft}:work";
         };
         "fw/projects/default/epub-blog" = toTOML {
           trusted = false;
-          git = "soft:epub-blog";
+          git = "${soft}:epub-blog";
         };
       };
       value = {
