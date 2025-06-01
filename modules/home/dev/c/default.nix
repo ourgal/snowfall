@@ -5,6 +5,7 @@
     "clang-tools"
     "cmake"
     "flawfinder"
+    "ninja"
     "splint"
     # keep-sorted end
   ];

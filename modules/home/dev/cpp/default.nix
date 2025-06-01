@@ -9,6 +9,7 @@
     "cpplint"
     "flawfinder"
     "gcc"
+    "ninja"
     # keep-sorted end
   ];
 }
