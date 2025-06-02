@@ -165,51 +165,87 @@
         allowUnfree = true;
         joypixels.acceptLicense = true;
         allowUnfreePredicate = pkg: builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "nvdia-x11" ];
-        permittedInsecurePackages = [
-          "openssl-1.1.1w" # for koreader
-          "dotnet-sdk-6.0.428" # for sonarr
-          "aspnetcore-runtime-6.0.36" # for sonarr
-          "beekeeper-studio-5.1.5"
-          "ventoy-1.1.05"
-        ];
+        permittedInsecurePackages =
+          let
+            koreader = [ "openssl-1.1.1w" ];
+            sonarr = [
+              "dotnet-sdk-6.0.428"
+              "aspnetcore-runtime-6.0.36"
+            ];
+            beekeeper = [ "beekeeper-studio-5.1.5" ];
+            ventoy = [ "ventoy-1.1.05" ];
+          in
+          koreader ++ sonarr ++ beekeeper ++ ventoy;
       };
 
-      overlays = with inputs; [
-        # neovim-nightly-overlay.overlays.default
-        snowfall-flake.overlays."package/flake"
-        snowfall-thaw.overlays."package/thaw"
-        snowfall-drift.overlays."package/drift"
-        nixpkgs-f2k.overlays.window-managers
-        nvfetcher.overlays.default
-        nix-vscode-extensions.overlays.default
-        pog.overlays.${system}.default
-        nur.overlays.default
-        # telega-overlay.overlay
-        nix-monitored.overlays.default
-      ];
+      overlays =
+        let
+          snowfall-flake = inputs.snowfall-flake.overlays."package/flake";
+          snowfall-thaw = inputs.snowfall-thaw.overlays."package/thaw";
+          snowfall-drift = inputs.snowfall-drift.overlays."package/drift";
+          nixpkgs-f2k = inputs.nixpkgs-f2k.overlays.window-managers;
+          nvfetcher = inputs.nvfetcher.overlays.default;
+          nix-vscode-extensions = inputs.nix-vscode-extensions.overlays.default;
+          pog = inputs.pog.overlays.${system}.default;
+          nur = inputs.nur.overlays.default;
+          nix-monitored = inputs.nix-monitored.overlays.default;
+        in
+        [
+          snowfall-flake
+          snowfall-thaw
+          snowfall-drift
+          nixpkgs-f2k
+          nvfetcher
+          nix-vscode-extensions
+          pog
+          nur
+          nix-monitored
+        ];
 
       # Add modules to all NixOS systems.
-      systems.modules.nixos = with inputs; [
-        niri.nixosModules.niri
-        catppuccin.nixosModules.catppuccin
-        disko.nixosModules.disko
-        arion.nixosModules.arion
-        sops-nix.nixosModules.sops
-        nix-monitored.nixosModules.default
-      ];
+      systems.modules.nixos =
+        let
+          niri = inputs.niri.nixosModules.niri;
+          catppuccin = inputs.catppuccin.nixosModules.catppuccin;
+          disko = inputs.disko.nixosModules.disko;
+          arion = inputs.arion.nixosModules.arion;
+          sops-nix = inputs.sops-nix.nixosModules.sops;
+          nix-monitored = inputs.nix-monitored.nixosModules.default;
+        in
+        [
+          niri
+          catppuccin
+          disko
+          arion
+          sops-nix
+          nix-monitored
+        ];
 
-      homes.modules = with inputs; [
-        homeage.homeManagerModules.homeage
-        sops-nix.homeManagerModules.sops
-        nix-colors.homeManagerModules.default
-        wired.homeManagerModules.default
-        nix-index-database.hmModules.nix-index
-        catppuccin.homeModules.catppuccin
-        nixvim.homeManagerModules.nixvim
-        nyaa.homeManagerModule
-        nvchad4nix.homeManagerModule
-        nix-doom-emacs-unstraightened.hmModule
-      ];
+      homes.modules =
+        let
+          homeage = inputs.homeage.homeManagerModules.homeage;
+          sops-nix = inputs.sops-nix.homeManagerModules.sops;
+          nix-colors = inputs.nix-colors.homeManagerModules.default;
+          wired = inputs.wired.homeManagerModules.default;
+          nix-index-database = inputs.nix-index-database.hmModules.nix-index;
+          catppuccin = inputs.catppuccin.homeModules.catppuccin;
+          nixvim = inputs.nixvim.homeManagerModules.nixvim;
+          nyaa = inputs.nyaa.homeManagerModule;
+          nvchad4nix = inputs.nvchad4nix.homeManagerModule;
+          nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
+        in
+        [
+          homeage
+          sops-nix
+          nix-colors
+          wired
+          nix-index-database
+          catppuccin
+          nixvim
+          nyaa
+          nvchad4nix
+          nix-doom-emacs-unstraightened
+        ];
 
       templates = {
         base.description = "base template";
