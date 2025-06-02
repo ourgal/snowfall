@@ -661,4 +661,13 @@ VALUES
 'https://github.com/antoniorodr/lexy',12,'05/24/2025',null,3,1),
 ('zlint',
 'A linter for the Zig programming language',
-'https://github.com/DonIsaac/zlint',4,'05/30/2025',null,1,1);
+'https://github.com/DonIsaac/zlint',4,'05/30/2025',null,1,1),
+('efibooteditor',
+'Boot Editor for (U)EFI based systems',
+'https://github.com/Neverous/efibooteditor',5,'06/02/2025',null,1,1),
+('jellytui',
+'TUI Jellyfin Client using MPV',
+'https://github.com/tyrantlink/jellytui',17,'06/02/2025',null,1,1),
+('enroot',
+'A simple yet powerful tool to turn traditional container/OS images into unprivileged sandboxes.',
+'https://github.com/NVIDIA/enroot',4,'06/02/2025',null,1,1);
