@@ -28,6 +28,7 @@
     "magit-todos"
     "move-text"
     "nftables-mode"
+    "notmuch"
     "nov"
     "pangu-spacing"
     "perltidy"
