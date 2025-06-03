@@ -108,7 +108,7 @@ args.module (
         };
         "fw/projects/default/epub-blog" = toTOML {
           trusted = false;
-          git = "${soft}:epub-blog";
+          git = "${myGithub}:epub-blog";
         };
       };
       value = {
