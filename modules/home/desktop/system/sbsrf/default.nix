@@ -11,6 +11,7 @@ args.module (
         ;
     in
     {
+      # copy from ~/.local/share/fcitx5/rime/build/sbfm.schema.yaml
       dataFiles."fcitx5/rime/sbfm.custom.yaml" = {
         patch = {
           switches = [
