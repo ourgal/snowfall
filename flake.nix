@@ -111,10 +111,7 @@
 
   nixConfig = {
     extra-substituters = [
-      "http://home.local:50000?priority=9"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
-      "http://brix.local:50000?priority=99"
-      "http://router.local:50000?priority=98"
       "https://nix-community.cachix.org?priority=100"
     ];
     extra-trusted-public-keys = [

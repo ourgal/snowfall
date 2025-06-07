@@ -20,14 +20,14 @@ let
       let
         mirrors =
           [
-            "http://${ip.home}:50000?priority=10"
+            "http://${ip.home}:50000?priority=9"
             "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
             "https://cache.nixos.org"
             "https://nix-community.cachix.org?priority=100"
           ]
           ++ lib.optionals (host == "home") [
-            "http://${ip.brix}:50000?priority=100"
-            "http://${ip.router}:50000?priority=100"
+            "http://${ip.brix}:50000?priority=9"
+            "http://${ip.router}:50000?priority=9"
           ];
       in
       {
