@@ -9,6 +9,7 @@
   nixPkgs = [
     # keep-sorted start
     "clashtui"
+    "cloudflared"
     "gg"
     # keep-sorted end
   ];

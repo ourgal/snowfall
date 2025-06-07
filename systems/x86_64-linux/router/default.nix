@@ -39,10 +39,12 @@ in
       sops-nix = enabled // {
         router = enabled;
         ssh = enabled;
+        cloudflared = enabled;
       };
       bpftune = enabled;
       iotop = enabled;
       harmonia = enabled;
+      cloudflared = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;

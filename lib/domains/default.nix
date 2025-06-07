@@ -2,6 +2,7 @@
 let
   inherit (builtins) foldl';
   domain = "zxc.cn";
+  xyzDomain = lib.strings.fileContents ./xyzDomain.key;
   services = [
     # keep-sorted start
     "alist"
@@ -49,6 +50,9 @@ let
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
     anki-sync-server = "anki.${domain}";
   };
+  xyzDomains = (foldl' (acc: v: acc // { "${v}" = "${v}.${xyzDomain}"; }) { } services) // {
+    anki-sync-server = "anki.${xyzDomain}";
+  };
   fakeIpExclude = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
   domainBlackList = lib.strings.splitString "\n" (lib.strings.fileContents ./blacklist.key);
   domainWhiteList = lib.strings.splitString "\n" (lib.strings.fileContents ./whitelist.key);
@@ -67,5 +71,7 @@ in
     domainBlackList
     domainWhiteList
     redirectDomains
+    xyzDomain
+    xyzDomains
     ;
 }

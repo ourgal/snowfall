@@ -10,6 +10,7 @@ let
     nixosModule
     enabled
     domains
+    xyzDomains
     getDirname
     mkFireholRule
     ;
@@ -41,6 +42,9 @@ let
                   dns duckdns ${token}
               }
               reverse_proxy http://localhost:${toString port}
+            '';
+            "${xyzDomains.${name}}".extraConfig = ''
+              reverse_proxy :${toString port}
             '';
           };
         };
