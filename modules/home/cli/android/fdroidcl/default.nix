@@ -81,6 +81,7 @@ args.module (
         "com.catpuppyapp.puppygit.play.pro" # PuppyGit Pro is a Git client for Android. Open Source, no Ads and free to use.
       ];
       editor = [ "com.droidvim" ];
+      termux = [ "com.termux" ];
     in
     {
       myPkgs = "fdroidcl";
@@ -134,12 +135,13 @@ args.module (
                 ++ ebook
                 ++ integratetion
                 ++ IME
+                ++ termux
                 ++ weather;
               inherit repos;
             }
             {
               id = "sub-phone";
-              apps = phone ++ battery ++ sync ++ backup ++ integratetion ++ IME ++ weather;
+              apps = phone ++ battery ++ sync ++ backup ++ integratetion ++ IME ++ weather ++ termux;
               inherit repos;
             }
             {
@@ -160,6 +162,7 @@ args.module (
                 ++ weather
                 ++ share
                 ++ git
+                ++ termux
                 ++ editor;
               inherit repos;
             }
