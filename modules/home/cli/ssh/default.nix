@@ -42,11 +42,29 @@ args.module (
           port = 443;
           user = "git";
         };
-        m6 = {
-          host = "m6";
+        termux = {
+          host = "termux";
           hostname = "localhost";
           port = 8022;
           user = "u0_a420";
+        };
+        m6 = {
+          host = "m6";
+          hostname = ip.m6;
+          port = 2222;
+          user = "u0_a420";
+        };
+        s10 = {
+          host = "s10";
+          hostname = ip.s10;
+          port = 2222;
+          user = "u0_a661";
+        };
+        u20 = {
+          host = "u20";
+          hostname = ip.u20;
+          port = 2222;
+          user = "u0_a519";
         };
       } // mkSshConfig;
     }

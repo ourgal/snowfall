@@ -67,6 +67,9 @@ let
           "${mac.nuc},${ip.nuc},nuc"
           "${mac.ct3003},${ip.ct3003},CT3003"
           "${mac.yanyu},${ip.yanyu},yanyu"
+          "${mac.s10},${ip.s10},s10"
+          "${mac.m6},${ip.m6},m6"
+          "${mac.u20},${ip.u20},u20"
         ];
         interface = cfg.lan;
 
