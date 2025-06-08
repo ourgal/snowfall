@@ -44,6 +44,8 @@ in
       homeTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKXfKLJn7V0doSMw/B9c06hHuC4QyUoqXBeHOVBSUzikK8Mx05KTZ/vP56oRLufycEWh231UlRNNT/tAJxUGXG4= zxc@home";
       surfaceTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK4Vmz7OBbHKVXZPeJ9AD2H4UPbogSDn2qU14ZDEiShu2cdnBxM1VT4hye3kLvd5cGv0rCzeswzhpy00YRItiYg= zxc@surface";
       airTpm = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDzUqUSlLW5aVxSYjuE4FSniaKl5S3KmFO1V58lLyJh9WddEwqH/phTlxKA8KWRHDFdEge96LVHM6t/aeLZb52c= zxc@air";
+      m6 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIvQOmpSPfRNMU17258cVsM08oSGOB/d01d+nQR087I u0_a420@localhost";
+      nuc = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDeK+BbH3sS+809Q4bUWph1QFIPLIQMxWz5BU0MRDOyb2WKmK+83mXxNbpTf8bR+O5bnf9e8E/o16pKmDjGQ3mcOinBjrRc2d561lfXqtQ33WJwWVlrY+dEaaimldUxF3P9T29/DIKWIL+7u/gFwZuveEBJ7peSxcbjN0U+qk6BzKrS6TKA+IlGL6464dDNjdL5lcmea+1Oo6VIFUJVF9Ihh3DRTaciHJ17jTA2K2sx+rBrLYZ7PpdV0Sf6/slUiYppWTajmgB+h4vX9aSa0rU7jwDeSHhav+CYqxyHVVJlKZQYEABDYrC1uCGVtXEAy2+fEdIjjzpT+0F4bQSqZzNuNBzYs0EPgEy1EawmIzWO12MLpjnJ555BO6wxNZvOd7R/+Jgsdt27O3j/2vFthOI7+kUVHVSQfmq6KVOX6Qdk90MFi8CukpCo5gzgtpSjdgRR/Vrl0MJeWoyallVhcNpOr3oDCtY51m2WoBmycKYZtoRNw+5h8cu8rz6E2aH62zE= zxc@nuc";
     };
     duckdns = {
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
