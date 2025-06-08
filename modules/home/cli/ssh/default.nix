@@ -42,6 +42,12 @@ args.module (
           port = 443;
           user = "git";
         };
+        m6 = {
+          host = "m6";
+          hostname = "localhost";
+          port = 8022;
+          user = "u0_a420";
+        };
       } // mkSshConfig;
     }
   )
