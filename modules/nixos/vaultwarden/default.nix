@@ -31,8 +31,7 @@ let
         let
           inherit (config.${namespace}.user.duckdns) token domain;
         in
-        enabled
-        // {
+        {
           virtualHosts = {
             "http://${domains.${name}}".extraConfig = ''
               reverse_proxy http://localhost:${toString port}

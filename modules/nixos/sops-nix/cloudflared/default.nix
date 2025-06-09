@@ -7,6 +7,7 @@ let
       secrets = {
         "cloudflared/cert" = { };
         "cloudflared/xyz" = { };
+        "cloudflared/navidrome" = { };
       };
     };
   };

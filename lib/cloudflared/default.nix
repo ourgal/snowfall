@@ -1,4 +1,8 @@
 { lib, ... }:
+let
+  inherit (lib.strings) fileContents;
+  inherit (builtins) fromTOML;
+in
 {
-  cloudflaredTunnelID = lib.strings.fileContents ./id.key;
+  cloudflaredTunnelID = fromTOML (fileContents ./id.key);
 }

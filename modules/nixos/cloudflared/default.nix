@@ -4,24 +4,42 @@ let
   inherit (lib.${namespace})
     nixosModule
     enabled
-    xyzDomain
-    domain
+    xyzDomains
+    domains
     cloudflaredTunnelID
     ;
   value = {
     services.cloudflared = enabled // {
       certificateFile = config.sops.secrets."cloudflared/cert".path;
       tunnels = {
-        "${cloudflaredTunnelID}" = {
-          default = "http_status:404";
-          credentialsFile = config.sops.secrets."cloudflared/xyz".path;
-          originRequest.httpHostHeader = "vaultwarden.${domain}";
-          ingress = {
-            "vaultwarden.${xyzDomain}" = {
-              service = "http://vaultwarden.${domain}:80";
+        "${cloudflaredTunnelID.vaultwarden}" =
+          let
+            name = "vaultwarden";
+          in
+          {
+            default = "http_status:404";
+            credentialsFile = config.sops.secrets."cloudflared/xyz".path;
+            originRequest.httpHostHeader = domains.${name};
+            ingress = {
+              "${xyzDomains.${name}}" = {
+                service = "http://${domains.${name}}:80";
+              };
             };
           };
-        };
+        "${cloudflaredTunnelID.navidrome}" =
+          let
+            name = "navidrome";
+          in
+          {
+            default = "http_status:404";
+            credentialsFile = config.sops.secrets."cloudflared/navidrome".path;
+            originRequest.httpHostHeader = domains.${name};
+            ingress = {
+              "${xyzDomains.${name}}" = {
+                service = "http://${domains.${name}}:80";
+              };
+            };
+          };
       };
     };
   };

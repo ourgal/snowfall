@@ -10,6 +10,7 @@ let
     nixosModule
     enabled
     domains
+    xyzDomains
     getDirname
     mkFireholRule
     mkCaddyProxy
@@ -26,10 +27,18 @@ let
           Port = port;
         };
       };
-      caddy = mkCaddyProxy {
-        domain = domains.${name};
-        inherit port;
-      };
+      caddy =
+        (mkCaddyProxy {
+          domain = domains.${name};
+          inherit port;
+        })
+        // {
+          virtualHosts = {
+            "${xyzDomains.${name}}".extraConfig = ''
+              reverse_proxy :${toString port}
+            '';
+          };
+        };
       borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };
     systemd.services.navidrome.serviceConfig = {
