@@ -82,6 +82,10 @@ args.module (
       ];
       editor = [ "com.droidvim" ];
       termux = [ "com.termux" ];
+      todo = [
+        "de.tnmgl.ntodotxt"
+        "org.tasks"
+      ];
     in
     {
       myPkgs = "fdroidcl";
@@ -136,12 +140,13 @@ args.module (
                 ++ integratetion
                 ++ IME
                 ++ termux
-                ++ weather;
+                ++ weather
+                ++ todo;
               inherit repos;
             }
             {
               id = "sub-phone";
-              apps = phone ++ battery ++ sync ++ backup ++ integratetion ++ IME ++ weather ++ termux;
+              apps = phone ++ battery ++ sync ++ backup ++ integratetion ++ IME ++ weather ++ termux ++ todo;
               inherit repos;
             }
             {
