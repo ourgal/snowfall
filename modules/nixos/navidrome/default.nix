@@ -13,7 +13,6 @@ let
     xyzDomains
     getDirname
     mkFireholRule
-    mkCaddyProxy
     ;
   port = 4533;
   name = getDirname _name;
@@ -27,18 +26,16 @@ let
           Port = port;
         };
       };
-      caddy =
-        (mkCaddyProxy {
-          domain = domains.${name};
-          inherit port;
-        })
-        // {
-          virtualHosts = {
-            "${xyzDomains.${name}}".extraConfig = ''
-              reverse_proxy :${toString port}
-            '';
-          };
+      caddy = {
+        virtualHosts = {
+          "http://${domains.${name}}".extraConfig = ''
+            reverse_proxy http://localhost:${toString port}
+          '';
+          "${xyzDomains.${name}}".extraConfig = ''
+            reverse_proxy :${toString port}
+          '';
         };
+      };
       borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };
     systemd.services.navidrome.serviceConfig = {
