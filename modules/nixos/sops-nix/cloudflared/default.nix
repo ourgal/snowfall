@@ -9,6 +9,7 @@ let
         "cloudflared/xyz" = { };
         "cloudflared/navidrome" = { };
         "cloudflared/jellyfin" = { };
+        "cloudflared/miniflux" = { };
       };
     };
   };

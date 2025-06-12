@@ -54,6 +54,20 @@ let
               };
             };
           };
+        "${cloudflaredTunnelID.miniflux}" =
+          let
+            name = "miniflux";
+          in
+          {
+            default = "http_status:404";
+            credentialsFile = config.sops.secrets."cloudflared/${name}".path;
+            originRequest.httpHostHeader = domains.${name};
+            ingress = {
+              "${xyzDomains.${name}}" = {
+                service = "http://${domains.${name}}:80";
+              };
+            };
+          };
       };
     };
   };
