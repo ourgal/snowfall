@@ -8,6 +8,7 @@ let
         "cloudflared/cert" = { };
         "cloudflared/xyz" = { };
         "cloudflared/navidrome" = { };
+        "cloudflared/jellyfin" = { };
       };
     };
   };

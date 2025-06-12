@@ -32,7 +32,21 @@ let
           in
           {
             default = "http_status:404";
-            credentialsFile = config.sops.secrets."cloudflared/navidrome".path;
+            credentialsFile = config.sops.secrets."cloudflared/${name}".path;
+            originRequest.httpHostHeader = domains.${name};
+            ingress = {
+              "${xyzDomains.${name}}" = {
+                service = "http://${domains.${name}}:80";
+              };
+            };
+          };
+        "${cloudflaredTunnelID.jellyfin}" =
+          let
+            name = "jellyfin";
+          in
+          {
+            default = "http_status:404";
+            credentialsFile = config.sops.secrets."cloudflared/${name}".path;
             originRequest.httpHostHeader = domains.${name};
             ingress = {
               "${xyzDomains.${name}}" = {

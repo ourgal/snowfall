@@ -7,7 +7,7 @@ let
     domains
     getDirname
     mkFireholRule
-    mkCaddyProxy
+    xyzDomains
     ;
   port = 8096;
   name = getDirname _name;
@@ -16,9 +16,15 @@ let
       jellyfin = enabled // {
         openFirewall = true;
       };
-      caddy = mkCaddyProxy {
-        domain = domains.${name};
-        inherit port;
+      caddy = {
+        virtualHosts = {
+          "http://${domains.${name}}".extraConfig = ''
+            reverse_proxy http://localhost:${toString port}
+          '';
+          "${xyzDomains.${name}}".extraConfig = ''
+            reverse_proxy :${toString port}
+          '';
+        };
       };
       borgmatic.settings = {
         source_directories = [ "/var/lib/${name}" ];
