@@ -10,6 +10,7 @@ let
         "cloudflared/navidrome" = { };
         "cloudflared/jellyfin" = { };
         "cloudflared/miniflux" = { };
+        "cloudflared/anki" = { };
       };
     };
   };
