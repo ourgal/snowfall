@@ -48,7 +48,6 @@ in
       # keep-sorted start
       "anki-sync-server"
       "ariang"
-      "atuin"
       "avahi"
       "bpftune"
       "caddy"
