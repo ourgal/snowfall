@@ -50,6 +50,7 @@ args.module (
         NNN_TERMINAL = config.${namespace}.user.terminal;
         NNN_PREVIEWIMGPROG = "ueberzug";
       };
+      enable = "shortcut";
     }
   )
 )
