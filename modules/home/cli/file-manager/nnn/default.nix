@@ -29,8 +29,8 @@ args.module (
               (pkgs.fetchFromGitHub {
                 owner = "jarun";
                 repo = "nnn";
-                rev = "v4.9";
-                sha256 = "sha256-g19uI36HyzTF2YUQKFP4DE2ZBsArGryVHhX79Y0XzhU=";
+                rev = "v5.1";
+                sha256 = "sha256-+2lFFBtaqRPBkEspCFtKl9fllbSR5MBB+4ks3Xh7vp4=";
               })
               + "/plugins";
             mappings = {
