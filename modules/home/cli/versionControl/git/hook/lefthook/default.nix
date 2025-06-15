@@ -1,0 +1,156 @@
+{
+  nixPkgs = "lefthook";
+  confs."lefthook/lefthook.yml" = {
+    output = false;
+    pre-commit = {
+      jobs = [
+        {
+          name = "default";
+          group = {
+            parallel = true;
+            jobs = [
+              {
+                glob = "*.toml";
+                run = "taplo fmt {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.json";
+                run = "fixjson -w {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.{yaml,yml}";
+                run = "yamlfix {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.lua";
+                run = "stylua {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.fnl";
+                run = "fnlfmt --fix {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.md";
+                run = "prettier --parser markdown --write {staged_files} && autocorrect --fix --quiet {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.sh";
+                run = "shfmt -s -w {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.go";
+                run = "gofmt -w {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "justfile";
+                run = "just --fmt --unstable -f {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.nix";
+                run = "nixfmt --strict {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.py";
+                run = "ruff check --fix {staged_files} && ruff format {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "Makefile";
+                run = "checkmake {staged_files}";
+              }
+              {
+                glob = ".editorconfig";
+                run = "validator {staged_files}";
+              }
+            ];
+          };
+        }
+        {
+          name = "nix";
+          group = {
+            jobs = [
+              {
+                glob = "*.nix";
+                run = "deadnix -eq {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "*.nix";
+                run = "keep-sorted --mode fix {staged_files}";
+                stage_fixed = true;
+              }
+            ];
+          };
+        }
+        {
+          name = "python";
+          group = {
+            jobs = [
+              {
+                glob = "*.py";
+                run = "pyupgrade --py312-plus {staged_files}";
+                stage_fixed = true;
+              }
+              {
+                glob = "pyproject.toml";
+                run = "uv-sort {staged_files}";
+                stage_fixed = true;
+              }
+            ];
+          };
+        }
+        {
+          name = "whitespace";
+          group = {
+            jobs = [
+              {
+                exclude = "*.{gpg,png,jpg,jpeg,webp,gif,dat,age,mp3,mp4,mkv,ttf,ico,xcf,ogg,zip,tar.gz}";
+                run = ''
+                  whitespace-format --remove-trailing-whitespace --remove-trailing-empty-lines {staged_files}
+                '';
+                stage_fixed = true;
+              }
+            ];
+          };
+        }
+        {
+          name = "config-file-validator";
+          group = {
+            jobs = [
+              {
+                glob = "*.{xml,csv,ini,json,toml,yaml,yml}";
+                run = "validator {staged_files}";
+              }
+            ];
+          };
+        }
+        {
+          name = "check-secrets";
+          group = {
+            jobs = [ { run = "gitleaks protect -v --staged"; } ];
+          };
+        }
+      ];
+    };
+    commit-msg = {
+      commands = {
+        commitmsgfmt = {
+          run = "commitmsgfmt-wrapper {1}";
+        };
+        commitizen = {
+          run = "cz check --commit-msg-file {1}";
+        };
+      };
+    };
+  };
+}
