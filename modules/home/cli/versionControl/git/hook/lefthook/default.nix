@@ -23,6 +23,7 @@
               }
               {
                 name = "yaml";
+                exclude = "lefthook.yml";
                 glob = "*.{yaml,yml}";
                 run = "yamlfix {staged_files}";
                 stage_fixed = true;
