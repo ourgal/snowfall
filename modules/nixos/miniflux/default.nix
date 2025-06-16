@@ -12,7 +12,7 @@ let
     domains
     getDirname
     mkFireholRule
-    xyzDomains
+    mkCaddyProxy
     ;
   port = 5002;
   name = getDirname _name;
@@ -28,15 +28,9 @@ let
         adminCredentialsFile = config.sops.secrets."${name}/adminCredentialsFile".path;
       };
       postgresqlBackup.databases = [ name ];
-      caddy = {
-        virtualHosts = {
-          "http://${domains.${name}}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-          "${xyzDomains.${name}}".extraConfig = ''
-            reverse_proxy :${toString port}
-          '';
-        };
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        port = port;
       };
     };
     users = {

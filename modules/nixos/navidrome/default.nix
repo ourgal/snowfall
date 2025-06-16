@@ -10,9 +10,9 @@ let
     nixosModule
     enabled
     domains
-    xyzDomains
     getDirname
     mkFireholRule
+    mkCaddyProxy
     ;
   port = 4533;
   name = getDirname _name;
@@ -26,15 +26,9 @@ let
           Port = port;
         };
       };
-      caddy = {
-        virtualHosts = {
-          "http://${domains.${name}}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-          "${xyzDomains.${name}}".extraConfig = ''
-            reverse_proxy :${toString port}
-          '';
-        };
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        port = port;
       };
       borgmatic.settings.source_directories = [ "/var/lib/${name}" ];
     };

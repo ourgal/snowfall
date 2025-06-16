@@ -12,7 +12,7 @@ let
     domains
     getDirname
     mkFireholRule
-    xyzDomains
+    mkCaddyProxy
     ;
   user = config.${namespace}.user.name;
   port = 27701;
@@ -31,15 +31,9 @@ let
         ];
       };
       borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
-      caddy = {
-        virtualHosts = {
-          "http://${domains.${name}}".extraConfig = ''
-            reverse_proxy http://localhost:${toString port}
-          '';
-          "${xyzDomains.${name}}".extraConfig = ''
-            reverse_proxy :${toString port}
-          '';
-        };
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        port = port;
       };
     };
     ${namespace} = mkFireholRule {
