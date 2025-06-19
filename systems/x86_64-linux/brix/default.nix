@@ -56,7 +56,6 @@ in
       "flaresolverr"
       "harmonia"
       "homebox"
-      "immich"
       "jackett"
       "jellyfin"
       "logrotate"
