@@ -40,10 +40,6 @@ args.module (
       sync = [
         "com.github.catfriend1.syncthingandroid" # Syncthing-Fork, Wrapper for Syncthing - Open and decentralized file synchronization
       ];
-      backup = [
-        "com.github.axet.smsgate" # SMS Gate, Backup all your SMS to an IMAP server or a local folder
-        "app.alextran.immich" # Immich, This is a client app for the self-hostable Immich Server
-      ];
       chat = [
         "org.telegram.messenger" # Telegram FOSS, Telegram is a messaging app with a focus on speed and security.
         "chat.simplex.app" # SimpleX Chat, SimpleX Chat - e2e encrypted messenger without any user IDs - private by design!
@@ -131,7 +127,6 @@ args.module (
                 ++ video
                 ++ download
                 ++ sync
-                ++ backup
                 ++ chat
                 ++ manga
                 ++ proxy
@@ -146,7 +141,7 @@ args.module (
             }
             {
               id = "sub-phone";
-              apps = phone ++ battery ++ sync ++ backup ++ integratetion ++ IME ++ weather ++ termux ++ todo;
+              apps = phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo;
               inherit repos;
             }
             {
