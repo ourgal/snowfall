@@ -114,6 +114,7 @@
     "html"
     "jinja"
     "json"
+    "latex"
     "lisp"
     "lua"
     "luau"
