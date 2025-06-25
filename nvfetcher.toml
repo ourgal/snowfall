@@ -502,10 +502,10 @@ fetch.github = "DavidPal/whitespace-format"
 src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
 
-[miru]
+[hayase]
 src.github = "ThaUnknown/miru"
 src.prefix = "v"
-fetch.url = "https://github.com/ThaUnknown/miru/releases/download/v$ver/linux-Miru-$ver.AppImage"
+fetch.url = "https://github.com/ThaUnknown/miru/releases/download/v$ver/linux-hayase-$ver-linux.AppImage"
 
 [numara]
 src.github = "bornova/numara-calculator"
