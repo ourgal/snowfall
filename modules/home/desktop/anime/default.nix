@@ -2,8 +2,8 @@
   enable = [
     # keep-sorted start
     "akuse"
+    "hayase"
     "jerry"
-    "miru"
     # keep-sorted end
   ];
 }
