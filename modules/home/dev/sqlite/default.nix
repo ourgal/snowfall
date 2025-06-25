@@ -13,6 +13,7 @@
     "sqlite-interactive"
     "sqls"
     "sqruff"
+    "tabiew"
     "usql"
     "visidata"
     # keep-sorted end
