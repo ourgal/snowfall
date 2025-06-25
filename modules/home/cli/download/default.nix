@@ -5,7 +5,6 @@
     "dirdl"
     "douyin-downloader"
     "dra"
-    "goodls"
     "imgboxdwl"
     "musicdl"
     "tstickers"
