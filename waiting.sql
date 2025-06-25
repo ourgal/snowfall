@@ -358,7 +358,7 @@ VALUES
 'https://github.com/ninoseki/uv-sort',4,'05/18/2025',null,2,1),
 ('vim-apathy',
 'apathy.vim: Set the ''path'' option for miscellaneous file types',
-'https://github.com/tpope/vim-apathy/',4,'05/18/2025',null,1,1),
+'https://github.com/tpope/vim-apathy/',4,'05/18/2025',null,2,1),
 ('mdq',
 'like jq but for Markdown: find specific elements in a md doc',
 'https://github.com/yshavit/mdq',4,'05/18/2025',null,2,1),
