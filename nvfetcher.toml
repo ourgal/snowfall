@@ -1430,3 +1430,7 @@ fetch.github = "tak-bro/aicommit2"
 src.github = "SergioRibera/simplemoji"
 fetch.github = "SergioRibera/simplemoji"
 cargo_locks = ["Cargo.lock"]
+
+[mbake]
+src.github = "EbodShojaei/bake"
+fetch.github = "EbodShojaei/bake"
