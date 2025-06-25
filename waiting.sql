@@ -361,7 +361,7 @@ VALUES
 'https://github.com/tpope/vim-apathy/',4,'05/18/2025',null,1,1),
 ('mdq',
 'like jq but for Markdown: find specific elements in a md doc',
-'https://github.com/yshavit/mdq',4,'05/18/2025',null,1,1),
+'https://github.com/yshavit/mdq',4,'05/18/2025',null,2,1),
 ('jellyflix',
 'Jellyfix is an easy-to-use Jellyfin client for movies and shows. It''s cross-platform and supports Mobile (iOS, Android) and Desktop (Windows, Mac, Linux).',
 'https://github.com/jellyflix-app/jellyflix',17,'05/18/2025',null,1,1),

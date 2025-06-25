@@ -19,6 +19,7 @@
     "marksman"
     "md-tangle"
     "mdbook"
+    "mdq"
     "mdsh"
     "mmdoc"
     "mpls"
