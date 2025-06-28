@@ -1,4 +1,22 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  sshd-start =
+    let
+      sshdDirectory = "${config.user.home}/.ssh";
+      port = 8022;
+    in
+    pkgs.writeScriptBin "sshd-start" ''
+      #!${pkgs.runtimeShell}
+
+      echo "Starting sshd in non-daemonized way on port ${toString port}"
+      ${pkgs.openssh}/bin/sshd -f "${sshdDirectory}/sshd_config"
+    '';
+in
 {
   user.shell = lib.getExe pkgs.fish;
 
@@ -6,6 +24,7 @@
     packages = with pkgs; [
       vim
       curl
+      sshd-start
     ];
     etcBackupExtension = ".bak";
   };
