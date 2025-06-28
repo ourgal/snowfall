@@ -290,17 +290,23 @@
 
       modules.home-transform = lib.homeModule;
 
-      nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import inputs.nix-on-droid-nixpkgs { system = "aarch64-linux"; };
-        modules = [
-          ./nix-on-droid
-          {
-            user = {
-              uid = 10426;
-              gid = 10426;
-            };
-          }
-        ];
-      };
+      nixOnDroidConfigurations.default =
+        let
+          extraSpecialArgs = { inherit (lib) toTOML; };
+        in
+        nix-on-droid.lib.nixOnDroidConfiguration {
+          pkgs = import inputs.nix-on-droid-nixpkgs { system = "aarch64-linux"; };
+          inherit extraSpecialArgs;
+          modules = [
+            ./nix-on-droid
+            {
+              user = {
+                uid = 10426;
+                gid = 10426;
+              };
+              home-manager = { inherit extraSpecialArgs; };
+            }
+          ];
+        };
     };
 }
