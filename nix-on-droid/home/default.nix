@@ -2,5 +2,8 @@
 {
   home.stateVersion = "24.05";
 
-  imports = [ ./cli ];
+  imports = [
+    ./cli
+    ./dev
+  ];
 }
