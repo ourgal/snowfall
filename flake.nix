@@ -107,6 +107,18 @@
       url = "github:ners/nix-monitored";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid/release-24.05";
+      inputs.nixpkgs.follows = "nix-on-droid-nixpkgs";
+      inputs.home-manager.follows = "nix-on-droid-home-manager";
+    };
+    nix-on-droid-home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nix-on-droid-nixpkgs";
+    };
+    nix-on-droid-nixpkgs = {
+      url = "github:NixOS/nixpkgs/release-24.05";
+    };
   };
 
   nixConfig = {
@@ -122,7 +134,7 @@
   outputs =
     inputs:
     let
-      inherit (inputs) snowfall-lib;
+      inherit (inputs) snowfall-lib nix-on-droid;
 
       lib = snowfall-lib.mkLib {
         inherit inputs;
@@ -253,5 +265,10 @@
       deploy = lib.mkDeploy { inherit (inputs) self; };
 
       modules.home-transform = lib.homeModule;
+
+      nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
+        pkgs = import inputs.nix-on-droid-nixpkgs { system = "aarch64-linux"; };
+        modules = [ ./nix-on-droid ];
+      };
     };
 }
