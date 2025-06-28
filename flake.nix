@@ -295,7 +295,21 @@
           extraSpecialArgs = { inherit (lib) toTOML; };
         in
         nix-on-droid.lib.nixOnDroidConfiguration {
-          pkgs = import inputs.nix-on-droid-nixpkgs { system = "aarch64-linux"; };
+          pkgs = import inputs.nix-on-droid-nixpkgs {
+            system = "aarch64-linux";
+            overlays = [
+              (final: _prev: {
+                sources = import ./_sources/generated.nix {
+                  inherit (final)
+                    fetchurl
+                    fetchgit
+                    fetchFromGitHub
+                    dockerTools
+                    ;
+                };
+              })
+            ];
+          };
           inherit extraSpecialArgs;
           modules = [
             ./nix-on-droid
