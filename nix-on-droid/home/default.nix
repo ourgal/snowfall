@@ -101,5 +101,6 @@
     btop
     htop
     dufs
+    helix
   ];
 }
