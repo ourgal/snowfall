@@ -25,6 +25,7 @@ in
       vim
       curl
       sshd-start
+      iproute2
     ];
     etcBackupExtension = ".bak";
   };
