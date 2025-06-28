@@ -1,6 +1,9 @@
 { ... }:
 {
   programs = {
-    fzf.enable = true;
+    fzf = {
+      enable = true;
+      defaultOptions = [ "--height 40%" ];
+    };
   };
 }
