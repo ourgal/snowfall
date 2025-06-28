@@ -11,4 +11,8 @@
       package = pkgs.openssh;
     };
   };
+  home.packages = with pkgs; [
+    btop
+    htop
+  ];
 }
