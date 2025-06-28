@@ -7,6 +7,7 @@ in
     {
       self,
       overrides ? { },
+      extraNodes ? { },
     }:
     let
       hosts = self.nixosConfigurations or { };
@@ -34,6 +35,6 @@ in
     {
       user = "root";
       sshUser = "root";
-      inherit nodes;
+      nodes = nodes // extraNodes;
     };
 }

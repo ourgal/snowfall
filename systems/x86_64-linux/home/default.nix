@@ -57,6 +57,7 @@ in
       "nfsMount"
       "nh"
       "nix-monitored"
+      "nix-on-droid"
       "pcscd"
       "power"
       "scrutiny"

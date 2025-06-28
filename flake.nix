@@ -262,13 +262,45 @@
 
       homes.users = homeSpecialArgsFinal;
 
-      deploy = lib.mkDeploy { inherit (inputs) self; };
+      deploy = lib.mkDeploy {
+        inherit (inputs) self;
+        extraNodes =
+          let
+            activateNixOnDroid =
+              configuration:
+              inputs.deploy-rs.lib.aarch64-linux.activate.custom configuration.activationPackage "${configuration.activationPackage}/activate";
+            inherit (inputs) self;
+          in
+          {
+            default = {
+              hostname = lib.ip.m6;
+              profiles.system = {
+                sshUser = "nix-on-droid";
+                user = "nix-on-droid";
+                magicRollback = true;
+                sshOpts = [
+                  "-p"
+                  "8022"
+                ];
+                path = activateNixOnDroid self.nixOnDroidConfigurations.default;
+              };
+            };
+          };
+      };
 
       modules.home-transform = lib.homeModule;
 
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
         pkgs = import inputs.nix-on-droid-nixpkgs { system = "aarch64-linux"; };
-        modules = [ ./nix-on-droid ];
+        modules = [
+          ./nix-on-droid
+          {
+            user = {
+              uid = 10426;
+              gid = 10426;
+            };
+          }
+        ];
       };
     };
 }
