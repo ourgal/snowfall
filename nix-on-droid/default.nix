@@ -7,13 +7,14 @@
 let
   sshd-start =
     let
+      sshdDirectory = "${config.user.home}/.ssh";
       port = 8022;
     in
     pkgs.writeScriptBin "sshd-start" ''
       #!${pkgs.runtimeShell}
 
       echo "Starting sshd in non-daemonized way on port ${toString port}"
-      ${pkgs.openssh}/bin/sshd -p ${toString port}
+      ${pkgs.openssh}/bin/sshd -p ${toString port} -f "${sshdDirectory}/sshd_config"
     '';
 in
 {
