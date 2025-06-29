@@ -5,5 +5,10 @@
     "tsukae"
     # keep-sorted end
   ];
-  enable = "shellclear";
+  enable = [
+    # keep-sorted start
+    "atuin"
+    "shellclear"
+    # keep-sorted end
+  ];
 }
