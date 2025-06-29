@@ -110,6 +110,10 @@ args.module (
           trusted = false;
           git = "${myGithub}:epub-blog";
         };
+        "fw/projects/default/nix-on-droid" = toTOML {
+          trusted = false;
+          git = "${soft}:nix-on-droid";
+        };
       };
       value = {
         systemd.user.tmpfiles.rules = [ "d ${config.home.homeDirectory}/.emacs.d - - - -" ];
