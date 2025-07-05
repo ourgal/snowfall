@@ -77,7 +77,10 @@ args.module (
         "com.catpuppyapp.puppygit.play.pro" # PuppyGit Pro is a Git client for Android. Open Source, no Ads and free to use.
       ];
       editor = [ "com.droidvim" ];
-      termux = [ "com.termux" ];
+      termux = [
+        "com.termux"
+        "com.termux.api"
+      ];
       todo = [
         "de.tnmgl.ntodotxt"
         "org.tasks"
