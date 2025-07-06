@@ -16,6 +16,7 @@ args.module (
         "evince"
         "libreoffice"
         "onlyoffice-bin"
+        "readest"
         "zeal"
         # keep-sorted end
       ];
