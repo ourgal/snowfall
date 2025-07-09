@@ -40,11 +40,13 @@ in
         router = enabled;
         ssh = enabled;
         cloudflared = enabled;
+        tailscale = enabled;
       };
       bpftune = enabled;
       iotop = enabled;
       harmonia = enabled;
       cloudflared = enabled;
+      tailscale = enabled;
     };
 
   snowfallorg.users.${user}.home = disabled;
