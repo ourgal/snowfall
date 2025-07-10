@@ -23,6 +23,7 @@ let
         openFirewall = true;
         settings = {
           inherit MusicFolder;
+          Address = "0.0.0.0";
           Port = port;
         };
       };
