@@ -9,6 +9,7 @@
     "flashcard"
     "git"
     "image"
+    "keyboard"
     "math"
     "search"
     "system"
