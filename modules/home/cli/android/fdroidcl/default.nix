@@ -85,6 +85,7 @@ args.module (
         "de.tnmgl.ntodotxt"
         "org.tasks"
       ];
+      keyboard = [ "inc.flide.vi8" ];
     in
     {
       myPkgs = "fdroidcl";
@@ -139,12 +140,13 @@ args.module (
                 ++ IME
                 ++ termux
                 ++ weather
-                ++ todo;
+                ++ todo
+                ++ keyboard;
               inherit repos;
             }
             {
               id = "sub-phone";
-              apps = phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo;
+              apps = phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo ++ keyboard;
               inherit repos;
             }
             {
@@ -166,7 +168,8 @@ args.module (
                 ++ share
                 ++ git
                 ++ termux
-                ++ editor;
+                ++ editor
+                ++ keyboard;
               inherit repos;
             }
           ];
