@@ -7,6 +7,7 @@ let
       packages = [
         pkgs.android-udev-rules
         pkgs.${namespace}.nrf-udev
+        pkgs.qmk-udev-rules
       ];
       extraRules = ''
         SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", ATTR{idProduct}=="107e", MODE="0666", GROUP="plugdev"
