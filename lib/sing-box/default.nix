@@ -547,6 +547,42 @@ in
       download_url = url;
     };
     mkFirewall =
+      let
+        defaultProxyPorts =
+          let
+            emailPorts = [
+              143
+              465
+              587
+              853
+              993
+              995
+            ];
+            IRCPorts = [ 194 ];
+            SSHPorts = [ 22 ];
+            HTTPPorts = [
+              80
+              443
+            ];
+            XMPPPorts = [ 5222 ];
+            SubHTTPPorts = [
+              8080
+              8443
+            ];
+            proxySSH = true;
+            proxyHTTP = true;
+            proxyXMPP = false;
+            proxyIRC = false;
+            proxyEmail = false;
+            proxySubHTTP = false;
+          in
+          (if proxyEmail then emailPorts else [ ])
+          ++ (if proxySSH then SSHPorts else [ ])
+          ++ (if proxyHTTP then HTTPPorts else [ ])
+          ++ (if proxyXMPP then XMPPPorts else [ ])
+          ++ (if proxySubHTTP then SubHTTPPorts else [ ])
+          ++ (if proxyIRC then IRCPorts else [ ]);
+      in
       {
         name ? "sing-box",
         isTproxy ? true,
@@ -561,21 +597,7 @@ in
         mixPort ? 7890,
         fakeIpSubnet ? "198.18.0.0/16",
         fakeIp6Subnet ? "fc00::/16",
-        proxyPorts ? [
-          22
-          80
-          143
-          194
-          443
-          465
-          587
-          853
-          993
-          995
-          5222
-          8080
-          8443
-        ],
+        proxyPorts ? defaultProxyPorts,
         reservedSubnets ? [
           "0.0.0.0/8"
           "10.0.0.0/8"
