@@ -2405,9 +2405,9 @@ checksum = "7edddbd0b52d732b21ad9a5fab5c704c14cd949e5e9a1ec5929a24fded1b904c"
 
 [[package]]
 name = "plist"
-version = "1.7.2"
+version = "1.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d77244ce2d584cd84f6a15f86195b8c9b2a0dfbfd817c09e0464244091a58ed"
+checksum = "3af6b589e163c5a788fab00ce0c0366f6efbb9959c2f9874b224936af7fce7e1"
 dependencies = [
  "base64 0.22.1",
  "indexmap 2.8.0",
@@ -2536,7 +2536,7 @@ dependencies = [
 
 [[package]]
 name = "qlty"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2610,7 +2610,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-analysis"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "config",
@@ -2651,7 +2651,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-check"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "ar",
@@ -2703,7 +2703,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-cloud"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "insta",
@@ -2715,7 +2715,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-config"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "auth-git2",
@@ -2734,7 +2734,7 @@ dependencies = [
  "rayon",
  "rustls",
  "rustls-platform-verifier",
- "schemars",
+ "schemars 0.9.0",
  "semver",
  "serde",
  "serde_json",
@@ -2750,7 +2750,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-coverage"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -2781,7 +2781,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-formats"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "flate2",
@@ -2794,14 +2794,14 @@ dependencies = [
 
 [[package]]
 name = "qlty-plugins"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "rust-embed",
 ]
 
 [[package]]
 name = "qlty-smells"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "anyhow",
  "bencher",
@@ -2820,7 +2820,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-test-utilities"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "git2",
  "tempfile",
@@ -2828,13 +2828,13 @@ dependencies = [
 
 [[package]]
 name = "qlty-types"
-version = "0.546.0"
+version = "0.555.0"
 dependencies = [
  "clap",
  "pbjson",
  "pbjson-types",
  "prost",
- "schemars",
+ "schemars 0.9.0",
  "serde",
  "serde_json",
  "tree-sitter",
@@ -2842,9 +2842,9 @@ dependencies = [
 
 [[package]]
 name = "quick-xml"
-version = "0.37.5"
+version = "0.38.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "331e97a1af0bf59823e6eadffe373d7b27f485be8748f71471c662c1f269b7fb"
+checksum = "8927b0664f5c5a98265138b7e3f90aa19a6b21353182469ace36d4ac527b7b1b"
 dependencies = [
  "memchr",
 ]
@@ -3234,6 +3234,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "schemars"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "82d20c4491bc164fa2f6c5d44565947a52ad80b9505d8e36f8d54c27c739fcd0"
+dependencies = [
+ "dyn-clone",
+ "ref-cast",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "schemars_derive"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3475,16 +3487,17 @@ dependencies = [
 
 [[package]]
 name = "serde_with"
-version = "3.13.0"
+version = "3.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bf65a400f8f66fb7b0552869ad70157166676db75ed8181f8104ea91cf9d0b42"
+checksum = "f2c45cd61fefa9db6f254525d46e392b852e0e61d9a1fd36e5bd183450a556d5"
 dependencies = [
  "base64 0.22.1",
  "chrono",
  "hex",
  "indexmap 1.9.3",
  "indexmap 2.8.0",
- "schemars",
+ "schemars 0.9.0",
+ "schemars 1.0.4",
  "serde",
  "serde_derive",
  "serde_json",
@@ -3494,9 +3507,9 @@ dependencies = [
 
 [[package]]
 name = "serde_with_macros"
-version = "3.13.0"
+version = "3.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "81679d9ed988d5e9a5e6531dc3f2c28efbd639cbd1dfb628df08edea6004da77"
+checksum = "de90945e6565ce0d9a25098082ed4ee4002e047cb59892c318d66821e14bb30f"
 dependencies = [
  "darling",
  "proc-macro2",
