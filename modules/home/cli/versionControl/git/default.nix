@@ -61,7 +61,7 @@ args.module (
               compression = 9;
               whitespace = "error";
               preloadindex = true;
-              autocrlf = true;
+              autocrlf = "input";
             };
             advice = {
               addEmptyPathspec = false;
