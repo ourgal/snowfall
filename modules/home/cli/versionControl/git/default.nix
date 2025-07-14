@@ -32,6 +32,7 @@ args.module (
         "issue"
         "merge"
         "rebase"
+        "search"
         "security"
         "stats"
         "sync"
