@@ -28,7 +28,7 @@ python3.pkgs.buildPythonApplication rec {
     ];
   };
 
-  pythonImportsCheck = [ "bake" ];
+  pythonImportsCheck = [ "mbake" ];
 
   meta = {
     description = "Mbake is a Makefile formatter and linter. It only took 50 years";

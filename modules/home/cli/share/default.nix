@@ -1,9 +1,4 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "images-upload-cli"
-    # keep-sorted end
-  ];
   nixPkgs = [
     # keep-sorted start
     "biliup-rs"

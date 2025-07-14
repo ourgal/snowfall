@@ -1,0 +1,1 @@
+{ nixPkgs = "images-upload-cli"; }
