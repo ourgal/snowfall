@@ -1434,3 +1434,7 @@ cargo_locks = ["Cargo.lock"]
 [mbake]
 src.github = "EbodShojaei/bake"
 fetch.github = "EbodShojaei/bake"
+
+[gitomatic]
+src.git = "https://github.com/muesli/gitomatic"
+fetch.github = "muesli/gitomatic"

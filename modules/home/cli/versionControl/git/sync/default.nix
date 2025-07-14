@@ -1,4 +1,5 @@
 {
+  myPkgs = "gitomatic";
   nixPkgs = [
     # keep-sorted start
     "datalad"
