@@ -13,6 +13,7 @@
   pyPkgs = "downloader-cli";
   nixPkgs = [
     # keep-sorted start
+    "axel"
     "baidupcs-go"
     "btfs"
     "libgen-cli"
