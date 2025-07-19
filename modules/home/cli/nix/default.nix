@@ -34,6 +34,7 @@
   ];
   myPkgs = [
     # keep-sorted start
+    "app-shell"
     "nix-auto-follow"
     "nix-editor"
     "nix-repl"
