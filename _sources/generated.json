@@ -193,6 +193,27 @@
         },
         "version": "d1b02bee8528e1ee9463c9504791ae0718585915"
     },
+    "app-shell": {
+        "cargoLocks": null,
+        "date": "2025-06-03",
+        "extract": null,
+        "name": "app-shell",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "imincik",
+            "repo": "app-shell",
+            "rev": "0bae5a496e563a49ade59fe21b951ff3a7736439",
+            "sha256": "sha256-U9qqJQZ5Fm0SNnVICU+lWVc7PI2CRy6RbOopmLXvl8k=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0bae5a496e563a49ade59fe21b951ff3a7736439"
+    },
     "argparse": {
         "cargoLocks": null,
         "date": null,

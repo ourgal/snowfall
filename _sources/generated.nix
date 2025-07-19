@@ -110,6 +110,18 @@
     };
     date = "2025-06-27";
   };
+  app-shell = {
+    pname = "app-shell";
+    version = "0bae5a496e563a49ade59fe21b951ff3a7736439";
+    src = fetchFromGitHub {
+      owner = "imincik";
+      repo = "app-shell";
+      rev = "0bae5a496e563a49ade59fe21b951ff3a7736439";
+      fetchSubmodules = false;
+      sha256 = "sha256-U9qqJQZ5Fm0SNnVICU+lWVc7PI2CRy6RbOopmLXvl8k=";
+    };
+    date = "2025-06-03";
+  };
   argparse = {
     pname = "argparse";
     version = "1.4.0";
