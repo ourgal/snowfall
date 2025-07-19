@@ -5,5 +5,10 @@
     "vlc"
     # keep-sorted end
   ];
-  enable = "mpv";
+  enable = [
+    # keep-sorted start
+    "jftui"
+    "mpv"
+    # keep-sorted end
+  ];
 }
