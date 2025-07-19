@@ -1432,7 +1432,7 @@ fetch.github = "SergioRibera/simplemoji"
 cargo_locks = ["Cargo.lock"]
 
 [mbake]
-src.github = "EbodShojaei/bake"
+src.github_tag = "EbodShojaei/bake"
 fetch.github = "EbodShojaei/bake"
 
 [gitomatic]
