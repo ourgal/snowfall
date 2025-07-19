@@ -1438,3 +1438,8 @@ fetch.github = "EbodShojaei/bake"
 [gitomatic]
 src.git = "https://github.com/muesli/gitomatic"
 fetch.github = "muesli/gitomatic"
+
+[nix-sweep]
+src.github_tag = "jzbor/nix-sweep"
+fetch.github = "jzbor/nix-sweep"
+cargo_locks = ["Cargo.lock"]
