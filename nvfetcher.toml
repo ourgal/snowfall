@@ -1443,3 +1443,7 @@ fetch.github = "muesli/gitomatic"
 src.github_tag = "jzbor/nix-sweep"
 fetch.github = "jzbor/nix-sweep"
 cargo_locks = ["Cargo.lock"]
+
+[app-shell]
+src.git = "https://github.com/imincik/app-shell"
+fetch.github = "imincik/app-shell"
