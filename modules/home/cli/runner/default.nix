@@ -13,7 +13,6 @@
   myPkgs = [
     # keep-sorted start
     "cdo"
-    "cmdx"
     "machma"
     "makedown"
     "pryrite"
