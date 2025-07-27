@@ -7,6 +7,7 @@
   nixPkgs = [
     # keep-sorted start
     "qmk"
+    "segger-jlink"
     "vial"
     # keep-sorted end
   ];

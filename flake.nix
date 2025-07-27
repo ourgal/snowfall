@@ -172,6 +172,7 @@
       channels-config = {
         # Allow unfree packages.
         allowUnfree = true;
+        segger-jlink.acceptLicense = true;
         joypixels.acceptLicense = true;
         allowUnfreePredicate = pkg: builtins.elem (inputs.nixpkgs.lib.getName pkg) [ "nvdia-x11" ];
         permittedInsecurePackages =
@@ -183,8 +184,9 @@
             ];
             beekeeper = [ "beekeeper-studio-5.1.5" ];
             ventoy = [ "ventoy-1.1.05" ];
+            jlink = [ "segger-jlink-qt4-810" ];
           in
-          koreader ++ sonarr ++ beekeeper ++ ventoy;
+          koreader ++ sonarr ++ beekeeper ++ ventoy ++ jlink;
       };
 
       overlays =
