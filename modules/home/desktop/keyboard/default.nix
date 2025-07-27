@@ -8,6 +8,7 @@
     # keep-sorted start
     "qmk"
     "segger-jlink"
+    "dfu-util"
     "vial"
     # keep-sorted end
   ];
