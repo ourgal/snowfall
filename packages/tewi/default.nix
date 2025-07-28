@@ -16,28 +16,6 @@ let
 
     pythonImportsCheck = [ "geoip2fast" ];
   };
-  textual = python3.pkgs.buildPythonApplication {
-    inherit (_sources.textual) pname version src;
-    pyproject = true;
-
-    nativeBuildInputs = [ python3.pkgs.poetry-core ];
-
-    propagatedBuildInputs = with python3.pkgs; [
-      markdown-it-py
-      rich
-      typing-extensions
-      platformdirs
-    ];
-
-    passthru.optional-dependencies = with python3.pkgs; {
-      syntax = [
-        tree-sitter
-        tree_sitter_languages
-      ];
-    };
-
-    pythonImportsCheck = [ "textual" ];
-  };
 in
 python3.pkgs.buildPythonApplication rec {
   inherit (_sources' ./.) pname version src;
