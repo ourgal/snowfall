@@ -1380,10 +1380,6 @@ cargo_locks = ["Cargo.lock"]
 src.github = "zhlint-project/zhlint"
 fetch.github = "zhlint-project/zhlint"
 
-[mp3-loop]
-src.github = "LjubeC-dev/mp3-loop"
-fetch.github = "LjubeC-dev/mp3-loop"
-
 [tmux-gentrify]
 src.git = "https://github.com/kristopolous/tmux-gentrify"
 fetch.github = "kristopolous/tmux-gentrify"

@@ -1,5 +1,4 @@
 {
-  myPkgs = "mp3-loop";
   nixPkgs = [
     # keep-sorted start
     "ffmpeg-normalize"
