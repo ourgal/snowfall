@@ -5,6 +5,7 @@
     "croc"
     "dufs"
     "ffsend"
+    "copyparty"
     "goshs"
     "gossa"
     "imgurbash2"

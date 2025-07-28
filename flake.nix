@@ -119,6 +119,10 @@
     nix-on-droid-nixpkgs = {
       url = "github:NixOS/nixpkgs/release-24.05";
     };
+    copyparty = {
+      url = "github:9001/copyparty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -200,6 +204,7 @@
           pog = inputs.pog.overlays.${system}.default;
           nur = inputs.nur.overlays.default;
           nix-monitored = inputs.nix-monitored.overlays.default;
+          copyparty = inputs.copyparty.overlays.default;
         in
         [
           snowfall-flake
@@ -211,6 +216,7 @@
           pog
           nur
           nix-monitored
+          copyparty
         ];
 
       # Add modules to all NixOS systems.
