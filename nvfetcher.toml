@@ -1447,3 +1447,7 @@ cargo_locks = ["Cargo.lock"]
 [app-shell]
 src.git = "https://github.com/imincik/app-shell"
 fetch.github = "imincik/app-shell"
+
+[multiplex]
+src.git = "https://github.com/sebastien/multiplex"
+fetch.github = "sebastien/multiplex"

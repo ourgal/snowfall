@@ -15,6 +15,7 @@
     "cdo"
     "machma"
     "makedown"
+    "multiplex"
     "pryrite"
     "sake"
     # keep-sorted end
