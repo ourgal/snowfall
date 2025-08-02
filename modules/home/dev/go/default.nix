@@ -9,6 +9,7 @@ args.module (
       progs = "go";
       nixPkgs = [
         # keep-sorted start
+        "air"
         "errcheck"
         "go-critic"
         "go-errorlint"
