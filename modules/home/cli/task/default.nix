@@ -6,6 +6,7 @@
     "eureka"
     "taskwarrior"
     "todo-sh"
+    "topydo"
     "ttdl"
     # keep-sorted end
   ];
