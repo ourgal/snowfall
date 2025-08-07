@@ -21,6 +21,8 @@ python3.pkgs.buildPythonApplication {
     yt-dlp
     pycryptodome
     pypresence
+    httpx
+    pydantic
   ];
 
   passthru.optional-dependencies = with python3.pkgs; {
