@@ -10,6 +10,7 @@
     "sequin"
     "servicer"
     "wol"
+    "xrestrict"
     # keep-sorted end
   ];
   nixPkgs = [

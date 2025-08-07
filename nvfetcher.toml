@@ -1443,3 +1443,7 @@ fetch.github = "imincik/app-shell"
 [multiplex]
 src.git = "https://github.com/sebastien/multiplex"
 fetch.github = "sebastien/multiplex"
+
+[xrestrict]
+src.git = "https://github.com/Ademan/xrestrict"
+fetch.github = "Ademan/xrestrict"
