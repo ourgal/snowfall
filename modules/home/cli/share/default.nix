@@ -2,10 +2,10 @@
   nixPkgs = [
     # keep-sorted start
     "biliup-rs"
+    "copyparty"
     "croc"
     "dufs"
     "ffsend"
-    "copyparty"
     "goshs"
     "gossa"
     "imgurbash2"
@@ -24,6 +24,7 @@
     "tmate"
     "tran"
     "tty-share"
+    "updog"
     "upterm"
     "webwormhole"
     "wgetpaste"
