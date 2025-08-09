@@ -58,6 +58,7 @@ in
       "nh"
       "nix-monitored"
       "nix-on-droid"
+      "opentabletdriver"
       "pcscd"
       "power"
       "scrutiny"
