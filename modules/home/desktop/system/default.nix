@@ -22,6 +22,7 @@ args.module (
         "polkit"
         "qtscrcpy"
         "ripdrag"
+        "rustdesk"
         "scrcpy"
         "swww"
         "variety"
