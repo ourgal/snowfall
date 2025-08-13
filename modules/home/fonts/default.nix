@@ -8,6 +8,7 @@ args.module (
         namespace
         host
         pkgs
+        config
         ;
       inherit (lib.${namespace}) font mkFontconfig;
       inherit (lib.${namespace}.settings) allHosts;
@@ -108,6 +109,23 @@ args.module (
             '';
             settings = {
               fontconfig = {
+                include = [
+                  {
+                    "@ignore_missing" = "yes";
+                    string = "${config.home.path}/etc/fonts/conf.d";
+                  }
+                  {
+                    "@ignore_missing" = "yes";
+                    string = "${config.home.path}/etc/fonts/fonts.conf";
+                  }
+                ];
+                dir = [
+                  "${config.home.path}/lib/X11/fonts"
+                  "${config.home.path}/share/fonts"
+                  "${config.home.profileDirectory}/lib/X11/fonts"
+                  "${config.home.profileDirectory}/share/fonts"
+                ];
+                cachedir = "${config.home.path}/lib/fontconfig/cache";
                 match =
                   [
                     system-ui
