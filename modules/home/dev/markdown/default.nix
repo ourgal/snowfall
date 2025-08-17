@@ -3,6 +3,7 @@
     # keep-sorted start
     "html-to-markdown"
     "mdtt"
+    "pangu.py"
     "pmark"
     "textpod"
     "zhlint"
