@@ -36,9 +36,11 @@ python3.pkgs.buildPythonApplication {
     notifications = [ plyer ];
   };
 
-  pythonImportsCheck = [ "viu" ];
+  pythonImportsCheck = [ "viu_cli" ];
 
   pythonRelaxDeps = true;
+
+  postInstall = "mv $out/bin/{viu,fast-anime}";
 
   meta = with lib; {
     description = "Your browser anime experience from the terminal";
