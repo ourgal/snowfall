@@ -446,9 +446,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.42"
+version = "4.5.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed87a9d530bb41a67537289bafcac159cb3ee28460e0a4571123d2a778a6a882"
+checksum = "1c1f056bae57e3e54c3375c41ff79619ddd13460a17d7438712bd0d83fda4ff8"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -456,9 +456,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.42"
+version = "4.5.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64f4f3f3c77c94aff3c7e9aac9a2ca1974a5adf392a8bb751e827d6d127ab966"
+checksum = "b3e7f4214277f3c7aa526a59dd3fbe306a370daee1f8b7b8c987069cd8e888a8"
 dependencies = [
  "anstream",
  "anstyle",
@@ -469,9 +469,9 @@ dependencies = [
 
 [[package]]
 name = "clap_complete"
-version = "4.5.55"
+version = "4.5.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a5abde44486daf70c5be8b8f8f1b66c49f86236edf6fa2abadb4d961c4c6229a"
+checksum = "4d9501bd3f5f09f7bbee01da9a511073ed30a80cd7a509f1214bb74eadea71ad"
 dependencies = [
  "clap",
 ]
@@ -2537,7 +2537,7 @@ dependencies = [
 
 [[package]]
 name = "qlty"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2611,7 +2611,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-analysis"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "config",
@@ -2652,7 +2652,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-check"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "ar",
@@ -2704,7 +2704,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-cloud"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "insta",
@@ -2716,7 +2716,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-config"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "auth-git2",
@@ -2752,7 +2752,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-coverage"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -2783,7 +2783,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-formats"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "flate2",
@@ -2796,14 +2796,14 @@ dependencies = [
 
 [[package]]
 name = "qlty-plugins"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "rust-embed",
 ]
 
 [[package]]
 name = "qlty-smells"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "anyhow",
  "bencher",
@@ -2822,7 +2822,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-test-utilities"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "git2",
  "tempfile",
@@ -2830,7 +2830,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-types"
-version = "0.563.0"
+version = "0.566.0"
 dependencies = [
  "clap",
  "pbjson",
@@ -4430,9 +4430,9 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uuid"
-version = "1.17.0"
+version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3cf4199d1e5d15ddd86a694e4d0dffa9c323ce759fea589f00fef9d81cc1931d"
+checksum = "f33196643e165781c20a5ead5582283a7dacbb87855d867fbc2df3f81eddc1be"
 dependencies = [
  "getrandom 0.3.2",
  "js-sys",
@@ -4633,11 +4633,11 @@ dependencies = [
 
 [[package]]
 name = "whoami"
-version = "1.6.0"
+version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6994d13118ab492c3c80c1f81928718159254c53c472bf9ce36f8dae4add02a7"
+checksum = "5d4a4db5077702ca3015d3d02d74974948aba2ad9e12ab7df718ee64ccd7e97d"
 dependencies = [
- "redox_syscall",
+ "libredox",
  "wasite",
  "web-sys",
 ]
