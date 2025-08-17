@@ -36,15 +36,15 @@ python3.pkgs.buildPythonApplication {
     notifications = [ plyer ];
   };
 
-  pythonImportsCheck = [ "fastanime" ];
+  pythonImportsCheck = [ "viu" ];
 
   pythonRelaxDeps = true;
 
   meta = with lib; {
     description = "Your browser anime experience from the terminal";
-    homepage = "https://github.com/Benex254/FastAnime";
+    homepage = "https://github.com/Benexl/viu";
     license = licenses.unlicense;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "fast-anime";
+    mainProgram = "viu";
   };
 }

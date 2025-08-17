@@ -512,9 +512,9 @@ src.github = "bornova/numara-calculator"
 src.prefix = "v"
 fetch.url = "https://github.com/bornova/numara-calculator/releases/download/v$ver/Numara-$ver-x86_64.AppImage"
 
-[fast-anime]
-src.github = "Benex254/FastAnime"
-fetch.github = "Benex254/FastAnime"
+[viu]
+src.github = "Benexl/viu"
+fetch.github = "Benexl/viu"
 
 [docker-alist]
 src.container = "xhofe/alist-aria2"

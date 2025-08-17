@@ -9,10 +9,10 @@
   ];
   myPkgs = [
     # keep-sorted start
-    "fast-anime"
     "lobster"
     "sauce"
     "toru"
+    "viu"
     # keep-sorted end
   ];
   enable = "trackma";
