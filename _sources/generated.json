@@ -2026,27 +2026,6 @@
         },
         "version": "v2.20.16"
     },
-    "fast-anime": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "fast-anime",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "Benex254",
-            "repo": "FastAnime",
-            "rev": "v3.2.6",
-            "sha256": "sha256-sOgZKGan0/axk2TbfqEcmw7f6VI1Qae6zQaXG6MMJDc=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v3.2.6"
-    },
     "fc-fish": {
         "cargoLocks": null,
         "date": "2023-04-07",
@@ -7032,6 +7011,27 @@
             "type": "github"
         },
         "version": "423a25911b3e8da04a28d29f205e1059a06e6afa"
+    },
+    "viu": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "viu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Benexl",
+            "repo": "viu",
+            "rev": "v3.2.6",
+            "sha256": "sha256-sOgZKGan0/axk2TbfqEcmw7f6VI1Qae6zQaXG6MMJDc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v3.2.6"
     },
     "vl": {
         "cargoLocks": null,

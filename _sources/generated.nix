@@ -1126,17 +1126,6 @@
       sha256 = "sha256-6Ausuc0Oa7rBgCeJ3rnSbDYk1vkJSKZZc13B7w2Fllk=";
     };
   };
-  fast-anime = {
-    pname = "fast-anime";
-    version = "v3.2.6";
-    src = fetchFromGitHub {
-      owner = "Benex254";
-      repo = "FastAnime";
-      rev = "v3.2.6";
-      fetchSubmodules = false;
-      sha256 = "sha256-sOgZKGan0/axk2TbfqEcmw7f6VI1Qae6zQaXG6MMJDc=";
-    };
-  };
   fc-fish = {
     pname = "fc-fish";
     version = "9457a9c47391ff712696bbef0e4a109de2a653d1";
@@ -3959,6 +3948,17 @@
       sha256 = "sha256-v0j6AExrOJIgde/Aphr7lvonZptMwYQLCB6E+2YsiVg=";
     };
     date = "2017-01-29";
+  };
+  viu = {
+    pname = "viu";
+    version = "v3.2.6";
+    src = fetchFromGitHub {
+      owner = "Benexl";
+      repo = "viu";
+      rev = "v3.2.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-sOgZKGan0/axk2TbfqEcmw7f6VI1Qae6zQaXG6MMJDc=";
+    };
   };
   vl = {
     pname = "vl";
