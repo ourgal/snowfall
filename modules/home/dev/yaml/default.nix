@@ -3,7 +3,6 @@
     # keep-sorted start
     "bafi"
     "config-file-validator"
-    "convfmt"
     # keep-sorted end
   ];
   nixPkgs = [

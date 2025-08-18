@@ -44,7 +44,6 @@
     # keep-sorted start
     "bafi"
     "config-file-validator"
-    "convfmt"
     "vscode-json-language-server"
     # keep-sorted end
   ];

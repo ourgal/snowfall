@@ -1,1 +1,4 @@
-{ nixPkgs = "jj"; }
+{
+  nixPkgs = "jj";
+  myPkgs = "convfmt";
+}

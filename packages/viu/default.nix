@@ -36,7 +36,7 @@ python3.pkgs.buildPythonApplication {
     notifications = [ plyer ];
   };
 
-  pythonImportsCheck = [ "viu_cli" ];
+  pythonImportsCheck = [ "viu_media" ];
 
   pythonRelaxDeps = true;
 
