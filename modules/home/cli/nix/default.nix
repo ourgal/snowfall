@@ -39,7 +39,6 @@
     "nix-editor"
     "nix-repl"
     "nix-searchc"
-    "nix-sweep"
     # keep-sorted end
   ];
   enable = [

@@ -1,0 +1,1 @@
+{ myPkgs = "nix-sweep"; }
