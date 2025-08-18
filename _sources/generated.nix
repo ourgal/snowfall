@@ -535,16 +535,16 @@
   };
   convfmt = {
     pname = "convfmt";
-    version = "1.1.0";
+    version = "1.1.1";
     src = fetchFromGitHub {
       owner = "oriontvv";
       repo = "convfmt";
-      rev = "1.1.0";
+      rev = "1.1.1";
       fetchSubmodules = false;
-      sha256 = "sha256-EDneb/tWrLbmR4fDms8yCM38FpFuTm3tJCDcqUR42H8=";
+      sha256 = "sha256-d2xxerr7AnZ0g7Wn/JeIg2NInTTYx07Qsj0d53BjsW4=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./convfmt-1.1.0/Cargo.lock;
+      lockFile = ./convfmt-1.1.1/Cargo.lock;
       outputHashes = {
         
       };
@@ -613,21 +613,21 @@
   };
   dela = {
     pname = "dela";
-    version = "0aa87c8012abbb530451375fe40a34092a116528";
+    version = "2428fa4f06193813fcc9b379326004443b09e424";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "0aa87c8012abbb530451375fe40a34092a116528";
+      rev = "2428fa4f06193813fcc9b379326004443b09e424";
       fetchSubmodules = false;
-      sha256 = "sha256-msmjcsvV0A2rsvvNseSEzQ/Lvs0MMegyb6YkWS2PRu0=";
+      sha256 = "sha256-a98oI3mdTe/qIB/sRNU6lNABB5gCZdVh0y126PGUrTU=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./dela-0aa87c8012abbb530451375fe40a34092a116528/Cargo.lock;
+      lockFile = ./dela-2428fa4f06193813fcc9b379326004443b09e424/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-08-10";
+    date = "2025-08-17";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -2112,13 +2112,13 @@
   };
   mbake = {
     pname = "mbake";
-    version = "v1.3.1";
+    version = "v1.4.0";
     src = fetchFromGitHub {
       owner = "EbodShojaei";
       repo = "bake";
-      rev = "v1.3.1";
+      rev = "v1.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-gQsie4/iUIe4g6ZH8bL33xW6CNxSg/sh429P4Xv0GjQ=";
+      sha256 = "sha256-UyIcJE2dOmL7hsFzZcyix1Aif0YsyCrBDwP1BTj1QfI=";
     };
   };
   mdformat-config = {
@@ -3719,18 +3719,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202508162213";
+    version = "202508172213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508162213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508172213/geoip.dat";
       sha256 = "sha256-9JDTlPUfkeS+/qGr1op7lXT+G//InSW8Jrz5D8SB1H4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202508162213";
+    version = "202508172213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508162213/geosite.dat";
-      sha256 = "sha256-oFYKxQ/hDsp2TjEvnsVO8L3Zg4X3KPsgKFl3W8DFcQI=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508172213/geosite.dat";
+      sha256 = "sha256-+R2I3G/ar7v/XEIXVu4vEDZJmwPMz4brVoTIpYpyRrA=";
     };
   };
   vim-auto-save = {
@@ -3951,13 +3951,13 @@
   };
   viu = {
     pname = "viu";
-    version = "v3.2.6";
+    version = "v3.2.7";
     src = fetchFromGitHub {
       owner = "Benexl";
       repo = "viu";
-      rev = "v3.2.6";
+      rev = "v3.2.7";
       fetchSubmodules = false;
-      sha256 = "sha256-sOgZKGan0/axk2TbfqEcmw7f6VI1Qae6zQaXG6MMJDc=";
+      sha256 = "sha256-tAxYQ3UHoXhP0hcqxA9q9QPqPKsPPJwYKDx+jX9LFIg=";
     };
   };
   vl = {
