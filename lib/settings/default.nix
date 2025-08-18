@@ -5,6 +5,7 @@ let
     "air"
     "brix"
     "home"
+    "office2043"
     "surface"
     "router"
     "yanyu"
@@ -19,6 +20,7 @@ let
     "air"
     "home"
     "surface"
+    "office2043"
   ];
   windows = [ "nuc" ];
   servers = {
