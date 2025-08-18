@@ -70,7 +70,6 @@ in
       "udisks2"
       "virtualbox"
       "weylus"
-      "xorgConf"
       # keep-sorted end
     ];
 
