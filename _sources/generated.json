@@ -4168,7 +4168,7 @@
     "nix-sweep": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./nix-sweep-v0.6.1/Cargo.lock",
+                "./nix-sweep-v0.7.0/Cargo.lock",
                 {}
             ]
         },
@@ -4184,12 +4184,12 @@
             "name": null,
             "owner": "jzbor",
             "repo": "nix-sweep",
-            "rev": "v0.6.1",
-            "sha256": "sha256-DayoWzqLGhmhOZi4t4AiEH1Y7GY5THBzPgfXeK5t+Xg=",
+            "rev": "v0.7.0",
+            "sha256": "sha256-o+8VY8DxBtUhOjrFKKm7DGBk/a6xJgpib6IU9SaKEjU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.1"
+        "version": "v0.7.0"
     },
     "nrf-udev": {
         "cargoLocks": null,

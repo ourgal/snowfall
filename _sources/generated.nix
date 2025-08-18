@@ -2323,16 +2323,16 @@
   };
   nix-sweep = {
     pname = "nix-sweep";
-    version = "v0.6.1";
+    version = "v0.7.0";
     src = fetchFromGitHub {
       owner = "jzbor";
       repo = "nix-sweep";
-      rev = "v0.6.1";
+      rev = "v0.7.0";
       fetchSubmodules = false;
-      sha256 = "sha256-DayoWzqLGhmhOZi4t4AiEH1Y7GY5THBzPgfXeK5t+Xg=";
+      sha256 = "sha256-o+8VY8DxBtUhOjrFKKm7DGBk/a6xJgpib6IU9SaKEjU=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./nix-sweep-v0.6.1/Cargo.lock;
+      lockFile = ./nix-sweep-v0.7.0/Cargo.lock;
       outputHashes = {
         
       };
