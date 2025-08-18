@@ -1,5 +1,5 @@
 {
-  myPkgs = "batwhich";
+  myX86Pkgs = "batwhich";
   nixPkgs = [
     # keep-sorted start
     "as-tree"

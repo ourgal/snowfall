@@ -2,7 +2,6 @@
   myPkgs = [
     # keep-sorted start
     "bilix"
-    "dirdl"
     "douyin-downloader"
     "dra"
     "imgboxdwl"
@@ -10,6 +9,7 @@
     "tstickers"
     # keep-sorted end
   ];
+  myX86Pkgs = "dirdl";
   pyPkgs = "downloader-cli";
   nixPkgs = [
     # keep-sorted start

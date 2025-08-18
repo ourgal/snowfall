@@ -1,5 +1,5 @@
 {
-  myPkgs = "gtm";
+  myX86Pkgs = "gtm";
   progs.fish = {
     interactiveShellInit = "__gtm";
     functions.__gtm = {

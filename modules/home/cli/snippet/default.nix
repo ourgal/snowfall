@@ -1,10 +1,6 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "corgi"
-    "ehh"
-    # keep-sorted end
-  ];
+  myPkgs = "ehh";
+  myX86Pkgs = "corgi";
   nixPkgs = [
     # keep-sorted start
     "hoard"

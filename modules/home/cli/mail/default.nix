@@ -1,4 +1,4 @@
 {
-  nixPkgs = "meli";
+  nixX86Pkgs = "meli";
   enable = "notmuch";
 }

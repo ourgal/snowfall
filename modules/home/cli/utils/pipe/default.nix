@@ -1,8 +1,4 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "tp"
-    # keep-sorted end
-  ];
+  myX86Pkgs = "tp";
   nixPkgs = "up";
 }

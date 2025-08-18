@@ -260,7 +260,9 @@ rec {
       path ? "",
       value ? { },
       myPkgs ? [ ],
+      myX86Pkgs ? [ ],
       nixPkgs ? [ ],
+      nixX86Pkgs ? [ ],
       nodePkgs ? [ ],
       pyPkgs ? [ ],
       snowPkgs ? [ ],
@@ -296,6 +298,7 @@ rec {
         namespace
         config
         pkgs
+        target
         ;
       inherit (lib) mkIf;
       inherit (lib.${namespace}) cfgHome optHome;
@@ -493,7 +496,9 @@ rec {
           home = {
             packages =
               (pkgHandle pkgs.${namespace} myPkgs)
+              ++ (pkgHandle pkgs.${namespace} (isX86 target myX86Pkgs))
               ++ (pkgHandle pkgs nixPkgs)
+              ++ (pkgHandle pkgs (isX86 target nixX86Pkgs))
               ++ (pkgHandle pkgs.nodePackages nodePkgs)
               ++ (pkgHandle pkgs.python3Packages pyPkgs)
               ++ (pkgHandle pkgs.dotnetPackages dotnetPkgs)
@@ -666,4 +671,13 @@ rec {
     RestrictSUIDSGID = true;
     UMask = "0077";
   };
+
+  isX86 =
+    target: pkgs:
+    if isString pkgs then
+      lib.optional (target == "x86_64-linux") pkgs
+    else if isList pkgs then
+      lib.optionals (target == "x86_64-linux") pkgs
+    else
+      throw "pkgs is neither string nor list";
 }

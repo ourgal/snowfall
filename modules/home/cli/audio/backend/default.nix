@@ -1,5 +1,5 @@
 {
-  myPkgs = "roc-switch";
+  myX86Pkgs = "roc-switch";
   nixPkgs = [
     # keep-sorted start
     "alsa-utils"

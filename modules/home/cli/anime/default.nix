@@ -1,11 +1,13 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "adl"
     "ani-cli"
     "ani-skip"
-    "animdl"
     # keep-sorted end
+  ];
+  nixX86Pkgs = [
+    "animdl"
+    "adl"
   ];
   myPkgs = [
     # keep-sorted start

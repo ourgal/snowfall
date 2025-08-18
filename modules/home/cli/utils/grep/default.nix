@@ -1,11 +1,11 @@
 {
   myPkgs = [
     # keep-sorted start
-    "hypergrep"
     "kbgrep"
     "play"
     # keep-sorted end
   ];
+  myX86Pkgs = "hypergrep";
   nixPkgs = [
     # keep-sorted start
     "ack"
