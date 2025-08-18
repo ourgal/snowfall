@@ -1076,11 +1076,11 @@
     "dela": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./dela-2428fa4f06193813fcc9b379326004443b09e424/Cargo.lock",
+                "./dela-8f1cb5b9758caf2149136aeb40e6717ddf0a6a03/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-08-17",
+        "date": "2025-08-18",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1092,12 +1092,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "2428fa4f06193813fcc9b379326004443b09e424",
-            "sha256": "sha256-a98oI3mdTe/qIB/sRNU6lNABB5gCZdVh0y126PGUrTU=",
+            "rev": "8f1cb5b9758caf2149136aeb40e6717ddf0a6a03",
+            "sha256": "sha256-llrie0G2bOI+jo3DyoJSxIT5qIk3YKBKuFPxJLiV+Jo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2428fa4f06193813fcc9b379326004443b09e424"
+        "version": "8f1cb5b9758caf2149136aeb40e6717ddf0a6a03"
     },
     "devdocs-vim": {
         "cargoLocks": null,
@@ -3802,12 +3802,12 @@
             "name": null,
             "owner": "EbodShojaei",
             "repo": "bake",
-            "rev": "v1.4.0",
-            "sha256": "sha256-UyIcJE2dOmL7hsFzZcyix1Aif0YsyCrBDwP1BTj1QfI=",
+            "rev": "v1.4.1.pre",
+            "sha256": "sha256-HbBibwrd73GA0Z3xiYJAu1te7BADqsSkk0d99bMrwPw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.4.0"
+        "version": "v1.4.1.pre"
     },
     "mdformat-config": {
         "cargoLocks": null,
@@ -5173,21 +5173,6 @@
             "url": "https://github.com/sbsrf/sbsrf/releases/download/20250812/sbsrf.zip"
         },
         "version": "20250812"
-    },
-    "sequin": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "sequin",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-YqXxN4QhoP7010frKcuehdX4WXRp32Eu4mshwBJVb4I=",
-            "type": "url",
-            "url": "https://github.com/charmbracelet/sequin/releases/download/v0.3.1/sequin_0.3.1_Linux_x86_64.tar.gz"
-        },
-        "version": "0.3.1"
     },
     "servicer": {
         "cargoLocks": {
@@ -6615,9 +6600,9 @@
             "name": null,
             "sha256": "sha256-9JDTlPUfkeS+/qGr1op7lXT+G//InSW8Jrz5D8SB1H4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508172213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508180746/geoip.dat"
         },
-        "version": "202508172213"
+        "version": "202508180746"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6628,11 +6613,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-+R2I3G/ar7v/XEIXVu4vEDZJmwPMz4brVoTIpYpyRrA=",
+            "sha256": "sha256-ov8lRddhnXPAMSQTCPesgW+FQykCk0CmEe8lUjTKmRo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508172213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508180746/geosite.dat"
         },
-        "version": "202508172213"
+        "version": "202508180746"
     },
     "vim-auto-save": {
         "cargoLocks": null,
