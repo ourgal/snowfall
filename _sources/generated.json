@@ -6540,12 +6540,12 @@
             "name": null,
             "owner": "Owloops",
             "repo": "updo",
-            "rev": "v0.4.2",
-            "sha256": "sha256-DyTSpc5hWazF+3JGEjvld2mJvHXtAp1DlBObct5QV4g=",
+            "rev": "v0.4.3",
+            "sha256": "sha256-nv726Xd0I0aBJY0fNyGvJzHoMsEPelTS4Lnd2mlRiX0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.2"
+        "version": "v0.4.3"
     },
     "v": {
         "cargoLocks": null,
@@ -6600,9 +6600,9 @@
             "name": null,
             "sha256": "sha256-9JDTlPUfkeS+/qGr1op7lXT+G//InSW8Jrz5D8SB1H4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508180746/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508182212/geoip.dat"
         },
-        "version": "202508180746"
+        "version": "202508182212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6613,11 +6613,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ov8lRddhnXPAMSQTCPesgW+FQykCk0CmEe8lUjTKmRo=",
+            "sha256": "sha256-UnZSer/SNihlJJ9WRcgXQT7OhmCIq4veZLLjm4q9DH0=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508180746/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508182212/geosite.dat"
         },
-        "version": "202508180746"
+        "version": "202508182212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
