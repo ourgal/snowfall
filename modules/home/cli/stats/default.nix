@@ -24,8 +24,8 @@ args.module (
         "glances"
         "glxinfo"
         "libva-utils"
+        "neofetch"
         "onefetch"
-        "owofetch"
         "pciutils"
         "usbutils"
         "vulkan-tools"
@@ -35,7 +35,7 @@ args.module (
       ];
       nixX86Pkgs = [
         "cpu-x"
-        "neofetch"
+        "owofetch"
       ];
       xorgPkgs = "xev";
     }
