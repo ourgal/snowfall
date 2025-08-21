@@ -1,4 +1,5 @@
 {
+  myPkgs = "termchat";
   nixPkgs = [
     # keep-sorted start
     "nchat"

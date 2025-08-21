@@ -1442,3 +1442,8 @@ fetch.github = "sebastien/multiplex"
 [xrestrict]
 src.git = "https://github.com/Ademan/xrestrict"
 fetch.github = "Ademan/xrestrict"
+
+[termchat]
+src.github = "lemunozm/termchat"
+fetch.github = "lemunozm/termchat"
+cargo_locks = ["Cargo.lock"]
