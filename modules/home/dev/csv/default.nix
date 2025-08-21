@@ -2,7 +2,6 @@
   myPkgs = [
     # keep-sorted start
     "bafi"
-    "config-file-validator"
     "rsv"
     # keep-sorted end
   ];

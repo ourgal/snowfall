@@ -142,17 +142,17 @@
             ];
           };
         }
-        {
-          name = "config-file-validator";
-          group = {
-            jobs = [
-              {
-                glob = "*.{xml,csv,ini,json,toml,yaml,yml}";
-                run = "validator {staged_files}";
-              }
-            ];
-          };
-        }
+        # {
+        #   name = "config-file-validator";
+        #   group = {
+        #     jobs = [
+        #       {
+        #         glob = "*.{xml,csv,ini,json,toml,yaml,yml}";
+        #         run = "validator {staged_files}";
+        #       }
+        #     ];
+        #   };
+        # }
         {
           name = "check-secrets";
           group = {

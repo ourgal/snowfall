@@ -1,1 +1,6 @@
-{ myPkgs = "convfmt"; }
+{
+  myPkgs = [
+    "config-file-validator"
+    "convfmt"
+  ];
+}

@@ -1,10 +1,5 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "bafi"
-    "config-file-validator"
-    # keep-sorted end
-  ];
+  myPkgs = "bafi";
   nixPkgs = [
     # keep-sorted start
     "dasel"

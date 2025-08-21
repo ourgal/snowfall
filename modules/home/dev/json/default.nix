@@ -43,7 +43,6 @@
   myPkgs = [
     # keep-sorted start
     "bafi"
-    "config-file-validator"
     "vscode-json-language-server"
     # keep-sorted end
   ];

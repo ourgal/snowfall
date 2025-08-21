@@ -1,9 +1,4 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "config-file-validator"
-    # keep-sorted end
-  ];
   nixPkgs = [
     # keep-sorted start
     "dasel"
