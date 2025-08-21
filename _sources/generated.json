@@ -154,7 +154,7 @@
     },
     "anki.koplugin": {
         "cargoLocks": null,
-        "date": "2025-03-23",
+        "date": "2025-08-20",
         "extract": null,
         "name": "anki.koplugin",
         "passthru": null,
@@ -166,12 +166,12 @@
             "name": null,
             "owner": "Ajatt-Tools",
             "repo": "anki.koplugin",
-            "rev": "5b5ec9d0fc8f3c6c87dd9b5bf005ec52880f5182",
-            "sha256": "sha256-yRzLXN2z6eQILmZ7EYKlQJxHT4qQxF07xNigH9NnmJM=",
+            "rev": "6b28d7894803746d4c69066e05a95d7f65b92d12",
+            "sha256": "sha256-lSYMTIuh4fcnWA85Ska50md/1KRzBR8FA81kX5RUjos=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5b5ec9d0fc8f3c6c87dd9b5bf005ec52880f5182"
+        "version": "6b28d7894803746d4c69066e05a95d7f65b92d12"
     },
     "antifennel": {
         "cargoLocks": null,
@@ -1435,14 +1435,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:d8e0f95eaa319211642e22e7ee78f59b1c224071b40670635ad29c4f04e7b036",
+            "imageDigest": "sha256:b435a1ea2408f996c8d4c00c4f46523fa9203971ee1e85b1fe7ad3f0e7ae617f",
             "imageName": "miniflux/miniflux",
-            "imageTag": "2.2.11",
+            "imageTag": "2.2.12",
             "os": null,
-            "sha256": "sha256-IVRkKRv+a2+qTbfECx+2ZEg+9y2Z3b27JIigpPOL9aU=",
+            "sha256": "sha256-NRziL0dkheGCmLITwonFh9m8fHnX8FPt8+imw91BpNQ=",
             "tlsVerify": null
         },
-        "version": "2.2.11"
+        "version": "2.2.12"
     },
     "docker-pairdrop": {
         "cargoLocks": null,
@@ -4673,7 +4673,7 @@
     "qlty": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./qlty-v0.566.0/Cargo.lock",
+                "./qlty-v0.567.0/Cargo.lock",
                 {
                     "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
                 }
@@ -4691,12 +4691,12 @@
             "name": null,
             "owner": "qltysh",
             "repo": "qlty",
-            "rev": "v0.566.0",
-            "sha256": "sha256-4jrqYPpz1W59TiTGJlKsmOWEwACpjGZYiZZRVabrNqk=",
+            "rev": "v0.567.0",
+            "sha256": "sha256-6gAEthjlHs2gF1plxSiUA249qZyrR/p9jOGegOv32Rg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.566.0"
+        "version": "v0.567.0"
     },
     "qman": {
         "cargoLocks": null,
@@ -5110,12 +5110,12 @@
             "name": null,
             "owner": "zquestz",
             "repo": "s",
-            "rev": "v0.7.3",
-            "sha256": "sha256-g+Gz16U5rP3v+RbutDUh5+1YdTDe+ROFEnNAlNZX1fw=",
+            "rev": "v0.7.4",
+            "sha256": "sha256-bcJeNUGTcXAwB+/xly3AMJE3BTjqiC6QvuqgfDgZZrk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.7.3"
+        "version": "v0.7.4"
     },
     "sake": {
         "cargoLocks": null,
@@ -5168,11 +5168,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cdYYkLkHHTPRqHsfYQqlZN7ifhth2QChQjQ/8+JUG+U=",
+            "sha256": "sha256-ITaItbN0oDgwEKQiT2qXv2gSWBcbTQRuwSE433xtmA0=",
             "type": "url",
-            "url": "https://github.com/sbsrf/sbsrf/releases/download/20250812/sbsrf.zip"
+            "url": "https://github.com/sbsrf/sbsrf/releases/download/20250821/sbsrf.zip"
         },
-        "version": "20250812"
+        "version": "20250821"
     },
     "servicer": {
         "cargoLocks": {
@@ -5392,12 +5392,12 @@
             "name": null,
             "owner": "dancnb",
             "repo": "sonicradio",
-            "rev": "v0.7.2",
-            "sha256": "sha256-O1t96KvWW5n8fjtpxSD6OvEgq5i7/AzVaoY5ZEmGGLs=",
+            "rev": "v0.7.3",
+            "sha256": "sha256-o9uGohv+Gw/B5b8t9SbrRkzU3JC7x06sFxZiQZf9gg4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.7.2"
+        "version": "v0.7.3"
     },
     "soundfx": {
         "cargoLocks": null,
@@ -5745,6 +5745,32 @@
             "type": "github"
         },
         "version": "2.0.1"
+    },
+    "termchat": {
+        "cargoLocks": {
+            "Cargo.lock": [
+                "./termchat-v1.3.1/Cargo.lock",
+                {}
+            ]
+        },
+        "date": null,
+        "extract": null,
+        "name": "termchat",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lemunozm",
+            "repo": "termchat",
+            "rev": "v1.3.1",
+            "sha256": "sha256-HDoA9hiCKnVUf1mwl2VUvIgli8+hvaYO5+fWOMO8tks=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.3.1"
     },
     "termsand": {
         "cargoLocks": {
@@ -6600,9 +6626,9 @@
             "name": null,
             "sha256": "sha256-9JDTlPUfkeS+/qGr1op7lXT+G//InSW8Jrz5D8SB1H4=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508192213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508202212/geoip.dat"
         },
-        "version": "202508192213"
+        "version": "202508202212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6613,11 +6639,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-28aAC4psBTR3eYALcMsTBKpvAKASa79sIIOt0a2Olqw=",
+            "sha256": "sha256-fGRC8vT0u0dmPrJropxHcl7OSwiP9UcI71hsdlVIcUs=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508192213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508202212/geosite.dat"
         },
-        "version": "202508192213"
+        "version": "202508202212"
     },
     "vim-auto-save": {
         "cargoLocks": null,

@@ -446,9 +446,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.44"
+version = "4.5.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1c1f056bae57e3e54c3375c41ff79619ddd13460a17d7438712bd0d83fda4ff8"
+checksum = "1fc0e74a703892159f5ae7d3aac52c8e6c392f5ae5f359c70b5881d60aaac318"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -478,9 +478,9 @@ dependencies = [
 
 [[package]]
 name = "clap_derive"
-version = "4.5.41"
+version = "4.5.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef4f52386a59ca4c860f7393bcf8abd8dfd91ecccc0f774635ff68e92eeef491"
+checksum = "14cb31bb0a7d536caef2639baa7fad459e15c3144efefa6dbd1c84562c4739f6"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -1173,9 +1173,9 @@ dependencies = [
 
 [[package]]
 name = "glob"
-version = "0.3.2"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8d1add55171497b4705a648c6b583acafb01d58050a51727785f0b2c8e0a2b2"
+checksum = "0cc23270f6e1808e30a928bdc84dea0b9b4136a8bc82338574f23baf47bbd280"
 
 [[package]]
 name = "globset"
@@ -2105,9 +2105,9 @@ checksum = "830b246a0e5f20af87141b25c173cd1b609bd7779a4617d6ec582abaf90870f3"
 
 [[package]]
 name = "objc2"
-version = "0.6.1"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88c6597e14493ab2e44ce58f2fdecf095a51f12ca57bec060a11c57332520551"
+checksum = "561f357ba7f3a2a61563a186a163d0a3a5247e1089524a3981d49adb775078bc"
 dependencies = [
  "objc2-encode",
 ]
@@ -2344,7 +2344,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "198db74531d58c70a361c42201efde7e2591e976d518caf7662a47dc5720e7b6"
 dependencies = [
  "memchr",
- "thiserror 2.0.12",
+ "thiserror 2.0.15",
  "ucd-trie",
 ]
 
@@ -2537,7 +2537,7 @@ dependencies = [
 
 [[package]]
 name = "qlty"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2594,7 +2594,7 @@ dependencies = [
  "tabwriter",
  "tempfile",
  "termbg",
- "thiserror 2.0.12",
+ "thiserror 2.0.15",
  "time",
  "tiny_http",
  "toml_edit 0.22.27",
@@ -2611,7 +2611,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-analysis"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "config",
@@ -2652,7 +2652,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-check"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "ar",
@@ -2704,7 +2704,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-cloud"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "insta",
@@ -2716,7 +2716,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-config"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "auth-git2",
@@ -2752,7 +2752,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-coverage"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -2783,7 +2783,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-formats"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "flate2",
@@ -2796,14 +2796,14 @@ dependencies = [
 
 [[package]]
 name = "qlty-plugins"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "rust-embed",
 ]
 
 [[package]]
 name = "qlty-smells"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "anyhow",
  "bencher",
@@ -2822,7 +2822,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-test-utilities"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "git2",
  "tempfile",
@@ -2830,7 +2830,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-types"
-version = "0.566.0"
+version = "0.567.0"
 dependencies = [
  "clap",
  "pbjson",
@@ -2844,9 +2844,9 @@ dependencies = [
 
 [[package]]
 name = "quick-xml"
-version = "0.38.1"
+version = "0.38.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9845d9dccf565065824e69f9f235fafba1587031eda353c1f1561cd6a6be78f4"
+checksum = "d200a41a7797e6461bd04e4e95c3347053a731c32c87f066f2f0dda22dbdbba8"
 dependencies = [
  "memchr",
 ]
@@ -2898,9 +2898,9 @@ dependencies = [
 
 [[package]]
 name = "rayon"
-version = "1.10.0"
+version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b418a60154510ca1a002a752ca9714984e21e4241e804d32555251faf8b78ffa"
+checksum = "368f01d005bf8fd9b1206fb6fa653e6c4a81ceb1466406b81792d87c5677a58f"
 dependencies = [
  "either",
  "rayon-core",
@@ -2908,9 +2908,9 @@ dependencies = [
 
 [[package]]
 name = "rayon-core"
-version = "1.12.1"
+version = "1.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1465873a3dfdaa8ae7cb14b4383657caab0b3e8a0aa9ae8e04b044854c8dfce2"
+checksum = "22e18b0f0062d30d4230b2e85ff77fdfe4326feb054b9783a3460d8435c8ab91"
 dependencies = [
  "crossbeam-deque",
  "crossbeam-utils",
@@ -2933,7 +2933,7 @@ checksum = "dd6f9d3d47bdd2ad6945c5015a226ec6155d0bcdfd8f7cd29f86b71f8de99d2b"
 dependencies = [
  "getrandom 0.2.15",
  "libredox",
- "thiserror 2.0.12",
+ "thiserror 2.0.15",
 ]
 
 [[package]]
@@ -3839,7 +3839,7 @@ dependencies = [
  "mockall",
  "scopeguard",
  "simplelog",
- "thiserror 2.0.12",
+ "thiserror 2.0.15",
  "winapi",
 ]
 
@@ -3889,11 +3889,11 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "2.0.12"
+version = "2.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "567b8a2dae586314f7be2a752ec7474332959c6460e02bde30d702a66d488708"
+checksum = "80d76d3f064b981389ecb4b6b7f45a0bf9fdac1d5b9204c7bd6714fecc302850"
 dependencies = [
- "thiserror-impl 2.0.12",
+ "thiserror-impl 2.0.15",
 ]
 
 [[package]]
@@ -3909,9 +3909,9 @@ dependencies = [
 
 [[package]]
 name = "thiserror-impl"
-version = "2.0.12"
+version = "2.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f7cf42b4507d8ea322120659672cf1b9dbb93f8f2d4ecfd6e51350ff5b17a1d"
+checksum = "44d29feb33e986b6ea906bd9c3559a856983f92371b3eaa5e83782a351623de0"
 dependencies = [
  "proc-macro2",
  "quote",
