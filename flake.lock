@@ -543,6 +543,23 @@
         "nixpkgs-lib": "nixpkgs-lib_4"
       },
       "locked": {
+        "lastModified": 1751413152,
+        "narHash": "sha256-Tyw1RjYEsp5scoigs1384gIg6e0GoBVjms4aXFfRssQ=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "77826244401ea9de6e3bac47c2db46005e1f30b5",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-parts",
+        "type": "indirect"
+      }
+    },
+    "flake-parts_8": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_5"
+      },
+      "locked": {
         "lastModified": 1738453229,
         "narHash": "sha256-7H9XgNiGLKN1G1CgRh0vUL4AheZSYzPm+zmZ7vxbJdo=",
         "owner": "hercules-ci",
@@ -1485,6 +1502,21 @@
     },
     "nixpkgs-lib_4": {
       "locked": {
+        "lastModified": 1751159883,
+        "narHash": "sha256-urW/Ylk9FIfvXfliA1ywh75yszAbiTEVgpPeinFyVZo=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "14a40a1d7fb9afa4739275ac642ed7301a9ba1ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_5": {
+      "locked": {
         "lastModified": 1738452942,
         "narHash": "sha256-vJzFZGaCpnmo7I6i416HaBLpC+hvcURh/BQwROcGIp8=",
         "type": "tarball",
@@ -1931,6 +1963,7 @@
         "snowfall-thaw": "snowfall-thaw",
         "sops-nix": "sops-nix",
         "telega-overlay": "telega-overlay",
+        "ulauncher": "ulauncher",
         "unstable": "unstable_2",
         "wired": "wired"
       }
@@ -2407,6 +2440,27 @@
         "type": "github"
       }
     },
+    "ulauncher": {
+      "inputs": {
+        "flake-parts": "flake-parts_7",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1755902505,
+        "narHash": "sha256-v0kyjLDU7XRJRZil3VnyiI0WhRUmrw11FXA60NmVsPI=",
+        "owner": "Ulauncher",
+        "repo": "Ulauncher",
+        "rev": "43ac6b229ec7efc9072180e8b63ed9185a578880",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ulauncher",
+        "repo": "Ulauncher",
+        "type": "github"
+      }
+    },
     "unstable": {
       "locked": {
         "lastModified": 1705856552,
@@ -2459,7 +2513,7 @@
     },
     "wired": {
       "inputs": {
-        "flake-parts": "flake-parts_7",
+        "flake-parts": "flake-parts_8",
         "nixpkgs": [
           "nixpkgs"
         ],

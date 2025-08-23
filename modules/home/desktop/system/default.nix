@@ -11,6 +11,7 @@ args.module (
         ;
     in
     {
+      inputPkgs = p: [ p.ulauncher.packages."${pkgs.system}".default ];
       nixPkgs = [
         # keep-sorted start
         "blobdrop"
