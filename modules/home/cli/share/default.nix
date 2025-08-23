@@ -3,6 +3,7 @@
     # keep-sorted start
     "biliup-rs"
     "copyparty"
+    "webdav"
     "croc"
     "dufs"
     "ffsend"
