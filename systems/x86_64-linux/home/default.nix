@@ -40,7 +40,6 @@ in
       "appimage"
       "audio"
       "avahi"
-      "docker"
       "bandwhich"
       "bluetooth"
       "bpftune"

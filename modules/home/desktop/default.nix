@@ -11,7 +11,6 @@ args.module (
       enable = [
         # keep-sorted start
         "anime"
-        "windows"
         "audio"
         "browser"
         "chat"
