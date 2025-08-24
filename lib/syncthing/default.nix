@@ -58,7 +58,8 @@ in
     };
     folders =
       let
-        inherit (lib.${namespace}.settings) desktops windows;
+        desktops = lib.lists.remove "office2043" lib.${namespace}.settings.desktops;
+        inherit (lib.${namespace}.settings) windows;
         inherit (lib.${namespace}.settings.servers) syncthing;
       in
       {
