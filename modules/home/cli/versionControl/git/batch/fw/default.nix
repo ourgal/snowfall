@@ -114,6 +114,14 @@ args.module (
           trusted = false;
           git = "${soft}:nix-on-droid";
         };
+        "fw/projects/default/scoop-galgame-cn" = toTOML {
+          trusted = false;
+          git = "${myGithub}:scoop-galgame-cn";
+        };
+        "fw/projects/default/scoop-galgame-bt" = toTOML {
+          trusted = false;
+          git = "${myGithub}:scoop-galgame-bt";
+        };
       };
       value = {
         systemd.user.tmpfiles.rules = [ "d ${config.home.homeDirectory}/.emacs.d - - - -" ];
