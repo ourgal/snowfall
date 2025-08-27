@@ -280,7 +280,7 @@ let
         inherit tag;
         type = "remote";
         format = "binary";
-        url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/${tag}.srs";
+        url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset-compatible/${tag}.srs";
         download_detour = outbounds.direct.tag;
       };
     in
@@ -512,6 +512,10 @@ in
       {
         rule_set = ruleSet.networktest.tag;
         outbound = outbounds.networktest.tag;
+      }
+      {
+        rule_set = ruleSet.youtube.tag;
+        outbound = outbounds.youtube.tag;
       }
       {
         rule_set = ruleSet.proxy.tag;
