@@ -9,6 +9,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "fd"
+        "nodejs"
         "neovim-node-client"
         "ripgrep"
         "tree-sitter"
