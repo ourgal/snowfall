@@ -544,9 +544,9 @@ dependencies = [
 
 [[package]]
 name = "config"
-version = "0.15.13"
+version = "0.15.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b1eb4fb07bc7f012422df02766c7bd5971effb894f573865642f06fa3265440"
+checksum = "aa4092bf3922a966e2bd74640b80f36c73eaa7251a4fd0fbcda1f8a4de401352"
 dependencies = [
  "async-trait",
  "convert_case",
@@ -555,6 +555,7 @@ dependencies = [
  "ron",
  "rust-ini",
  "serde",
+ "serde-untagged",
  "serde_json",
  "toml 0.9.2",
  "winnow",
@@ -975,6 +976,16 @@ name = "equivalent"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
+
+[[package]]
+name = "erased-serde"
+version = "0.4.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e004d887f51fcb9fef17317a2f3525c887d8aa3f4f50fed920816a688284a5b7"
+dependencies = [
+ "serde",
+ "typeid",
+]
 
 [[package]]
 name = "errno"
@@ -2537,7 +2548,7 @@ dependencies = [
 
 [[package]]
 name = "qlty"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2611,7 +2622,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-analysis"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "config",
@@ -2652,7 +2663,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-check"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "ar",
@@ -2704,7 +2715,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-cloud"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "insta",
@@ -2716,7 +2727,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-config"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "auth-git2",
@@ -2752,7 +2763,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-coverage"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -2783,7 +2794,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-formats"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "flate2",
@@ -2796,14 +2807,14 @@ dependencies = [
 
 [[package]]
 name = "qlty-plugins"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "rust-embed",
 ]
 
 [[package]]
 name = "qlty-smells"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "anyhow",
  "bencher",
@@ -2822,7 +2833,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-test-utilities"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "git2",
  "tempfile",
@@ -2830,7 +2841,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-types"
-version = "0.567.0"
+version = "0.568.0"
 dependencies = [
  "clap",
  "pbjson",
@@ -3432,6 +3443,17 @@ checksum = "4ae1940bc2612f641456fc715125e4002cbd235d040188a1994e64b734054c2e"
 dependencies = [
  "lexical",
  "serde",
+]
+
+[[package]]
+name = "serde-untagged"
+version = "0.1.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "34836a629bcbc6f1afdf0907a744870039b1e14c0561cb26094fa683b158eff3"
+dependencies = [
+ "erased-serde",
+ "serde",
+ "typeid",
 ]
 
 [[package]]
@@ -4322,6 +4344,12 @@ dependencies = [
  "snapbox",
  "toml_edit 0.23.3",
 ]
+
+[[package]]
+name = "typeid"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc7d623258602320d5c55d1bc22793b57daff0ec7efc270ea7d55ce1d5f5471c"
 
 [[package]]
 name = "typenum"
