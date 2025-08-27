@@ -1,10 +1,6 @@
 {
   nixPkgs = "transmission_4";
-  myPkgs = [
-    # keep-sorted start
-    "anime"
-    "tewi"
-    # keep-sorted end
-  ];
+  myX86Pkgs = "anime";
+  myPkgs = "tewi";
   enable = "service";
 }
