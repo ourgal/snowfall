@@ -174,6 +174,11 @@ let
           main
         ];
       };
+      youtube = {
+        type = "selector";
+        tag = "📺 Youtube";
+        outbounds = [ main.tag ] ++ countriesTags;
+      };
       global = {
         type = "selector";
         tag = "GLOBAL";
@@ -218,6 +223,7 @@ let
       outbounds.expensive
       outbounds.foreign
       outbounds.telegram
+      outbounds.youtube
       outbounds.ai
       outbounds.games
       outbounds.microsoft
@@ -291,6 +297,7 @@ let
       telegram = go "telegramip";
       cn_ip = go "cnip";
       ads = go "ads";
+      youtube = go "youtube";
       netflix = go "netflix";
       netflix_ip = go "netflixip";
     };
@@ -533,6 +540,10 @@ in
       {
         rule_set = ruleSet.ads.tag;
         outbound = outbounds.ad.tag;
+      }
+      {
+        rule_set = ruleSet.youtube.tag;
+        outbound = outbounds.youtube.tag;
       }
     ];
     mkProvider = tag: url: time: {
