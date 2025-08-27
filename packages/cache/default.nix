@@ -10,7 +10,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/Hejsil/cache/releases/download/${version}/cache-x86_64-linux-musl";
-    hash = "sha256-KjamMmlDzJDe26NKtiP0+XW2invfLS3FTNRFl5I0od8=";
+    hash = "sha256-9valEzM3Ish4SEDOEKQsqcjW86a7SWS8ey36oG0p+MU=";
   };
 
   phases = [ "installPhase" ];
