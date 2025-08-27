@@ -213,13 +213,13 @@
   };
   bestsub = {
     pname = "bestsub";
-    version = "v1.0.1";
+    version = "v1.0.2";
     src = fetchFromGitHub {
       owner = "bestruirui";
       repo = "BestSub";
-      rev = "v1.0.1";
+      rev = "v1.0.2";
       fetchSubmodules = false;
-      sha256 = "sha256-xujkXMJH7wk0Y/kt5b0RW9ERS+nuCBFfp5ZDB43ro6A=";
+      sha256 = "sha256-v6UZL+uS/DjdTANqZutB9pvXOKhhXrWwyCpqk6rMT9I=";
     };
   };
   bilix = {
