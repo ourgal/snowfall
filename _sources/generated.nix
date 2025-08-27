@@ -859,12 +859,12 @@
   };
   docker-soft-serve = {
     pname = "docker-soft-serve";
-    version = "v0.9.1";
+    version = "v0.10.0";
     src = dockerTools.pullImage {
       imageName = "charmcli/soft-serve";
-      imageDigest = "sha256:c1baa7e942a6f9f06515705fabb58b721d8a7c71de700d8f2f95e9c951b10add";
-      sha256 = "sha256-B8Iqc8WVEnl+GUxVbOoLe3yVoIMGV1uNB06TbELZBTg=";
-      finalImageTag = "v0.9.1";
+      imageDigest = "sha256:9a0761c7a68a245b43fd278a19802ea74660ff05e4b5b0126e5d99947bcd459e";
+      sha256 = "sha256-4E5WZNU/+RyEmT9c+vdzwBCrdNx0rcRKTLSCD89EdwE=";
+      finalImageTag = "v0.10.0";
     };
   };
   docker-subconverter = {
@@ -2602,16 +2602,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.568.0";
+    version = "v0.569.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.568.0";
+      rev = "v0.569.0";
       fetchSubmodules = false;
-      sha256 = "sha256-iGlcTQEmJVr2F/HA3I9Pyi0PvkK4nP5LiJ+go+CR99Y=";
+      sha256 = "sha256-JmJeA2iTLFmonAeMRJlaME3QZxeum8xZ0k17IXiVS7A=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./qlty-v0.568.0/Cargo.lock;
+      lockFile = ./qlty-v0.569.0/Cargo.lock;
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };
@@ -3314,13 +3314,13 @@
   };
   timewarrior = {
     pname = "timewarrior";
-    version = "v1.9.0";
+    version = "v1.9.1";
     src = fetchFromGitHub {
       owner = "GothenburgBitFactory";
       repo = "timewarrior";
-      rev = "v1.9.0";
+      rev = "v1.9.1";
       fetchSubmodules = false;
-      sha256 = "sha256-rAcxDoZs35KQ8+37Jitwssf6ZlWnCY0/mQ6K9Lgp8nI=";
+      sha256 = "sha256-H7wKCk/UttK0WfojASlOj7WaQ+IAif+xVT0y8dYxYus=";
     };
   };
   tmux-auto-renumber-session = {
@@ -3728,18 +3728,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202508262213";
+    version = "202508272212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508262213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508272212/geoip.dat";
       sha256 = "sha256-iWYUhaChIMjaCTsaKHBQlIbHmbcQPDSFVZlin5PAvlE=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202508262213";
+    version = "202508272212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508262213/geosite.dat";
-      sha256 = "sha256-vadgGpSPo+1y87ebO/0K3aCxXRRlR8n2+i993vSRbfo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508272212/geosite.dat";
+      sha256 = "sha256-RMi3IjMAxlGMPRtsh82smXB3syUiVWTQiP2TzUVofO0=";
     };
   };
   vim-auto-save = {

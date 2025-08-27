@@ -1555,14 +1555,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:c1baa7e942a6f9f06515705fabb58b721d8a7c71de700d8f2f95e9c951b10add",
+            "imageDigest": "sha256:9a0761c7a68a245b43fd278a19802ea74660ff05e4b5b0126e5d99947bcd459e",
             "imageName": "charmcli/soft-serve",
-            "imageTag": "v0.9.1",
+            "imageTag": "v0.10.0",
             "os": null,
-            "sha256": "sha256-B8Iqc8WVEnl+GUxVbOoLe3yVoIMGV1uNB06TbELZBTg=",
+            "sha256": "sha256-4E5WZNU/+RyEmT9c+vdzwBCrdNx0rcRKTLSCD89EdwE=",
             "tlsVerify": null
         },
-        "version": "v0.9.1"
+        "version": "v0.10.0"
     },
     "docker-subconverter": {
         "cargoLocks": null,
@@ -4673,7 +4673,7 @@
     "qlty": {
         "cargoLocks": {
             "Cargo.lock": [
-                "./qlty-v0.568.0/Cargo.lock",
+                "./qlty-v0.569.0/Cargo.lock",
                 {
                     "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
                 }
@@ -4691,12 +4691,12 @@
             "name": null,
             "owner": "qltysh",
             "repo": "qlty",
-            "rev": "v0.568.0",
-            "sha256": "sha256-iGlcTQEmJVr2F/HA3I9Pyi0PvkK4nP5LiJ+go+CR99Y=",
+            "rev": "v0.569.0",
+            "sha256": "sha256-JmJeA2iTLFmonAeMRJlaME3QZxeum8xZ0k17IXiVS7A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.568.0"
+        "version": "v0.569.0"
     },
     "qman": {
         "cargoLocks": null,
@@ -5895,12 +5895,12 @@
             "name": null,
             "owner": "GothenburgBitFactory",
             "repo": "timewarrior",
-            "rev": "v1.9.0",
-            "sha256": "sha256-rAcxDoZs35KQ8+37Jitwssf6ZlWnCY0/mQ6K9Lgp8nI=",
+            "rev": "v1.9.1",
+            "sha256": "sha256-H7wKCk/UttK0WfojASlOj7WaQ+IAif+xVT0y8dYxYus=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.9.0"
+        "version": "v1.9.1"
     },
     "tmux-auto-renumber-session": {
         "cargoLocks": null,
@@ -6626,9 +6626,9 @@
             "name": null,
             "sha256": "sha256-iWYUhaChIMjaCTsaKHBQlIbHmbcQPDSFVZlin5PAvlE=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508262213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508272212/geoip.dat"
         },
-        "version": "202508262213"
+        "version": "202508272212"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLocks": null,
@@ -6639,11 +6639,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-vadgGpSPo+1y87ebO/0K3aCxXRRlR8n2+i993vSRbfo=",
+            "sha256": "sha256-RMi3IjMAxlGMPRtsh82smXB3syUiVWTQiP2TzUVofO0=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508262213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508272212/geosite.dat"
         },
-        "version": "202508262213"
+        "version": "202508272212"
     },
     "vim-auto-save": {
         "cargoLocks": null,
