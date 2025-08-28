@@ -20,8 +20,8 @@ function youtube() {
     yt-dlp -P "$path" "$@"
   fi
 
-  latest_file=$(find "$path" -type f -name "*.mp4" -printf "%T@ %P\n" | sort -nr | cut -d' ' -f2- | head -n 1)
-  mpv --speed=3 "$latest_file"
+  latest_file=$(find "$path" -type f \( -name "*.mp4" -o -name "*.webm" \) -printf "%T@ %P\n" | sort -nr | cut -d' ' -f2- | head -n 1)
+  mpv --speed=3 "$path/$latest_file"
 }
 
 function bilibili() {
@@ -45,7 +45,10 @@ https://pbs.twimg.com* | *.jpg | *.png | *.webp)
   image "$@"
   ;;
 https://www.youtube.com/watch*)
-  ff "$@"
+  youtube "$@"
+  ;;
+https://www.youtube.com/shorts*)
+  youtube "$@"
   ;;
 https://www.bilibili.com/video*)
   bilibili "$@"
