@@ -20,8 +20,8 @@ let
     "air"
     "home"
     "surface"
-    "office2043"
   ];
+  work = [ "office2043" ];
   windows = [ "nuc" ];
   servers = {
     anki-sync-server = [ "brix" ];
@@ -36,6 +36,7 @@ in
       desktops
       servers
       windows
+      work
       ;
     hostType = lib.types.enum allHosts;
     laptopModules = lib.${namespace}.enabledList [

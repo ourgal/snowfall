@@ -10,7 +10,10 @@ args.module (
         namespace
         disableOpt
         lib
+        host
         ;
+      inherit (builtins) elem;
+      inherit (lib.${namespace}) settings;
       sessionFile = "${config.xdg.dataHome}/aria2/session";
       configFile = "${config.xdg.configHome}/aria2/aria2.conf";
       aria2-session = pkgs.writeShellScript "aria2-session" ''
@@ -24,12 +27,17 @@ args.module (
         fi
       '';
       source = pkgs._sources."aria2.conf".src;
+      secret =
+        if elem host settings.desktops && !elem host settings.work then
+          lib.strings.fileContents ./secret.key
+        else
+          "123456";
     in
     {
       progs = {
         fish.functions.aria2p = {
           body = ''
-            command aria2p -s ${lib.strings.fileContents ./secret.key} $argv
+            command aria2p -s ${secret} $argv
           '';
           description = "aria2p";
           wraps = "aria2p";
@@ -111,7 +119,7 @@ args.module (
             rpc-max-request-size = "10M";
             console-log-level = "warn";
             summary-interval = 0;
-            rpc-secret = lib.strings.fileContents ./secret.key;
+            rpc-secret = secret;
             # on-download-stop = "${config.xdg.configHome}/aria2/delete.sh";
             # on-download-complete = "${config.xdg.configHome}/aria2/clean.sh";
           };

@@ -1,4 +1,15 @@
-{
-  nixX86Pkgs = "meli";
-  enable = "notmuch";
-}
+args:
+args.module (
+  args
+  // (
+    let
+      inherit (args) lib namespace host;
+      inherit (lib.${namespace}) settings;
+      inherit (builtins) elem;
+    in
+    {
+      nixX86Pkgs = "meli";
+      enable = if elem host settings.desktops && !elem host settings.work then "notmuch" else [ ];
+    }
+  )
+)
