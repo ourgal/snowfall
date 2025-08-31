@@ -18,5 +18,10 @@
     "wiki-tui"
     # keep-sorted end
   ];
-  enable = "outfieldr";
+  enable = [
+    # keep-sorted start
+    "doxx"
+    "outfieldr"
+    # keep-sorted end
+  ];
 }
