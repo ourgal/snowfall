@@ -10,20 +10,22 @@ let
     ;
   inherit (config.${namespace}.user) host;
   inherit (lib.${namespace}.settings) laptops;
+  inherit (builtins) elem attrValues;
+  enableWiFi = elem host laptops || host == "t4";
   value = {
     networking = {
-      networkmanager = (if (builtins.elem host laptops) then enabled else disabled) // {
+      networkmanager = (if enableWiFi then enabled else disabled) // {
         wifi.backend = "iwd";
       };
       enableIPv6 = true;
       hosts = {
-        "${ip.brix}" = builtins.attrValues domains;
+        "${ip.brix}" = attrValues domains;
       };
     };
 
     systemd.network = disabled;
 
-    hardware.enableAllFirmware = if (builtins.elem host laptops) then true else false;
+    hardware.enableAllFirmware = if enableWiFi then true else false;
   };
   enable = "sysctl";
   _args = { inherit value args enable; };

@@ -9,6 +9,7 @@ let
     "surface"
     "router"
     "yanyu"
+    "t4"
     "nixos-mbr"
     "nixos-uefi"
   ];
