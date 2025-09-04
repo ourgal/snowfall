@@ -18,6 +18,7 @@ args.module (
         embed-subs = true;
         downloader = "aria2c";
         no-mtime = true;
+        cookies-from-browser = "firefox";
       };
       tmpfiles = [ "d ${config.home.homeDirectory}/Downloads/youtube - - - - -" ];
     }
