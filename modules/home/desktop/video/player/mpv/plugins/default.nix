@@ -14,6 +14,7 @@ args.module (
             "manga-reader"
             "mpris"
             "quack"
+            "videoclip"
             "thumbfast"
             "uosc"
             # keep-sorted end
