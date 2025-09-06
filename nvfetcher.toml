@@ -1087,8 +1087,8 @@ src.git = "https://github.com/Zatfer17/tui-network"
 fetch.github = "Zatfer17/tui-network"
 
 [fortune-python]
-src.pypi = "fortune-python"
-fetch.pypi = "fortune-python"
+src.git = "https://codeberg.org/jamesansley/fortune"
+fetch.git = "https://codeberg.org/jamesansley/fortune"
 
 [v2ray-rules-dat-geoip]
 src.github = "Loyalsoldier/v2ray-rules-dat"
