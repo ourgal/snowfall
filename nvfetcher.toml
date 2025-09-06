@@ -1447,3 +1447,7 @@ fetch.github = "Ademan/xrestrict"
 src.github = "lemunozm/termchat"
 fetch.github = "lemunozm/termchat"
 cargo_locks = ["Cargo.lock"]
+
+[blur-mpv]
+src.git = "https://github.com/Ajatt-Tools/blur-mpv"
+fetch.github = "Ajatt-Tools/blur-mpv"
