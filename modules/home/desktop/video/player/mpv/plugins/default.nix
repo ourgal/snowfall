@@ -3,8 +3,18 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace lib pkgs;
+      inherit (lib) optionalString;
+      inherit (builtins) elem;
+      inherit (args)
+        namespace
+        lib
+        pkgs
+        config
+        ;
       inherit (lib.${namespace}) with';
+      enableMemoAndUosc =
+        elem "memo" config.programs.mpv.scripts && elem "uosc" config.programs.mpv.scripts;
+
     in
     {
       progs.mpv = {
@@ -14,6 +24,7 @@ args.module (
             "manga-reader"
             "mpris"
             "quack"
+            "memo"
             "videoclip"
             "thumbfast"
             "uosc"
@@ -24,9 +35,11 @@ args.module (
             "mpv-M-x"
             # "mpv-btfs-stream"
           ];
+        extraInput = optionalString enableMemoAndUosc "#! History";
         scriptOpts = {
           uosc = {
             autohide = "yes";
+            controls = "command:history:script-binding memo-history?History,menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,shuffle,loop-playlist,loop-file,gap,prev,items,next,gap,fullscreen";
           };
           autoloop = {
             autoloop_duration = 360;
