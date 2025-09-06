@@ -86,15 +86,15 @@
   };
   "anki.koplugin" = {
     pname = "anki.koplugin";
-    version = "1644e525ae6c64f4989cc90264d80ec6b0c70e10";
+    version = "0acdee889b7fa5ee8e30f5f63842fd236eb610be";
     src = fetchFromGitHub {
       owner = "Ajatt-Tools";
       repo = "anki.koplugin";
-      rev = "1644e525ae6c64f4989cc90264d80ec6b0c70e10";
+      rev = "0acdee889b7fa5ee8e30f5f63842fd236eb610be";
       fetchSubmodules = false;
-      sha256 = "sha256-uVeA1sO2FW4L+k/UUePoPVrMhBaRoqnXdljdk17FrCY=";
+      sha256 = "sha256-uWBobUU3naZ6aSWsSAXssxpZAmFRw8nOn8+4EHISm44=";
     };
-    date = "2025-08-25";
+    date = "2025-09-04";
   };
   antifennel = {
     pname = "antifennel";
@@ -202,24 +202,24 @@
   };
   bafi = {
     pname = "bafi";
-    version = "v1.2.1";
+    version = "v1.2.2";
     src = fetchFromGitHub {
       owner = "mmalcek";
       repo = "bafi";
-      rev = "v1.2.1";
+      rev = "v1.2.2";
       fetchSubmodules = false;
-      sha256 = "sha256-CnUTTjvlVqcHC2OL0/gp+jPx4vULlj8whYA1BAF4NIs=";
+      sha256 = "sha256-LdQie3elcSEDQ74P3zBbpD/BRRSKrNtGj/lQXVfNIAM=";
     };
   };
   bestsub = {
     pname = "bestsub";
-    version = "v1.0.2";
+    version = "v1.5.0";
     src = fetchFromGitHub {
       owner = "bestruirui";
       repo = "BestSub";
-      rev = "v1.0.2";
+      rev = "v1.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-v6UZL+uS/DjdTANqZutB9pvXOKhhXrWwyCpqk6rMT9I=";
+      sha256 = "sha256-2CScwNAzXJlHFJMy24RcpHiETYo35UlM3VC5HjXoAuo=";
     };
   };
   bilix = {
@@ -261,6 +261,18 @@
       sha256 = "sha256-rhhUsXQ3awjFiEHEG0axilSCWS6pR+w74K/pIfEUc5w=";
     };
     date = "2024-12-17";
+  };
+  blur-mpv = {
+    pname = "blur-mpv";
+    version = "5593c50faaff2e3a4e1ce46648c14b872dc9c766";
+    src = fetchFromGitHub {
+      owner = "Ajatt-Tools";
+      repo = "blur-mpv";
+      rev = "5593c50faaff2e3a4e1ce46648c14b872dc9c766";
+      fetchSubmodules = false;
+      sha256 = "sha256-+q4R6WmzHR0niAyTTlUlZ1bCbmameEFfMXDF5XLUxLU=";
+    };
+    date = "2023-10-23";
   };
   boilr = {
     pname = "boilr";
@@ -360,15 +372,15 @@
   };
   chezmoi-vim = {
     pname = "chezmoi-vim";
-    version = "abf37336437867cbd99ce2f8849b717415391cc3";
+    version = "ca5f2ed602046d5662cb76d845c4b510aae0ce84";
     src = fetchFromGitHub {
       owner = "alker0";
       repo = "chezmoi.vim";
-      rev = "abf37336437867cbd99ce2f8849b717415391cc3";
+      rev = "ca5f2ed602046d5662cb76d845c4b510aae0ce84";
       fetchSubmodules = false;
-      sha256 = "sha256-S1/myC1dEydi1F9a6XV0lJW3S/wWQe+A2ZXPo8GbtQo=";
+      sha256 = "sha256-AU70ZnnXVRYb9s8nKdkR5/qVMQFbfNm0ZKdN/fIQhNE=";
     };
-    date = "2024-07-26";
+    date = "2025-09-06";
   };
   chinadns-ng = {
     pname = "chinadns-ng";
@@ -719,12 +731,12 @@
   };
   docker-dufs = {
     pname = "docker-dufs";
-    version = "v0.44.0";
+    version = "v0.45.0";
     src = dockerTools.pullImage {
       imageName = "sigoden/dufs";
-      imageDigest = "sha256:3c1b86611116ab3de79c90195df5cb8daa97ec4418e1a8e47b0942bd8a907098";
-      sha256 = "sha256-43bEo3Tc6VBSSKvwf4Afd5x17WN7ZJ8coADdf3VqXuk=";
-      finalImageTag = "v0.44.0";
+      imageDigest = "sha256:9b45a406b019921c7d2a512784a8652fc23a83c5598bf0ddc81d3c130c623f31";
+      sha256 = "sha256-wkgmDsHlQCZJMYOO9ZbiGbDrOHht4RzPvVtcJhkbsrI=";
+      finalImageTag = "v0.45.0";
     };
   };
   docker-e5 = {
@@ -849,12 +861,12 @@
   };
   docker-siyuan = {
     pname = "docker-siyuan";
-    version = "v3.3.0";
+    version = "v3.3.1";
     src = dockerTools.pullImage {
       imageName = "b3log/siyuan";
-      imageDigest = "sha256:95c64d9bff15b887b17cd60d3b0a9127613d265412b81de6f108609405c49e99";
-      sha256 = "sha256-pwU0Xa3fNM5MK0gr9qORsmknv7MP64evfMUWWcXMrZc=";
-      finalImageTag = "v3.3.0";
+      imageDigest = "sha256:42be2ad45ff9d182f162b77343928b7a0eff84651cda6022fceefa97776d1fb9";
+      sha256 = "sha256-5558LGbgcykDomjqcNUI5Q5PVt+7S+qXqPpCXHJh1Fc=";
+      finalImageTag = "v3.3.1";
     };
   };
   docker-soft-serve = {
@@ -899,15 +911,15 @@
   };
   douyin-downloader = {
     pname = "douyin-downloader";
-    version = "4ee8973d15896b19f6671b1ca799debbbc2f903d";
+    version = "e551dca38dbbebfdbf46375a23ccb6d120b107cd";
     src = fetchFromGitHub {
       owner = "jiji262";
       repo = "douyin-downloader";
-      rev = "4ee8973d15896b19f6671b1ca799debbbc2f903d";
+      rev = "e551dca38dbbebfdbf46375a23ccb6d120b107cd";
       fetchSubmodules = false;
-      sha256 = "sha256-EK/QXuzhIlbRhhYqFCMJ1AOVnCwaqOb4HgziZ0kubuk=";
+      sha256 = "sha256-KvSZ4D+7X/fscvQ/FO+0XeWThkSvVhpFXEnuPLJ0vWg=";
     };
-    date = "2025-08-13";
+    date = "2025-09-06";
   };
   downdoc = {
     pname = "downdoc";
@@ -1326,11 +1338,17 @@
   };
   fortune-python = {
     pname = "fortune-python";
-    version = "1.1.1";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/f/fortune-python/fortune-python-1.1.1.tar.gz";
-      sha256 = "sha256-F0LrNesABYlUbxsWvM1XOhENhIyO3rZhbSYEymICkZc=";
+    version = "cd66d3faa35e2ee43bf4374ace50bf45474adfc8";
+    src = fetchgit {
+      url = "https://codeberg.org/jamesansley/fortune";
+      rev = "cd66d3faa35e2ee43bf4374ace50bf45474adfc8";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-XEWO1B+o0p7mpHprvbdBgfSQrqPuUTaotulcP3FS/Mg=";
     };
+    date = "2025-09-03";
   };
   friendly-snippets = {
     pname = "friendly-snippets";
@@ -1790,10 +1808,10 @@
   };
   hayase = {
     pname = "hayase";
-    version = "6.4.23";
+    version = "6.4.26";
     src = fetchurl {
-      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.23/linux-hayase-6.4.23-linux.AppImage";
-      sha256 = "sha256-lP1F1jFXenFDyLX04YZZ00KhG21LUU2OaI0OvHxpgNo=";
+      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.26/linux-hayase-6.4.26-linux.AppImage";
+      sha256 = "sha256-+d27AEBmfA0rNZHn/J8EIelYPGHfo4EwdkhEja+Kgks=";
     };
   };
   hl = {
@@ -2602,16 +2620,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.570.0";
+    version = "v0.571.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.570.0";
+      rev = "v0.571.0";
       fetchSubmodules = false;
-      sha256 = "sha256-tcHpfj8DFdIQmIbDlZA6kVl4g9+GaHathywtWeXtseA=";
+      sha256 = "sha256-UfZdApEoGTfpK4Cn3PIfGgit4spib0aSvKj7rj9RVzY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./qlty-v0.570.0/Cargo.lock;
+      lockFile = ./qlty-v0.571.0/Cargo.lock;
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };
@@ -2909,21 +2927,21 @@
   };
   shh = {
     pname = "shh";
-    version = "b991c2801203bc2a8b138effffb45e1571c2d6e1";
+    version = "2b6411cdbf5b6f97e38b0a9d99c2af0454816b88";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "b991c2801203bc2a8b138effffb45e1571c2d6e1";
+      rev = "2b6411cdbf5b6f97e38b0a9d99c2af0454816b88";
       fetchSubmodules = false;
-      sha256 = "sha256-t6VqbYIPldsnCORgbbiP5nyofUyrcYRAlOR8YfGGzsY=";
+      sha256 = "sha256-aeJwEHkqNU+Zy/7rVyMuP5BTb5fDt5Dm7sFo3sZn4pY=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./shh-b991c2801203bc2a8b138effffb45e1571c2d6e1/Cargo.lock;
+      lockFile = ./shh-2b6411cdbf5b6f97e38b0a9d99c2af0454816b88/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2025-09-01";
+    date = "2025-09-05";
   };
   shipit = {
     pname = "shipit";
@@ -3014,13 +3032,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.7.5";
+    version = "v0.8.4";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.7.5";
+      rev = "v0.8.4";
       fetchSubmodules = false;
-      sha256 = "sha256-O2/ApJVpyj2pPzVdncSQRpI/7jxvQDUASqBcIxFivaE=";
+      sha256 = "sha256-HwzROKQgoVnNxoiR1urxv6owKT1/CByy8g5a+Zy3ZNI=";
     };
   };
   soundfx = {
@@ -3306,10 +3324,10 @@
   };
   textual = {
     pname = "textual";
-    version = "6.0.0";
+    version = "6.1.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-6.0.0.tar.gz";
-      sha256 = "sha256-y4iC52AagKEwqW0BOTvUxtG/+33J9qgg62tSas8L/hA=";
+      url = "https://pypi.org/packages/source/t/textual/textual-6.1.0.tar.gz";
+      sha256 = "sha256-zImCbKIUbGRVYyWTIMpN3HXRg8d6+31YrN1GhJ35FE0=";
     };
   };
   timewarrior = {
@@ -3493,15 +3511,15 @@
   };
   tmux-tome = {
     pname = "tmux-tome";
-    version = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
+    version = "945235d22d657904094d04f545f8c60ea81f8002";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
+      rev = "945235d22d657904094d04f545f8c60ea81f8002";
       fetchSubmodules = false;
-      sha256 = "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=";
+      sha256 = "sha256-5DhWTH+WRJ9ymGM9IrShmg/j4roPfbYgsg6aOSPQUng=";
     };
-    date = "2025-02-27";
+    date = "2025-09-03";
   };
   tmux-transient-status = {
     pname = "tmux-transient-status";
@@ -3541,27 +3559,27 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "aab6c868bfb3d116102710a6e224d77c6a4e9cbe";
+    version = "a35457c2f59170cdae66eaa9de96a8a5afd3c936";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "aab6c868bfb3d116102710a6e224d77c6a4e9cbe";
+      rev = "a35457c2f59170cdae66eaa9de96a8a5afd3c936";
       fetchSubmodules = false;
-      sha256 = "sha256-gweqIZE95WHtYuOOOYJyyg1PM/e6vZzLlPVBA/MrM3w=";
+      sha256 = "sha256-6dx81ItJodYUoWtlbGqoc5MPRCqy2PLgqIJK9lrAJ30=";
     };
-    date = "2025-08-11";
+    date = "2025-09-04";
   };
   to-fish = {
     pname = "to-fish";
-    version = "52b151cfe67c00cb64d80ccc6dae398f20364938";
+    version = "b94c2e5756b4646051fe64ad8cd36eda33405f8a";
     src = fetchFromGitHub {
       owner = "joehillen";
       repo = "to-fish";
-      rev = "52b151cfe67c00cb64d80ccc6dae398f20364938";
+      rev = "b94c2e5756b4646051fe64ad8cd36eda33405f8a";
       fetchSubmodules = false;
-      sha256 = "sha256-DfDsU/qY2XdYlkLISIOv02ggHfKEpb+YompNWWjs5/A=";
+      sha256 = "sha256-jQGYFON13XhjX+Xrnd8kglco8xRJ9G7kkGmswtuEgZw=";
     };
-    date = "2023-04-24";
+    date = "2025-09-03";
   };
   "todo-comments.fish" = {
     pname = "todo-comments.fish";
@@ -3728,18 +3746,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202509012212";
+    version = "202509052212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509012212/geoip.dat";
-      sha256 = "sha256-pmOnr3jlh1I9JXz51Or6bwzV+01fv9ti0BT/uG80G6w=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509052212/geoip.dat";
+      sha256 = "sha256-LeqTdDce5lGxVwUpPr0lB2zGKUjrj7gSHWniXbXhrdg=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202509012212";
+    version = "202509052212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509012212/geosite.dat";
-      sha256 = "sha256-5dNUpZr3T7r1mMMpMDIcc8Io+D3rH6Jh75b1Yed3l6I=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509052212/geosite.dat";
+      sha256 = "sha256-LOx7+ACbfFi0QdN4D5ZOd/7cDp6oAKtiR5GcGybRmj0=";
     };
   };
   vim-auto-save = {
@@ -3876,15 +3894,15 @@
   };
   vim-tome = {
     pname = "vim-tome";
-    version = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
+    version = "945235d22d657904094d04f545f8c60ea81f8002";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "8a2bf0d7b54aafde25e5519906ab71b91ed71be5";
+      rev = "945235d22d657904094d04f545f8c60ea81f8002";
       fetchSubmodules = false;
-      sha256 = "sha256-rsaROeKMSQwCp2sd9sKbti50nvrxHtw8gr8FlwdoHPo=";
+      sha256 = "sha256-5DhWTH+WRJ9ymGM9IrShmg/j4roPfbYgsg6aOSPQUng=";
     };
-    date = "2025-02-27";
+    date = "2025-09-03";
   };
   vim-toop = {
     pname = "vim-toop";
