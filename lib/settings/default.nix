@@ -21,6 +21,7 @@ let
     "air"
     "home"
     "surface"
+    "office2043"
   ];
   work = [ "office2043" ];
   windows = [ "nuc" ];
