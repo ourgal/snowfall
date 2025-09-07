@@ -6,6 +6,7 @@ let
     "brix"
     "home"
     "office2043"
+    "office-laptop3"
     "surface"
     "router"
     "yanyu"
@@ -22,8 +23,12 @@ let
     "home"
     "surface"
     "office2043"
+    "office-laptop3"
   ];
-  work = [ "office2043" ];
+  work = [
+    "office2043"
+    "office-laptop3"
+  ];
   windows = [ "nuc" ];
   servers = {
     anki-sync-server = [ "brix" ];
