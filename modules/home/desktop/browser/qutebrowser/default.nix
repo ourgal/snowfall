@@ -67,24 +67,16 @@ args.module (
           };
         };
         quickmarks = lib.importTOML ./quickmarks.key;
-        greasemonkey = with pkgs; [
-          (fetchurl {
-            url = "https://github.com/afreakk/greasemonkeyscripts/raw/master/youtube_sponsorblock.js";
-            sha256 = "sha256-nwNade1oHP+w5LGUPJSgAX1+nQZli4Rhe8FFUoF5mLE=";
-          })
-          (fetchurl {
-            url = "https://update.greasyfork.org/scripts/379776/Find%20on%20Nyaa.user.js";
-            sha256 = "sha256-XS309Ym7AQgaPmdkG9tbYEfNT/JuHUiOShbjo0uhs4Q=";
-          })
-          (fetchurl {
-            url = "https://update.greasyfork.org/scripts/14178/AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列.user.js";
-            sha256 = "sha256-7KfJjzBfmQR4MGl+WIYadP9QA7iUHOnUnFGS6Nv9BZM=";
-          })
-          (fetchurl {
-            url = "https://update.greasyfork.org/scripts/434075/Youtube%20Fullscreen%20Mode.user.js";
-            sha256 = "sha256-tE+rXGzo8gsrYvmVsDaiduW6mjOQVim/bx6cjhV40a0=";
-          })
-        ];
+        greasemonkey =
+          let
+            go = name: pkgs.writeText "${name}.js" (builtins.readFile ./${name}.js);
+          in
+          [
+            (go "search_redirect")
+            (go "find_on_nyaa")
+            (go "youtube_sponsorblock")
+            (go "youtube_fullscreen")
+          ];
       };
     }
   )
