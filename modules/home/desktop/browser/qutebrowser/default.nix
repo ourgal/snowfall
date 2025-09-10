@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs lib namespace;
+      inherit (args)
+        pkgs
+        lib
+        namespace
+        host
+        ;
       copyHintText = pkgs.writeShellScript "qutebrowserCopyHintText" ''
         echo -n "$QUTE_SELECTED_TEXT" | xsel -b
       '';
@@ -14,6 +19,7 @@ args.module (
           echo -n "$QUTE_URL" | xsel -b
         fi
       '';
+      isWork = builtins.elem host lib.${namespace}.settings.work;
     in
     {
       progs.qutebrowser = {
@@ -24,7 +30,7 @@ args.module (
           content.blocking.method = "both";
           downloads.location.suggestion = "both";
         };
-        searchEngines = lib.importTOML ./searchEngines.key;
+        searchEngines = if !isWork then lib.importTOML ./searchEngines.key else { };
         keyBindings = {
           normal = {
             M = "hint links spawn -d mpv {hint-url}";
@@ -66,7 +72,7 @@ args.module (
             tt = "spawn --userscript ${pkgs.${namespace}.qute-translate-popup}/bin/translate --target_lang zh";
           };
         };
-        quickmarks = lib.importTOML ./quickmarks.key;
+        quickmarks = if !isWork then lib.importTOML ./quickmarks.key else { };
         greasemonkey =
           let
             go = name: pkgs.writeText "${name}.js" (builtins.readFile ./${name}.js);
