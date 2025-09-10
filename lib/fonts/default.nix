@@ -100,6 +100,9 @@ in
         pkg = "lilex";
         name = "Lilex";
       };
+      font100_base = {
+        pkg = "100font_base";
+      };
 
       getPkg =
         settings: pkgs: namespace:
