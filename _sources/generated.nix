@@ -861,12 +861,12 @@
   };
   docker-siyuan = {
     pname = "docker-siyuan";
-    version = "v3.3.1";
+    version = "v3.3.2";
     src = dockerTools.pullImage {
       imageName = "b3log/siyuan";
-      imageDigest = "sha256:42be2ad45ff9d182f162b77343928b7a0eff84651cda6022fceefa97776d1fb9";
-      sha256 = "sha256-5558LGbgcykDomjqcNUI5Q5PVt+7S+qXqPpCXHJh1Fc=";
-      finalImageTag = "v3.3.1";
+      imageDigest = "sha256:d0f4c896832c6bb93dda5b93b7aadd7f486b0a4bec6acb6a34b98554006bdf8c";
+      sha256 = "sha256-0PQ8z4+0whxIZP3ZCUeqqSnj7kJz8VpsHnfxMThSzvY=";
+      finalImageTag = "v3.3.2";
     };
   };
   docker-soft-serve = {
@@ -2902,10 +2902,10 @@
   };
   sbsrf-rime-data = {
     pname = "sbsrf-rime-data";
-    version = "20250822";
+    version = "20250910";
     src = fetchurl {
-      url = "https://github.com/sbsrf/sbsrf/releases/download/20250822/sbsrf.zip";
-      sha256 = "sha256-pbLuoqiVk8VePbT9FQUx4xhMuAdLwaH5h5DQS2zNJn8=";
+      url = "https://github.com/sbsrf/sbsrf/releases/download/20250910/sbsrf.zip";
+      sha256 = "sha256-N1UWADQtU5+xt5W3yb6fWwxs2+fMdhDDpxCXj2V8Wfk=";
     };
   };
   servicer = {
@@ -3746,18 +3746,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202509082213";
+    version = "202509092211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509082213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509092211/geoip.dat";
       sha256 = "sha256-p32GWcvKLlAPfCGmn891n5fIFb6+TgT1ma+BPNi3iEY=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202509082213";
+    version = "202509092211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509082213/geosite.dat";
-      sha256 = "sha256-TBmAHYGqRLV+LLJqjrXXGJOJPptizdGFNcoHKc4XHGE=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509092211/geosite.dat";
+      sha256 = "sha256-5U71N2rrDhsi+74k52bm5SIBfLDTTu7nwerPT4fljc0=";
     };
   };
   vim-auto-save = {
