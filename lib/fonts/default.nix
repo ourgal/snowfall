@@ -65,6 +65,14 @@ in
         };
       };
 
+      font100_base = {
+        pkg = "100font_base";
+      };
+
+      font100_extend = {
+        pkg = "100font_extend";
+      };
+
       # cjk monospace
       maple = {
         pkg = [
@@ -99,9 +107,6 @@ in
       lilex = {
         pkg = "lilex";
         name = "Lilex";
-      };
-      font100_base = {
-        pkg = "100font_base";
       };
 
       getPkg =
