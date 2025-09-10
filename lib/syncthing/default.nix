@@ -1,6 +1,6 @@
 { lib, namespace, ... }:
 let
-  inherit (builtins) elem filter;
+  inherit (builtins) elem filter foldl';
 in
 {
   mkSyncthingFolders =
@@ -58,7 +58,9 @@ in
     };
     folders =
       let
-        desktops = lib.lists.remove "office2043" lib.${namespace}.settings.desktops;
+        desktops = foldl' (
+          acc: v: lib.lists.remove v acc
+        ) lib.${namespace}.settings.desktops lib.${namespace}.settings.work;
         inherit (lib.${namespace}.settings) windows;
         inherit (lib.${namespace}.settings.servers) syncthing;
       in
