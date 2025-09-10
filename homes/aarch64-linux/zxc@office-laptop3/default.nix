@@ -7,5 +7,6 @@ in
     fonts = enabled;
     cli = enabled;
     dev.nix = enabled;
+    desktop.browser = enabled;
   };
 }
