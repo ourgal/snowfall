@@ -11,9 +11,8 @@ args.module (
         config
         ;
       inherit (lib.${namespace}) font mkFontconfig;
-      inherit (lib.${namespace}.settings) allHosts;
       inherit (builtins) head;
-      notNixos = lib.optionals (!builtins.elem host allHosts);
+      notNixos = lib.optionals (builtins.elem host lib.${namespace}.settings.non-NixOS);
       sansList = font.getName (
         [
           font.en.sans
@@ -99,7 +98,23 @@ args.module (
           };
     in
     {
-      value.home.packages = notNixos (font.allPkgs pkgs namespace);
+      value = {
+        home = {
+          packages = notNixos (font.allPkgs pkgs namespace);
+          file."${config.xdg.cacheHome}/hm-fonts" =
+            let
+              getHash =
+                drv: builtins.elemAt (builtins.match "${builtins.storeDir}/([a-z0-9]{32})-.*.drv" drv.drvPath) 0;
+            in
+            {
+              text = lib.strings.concatMapStringsSep "\n" getHash (font.allPkgs pkgs namespace);
+              onChange = ''
+                echo "Caching fonts"
+                $DRY_RUN_CMD ${lib.getExe' pkgs.fontconfig "fc-cache"} -f
+              '';
+            };
+        };
+      };
       confs = {
         "fontconfig/fonts.conf" =
           let

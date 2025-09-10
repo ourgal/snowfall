@@ -30,6 +30,10 @@ let
     "office-laptop3"
   ];
   windows = [ "nuc" ];
+  non-NixOS = [
+    "office2043"
+    "office-laptop3"
+  ];
   servers = {
     anki-sync-server = [ "brix" ];
     syncthing = [ "brix" ];
@@ -44,6 +48,7 @@ in
       servers
       windows
       work
+      non-NixOS
       ;
     hostType = lib.types.enum allHosts;
     laptopModules = lib.${namespace}.enabledList [
