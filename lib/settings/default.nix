@@ -17,13 +17,13 @@ let
   laptops = [
     "air"
     "surface"
+    "office-laptop3"
   ];
   desktops = [
     "air"
     "home"
     "surface"
     "office2043"
-    "office-laptop3"
   ];
   work = [
     "office2043"
