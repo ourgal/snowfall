@@ -181,7 +181,7 @@
           toTOML
           ;
       };
-      homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.desktops homeSpecialArgs;
+      homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.allHosts homeSpecialArgs;
       system = "x86_64-linux";
     in
     lib.mkFlake {
