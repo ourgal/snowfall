@@ -525,13 +525,13 @@
   };
   compose2nix = {
     pname = "compose2nix";
-    version = "v0.3.1";
+    version = "v0.3.2";
     src = fetchFromGitHub {
       owner = "aksiksi";
       repo = "compose2nix";
-      rev = "v0.3.1";
+      rev = "v0.3.2";
       fetchSubmodules = false;
-      sha256 = "sha256-rFnnbRVVv/N5021Al3vmjFAui1cTp8NBZDBNQo8CsXM=";
+      sha256 = "sha256-3i49IyYDwyVQffjHrHPmtPJl4ZkT1VpiFVDmX/dHcKw=";
     };
   };
   config-file-validator = {
@@ -1927,13 +1927,13 @@
   };
   jj-fzf = {
     pname = "jj-fzf";
-    version = "v0.32.0";
+    version = "v0.33.0";
     src = fetchFromGitHub {
       owner = "tim-janik";
       repo = "jj-fzf";
-      rev = "v0.32.0";
+      rev = "v0.33.0";
       fetchSubmodules = false;
-      sha256 = "sha256-xcPLFrCpncK+RYw7BnT7BR4zfvCYnatIF0YU0wYc3iI=";
+      sha256 = "sha256-iVgX2Lu06t1pCQl5ZGgl3+lTv4HAPKbD/83STDtYhdU=";
     };
   };
   jumper = {
@@ -3746,18 +3746,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202509092211";
+    version = "202509102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509092211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509102212/geoip.dat";
       sha256 = "sha256-p32GWcvKLlAPfCGmn891n5fIFb6+TgT1ma+BPNi3iEY=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202509092211";
+    version = "202509102212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509092211/geosite.dat";
-      sha256 = "sha256-5U71N2rrDhsi+74k52bm5SIBfLDTTu7nwerPT4fljc0=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509102212/geosite.dat";
+      sha256 = "sha256-9zO3zXvOaEOAN5BDLKcRGD/8ZARXCgV6oUW5s1rDddM=";
     };
   };
   vim-auto-save = {
