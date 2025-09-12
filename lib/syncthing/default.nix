@@ -60,7 +60,7 @@ in
       let
         desktops = foldl' (
           acc: v: lib.lists.remove v acc
-        ) lib.${namespace}.settings.desktops lib.${namespace}.settings.work;
+        ) lib.${namespace}.settings.desktops lib.${namespace}.settings.non-NixOS;
         inherit (lib.${namespace}.settings) windows;
         inherit (lib.${namespace}.settings.servers) syncthing;
       in
