@@ -98,4 +98,6 @@ in
     ];
   };
   homeSpecialArgs = hosts: args: foldl' (acc: v: acc // { "zxc@${v}".specialArgs = args; }) { } hosts;
+
+  systemSpecialArgs = hosts: args: foldl' (acc: v: acc // { "${v}".specialArgs = args; }) { } hosts;
 }
