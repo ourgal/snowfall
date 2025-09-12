@@ -34,6 +34,17 @@ let
     "office2043"
     "office-laptop3"
   ];
+  non-HomeManager = [
+    "brix"
+    "router"
+    "yanyu"
+  ];
+  homeManager = foldl' (
+    acc: v: lib.lists.remove v acc
+  ) lib.${namespace}.settings.allHosts lib.${namespace}.settings.non-HomeManager;
+  nixOS = foldl' (
+    acc: v: lib.lists.remove v acc
+  ) lib.${namespace}.settings.allHosts lib.${namespace}.settings.non-NixOS;
   servers = {
     anki-sync-server = [ "brix" ];
     syncthing = [ "brix" ];
@@ -49,6 +60,9 @@ in
       windows
       work
       non-NixOS
+      nixOS
+      non-HomeManager
+      homeManager
       ;
     hostType = lib.types.enum allHosts;
     laptopModules = lib.${namespace}.enabledList [
