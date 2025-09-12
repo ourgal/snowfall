@@ -55,13 +55,13 @@
   };
   aicommit2 = {
     pname = "aicommit2";
-    version = "v2.4.5";
+    version = "v2.4.6";
     src = fetchFromGitHub {
       owner = "tak-bro";
       repo = "aicommit2";
-      rev = "v2.4.5";
+      rev = "v2.4.6";
       fetchSubmodules = false;
-      sha256 = "sha256-Uiaw+wdJpBT5bJcTwab6wxB4lb81duCd9qDuQ1gATs4=";
+      sha256 = "sha256-iaAOuwU3NFv3hxsreaGFUyUz2+/Obie6v+hOsLFRN5k=";
     };
   };
   akuse = {
@@ -86,15 +86,15 @@
   };
   "anki.koplugin" = {
     pname = "anki.koplugin";
-    version = "0acdee889b7fa5ee8e30f5f63842fd236eb610be";
+    version = "15a188b5bdd936ae82f59ed2d8adeffc5a80980a";
     src = fetchFromGitHub {
       owner = "Ajatt-Tools";
       repo = "anki.koplugin";
-      rev = "0acdee889b7fa5ee8e30f5f63842fd236eb610be";
+      rev = "15a188b5bdd936ae82f59ed2d8adeffc5a80980a";
       fetchSubmodules = false;
-      sha256 = "sha256-uWBobUU3naZ6aSWsSAXssxpZAmFRw8nOn8+4EHISm44=";
+      sha256 = "sha256-n+VIOoD1l90PVvO2vAExtvyf8Ii7a4ilZH47D9KNO7s=";
     };
-    date = "2025-09-04";
+    date = "2025-09-11";
   };
   antifennel = {
     pname = "antifennel";
@@ -1808,10 +1808,10 @@
   };
   hayase = {
     pname = "hayase";
-    version = "6.4.26";
+    version = "6.4.29";
     src = fetchurl {
-      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.26/linux-hayase-6.4.26-linux.AppImage";
-      sha256 = "sha256-+d27AEBmfA0rNZHn/J8EIelYPGHfo4EwdkhEja+Kgks=";
+      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.29/linux-hayase-6.4.29-linux.AppImage";
+      sha256 = "sha256-w/+asNfLGZEyg+nI3aFjrCphLGkaXEHuobg6Se1jHR8=";
     };
   };
   hl = {
@@ -2499,15 +2499,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "3d5bf99f5c7b7ca9c223583f6f845f8457f7a350";
+    version = "d82acea3eaab09d9c7dcfab1471f61d0b05fae1b";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "3d5bf99f5c7b7ca9c223583f6f845f8457f7a350";
+      rev = "d82acea3eaab09d9c7dcfab1471f61d0b05fae1b";
       fetchSubmodules = false;
-      sha256 = "sha256-ujCDGpsDbN3E3uauQfdhHEnENVjHk5wqux2LTdJvjck=";
+      sha256 = "sha256-mVN/8pOCVJkSCcLJw9ibWmlmaiPUsj5nJ5VV1yCH4Xg=";
     };
-    date = "2025-08-04";
+    date = "2025-09-11";
   };
   posting = {
     pname = "posting";
@@ -2620,16 +2620,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.572.0";
+    version = "v0.573.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.572.0";
+      rev = "v0.573.0";
       fetchSubmodules = false;
-      sha256 = "sha256-CK27oucvN6uG1bUVY6RH2c9ffcgFSsx79fCSvehS8dw=";
+      sha256 = "sha256-CgYYmFJ+rEyiGcobf4a2XNe2ECA7nblk1qIyeST5sGw=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./qlty-v0.572.0/Cargo.lock;
+      lockFile = ./qlty-v0.573.0/Cargo.lock;
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };
@@ -3746,18 +3746,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202509102212";
+    version = "202509112212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509102212/geoip.dat";
-      sha256 = "sha256-p32GWcvKLlAPfCGmn891n5fIFb6+TgT1ma+BPNi3iEY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509112212/geoip.dat";
+      sha256 = "sha256-rWiZ85mgCNEOXSdZxCo4Xzfu/AkcbrY7ZXZty+6bt+4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202509102212";
+    version = "202509112212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509102212/geosite.dat";
-      sha256 = "sha256-9zO3zXvOaEOAN5BDLKcRGD/8ZARXCgV6oUW5s1rDddM=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509112212/geosite.dat";
+      sha256 = "sha256-SN7KYBpa98YWBU8DthCND89k++Vv5FMss+8FROqOJ7Q=";
     };
   };
   vim-auto-save = {
@@ -4115,13 +4115,13 @@
   };
   ytui = {
     pname = "ytui";
-    version = "v0.2.2";
+    version = "v1.0.0";
     src = fetchFromGitHub {
       owner = "Banh-Canh";
       repo = "ytui";
-      rev = "v0.2.2";
+      rev = "v1.0.0";
       fetchSubmodules = false;
-      sha256 = "sha256-SxgjyplbxevXVp4r3HOZE0odzBCtfbO3IeNXB3M+8W8=";
+      sha256 = "sha256-+sfLN/Tf9g6j+y9+EguAMl7j1fNj15ijCsj0qylfi4o=";
     };
   };
   zashboard = {
