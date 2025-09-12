@@ -678,6 +678,8 @@ rec {
       lib.optional (target == "x86_64-linux") pkgs
     else if isList pkgs then
       lib.optionals (target == "x86_64-linux") pkgs
+    else if (isFunction pkgs) then
+      if target == "x86_64-linux" then pkgs else _: [ ]
     else
-      throw "pkgs is neither string nor list";
+      throw "pkgs is neither string nor list nor function";
 }
