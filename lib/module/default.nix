@@ -682,4 +682,21 @@ rec {
       if target == "x86_64-linux" then pkgs else _: [ ]
     else
       throw "pkgs is neither string nor list nor function";
+
+  SpecialArgs = {
+    module = homeModule;
+    inherit
+      enabledList
+      disabledList
+      enabled
+      disabled
+      enableOpt
+      disableOpt
+      mkOpt'
+      cfgHome
+      switch
+      sources
+      toTOML
+      ;
+  };
 }

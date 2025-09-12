@@ -165,23 +165,9 @@
           namespace = "dot";
         };
       };
-      homeSpecialArgs = {
-        module = lib.homeModule;
-        inherit (lib)
-          enabledList
-          disabledList
-          enabled
-          disabled
-          enableOpt
-          disableOpt
-          mkOpt'
-          cfgHome
-          switch
-          sources
-          toTOML
-          ;
-      };
-      homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.allHosts homeSpecialArgs;
+      inherit (lib) SpecialArgs;
+      homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.homeManager SpecialArgs;
+      systemSpecialArgsFinal = lib.systemSpecialArgs lib.settings.nixOS SpecialArgs;
       system = "x86_64-linux";
     in
     lib.mkFlake {
@@ -249,6 +235,8 @@
           sops-nix
           nix-monitored
         ];
+
+      systems.hosts = systemSpecialArgsFinal;
 
       homes.modules =
         let
