@@ -308,7 +308,10 @@
           };
       };
 
-      modules.home-transform = lib.homeModule;
+      modules = {
+        home-transform = lib.homeModule;
+        system-transform = lib.homeModule;
+      };
 
       nixOnDroidConfigurations.default =
         let
