@@ -2,6 +2,7 @@
   lib,
   namespace,
   config,
+  inputs,
   ...
 }:
 let
@@ -9,7 +10,10 @@ let
   user = config.${namespace}.user.name;
 in
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4
+  ];
 
   dot =
     {
@@ -26,11 +30,9 @@ in
       # keep-sorted end
     ];
 
-  # A start job is running for /dev/tpmrm0
-  systemd.tpm2 = disabled;
-  boot.initrd.systemd.tpm2 = disabled;
-
   snowfallorg.users.${user}.home = disabled;
 
   system.stateVersion = "25.05";
+
+  home-manager.extraSpecialArgs = lib.${namespace}.SpecialArgs;
 }

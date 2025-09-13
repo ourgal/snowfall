@@ -21,12 +21,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/fe749c7e-711c-4a5d-98df-a175908ad5ff";
+    device = "/dev/disk/by-uuid/da993f4e-a3e9-48d9-95bd-2f910d54f321";
     fsType = "ext4";
   };
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/12ce7d1a-f3fd-426c-9b0e-9b3d0c804760";
+    device = "/dev/disk/by-uuid/9d2478f5-05d4-44a4-983c-2db4bc4da56a";
     fsType = "btrfs";
     options = [
       "subvol=root"
