@@ -32,8 +32,8 @@ function video() {
   mpv "$@"
 }
 
-function ff() {
-  firefox "$@" &
+function firefox() {
+  command firefox "$@" &
 }
 
 function qute() {
@@ -45,10 +45,10 @@ https://pbs.twimg.com* | *.jpg | *.png | *.webp)
   image "$@"
   ;;
 https://www.youtube.com/watch*)
-  youtube "$@"
+  firefox "$@"
   ;;
 https://www.youtube.com/shorts*)
-  youtube "$@"
+  firefox "$@"
   ;;
 https://www.bilibili.com/video*)
   bilibili "$@"
