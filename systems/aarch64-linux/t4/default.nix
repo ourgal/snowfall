@@ -6,7 +6,7 @@
   ...
 }:
 let
-  inherit (lib.${namespace}) enabled disabled enabledList;
+  inherit (lib.${namespace}) enabled enabledList;
   user = config.${namespace}.user.name;
 in
 {
@@ -30,7 +30,7 @@ in
       # keep-sorted end
     ];
 
-  snowfallorg.users.${user}.home = disabled;
+  snowfallorg.users.${user}.home = enabled;
 
   system.stateVersion = "25.05";
 
