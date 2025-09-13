@@ -33,6 +33,8 @@ man-home: # home man page
 man-nixos: # home man page
 	@man 5 configuration.nix
 
+$(eval $(MAKE_ARGS):;@:)
+
 .PHONY: deploy
 deploy: # deploy to host
 	@git add .
