@@ -86,6 +86,7 @@ in
       "logrotate"
       "nh"
       "pcscd"
+      "tlp"
       "power"
       "scrutiny"
       "sops-nix"
