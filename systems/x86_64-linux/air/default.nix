@@ -32,6 +32,7 @@ in
       ssh = enabled;
     };
     nix-monitored = enabled;
+    nix-on-droid = enabled;
   } // settings.laptopModules;
 
   snowfallorg.users.${user}.home = disabled;
