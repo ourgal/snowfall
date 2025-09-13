@@ -5,7 +5,7 @@
   ...
 }:
 let
-  inherit (lib.${namespace}) enabled disabled settings;
+  inherit (lib.${namespace}) enabled settings;
   user = config.${namespace}.user.name;
 in
 {
@@ -32,7 +32,9 @@ in
     };
   } // settings.laptopModules;
 
-  snowfallorg.users.${user}.home = disabled;
+  snowfallorg.users.${user}.home = enabled;
 
   system.stateVersion = "23.11";
+
+  home-manager.extraSpecialArgs = lib.${namespace}.SpecialArgs;
 }
