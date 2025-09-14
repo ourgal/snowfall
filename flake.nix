@@ -136,6 +136,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-n1 = {
+      url = "github:slaier/nixos-n1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -237,7 +241,16 @@
           nix-monitored
         ];
 
-      systems.hosts = systemSpecialArgsFinal;
+      systems.hosts = lib.attrsets.recursiveUpdate systemSpecialArgsFinal {
+        n1.modules = with inputs.nixos-n1.nixosModules; [
+          dtos
+          gpu
+          loader
+          misc
+          wireless
+          filesystem
+        ];
+      };
 
       homes.modules =
         let

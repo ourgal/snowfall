@@ -1469,6 +1469,26 @@
         "type": "github"
       }
     },
+    "nixos-n1": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757734146,
+        "narHash": "sha256-czkd+mimi5gSM7BSH23Hv7jVSI4N9ZnQVj21p6k7Y2c=",
+        "owner": "slaier",
+        "repo": "nixos-n1",
+        "rev": "d1e8225f71c3254c7b99d39cd4e5e5564c40ab1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "slaier",
+        "repo": "nixos-n1",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1744463964,
@@ -2054,6 +2074,7 @@
         "nix-std": "nix-std",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-hardware": "nixos-hardware",
+        "nixos-n1": "nixos-n1",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-f2k": "nixpkgs-f2k",
         "nixvim": "nixvim",

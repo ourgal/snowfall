@@ -10,6 +10,7 @@ let
     "surface"
     "router"
     "yanyu"
+    "n1"
     "t4"
     "nixos-mbr"
     "nixos-uefi"
@@ -38,6 +39,7 @@ let
     "brix"
     "router"
     "yanyu"
+    "n1"
   ];
   homeManager = foldl' (
     acc: v: lib.lists.remove v acc
