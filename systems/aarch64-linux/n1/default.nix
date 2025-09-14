@@ -33,6 +33,7 @@ in
       # keep-sorted start
       "avahi"
       "iotop"
+      "nh"
       "tuptime"
       # keep-sorted end
     ];
