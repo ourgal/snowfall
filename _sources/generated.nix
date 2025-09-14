@@ -292,13 +292,13 @@
   };
   bt = {
     pname = "bt";
-    version = "v1.2.0";
+    version = "v1.2.1";
     src = fetchFromGitHub {
       owner = "LeperGnome";
       repo = "bt";
-      rev = "v1.2.0";
+      rev = "v1.2.1";
       fetchSubmodules = false;
-      sha256 = "sha256-ftG6YleP8ISnsHgjUI/PdqQ/DqhDq5/lY04v71fHXvU=";
+      sha256 = "sha256-7/Wio6hxifkKpcmzjgT0KfKvPyTnJ3P6oqTBJ1HhF+4=";
     };
   };
   c = {
@@ -393,13 +393,13 @@
   };
   cidr = {
     pname = "cidr";
-    version = "v2.2.0";
+    version = "v2.3.0";
     src = fetchFromGitHub {
       owner = "bschaatsbergen";
       repo = "cidr";
-      rev = "v2.2.0";
+      rev = "v2.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-8Tf7He7pY5A5UqpQ9lwJTW8DC4qBu0AEuGOXHpYo6bQ=";
+      sha256 = "sha256-h7/38Zr1w/fomLnsSbO/UqR9g6koZkxiYk9CaKDdOVk=";
     };
   };
   clashctl = {
@@ -1808,10 +1808,10 @@
   };
   hayase = {
     pname = "hayase";
-    version = "6.4.29";
+    version = "6.4.31";
     src = fetchurl {
-      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.29/linux-hayase-6.4.29-linux.AppImage";
-      sha256 = "sha256-w/+asNfLGZEyg+nI3aFjrCphLGkaXEHuobg6Se1jHR8=";
+      url = "https://github.com/ThaUnknown/miru/releases/download/v6.4.31/linux-hayase-6.4.31-linux.AppImage";
+      sha256 = "sha256-GBsknXGcufdBQmXSCudb0EZHdvCKCpcOaLU+nap4Y/8=";
     };
   };
   hl = {
@@ -2511,13 +2511,13 @@
   };
   posting = {
     pname = "posting";
-    version = "2.7.1";
+    version = "2.8.0";
     src = fetchFromGitHub {
       owner = "darrenburns";
       repo = "posting";
-      rev = "2.7.1";
+      rev = "2.8.0";
       fetchSubmodules = false;
-      sha256 = "sha256-2mRLkZ4rr5awc8X3thllUlB/XpFGs6uaPsYreSPB/nw=";
+      sha256 = "sha256-6ZDlMq42/PmIyFGp5EsCK8F7zrp5J1QlNFMMs4/nDgs=";
     };
   };
   powershell-beautifier = {
@@ -2566,10 +2566,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.11.8";
+    version = "2.11.9";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.8.tar.gz";
-      sha256 = "sha256-PQgPSjrGvemOlZulUhJNRr6fVlt75ndp5J/LKGuuG/s=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.9.tar.gz";
+      sha256 = "sha256-a4/9pZehSBKnl1yQuCqKLnd9klero0U/lzrNPAMqGOI=";
     };
   };
   pydantic-core = {
@@ -3746,18 +3746,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202509122211";
+    version = "202509142211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509122211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509142211/geoip.dat";
       sha256 = "sha256-rWiZ85mgCNEOXSdZxCo4Xzfu/AkcbrY7ZXZty+6bt+4=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202509122211";
+    version = "202509142211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509122211/geosite.dat";
-      sha256 = "sha256-swHuFddP/y9SzMTBxNPYBjrism+pxv+KuuO1v43fuVk=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202509142211/geosite.dat";
+      sha256 = "sha256-87bR5rtajZyNPt9hRwj7IiYgogCS7WFaQyuyDb7vCJs=";
     };
   };
   vim-auto-save = {
