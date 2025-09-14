@@ -250,6 +250,7 @@
           wireless
           filesystem
         ];
+        t4.modules = [ inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4 ];
       };
 
       homes.modules =

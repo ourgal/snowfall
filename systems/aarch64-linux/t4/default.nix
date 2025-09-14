@@ -2,7 +2,6 @@
   lib,
   namespace,
   config,
-  inputs,
   ...
 }:
 let
@@ -10,10 +9,7 @@ let
   user = config.${namespace}.user.name;
 in
 {
-  imports = [
-    ./hardware-configuration.nix
-    inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4
-  ];
+  imports = [ ./hardware-configuration.nix ];
 
   dot =
     {
