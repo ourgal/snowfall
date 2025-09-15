@@ -6,6 +6,7 @@ keys:
   - &air age1x9gcqpe39uf0x5fa5fx0p4w93uw258g4rkddqfv0xtjjn2mgwexqdksaf0
   - &surface age1pz49xyuk4t2sxrfd8thlm3ezy94j08psd543ykx0u257evvtwd3s0p3fsr
   - &router age1nljphfqk5u9rvcft5tuvywe9v0n73mrneqf9k5xle0c55m9qdp5qvu7nzt
+  - &t4 age1x0a5skrtjm5gnf03jlsy7g6jyg3zhf56ju44ajygmlfgytc0vvdqkqzlma
 creation_rules:
   - path_regex: secrets/zxc/default.yaml
     key_groups:
@@ -16,3 +17,4 @@ creation_rules:
           - *air
           - *surface
           - *router
+          - *t4
