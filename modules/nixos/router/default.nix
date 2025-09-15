@@ -12,6 +12,7 @@ let
     cfgNixos
     lan
     lan6
+    switch
     ;
   inherit (builtins) map;
   cfg = cfgNixos config.${namespace} ./.;
@@ -57,20 +58,39 @@ let
       interfaces = {
         # Don't request DHCP on the physical interfaces
         ${cfg.lan} = {
-          useDHCP = false;
-          ipv4.addresses = [
-            {
-              address = "${lan}.1";
-              prefixLength = 24;
-            }
-          ];
-          ipv6.addresses = map (v: {
-            address = "${v}::1";
-            prefixLength = 64;
-          }) lan6;
+          useDHCP = cfg.dhcp.enable;
+          ipv4.addresses =
+            if cfg.ipv4 == [ ] then
+              if cfg.dhcp.enable then
+                [ ]
+              else
+                [
+                  {
+                    address = "${lan}.1";
+                    prefixLength = 24;
+                  }
+                ]
+            else
+              map (v: {
+                address = v;
+                prefixLength = 24;
+              }) cfg.ipv4;
+          ipv6.addresses =
+            if cfg.ipv6 == [ ] then
+              if cfg.dhcp.enable then
+                [ ]
+              else
+                map (v: {
+                  address = "${v}::1";
+                  prefixLength = 64;
+                }) lan6
+            else
+              map (v: {
+                address = "${v}::1";
+                prefixLength = 64;
+              }) cfg.ipv6;
         };
-        ${cfg.wan}.useDHCP = false;
-      };
+      } // (if cfg.wan != "" then { ${cfg.wan}.useDHCP = false; } else { });
       firewall = {
         allowedTCPPorts = ports;
         allowedUDPPorts = ports;
@@ -78,10 +98,17 @@ let
     };
     environment.systemPackages = with pkgs; [ iptables ];
   };
-  extraOpts = {
-    lan = mkOpt' lib.types.str "";
-    wan = mkOpt' lib.types.str "";
-  };
+  extraOpts =
+    let
+      inherit (lib.types) str listOf;
+    in
+    {
+      lan = mkOpt' str "";
+      wan = mkOpt' str "";
+      ipv4 = mkOpt' (listOf str) [ ];
+      ipv6 = mkOpt' (listOf str) [ ];
+      dhcp = switch;
+    };
   _args = { inherit value args extraOpts; };
 in
 nixosModule _args
