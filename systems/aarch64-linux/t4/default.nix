@@ -6,6 +6,9 @@ in
   imports = [ ./hardware-configuration.nix ];
 
   dot =
+    let
+      lan = "end0";
+    in
     {
       user.host = "t4";
       boot.extlinux = enabled;
