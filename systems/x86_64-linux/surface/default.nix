@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
   inherit (lib.${namespace}) enabled settings;
-  user = config.${namespace}.user.name;
 in
 {
   dot = {
@@ -30,11 +24,9 @@ in
     sops-nix = enabled // {
       desktops = enabled;
     };
+    home-manager = enabled;
   } // settings.laptopModules;
-
-  snowfallorg.users.${user}.home = enabled;
 
   system.stateVersion = "23.11";
 
-  home-manager.extraSpecialArgs = lib.${namespace}.SpecialArgs;
 }

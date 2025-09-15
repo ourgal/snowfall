@@ -11,7 +11,6 @@ let
     ip
     enabledList
     ;
-  user = config.${namespace}.user.name;
 in
 {
   imports = [ ./hardware-configuration.nix ];
@@ -80,8 +79,6 @@ in
       "zashboard"
       # keep-sorted end
     ];
-
-  snowfallorg.users.${user}.home = disabled;
 
   system.stateVersion = "23.11";
 }
