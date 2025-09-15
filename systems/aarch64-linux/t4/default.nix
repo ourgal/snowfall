@@ -20,6 +20,7 @@ in
         inherit lan;
         dns = enabled;
       };
+      sing-box = enabled;
       sops-nix = enabled // {
         router = enabled;
       };
