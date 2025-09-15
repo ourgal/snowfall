@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
   inherit (lib.${namespace}) enabled disabled enabledList;
-  user = config.${namespace}.user.name;
 in
 {
 
@@ -35,8 +29,6 @@ in
   # A start job is running for /dev/tpmrm0
   systemd.tpm2 = disabled;
   boot.initrd.systemd.tpm2 = disabled;
-
-  snowfallorg.users.${user}.home = disabled;
 
   system.stateVersion = "24.11";
 }

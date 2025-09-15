@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
   inherit (lib.${namespace}) enabled disabled;
-  user = config.${namespace}.user.name;
 in
 {
 
@@ -48,8 +42,6 @@ in
       cloudflared = enabled;
       tailscale = enabled;
     };
-
-  snowfallorg.users.${user}.home = disabled;
 
   system.stateVersion = "24.11";
 }

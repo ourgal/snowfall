@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled disabled settings;
-  user = config.${namespace}.user.name;
+  inherit (lib.${namespace}) enabled settings;
 in
 {
   dot = {
@@ -34,8 +28,6 @@ in
     nix-monitored = enabled;
     nix-on-droid = enabled;
   } // settings.laptopModules;
-
-  snowfallorg.users.${user}.home = disabled;
 
   system.stateVersion = "24.05";
 }

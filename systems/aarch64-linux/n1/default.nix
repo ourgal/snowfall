@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled disabled enabledList;
-  user = config.${namespace}.user.name;
+  inherit (lib.${namespace}) enabledList;
 in
 {
 
@@ -24,9 +18,5 @@ in
       # keep-sorted end
     ];
 
-  snowfallorg.users.${user}.home = disabled;
-
   system.stateVersion = "25.05";
-
-  home-manager.extraSpecialArgs = lib.${namespace}.SpecialArgs;
 }

@@ -1,12 +1,6 @@
-{
-  lib,
-  namespace,
-  config,
-  ...
-}:
+{ lib, namespace, ... }:
 let
   inherit (lib.${namespace}) enabled enabledList;
-  user = config.${namespace}.user.name;
 in
 {
   imports = [ ./hardware-configuration.nix ];
@@ -23,13 +17,10 @@ in
       "iotop"
       "harmonia"
       "nh"
+      "home-manager"
       "tuptime"
       # keep-sorted end
     ];
 
-  snowfallorg.users.${user}.home = enabled;
-
   system.stateVersion = "25.05";
-
-  home-manager.extraSpecialArgs = lib.${namespace}.SpecialArgs;
 }
