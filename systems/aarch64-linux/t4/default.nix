@@ -21,6 +21,7 @@ in
       "avahi"
       "common"
       "iotop"
+      "harmonia"
       "nh"
       "tuptime"
       # keep-sorted end
