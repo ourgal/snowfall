@@ -1,6 +1,7 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled enabledList;
+  inherit (lib.${namespace}) enabled enabledList getDirname;
+  name = getDirname ./.;
 in
 {
   imports = [ ./hardware-configuration.nix ];
@@ -10,7 +11,7 @@ in
       lan = "end0";
     in
     {
-      user.host = "t4";
+      user.host = name;
       boot.extlinux = enabled;
       router = enabled // {
         inherit lan;

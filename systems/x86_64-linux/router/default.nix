@@ -1,6 +1,7 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled disabled;
+  inherit (lib.${namespace}) enabled disabled getDirname;
+  name = getDirname ./.;
 in
 {
 
@@ -10,7 +11,7 @@ in
       wan = "enp3s0";
     in
     {
-      user.host = "router";
+      user.host = name;
       boot.grub = enabled;
       common = enabled;
       nh = enabled;

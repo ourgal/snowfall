@@ -1,12 +1,18 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled disabled enabledList;
+  inherit (lib.${namespace})
+    enabled
+    disabled
+    enabledList
+    getDirname
+    ;
+  name = getDirname ./.;
 in
 {
 
   dot =
     {
-      user.host = "yanyu";
+      user.host = name;
       boot.systemd = enabled;
       firewall = {
         docker = enabled;

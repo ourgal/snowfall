@@ -1,10 +1,11 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled settings;
+  inherit (lib.${namespace}) enabled settings getDirname;
+  name = getDirname ./.;
 in
 {
   dot = {
-    user.host = "air";
+    user.host = name;
     boot.systemd = enabled;
     gpu.amd = enabled;
     firewall = {

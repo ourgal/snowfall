@@ -1,13 +1,19 @@
-{ lib, namespace, ... }:
+{
+  lib,
+  namespace,
+  _name,
+  ...
+}:
 let
-  inherit (lib.${namespace}) enabled enabledList;
+  inherit (lib.${namespace}) enabled enabledList getDirname;
+  name = getDirname ./.;
 in
 {
   imports = [ ./hardware-configuration.nix ];
 
   dot =
     {
-      user.host = "home";
+      user.host = name;
       boot.systemd = enabled;
       gpu.nvidia = enabled;
       autorandr.home = enabled;
