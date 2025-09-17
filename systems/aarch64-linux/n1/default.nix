@@ -1,12 +1,13 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabledList;
+  inherit (lib.${namespace}) enabledList getDirname;
+  name = getDirname ./.;
 in
 {
 
   dot =
     {
-      user.host = "n1";
+      user.host = name;
     }
     // enabledList [
       # keep-sorted start

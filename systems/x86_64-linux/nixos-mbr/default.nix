@@ -5,13 +5,14 @@
   ...
 }:
 let
-  inherit (lib.${namespace}) enabled disabled;
+  inherit (lib.${namespace}) enabled disabled getDirname;
   user = config.${namespace}.user.name;
+  name = getDirname ./.;
 in
 {
 
   dot = {
-    user.host = "nixos-mbr";
+    user.host = name;
     boot.grub = enabled;
     common = enabled;
     nh = enabled;

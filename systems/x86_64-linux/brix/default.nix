@@ -10,14 +10,16 @@ let
     disabled
     ip
     enabledList
+    getDirname
     ;
+  name = getDirname ./.;
 in
 {
   imports = [ ./hardware-configuration.nix ];
 
   dot =
     {
-      user.host = "brix";
+      user.host = name;
       boot.systemd = enabled;
       sops-nix = enabled // {
         ssh = enabled;
