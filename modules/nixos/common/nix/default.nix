@@ -40,6 +40,16 @@ let
           substituters = lib.mkBefore mirrors;
           trusted-public-keys = [ "cache.example.org-1:lFI4YUR1ZKE8dz1JoXTRBvIEHaeKmW3LHBlDTJDW1V8=" ];
           trusted-users = [ config.${namespace}.user.name ];
+          max-jobs =
+            if
+              builtins.elem host [
+                "t4"
+                "n1"
+              ]
+            then
+              1
+            else
+              "auto";
         };
         gc =
           lib.mkIf (!config.${namespace}.nh.enable) {
