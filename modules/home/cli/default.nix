@@ -40,6 +40,7 @@
     "reader"
     "recording"
     "rss"
+    "benchmark"
     "runner"
     "search"
     "share"
