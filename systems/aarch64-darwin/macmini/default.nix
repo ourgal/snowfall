@@ -1,16 +1,13 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) getDirname enabledList;
+  inherit (lib.${namespace}) getDirname enabled;
   name = getDirname ./.;
 in
 {
 
   dot = {
     user.host = name;
-    common = enabledList [
-      "nix"
-      "ssh"
-    ];
+    common = enabled;
   };
 
   # Used for backwards compatibility, please read the changelog before changing.
