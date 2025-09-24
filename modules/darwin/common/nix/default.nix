@@ -72,17 +72,6 @@ let
     '';
     system.autoUpgrade = disabled // enableOpt [ "allowReboot" ];
 
-    programs.nix-ld = enabled // {
-      package = pkgs.nix-ld-rs;
-
-      libraries = with pkgs; [
-        gcc
-        icu
-        libcxx
-        stdenv.cc.cc.lib
-        zlib
-      ];
-    };
     systemd.services.nix-daemon.environment = lib.${namespace}.proxy.go;
   };
   _args = { inherit value args; };
