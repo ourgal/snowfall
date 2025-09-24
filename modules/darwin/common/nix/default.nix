@@ -70,7 +70,6 @@ let
       }
       nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
     '';
-    system.autoUpgrade = disabled // enableOpt [ "allowReboot" ];
 
     systemd.services.nix-daemon.environment = lib.${namespace}.proxy.go;
   };
