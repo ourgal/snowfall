@@ -5,9 +5,7 @@ let
   value = {
     programs = {
       fish = enabled;
-      vim = enabled // {
-        defaultEditor = true;
-      };
+      vim = enabled;
     };
   };
   _args = { inherit value args; };
