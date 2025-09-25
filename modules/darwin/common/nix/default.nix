@@ -45,12 +45,10 @@ let
             else
               "auto";
         };
-        gc =
-          lib.mkIf (!config.${namespace}.nh.enable) {
-            dates = "weekly";
-            options = "--delete-older-than 7d";
-          }
-          // enableOpt [ "automatic" ];
+        gc = {
+          dates = "weekly";
+          options = "--delete-older-than 7d";
+        } // enableOpt [ "automatic" ];
         nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
 
