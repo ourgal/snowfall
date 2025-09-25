@@ -233,6 +233,10 @@ rec {
 
   cfgNixos' = root: path: lib.attrsets.getAttrFromPath (lib.strings.splitString "/" path) root;
 
+  cfgDarwin = root: path: (mkModuleCfg root path "modules/darwin/");
+
+  cfgDarwin' = root: path: lib.attrsets.getAttrFromPath (lib.strings.splitString "/" path) root;
+
   # optNixos ./. => { cli.anime.adl = switch; }
   optNixos =
     {
@@ -246,6 +250,25 @@ rec {
     };
 
   optNixos' =
+    {
+      path,
+      extraOpts ? { },
+      ...
+    }:
+    mkModuleOpt' { inherit path extraOpts; };
+
+  optDarwin =
+    {
+      path,
+      extraOpts ? { },
+      ...
+    }:
+    mkModuleOpt {
+      inherit path extraOpts;
+      prefix = "modules/darwin/";
+    };
+
+  optDarwin' =
     {
       path,
       extraOpts ? { },
@@ -566,7 +589,6 @@ rec {
         _name
         ;
       inherit (lib) mkIf;
-      inherit (lib.${namespace}) optNixos cfgNixos;
       cfg =
         if _name == "" then cfgNixos config.${namespace} path else cfgNixos' config.${namespace} _name;
     in
@@ -576,6 +598,55 @@ rec {
           optNixos { inherit path extraOpts; }
         else
           optNixos' {
+            path = _name;
+            inherit extraOpts;
+          };
+
+      config = mkIf cfg.enable (
+        lib.attrsets.recursiveUpdate {
+          ${namespace} =
+            if _name == "" then
+              enableNixosSubModule {
+                inherit path;
+                subModule = enable;
+              }
+            else
+              enableNixosSubModule' {
+                path = _name;
+                subModule = enable;
+              };
+        } value
+      );
+    };
+  # }}}
+
+  # darwin module {{{
+  darwinModule =
+    {
+      args,
+      value ? { },
+      path ? "",
+      extraOpts ? { },
+      enable ? [ ],
+      ...
+    }:
+    let
+      inherit (args)
+        lib
+        namespace
+        config
+        _name
+        ;
+      inherit (lib) mkIf;
+      cfg =
+        if _name == "" then cfgDarwin config.${namespace} path else cfgDarwin' config.${namespace} _name;
+    in
+    {
+      options.${namespace} =
+        if _name == "" then
+          optDarwin { inherit path extraOpts; }
+        else
+          optDarwin' {
             path = _name;
             inherit extraOpts;
           };

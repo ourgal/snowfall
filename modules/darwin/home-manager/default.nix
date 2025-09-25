@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule;
+  inherit (lib.${namespace}) darwinModule;
   value = {
     home-manager = {
       extraSpecialArgs = lib.${namespace}.SpecialArgs;
@@ -10,4 +10,4 @@ let
   };
   _args = { inherit value args; };
 in
-nixosModule _args
+darwinModule _args

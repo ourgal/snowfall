@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule disabled enabled;
+  inherit (lib.${namespace}) darwinModule disabled enabled;
   user = config.${namespace}.user.name;
   enable = [
     "defaultPackages"
@@ -15,4 +15,4 @@ let
   };
   _args = { inherit enable args value; };
 in
-nixosModule _args
+darwinModule _args

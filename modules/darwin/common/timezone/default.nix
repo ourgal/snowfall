@@ -1,10 +1,10 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule;
+  inherit (lib.${namespace}) darwinModule;
   value = {
     time.timeZone = lib.mkDefault "Asia/Taipei";
   };
   _args = { inherit value args; };
 in
-nixosModule _args
+darwinModule _args

@@ -1,7 +1,7 @@
 args:
 let
   inherit (args) namespace lib;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) darwinModule enabled;
   value = {
     programs = {
       fish = enabled;
@@ -10,4 +10,4 @@ let
   };
   _args = { inherit value args; };
 in
-nixosModule _args
+darwinModule _args

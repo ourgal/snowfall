@@ -7,13 +7,7 @@ let
     config
     inputs
     ;
-  inherit (lib.${namespace})
-    nixosModule
-    enableOpt
-    disabled
-    enabled
-    ip
-    ;
+  inherit (lib.${namespace}) darwinModule enableOpt ip;
   inherit (config.${namespace}.user) host;
   value = {
     nix =
@@ -73,4 +67,4 @@ let
   };
   _args = { inherit value args; };
 in
-nixosModule _args
+darwinModule _args

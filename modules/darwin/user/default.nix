@@ -14,8 +14,8 @@ let
     isAttrs
     ;
   inherit (builtins) attrValues;
-  inherit (lib.${namespace}) mkOpt' cfgNixos settings;
-  cfg = cfgNixos config.${namespace} ./.;
+  inherit (lib.${namespace}) mkOpt' cfgDarwin settings;
+  cfg = cfgDarwin config.${namespace} ./.;
   duplicatePorts = lib.pipe options.${namespace}.user.ports.definitionsWithLocations [
     # Expand entries with multiple ports into individual port entries
     (lib.concatMap (
