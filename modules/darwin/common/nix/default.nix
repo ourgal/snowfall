@@ -46,7 +46,13 @@ let
               "auto";
         };
         gc = {
-          dates = "weekly";
+          interval = [
+            {
+              Hour = 3;
+              Minute = 15;
+              Weekday = 7;
+            }
+          ];
           options = "--delete-older-than 7d";
         } // enableOpt [ "automatic" ];
         nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
