@@ -25,7 +25,8 @@ let
           ];
       in
       {
-        settings = enableOpt [ "auto-optimise-store" ] // {
+        optimise.automatic = true;
+        settings = {
           experimental-features = [
             "nix-command"
             "flakes"
