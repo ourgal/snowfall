@@ -221,7 +221,7 @@ args.module (
               };
               select = {
                 "A-d" = "delete_selection";
-                G = "goto_file_end";
+                G = "goto_last_line";
                 "$" = "goto_line_end";
                 "^" = "goto_first_nonwhitespace";
                 "0" = "goto_line_start";
