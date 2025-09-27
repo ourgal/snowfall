@@ -316,7 +316,17 @@
           };
       };
 
-      colmenaHive = lib.mkColmenaHive inputs.self.pkgs.x86_64-linux.nixpkgs { };
+      colmenaHive = lib.mkColmenaHive inputs.self.pkgs.x86_64-linux.nixpkgs {
+        air = {
+          tags = [ "laptop" ];
+        };
+        surface = {
+          tags = [ "laptop" ];
+        };
+        home = {
+          tags = [ "desktop" ];
+        };
+      };
 
       modules = {
         home-transform = lib.homeModule;
