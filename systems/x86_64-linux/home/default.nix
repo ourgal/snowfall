@@ -61,6 +61,7 @@ in
       "opentabletdriver"
       "pcscd"
       "power"
+      "home-manager"
       "scrutiny"
       "syncthing"
       "temp-hosts"

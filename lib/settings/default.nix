@@ -85,6 +85,7 @@ in
       "harmonia"
       "input"
       "iotop"
+      "home-manager"
       "laptop"
       "logrotate"
       "nh"
