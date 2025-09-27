@@ -29,7 +29,8 @@ let
             "http://${ip.brix}:50000?priority=9"
             "http://${ip.router}:50000?priority=9"
           ]
-          ++ lib.optionals (host == "t4") [ "http://${ip.macmini}:50000?priority=9" ];
+          ++ lib.optionals (host == "t4") [ "http://${ip.macmini}:50000?priority=9" ]
+          ++ lib.optionals (host == "macmini") [ "http://${ip.t4}:50000?priority=9" ];
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
