@@ -63,15 +63,14 @@ let
       };
 
     nixpkgs.config.allowUnfree = true;
-    system.activationScripts.report-changes = ''
-      PATH=$PATH:${
-        lib.makeBinPath [
-          pkgs.nvd
-          pkgs.nix
-        ]
-      }
-      nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
-    '';
+    system.activationScripts.system-diff = {
+      supportsDryActivation = true; # safe: only outputs to stdout
+      text = ''
+        if [ -e /run/current-system ]; then
+          PATH=$PATH:${pkgs.nix}/bin ${pkgs.nvd}/bin/nvd diff /run/current-system $systemConfig
+        fi
+      '';
+    };
     system.autoUpgrade = disabled // enableOpt [ "allowReboot" ];
 
     programs.nix-ld = enabled // {
