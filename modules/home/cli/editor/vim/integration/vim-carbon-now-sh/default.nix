@@ -8,7 +8,6 @@ args.module (
     {
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ vim-carbon-now-sh ];
-        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )

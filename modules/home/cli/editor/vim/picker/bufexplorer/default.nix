@@ -8,7 +8,6 @@ args.module (
     {
       progs.vim = {
         plugins = with pkgs.vimPlugins; [ bufexplorer ];
-        extraConfig = builtins.readFile ./config.vim;
       };
     }
   )
