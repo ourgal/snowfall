@@ -26,7 +26,6 @@ let
     "home"
     "surface"
     "office2043"
-    "macmini"
   ];
   work = [
     "office2043"
@@ -36,7 +35,6 @@ let
   non-NixOS = [
     "office2043"
     "office-laptop3"
-    "macmini"
   ];
   non-HomeManager = [
     "brix"
