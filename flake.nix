@@ -318,13 +318,42 @@
 
       colmenaHive = lib.mkColmenaHive inputs.self.pkgs.x86_64-linux.nixpkgs {
         air = {
-          tags = [ "laptop" ];
+          tags = [
+            "laptop"
+            "desktop"
+            "x86_64"
+          ];
         };
         surface = {
-          tags = [ "laptop" ];
+          tags = [
+            "laptop"
+            "desktop"
+            "x86_64"
+          ];
         };
         home = {
-          tags = [ "desktop" ];
+          tags = [
+            "desktop"
+            "x86_64"
+          ];
+        };
+        router = {
+          tags = [ "x86_64" ];
+        };
+        brix = {
+          tags = [ "x86_64" ];
+        };
+        yanyu = {
+          tags = [ "x86_64" ];
+        };
+        n1 = {
+          tags = [ "aarch64" ];
+        };
+        t4 = {
+          tags = [ "aarch64" ];
+        };
+        macmini = {
+          tags = [ "aarch64" ];
         };
       };
 
