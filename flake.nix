@@ -144,6 +144,7 @@
       url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    colmena.url = "github:zhaofengli/colmena/stable";
   };
 
   nixConfig = {
@@ -314,6 +315,8 @@
             };
           };
       };
+
+      colmenaHive = lib.mkColmenaHive inputs.self.pkgs.x86_64-linux.nixpkgs { };
 
       modules = {
         home-transform = lib.homeModule;

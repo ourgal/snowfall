@@ -4,6 +4,7 @@
     "attic-client"
     "cached-nix-shell"
     "deploy-rs"
+    "colmena"
     "lon"
     "nix-converter"
     "nix-du"
