@@ -9,9 +9,8 @@ args.module (
       carbonConfig =
         if cfg.integration.vim-carbon-now-sh.enable then
           ''
-            let g:which_key_map[',']['s']['c'] = ['ggVG:CarbonNowSh', 'Carbon']
-
-            let g:which_key_map_visual[',']['s']['c'] = ['gv:CarbonNowSh', 'Carbon']
+            let g:which_key_map[',']['s']['c'] = ['ggVG:CarbonNowSh', 'Carbon']
+            let g:which_key_map_visual[',']['s']['c'] = ['gv:CarbonNowSh', 'Carbon']
           ''
         else
           "";
@@ -28,8 +27,7 @@ args.module (
         if cfg.integration.vim-silicon.enable then
           ''
             let g:which_key_map[',']['s']['s'] = [':Silicon', 'Silicon']
-
-            let g:which_key_map_visual[',']['s']['s'] = ['gv:Silicon', 'Silicon']
+            let g:which_key_map_visual[',']['s']['s'] = ['gv:Silicon', 'Silicon']
           ''
         else
           "";
@@ -67,6 +65,13 @@ args.module (
           ''
         else
           "";
+      fugitiveConfig =
+        if cfg.git.vim-fugitive.enable then
+          ''
+            let g:which_key_map['g']['g'] = [':tab G', 'Fugitive']
+          ''
+        else
+          "";
     in
     {
       progs.vim = {
@@ -79,6 +84,7 @@ args.module (
           bufexplorerConfig
           ctrlpConfig
           fzfConfig
+          fugitiveConfig
         ];
       };
     }
