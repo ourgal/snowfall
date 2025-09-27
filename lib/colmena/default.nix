@@ -1,7 +1,49 @@
 { inputs, ... }:
+let
+  nodeDeployments = {
+    air = {
+      tags = [
+        "laptop"
+        "desktop"
+        "x86_64"
+      ];
+    };
+    surface = {
+      tags = [
+        "laptop"
+        "desktop"
+        "x86_64"
+      ];
+    };
+    home = {
+      tags = [
+        "desktop"
+        "x86_64"
+      ];
+    };
+    router = {
+      tags = [ "x86_64" ];
+    };
+    brix = {
+      tags = [ "x86_64" ];
+    };
+    yanyu = {
+      tags = [ "x86_64" ];
+    };
+    n1 = {
+      tags = [ "aarch64" ];
+    };
+    t4 = {
+      tags = [ "aarch64" ];
+    };
+    macmini = {
+      tags = [ "aarch64" ];
+    };
+  };
+in
 {
   mkColmenaHive =
-    nixpkgs: nodeDeployments:
+    nixpkgs:
     let
       confs = inputs.self.nixosConfigurations;
       colmenaConf =
