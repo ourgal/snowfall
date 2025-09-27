@@ -40,6 +40,10 @@ deploy: # deploy to host
 	@git add .
 	@deploy .#$(MAKE_ARGS)
 
+.PHONY: colmena
+colmena: # colmena
+	@colmena apply --on $(MAKE_ARGS)
+
 .PHONY: go
 go: # nix-prefetch go package hash
 	@nix-prefetch --option extra-experimental-features flakes "{ sha256 }: (builtins.getFlake (toString ./.)).packages.x86_64-linux.$(MAKE_ARGS).goModules.overrideAttrs (_: { vendorSha256 = sha256; })" | tee /dev/tty | tr -d '\n' | xclip
