@@ -22,6 +22,7 @@ in
       "nh"
       "tuptime"
       "home-manager"
+      "harmonia"
       # keep-sorted end
     ];
 
