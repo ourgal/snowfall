@@ -15,11 +15,11 @@ in
       boot.extlinux = enabled;
       router = enabled // {
         inherit lan;
-        dhcp = enabled;
       };
       dnsmasq = enabled // {
         inherit lan;
         dns = enabled;
+        dhcp = enabled;
       };
       sing-box = enabled;
       sops-nix = enabled // {

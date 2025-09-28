@@ -23,7 +23,9 @@ in
       dnsmasq = enabled // {
         inherit lan;
         dns = enabled;
-        dhcp = enabled;
+        dhcp = enabled // {
+          only = true;
+        };
       };
       avahi = enabled;
       pppd = enabled // {

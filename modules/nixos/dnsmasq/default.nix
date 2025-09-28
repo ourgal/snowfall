@@ -18,6 +18,7 @@ let
     getDirname
     mkFireholRule
     redirectDomains
+    mkBoolOpt'
     ;
   inherit (builtins) map;
   cfg = cfgNixos config.${namespace} ./.;
@@ -68,10 +69,15 @@ let
                 "${lan}.100,${lan}.249,24h"
                 "::f,::ff,constructor:${cfg.lan},ra-stateless"
               ];
-              dhcp-option = [
-                "3,${lan}.1" # gateway
-                "6,${lan}.1" # dns
-              ];
+              dhcp-option =
+                let
+                  gateway = if cfg.dhcp.gateway != "" then cfg.dhcp.gateway else "${lan}.1";
+                  dns = if cfg.dhcp.dns != "" then cfg.dhcp.dns else "${lan}.1";
+                in
+                [
+                  "3,${gateway}"
+                  "6,${dns}"
+                ];
               dhcp-host = [
                 "${mac.brix},${ip.brix},brix"
                 "${mac.home},${ip.home},home"
@@ -84,7 +90,7 @@ let
                 "${mac.u20},${ip.u20},u20"
               ];
 
-              dhcp-authoritative = true;
+              dhcp-authoritative = cfg.dhcp.only;
             }
           else
             { dhcp-authoritative = false; }
@@ -100,11 +106,19 @@ let
       udp = dhcpPort ++ lib.optional cfg.dns.enable dnsPort;
     };
   };
-  extraOpts = {
-    lan = mkOpt' lib.types.str "";
-    dns = switch;
-    dhcp = switch;
-  };
+  extraOpts =
+    let
+      inherit (lib.types) str;
+    in
+    {
+      lan = mkOpt' str "";
+      dns = switch;
+      dhcp = switch // {
+        only = mkBoolOpt' false;
+        gateway = mkOpt' str "";
+        dns = mkOpt' str "";
+      };
+    };
   _args = { inherit value args extraOpts; };
 in
 nixosModule _args
