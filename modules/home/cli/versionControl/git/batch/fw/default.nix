@@ -122,6 +122,10 @@ args.module (
           trusted = false;
           git = "${myGithub}:scoop-galgame-bt";
         };
+        "fw/projects/default/termux-pkgs" = toTOML {
+          trusted = false;
+          git = "${myGithub}:termux-pkgs";
+        };
       };
       value = {
         systemd.user.tmpfiles.rules = [ "d ${config.home.homeDirectory}/.emacs.d - - - -" ];
