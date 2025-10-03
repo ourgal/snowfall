@@ -248,6 +248,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-6QRI1MQnoppzlVfRV/bfqfTnBjC0/haFm52Ez9nltzw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-6QRI1MQnoppzlVfRV_bfqfTnBjC0_haFm52Ez9nltzw=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   bling = {
     pname = "bling";
@@ -344,6 +350,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   cdo = {
     pname = "cdo";
@@ -354,6 +366,12 @@
       rev = "a70188d0fce3dc942e41f76bb8c839a0a7c2bef2";
       fetchSubmodules = false;
       sha256 = "sha256-+wQ5stsexInLIRSSSGj0xDlss2XrQUkcOJirDA6XqWs=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-+wQ5stsexInLIRSSSGj0xDlss2XrQUkcOJirDA6XqWs=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2025-09-21";
   };
@@ -399,6 +417,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   classifier = {
     pname = "classifier";
@@ -430,6 +454,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-IsJxKCR3yBuwv33FYfHF+Xuu8zgu4mxx3RBnxJkR4rI=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-IsJxKCR3yBuwv33FYfHF+Xuu8zgu4mxx3RBnxJkR4rI=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   cmdx = {
     pname = "cmdx";
@@ -451,6 +481,12 @@
       rev = "v1.0.5";
       fetchSubmodules = false;
       sha256 = "sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N/ycu4g2W7187E3A=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N_ycu4g2W7187E3A=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   comicneue = {
@@ -485,6 +521,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-X/uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-X_uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   compose2nix = {
     pname = "compose2nix";
@@ -517,6 +559,12 @@
       rev = "1.2.1";
       fetchSubmodules = false;
       sha256 = "sha256-rkw4s3nRwmM7BIXCq5CO1mF7/9Mdi1tkXVn869twpWI=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-rkw4s3nRwmM7BIXCq5CO1mF7_9Mdi1tkXVn869twpWI=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   corgi = {
@@ -600,6 +648,12 @@
       rev = "80c6843b2194bcea3525e8248b9afdbb209255c4";
       fetchSubmodules = false;
       sha256 = "sha256-aorPH7RwhqkydAO/KwsJMtcWRUZLBdQe0aDE2ICYyMA=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-aorPH7RwhqkydAO_KwsJMtcWRUZLBdQe0aDE2ICYyMA=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2025-09-28";
   };
@@ -916,6 +970,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-7VNhKGi+r827DDW937UbCSKvgEF7eI4zlHwOolcTr9c=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-7VNhKGi+r827DDW937UbCSKvgEF7eI4zlHwOolcTr9c=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   duckdns = {
     pname = "duckdns";
@@ -1075,6 +1135,12 @@
       rev = "v0.2.0";
       fetchSubmodules = false;
       sha256 = "sha256-QyC73f3PUzs50aRxDAknM//38Al8WYA1cTVaLwybhPc=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-QyC73f3PUzs50aRxDAknM__38Al8WYA1cTVaLwybhPc=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   facad = {
@@ -1344,6 +1410,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-/O548IEhGYSOSIG/xTGCi+P75poM5KY2AYW6lXRCtF0=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-_O548IEhGYSOSIG_xTGCi+P75poM5KY2AYW6lXRCtF0=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   gaze = {
     pname = "gaze";
@@ -1473,6 +1545,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-MsJDfmWU6LyK7M0LjYQufIpKmtS4f2hgo4Yi/x1HsrU=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-MsJDfmWU6LyK7M0LjYQufIpKmtS4f2hgo4Yi_x1HsrU=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   git-heatgrid = {
     pname = "git-heatgrid";
@@ -1600,6 +1678,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-NaU+SZyThC1z8+NUmDsOHGsHVvT5srFcJ/5f0cRdScA=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-NaU+SZyThC1z8+NUmDsOHGsHVvT5srFcJ_5f0cRdScA=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   git-toolbelt = {
     pname = "git-toolbelt";
@@ -1720,6 +1804,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-zFocjX19OGxDG0L5qmdunwWhEZrkfIy2S8FOfIdPTus=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-zFocjX19OGxDG0L5qmdunwWhEZrkfIy2S8FOfIdPTus=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   hatsune-miku-windows-linux-cursors = {
     pname = "hatsune-miku-windows-linux-cursors";
@@ -1760,6 +1850,12 @@
       rev = "v0.3.0";
       fetchSubmodules = false;
       sha256 = "sha256-Wz/jbcy1j2i85RyVluILos2Y6NsGjx1+YY6iXUAz/MI=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-Wz_jbcy1j2i85RyVluILos2Y6NsGjx1+YY6iXUAz_MI=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   hssp = {
@@ -1824,6 +1920,12 @@
       rev = "f1e79605af1b4852b2a5dbfcc4674a5c14fc551d";
       fetchSubmodules = false;
       sha256 = "sha256-xwB6IXQX4bch+j+VhWicEz4MIsdjld29q0CJZvAhulI=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-xwB6IXQX4bch+j+VhWicEz4MIsdjld29q0CJZvAhulI=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2022-10-08";
   };
@@ -1960,6 +2062,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-Ig/KdCuQZYSiCydouN29IsIRKh8qngtzcOknTozDRRM=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-Ig_KdCuQZYSiCydouN29IsIRKh8qngtzcOknTozDRRM=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   lookatme = {
     pname = "lookatme";
@@ -2028,6 +2136,12 @@
       rev = "v0.9.0";
       fetchSubmodules = false;
       sha256 = "sha256-Q+zTYdAaCztYYtSgHK1X7oE8Q7oHYpf+hAfGAzU4HoA=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-Q+zTYdAaCztYYtSgHK1X7oE8Q7oHYpf+hAfGAzU4HoA=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   mbake = {
@@ -2234,6 +2348,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-U0xGyRFvSxWrDdwWwauZ2U8J8jJjssBOefhWOSavo7A=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-U0xGyRFvSxWrDdwWwauZ2U8J8jJjssBOefhWOSavo7A=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   nix-sweep = {
     pname = "nix-sweep";
@@ -2244,6 +2364,12 @@
       rev = "v0.7.0";
       fetchSubmodules = false;
       sha256 = "sha256-o+8VY8DxBtUhOjrFKKm7DGBk/a6xJgpib6IU9SaKEjU=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-o+8VY8DxBtUhOjrFKKm7DGBk_a6xJgpib6IU9SaKEjU=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   nrf-udev = {
@@ -2344,6 +2470,12 @@
       rev = "0.4.0";
       fetchSubmodules = false;
       sha256 = "sha256-iR6G+G1UOT1ThLI3yhz3na1HmN6z2qUiI6NSKT0krtY=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-iR6G+G1UOT1ThLI3yhz3na1HmN6z2qUiI6NSKT0krtY=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   play = {
@@ -2512,6 +2644,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-h1fFVFRv9+VKKyv3XYqT2Yl4PuxhmTC+LadGk9g7f0k=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-h1fFVFRv9+VKKyv3XYqT2Yl4PuxhmTC+LadGk9g7f0k=/Cargo.lock";
+      outputHashes = {
+        "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
+      };
+    };
   };
   qman = {
     pname = "qman";
@@ -2663,6 +2801,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-AfVDqtS1dT9TfK6eDP3iWJm7LK5B42MNljfipCNmtrg=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-AfVDqtS1dT9TfK6eDP3iWJm7LK5B42MNljfipCNmtrg=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
     date = "2025-04-15";
   };
   "rgg.fish" = {
@@ -2687,6 +2831,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-RkdT4XAEtZunvupgAyndewOsTkdP/W1+Vn81Qc9yJ24=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-RkdT4XAEtZunvupgAyndewOsTkdP_W1+Vn81Qc9yJ24=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   rsv = {
     pname = "rsv";
@@ -2698,6 +2848,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-kaGEjBqXhcBEAcos/CyzkFk6kaL3zJ89GuaqG0g94Kc=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-kaGEjBqXhcBEAcos_CyzkFk6kaL3zJ89GuaqG0g94Kc=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   rust-kanban = {
     pname = "rust-kanban";
@@ -2708,6 +2864,12 @@
       rev = "v0.10.5";
       fetchSubmodules = false;
       sha256 = "sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   rx = {
@@ -2772,6 +2934,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-4/6vu/iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-4_6vu_iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   shh = {
     pname = "shh";
@@ -2782,6 +2950,12 @@
       rev = "c6f5ac74acf2434684133592b03ce44036ec2e8a";
       fetchSubmodules = false;
       sha256 = "sha256-jpF0P4PKXroYXk45KWZTJosag7lE60IJO4rnCsG+yzU=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-jpF0P4PKXroYXk45KWZTJosag7lE60IJO4rnCsG+yzU=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2025-09-22";
   };
@@ -2817,6 +2991,12 @@
       rev = "v1.1.0";
       fetchSubmodules = false;
       sha256 = "sha256-UIbrDZjvhBteKC2oUWg5VDcCDghh65kPFJICkfX91Vc=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-UIbrDZjvhBteKC2oUWg5VDcCDghh65kPFJICkfX91Vc=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   sing-box-fork = {
@@ -2900,6 +3080,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-Wyws9I/ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=";
     };
+    cargoLock."crates/Cargo.lock" = {
+      lockFile = ./. + "/sha256-Wyws9I_ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=/crates/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   stardict-cn-dicts = {
     pname = "stardict-cn-dicts";
@@ -2922,6 +3108,12 @@
       rev = "d9d5911f4d2d141fea74936f235a74bf03961c71";
       fetchSubmodules = false;
       sha256 = "sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2019-10-22";
   };
@@ -2956,6 +3148,12 @@
       rev = "v2.0.1";
       fetchSubmodules = false;
       sha256 = "sha256-wOFY5HrDJ6OB7lmkfTyK5dxdQTFArHlPi7KJI0HToEM=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-wOFY5HrDJ6OB7lmkfTyK5dxdQTFArHlPi7KJI0HToEM=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   svgshift = {
@@ -3002,6 +3200,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-2yZadvsr99M3t30vWlmC4wj0fl/QOsrUag/3fSIiw80=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-2yZadvsr99M3t30vWlmC4wj0fl_QOsrUag_3fSIiw80=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
     date = "2025-03-25";
   };
   tach = {
@@ -3013,6 +3217,12 @@
       rev = "v0.29.0";
       fetchSubmodules = false;
       sha256 = "sha256-G/gEVn7pPl/dVDtB/QgBxHw/lHWzLkyto+w+o8Wsj+c=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-G_gEVn7pPl_dVDtB_QgBxHw_lHWzLkyto+w+o8Wsj+c=/Cargo.lock";
+      outputHashes = {
+        "ruff_annotate_snippets-0.1.0" = "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0=";
+      };
     };
   };
   task-relative-recur = {
@@ -3049,6 +3259,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-uxkZCqcdQVdaVbru4etbA70cBR6Ou8QptsyBCfrMxG8=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-uxkZCqcdQVdaVbru4etbA70cBR6Ou8QptsyBCfrMxG8=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   termchat = {
     pname = "termchat";
@@ -3060,6 +3276,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-HDoA9hiCKnVUf1mwl2VUvIgli8+hvaYO5+fWOMO8tks=";
     };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-HDoA9hiCKnVUf1mwl2VUvIgli8+hvaYO5+fWOMO8tks=/Cargo.lock";
+      outputHashes = {
+        
+      };
+    };
   };
   termsand = {
     pname = "termsand";
@@ -3070,6 +3292,12 @@
       rev = "75a50ba82ed299047cd5d0cd53b6fce390cfc6e8";
       fetchSubmodules = false;
       sha256 = "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb/wroGpj0=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb_wroGpj0=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2024-08-15";
   };
@@ -3104,6 +3332,12 @@
       rev = "0.1.5";
       fetchSubmodules = false;
       sha256 = "sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   textual = {
@@ -3485,6 +3719,12 @@
       rev = "v1.0.1";
       fetchSubmodules = false;
       sha256 = "sha256-9CGktRXx7IZ0yv/U78SWSifJ6YBIiV8cf5Dq60PPCcQ=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-9CGktRXx7IZ0yv_U78SWSifJ6YBIiV8cf5Dq60PPCcQ=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   updo = {
@@ -3882,6 +4122,12 @@
       rev = "05349baaad56e6417c43f895c0af5602bc905f42";
       fetchSubmodules = false;
       sha256 = "sha256-wffkVnpGcMhxrz55SQ599PaaGRyxIVnMs8FeZYpLNK4=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-wffkVnpGcMhxrz55SQ599PaaGRyxIVnMs8FeZYpLNK4=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
     date = "2025-04-11";
   };

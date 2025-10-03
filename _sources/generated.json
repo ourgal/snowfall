@@ -419,7 +419,12 @@
         "version": "0.18.9"
     },
     "blendr": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-6QRI1MQnoppzlVfRV_bfqfTnBjC0_haFm52Ez9nltzw=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "blendr",
@@ -596,7 +601,12 @@
         "version": "v1.10.4"
     },
     "ccsum": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-wLwQFhz3TZBwFLtcmdha6nFLhYTaPYPm24R2UQVbpzk=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "ccsum",
@@ -617,7 +627,12 @@
         "version": "v0.1.0"
     },
     "cdo": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-+wQ5stsexInLIRSSSGj0xDlss2XrQUkcOJirDA6XqWs=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-09-21",
         "extract": null,
         "name": "cdo",
@@ -695,7 +710,12 @@
         "version": "v2.3.0"
     },
     "clashctl": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-7XVMtl6yFxT9fy205sZL8eJ711NXdmYIMFVBbF0RoPc=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "clashctl",
@@ -752,7 +772,12 @@
         "version": "0.2.2"
     },
     "clock-tui": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-IsJxKCR3yBuwv33FYfHF+Xuu8zgu4mxx3RBnxJkR4rI=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "clock-tui",
@@ -794,7 +819,12 @@
         "version": "v2.0.2"
     },
     "code-radio-cli": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-H2mnMWMJcFZIWHRz4QzM7ZwfbJ0N_ycu4g2W7187E3A=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "code-radio-cli",
@@ -857,7 +887,12 @@
         "version": "v1.0.3"
     },
     "complate": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-X_uFpfHz0DCj0KFR2IcV6vhSkP0sSX0MsEBDmw0nan0=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "complate",
@@ -920,7 +955,12 @@
         "version": "v1.8.1"
     },
     "convfmt": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-rkw4s3nRwmM7BIXCq5CO1mF7_9Mdi1tkXVn869twpWI=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "convfmt",
@@ -1076,7 +1116,12 @@
         "version": "v0.5.1"
     },
     "dela": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-aorPH7RwhqkydAO_KwsJMtcWRUZLBdQe0aDE2ICYyMA=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-09-28",
         "extract": null,
         "name": "dela",
@@ -1685,7 +1730,12 @@
         "version": "2cd9c6a176d9cbf7ccb2895839883ec01923d280"
     },
     "dra": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-7VNhKGi+r827DDW937UbCSKvgEF7eI4zlHwOolcTr9c=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "dra",
@@ -1972,7 +2022,12 @@
         "version": "v2.5.1"
     },
     "envset": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-QyC73f3PUzs50aRxDAknM__38Al8WYA1cTVaLwybhPc=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "envset",
@@ -2454,7 +2509,12 @@
         "version": "v1.0.0"
     },
     "game-2048-tui": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-_O548IEhGYSOSIG_xTGCi+P75poM5KY2AYW6lXRCtF0=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "game-2048-tui",
@@ -2694,7 +2754,12 @@
         "version": "v0.9.1"
     },
     "git-grab": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-MsJDfmWU6LyK7M0LjYQufIpKmtS4f2hgo4Yi_x1HsrU=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "git-grab",
@@ -2925,7 +2990,12 @@
         "version": "3.2.3"
     },
     "git-sumi": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-NaU+SZyThC1z8+NUmDsOHGsHVvT5srFcJ_5f0cRdScA=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "git-sumi",
@@ -3150,7 +3220,12 @@
         "version": "ebd33f7d01a7ac9b2695f71b1136d6b89a0d5d44"
     },
     "gw": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-zFocjX19OGxDG0L5qmdunwWhEZrkfIy2S8FOfIdPTus=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "gw",
@@ -3228,7 +3303,12 @@
         "version": "v0.32.1"
     },
     "hledger-fmt": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-Wz_jbcy1j2i85RyVluILos2Y6NsGjx1+YY6iXUAz_MI=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "hledger-fmt",
@@ -3348,7 +3428,12 @@
         "version": "v0.11.0"
     },
     "jalm": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-xwB6IXQX4bch+j+VhWicEz4MIsdjld29q0CJZvAhulI=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2022-10-08",
         "extract": null,
         "name": "jalm",
@@ -3594,7 +3679,12 @@
         "version": "v4.5.1"
     },
     "lobtui": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-Ig_KdCuQZYSiCydouN29IsIRKh8qngtzcOknTozDRRM=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "lobtui",
@@ -3720,7 +3810,12 @@
         "version": "4418bd111b4f86d0e35038d45332153c263c2d06"
     },
     "manga-tui": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-Q+zTYdAaCztYYtSgHK1X7oE8Q7oHYpf+hAfGAzU4HoA=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "manga-tui",
@@ -4092,7 +4187,12 @@
         "version": "5baa00b79d4cc46523da0b8b3532c5163d151be4"
     },
     "nix-editor": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-U0xGyRFvSxWrDdwWwauZ2U8J8jJjssBOefhWOSavo7A=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "nix-editor",
@@ -4113,7 +4213,12 @@
         "version": "0.3.0"
     },
     "nix-sweep": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-o+8VY8DxBtUhOjrFKKm7DGBk_a6xJgpib6IU9SaKEjU=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "nix-sweep",
@@ -4296,7 +4401,12 @@
         "version": "fcb9d7eb7dfcb62d0c93e32dd462be1728c3096e"
     },
     "pio": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-iR6G+G1UOT1ThLI3yhz3na1HmN6z2qUiI6NSKT0krtY=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "pio",
@@ -4608,7 +4718,14 @@
         "version": "v0.4.1"
     },
     "qlty": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-h1fFVFRv9+VKKyv3XYqT2Yl4PuxhmTC+LadGk9g7f0k=/Cargo.lock",
+                {
+                    "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
+                }
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "qlty",
@@ -4881,7 +4998,12 @@
         "version": "v0.3.0"
     },
     "repoblame": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-AfVDqtS1dT9TfK6eDP3iWJm7LK5B42MNljfipCNmtrg=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-04-15",
         "extract": null,
         "name": "repoblame",
@@ -4923,7 +5045,12 @@
         "version": "00a852b7d62553b24b8f1bf65d63744ff40c0e5c"
     },
     "rimage": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-RkdT4XAEtZunvupgAyndewOsTkdP_W1+Vn81Qc9yJ24=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "rimage",
@@ -4944,7 +5071,12 @@
         "version": "v0.12.1"
     },
     "rsv": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-kaGEjBqXhcBEAcos_CyzkFk6kaL3zJ89GuaqG0g94Kc=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "rsv",
@@ -4965,7 +5097,12 @@
         "version": "v0.4.18"
     },
     "rust-kanban": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-fwKXH99P3KBiZdCgTBnuF2ovlefX3l06rzyTSeYty9Q=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "rust-kanban",
@@ -5085,7 +5222,12 @@
         "version": "20250910"
     },
     "servicer": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-4_6vu_iIZ7ZHHgi3eMshCIygO3ynFSHoiSGWjHzEcZw=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "servicer",
@@ -5106,7 +5248,12 @@
         "version": "v0.1.13"
     },
     "shh": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-jpF0P4PKXroYXk45KWZTJosag7lE60IJO4rnCsG+yzU=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-09-22",
         "extract": null,
         "name": "shh",
@@ -5169,7 +5316,12 @@
         "version": "7a9b03766d3a9b1dbbdf671a3bbc6f555806dffe"
     },
     "simplemoji": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-UIbrDZjvhBteKC2oUWg5VDcCDghh65kPFJICkfX91Vc=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "simplemoji",
@@ -5315,7 +5467,12 @@
         "version": "1.1.3"
     },
     "sprite-dicing": {
-        "cargoLock": null,
+        "cargoLock": {
+            "crates/Cargo.lock": [
+                "sha256-Wyws9I_ITdswUqxdmckXtutr5FK8ocsvQRIcMlASiLo=/crates/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "sprite-dicing",
@@ -5357,7 +5514,12 @@
         "version": "3d14395f2ad47d20874ace4835c63f6cb5b2f7f4"
     },
     "stego": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-fChtlJqzI2gTbdN374e3ZQntCHiaknWgrDFSD8+Ee5M=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2019-10-22",
         "extract": null,
         "name": "stego",
@@ -5420,7 +5582,12 @@
         "version": "v1.0.1"
     },
     "superwhich": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-wOFY5HrDJ6OB7lmkfTyK5dxdQTFArHlPi7KJI0HToEM=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "superwhich",
@@ -5504,7 +5671,12 @@
         "version": "2.128"
     },
     "tabry-rs": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-2yZadvsr99M3t30vWlmC4wj0fl_QOsrUag_3fSIiw80=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-03-25",
         "extract": null,
         "name": "tabry-rs",
@@ -5525,7 +5697,14 @@
         "version": "834de4c0f29ae0585dc822ab2b4418292765d017"
     },
     "tach": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-G_gEVn7pPl_dVDtB_QgBxHw_lHWzLkyto+w+o8Wsj+c=/Cargo.lock",
+                {
+                    "ruff_annotate_snippets-0.1.0": "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0="
+                }
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "tach",
@@ -5588,7 +5767,12 @@
         "version": "b7f1d90d18de372f898131e9ea5130bf306389c7"
     },
     "templify": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-uxkZCqcdQVdaVbru4etbA70cBR6Ou8QptsyBCfrMxG8=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "templify",
@@ -5609,7 +5793,12 @@
         "version": "2.0.1"
     },
     "termchat": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-HDoA9hiCKnVUf1mwl2VUvIgli8+hvaYO5+fWOMO8tks=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "termchat",
@@ -5630,7 +5819,12 @@
         "version": "v1.3.1"
     },
     "termsand": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-tylzyjg3AJutwnrxjxzshEfuTD14VegCIMb_wroGpj0=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2024-08-15",
         "extract": null,
         "name": "termsand",
@@ -5693,7 +5887,12 @@
         "version": "v3.1.10"
     },
     "textpod": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "textpod",
@@ -6374,7 +6573,12 @@
         "version": "e1c932daf532805b522201383984da4a29e156fe"
     },
     "tuime": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-9CGktRXx7IZ0yv_U78SWSifJ6YBIiV8cf5Dq60PPCcQ=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "tuime",
@@ -7085,7 +7289,12 @@
         "version": "v0.3.8"
     },
     "ynk": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-wffkVnpGcMhxrz55SQ599PaaGRyxIVnMs8FeZYpLNK4=/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2025-04-11",
         "extract": null,
         "name": "ynk",
