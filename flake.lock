@@ -2181,6 +2181,7 @@
         "snowfall-thaw": "snowfall-thaw",
         "sops-nix": "sops-nix",
         "telega-overlay": "telega-overlay",
+        "treefmt-nix": "treefmt-nix_3",
         "ulauncher": "ulauncher",
         "unstable": "unstable_2",
         "winapps": "winapps",
@@ -2718,6 +2719,26 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "rev": "49717b5af6f80172275d47a418c9719a31a78b53",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "treefmt-nix_3": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758728421,
+        "narHash": "sha256-ySNJ008muQAds2JemiyrWYbwbG+V7S5wg3ZVKGHSFu8=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "5eda4ee8121f97b218f7cc73f5172098d458f1d1",
         "type": "github"
       },
       "original": {

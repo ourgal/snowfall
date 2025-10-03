@@ -145,6 +145,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     colmena.url = "github:zhaofengli/colmena/stable";
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -179,6 +183,14 @@
       homeSpecialArgsFinal = lib.homeSpecialArgs lib.settings.homeManager SpecialArgs;
       systemSpecialArgsFinal = lib.systemSpecialArgs lib.settings.nixOS SpecialArgs;
       system = "x86_64-linux";
+
+      eachSystem =
+        f:
+        inputs.nixpkgs.lib.genAttrs [ "aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux" ] (
+          system: f inputs.nixpkgs.legacyPackages.${system}
+        );
+      # Eval the treefmt modules from ./treefmt.nix
+      treefmtEval = eachSystem (pkgs: inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     in
     lib.mkFlake {
       channels-config = {
@@ -355,5 +367,10 @@
             }
           ];
         };
+
+      formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+      checks = eachSystem (pkgs: {
+        formatting = treefmtEval.${pkgs.system}.config.build.check inputs.self;
+      });
     };
 }
