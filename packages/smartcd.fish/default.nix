@@ -9,7 +9,7 @@ fishPlugins.buildFishPlugin {
 
   meta = {
     description = "Mirrored from https://git.sr.ht/~ficd/smartcd.fish";
-    homepage = "https://github.com/ficcdaf/smartcd.fish";
+    homepage = "https://git.sr.ht/~ficd/smartcd.fish";
     license = lib.licenses.isc;
     maintainers = with lib.maintainers; [ zxc ];
     platforms = lib.platforms.all;

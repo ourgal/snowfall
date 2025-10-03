@@ -1346,8 +1346,8 @@ src.git = "https://github.com/ourgal/tmux-ssh-split"
 fetch.github = "ourgal/tmux-ssh-split"
 
 ["smartcd.fish"]
-src.git = "https://github.com/ficcdaf/smartcd.fish"
-fetch.github = "ficcdaf/smartcd.fish"
+src.git = "https://git.sr.ht/~ficd/smartcd.fish"
+fetch.git = "https://git.sr.ht/~ficd/smartcd.fish"
 
 [pfp-generator]
 src.github = "trumully/pfp_generator"
