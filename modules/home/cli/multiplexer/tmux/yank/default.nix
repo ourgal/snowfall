@@ -96,7 +96,6 @@ args.module (
         unbind "'"  # select-window
         unbind n    # next-window
         unbind p    # previous-window
-        unbind c    # new-window
         unbind l    # last-window
         unbind M-n  # next window with alert
         unbind M-p  # next window with alert
