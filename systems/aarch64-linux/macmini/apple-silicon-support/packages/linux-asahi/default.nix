@@ -76,8 +76,6 @@ let
       lib,
       fetchFromGitHub,
       linuxKernel,
-      rustc,
-      rust-bindgen,
       ...
     }:
     let
