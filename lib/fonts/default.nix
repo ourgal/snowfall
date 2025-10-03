@@ -167,9 +167,7 @@ in
       extras = [ maple ];
       overrids = {
         cjk = { };
-        en = {
-          serif = chunk;
-        };
+        en = { };
       };
       emoji = [
         nerdfonts
@@ -193,6 +191,11 @@ in
         ++ emoji
         ++ extras
       );
+      notUse = [
+        chunk
+        font100_base
+        font100_extend
+      ];
     };
   mkFontconfig =
     header: json:
