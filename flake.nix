@@ -316,7 +316,7 @@
           };
       };
 
-      colmenaHive = lib.mkColmenaHive inputs.self.pkgs.x86_64-linux.nixpkgs;
+      colmenaHive = lib.mkColmenaHive inputs.self.pkgs.${system}.nixpkgs;
 
       modules = {
         home-transform = lib.homeModule;
