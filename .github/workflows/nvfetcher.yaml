@@ -2,6 +2,8 @@
 name: Update nix hash
 on:
   workflow_dispatch:  # allows manual triggering
+  push:
+    branches: [main]
 jobs:
   nvfetcher:
     runs-on: ubuntu-latest
