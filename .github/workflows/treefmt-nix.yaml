@@ -1,0 +1,20 @@
+---
+name: Treefmt-nix
+on:
+  workflow_dispatch:  # allows manual triggering
+  push:
+    branches: [main]
+jobs:
+  treefmt-nix:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: nix fmt
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'style: format code'
