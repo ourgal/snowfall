@@ -1451,3 +1451,7 @@ cargo_locks = ["Cargo.lock"]
 [blur-mpv]
 src.git = "https://github.com/Ajatt-Tools/blur-mpv"
 fetch.github = "Ajatt-Tools/blur-mpv"
+
+[cron]
+src.github = "lnquy/cron"
+fetch.github = "lnquy/cron"
