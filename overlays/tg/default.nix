@@ -1,5 +1,5 @@
-{ channels, ... }:
-final: prev: {
+{ ... }:
+_final: prev: {
   tg = prev.tg.overrideAttrs (_oldAttrs: {
     patches = [
       # Fix sending messages

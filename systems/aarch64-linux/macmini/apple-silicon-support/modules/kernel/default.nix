@@ -12,9 +12,7 @@
       let
         pkgs' = config.hardware.asahi.pkgs;
       in
-      pkgs'.linux-asahi.override {
-        _kernelPatches = config.boot.kernelPatches;
-      };
+      pkgs'.linux-asahi.override { _kernelPatches = config.boot.kernelPatches; };
 
     # we definitely want to use CONFIG_ENERGY_MODEL, and
     # schedutil is a prerequisite for using it

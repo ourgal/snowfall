@@ -1,9 +1,4 @@
-{
-  lib,
-  namespace,
-  _name,
-  ...
-}:
+{ lib, namespace, ... }:
 let
   inherit (lib.${namespace}) enabled enabledList getDirname;
   name = getDirname ./.;

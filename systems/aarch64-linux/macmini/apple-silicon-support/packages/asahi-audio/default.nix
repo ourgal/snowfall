@@ -1,6 +1,5 @@
 {
   stdenv,
-  lib,
   fetchFromGitHub,
   lsp-plugins,
   bankstown-lv2,

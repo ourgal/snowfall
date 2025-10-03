@@ -75,12 +75,11 @@ let
       stdenv,
       lib,
       fetchFromGitHub,
-      fetchpatch,
       linuxKernel,
       rustc,
       rust-bindgen,
       ...
-    }@args:
+    }:
     let
       origConfigText = builtins.readFile origConfigfile;
 
@@ -118,8 +117,6 @@ let
         builtins.listToAttrs (map makePair (lib.lists.reverseList configList));
 
       # used to fix issues when nixpkgs gets ahead of the kernel
-      rustAtLeast = version: withRust && (lib.versionAtLeast rustc.version version);
-      bindgenAtLeast = version: withRust && (lib.versionAtLeast rust-bindgen.unwrapped.version version);
     in
     linuxKernel.manualConfig rec {
       inherit stdenv lib;
@@ -136,9 +133,7 @@ let
         hash = "sha256-JrWVw1FiF9LYMiOPm0QI0bg/CrZAMSSVcs4AWNDIH3Q=";
       };
 
-      kernelPatches = [
-      ]
-      ++ _kernelPatches;
+      kernelPatches = [ ] ++ _kernelPatches;
 
       inherit configfile;
       config = configAttrs;
