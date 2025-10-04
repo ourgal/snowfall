@@ -1455,3 +1455,7 @@ fetch.github = "Ajatt-Tools/blur-mpv"
 [cron]
 src.github = "lnquy/cron"
 fetch.github = "lnquy/cron"
+
+[hyprkan]
+src.github = "mdSlash/hyprkan"
+fetch.github = "mdSlash/hyprkan"

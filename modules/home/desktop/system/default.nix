@@ -12,6 +12,7 @@ args.module (
     in
     {
       inputPkgs = p: [ p.ulauncher.packages."${pkgs.system}".default ];
+      myPkgs = "hyprkan";
       nixPkgs = [
         # keep-sorted start
         "blobdrop"
