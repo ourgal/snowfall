@@ -1,11 +1,5 @@
 ;;; keymap.el -*- lexical-binding: t; -*-
 
-;; switch windows
-(map! "C-l" #'evil-window-right)
-(map! "C-h" #'evil-window-left)
-(map! "C-j" #'evil-window-down)
-(map! "C-k" #'evil-window-up)
-
 ;; window
 (map! :n "C-w o" #'delete-other-windows
       :n "C-w z" #'doom/window-enlargen)
