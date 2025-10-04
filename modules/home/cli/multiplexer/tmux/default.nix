@@ -66,9 +66,9 @@ args.module (
         '';
       };
 
-      pluginsResurrect = with tmuxPlugins; [
+      pluginsResurrect = [
         {
-          plugin = resurrect;
+          plugin = tmuxPlugins.resurrect;
           extraConfig = ''
             set -g @resurrect-capture-pane-contents 'on'
             set -g @resurrect-processes 'lazygit newsboat clifm "devbox shell" "hx *" ncmpcpp "~nnn-wrapped->nnn" "~lf->lf" rmpc "~ranger->ranger-cd" "yazi->yy"'
@@ -163,32 +163,7 @@ args.module (
       ];
       enable = [
         # keep-sorted start
-        "auto-renumber-session"
-        "copycat"
-        "edgelord"
-        "extrakto"
-        "fpp"
-        "fuzzback"
-        "fzf"
-        "fzf-url"
-        "gentrify"
-        "gitmux"
-        "jump"
-        "mouse-swipe"
-        "moxide"
-        "open"
-        "power-zoom"
-        "sesh"
-        "session-wizard"
-        "sessionx"
-        "ssh-split"
-        "tea"
-        "termsand"
-        "thumbs"
-        "tmux-sessionizer"
-        "tome"
-        "which-key"
-        "yank"
+        "plugins"
         # keep-sorted end
       ];
       extraOpts = {

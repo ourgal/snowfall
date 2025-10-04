@@ -4,8 +4,8 @@ args.module (
   // (
     let
       inherit (args) pkgs config namespace;
-      isSshSplit = config.${namespace}.cli.multiplexer.tmux.ssh-split.enable;
-      isMoxideEnable = config.${namespace}.cli.multiplexer.tmux.moxide.enable;
+      isSshSplit = config.${namespace}.cli.multiplexer.tmux.plugins.ssh-split.enable;
+      isMoxideEnable = config.${namespace}.cli.multiplexer.tmux.plugins.moxide.enable;
       moxideScript = pkgs.writeShellScript "moxide_script" ''
         project_emoji="🚀"
         template_emoji="🛠️"

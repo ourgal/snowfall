@@ -9,7 +9,7 @@ args.module (
         config
         lib
         ;
-      inherit (config.${namespace}.cli.multiplexer.tmux)
+      inherit (config.${namespace}.cli.multiplexer.tmux.plugins)
         sesh
         tome
         power-zoom
