@@ -9,22 +9,18 @@ in
   dot =
     let
       lan = "end0";
-      ipv4 = "192.168.100.1";
     in
     {
       user.host = name;
       boot.extlinux = enabled;
       router = enabled // {
         inherit lan;
-        ipv4 = [ ipv4 ];
+        dhcp = enabled;
       };
       dnsmasq = enabled // {
         inherit lan;
         dns = enabled;
-        dhcp = enabled // {
-          gateway = ipv4;
-          dns = ipv4;
-        };
+        dhcp = enabled;
       };
       sing-box = enabled;
       sops-nix = enabled // {
