@@ -1889,6 +1889,17 @@
       sha256 = "sha256-TfxEO2rhOvDmtUJn/xTDSOBOWUkJViUM6iR4QBsXJ5s=";
     };
   };
+  hyprkan = {
+    pname = "hyprkan";
+    version = "v2.2.0";
+    src = fetchFromGitHub {
+      owner = "mdSlash";
+      repo = "hyprkan";
+      rev = "v2.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-4J0yQSkFTbHTDFBXECbCs/43xTDbeB/f3J7tZIbjbwM=";
+    };
+  };
   images-upload-cli = {
     pname = "images-upload-cli";
     version = "v3.0.6";
@@ -2428,15 +2439,15 @@
   };
   parinfer-rust = {
     pname = "parinfer-rust";
-    version = "afe6b1176cd805c000713e23b654fbf4b9f4b156";
+    version = "f519995ce802941007684e2d79e4fcba97853446";
     src = fetchFromGitHub {
       owner = "eraserhd";
       repo = "parinfer-rust";
-      rev = "afe6b1176cd805c000713e23b654fbf4b9f4b156";
+      rev = "f519995ce802941007684e2d79e4fcba97853446";
       fetchSubmodules = false;
-      sha256 = "sha256-YKja8nIWmPBNsHboJGXGyZKsjFRZPUOd6rOpPinqg4M=";
+      sha256 = "sha256-oaWhWrLTeieT7V88vFGlGTKZpNMNuc7vFs3ZBdubT08=";
     };
-    date = "2025-06-05";
+    date = "2025-10-04";
   };
   pfp-generator = {
     pname = "pfp-generator";
@@ -2582,10 +2593,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.11.9";
+    version = "2.11.10";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.9.tar.gz";
-      sha256 = "sha256-a4/9pZehSBKnl1yQuCqKLnd9klero0U/lzrNPAMqGOI=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.10.tar.gz";
+      sha256 = "sha256-3CgPCYL72mw4+tpOR23ApPOur5xq1MKN9opmbsPGFCM=";
     };
   };
   pydantic-core = {
@@ -3764,18 +3775,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202510022212";
+    version = "202510042211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510022212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geoip.dat";
       sha256 = "sha256-rBCMjz8RDfnvZ68HcJ8qJlmbTOIFcOauUc+CzLSV4O0=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202510022212";
+    version = "202510042211";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510022212/geosite.dat";
-      sha256 = "sha256-ssrT3e/fuziCJi1+h1Oyr7kCKyumq+JuhxEpbUE2dI4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geosite.dat";
+      sha256 = "sha256-FLJsSMUSxmQXH7Lkaktg9sKPIq//gfTCplXhDFcBF2s=";
     };
   };
   vim-auto-save = {
@@ -4027,15 +4038,6 @@
       sha256 = "sha256-tCqN80lgj11ggzGmuGF077oqL5ByjUp6jVmRUTrIWJA=";
     };
     date = "2025-05-18";
-  };
-  vsc-fugitive = {
-    pname = "vsc-fugitive";
-    version = "0.3.2";
-    src = fetchurl {
-      url = "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.3.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
-      name = "vscode-fugitive-0.3.2.zip";
-      sha256 = "sha256-zeZH/Lz+8xhwCn0hiAYDAspmyWQELXy8VVkNJEqz3UU=";
-    };
   };
   wait-for = {
     pname = "wait-for";

@@ -3385,6 +3385,27 @@
         },
         "version": "0.1.1"
     },
+    "hyprkan": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "hyprkan",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mdSlash",
+            "repo": "hyprkan",
+            "rev": "v2.2.0",
+            "sha256": "sha256-4J0yQSkFTbHTDFBXECbCs/43xTDbeB/f3J7tZIbjbwM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.0"
+    },
     "images-upload-cli": {
         "cargoLock": null,
         "date": null,
@@ -4339,7 +4360,7 @@
     },
     "parinfer-rust": {
         "cargoLock": null,
-        "date": "2025-06-05",
+        "date": "2025-10-04",
         "extract": null,
         "name": "parinfer-rust",
         "passthru": null,
@@ -4351,12 +4372,12 @@
             "name": null,
             "owner": "eraserhd",
             "repo": "parinfer-rust",
-            "rev": "afe6b1176cd805c000713e23b654fbf4b9f4b156",
-            "sha256": "sha256-YKja8nIWmPBNsHboJGXGyZKsjFRZPUOd6rOpPinqg4M=",
+            "rev": "f519995ce802941007684e2d79e4fcba97853446",
+            "sha256": "sha256-oaWhWrLTeieT7V88vFGlGTKZpNMNuc7vFs3ZBdubT08=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "afe6b1176cd805c000713e23b654fbf4b9f4b156"
+        "version": "f519995ce802941007684e2d79e4fcba97853446"
     },
     "pfp-generator": {
         "cargoLock": null,
@@ -4624,11 +4645,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-a4/9pZehSBKnl1yQuCqKLnd9klero0U/lzrNPAMqGOI=",
+            "sha256": "sha256-3CgPCYL72mw4+tpOR23ApPOur5xq1MKN9opmbsPGFCM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.9.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.11.10.tar.gz"
         },
-        "version": "2.11.9"
+        "version": "2.11.10"
     },
     "pydantic-core": {
         "cargoLock": null,
@@ -6672,9 +6693,9 @@
             "name": null,
             "sha256": "sha256-rBCMjz8RDfnvZ68HcJ8qJlmbTOIFcOauUc+CzLSV4O0=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510022212/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geoip.dat"
         },
-        "version": "202510022212"
+        "version": "202510042211"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6685,11 +6706,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ssrT3e/fuziCJi1+h1Oyr7kCKyumq+JuhxEpbUE2dI4=",
+            "sha256": "sha256-FLJsSMUSxmQXH7Lkaktg9sKPIq//gfTCplXhDFcBF2s=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510022212/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geosite.dat"
         },
-        "version": "202510022212"
+        "version": "202510042211"
     },
     "vim-auto-save": {
         "cargoLock": null,
@@ -7131,21 +7152,6 @@
             "type": "github"
         },
         "version": "e276e9a6f37d2699a3caa63be19314f5a19a1481"
-    },
-    "vsc-fugitive": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "vsc-fugitive",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": "vscode-fugitive-0.3.2.zip",
-            "sha256": "sha256-zeZH/Lz+8xhwCn0hiAYDAspmyWQELXy8VVkNJEqz3UU=",
-            "type": "url",
-            "url": "https://hnrk-str.gallery.vsassets.io/_apis/public/gallery/publisher/hnrk-str/extension/vscode-fugitive/0.3.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
-        },
-        "version": "0.3.2"
     },
     "wait-for": {
         "cargoLock": null,
