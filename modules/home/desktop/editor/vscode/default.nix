@@ -23,7 +23,6 @@ args.module (
       enable = [
         # keep-sorted start
         "even_better_toml"
-        "fugitive"
         "nix-ide"
         "vim"
         # keep-sorted end
