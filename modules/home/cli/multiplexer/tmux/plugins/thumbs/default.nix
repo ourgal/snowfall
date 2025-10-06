@@ -15,15 +15,12 @@ args.module (
       cfg = cfgHome config.${namespace} ./.;
     in
     {
-      progs.tmux.plugins = [
-        {
-          plugin = pkgs.tmuxPlugins.tmux-thumbs;
-          extraConfig = ''
-            set -g @thumbs-key ${cfg.key}
-            bind ${cfg.key} ${cfg.command}
-          '';
-        }
-      ];
+      progs.tmux = {
+        plugins = [ { plugin = pkgs.tmuxPlugins.tmux-thumbs; } ];
+        extraConfig = ''
+          bind-key ${cfg.key} thumbs-pick
+        '';
+      };
       extraOpts = {
         key = mkOpt' str ".";
         path = mkOpt' str "${pkgs.tmuxPlugins.tmux-thumbs}/share/tmux-plugins/tmux-thumbs/tmux-thumbs.sh";
