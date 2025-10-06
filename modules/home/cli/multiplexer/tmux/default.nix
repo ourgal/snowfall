@@ -14,8 +14,9 @@
   ];
   enable = [
     # keep-sorted start
-    "plugins"
     "base"
+    "moxide"
+    "plugins"
     "resurrect"
     "scripts"
     "themes"
