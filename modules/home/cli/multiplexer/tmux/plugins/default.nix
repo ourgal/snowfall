@@ -23,6 +23,7 @@
     "tea"
     "termsand"
     "thumbs"
+    "tmux-paste-image"
     "tmux-sessionizer"
     "tome"
     "which-key"
