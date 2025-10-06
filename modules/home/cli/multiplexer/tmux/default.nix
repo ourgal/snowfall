@@ -8,7 +8,6 @@ args.module (
         cfgHome
         config
         namespace
-        lib
         switch
         ;
       inherit (pkgs) tmuxPlugins;
@@ -46,48 +45,19 @@ args.module (
         "git-mux"
         # keep-sorted end
       ];
-      progs = [
-        {
-          tmux = {
-            shell = "${pkgs.fish}/bin/fish";
-            clock24 = true;
-            historyLimit = 20000;
-            newSession = true;
-            baseIndex = 1;
-            sensibleOnTop = true;
-            plugins = if cfg.resurrect.enable then pluginsResurrect else [ ];
-          };
-        }
-        {
-          fish = {
-            interactiveShellInit =
-              lib.mkIf cfg.resurrect.enable # fish
-                ''
-                  if command -v tmux >/dev/null 2>&1; and \
-                      test -z "$TMUX"; and \
-                      test -z $INSIDE_EMACS; and \
-                      test -z $VIM; and \
-                      test -z $VSCODE_RESOLVING_ENVIRONMENT; and \
-                      test "$TERM_PROGRAM" != 'vscode'; and \
-                      ! fish_is_root_user
-                      exec tmux a
-                  end
-                '';
-            functions.cdb = {
-              body = ''
-                set dir (${pkgs.${namespace}.find-buffer-path})
-                if test -n $dir
-                   cd $dir
-                end
-              '';
-              description = "cd buffer path";
-            };
-          };
-        }
-      ];
+      progs.tmux = {
+        shell = "${pkgs.fish}/bin/fish";
+        clock24 = true;
+        historyLimit = 20000;
+        newSession = true;
+        baseIndex = 1;
+        sensibleOnTop = true;
+        plugins = if cfg.resurrect.enable then pluginsResurrect else [ ];
+      };
       enable = [
         # keep-sorted start
         "plugins"
+        "scripts"
         "themes"
         # keep-sorted end
       ];

@@ -1,0 +1,6 @@
+{
+  enable = [
+    "auto-attach"
+    "cdb"
+  ];
+}
