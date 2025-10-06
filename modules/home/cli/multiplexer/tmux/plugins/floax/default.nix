@@ -25,6 +25,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.${namespace}.tmux-floax}/share/tmux-plugins/tmux-floax/scripts/floax.sh";
         command = mkOpt' lib.types.str "run-shell ${cfg.path}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

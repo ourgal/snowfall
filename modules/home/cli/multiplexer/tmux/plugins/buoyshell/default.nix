@@ -25,6 +25,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.${namespace}.tmux-floax}/share/tmux-plugins/tmux-buoyshell/scripts/buoy.sh";
         command = mkOpt' lib.types.str ''if-shell -F "#{==:#{client_session},$buoy_session}" "detach-client" "run-shell '${cfg.path}'"'';
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

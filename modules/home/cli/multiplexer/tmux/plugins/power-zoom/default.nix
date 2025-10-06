@@ -22,6 +22,7 @@ args.module (
         }/share/tmux-plugins/tmux-power-zoom/scripts/power_zoom.sh";
         command = mkOpt' lib.types.str "run-shell -b ${cfg.path}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

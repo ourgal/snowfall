@@ -2,6 +2,7 @@
   config,
   lib,
   namespace,
+  options,
   ...
 }:
 let
@@ -15,6 +16,23 @@ let
     ;
   cfg = cfgHome config.${namespace} ./.;
   defaults = defaultTypes "${cfg.browser}.desktop" mime.html;
+  duplicateTmuxKeys = lib.pipe options.${namespace}.user.tmux.keys.definitionsWithLocations [
+    (lib.concatMap (
+      entry:
+      map (key: {
+        file = entry.file;
+        key = key;
+      }) entry.value
+    ))
+    (lib.groupBy (entry: entry.key))
+    (lib.filterAttrs (_key: entries: builtins.length entries > 1))
+    (lib.mapAttrsToList (
+      key: entries:
+      "Duplicate tmux key ${key} found in:\n"
+      + lib.concatMapStrings (entry: "  - ${entry.file}\n") entries
+    ))
+    (lib.concatStrings)
+  ];
 in
 {
   options.${namespace}.user = with types; {
@@ -25,6 +43,9 @@ in
     browserS = mkOpt' str "brave";
     browserSS = mkOpt' str "qutebrowser";
     pager = mkOpt' str "moar";
+    tmux = {
+      keys = mkOpt' (listOf str) [ ];
+    };
   };
 
   config = mkIf (isString cfg.name) (
@@ -58,6 +79,12 @@ in
           text/*; hx "%s"
         '';
       };
+      assertions = [
+        {
+          assertion = duplicateTmuxKeys == "";
+          message = duplicateTmuxKeys;
+        }
+      ];
     }
     // defaults
   );

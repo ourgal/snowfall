@@ -20,6 +20,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.${namespace}.tmux-fzf-url}/share/tmux-plugins/tmux-fzf-url/fzf-url.sh";
         command = mkOpt' lib.types.str ''run-shell -b ${cfg.path} "" "screen" ""'';
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

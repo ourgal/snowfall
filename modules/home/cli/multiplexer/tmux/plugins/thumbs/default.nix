@@ -26,6 +26,7 @@ args.module (
         path = mkOpt' str "${pkgs.tmuxPlugins.tmux-thumbs}/share/tmux-plugins/tmux-thumbs/tmux-thumbs.sh";
         command = mkOpt' str "run-shell -b ${cfg.path}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

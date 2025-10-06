@@ -36,6 +36,7 @@ args.module (
           '';
         }
       ];
+      value.${namespace}.user.tmux.keys = [ "Space" ];
       confs = {
         "tmux/plugins/tmux-which-key/config.yaml" = {
           command_alias_start_index = 200;

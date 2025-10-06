@@ -27,6 +27,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.extrakto}/share/tmux-plugins/extrakto/scripts/helpers.sh";
         command = mkOpt' lib.types.str "run-shell ${cfg.path} #{pane_id}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

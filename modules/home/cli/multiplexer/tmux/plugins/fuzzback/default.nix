@@ -20,6 +20,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.fuzzback}/share/tmux-plugins/extrakto/scripts/fuzzback.sh";
         command = mkOpt' lib.types.str "run-shell -b ${cfg.path}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

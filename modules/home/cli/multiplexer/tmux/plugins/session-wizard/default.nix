@@ -27,6 +27,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.session-wizard}/share/tmux-plugins/session-wizard/session-wizard.sh";
         command = mkOpt' lib.types.str ''display-popup -w "80"% -h "40"% -E ${cfg.path}'';
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )

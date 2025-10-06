@@ -20,6 +20,7 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.tmuxPlugins.fpp}/share/tmux-plugins/fpp/scripts/fpp.tmux";
         command = mkOpt' lib.types.str "run-shell -b ${cfg.path}";
       };
+      value.${namespace}.user.tmux.keys = [ cfg.key ];
     }
   )
 )
