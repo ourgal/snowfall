@@ -103,17 +103,17 @@
   };
   antifennel = {
     pname = "antifennel";
-    version = "eebe8c151d38f1186a5a26e3bb730a2286f75af4";
+    version = "cea2f62b71c53eeb2bfe056625a87f1a9ddfcddf";
     src = fetchgit {
       url = "https://git.sr.ht/~technomancy/antifennel";
-      rev = "eebe8c151d38f1186a5a26e3bb730a2286f75af4";
+      rev = "cea2f62b71c53eeb2bfe056625a87f1a9ddfcddf";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-83JmsF2i5yxzJha1MFo2KTZ8bEyt/Khk73roD/44Z7Y=";
+      sha256 = "sha256-LPQLxq7WQHi6CXgdYy6FKz04efFT5p6xPwDx5qhAw50=";
     };
-    date = "2025-10-02";
+    date = "2025-10-05";
   };
   app-shell = {
     pname = "app-shell";
@@ -950,15 +950,15 @@
   };
   dps-ghosttext-vim = {
     pname = "dps-ghosttext-vim";
-    version = "2cd9c6a176d9cbf7ccb2895839883ec01923d280";
+    version = "e0dd398a87a85b800ce27b689efa022913f63c24";
     src = fetchFromGitHub {
       owner = "gamoutatsumi";
       repo = "dps-ghosttext.vim";
-      rev = "2cd9c6a176d9cbf7ccb2895839883ec01923d280";
+      rev = "e0dd398a87a85b800ce27b689efa022913f63c24";
       fetchSubmodules = false;
-      sha256 = "sha256-J2PLR/hbcs/p0S6xLAwkl76TlAoY9IvuQmtgUcq9dy4=";
+      sha256 = "sha256-gJyE8F3pASBIi2AtKwPHqHRcvJaBPf8+ud6vn3kCWfk=";
     };
-    date = "2025-08-24";
+    date = "2025-10-06";
   };
   dra = {
     pname = "dra";
@@ -3061,13 +3061,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.8.4";
+    version = "v0.8.5";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.8.4";
+      rev = "v0.8.5";
       fetchSubmodules = false;
-      sha256 = "sha256-HwzROKQgoVnNxoiR1urxv6owKT1/CByy8g5a+Zy3ZNI=";
+      sha256 = "sha256-zaOpH4y2CLrkwIKy/We9IkdoQyxziYNJ0B+gczSt42s=";
     };
   };
   soundfx = {
@@ -3502,6 +3502,18 @@
     };
     date = "2025-05-09";
   };
+  tmux-paste-image = {
+    pname = "tmux-paste-image";
+    version = "a125d1e6b8dd6e70b13790d554068128a4e6fea3";
+    src = fetchFromGitHub {
+      owner = "jkhas8";
+      repo = "tmux-paste-image";
+      rev = "a125d1e6b8dd6e70b13790d554068128a4e6fea3";
+      fetchSubmodules = false;
+      sha256 = "sha256-pVcOvu3ESDiFtUXWP18end8VgR3hg5qAiRyAMopbqgI=";
+    };
+    date = "2025-08-06";
+  };
   tmux-power-zoom = {
     pname = "tmux-power-zoom";
     version = "5916f2087c140e9fbac7f3bbf64765581646c042";
@@ -3540,15 +3552,15 @@
   };
   tmux-tome = {
     pname = "tmux-tome";
-    version = "6af5216ffb1986dd010354e7f3548a0073d939e5";
+    version = "ef12fec855ed6d94350b9e69b9d3e62963c7138f";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "6af5216ffb1986dd010354e7f3548a0073d939e5";
+      rev = "ef12fec855ed6d94350b9e69b9d3e62963c7138f";
       fetchSubmodules = false;
-      sha256 = "sha256-4VBPi97LVtlCaVIBUVUa/NrEi36S0ThN11rxOAn7roY=";
+      sha256 = "sha256-xU99DtfbE+ckfThoxCC2YJEDl0Jxdp+/aEHZ6cs6uY0=";
     };
-    date = "2025-09-22";
+    date = "2025-10-05";
   };
   tmux-transient-status = {
     pname = "tmux-transient-status";
@@ -3588,15 +3600,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "a35457c2f59170cdae66eaa9de96a8a5afd3c936";
+    version = "06370d7458cc620ff5edd97166b6200245536b1d";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "a35457c2f59170cdae66eaa9de96a8a5afd3c936";
+      rev = "06370d7458cc620ff5edd97166b6200245536b1d";
       fetchSubmodules = false;
-      sha256 = "sha256-6dx81ItJodYUoWtlbGqoc5MPRCqy2PLgqIJK9lrAJ30=";
+      sha256 = "sha256-xyfhdZyDf8vPtkmjC/TnP1CZdkH5UaPFaS0G/C7D4tk=";
     };
-    date = "2025-09-04";
+    date = "2025-10-05";
   };
   to-fish = {
     pname = "to-fish";
@@ -3775,18 +3787,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202510042211";
+    version = "202510052212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510052212/geoip.dat";
       sha256 = "sha256-rBCMjz8RDfnvZ68HcJ8qJlmbTOIFcOauUc+CzLSV4O0=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202510042211";
+    version = "202510052212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510042211/geosite.dat";
-      sha256 = "sha256-FLJsSMUSxmQXH7Lkaktg9sKPIq//gfTCplXhDFcBF2s=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510052212/geosite.dat";
+      sha256 = "sha256-/8inPhDq2K6LPgQ80OsNIVKWgYb19TuhekcGBLcuzCA=";
     };
   };
   vim-auto-save = {
@@ -3923,15 +3935,15 @@
   };
   vim-tome = {
     pname = "vim-tome";
-    version = "6af5216ffb1986dd010354e7f3548a0073d939e5";
+    version = "ef12fec855ed6d94350b9e69b9d3e62963c7138f";
     src = fetchFromGitHub {
       owner = "laktak";
       repo = "tome";
-      rev = "6af5216ffb1986dd010354e7f3548a0073d939e5";
+      rev = "ef12fec855ed6d94350b9e69b9d3e62963c7138f";
       fetchSubmodules = false;
-      sha256 = "sha256-4VBPi97LVtlCaVIBUVUa/NrEi36S0ThN11rxOAn7roY=";
+      sha256 = "sha256-xU99DtfbE+ckfThoxCC2YJEDl0Jxdp+/aEHZ6cs6uY0=";
     };
-    date = "2025-09-22";
+    date = "2025-10-05";
   };
   vim-toop = {
     pname = "vim-toop";
@@ -3983,15 +3995,15 @@
   };
   vimsuggest = {
     pname = "vimsuggest";
-    version = "4cb9a555006f80c8c13bab76e6cadc110400ad5d";
+    version = "540a417aa9339ed33f0533a1937f6f5d3ba417cf";
     src = fetchFromGitHub {
       owner = "girishji";
       repo = "vimsuggest";
-      rev = "4cb9a555006f80c8c13bab76e6cadc110400ad5d";
+      rev = "540a417aa9339ed33f0533a1937f6f5d3ba417cf";
       fetchSubmodules = false;
-      sha256 = "sha256-KFViFH1lUipOkHL+rmMFGnVOeVFIlx0+26d2XW9dcms=";
+      sha256 = "sha256-l7p5DQVSuKh+B4ePcQpRob7lgkaiQTXCNe1egFL+saY=";
     };
-    date = "2025-09-19";
+    date = "2025-10-05";
   };
   visual-split-vim = {
     pname = "visual-split-vim";
