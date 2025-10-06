@@ -46,17 +46,12 @@ args.module (
         # keep-sorted end
       ];
       progs.tmux = {
-        shell = "${pkgs.fish}/bin/fish";
-        clock24 = true;
-        historyLimit = 20000;
-        newSession = true;
-        baseIndex = 1;
-        sensibleOnTop = true;
         plugins = if cfg.resurrect.enable then pluginsResurrect else [ ];
       };
       enable = [
         # keep-sorted start
         "plugins"
+        "base"
         "scripts"
         "themes"
         # keep-sorted end
