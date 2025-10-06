@@ -19,7 +19,7 @@ args.module (
           plugin = pkgs.${namespace}.tmux-tome;
           extraConfig = ''
             set -g @tome_key ${cfg.key};
-            set -g @tome_scratch_key ${cfg.key};
+            set -g @tome_scratch_key ${lib.strings.toUpper cfg.key};
             set -g @tome_playbook .playbook.fish;
           '';
         }
@@ -29,7 +29,10 @@ args.module (
         path = mkOpt' lib.types.str "${pkgs.${namespace}.tmux-tome}/share/tmux-plugins/tmux-tome/tome-open-playbook";
         command = mkOpt' lib.types.str "run-shell -b ${cfg.path}";
       };
-      value.${namespace}.user.tmux.keys = [ cfg.key ];
+      value.${namespace}.user.tmux.keys = [
+        cfg.key
+        (lib.strings.toUpper cfg.key)
+      ];
     }
   )
 )
