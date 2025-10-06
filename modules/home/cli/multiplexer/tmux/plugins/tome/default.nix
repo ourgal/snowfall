@@ -19,7 +19,7 @@ args.module (
           plugin = pkgs.${namespace}.tmux-tome;
           extraConfig = ''
             set -g @tome_key ${cfg.key};
-            set -g @tome_scratch-key ${cfg.key};
+            set -g @tome_scratch_key ${cfg.key};
             set -g @tome_playbook .playbook.fish;
           '';
         }
