@@ -57,6 +57,6 @@ https://video.twimg.com/*)
   video "$@"
   ;;
 *)
-  ff "$@"
+  firefox "$@"
   ;;
 esac
