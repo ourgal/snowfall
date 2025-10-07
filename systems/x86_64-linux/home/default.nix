@@ -51,7 +51,6 @@ in
       "kanata"
       "kmonad"
       "logrotate"
-      "nfsMount"
       "nh"
       "nix-monitored"
       "nix-on-droid"
