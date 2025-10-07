@@ -48,7 +48,6 @@ in
       "harmonia"
       "home-manager"
       "iotop"
-      "kanata"
       "kmonad"
       "logrotate"
       "nh"
