@@ -15,6 +15,7 @@ in
       flatpak = enabled;
       game = enabled;
       time-tracker.activitywatch = enabled;
+      system.hyprkan = enabled;
     };
     dev = enabled;
   };

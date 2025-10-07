@@ -334,10 +334,23 @@ rec {
             let
               _handle =
                 name: value:
-                if (isPath value) then
+                let
+                  filename = baseNameOf name;
+                  extension = lib.lists.last (lib.strings.splitString "." filename);
+                in
+                if
+                  (elem extension [
+                    "yaml"
+                    "yml"
+                    "json"
+                    "jsonc"
+                  ])
+                then
+                  { "${name}".text = toJSON value; }
+                else if (elem extension [ "toml" ]) then
+                  { "${name}".text = toTOML value; }
+                else if (isPath value) then
                   let
-                    filename = baseNameOf value;
-                    extension = lib.lists.last (lib.strings.splitString "." filename);
                     nameFinal = if (name != "") then name + "/" else "";
                     executable =
                       if
@@ -362,23 +375,7 @@ rec {
                 else if (isString value) then
                   { "${name}".text = value; }
                 else if (isAttrs value) then
-                  let
-                    filename = baseNameOf name;
-                    extension = lib.lists.last (lib.strings.splitString "." filename);
-                  in
-                  if
-                    (elem extension [
-                      "yaml"
-                      "yml"
-                      "json"
-                      "jsonc"
-                    ])
-                  then
-                    { "${name}".text = toJSON value; }
-                  else if (elem extension [ "toml" ]) then
-                    { "${name}".text = toTOML value; }
-                  else
-                    { "${name}".source = value; }
+                  { "${name}".source = value; }
                 else
                   throw "not supported type";
             in
