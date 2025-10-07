@@ -6,10 +6,11 @@ args.module (
       inherit (args) pkgs lib namespace;
     in
     {
-      confs."kanata/apps.json" = [
+      confs."kanata/apps.json" = builtins.toJSON [
         {
-          class = "firefox";
-          layer = "firefox_layer";
+          class = "calibre";
+          title = "^calibre — ||";
+          layer = "calibre_layer";
         }
         {
           class = "*";
