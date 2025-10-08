@@ -80,8 +80,8 @@ chezmoi: # chezmoi apply
 
 .PHONY: db
 db: # update database
-	@rm waiting.db
-	@cat waiting.sql | sqlite3 waiting.db
+	@-rm waiting.db
+	@nix-shell -p python3Packages.pandas --run ./waiting.py
 
 .PHONY: android
 android: # nix-on-droid
