@@ -10,7 +10,7 @@
       listen_on = "unix:/tmp/kitty";
       enabled_layouts = "splits";
       background_opacity = "0.8";
-      cursor_trail = 1;
+      cursor_trail = 0;
       cursor_trail_decay = "0.1 0.4";
     };
     keybindings = {
