@@ -2,6 +2,7 @@
   progs.mpv = {
     bindings = {
       p = "set speed 3.0";
+      "ctrl+a" = "cycle vid";
     };
     config = {
       # profile = "gpu-hq";
