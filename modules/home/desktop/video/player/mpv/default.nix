@@ -4,5 +4,6 @@
     "base"
     "mime"
     "plugins"
+    "playlist"
   ];
 }
