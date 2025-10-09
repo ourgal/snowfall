@@ -8,8 +8,15 @@ let
     enableOpt
     disableOpt
     ;
+  inherit (config.${namespace}.user) host;
   value = {
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver =
+      {
+        videoDrivers = [ "nvidia" ];
+      }
+      // lib.optionalAttrs (host == "home") {
+        screenSection = ''Option "metamodes" "nvidia-auto-select {ForceFullCompositionPipeline=On}, nvidia-auto-select {ForceFullCompositionPipeline=On}"'';
+      };
 
     environment.variables = {
       LIBVA_DRIVER_NAME = "nvidia";
@@ -22,7 +29,9 @@ let
         package = config.boot.kernelPackages.nvidiaPackages.stable;
       }
       // enableOpt [ "nvidiaSettings" ]
-      // disableOpt [ "open" ];
+      // disableOpt [ "open" ]
+      // lib.optionalAttrs (host != "home") { forceFullCompositionPipeline = true; };
+
   };
   _args = { inherit value args; };
 in
