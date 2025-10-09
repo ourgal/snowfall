@@ -149,6 +149,26 @@ args.module (
         sensibleOnTop = true;
         extraConfig = baseConf;
       };
+      value.${namespace}.user.tmux.keys = [
+        "n"
+        "p"
+        "r"
+        "R"
+        "w"
+        "="
+        "<"
+        ">"
+        "v"
+        "V"
+        "s"
+        "S"
+        "x"
+        "C-x"
+        "X"
+        "d"
+        "D"
+        "b"
+      ];
     }
   )
 )
