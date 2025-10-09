@@ -13,7 +13,7 @@ let
     isString
     isAttrs
     ;
-  inherit (builtins) attrValues;
+  inherit (builtins) attrValues groupBy;
   inherit (lib.${namespace}) mkOpt' cfgNixos settings;
   cfg = cfgNixos config.${namespace} ./.;
   duplicatePorts = lib.pipe options.${namespace}.user.ports.definitionsWithLocations [
@@ -21,17 +21,17 @@ let
     (lib.concatMap (
       entry:
       map (port: {
-        file = entry.file;
-        port = port;
+        inherit (entry) file;
+        inherit port;
       }) entry.value
     ))
-    (lib.groupBy (entry: toString entry.port))
+    (groupBy (entry: toString entry.port))
     (lib.filterAttrs (_port: entries: builtins.length entries > 1))
     (lib.mapAttrsToList (
       port: entries:
       "Duplicate port ${port} found in:\n" + lib.concatMapStrings (entry: "  - ${entry.file}\n") entries
     ))
-    (lib.concatStrings)
+    lib.concatStrings
   ];
 in
 {

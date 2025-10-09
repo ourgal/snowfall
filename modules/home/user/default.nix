@@ -20,18 +20,18 @@ let
     (lib.concatMap (
       entry:
       map (key: {
-        file = entry.file;
-        key = key;
+        inherit (entry) file;
+        inherit key;
       }) entry.value
     ))
-    (lib.groupBy (entry: entry.key))
+    (builtins.groupBy (entry: entry.key))
     (lib.filterAttrs (_key: entries: builtins.length entries > 1))
     (lib.mapAttrsToList (
       key: entries:
       "Duplicate tmux key ${key} found in:\n"
       + lib.concatMapStrings (entry: "  - ${entry.file}\n") entries
     ))
-    (lib.concatStrings)
+    lib.concatStrings
   ];
 in
 {

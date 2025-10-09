@@ -30,7 +30,7 @@ let
       postgresqlBackup.databases = [ name ];
       caddy = mkCaddyProxy {
         domain = domains.${name};
-        port = port;
+        inherit port;
       };
     };
     users = {

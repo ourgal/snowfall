@@ -18,7 +18,7 @@ let
       };
       caddy = mkCaddyProxy {
         domain = domains.${name};
-        port = port;
+        inherit port;
       };
       borgmatic.settings = {
         source_directories = [ "/var/lib/${name}" ];

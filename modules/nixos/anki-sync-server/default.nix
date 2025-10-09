@@ -33,7 +33,7 @@ let
       borgmatic.settings.source_directories = [ "/var/lib/private/${name}" ];
       caddy = mkCaddyProxy {
         domain = domains.${name};
-        port = port;
+        inherit port;
       };
     };
     ${namespace} = mkFireholRule {
