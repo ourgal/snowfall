@@ -22,7 +22,9 @@ args.module (
         };
         home.preferXdgDirectories = true;
         home.activation.report-changes = config.lib.dag.entryAnywhere ''
-          ${pkgs.nvd}/bin/nvd diff $oldGenPath $newGenPath
+          if [[ -e $currentGenGcPath ]]; then
+            ${lib.getExe pkgs.nvd} diff $oldGenPath $newGenPath
+          fi
         '';
         xdg.configFile = {
           "nix/nix.conf".text =
