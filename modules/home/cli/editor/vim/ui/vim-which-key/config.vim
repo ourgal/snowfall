@@ -23,3 +23,12 @@ let g:which_key_map_visual[','] = { 'name': 'Others' }
 let g:which_key_map_visual[',']['s'] = { 'name': 'Share' }
 
 call which_key#register('<Space>', 'g:which_key_map_visual', 'v')
+
+let g:which_key_map['w'] = { 'name': 'Window' }
+let g:which_key_map['w']['j'] = [ '<C-w>j', 'Window down' ]
+let g:which_key_map['w']['h'] = [ '<C-w>h', 'Window right' ]
+let g:which_key_map['w']['l'] = [ '<C-w>l', 'Window left' ]
+let g:which_key_map['w']['k'] = [ '<C-w>k', 'Window up' ]
+let g:which_key_map['w']['v'] = [ '<C-w>v', 'Window V Split' ]
+let g:which_key_map['w']['s'] = [ '<C-w>s', 'Window Split' ]
+let g:which_key_map['w']['q'] = [ '<C-w>q', 'Close window' ]
