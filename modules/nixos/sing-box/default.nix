@@ -186,6 +186,7 @@ let
         path = with pkgs; [
           iptables
           iproute2
+          gawk
         ];
         serviceConfig = {
           ExecStartPre = [ firewallStart ];
