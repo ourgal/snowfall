@@ -149,6 +149,10 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lazyvim = {
+      url = "github:pfassina/lazyvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -282,6 +286,7 @@
           nyaa = inputs.nyaa.homeManagerModule;
           nvchad4nix = inputs.nvchad4nix.homeManagerModule;
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
+          lazyvim = inputs.lazyvim.homeManagerModules.default;
         in
         [
           homeage
@@ -294,6 +299,7 @@
           nyaa
           nvchad4nix
           nix-doom-emacs-unstraightened
+          lazyvim
         ];
 
       templates = {

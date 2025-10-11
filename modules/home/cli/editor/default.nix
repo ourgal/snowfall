@@ -12,7 +12,7 @@
     # keep-sorted start
     "helix"
     "kakoune"
-    "nixvim"
+    "lazyvim"
     "vim"
     # keep-sorted end
   ];
