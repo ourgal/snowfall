@@ -134,10 +134,6 @@
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    doxx = {
-      url = "github:bgreenwell/doxx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixos-n1 = {
       url = "github:slaier/nixos-n1";
