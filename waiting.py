@@ -2200,5 +2200,4 @@ with sqlite3.connect("waiting.db") as conn:
     df["waiting_status"] = df["waiting_status"].apply(lambda x: x.value)
     df["type"] = df["type"].apply(lambda x: x.value)
 
-    conn = sqlite3.connect("waiting.db")
     df.to_sql("packages", conn, if_exists="append", index=False)
