@@ -20,16 +20,16 @@ args.module (
             terminal = "kitty";
             startup = [
               { command = "kitty"; }
-              { command = "${pkgs.${namespace}.swww-wallsetter}/bin/swww-wallsetter"; }
+              { command = lib.getExe pkgs.${namespace}.swww-wallsetter; }
             ];
             keybindings =
               let
                 inherit (config.wayland.windowManager.sway.config) modifier;
               in
               lib.mkOptionDefault {
-                "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
+                "${modifier}+Return" = "exec ${lib.getExe pkgs.kitty}";
                 "${modifier}+Shift+c" = "kill";
-                "${modifier}+d" = "exec ${pkgs.rofi-wayland}/bin/rofi -show drun";
+                "${modifier}+d" = "exec ${lib.getExe pkgs.rofi-wayland} -show drun";
               };
           };
         };

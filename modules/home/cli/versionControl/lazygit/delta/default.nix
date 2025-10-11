@@ -3,12 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       progs.lazygit.settings.git.paging = {
         colorArg = "always";
-        pager = "${pkgs.delta}/bin/delta --paging=never";
+        pager = "${lib.getExe pkgs.delta} --paging=never";
       };
     }
   )

@@ -4,6 +4,7 @@ _: {
       name,
       dir,
       pkgs,
+      lib,
       ...
     }:
     {
@@ -13,7 +14,7 @@ _: {
         After = "network-online.target";
       };
       Service = {
-        ExecStart = "${pkgs.rclone}/bin/rclone mount ${name}: ${dir} --allow-other --dir-cache-time 48h --vfs-cache-max-age 48h --vfs-cache-mode full --vfs-read-chunk-size 10M --vfs-read-chunk-size-limit 512M --buffer-size 512M";
+        ExecStart = "${lib.getExe pkgs.rclone} mount ${name}: ${dir} --allow-other --dir-cache-time 48h --vfs-cache-max-age 48h --vfs-cache-mode full --vfs-read-chunk-size 10M --vfs-read-chunk-size-limit 512M --buffer-size 512M";
         ExecStop = "${pkgs.fuse}fusermount -uz ${dir}";
         Type = "notify";
         Restart = "always";

@@ -17,6 +17,6 @@ writeShellApplication rec {
   text = # bash
     ''
       MSG_FILE=$1
-      ${pkgs.commitizen}/bin/cz check --allow-abort --commit-msg-file $MSG_FILE
+      ${lib.getExe pkgs.commitizen} check --allow-abort --commit-msg-file $MSG_FILE
     '';
 }

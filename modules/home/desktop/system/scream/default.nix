@@ -3,12 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       systemdServices.scream = {
         after = "pipewire-pulse.service";
-        start = "${pkgs.scream}/bin/scream";
+        start = lib.getExe pkgs.scream;
       };
     }
   )

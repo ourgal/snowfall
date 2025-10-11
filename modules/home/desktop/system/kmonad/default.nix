@@ -16,7 +16,7 @@ args.module (
       systemdServices."kmonad@miryoku" =
         if (builtins.elem host laptops) then
           {
-            start = "${pkgs.kmonad}/bin/kmonad %E/kmonad/%i.kbd";
+            start = "${lib.getExe pkgs.kmonad} %E/kmonad/%i.kbd";
             nice = -20;
           }
         else

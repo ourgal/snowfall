@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "mpdscribble";
@@ -17,7 +17,7 @@ args.module (
           ConditionUser = "!@system";
         };
         restart = "on-failure";
-        start = "${pkgs.mpdscribble}/bin/mpdscribble -D";
+        start = "${lib.getExe pkgs.mpdscribble} -D";
       };
     }
   )

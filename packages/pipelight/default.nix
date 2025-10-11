@@ -28,21 +28,20 @@ rustPlatform.buildRustPackage rec {
 
   postPatch = ''
     substituteInPlace ./cast/src/config/load/typescript/mod.rs \
-      --replace-fail 'deno' '${deno}/bin/deno'
+      --replace-fail 'deno' '${lib.getExe deno}'
   '';
 
-  buildInputs =
-    [
-      libgit2
-      openssl
-      zlib
-    ]
-    ++ lib.optionals stdenv.isDarwin [
-      darwin.apple_sdk.frameworks.CoreFoundation
-      darwin.apple_sdk.frameworks.CoreServices
-      darwin.apple_sdk.frameworks.IOKit
-      darwin.apple_sdk.frameworks.Security
-    ];
+  buildInputs = [
+    libgit2
+    openssl
+    zlib
+  ]
+  ++ lib.optionals stdenv.isDarwin [
+    darwin.apple_sdk.frameworks.CoreFoundation
+    darwin.apple_sdk.frameworks.CoreServices
+    darwin.apple_sdk.frameworks.IOKit
+    darwin.apple_sdk.frameworks.Security
+  ];
 
   doCheck = false;
 

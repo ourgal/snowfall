@@ -26,7 +26,7 @@ let
       wantedBy = [ "multi-user.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = ''${pkgs.godns}/bin/godns --c "${configFile}"'';
+        ExecStart = ''${lib.getExe pkgs.godns} --c "${configFile}"'';
         Restart = "always";
       };
     };

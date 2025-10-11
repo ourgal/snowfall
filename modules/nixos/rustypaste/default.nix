@@ -113,7 +113,7 @@ let
       wantedBy = [ "multi-user.target" ];
       serviceConfig = {
         Restart = "on-failure";
-        ExecStart = "${pkgs.rustypaste}/bin/rustypaste";
+        ExecStart = lib.getExe pkgs.rustypaste;
         WorkingDirectory = dataDir;
       };
       environment = {

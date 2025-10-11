@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
       port = 8001;
     in
     {
@@ -13,7 +13,7 @@ args.module (
           After = "mpd.service";
         };
         restart = "always";
-        start = "${pkgs.ympd}/bin/ympd --webport ${toString port}";
+        start = "${lib.getExe pkgs.ympd} --webport ${toString port}";
       };
     }
   )

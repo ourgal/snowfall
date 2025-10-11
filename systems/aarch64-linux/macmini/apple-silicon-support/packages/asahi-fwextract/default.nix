@@ -4,6 +4,7 @@
   gzip,
   gnutar,
   lzfse,
+  lib,
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -25,8 +26,8 @@ python3.pkgs.buildPythonApplication rec {
     substituteInPlace asahi_firmware/img4.py \
       --replace 'liblzfse.so' '${lzfse}/lib/liblzfse.so'
     substituteInPlace asahi_firmware/update.py \
-      --replace '"tar"' '"${gnutar}/bin/tar"' \
-      --replace '"xf"' '"-x", "-I", "${gzip}/bin/gzip", "-f"'
+      --replace '"tar"' '"${lib.getExe gnutar}"' \
+      --replace '"xf"' '"-x", "-I", "${lib.getExe gzip}", "-f"'
   '';
 
   doCheck = false;

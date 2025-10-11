@@ -3,12 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "clipse";
       systemdServices.clipse = {
-        start = "${pkgs.clipse}/bin/clipse --listen-shell";
+        start = "${lib.getExe pkgs.clipse} --listen-shell";
       };
     }
   )

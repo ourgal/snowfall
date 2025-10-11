@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "ssh-tpm-agent";
@@ -29,7 +29,7 @@ args.module (
               "SSH_ASKPASS=${pkgs.x11_ssh_askpass}/libexec/x11-ssh-askpass"
               "SSH_AUTH_SOCK=%t/ssh-tpm-agent.sock"
             ];
-            ExecStart = "${pkgs.ssh-tpm-agent}/bin/ssh-tpm-agent";
+            ExecStart = lib.getExe pkgs.ssh-tpm-agent;
             PassEnvironment = "SSH_AGENT_PID";
             SuccessExitStatus = 2;
             Type = "simple";

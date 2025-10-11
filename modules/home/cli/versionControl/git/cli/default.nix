@@ -3,15 +3,15 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       myPkgs = "git-toolbelt";
       progs.git.aliases = {
-        f = "!${pkgs.zsh-forgit}/bin/git-forgit";
-        fa = "!${pkgs.zsh-forgit}/bin/git-forgit add";
-        fr = "!${pkgs.zsh-forgit}/bin/git-forgit reset_head";
-        fchf = "!${pkgs.zsh-forgit}/bin/git-forgit checkout_file";
+        f = "!${lib.getExe pkgs.zsh-forgit}";
+        fa = "!${lib.getExe pkgs.zsh-forgit} add";
+        fr = "!${lib.getExe pkgs.zsh-forgit} reset_head";
+        fchf = "!${lib.getExe pkgs.zsh-forgit} checkout_file";
       };
       nixPkgs = [
         # keep-sorted start

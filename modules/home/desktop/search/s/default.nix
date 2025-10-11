@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) config namespace pkgs;
+      inherit (args)
+        config
+        namespace
+        pkgs
+        lib
+        ;
       inherit (config.${namespace}.user) browser;
     in
     {
@@ -11,7 +16,7 @@ args.module (
       progs.fish.functions.sp = {
         body = ''
           s -b ${browser} -p $argv[1] $argv[2..-1]
-          ${pkgs.wmctrl}/bin/wmctrl -a ${browser}
+          ${lib.getExe pkgs.wmctrl} -a ${browser}
         '';
         description = "alias of s -p";
       };

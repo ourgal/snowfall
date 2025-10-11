@@ -3,10 +3,10 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace;
+      inherit (args) pkgs namespace lib;
     in
     {
-      servs.screen-locker.lockCmd = "${pkgs.${namespace}.i3lock-color}/bin/i3lock-color";
+      servs.screen-locker.lockCmd = lib.getExe pkgs.${namespace}.i3lock-color;
     }
   )
 )

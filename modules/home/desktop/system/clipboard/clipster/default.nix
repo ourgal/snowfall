@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "clipster";
@@ -92,7 +92,7 @@ args.module (
       '';
       systemdServices.clipster = {
         gui = true;
-        start = "${pkgs.clipster}/bin/clipster --daemon";
+        start = "${lib.getExe pkgs.clipster} --daemon";
       };
     }
   )

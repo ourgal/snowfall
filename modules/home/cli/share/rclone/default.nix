@@ -16,7 +16,14 @@ args.module (
       nixPkgs = "rclone";
       value = {
         systemd.user.tmpfiles.rules = [ "d ${dir} - - - -" ];
-        systemd.user.services.rclone-alist = lib.${namespace}.mkRcloneService { inherit name dir pkgs; };
+        systemd.user.services.rclone-alist = lib.${namespace}.mkRcloneService {
+          inherit
+            name
+            dir
+            pkgs
+            lib
+            ;
+        };
       };
     }
   )

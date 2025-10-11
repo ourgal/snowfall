@@ -86,7 +86,8 @@ args.module (
                 "border, 1, 1, liner"
                 "fade, 1, 10, default"
                 "workspaces, 1, 5, wind"
-              ] ++ lib.optional borderAnim "borderangle, 1, 30, liner, loop";
+              ]
+              ++ lib.optional borderAnim "borderangle, 1, 30, liner, loop";
             };
             decoration = {
               rounding = 10;
@@ -107,7 +108,7 @@ args.module (
               "$POLKIT_BIN"
               "dbus-update-activation-environment --systemd --all"
               "systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-              "${pkgs.swayidle}/bin/swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'"
+              "${lib.getExe pkgs.swayidle} -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'"
             ];
             dwindle = {
               pseudotile = true;
@@ -121,7 +122,7 @@ args.module (
               "${modifier} SHIFT, S,exec,swaync-client -rs"
               "${modifier}, S,exec,screenshootin"
               "${modifier} SHIFT, G,exec,godot4"
-              "${modifier}, D,exec,${pkgs.rofi-wayland}/bin/rofi -show drun"
+              "${modifier}, D,exec,${lib.getExe pkgs.rofi-wayland} -show drun"
               "${modifier}, A,exec,playerctl play-pause"
               "${modifier}, P,pseudo,"
               "${modifier} SHIFT, I,togglesplit,"

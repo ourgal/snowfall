@@ -22,7 +22,7 @@ let
       wantedBy = [ "multi-user.target" ];
       serviceConfig = {
         Restart = "on-failure";
-        ExecStart = "${pkgs.pairdrop}/bin/pairdrop";
+        ExecStart = lib.getExe pkgs.pairdrop;
       };
       environment = {
         PORT = toString port;

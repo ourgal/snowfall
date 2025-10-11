@@ -22,7 +22,7 @@ args.module (
               pkgs.fennel
             ]
           }
-          ${pkgs.chezmoi}/bin/chezmoi apply --force
+          ${lib.getExe pkgs.chezmoi} apply --force
         '';
       };
     }

@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       files.".mpdcron/mpdcron.conf" = ''
@@ -31,7 +31,7 @@ args.module (
           After = "mpd.service";
         };
         restart = "always";
-        start = "${pkgs.mpdcron}/bin/mpdcron --no-daemon";
+        start = "${lib.getExe pkgs.mpdcron} --no-daemon";
         env = "PATH=${pkgs.libnotify}/bin";
       };
     }

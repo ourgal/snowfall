@@ -3,14 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       progs.lazygit.settings = {
         gui.sidePanelWidth = 0.2;
         git.paging = {
           colorArg = "never";
-          pager = "${pkgs.ydiff}/bin/ydiff -p cat -s --wrap --width={{columnWidth}}";
+          pager = "${lib.getExe pkgs.ydiff} -p cat -s --wrap --width={{columnWidth}}";
         };
       };
     }

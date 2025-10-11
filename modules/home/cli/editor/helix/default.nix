@@ -11,6 +11,7 @@ args.module (
         enableOpt
         cfgHome
         switch
+        lib
         ;
       tmuxEnabled = config.${namespace}.cli.multiplexer.tmux.enable;
       zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
@@ -38,7 +39,7 @@ args.module (
                 line-number = "relative";
                 bufferline = "multiple";
                 shell = [
-                  "${pkgs.fish}/bin/fish"
+                  (lib.getExe pkgs.fish)
                   "-c"
                 ];
                 idle-timeout = 0;
@@ -366,7 +367,8 @@ args.module (
                     name = "pyright";
                     except-features = [ "format" ];
                   }
-                ] ++ generalLsp;
+                ]
+                ++ generalLsp;
                 indent = {
                   tab-width = 4;
                   unit = "    ";
@@ -422,7 +424,8 @@ args.module (
                 language-servers = [
                   "nil"
                   "typos-lsp"
-                ] ++ generalLsp;
+                ]
+                ++ generalLsp;
                 formatter = {
                   command = "nixfmt";
                   args = [

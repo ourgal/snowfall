@@ -3,8 +3,8 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace;
-      chromeLikeBrowser = "${pkgs.chromium}/bin/chromium";
+      inherit (args) pkgs namespace lib;
+      chromeLikeBrowser = lib.getExe pkgs.chromium;
       singleton = "${pkgs.${namespace}.singleton}/bin/singleton";
       webapp_common = ''
         if [[ $# -lt 2 || "$1" == "-h" ]]
@@ -45,17 +45,16 @@ args.module (
     in
     {
       value = {
-        home.packages =
-          [
-            pkgs.xdotool
-            pkgs.chromium
-          ]
-          ++ [
-            singleton
-            webapp
-            webapp_no_cors
-            yacd
-          ];
+        home.packages = [
+          pkgs.xdotool
+          pkgs.chromium
+        ]
+        ++ [
+          singleton
+          webapp
+          webapp_no_cors
+          yacd
+        ];
       };
     }
   )

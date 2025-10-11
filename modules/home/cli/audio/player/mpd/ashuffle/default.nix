@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "ashuffle";
@@ -13,7 +13,7 @@ args.module (
           After = "mpd.service";
         };
         restart = "always";
-        start = "${pkgs.ashuffle}/bin/ashuffle --queue-buffer 1";
+        start = "${lib.getExe pkgs.ashuffle} --queue-buffer 1";
       };
     }
   )

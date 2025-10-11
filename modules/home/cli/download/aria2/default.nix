@@ -127,7 +127,7 @@ args.module (
       systemdServices.aria2 = {
         online = true;
         startPre = aria2-session;
-        start = "${pkgs.aria2}/bin/aria2c --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete='${config.xdg.configHome}/aria2/clean.sh'";
+        start = "${lib.getExe pkgs.aria2} --enable-rpc -d ${config.xdg.userDirs.download} --conf-path=${configFile} --save-session=${sessionFile} --input-file=${sessionFile} --on-download-stop='${config.xdg.configHome}/aria2/delete.sh' --on-download-complete='${config.xdg.configHome}/aria2/clean.sh'";
         reload = "${pkgs.coreutils-full}/bin/kill -HUP $MAINPID";
         restart = "on-abort";
       };

@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs config namespace;
+      inherit (args)
+        pkgs
+        config
+        namespace
+        lib
+        ;
       user = config.${namespace}.user.name;
       confPath = "${config.xdg.configHome}/mympd";
       cachePath = "${config.xdg.cacheHome}/mympd";
@@ -20,7 +25,7 @@ args.module (
           After = "mpd.service";
         };
         restart = "always";
-        start = "${pkgs.mympd}/bin/mympd --user ${user} --workdir ${confPath} --cachedir ${cachePath}";
+        start = "${lib.getExe pkgs.mympd} --user ${user} --workdir ${confPath} --cachedir ${cachePath}";
       };
     }
   )

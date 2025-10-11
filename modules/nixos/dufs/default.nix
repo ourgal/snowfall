@@ -21,7 +21,7 @@ let
   ExecStart = pkgs.writers.writeBash "dufs-start" ''
     dir="/home/${user}/.local/share/dufs"
     mkdir -p "$dir"
-    ${pkgs.dufs}/bin/dufs -A -p ${toString port} "$dir"
+    ${lib.getExe pkgs.dufs} -A -p ${toString port} "$dir"
   '';
   value = {
     systemd.services.dufs = {

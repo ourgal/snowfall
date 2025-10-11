@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) config namespace pkgs;
+      inherit (args)
+        config
+        namespace
+        pkgs
+        lib
+        ;
     in
     {
       progs = {
@@ -40,7 +45,7 @@ args.module (
           };
           tool = {
             inherit (config.${namespace}.user) editor;
-            shell = "${pkgs.bash}/bin/bash";
+            shell = lib.getExe pkgs.bash;
             pager = "less -FIRX";
             fzf-preview = "bat -p --color always {-1}";
           };

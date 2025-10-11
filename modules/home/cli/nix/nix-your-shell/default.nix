@@ -3,12 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "nix-your-shell";
       progs.fish.interactiveShellInit = ''
-        ${pkgs.nix-your-shell}/bin/nix-your-shell fish | source
+        ${lib.getExe pkgs.nix-your-shell} fish | source
       '';
     }
   )

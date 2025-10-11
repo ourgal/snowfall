@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       progs.fish.functions.tere = {
         body = # fish
           ''
-            set --local result (${pkgs.tere}/bin/tere $argv)
+            set --local result (${lib.getExe pkgs.tere} $argv)
             test -n "$result" && cd -- "$result"
           '';
       };

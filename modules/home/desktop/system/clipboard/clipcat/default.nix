@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) config pkgs;
+      inherit (args) config pkgs lib;
     in
     {
       nixPkgs = "clipcat";
@@ -58,7 +58,7 @@ args.module (
       systemdServices.clipcat = {
         gui = true;
         startPre = "${pkgs.coreutils-full}/bin/rm -f %t/clipcat/grpc.sock";
-        start = "${pkgs.clipcat}/bin/clipcatd --no-daemon --replace";
+        start = "${lib.getExe pkgs.clipcat} --no-daemon --replace";
       };
     }
   )

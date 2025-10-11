@@ -3,14 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       nixPkgs = "nitrogen";
       systemdServices.nitrogen = {
         gui = true;
         type = "oneshot";
-        start = "${pkgs.nitrogen}/bin/nitrogen --set-zoom-fill --random %h/Pictures/wallpapers/";
+        start = "${lib.getExe pkgs.nitrogen} --set-zoom-fill --random %h/Pictures/wallpapers/";
         condEnv = "XAUTHORITY";
         restart = "on-abort";
       };

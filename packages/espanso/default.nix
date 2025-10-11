@@ -18,9 +18,9 @@ writeShellApplication rec {
   text = # bash
     ''
       if test -z "''${WAYLAND_DISPLAY:-""}" ; then
-        ${espanso}/bin/espanso "$@"
+        ${lib.getExe espanso} "$@"
       else
-        ${espanso-wayland}/bin/espanso "$@"
+        ${lib.getExe espanso-wayland} "$@"
       fi
     '';
 }

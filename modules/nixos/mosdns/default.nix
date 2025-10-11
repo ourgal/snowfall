@@ -603,7 +603,7 @@ let
       environment._reloadConfig = "${conf}${dat_exec}${dns}${whitelist}${greylist}";
       serviceConfig = rec {
         Type = "simple";
-        ExecStart = "${pkgs.mosdns}/bin/mosdns start -c ${conf}";
+        ExecStart = "${lib.getExe pkgs.mosdns} start -c ${conf}";
         Restart = "always";
         DynamicUser = true;
         StateDirectory = "mosdns";

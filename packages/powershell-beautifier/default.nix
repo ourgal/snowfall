@@ -29,6 +29,6 @@ let
   };
 in
 writeShellScriptBin "powershell-beautifier" ''
-  ${powershell}/bin/pwsh -NoProfile -NoLogo \
+  ${lib.getExe powershell} -NoProfile -NoLogo \
   -Command "Import-Module ${powershell-beautifier}/share/powershell/Modules/PowerShell-Beautifier/PowerShell-Beautifier.psd1; Edit-DTWBeautifyScript -SourcePath \"$@\""
 ''

@@ -18,19 +18,18 @@ let
   value = {
     nix =
       let
-        mirrors =
-          [
-            "http://${ip.home}:50000?priority=9"
-            "https://mirrors.cernet.edu.cn/nix-channels/store?priority=10"
-            "https://cache.nixos.org"
-            "https://nix-community.cachix.org?priority=100"
-          ]
-          ++ lib.optionals (host == "home") [
-            "http://${ip.brix}:50000?priority=9"
-            "http://${ip.router}:50000?priority=9"
-          ]
-          ++ lib.optionals (host == "t4") [ "http://${ip.macmini}:50000?priority=9" ]
-          ++ lib.optionals (host == "macmini") [ "http://${ip.t4}:50000?priority=9" ];
+        mirrors = [
+          "http://${ip.home}:50000?priority=9"
+          "https://mirrors.cernet.edu.cn/nix-channels/store?priority=10"
+          "https://cache.nixos.org"
+          "https://nix-community.cachix.org?priority=100"
+        ]
+        ++ lib.optionals (host == "home") [
+          "http://${ip.brix}:50000?priority=9"
+          "http://${ip.router}:50000?priority=9"
+        ]
+        ++ lib.optionals (host == "t4") [ "http://${ip.macmini}:50000?priority=9" ]
+        ++ lib.optionals (host == "macmini") [ "http://${ip.t4}:50000?priority=9" ];
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
@@ -67,7 +66,7 @@ let
       supportsDryActivation = true; # safe: only outputs to stdout
       text = ''
         if [ -e /run/current-system ]; then
-          PATH=$PATH:${pkgs.nix}/bin ${pkgs.nvd}/bin/nvd diff /run/current-system $systemConfig
+          PATH=$PATH:${pkgs.nix}/bin ${lib.getExe pkgs.nvd} diff /run/current-system $systemConfig
         fi
       '';
     };
