@@ -61,7 +61,6 @@ in
         desktops = foldl' (
           acc: v: lib.lists.remove v acc
         ) lib.${namespace}.settings.desktops lib.${namespace}.settings.non-NixOS;
-        inherit (lib.${namespace}.settings) windows;
         inherit (lib.${namespace}.settings.servers) syncthing;
       in
       {
@@ -73,7 +72,6 @@ in
         task = desktops ++ syncthing;
         todo = desktops ++ syncthing;
         vim = desktops ++ syncthing;
-        buku = desktops ++ windows ++ syncthing;
         jrnl = desktops ++ syncthing;
         books = [ "home" ] ++ syncthing;
         wenku = [ "home" ] ++ syncthing;

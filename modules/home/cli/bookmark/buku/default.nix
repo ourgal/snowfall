@@ -5,6 +5,7 @@
   ];
   enable = [
     "fzf-buku"
+    "db"
     "browser-support"
   ];
 }

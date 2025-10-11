@@ -17,7 +17,6 @@ args.module (
       dataFiles = {
         timewarrior = ln "${sync}/timew";
         nap = ln "${sync}/nap";
-        buku = ln "${sync}/buku";
         jrnl = ln "${sync}/jrnl";
         "task/taskchampion.sqlite3" = ln "${sync}/task/taskchampion.sqlite3";
       };
