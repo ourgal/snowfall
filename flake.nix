@@ -48,7 +48,10 @@
       url = "github:snowfallorg/thaw";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin = {
+      url = "github:catppuccin/nix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
     nixvim = {
       url = "github:nix-community/nixvim/nixos-25.05";
