@@ -49,9 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; fzf
-(package! fzf)
-
 ;; catppuccin
 (package! catppuccin-theme)
 

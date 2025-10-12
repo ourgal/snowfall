@@ -20,6 +20,7 @@
     "chinese-number"
     "dotenv-mode"
     "eglot-booster"
+    "fzf"
     "git-time-metric"
     "gt"
     "just-mode"
