@@ -49,9 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; epub
-(package! nov)
-
 ;; fzf
 (package! fzf)
 
