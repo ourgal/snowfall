@@ -52,5 +52,3 @@
 ;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
 
 ;; (package! indent-guide)
-
-(package! nftables-mode)
