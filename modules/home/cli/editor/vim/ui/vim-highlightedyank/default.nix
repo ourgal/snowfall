@@ -1,15 +1,6 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.vimPlugins; [ vim-highlightedyank ];
-        extraConfig = builtins.readFile ./config.vim;
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "vim-highlightedyank";
+    extraConfig = ./config.vim;
+  };
+}

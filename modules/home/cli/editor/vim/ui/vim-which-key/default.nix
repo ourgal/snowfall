@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs config namespace;
+      inherit (args) config namespace;
       cfg = config.${namespace}.cli.editor.vim;
       baseConfig = builtins.readFile ./config.vim;
       carbonConfig =
@@ -75,7 +75,7 @@ args.module (
     in
     {
       progs.vim = {
-        plugins = with pkgs.vimPlugins; [ vim-which-key ];
+        plugins = "vim-which-key";
         extraConfig = builtins.concatStringsSep "" [
           baseConfig
           carbonConfig

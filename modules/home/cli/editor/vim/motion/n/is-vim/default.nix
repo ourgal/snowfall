@@ -3,13 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs config namespace;
+      inherit (args) config namespace;
       inherit (config.${namespace}.cli.editor.vim.motion.n) vim-anzu;
       inherit (config.${namespace}.cli.editor.vim.motion.asterisk) vim-asterisk;
     in
     {
       progs.vim = {
-        plugins = with pkgs.vimPlugins; [ is-vim ];
+        plugins = "is-vim";
         extraConfig =
           if vim-anzu.enable then
             ''

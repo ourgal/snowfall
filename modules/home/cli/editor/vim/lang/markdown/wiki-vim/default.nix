@@ -1,15 +1,6 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.vimPlugins; [ wiki-vim ];
-        extraConfig = builtins.readFile ./config.vim;
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "wiki-vim";
+    extraConfig = builtins.readFile ./config.vim;
+  };
+}

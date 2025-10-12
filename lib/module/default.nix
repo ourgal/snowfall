@@ -431,6 +431,50 @@ rec {
                       );
                     };
                 }
+              else if n == "vim" && v ? plugins then
+                {
+                  ${n} =
+                    enabled
+                    // v
+                    // (
+                      if v ? plugins then
+                        (
+                          if isList v.plugins then
+                            {
+                              plugins = map (
+                                x:
+                                if isString x && pkgs.${namespace} ? ${x} then
+                                  pkgs.${namespace}.${x}
+                                else if isString x && pkgs.vimPlugins ? ${x} then
+                                  pkgs.vimPlugins.${x}
+                                else
+                                  x
+                              ) v.plugins;
+                            }
+                          else if isString v.plugins then
+                            {
+                              plugins =
+
+                                if pkgs.${namespace} ? ${v.plugins} then
+                                  [ pkgs.${namespace}.${v.plugins} ]
+                                else if pkgs.vimPlugins ? ${v.plugins} then
+                                  [ pkgs.vimPlugins.${v.plugins} ]
+                                else
+                                  builtins.throw "vim plugin not found";
+                            }
+                          else
+                            builtins.throw "unsupported vim plugin type"
+                        )
+                      else
+                        { }
+                    )
+                    // (
+                      if v ? extraConfig && isPath v.extraConfig then
+                        { extraConfig = builtins.readFile v.extraConfig; }
+                      else
+                        { }
+                    );
+                }
               else
                 { ${n} = enabled // v; }
             )

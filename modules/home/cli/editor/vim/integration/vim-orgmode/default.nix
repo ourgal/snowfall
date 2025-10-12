@@ -1,15 +1,6 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim.plugins = with pkgs.vimPlugins; [
-        vim-orgmode
-        vim-speeddating
-      ];
-    }
-  )
-)
+{
+  progs.vim.plugins = [
+    "vim-orgmode"
+    "vim-speeddating"
+  ];
+}

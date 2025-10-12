@@ -1,12 +1,1 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs namespace;
-    in
-    {
-      progs.vim.plugins = with pkgs.${namespace}; [ easyjump-vim ];
-    }
-  )
-)
+{ progs.vim.plugins = "easyjump-vim"; }

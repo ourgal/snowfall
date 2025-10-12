@@ -1,12 +1,1 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs namespace;
-    in
-    {
-      progs.vim.plugins = with pkgs.${namespace}; [ chezmoi-vim ];
-    }
-  )
-)
+{ progs.vim.plugins = "chezmoi-vim"; }

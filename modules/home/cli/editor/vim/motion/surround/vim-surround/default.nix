@@ -1,12 +1,1 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim.plugins = with pkgs.vimPlugins; [ vim-surround ];
-    }
-  )
-)
+{ progs.vim.plugins = "vim-surround"; }

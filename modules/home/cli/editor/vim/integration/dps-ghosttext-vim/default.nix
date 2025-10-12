@@ -1,16 +1,7 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs namespace;
-    in
-    {
-      nixPkgs = "deno";
-      progs.vim.plugins = with pkgs.vimPlugins; [
-        denops-vim
-        pkgs.${namespace}.dps-ghosttext-vim
-      ];
-    }
-  )
-)
+{
+  nixPkgs = "deno";
+  progs.vim.plugins = [
+    "denops-vim"
+    "dps-ghosttext-vim"
+  ];
+}

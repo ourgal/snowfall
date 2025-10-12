@@ -1,14 +1,5 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs namespace;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.${namespace}; [ vimsuggest ];
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "vimsuggest";
+  };
+}

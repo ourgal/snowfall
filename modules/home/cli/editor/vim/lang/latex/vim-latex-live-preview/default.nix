@@ -1,15 +1,6 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.vimPlugins; [ vim-latex-live-preview ];
-        extraConfig = builtins.readFile ./config.vim;
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "vim-latex-live-preview";
+    extraConfig = ./config.vim;
+  };
+}

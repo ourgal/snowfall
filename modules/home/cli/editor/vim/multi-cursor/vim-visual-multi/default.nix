@@ -1,14 +1,5 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.vimPlugins; [ vim-visual-multi ];
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "vim-visual-multi";
+  };
+}

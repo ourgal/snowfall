@@ -6,10 +6,10 @@ args.module (
       inherit (args) pkgs namespace;
     in
     {
-      progs.vim.plugins = with pkgs.vimPlugins; [
-        vim-ghost
-        nvim-yarp # broken
-        pkgs.${namespace}.vim-hug-neovim-rpc
+      progs.vim.plugins = [
+        "vim-ghost"
+        "nvim-yarp" # broken
+        "vim-hug-neovim-rpc"
       ];
       value.${namespace}.dev.python.global.pkgs = p: [
         p.pynvim

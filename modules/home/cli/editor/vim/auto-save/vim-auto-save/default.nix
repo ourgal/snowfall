@@ -1,15 +1,6 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs namespace;
-    in
-    {
-      progs.vim = {
-        plugins = with pkgs.${namespace}; [ vim-auto-save ];
-        extraConfig = builtins.readFile ./config.vim;
-      };
-    }
-  )
-)
+{
+  progs.vim = {
+    plugins = "vim-auto-save";
+    extraConfig = ./config.vim;
+  };
+}
