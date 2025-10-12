@@ -8,5 +8,11 @@
         toml.enable = true;
       };
     };
+    treesitterParsers = [
+      "nix"
+      "python"
+      "json"
+      "toml"
+    ];
   };
 }

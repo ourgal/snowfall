@@ -418,7 +418,22 @@ rec {
         else if (isAttrs progs) then
           lib.attrsets.foldlAttrs (
             acc: n: v:
-            acc // { ${n} = enabled // v; }
+            acc
+            // (
+              if n == "lazyvim" then
+                {
+                  ${n} =
+                    enabled
+                    // v
+                    // {
+                      treesitterParsers = with' pkgs.tree-sitter-grammars (
+                        map (x: "tree-sitter-${x}") v.treesitterParsers
+                      );
+                    };
+                }
+              else
+                { ${n} = enabled // v; }
+            )
           ) { } progs
         else if (isList progs) then
           foldl' (acc: p: acc // (progsHandle p)) { } progs
@@ -466,34 +481,33 @@ rec {
                     (if ((value ? gui) && value.gui) then "graphical-session.target" else "default.target")
                   ];
                 };
-                Unit =
-                  {
-                    Description = "${name} Service";
-                  }
-                  // (
-                    if ((value ? online) && value.online) then
-                      {
-                        Wants = "network-online.target";
-                        After = "network-online.target";
-                      }
-                    else
-                      { }
-                  )
-                  // (if (value ? condEnv) then { ConditionEnvironment = value.condEnv; } else { })
-                  // (if (value ? after) then { After = value.after; } else { });
-                Service =
-                  {
-                    ExecStart = if (value ? start) then value.start else "";
-                    RestartSec = 10;
-                  }
-                  // (if (value ? type) then { Type = value.type; } else { Type = "simple"; })
-                  // (if (value ? nice) then { Nice = value.nice; } else { })
-                  // (if (value ? restart) then { Restart = value.restart; } else { Restart = "always"; })
-                  // (if (value ? reload) then { ExecReload = value.reload; } else { })
-                  // (if (value ? start) then { ExecStart = value.start; } else { })
-                  // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { })
-                  // (if (value ? env) then { Environment = value.env; } else { });
-              } // value;
+                Unit = {
+                  Description = "${name} Service";
+                }
+                // (
+                  if ((value ? online) && value.online) then
+                    {
+                      Wants = "network-online.target";
+                      After = "network-online.target";
+                    }
+                  else
+                    { }
+                )
+                // (if (value ? condEnv) then { ConditionEnvironment = value.condEnv; } else { })
+                // (if (value ? after) then { After = value.after; } else { });
+                Service = {
+                  ExecStart = if (value ? start) then value.start else "";
+                  RestartSec = 10;
+                }
+                // (if (value ? type) then { Type = value.type; } else { Type = "simple"; })
+                // (if (value ? nice) then { Nice = value.nice; } else { })
+                // (if (value ? restart) then { Restart = value.restart; } else { Restart = "always"; })
+                // (if (value ? reload) then { ExecReload = value.reload; } else { })
+                // (if (value ? start) then { ExecStart = value.start; } else { })
+                // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { })
+                // (if (value ? env) then { Environment = value.env; } else { });
+              }
+              // value;
             in
             acc
             // {
