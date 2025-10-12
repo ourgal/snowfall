@@ -53,6 +53,4 @@
 
 ;; (package! indent-guide)
 
-(package! adoc-mode)
-
 (package! nftables-mode)

@@ -13,6 +13,7 @@
   };
   enable = [
     # keep-sorted start
+    "adoc-mode"
     "alert"
     "annotate"
     "bing-dict"
