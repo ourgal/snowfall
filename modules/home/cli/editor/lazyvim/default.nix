@@ -1,8 +1,12 @@
 {
   progs.lazyvim = {
     extras = {
-      lang.nix.enable = true;
-      lang.python.enable = true;
+      lang = {
+        nix.enable = true;
+        python.enable = true;
+        json.enable = true;
+        toml.enable = true;
+      };
     };
   };
 }
