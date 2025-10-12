@@ -49,9 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; auto save
-(package! super-save)
-
 ;; epub
 (package! nov)
 
