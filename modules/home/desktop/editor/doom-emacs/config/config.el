@@ -136,7 +136,7 @@
 (load! "plugins/fzf")
 (load! "plugins/catppuccin")
 (load! "plugins/rotate-text")
-;; (load! "plugins/rainbow-delimiters")
+(load! "plugins/rainbow-delimiters")
 ;; (load! "plugins/codeium")
 (load! "plugins/make")
 (load! "plugins/parinfer-rust-mode")

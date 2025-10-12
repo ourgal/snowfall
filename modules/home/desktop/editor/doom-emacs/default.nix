@@ -32,6 +32,7 @@
     "nov"
     "pangu-spacing"
     "perltidy"
+    "rainbow-delimiters"
     "treesit-grammars"
     "vimscript-ts-mode"
     "zeal-at-point"
