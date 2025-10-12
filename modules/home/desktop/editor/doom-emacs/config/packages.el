@@ -49,9 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; catppuccin
-(package! catppuccin-theme)
-
 ;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
 
 ;; (package! indent-guide)

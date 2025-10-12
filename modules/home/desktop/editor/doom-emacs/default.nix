@@ -16,6 +16,7 @@
     "alert"
     "annotate"
     "bing-dict"
+    "catppuccin-theme"
     "chinese-conv"
     "chinese-number"
     "dotenv-mode"
