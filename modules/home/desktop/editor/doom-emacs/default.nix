@@ -21,6 +21,7 @@
     "dotenv-mode"
     "eglot-booster"
     "git-time-metric"
+    "gt"
     "just-mode"
     "just-ts-mode"
     "magit-delta"

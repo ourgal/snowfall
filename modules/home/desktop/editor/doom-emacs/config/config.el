@@ -163,3 +163,4 @@
 (load! "plugins/chinese-conv")
 (load! "plugins/chinese-number")
 (load! "plugins/bing-dict")
+(load! "plugins/gt")
