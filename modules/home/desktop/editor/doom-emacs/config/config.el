@@ -135,7 +135,7 @@
 (load! "plugins/eglot")
 (load! "plugins/fzf")
 (load! "plugins/catppuccin")
-(load! "plugins/rotate-text")
+;; (load! "plugins/rotate-text")
 (load! "plugins/rainbow-delimiters")
 ;; (load! "plugins/codeium")
 (load! "plugins/make")
