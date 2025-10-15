@@ -26,12 +26,17 @@ args.module (
           Install = {
             WantedBy = [ "graphical-session.target" ];
           };
-          Service = {
-            ExecStartPre = "${pkgs.coreutils-full}/bin/sleep 15";
-            ExecStart = "${pkgs.barrier}/bin/barriers -a :: -f --disable-client-cert-checking --disable-crypto";
-            Restart = "always";
-            RestartSec = 3;
-          };
+          Service =
+            let
+              sleep = lib.getExe' pkgs.coreutils-full "sleep";
+              barriers = lib.getExe' pkgs.barrier "barriers";
+            in
+            {
+              ExecStartPre = "${sleep} 15";
+              ExecStart = "${barriers} -a :: -f --disable-client-cert-checking --disable-crypto";
+              Restart = "always";
+              RestartSec = 3;
+            };
         };
 
         systemd.user.services.barrierc = lib.mkIf isClient {
@@ -42,7 +47,11 @@ args.module (
             ConditionEnvironment = "XAUTHORITY";
           };
           Install.WantedBy = [ "graphical-session.target" ];
-          Service.ExecStart = "${pkgs.barrier}/bin/barrierc --disable-crypto -f ${serverHost}";
+          Service.ExecStart =
+            let
+              barrierc = lib.getExe' pkgs.barrier "barrierc";
+            in
+            "${barrierc} --disable-crypto -f ${serverHost}";
         };
       };
     }
