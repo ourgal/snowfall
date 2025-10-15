@@ -12,7 +12,6 @@ args.module (
       isSshSplit = config.${namespace}.cli.multiplexer.tmux.plugins.ssh-split.enable;
       baseConf = ''
         set -ag terminal-overrides ",xterm-256color:RGB"
-        # set -g history-limit 20000
         set -g buffer-limit 20
         set -sg escape-time 0
         set -g display-time 1500
@@ -147,6 +146,7 @@ args.module (
         baseIndex = 1;
         terminal = "tmux-256color";
         sensibleOnTop = true;
+        historyLimit = 20000;
         extraConfig = baseConf;
       };
       value.${namespace}.user.tmux.keys = [
