@@ -22,19 +22,15 @@ in
         dns = enabled;
         dhcp = enabled;
       };
-      sing-box = enabled;
-      sops-nix = enabled // {
-        router = enabled;
-      };
     }
     // enabledList [
       # keep-sorted start
       "avahi"
       "common"
-      "iotop"
       "harmonia"
-      "nh"
       "home-manager"
+      "iotop"
+      "nh"
       "tuptime"
       # keep-sorted end
     ];
