@@ -9,7 +9,6 @@ args.module (
         pkgs
         enabled
         enableOpt
-        cfgHome
         switch
         lib
         ;
@@ -17,9 +16,6 @@ args.module (
       zellijEnabled = config.${namespace}.cli.multiplexer.zellij.enable;
       helix-tmux = "${pkgs.${namespace}.helix-tmux}/bin/helix-tmux";
       helix-zellij = "${pkgs.${namespace}.helix-zellij}/bin/helix-zellij";
-      tmux-popup = "${pkgs.${namespace}.tmux-popup}/bin/tmux-popup";
-      zellij-popup = "${pkgs.${namespace}.zellij-popup}/bin/zellij-popup";
-      cfg = cfgHome config.${namespace} ./.;
       toggleBool = pkgs.writeShellScript "toggle_boolean" ''
         awk '{if ($0 ~ /true/) printf "false"; else if ($0 ~ /false/) printf "true";else if ($0 ~ /True/) printf "False"; else if ($0 ~ /False/) printf "True"; else printf $0;}'
       '';
@@ -90,10 +86,6 @@ args.module (
               normal = {
                 "]".b = ":buffer-next";
                 "[".b = ":buffer-previous";
-                "C-h" = "jump_view_left";
-                "C-l" = "jump_view_right";
-                "C-j" = "jump_view_down";
-                "C-k" = "jump_view_up";
                 "C-g" =
                   if tmuxEnabled then
                     ":sh ${helix-tmux} lazygit"
@@ -101,26 +93,11 @@ args.module (
                     ":sh ${helix-zellij} lazygit"
                   else
                     "";
-                "G" = "goto_last_line";
-                "$" = "goto_line_end";
-                "^" = "goto_first_nonwhitespace";
-                "0" = "goto_line_start";
-                V = "extend_line_below";
-                "A-v" = "extend_line_above";
-                "esc" = "collapse_selection";
                 "Z" = {
                   Z = ":xa";
                   Q = ":qa!";
                 };
-                "backspace" = "trim_selections";
                 g = {
-                  "/" =
-                    if tmuxEnabled then
-                      ":sh ${helix-tmux} search"
-                    else if zellijEnabled then
-                      ":sh ${helix-zellij} search"
-                    else
-                      "";
                   z = [
                     "split_selection_on_newline"
                     ":sort"
@@ -131,10 +108,6 @@ args.module (
                     l = "toggle_line_comments";
                     b = "toggle_block_comments";
                   };
-                  e = { };
-                  s = { };
-                  l = { };
-                  h = { };
                   "*" =
                     if tmuxEnabled then
                       [
@@ -157,39 +130,7 @@ args.module (
                   l = {
                     f = ":fmt";
                   };
-                  s = { };
-                  S = { };
-                  R = { };
-                  y = { };
-                  Y = { };
-                  p = { };
-                  P = { };
-                  y = { };
-                  Y = { };
                   B = ":sh ${helix-tmux} blame";
-                  f =
-                    if (tmuxEnabled && cfg.broot.enable) then
-                      ":sh ${helix-tmux} broot"
-                    else if (zellijEnabled && cfg.broot.enable) then
-                      ":sh ${helix-zellij} broot"
-                    else
-                      "file_picker";
-                  e =
-                    if tmuxEnabled then
-                      ":sh ${helix-tmux} lf"
-                    else if zellijEnabled then
-                      ":sh ${helix-zellij} lf"
-                    else
-                      "";
-                  o = "symbol_picker";
-                  O = "workspace_symbol_picker";
-                  "/" =
-                    if (tmuxEnabled && cfg.live_grep.enable) then
-                      ":sh ${tmux-popup} '${helix-tmux} livegrep'"
-                    else if (zellijEnabled && cfg.live_grep.enable) then
-                      ":sh ${zellij-popup} '${helix-zellij} livegrep'"
-                    else
-                      "global_search";
                   "*" = [
                     "search_selection"
                     "global_search"
@@ -222,16 +163,6 @@ args.module (
               };
               select = {
                 "A-d" = "delete_selection";
-                G = "goto_last_line";
-                "$" = "goto_line_end";
-                "^" = "goto_first_nonwhitespace";
-                "0" = "goto_line_start";
-                "?" = "split_selection";
-                "esc" = [
-                  "normal_mode"
-                  "collapse_selection"
-                ];
-                "backspace" = "trim_selections";
                 g = {
                   z = [
                     "split_selection_on_newline"
@@ -239,10 +170,6 @@ args.module (
                     "keep_primary_selection"
                   ];
                   c = "toggle_comments";
-                  e = { };
-                  s = { };
-                  l = { };
-                  h = { };
                   "*" =
                     if tmuxEnabled then
                       [
@@ -262,40 +189,7 @@ args.module (
                       "search_selection";
                 };
                 "space" = {
-                  l = { };
-                  s = { };
-                  S = { };
-                  R = { };
-                  y = { };
-                  Y = { };
-                  p = { };
-                  P = { };
-                  y = { };
-                  Y = { };
                   B = ":sh ${helix-tmux} blame";
-                  f =
-                    if (tmuxEnabled && cfg.broot.enable) then
-                      ":sh ${helix-tmux} broot"
-                    else if (zellijEnabled && cfg.broot.enable) then
-                      ":sh ${helix-zellij} broot"
-                    else
-                      "file_picker";
-                  e =
-                    if tmuxEnabled then
-                      ":sh ${helix-tmux} lf"
-                    else if zellijEnabled then
-                      ":sh ${helix-zellij} lf"
-                    else
-                      "";
-                  o = "symbol_picker";
-                  O = "workspace_symbol_picker";
-                  "/" =
-                    if (tmuxEnabled && cfg.live_grep.enable) then
-                      ":sh ${tmux-popup} ${helix-tmux} livegrep'"
-                    else if (zellijEnabled && cfg.live_grep.enable) then
-                      ":sh ${zellij-popup} '${helix-zellij} livegrep'"
-                    else
-                      "global_search";
                   "*" = [
                     "search_selection"
                     "global_search"
