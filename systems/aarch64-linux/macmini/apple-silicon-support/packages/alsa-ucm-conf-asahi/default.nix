@@ -16,10 +16,8 @@
   {
     name = "${oldAttrs.pname}-${oldAttrs.version}-asahi-${versionAsahi}";
 
-    postInstall =
-      oldAttrs.postInstall or ""
-      + ''
-        cp -r ${srcAsahi}/ucm2 $out/share/alsa
-      '';
+    postInstall = oldAttrs.postInstall or "" + ''
+      cp -r ${srcAsahi}/ucm2 $out/share/alsa
+    '';
   }
 ))

@@ -39,18 +39,17 @@ rustPlatform.buildRustPackage rec {
 
   doCheck = false;
 
-  buildInputs =
-    [
-      curl
-      libgit2
-      openssl
-      zlib
-    ]
-    ++ lib.optionals stdenv.isDarwin [
-      darwin.apple_sdk.frameworks.AppKit
-      darwin.apple_sdk.frameworks.CoreGraphics
-      darwin.apple_sdk.frameworks.Security
-    ];
+  buildInputs = [
+    curl
+    libgit2
+    openssl
+    zlib
+  ]
+  ++ lib.optionals stdenv.isDarwin [
+    darwin.apple_sdk.frameworks.AppKit
+    darwin.apple_sdk.frameworks.CoreGraphics
+    darwin.apple_sdk.frameworks.Security
+  ];
 
   meta = {
     description = "";

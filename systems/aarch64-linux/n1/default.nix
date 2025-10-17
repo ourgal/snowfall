@@ -5,19 +5,18 @@ let
 in
 {
 
-  dot =
-    {
-      user.host = name;
-    }
-    // enabledList [
-      # keep-sorted start
-      "avahi"
-      "iotop"
-      "common"
-      "nh"
-      "tuptime"
-      # keep-sorted end
-    ];
+  dot = {
+    user.host = name;
+  }
+  // enabledList [
+    # keep-sorted start
+    "avahi"
+    "iotop"
+    "common"
+    "nh"
+    "tuptime"
+    # keep-sorted end
+  ];
 
   system.stateVersion = "25.05";
 }

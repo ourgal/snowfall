@@ -57,7 +57,8 @@ in
         size = 14.0;
         builtin_box_drawing = true;
       };
-    } // tomorrow_night_bright;
+    }
+    // tomorrow_night_bright;
   };
   value.catppuccin.alacritty.enable = false;
 }

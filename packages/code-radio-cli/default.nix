@@ -17,13 +17,14 @@ rustPlatform.buildRustPackage (
       rustPlatform.bindgenHook
     ];
 
-    buildInputs =
-      [ openssl ]
-      ++ lib.optionals stdenv.isDarwin [
-        darwin.apple_sdk.frameworks.CoreAudio
-        darwin.apple_sdk.frameworks.Security
-      ]
-      ++ lib.optionals stdenv.isLinux [ alsa-lib ];
+    buildInputs = [
+      openssl
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      darwin.apple_sdk.frameworks.CoreAudio
+      darwin.apple_sdk.frameworks.Security
+    ]
+    ++ lib.optionals stdenv.isLinux [ alsa-lib ];
 
     meta = with lib; {
       description = "A command line music radio client for https://coderadio.freecodecamp.org, written in Rust";

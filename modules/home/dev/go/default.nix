@@ -27,7 +27,8 @@ args.module (
       ];
       env = {
         GO111MODULE = "on";
-      } // lib.${namespace}.proxy.go;
+      }
+      // lib.${namespace}.proxy.go;
     }
   )
 )

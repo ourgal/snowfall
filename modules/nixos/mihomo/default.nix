@@ -76,7 +76,8 @@ let
             "https://8.8.4.4/dns-query"
             "https://doh.opendns.com/dns-query"
           ];
-        } // directDomainsPolicy;
+        }
+        // directDomainsPolicy;
         nameserver = defaultDns;
         fallback = [
           "tls://8.8.4.4"
@@ -221,30 +222,32 @@ let
       "time.facebook.com" = "203.107.6.88";
       "*.${domain}" = ip.brix;
     };
-    proxy-groups =
-      [ proxyGroups.main ]
-      ++ proxyGroups.subs
-      ++ proxyGroups.freeSubs
-      ++ [
-        proxyGroups.final
-        proxyGroups.ai
-        proxyGroups.trackerslist
-        proxyGroups.game
-        proxyGroups.microsoft
-        proxyGroups.google
-        proxyGroups.apple
-        proxyGroups.private
-        proxyGroups.privateip
-        proxyGroups.proxy
-        proxyGroups.telegram
-        proxyGroups.direct
-      ]
-      ++ proxyGroups.price
-      ++ proxyGroups.countries;
+    proxy-groups = [
+      proxyGroups.main
+    ]
+    ++ proxyGroups.subs
+    ++ proxyGroups.freeSubs
+    ++ [
+      proxyGroups.final
+      proxyGroups.ai
+      proxyGroups.trackerslist
+      proxyGroups.game
+      proxyGroups.microsoft
+      proxyGroups.google
+      proxyGroups.apple
+      proxyGroups.private
+      proxyGroups.privateip
+      proxyGroups.proxy
+      proxyGroups.telegram
+      proxyGroups.direct
+    ]
+    ++ proxyGroups.price
+    ++ proxyGroups.countries;
     proxy-providers = {
       knjc = mkProxyProvider "knjc" config.sops.placeholder."subs/knjc" 24;
       nano = mkProxyProvider "nano" config.sops.placeholder."subs/nano" 4;
-    } // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
+    }
+    // mapAttrs (_: v: mkProxyProvider v.name v.url v.updateInterval) freeSubs;
     rules =
       (map (v: "DOMAIN-SUFFIX,${v},${proxyGroups.direct.name}") domainWhiteList)
       ++ (map (v: "DOMAIN-SUFFIX,${v},${proxyGroups.proxy.name}") domainBlackList)
@@ -275,7 +278,8 @@ let
             apiPort
             mixPort
             53
-          ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+          ]
+          ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
         in
         {
           allowedTCPPorts = p;
@@ -323,7 +327,8 @@ let
       apiPort
       dnsPort
       mixPort
-    ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+    ]
+    ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
   };
   extraOpts = {
     mode = mkOpt' (lib.types.enum [

@@ -90,7 +90,8 @@ let
                 prefixLength = 64;
               }) cfg.ipv6;
         };
-      } // (if cfg.wan != "" then { ${cfg.wan}.useDHCP = false; } else { });
+      }
+      // (if cfg.wan != "" then { ${cfg.wan}.useDHCP = false; } else { });
       firewall = {
         allowedTCPPorts = ports;
         allowedUDPPorts = ports;

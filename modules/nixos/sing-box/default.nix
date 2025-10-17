@@ -143,7 +143,8 @@ let
         outbound_providers = [
           (mkProvider "nano" { _secret = config.sops.secrets."subs/nano".path; } 4)
           (mkProvider "knjc" { _secret = config.sops.secrets."subs/knjc".path; } 24)
-        ] ++ map (x: mkProvider x.name x.url x.updateInterval) (attrValues freeSubs);
+        ]
+        ++ map (x: mkProvider x.name x.url x.updateInterval) (attrValues freeSubs);
       };
     };
     networking = {
@@ -154,7 +155,8 @@ let
             apiPort
             mixPort
             53
-          ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+          ]
+          ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
         in
         {
           allowedTCPPorts = p;
@@ -197,7 +199,8 @@ let
       apiPort
       dnsPort
       mixPort
-    ] ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+    ]
+    ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
   };
   extraOpts = {
     mode = mkOpt' (lib.types.enum [

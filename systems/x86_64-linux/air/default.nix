@@ -28,7 +28,8 @@ in
     };
     nix-monitored = enabled;
     nix-on-droid = enabled;
-  } // settings.laptopModules;
+  }
+  // settings.laptopModules;
 
   system.stateVersion = "24.05";
 }

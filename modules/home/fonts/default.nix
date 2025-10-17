@@ -141,16 +141,15 @@ args.module (
                   "${config.home.profileDirectory}/share/fonts"
                 ];
                 cachedir = "${config.home.path}/lib/fontconfig/cache";
-                match =
-                  [
-                    system-ui
-                    (defaultFont "sans-serif" sansList)
-                    (defaultFont "serif" serifList)
-                    (defaultFont "monospace" monoList)
-                  ]
-                  ++ langSets monoFirst font.cjk.mono
-                  ++ langSets sansFirst font.cjk.sans
-                  ++ langSets serifFirst font.cjk.serif;
+                match = [
+                  system-ui
+                  (defaultFont "sans-serif" sansList)
+                  (defaultFont "serif" serifList)
+                  (defaultFont "monospace" monoList)
+                ]
+                ++ langSets monoFirst font.cjk.mono
+                ++ langSets sansFirst font.cjk.sans
+                ++ langSets serifFirst font.cjk.serif;
               };
             };
           in

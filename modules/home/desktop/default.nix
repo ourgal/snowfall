@@ -27,7 +27,8 @@ args.module (
         "video"
         "xprofile"
         # keep-sorted end
-      ] ++ keyboard;
+      ]
+      ++ keyboard;
     }
   )
 )

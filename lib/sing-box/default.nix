@@ -17,7 +17,8 @@ let
   subs = [
     (mkOutboundSub "knjc" "urltest")
     (mkOutboundSub "nano" "urltest")
-  ] ++ freeSubs;
+  ]
+  ++ freeSubs;
   getTag = map (x: x.tag);
   outbounds =
     let
@@ -210,33 +211,32 @@ let
         use_all_providers = true;
       };
     };
-  outboundsSorted =
-    [
-      outbounds.main
-      outbounds.final
-    ]
-    ++ subs
-    ++ [ outbounds.manual ]
-    ++ outbounds.countries
-    ++ [
-      outbounds.cheap
-      outbounds.expensive
-      outbounds.foreign
-      outbounds.telegram
-      outbounds.youtube
-      outbounds.ai
-      outbounds.games
-      outbounds.microsoft
-      outbounds.google
-      outbounds.apple
-      outbounds.networktest
-      outbounds.netflix
-      outbounds.ad
-      outbounds.global
-      outbounds.direct
-      outbounds.block
-      outbounds.dns
-    ];
+  outboundsSorted = [
+    outbounds.main
+    outbounds.final
+  ]
+  ++ subs
+  ++ [ outbounds.manual ]
+  ++ outbounds.countries
+  ++ [
+    outbounds.cheap
+    outbounds.expensive
+    outbounds.foreign
+    outbounds.telegram
+    outbounds.youtube
+    outbounds.ai
+    outbounds.games
+    outbounds.microsoft
+    outbounds.google
+    outbounds.apple
+    outbounds.networktest
+    outbounds.netflix
+    outbounds.ad
+    outbounds.global
+    outbounds.direct
+    outbounds.block
+    outbounds.dns
+  ];
   dnsServers = rec {
     direct = {
       tag = "dns_direct";

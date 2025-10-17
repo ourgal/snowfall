@@ -36,12 +36,13 @@ rustPlatform.buildRustPackage (
         autoPatchelfHook
       ]
       ++ lib.optionals stdenv.buildPlatform.isDarwin [ libiconv ];
-    runtimeDependencies =
-      [ noto-fonts-color-emoji ]
-      ++ lib.optionals stdenv.isLinux [
-        wayland
-        libxkbcommon
-      ];
+    runtimeDependencies = [
+      noto-fonts-color-emoji
+    ]
+    ++ lib.optionals stdenv.isLinux [
+      wayland
+      libxkbcommon
+    ];
 
     postFixup = lib.optionalString stdenv.isLinux ''
       patchelf --set-rpath "${lib.makeLibraryPath buildInputs}" $out/bin/simplemoji

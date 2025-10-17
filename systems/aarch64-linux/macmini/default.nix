@@ -9,22 +9,21 @@ in
     ./apple-silicon-support
   ];
 
-  dot =
-    {
-      user.host = name;
-      boot.systemd = enabled;
-    }
-    // enabledList [
-      # keep-sorted start
-      "avahi"
-      "iotop"
-      "common"
-      "nh"
-      "tuptime"
-      "home-manager"
-      "harmonia"
-      # keep-sorted end
-    ];
+  dot = {
+    user.host = name;
+    boot.systemd = enabled;
+  }
+  // enabledList [
+    # keep-sorted start
+    "avahi"
+    "iotop"
+    "common"
+    "nh"
+    "tuptime"
+    "home-manager"
+    "harmonia"
+    # keep-sorted end
+  ];
 
   system.stateVersion = "25.05";
 }

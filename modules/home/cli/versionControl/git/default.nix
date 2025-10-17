@@ -133,7 +133,8 @@ args.module (
               plain = "blue";
             };
             merge.conflictstyle = "zdiff3";
-          } // lib.${namespace}.git.hostAliasesConfig;
+          }
+          // lib.${namespace}.git.hostAliasesConfig;
           package = pkgs.gitFull;
         };
       };

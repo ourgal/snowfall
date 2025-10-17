@@ -34,7 +34,8 @@ args.module (
         "gpg"
         "sops"
         # keep-sorted end
-      ] ++ (if elem host settings.desktops && !elem host settings.work then [ "rbw" ] else [ ]);
+      ]
+      ++ (if elem host settings.desktops && !elem host settings.work then [ "rbw" ] else [ ]);
     }
   )
 )

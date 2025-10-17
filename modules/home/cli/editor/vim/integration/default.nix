@@ -22,7 +22,8 @@ args.module (
         "zeavim-vim"
         "zoxide-vim"
         # keep-sorted end
-      ] ++ isX86 target [ "gtm-vim-plugin" ];
+      ]
+      ++ isX86 target [ "gtm-vim-plugin" ];
       disable = [
         # keep-sorted start
         "dps-ghosttext-vim"

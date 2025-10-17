@@ -26,7 +26,8 @@ in
       desktops = enabled;
     };
     home-manager = enabled;
-  } // settings.laptopModules;
+  }
+  // settings.laptopModules;
 
   system.stateVersion = "23.11";
 

@@ -34,55 +34,54 @@ args.module (
         body = "just --justfile ~/.user.justfile --working-directory . $argv";
         description = "user just";
       };
-      files.".user.justfile" =
-        ''
-          defualt: help
+      files.".user.justfile" = ''
+        defualt: help
 
-          wttr:
-            @cache -s "$(date +%Y-%m-%d)" -- curl -s 'https://wttr.in/'
+        wttr:
+          @cache -s "$(date +%Y-%m-%d)" -- curl -s 'https://wttr.in/'
 
-          wan:
-            @cache -s "$(date +%Y-%m-%d)" -- curl -s 'https://ifconfig.io/'
+        wan:
+          @cache -s "$(date +%Y-%m-%d)" -- curl -s 'https://ifconfig.io/'
 
-          lan:
-            @ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+        lan:
+          @ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
 
-          text text:
-            @echo "{{ text }}" | curl -F file=@- 0x0.st
+        text text:
+          @echo "{{ text }}" | curl -F file=@- 0x0.st
 
-          url url:
-            @curl -F url={{ url }} https://shorta.link
+        url url:
+          @curl -F url={{ url }} https://shorta.link
 
-          file file:
-            @curl -F file=@{{ file }} https://0x0.st
+        file file:
+          @curl -F file=@{{ file }} https://0x0.st
 
-          clash:
-            @${clash}
+        clash:
+          @${clash}
 
-          yt-rss url:
-            @curl -s '{{url}}' | rg -o '\"(https://www.youtube.com/feeds/videos.xml\?channel_id=.*?)\"' -r '$1' | cut -d \n -f 1 | xclip -sel clip
+        yt-rss url:
+          @curl -s '{{url}}' | rg -o '\"(https://www.youtube.com/feeds/videos.xml\?channel_id=.*?)\"' -r '$1' | cut -d \n -f 1 | xclip -sel clip
 
-          dl:
-            @aria2c --input-file <(xclip -o -sel clip)
+        dl:
+          @aria2c --input-file <(xclip -o -sel clip)
 
-          mpv:
-            @mpv "$(xclip -o -sel clip)"
+        mpv:
+          @mpv "$(xclip -o -sel clip)"
 
-          unzipManga:
-            @${unzipManga}
+        unzipManga:
+          @${unzipManga}
 
-          help:
-            @just --list --justfile ~/.user.justfile
-        ''
-        + (
-          if config.${namespace}.cli.multiplexer.tmux.enable then
-            ''
-              fixTmux:
-                @${config.home.homeDirectory}/.tmux/resurrect/fixSymlink
-            ''
-          else
-            ""
-        );
+        help:
+          @just --list --justfile ~/.user.justfile
+      ''
+      + (
+        if config.${namespace}.cli.multiplexer.tmux.enable then
+          ''
+            fixTmux:
+              @${config.home.homeDirectory}/.tmux/resurrect/fixSymlink
+          ''
+        else
+          ""
+      );
     }
   )
 )

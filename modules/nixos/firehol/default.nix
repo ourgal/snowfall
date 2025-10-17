@@ -98,7 +98,8 @@ let
       after = [
         "systemd-modules-load.service"
         "local-fs.target"
-      ] ++ lib.optional config.services.nfs.server.enable "nfs-server.service";
+      ]
+      ++ lib.optional config.services.nfs.server.enable "nfs-server.service";
       wants = [
         "network-pre.target"
         "systemd-modules-load.service"

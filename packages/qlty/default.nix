@@ -26,23 +26,22 @@ rustPlatform.buildRustPackage (
       git
     ];
 
-    buildInputs =
-      [
-        bzip2
-        libgit2
-        oniguruma
-        openssl
-        xz
-        zlib
-        zstd
-      ]
-      ++ lib.optionals stdenv.isDarwin [
-        darwin.apple_sdk.frameworks.CoreFoundation
-        darwin.apple_sdk.frameworks.CoreServices
-        darwin.apple_sdk.frameworks.IOKit
-        darwin.apple_sdk.frameworks.Security
-        darwin.apple_sdk.frameworks.SystemConfiguration
-      ];
+    buildInputs = [
+      bzip2
+      libgit2
+      oniguruma
+      openssl
+      xz
+      zlib
+      zstd
+    ]
+    ++ lib.optionals stdenv.isDarwin [
+      darwin.apple_sdk.frameworks.CoreFoundation
+      darwin.apple_sdk.frameworks.CoreServices
+      darwin.apple_sdk.frameworks.IOKit
+      darwin.apple_sdk.frameworks.Security
+      darwin.apple_sdk.frameworks.SystemConfiguration
+    ];
 
     env = {
       OPENSSL_NO_VENDOR = true;

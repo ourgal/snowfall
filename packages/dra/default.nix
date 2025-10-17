@@ -19,7 +19,8 @@ rustPlatform.buildRustPackage (
       bzip2
       xz
       zlib
-    ] ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
+    ]
+    ++ lib.optionals stdenv.isDarwin [ darwin.apple_sdk.frameworks.Security ];
 
     doCheck = false;
 

@@ -441,104 +441,103 @@ args.module (
             {
               name = "+Extensions";
               key = "e";
-              menu =
-                [
-                  {
-                    name = "Copycat Search";
-                    key = "/";
-                    command = "run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_search.sh";
-                  }
-                  {
-                    name = "Copycat File Search";
-                    key = "C-f";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(^|^\.|[[:space:]]|[[:space:]]\.|[[:space:]]\.\.|^\.\.)[[:alnum:]~_-]*/[][[:alnum:]_.#$%&+=/@-]*"'';
-                  }
-                  {
-                    name = "Copycat Git Status Files";
-                    key = "C-g";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_git_special.sh #{pane_current_path}'';
-                  }
-                  {
-                    name = "Copycat Hash Search";
-                    key = "M-h";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "\b([0-9a-f]{7,40}|[[:alnum:]]{52}|[0-9a-f]{64})\b"'';
-                  }
-                  {
-                    name = "Copycat Url Search";
-                    key = "C-u";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(https?://|git@|git://|ssh://|ftp://|file:///)[[:alnum:]?=%/_.:,;~@!#$&()*+-]*"'';
-                  }
-                  {
-                    name = "Copycat Digit Search";
-                    key = "C-d";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]+"'';
-                  }
-                  {
-                    name = "Copycat IP Search";
-                    key = "M-i";
-                    command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}"'';
-                  }
-                ]
-                ++ lib.optional session-wizard.enable {
-                  name = "Session Wizard";
-                  inherit (session-wizard) key command;
+              menu = [
+                {
+                  name = "Copycat Search";
+                  key = "/";
+                  command = "run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_search.sh";
                 }
-                ++ lib.optional fzf.enable {
-                  name = "Tmux Fzf";
-                  inherit (fzf) key command;
+                {
+                  name = "Copycat File Search";
+                  key = "C-f";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(^|^\.|[[:space:]]|[[:space:]]\.|[[:space:]]\.\.|^\.\.)[[:alnum:]~_-]*/[][[:alnum:]_.#$%&+=/@-]*"'';
                 }
-                ++ lib.optional extrakto.enable {
-                  name = "Extrakto";
-                  inherit (extrakto) key command;
+                {
+                  name = "Copycat Git Status Files";
+                  key = "C-g";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_git_special.sh #{pane_current_path}'';
                 }
-                ++ lib.optional fuzzback.enable {
-                  name = "Fuzzback";
-                  inherit (fuzzback) key command;
+                {
+                  name = "Copycat Hash Search";
+                  key = "M-h";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "\b([0-9a-f]{7,40}|[[:alnum:]]{52}|[0-9a-f]{64})\b"'';
                 }
-                ++ lib.optional thumbs.enable {
-                  name = "Thumbs";
-                  inherit (thumbs) key command;
+                {
+                  name = "Copycat Url Search";
+                  key = "C-u";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "(https?://|git@|git://|ssh://|ftp://|file:///)[[:alnum:]?=%/_.:,;~@!#$&()*+-]*"'';
                 }
-                ++ lib.optional fzf-url.enable {
-                  name = "Fzf Url";
-                  inherit (fzf-url) key command;
+                {
+                  name = "Copycat Digit Search";
+                  key = "C-d";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]+"'';
                 }
-                ++ lib.optional jump.enable {
-                  name = "Jump";
-                  inherit (jump) key command;
+                {
+                  name = "Copycat IP Search";
+                  key = "M-i";
+                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_mode_start.sh "[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}"'';
                 }
-                ++ lib.optional termsand.enable {
-                  name = "Termsand";
-                  inherit (termsand) key command;
-                }
-                ++ lib.optional tea.enable {
-                  name = "Tea";
-                  inherit (tea) key command;
-                }
-                ++ lib.optional fpp.enable {
-                  name = "Fpp";
-                  inherit (fpp) key command;
-                }
-                ++ lib.optional power-zoom.enable {
-                  name = "Zoom";
-                  inherit (power-zoom) key command;
-                }
-                ++ lib.optional tome.enable {
-                  name = "Tome Playbook";
-                  inherit (tome) key command;
-                }
-                ++ lib.optional sesh.enable {
-                  name = "Sesh";
-                  inherit (sesh) key command;
-                }
-                ++ lib.optional floax.enable {
-                  name = "Floax";
-                  inherit (floax) key command;
-                }
-                ++ lib.optional buoyshell.enable {
-                  name = "Buoyshell";
-                  inherit (buoyshell) key command;
-                };
+              ]
+              ++ lib.optional session-wizard.enable {
+                name = "Session Wizard";
+                inherit (session-wizard) key command;
+              }
+              ++ lib.optional fzf.enable {
+                name = "Tmux Fzf";
+                inherit (fzf) key command;
+              }
+              ++ lib.optional extrakto.enable {
+                name = "Extrakto";
+                inherit (extrakto) key command;
+              }
+              ++ lib.optional fuzzback.enable {
+                name = "Fuzzback";
+                inherit (fuzzback) key command;
+              }
+              ++ lib.optional thumbs.enable {
+                name = "Thumbs";
+                inherit (thumbs) key command;
+              }
+              ++ lib.optional fzf-url.enable {
+                name = "Fzf Url";
+                inherit (fzf-url) key command;
+              }
+              ++ lib.optional jump.enable {
+                name = "Jump";
+                inherit (jump) key command;
+              }
+              ++ lib.optional termsand.enable {
+                name = "Termsand";
+                inherit (termsand) key command;
+              }
+              ++ lib.optional tea.enable {
+                name = "Tea";
+                inherit (tea) key command;
+              }
+              ++ lib.optional fpp.enable {
+                name = "Fpp";
+                inherit (fpp) key command;
+              }
+              ++ lib.optional power-zoom.enable {
+                name = "Zoom";
+                inherit (power-zoom) key command;
+              }
+              ++ lib.optional tome.enable {
+                name = "Tome Playbook";
+                inherit (tome) key command;
+              }
+              ++ lib.optional sesh.enable {
+                name = "Sesh";
+                inherit (sesh) key command;
+              }
+              ++ lib.optional floax.enable {
+                name = "Floax";
+                inherit (floax) key command;
+              }
+              ++ lib.optional buoyshell.enable {
+                name = "Buoyshell";
+                inherit (buoyshell) key command;
+              };
             }
             { separator = true; }
             {

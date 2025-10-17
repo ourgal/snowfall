@@ -19,31 +19,30 @@ let
   value = {
     services.kanata = enabled // {
       keyboards.default = {
-        config =
-          ''
-            (defsrc)
+        config = ''
+          (defsrc)
 
-            (deflayer base)
+          (deflayer base)
+        ''
+        + (
+          let
+            name = "calibre";
+          in
           ''
-          + (
-            let
-              name = "calibre";
-            in
-            ''
-              (deflayermap (${name}_layer)
-                j down
-                k up
-                l right
-                h left
-                y C-c
-                f C-f
-                p C-v
-                i (layer-switch ${name}_input_layer))
+            (deflayermap (${name}_layer)
+              j down
+              k up
+              l right
+              h left
+              y C-c
+              f C-f
+              p C-v
+              i (layer-switch ${name}_input_layer))
 
-              (deflayermap (${name}_input_layer)
-                esc (layer-switch ${name}_layer))
-            ''
-          );
+            (deflayermap (${name}_input_layer)
+              esc (layer-switch ${name}_layer))
+          ''
+        );
         inherit (cfg) port;
       };
     };
