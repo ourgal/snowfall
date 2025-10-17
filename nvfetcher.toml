@@ -1459,3 +1459,7 @@ fetch.github = "mdSlash/hyprkan"
 [tmux-paste-image]
 src.git = "https://github.com/jkhas8/tmux-paste-image"
 fetch.github = "jkhas8/tmux-paste-image"
+
+[ch]
+src.github = "dtonon/ch"
+fetch.github = "dtonon/ch"

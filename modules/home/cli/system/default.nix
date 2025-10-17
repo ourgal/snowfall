@@ -3,6 +3,8 @@
     # keep-sorted start
     "cache"
     "ccsum"
+    "ch"
+    "cron"
     "debounce"
     "is"
     "quickbench"
@@ -10,15 +12,14 @@
     "servicer"
     "wol"
     "xrestrict"
-    "cron"
     # keep-sorted end
   ];
   nixPkgs = [
     # keep-sorted start
     "bkt"
     "charm-freeze"
-    "exfatprogs"
     "dcfldd"
+    "exfatprogs"
     "flamelens"
     "geekbench"
     "glib"
