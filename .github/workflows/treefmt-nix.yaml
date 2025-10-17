@@ -2,8 +2,6 @@
 name: Treefmt-nix
 on:
   workflow_dispatch:  # allows manual triggering
-  push:
-    branches: [main]
 jobs:
   treefmt-nix:
     runs-on: ubuntu-latest
