@@ -1,6 +1,7 @@
 { lib, namespace, ... }:
 let
   inherit (lib.${namespace}) domains;
+  inherit (builtins) isBool;
 in
 {
   subsExcludes = "中国";
@@ -24,7 +25,16 @@ in
         }:
         if raw != "" then "${subconverter}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}";
       filter = lib.attrsets.filterAttrs (
-        _: v: (!(v ? broken) || v.broken == false) && (v ? enable && v.enable == true)
+        _: v:
+        let
+          notHaveBroken = !(v ? broken);
+          brokenIsBool = isBool v.broken;
+          notBroken = v.broken == false;
+          haveEnable = v ? enable;
+          enableIsBool = isBool v.enable;
+          enabled = v.enable == true;
+        in
+        (notHaveBroken || (brokenIsBool && notBroken)) && (haveEnable && enableIsBool && enabled)
       );
       updateInterval = 6;
       mihomoSupport = {
