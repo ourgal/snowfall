@@ -43,34 +43,43 @@ class Categories(Enum):
 
 with sqlite3.connect("waiting.db") as conn:
     cursor = conn.cursor()
-    cursor.execute("""
+    cursor.execute(
+        """
         pragma foreign_keys
         = on
         ;
-    """)
+    """
+    )
 
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE waiting_status (
             id integer PRIMARY KEY,
             name text NOT NULL
         );
-    """)
+    """
+    )
 
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE categories (
             id integer PRIMARY KEY,
             name text NOT NULL
         );
-    """)
+    """
+    )
 
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE types (
             id integer PRIMARY KEY,
             name text NOT NULL
         );
-    """)
+    """
+    )
 
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE packages (
             id integer PRIMARY KEY,
             name text NOT NULL UNIQUE,
@@ -94,29 +103,39 @@ with sqlite3.connect("waiting.db") as conn:
             ON UPDATE RESTRICT
             ON DELETE RESTRICT
         );
-    """)
+    """
+    )
 
-    cursor.execute(f"""
+    cursor.execute(
+        f"""
         CREATE VIEW v_packages
         AS
         SELECT '[[' || url || '][' || name || ']]' AS package, description FROM packages WHERE waiting_status = {Waiting_Status.WAITING.value} ORDER BY added_date;
-    """)
+    """
+    )
 
-    cursor.execute(f"""
+    cursor.execute(
+        f"""
         CREATE VIEW v_need_packaging
         AS
         SELECT '[[' || url || '][' || name || ']]' AS package, description FROM packages WHERE waiting_status = {Waiting_Status.NOT_PACKAGED.value} ORDER BY added_date;
-    """)
+    """
+    )
 
-    cursor.execute(f"""
+    cursor.execute(
+        f"""
         INSERT INTO waiting_status  VALUES ({Waiting_Status.WAITING.value},'{Waiting_Status.WAITING.name}'), ({Waiting_Status.DONE.value},'{Waiting_Status.DONE.name}'), ({Waiting_Status.NOT_PACKAGED.value}, '{Waiting_Status.NOT_PACKAGED.name}'), ({Waiting_Status.REMOVED.value}, '{Waiting_Status.REMOVED.name}');
-    """)
+    """
+    )
 
-    cursor.execute(f"""
+    cursor.execute(
+        f"""
         INSERT INTO types VALUES ({Types.PACKAGE.value},'{Types.PACKAGE.name}'), ({Types.MODULE.value},'{Types.MODULE.name}');
-    """)
+    """
+    )
 
-    cursor.execute(f"""
+    cursor.execute(
+        f"""
         INSERT INTO categories VALUES
         ({Categories.MUSIC.value},'{Categories.MUSIC.name}'),
         ({Categories.NIX.value},'{Categories.NIX.name}'),
@@ -137,7 +156,8 @@ with sqlite3.connect("waiting.db") as conn:
         ({Categories.VIDEO.value},'{Categories.VIDEO.name}'),
         ({Categories.DOWNLOAD.value},'{Categories.DOWNLOAD.name}'),
         ({Categories.PROXY.value},'{Categories.PROXY.name}');
-    """)
+    """
+    )
 
 
 with sqlite3.connect("waiting.db") as conn:
@@ -2179,6 +2199,15 @@ with sqlite3.connect("waiting.db") as conn:
                 "https://github.com/LordGrimmauld/nix-check-deps",
                 Categories.DEV,
                 "06/07/2025",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
+            [
+                "rumdl",
+                "A Markdown Linter and Formatter written in Rust",
+                Categories.DEV,
+                "10/17/2025",
                 None,
                 Waiting_Status.WAITING,
                 Types.PACKAGE,
