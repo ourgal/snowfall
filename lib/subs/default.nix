@@ -14,7 +14,7 @@ in
       }&config=config/ACL4SSR_Mini.ini&url=";
       cdn = "https://fastly.jsdelivr.net/gh";
       prefix = subconverter + cdn;
-      mkUrl =
+      mkSubUrl =
         {
           raw ? "",
           user ? "",
@@ -30,7 +30,7 @@ in
       mihomoSupport = {
         free-trojan = {
           name = "free-trojan";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "barry-far";
             repo = "V2ray-Configs";
             branch = "main";
@@ -40,7 +40,7 @@ in
         };
         free-vmess = {
           name = "free-vmess";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "barry-far";
             repo = "V2ray-Configs";
             branch = "main";
@@ -50,7 +50,7 @@ in
         };
         openproxylist = {
           name = "openproxylist";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "roosterkid";
             repo = "openproxylist";
             branch = "main";
@@ -61,7 +61,7 @@ in
         };
         yudou66 = {
           name = "yudou66";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -71,7 +71,7 @@ in
         };
         clashmeta = {
           name = "clashmeta";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -81,7 +81,7 @@ in
         };
         ndnode = {
           name = "ndnode";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -91,7 +91,7 @@ in
         };
         nodev2ray = {
           name = "nodev2ray";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -101,7 +101,7 @@ in
         };
         nodefree = {
           name = "nodefree";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -111,7 +111,7 @@ in
         };
         v2rayshare = {
           name = "v2rayshare";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -121,7 +121,7 @@ in
         };
         wenode = {
           name = "wenode";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
@@ -131,7 +131,7 @@ in
         };
         V2RayAggregator_public = {
           name = "V2RayAggregator_public";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "mahdibland";
             repo = "ShadowsocksAggregator";
             branch = "master";
@@ -141,7 +141,7 @@ in
         };
         free18 = {
           name = "free18";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "free18";
             repo = "v2ray";
             branch = "master";
@@ -157,7 +157,7 @@ in
       // {
         free-servers = {
           name = "free-servers";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Pawdroid";
             repo = "Free-servers";
             branch = "main";
@@ -167,7 +167,7 @@ in
         };
         free-vless = {
           name = "free-vless";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "barry-far";
             repo = "V2ray-Configs";
             branch = "main";
@@ -177,7 +177,7 @@ in
         };
         free-ss = {
           name = "free-ss";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "barry-far";
             repo = "V2ray-Configs";
             branch = "main";
@@ -187,7 +187,7 @@ in
         };
         awesome-vpn = {
           name = "awesome-vpn";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "awesome-vpn";
             repo = "awesome-vpn";
             branch = "master";
@@ -197,7 +197,7 @@ in
         };
         V2RayAggregator_airports = {
           name = "V2RayAggregator_airports";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "mahdibland";
             repo = "ShadowsocksAggregator";
             branch = "master";
@@ -207,7 +207,7 @@ in
         };
         ".proxy" = {
           name = ".prorxy";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "mheidari98";
             repo = ".proxy";
             branch = "main";
@@ -217,7 +217,7 @@ in
         };
         xray-proxy-grabber-telegram = {
           name = "xray-proxy-grabber-telegram";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "MrMohebi";
             repo = "xray-proxy-grabber-telegram";
             branch = "master";
@@ -227,7 +227,7 @@ in
         };
         node = {
           name = "node";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Vauth";
             repo = "node";
             branch = "main";
@@ -237,7 +237,7 @@ in
         };
         proxy-minging = {
           name = "proxy-minging";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "yitong2333";
             repo = "proxy-minging";
             branch = "main";
@@ -247,7 +247,7 @@ in
         };
         V2rayCollector_Py = {
           name = "V2rayCollector_Py";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "MhdiTaheri";
             repo = "V2rayCollector_Py";
             branch = "main";
@@ -257,7 +257,7 @@ in
         };
         Proxy-sorter = {
           name = "Proxy-sorter";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Surfboardv2ray";
             repo = "Proxy-sorter";
             branch = "main";
@@ -267,7 +267,7 @@ in
         };
         free-proxy-list_vless = {
           name = "free-proxy-list_vless";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "gfpcom";
             repo = "free-proxy-list";
             branch = "main";
@@ -277,7 +277,7 @@ in
         };
         free-proxy-list_vmess = {
           name = "free-proxy-list_vmess";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "gfpcom";
             repo = "free-proxy-list";
             branch = "main";
@@ -287,7 +287,7 @@ in
         };
         free-proxy-list_trojan = {
           name = "free-proxy-list_trojan";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "gfpcom";
             repo = "free-proxy-list";
             branch = "main";
@@ -297,7 +297,7 @@ in
         };
         TGParse = {
           name = "TGParse";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "Surfboardv2ray";
             repo = "TGParse";
             branch = "main";
@@ -307,7 +307,7 @@ in
         };
         Mineral = {
           name = "Mineral";
-          url = mkUrl {
+          url = mkSubUrl {
             user = "LalatinaHub";
             repo = "Mineral";
             branch = "master";
@@ -317,7 +317,7 @@ in
         };
         SCP1 = {
           name = "SCP1";
-          url = mkUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
+          url = mkSubUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
           inherit updateInterval;
         };
       }
