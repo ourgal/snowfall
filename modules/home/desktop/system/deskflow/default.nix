@@ -1,1 +1,4 @@
-{ nixPkgs = "deskflow"; }
+{
+  nixPkgs = "deskflow";
+  enable = "service";
+}
