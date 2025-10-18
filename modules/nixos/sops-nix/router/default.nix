@@ -7,6 +7,7 @@ let
       secrets = {
         "subs/nano" = { };
         "subs/knjc" = { };
+        "subs/worker" = { };
       };
     };
   };

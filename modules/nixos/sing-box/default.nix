@@ -141,10 +141,39 @@ let
         };
         outbounds = outboundsSorted;
         outbound_providers = [
-          (mkProvider "nano" { _secret = config.sops.secrets."subs/nano".path; } 4)
-          (mkProvider "knjc" { _secret = config.sops.secrets."subs/knjc".path; } 24)
+          (mkProvider {
+            tag = "nano";
+            url = {
+              _secret = config.sops.secrets."subs/nano".path;
+            };
+            hour = 4;
+            minute = 0;
+          })
+          (mkProvider {
+            tag = "knjc";
+            url = {
+              _secret = config.sops.secrets."subs/knjc".path;
+            };
+            hour = 24;
+            minute = 0;
+          })
+          (mkProvider {
+            tag = "worker";
+            url = {
+              _secret = config.sops.secrets."subs/worker".path;
+            };
+            hour = 0;
+            minute = 15;
+          })
         ]
-        ++ map (x: mkProvider x.name x.url x.updateInterval) (attrValues freeSubs);
+        ++ map (
+          x:
+          mkProvider {
+            tag = x.name;
+            url = x.url;
+            hour = x.updateInterval;
+          }
+        ) (attrValues freeSubs);
       };
     };
     networking = {

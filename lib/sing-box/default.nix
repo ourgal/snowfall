@@ -17,6 +17,7 @@ let
   subs = [
     (mkOutboundSub "knjc" "urltest")
     (mkOutboundSub "nano" "urltest")
+    (mkOutboundSub "worker" "selector")
   ]
   ++ freeSubs;
   getTag = map (x: x.tag);
@@ -550,17 +551,24 @@ in
         outbound = outbounds.youtube.tag;
       }
     ];
-    mkProvider = tag: url: time: {
-      type = "remote";
-      download_ua = "clash.meta";
-      download_interval = "${toString time}h0m0s";
-      healthcheck_url = "https://www.gstatic.com/generate_204";
-      healthcheck_interval = "10m0s";
-      download_detour = outbounds.direct.tag;
-      inherit tag;
-      path = "./providers/${tag}.yaml";
-      download_url = url;
-    };
+    mkProvider =
+      {
+        tag,
+        url,
+        hour,
+        minute ? 0,
+      }:
+      {
+        type = "remote";
+        download_ua = "clash.meta";
+        download_interval = "${toString hour}h${toString minute}m0s";
+        healthcheck_url = "https://www.gstatic.com/generate_204";
+        healthcheck_interval = "10m0s";
+        download_detour = outbounds.direct.tag;
+        inherit tag;
+        path = "./providers/${tag}.yaml";
+        download_url = url;
+      };
     mkFirewall =
       let
         defaultProxyPorts =
