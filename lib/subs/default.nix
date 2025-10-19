@@ -10,11 +10,6 @@ in
       isMihomo ? false,
     }:
     let
-      subconverter = "http://${domains.subconverter}/sub?target=${
-        if isMihomo then "clash" else "singbox"
-      }&config=config/ACL4SSR_Mini.ini&url=";
-      cdn = "https://fastly.jsdelivr.net/gh";
-      prefix = subconverter + cdn;
       mkSubUrl =
         {
           raw ? "",
@@ -22,8 +17,29 @@ in
           repo ? "",
           branch ? "",
           path ? "",
+          converter ? "sublink",
         }:
-        if raw != "" then "${subconverter}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}";
+        let
+          cdn = "https://fastly.jsdelivr.net/gh";
+          subconverter = "http://${domains.subconverter}/sub?target=${
+            if isMihomo then "clash" else "singbox"
+          }&config=config/ACL4SSR_Mini.ini&url=";
+          sublink = "https://${domains.sublink}/${
+            if isMihomo then "clash" else "singbox"
+          }?&ua=&selectedRules=[]&customRules=[]&config=";
+        in
+        if converter == "subconverter" then
+          let
+            prefix = subconverter + cdn;
+          in
+          if raw != "" then "${subconverter}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}"
+        else if converter == "sublink" then
+          let
+            prefix = sublink + cdn;
+          in
+          if raw != "" then "${sublink}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}"
+        else
+          builtins.throw "unknown mkSubUrl converter type";
       filter = lib.attrsets.filterAttrs (
         _: v:
         let
