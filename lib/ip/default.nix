@@ -17,4 +17,8 @@ in
     ;
   subnet6 = map (v: "${v}::0/64") lan6;
   mac = fromTOML (fileContents ./mac.key);
+  tailscale = {
+    office2042 = "100.121.163.109";
+    s20 = "100.83.72.86";
+  };
 }

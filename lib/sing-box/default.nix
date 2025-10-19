@@ -653,10 +653,16 @@ in
         validFakeIp6 = fakeIp6Subnet != "";
         joinLines = concatStringsSep "\n";
         proxyPorts' = concatStringsSep "," (map toString proxyPorts);
+        tailscaleIp = lib.pipe lib.${namespace}.tailscale [
+          (builtins.attrValues)
+          (map (x: "\n${x}/32"))
+          (builtins.concatStringsSep "")
+        ];
         waitWan = ''
           i=1
           while [ "$i" -le "20" ]; do
               host_ipv4=$(ip -o -f inet addr show | grep -Ev 'utun|iot|peer|docker|podman|virbr|vnet|ovs|vmbr|veth|vmnic|vboxnet|lxcbr|xenbr|vEthernet' | grep -E ' 1(92|0|72)\.' | awk '/scope global/ {print $4}')
+              host_ipv4+=$'${tailscaleIp}'
               host_ipv6=$(ip -o -f inet6 addr show | awk '/scope global/ {print $4}')
               [ -n "$host_ipv6" ] && [ -n "$host_ipv4" ] && break
               sleep 1 && i=$((i + 1))
