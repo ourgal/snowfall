@@ -1,7 +1,7 @@
 { lib, namespace, ... }:
 let
   inherit (lib.${namespace}) domains;
-  inherit (builtins) isBool;
+  inherit (builtins) isBool throw;
 in
 {
   subsExcludes = "中国";
@@ -39,7 +39,7 @@ in
           in
           if raw != "" then "${sublink}${raw}" else "${prefix}/${user}/${repo}@${branch}/${path}"
         else
-          builtins.throw "unknown mkSubUrl converter type";
+          throw "unknown mkSubUrl converter type";
       filter = lib.attrsets.filterAttrs (
         _: v:
         let
@@ -345,6 +345,18 @@ in
           name = "SCP1";
           url = mkSubUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
           inherit updateInterval;
+        };
+        worker1 = {
+          name = "worker1";
+          url = mkSubUrl { raw = "https://h.x9527x.top/sub?token=X"; };
+          inherit updateInterval;
+          enable = true;
+        };
+        worker2 = {
+          name = "worker2";
+          url = mkSubUrl { raw = "https://misub.yifang.ggff.net/yifang/yifang1"; };
+          inherit updateInterval;
+          enable = true;
         };
       }
     );
