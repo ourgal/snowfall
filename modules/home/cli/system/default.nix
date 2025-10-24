@@ -25,6 +25,7 @@
     "glib"
     "handlr-regex"
     "hot-resize"
+    "hwinfo"
     "inxi"
     "isd"
     "kbt" # keyboard tester
