@@ -42,13 +42,15 @@ args.module (
       };
     in
     {
-      nixPkgs = [
-        # keep-sorted start
-        "git-credential-gopass"
-        "gopass"
-        "gopass-jsonapi"
-        # keep-sorted end
-      ];
+      nixPkgs =
+        p: with p; [
+          # keep-sorted start
+          git-credential-gopass
+          gopass
+          gopass-jsonapi
+          passExtensions.pass-import
+          # keep-sorted end
+        ];
       progs = {
         git.extraConfig.credential.helper = "gopass";
       };
