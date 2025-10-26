@@ -18,7 +18,12 @@ let
   value = {
     nix =
       let
-        isNotVM = builtins.elem host (lib.lists.remove "livecd" lib.${namespace}.settings.allHosts);
+        isNotVM = builtins.elem host (
+          lib.pipe lib.${namespace}.settings.allHosts [
+            (lib.lists.remove "livecd")
+            (lib.lists.remove "livecd-arm")
+          ]
+        );
         mirrors = [
           "https://mirrors.cernet.edu.cn/nix-channels/store?priority=10"
           "https://cache.nixos.org"

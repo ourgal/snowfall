@@ -16,6 +16,7 @@ let
     "nixos-mbr"
     "nixos-uefi"
     "livecd"
+    "livecd-arm"
   ];
   laptops = [
     "air"
