@@ -271,6 +271,7 @@
           filesystem
         ];
         t4.modules = [ inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4 ];
+        surface.modules = [ inputs.nixos-hardware.nixosModules.microsoft-surface-common ];
       };
 
       homes.modules =
