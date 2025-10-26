@@ -8,6 +8,7 @@ let
       emergencyAccess = config.users.users.root.hashedPassword;
       inherit (config.systemd) network;
     };
+    boot.loader.systemd-boot.configurationLimit = 5;
   };
   _args = { inherit value args; };
 in
