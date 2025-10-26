@@ -45,6 +45,7 @@ in
       harmonia = enabled;
       cloudflared = enabled;
       tailscale = enabled;
+      bbr = enabled;
     };
 
   system.stateVersion = "24.11";
