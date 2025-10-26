@@ -1,0 +1,57 @@
+From 877362b849d360c1d9a44d310495c4412105a272 Mon Sep 17 00:00:00 2001
+From: Eric Naim <dnaim@cachyos.org>
+Date: Mon, 5 May 2025 09:46:31 +0800
+Subject: [PATCH 67/67] CACHYOS: bbr3-6.15: Sync with pfactum
+
+Signed-off-by: Eric Naim <dnaim@cachyos.org>
+
+Link: https://github.com/CachyOS/linux/commit/8f792ff336633f74b20747544d38b22dc55e7ac6
+---
+ include/net/tcp.h  | 6 +++---
+ net/ipv4/tcp_bbr.c | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/include/net/tcp.h b/include/net/tcp.h
+index 1481e9fe4c5e..de404e4370d4 100644
+--- a/include/net/tcp.h
++++ b/include/net/tcp.h
+@@ -379,13 +379,13 @@ static inline void tcp_dec_quickack_mode(struct sock *sk)
+ #define	TCP_ECN_DEMAND_CWR	BIT(2)
+ #define	TCP_ECN_SEEN		BIT(3)
+ #define	TCP_ECN_MODE_ACCECN	BIT(4)
++#define	TCP_ECN_LOW		BIT(5)
++#define	TCP_ECN_ECT_PERMANENT	BIT(6)
+
+ #define	TCP_ECN_DISABLED	0
+ #define	TCP_ECN_MODE_PENDING	(TCP_ECN_MODE_RFC3168 | TCP_ECN_MODE_ACCECN)
+ #define	TCP_ECN_MODE_ANY	(TCP_ECN_MODE_RFC3168 | TCP_ECN_MODE_ACCECN)
+
+-#define	TCP_ECN_LOW		16
+-#define	TCP_ECN_ECT_PERMANENT	32
+
+ static inline bool tcp_ecn_mode_any(const struct tcp_sock *tp)
+ {
+@@ -1205,7 +1205,7 @@ enum tcp_ca_ack_event_flags {
+ /* Requires ECN/ECT set on all packets */
+ #define TCP_CONG_NEEDS_ECN		BIT(1)
+ /* Wants notification of CE events (CA_EVENT_ECN_IS_CE, CA_EVENT_ECN_NO_CE). */
+-#define TCP_CONG_WANTS_CE_EVENTS	0x4
++#define TCP_CONG_WANTS_CE_EVENTS	BIT(2)
+ #define TCP_CONG_MASK	(TCP_CONG_NON_RESTRICTED | \
+ 			 TCP_CONG_NEEDS_ECN | \
+ 			 TCP_CONG_WANTS_CE_EVENTS)
+diff --git a/net/ipv4/tcp_bbr.c b/net/ipv4/tcp_bbr.c
+index a14884ac4c0d..066da5e5747c 100644
+--- a/net/ipv4/tcp_bbr.c
++++ b/net/ipv4/tcp_bbr.c
+@@ -367,7 +367,7 @@ static void bbr_check_probe_rtt_done(struct sock *sk);
+  */
+ static bool bbr_can_use_ecn(const struct sock *sk)
+ {
+-	struct tcp_sock *tp = tcp_sk(sk);
++	const struct tcp_sock *tp = tcp_sk(sk);
+
+ 	return (tcp_ecn_mode_any(tp)) && (tp->ecn_flags & TCP_ECN_LOW);
+ }
+--
+2.50.1
