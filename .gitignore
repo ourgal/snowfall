@@ -6,3 +6,4 @@ out
 .env
 tags
 waiting.db
+/result

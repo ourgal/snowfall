@@ -71,6 +71,7 @@ in
         openssh.authorizedKeys.keys = attrValues config.dot.user.sshKeys;
       };
     };
+    programs.fish.enable = true;
     assertions = [
       {
         assertion = duplicatePorts == "";

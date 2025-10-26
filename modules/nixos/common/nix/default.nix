@@ -18,12 +18,13 @@ let
   value = {
     nix =
       let
+        isNotVM = builtins.elem host (lib.lists.remove "livecd" lib.${namespace}.settings.allHosts);
         mirrors = [
-          "http://${ip.home}:50000?priority=9"
           "https://mirrors.cernet.edu.cn/nix-channels/store?priority=10"
           "https://cache.nixos.org"
           "https://nix-community.cachix.org?priority=100"
         ]
+        ++ lib.optionals isNotVM [ "http://${ip.home}:50000?priority=9" ]
         ++ lib.optionals (host == "home") [
           "http://${ip.brix}:50000?priority=9"
           "http://${ip.router}:50000?priority=9"
