@@ -46,6 +46,7 @@ in
     "gpu-screen-recorder"
     "harmonia"
     "home-manager"
+    "io-scheduler"
     "iotop"
     "kmonad"
     "logrotate"
