@@ -39,6 +39,7 @@ in
     "bpftune"
     "common"
     "desktop"
+    "earlyoom"
     "envfs"
     "flatpak"
     "fonts"

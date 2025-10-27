@@ -81,6 +81,7 @@ in
       "bpftune"
       "common"
       "desktop"
+      "earlyoom"
       "envfs"
       "fonts"
       "geoclue2"
