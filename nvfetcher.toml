@@ -503,9 +503,9 @@ src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
 
 [hayase]
-src.github = "ThaUnknown/miru"
+src.github_tag = "hayase-app/docs"
 src.prefix = "v"
-fetch.url = "https://github.com/ThaUnknown/miru/releases/download/v$ver/linux-hayase-$ver-linux.AppImage"
+fetch.url = "https://github.com/hayase-app/docs/releases/download/v$ver/linux-hayase-$ver-linux.AppImage"
 
 [numara]
 src.github = "bornova/numara-calculator"
