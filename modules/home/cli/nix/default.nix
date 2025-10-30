@@ -3,8 +3,8 @@
     # keep-sorted start
     "attic-client"
     "cached-nix-shell"
-    "deploy-rs"
     "colmena"
+    "deploy-rs"
     "lon"
     "nix-converter"
     "nix-du"
@@ -14,6 +14,7 @@
     "nix-melt"
     "nix-output-monitor"
     "nix-prefetch"
+    "nix-prefetch-scripts"
     "nix-search-cli"
     "nix-template"
     "nix-tree"
