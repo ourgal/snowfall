@@ -1854,16 +1854,16 @@
   };
   hledger-fmt = {
     pname = "hledger-fmt";
-    version = "v0.3.5";
+    version = "v0.3.6";
     src = fetchFromGitHub {
       owner = "mondeja";
       repo = "hledger-fmt";
-      rev = "v0.3.5";
+      rev = "v0.3.6";
       fetchSubmodules = false;
-      sha256 = "sha256-VyDVdXxTge3ERTrkIIWgR75m7TaEbbPmFDNsoYOi9tM=";
+      sha256 = "sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-VyDVdXxTge3ERTrkIIWgR75m7TaEbbPmFDNsoYOi9tM=/Cargo.lock";
+      lockFile = ./. + "/sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=/Cargo.lock";
       outputHashes = {
         
       };
@@ -2336,6 +2336,20 @@
       sha256 = "sha256-jemSn+myF5dy4BRTr2W7TWE3/9yB8C/YnrfwF/qYl78=";
     };
     date = "2025-10-22";
+  };
+  natmap = {
+    pname = "natmap";
+    version = "20250924";
+    src = fetchFromGitHub {
+      owner = "heiher";
+      repo = "natmap";
+      rev = "20250924";
+      fetchSubmodules = true;
+      deepClone = true;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-6eKVfIBdVimp2Z/Ud6SBwUOEPdw1HaBuLt5qONWGXm8=";
+    };
   };
   neonmodem = {
     pname = "neonmodem";
@@ -2965,21 +2979,21 @@
   };
   shh = {
     pname = "shh";
-    version = "ef04cc909baa94f5e7eb4525ec0d6c13ae94056a";
+    version = "f3c935efd977fac6e651c9f7179c10cb4c70faf2";
     src = fetchFromGitHub {
       owner = "desbma";
       repo = "shh";
-      rev = "ef04cc909baa94f5e7eb4525ec0d6c13ae94056a";
+      rev = "f3c935efd977fac6e651c9f7179c10cb4c70faf2";
       fetchSubmodules = false;
-      sha256 = "sha256-OxiQOwoWytZvPVVurSckPSWcb88pyDHRdUV/87Dbb9Q=";
+      sha256 = "sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-OxiQOwoWytZvPVVurSckPSWcb88pyDHRdUV_87Dbb9Q=/Cargo.lock";
+      lockFile = ./. + "/sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=/Cargo.lock";
       outputHashes = {
         
       };
     };
-    date = "2025-10-22";
+    date = "2025-10-30";
   };
   shipit = {
     pname = "shipit";
@@ -3798,18 +3812,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202510282213";
+    version = "202510292213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510282213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geoip.dat";
       sha256 = "sha256-fai84ghAXZbEIYlaGwEN9UGZIY1NFt9JSgYDL5AmbbA=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202510282213";
+    version = "202510292213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510282213/geosite.dat";
-      sha256 = "sha256-SS4tHcjivi2iLiSn028XfGbd+VhodBuTzAX2AIJuXJo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geosite.dat";
+      sha256 = "sha256-6nNrlGUjfErLHszx20HaNVAakT6MDMbjL7W3ramkwaA=";
     };
   };
   vim-auto-save = {

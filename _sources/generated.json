@@ -3326,7 +3326,7 @@
     "hledger-fmt": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-VyDVdXxTge3ERTrkIIWgR75m7TaEbbPmFDNsoYOi9tM=/Cargo.lock",
+                "sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=/Cargo.lock",
                 {}
             ]
         },
@@ -3342,12 +3342,12 @@
             "name": null,
             "owner": "mondeja",
             "repo": "hledger-fmt",
-            "rev": "v0.3.5",
-            "sha256": "sha256-VyDVdXxTge3ERTrkIIWgR75m7TaEbbPmFDNsoYOi9tM=",
+            "rev": "v0.3.6",
+            "sha256": "sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.5"
+        "version": "v0.3.6"
     },
     "hssp": {
         "cargoLock": null,
@@ -4185,6 +4185,27 @@
             "type": "github"
         },
         "version": "90d8633e1488a0c20b2d6a500f2e99fb4b6b2abd"
+    },
+    "natmap": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "natmap",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": true,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "heiher",
+            "repo": "natmap",
+            "rev": "20250924",
+            "sha256": "sha256-6eKVfIBdVimp2Z/Ud6SBwUOEPdw1HaBuLt5qONWGXm8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "20250924"
     },
     "neonmodem": {
         "cargoLock": null,
@@ -5292,11 +5313,11 @@
     "shh": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-OxiQOwoWytZvPVVurSckPSWcb88pyDHRdUV_87Dbb9Q=/Cargo.lock",
+                "sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-10-22",
+        "date": "2025-10-30",
         "extract": null,
         "name": "shh",
         "passthru": null,
@@ -5308,12 +5329,12 @@
             "name": null,
             "owner": "desbma",
             "repo": "shh",
-            "rev": "ef04cc909baa94f5e7eb4525ec0d6c13ae94056a",
-            "sha256": "sha256-OxiQOwoWytZvPVVurSckPSWcb88pyDHRdUV/87Dbb9Q=",
+            "rev": "f3c935efd977fac6e651c9f7179c10cb4c70faf2",
+            "sha256": "sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ef04cc909baa94f5e7eb4525ec0d6c13ae94056a"
+        "version": "f3c935efd977fac6e651c9f7179c10cb4c70faf2"
     },
     "shipit": {
         "cargoLock": null,
@@ -6735,9 +6756,9 @@
             "name": null,
             "sha256": "sha256-fai84ghAXZbEIYlaGwEN9UGZIY1NFt9JSgYDL5AmbbA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510282213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geoip.dat"
         },
-        "version": "202510282213"
+        "version": "202510292213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6748,11 +6769,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SS4tHcjivi2iLiSn028XfGbd+VhodBuTzAX2AIJuXJo=",
+            "sha256": "sha256-6nNrlGUjfErLHszx20HaNVAakT6MDMbjL7W3ramkwaA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510282213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geosite.dat"
         },
-        "version": "202510282213"
+        "version": "202510292213"
     },
     "vim-auto-save": {
         "cargoLock": null,
