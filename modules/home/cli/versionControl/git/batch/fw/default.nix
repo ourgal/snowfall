@@ -12,6 +12,7 @@ args.module (
       soft = lib.${namespace}.git.hostAliases.soft.name;
       myGithub = lib.${namespace}.git.hostAliases.myGithub.name;
       github = lib.${namespace}.git.hostAliases.github.name;
+      home = "ssh://home:${config.home.homeDirectory}/workspace";
     in
     {
       nixPkgs = "fw";
@@ -29,7 +30,7 @@ args.module (
       };
       confs = {
         "fw/settings.toml" = {
-          workspace = "~/workspace";
+          workspace = "${config.home.homeDirectory}/workspace";
           # shell = [
           #   "/usr/bin/zsh"
           #   "-c"
@@ -95,6 +96,10 @@ args.module (
             {
               name = "github";
               git = "${myGithub}:snowfall";
+            }
+            {
+              name = "home";
+              git = "${home}/snowfall";
             }
           ];
         };
