@@ -48,6 +48,7 @@ in
       nuc = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDeK+BbH3sS+809Q4bUWph1QFIPLIQMxWz5BU0MRDOyb2WKmK+83mXxNbpTf8bR+O5bnf9e8E/o16pKmDjGQ3mcOinBjrRc2d561lfXqtQ33WJwWVlrY+dEaaimldUxF3P9T29/DIKWIL+7u/gFwZuveEBJ7peSxcbjN0U+qk6BzKrS6TKA+IlGL6464dDNjdL5lcmea+1Oo6VIFUJVF9Ihh3DRTaciHJ17jTA2K2sx+rBrLYZ7PpdV0Sf6/slUiYppWTajmgB+h4vX9aSa0rU7jwDeSHhav+CYqxyHVVJlKZQYEABDYrC1uCGVtXEAy2+fEdIjjzpT+0F4bQSqZzNuNBzYs0EPgEy1EawmIzWO12MLpjnJ555BO6wxNZvOd7R/+Jgsdt27O3j/2vFthOI7+kUVHVSQfmq6KVOX6Qdk90MFi8CukpCo5gzgtpSjdgRR/Vrl0MJeWoyallVhcNpOr3oDCtY51m2WoBmycKYZtoRNw+5h8cu8rz6E2aH62zE= zxc@nuc";
       m6NixOnDroid = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzosd4z2sZWxQFy4LpFFC3fSbLX8m4THJqESJkIIJaH nix-on-droid@localhost";
       macmini = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7+IJ19YD6oqHwJ2w3h0mA7tI+zquJidGODkDcsbUd5 zxc@macmini";
+      t4 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTr71VzINwJcF2XMBOblSjUXGcMA9Y3B417N0+57NeT zxc@t4";
     };
     duckdns = {
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
