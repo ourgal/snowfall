@@ -1463,3 +1463,9 @@ fetch.github = "jkhas8/tmux-paste-image"
 [ch]
 src.github = "dtonon/ch"
 fetch.github = "dtonon/ch"
+
+[natmap]
+src.github = "heiher/natmap"
+fetch.github = "heiher/natmap"
+git.fetchSubmodules = true
+git.deepClone = true

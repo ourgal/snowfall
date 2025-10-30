@@ -2,6 +2,7 @@
   myPkgs = [
     # keep-sorted start
     "bestsub"
+    "natmap"
     "proxytunnel"
     "v2dat"
     # keep-sorted end
