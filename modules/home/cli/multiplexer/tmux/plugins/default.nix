@@ -18,7 +18,6 @@
     "sesh"
     "session-wizard"
     "sessionx"
-    "ssh-split"
     "tea"
     "termsand"
     "thumbs"
