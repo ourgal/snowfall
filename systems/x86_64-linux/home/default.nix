@@ -43,6 +43,7 @@ in
     "envfs"
     "flatpak"
     "fonts"
+    "fprintd"
     "geoclue2"
     "gpu-screen-recorder"
     "harmonia"
