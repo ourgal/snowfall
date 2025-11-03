@@ -70,6 +70,22 @@ args.module (
         unzipManga:
           @${unzipManga}
 
+        epub2md:
+          #!/usr/bin/env bash
+          pandoc -f epub "$(fzf)" -t markdown -o temp.md
+          sed -i -e 's/`<ruby>`{=html}//g' \
+                      -e 's/`<rt>`{=html}/（/g' \
+                      -e 's/`<\/rt>`{=html}`<\/ruby>`{=html}/）/g' \
+                      -e '/^$/d' \
+                      -e '/^::: duokan-image-single$/d' \
+                      -e 's/^\\//' \
+                      -e '/xhtml}/d' \
+                      -E \
+                      -e 's/^#+\s//' \
+                      -e 's/\{.+\}//g' \
+                      -e '/^:::\s*$/d' temp.md
+
+
         help:
           @just --list --justfile ~/.user.justfile
       ''
