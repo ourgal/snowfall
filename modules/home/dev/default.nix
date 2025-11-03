@@ -30,6 +30,7 @@
     "keep-sorted"
     "license-cli"
     "ls-lint"
+    "mise"
     "process-compose"
     "reuse"
     "tooling-language-server"
