@@ -20,6 +20,7 @@
     "lux"
     "mangal"
     "mloader"
+    "pget"
     "tdl"
     "tremc"
     "wget"
