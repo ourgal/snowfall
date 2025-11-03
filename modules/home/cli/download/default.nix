@@ -16,6 +16,7 @@
     "axel"
     "baidupcs-go"
     "btfs"
+    "lftp"
     "libgen-cli"
     "lux"
     "mangal"
