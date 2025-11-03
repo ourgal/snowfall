@@ -86,6 +86,7 @@ args.module (
         "org.tasks"
       ];
       keyboard = [ "inc.flide.vi8" ];
+      ui = [ "cu.axel.smartdock" ];
     in
     {
       myPkgs = "fdroidcl";
@@ -169,6 +170,7 @@ args.module (
                 ++ git
                 ++ termux
                 ++ editor
+                ++ ui
                 ++ keyboard;
               inherit repos;
             }
