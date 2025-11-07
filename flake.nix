@@ -160,6 +160,7 @@
       url = "github:Lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wrapper-manager.url = "github:viperML/wrapper-manager";
   };
 
   nixConfig = {

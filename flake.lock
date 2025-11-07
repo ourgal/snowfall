@@ -2227,6 +2227,7 @@
         "unstable": "unstable_2",
         "winapps": "winapps",
         "wired": "wired",
+        "wrapper-manager": "wrapper-manager",
         "wrappers": "wrappers"
       }
     },
@@ -2878,6 +2879,21 @@
       "original": {
         "owner": "Toqozz",
         "repo": "wired-notify",
+        "type": "github"
+      }
+    },
+    "wrapper-manager": {
+      "locked": {
+        "lastModified": 1757156862,
+        "narHash": "sha256-OGXsTE5jWhGiFfK6OwMvjksrYSobsIFUSUzKsexCDxY=",
+        "owner": "viperML",
+        "repo": "wrapper-manager",
+        "rev": "801dd9c876fcada046af45543e8c7e0bbccf20ea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "viperML",
+        "repo": "wrapper-manager",
         "type": "github"
       }
     },

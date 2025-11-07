@@ -3,14 +3,25 @@ args.module (
   args
   // (
     let
-      inherit (args) config pkgs disabled;
+      inherit (args)
+        config
+        pkgs
+        disabled
+        namespace
+        lib
+        ;
       ln = config.lib.file.mkOutOfStoreSymlink;
       sync = "${config.xdg.dataHome}/syncthing";
+      stc = lib.${namespace}.wrapper-manager.wrapWith pkgs {
+        basePackage = pkgs.stc-cli;
+        prependFlags = [
+          "--homedir"
+          "${config.xdg.configHome}/syncthing"
+        ];
+      };
     in
     {
-      progs.fish.functions.stc = {
-        body = "${pkgs.stc-cli}/bin/stc --homedir=${config.xdg.configHome}/syncthing $argv";
-      };
+      nixPkgs = _: [ stc ];
       confs = {
         todo = ln "${sync}/todo";
       };
