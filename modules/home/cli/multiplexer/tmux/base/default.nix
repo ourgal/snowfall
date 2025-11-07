@@ -70,7 +70,6 @@ args.module (
         unbind M-Right # resize 5 rows right
         unbind M-Left # resize 5 rows left
         unbind b
-        unbind s # choose session
         unbind w # choose window
         unbind . # move window
         unbind i # display window information
@@ -79,7 +78,8 @@ args.module (
         # new window and retain cwd
         bind n new-session
         bind p paste-buffer
-        ${if isSshSplit then "" else ''bind-key "c" new-window - c "#{pane_current_path}"''}
+        ${if isSshSplit then "" else ''bind-key "c" new-window -c "#{pane_current_path}"''}
+        ${if isSshSplit then "" else "unbind s # session"}
 
         # Rename session and window
         bind r command-prompt -I "#{window_name}" "rename-window '%%'"
