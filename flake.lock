@@ -2226,7 +2226,8 @@
         "ulauncher": "ulauncher",
         "unstable": "unstable_2",
         "winapps": "winapps",
-        "wired": "wired"
+        "wired": "wired",
+        "wrappers": "wrappers"
       }
     },
     "rust-analyzer-src": {
@@ -2877,6 +2878,26 @@
       "original": {
         "owner": "Toqozz",
         "repo": "wired-notify",
+        "type": "github"
+      }
+    },
+    "wrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762519627,
+        "narHash": "sha256-iQlBbCgacLWq9bvM2xzaZgJG2bepMmHkN2jCVsxPFSU=",
+        "owner": "Lassulus",
+        "repo": "wrappers",
+        "rev": "769581af0b422f962354e532879c3f310ab49474",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Lassulus",
+        "repo": "wrappers",
         "type": "github"
       }
     },
