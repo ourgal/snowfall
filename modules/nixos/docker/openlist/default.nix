@@ -13,7 +13,7 @@ let
     dockerOpts
     getDirname
     mkFireholRule
-    mkSystemUesr
+    mkSystemUser
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
@@ -33,7 +33,7 @@ let
         tcp = cfg.ports;
       };
     }
-    // mkSystemUesr name;
+    // mkSystemUser name;
   name = getDirname _name;
   ports = 5244;
   extraOpts = dockerOpts { inherit name ports; };
