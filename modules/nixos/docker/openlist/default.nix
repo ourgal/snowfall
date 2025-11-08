@@ -13,15 +13,14 @@ let
     dockerOpts
     getDirname
     mkFireholRule
-    mkSystemUser
     ;
   cfg = cfgNixos config.${namespace} ./.;
   value =
     (arionProj {
       inherit cfg;
       inherit (lib.${namespace}.sources."docker-${name}") src;
-      user = name;
-      nativeVolumes = [ "/var/lib/${name}:/opt/openlist/data" ];
+      user = "0:0";
+      config = "/opt/openlist/data";
       env = {
         UMASK = "022";
       };
@@ -32,8 +31,7 @@ let
         inherit name;
         tcp = cfg.ports;
       };
-    }
-    // mkSystemUser name;
+    };
   name = getDirname _name;
   ports = 5244;
   extraOpts = dockerOpts { inherit name ports; };
