@@ -74,11 +74,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-dJplwTzOZo51pb954N8saMwN8VfBGL33Wg9yRRe5Pfs=",
+            "sha256": "sha256-0s8wYUixy/UcgoXspIwsnGEEn223JuKc7eGoIwDv5+M=",
             "type": "url",
-            "url": "https://github.com/GuiWonder/Shanggu/releases/download/1.024/ShangguMonoTTFs.7z"
+            "url": "https://github.com/GuiWonder/Shanggu/releases/download/1.025/ShangguMonoTTFs.7z"
         },
-        "version": "1.024"
+        "version": "1.025"
     },
     "advance-touch": {
         "cargoLock": null,
@@ -109,12 +109,12 @@
             "name": null,
             "owner": "tak-bro",
             "repo": "aicommit2",
-            "rev": "v2.4.14",
-            "sha256": "sha256-tRam8fDQDwULMcfwXOZKGkyN355BpQaewvUkTiwxSdI=",
+            "rev": "v2.4.16",
+            "sha256": "sha256-6Hv5CB2WgUO/Ri2n76z0pyXhEdbCeJ6q9+MKSxzaqkg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.4.14"
+        "version": "v2.4.16"
     },
     "akuse": {
         "cargoLock": null,
@@ -629,11 +629,11 @@
     "cdo": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-51tsqivLZrAOj18xWEgd6BP2PmqQBGxPEcpKe4AXnYQ=/Cargo.lock",
+                "sha256-tkhLYkQkKL7MntOME_xrEwIi1yo9RSvlqyg719wAVBQ=/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-10-25",
+        "date": "2025-11-01",
         "extract": null,
         "name": "cdo",
         "passthru": null,
@@ -645,12 +645,12 @@
             "name": null,
             "owner": "dotboris",
             "repo": "cdo",
-            "rev": "e866f8bdf9deb501f31f7c651a46ae5c25941138",
-            "sha256": "sha256-51tsqivLZrAOj18xWEgd6BP2PmqQBGxPEcpKe4AXnYQ=",
+            "rev": "86949bde7cdbf1aa044ce04e1e3b4cfae0717f8d",
+            "sha256": "sha256-tkhLYkQkKL7MntOME/xrEwIi1yo9RSvlqyg719wAVBQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "e866f8bdf9deb501f31f7c651a46ae5c25941138"
+        "version": "86949bde7cdbf1aa044ce04e1e3b4cfae0717f8d"
     },
     "ch": {
         "cargoLock": null,
@@ -675,7 +675,7 @@
     },
     "chezmoi-vim": {
         "cargoLock": null,
-        "date": "2025-10-29",
+        "date": "2025-10-31",
         "extract": null,
         "name": "chezmoi-vim",
         "passthru": null,
@@ -687,12 +687,12 @@
             "name": null,
             "owner": "alker0",
             "repo": "chezmoi.vim",
-            "rev": "03b8d12928394bfaefa6f4ea8e652a9054b91f05",
-            "sha256": "sha256-VHLuJe8FvtvuBKvR1Wg93tSABg+8qs0yCt+PLcpzaM0=",
+            "rev": "73b30df35c6b645ebd2e6a440eea8463ef3c3f47",
+            "sha256": "sha256-4gnY60CZUrVgqYhmyBdE4mTD7D4iqphpSgKWxl+UlzA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "03b8d12928394bfaefa6f4ea8e652a9054b91f05"
+        "version": "73b30df35c6b645ebd2e6a440eea8463ef3c3f47"
     },
     "chinadns-ng": {
         "cargoLock": null,
@@ -947,12 +947,12 @@
             "name": null,
             "owner": "aksiksi",
             "repo": "compose2nix",
-            "rev": "v0.3.2",
-            "sha256": "sha256-3i49IyYDwyVQffjHrHPmtPJl4ZkT1VpiFVDmX/dHcKw=",
+            "rev": "v0.3.3",
+            "sha256": "sha256-0QCYgzxg0upnrVGDXbX9GgSHyzeMP3yqNor2t8DVwiU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.2"
+        "version": "v0.3.3"
     },
     "config-file-validator": {
         "cargoLock": null,
@@ -1378,14 +1378,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:057eedf25a22905685c55be78b2dd70bcd617a921384cd17cb3f4e8901753331",
+            "imageDigest": "sha256:06c76759d062c185d8ac0b48f302258645b8d99db86109a3d6dce3209d93de51",
             "imageName": "flaresolverr/flaresolverr",
-            "imageTag": "v3.4.3",
+            "imageTag": "v3.4.4",
             "os": null,
-            "sha256": "sha256-l53sHDXikpr4JiIbo4YF962oS4HtNscBC4sUn6wmqC8=",
+            "sha256": "sha256-AdXMUowLvS6fWmdnfgp6KHgbAUmNC05hgaSJ36DeXhY=",
             "tlsVerify": null
         },
-        "version": "v3.4.3"
+        "version": "v3.4.4"
     },
     "docker-freshrss": {
         "cargoLock": null,
@@ -1507,6 +1507,26 @@
         },
         "version": "2.2.14"
     },
+    "docker-openlist": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "docker-openlist",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "arch": null,
+            "finalImageName": null,
+            "finalImageTag": null,
+            "imageDigest": "sha256:37cd72237cab7035a56487d3a93ded63d0b699db0af3208d88b9fdedcbcb0797",
+            "imageName": "openlistteam/openlist",
+            "imageTag": "v4.1.6",
+            "os": null,
+            "sha256": "sha256-xyrfMwDvlR85piDPLdGnt/ElT2lW2qnGYlcDlEnrAAM=",
+            "tlsVerify": null
+        },
+        "version": "v4.1.6"
+    },
     "docker-pairdrop": {
         "cargoLock": null,
         "date": null,
@@ -1618,14 +1638,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:9a0761c7a68a245b43fd278a19802ea74660ff05e4b5b0126e5d99947bcd459e",
+            "imageDigest": "sha256:8967af7a72a39c8c1857eee91b0c1e55ca92822852c3cc6d5872b8992ffce935",
             "imageName": "charmcli/soft-serve",
-            "imageTag": "v0.10.0",
+            "imageTag": "v0.11.0",
             "os": null,
-            "sha256": "sha256-4E5WZNU/+RyEmT9c+vdzwBCrdNx0rcRKTLSCD89EdwE=",
+            "sha256": "sha256-/Hb1Rb2ocjVT8Lu85R2Dx6goAyqxTvAbDHq6s/rHmzw=",
             "tlsVerify": null
         },
-        "version": "v0.10.0"
+        "version": "v0.11.0"
     },
     "docker-subconverter": {
         "cargoLock": null,
@@ -1731,7 +1751,7 @@
     },
     "dps-ghosttext-vim": {
         "cargoLock": null,
-        "date": "2025-10-19",
+        "date": "2025-11-02",
         "extract": null,
         "name": "dps-ghosttext-vim",
         "passthru": null,
@@ -1743,12 +1763,12 @@
             "name": null,
             "owner": "gamoutatsumi",
             "repo": "dps-ghosttext.vim",
-            "rev": "7be9133dc2e36b87e1ddfdc9ec3c59bb2fa5655f",
-            "sha256": "sha256-Hf5GsawrZWWu9u78smcPu5q0ZdvdmMiCWCdADnMupOM=",
+            "rev": "eab1e01334f2fc5d064b0850a73ebafdabe172e8",
+            "sha256": "sha256-H5W4FycyEVsg7BQtkBTXObxQ1JrIt/HIwns96mw8RGk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7be9133dc2e36b87e1ddfdc9ec3c59bb2fa5655f"
+        "version": "eab1e01334f2fc5d064b0850a73ebafdabe172e8"
     },
     "dra": {
         "cargoLock": {
@@ -3155,12 +3175,12 @@
             "name": null,
             "owner": "muandane",
             "repo": "goji",
-            "rev": "v0.1.8",
-            "sha256": "sha256-oxH0IQsewLHJpK8C2ox6iopObkKF4efDiz4/6cERsw8=",
+            "rev": "v0.1.9",
+            "sha256": "sha256-gkNFaXKKLKzoh4A3SQi+B3s2HrXNQLRABV7GF9uRumc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.8"
+        "version": "v0.1.9"
     },
     "goodls": {
         "cargoLock": null,
@@ -4041,7 +4061,7 @@
     },
     "mpv-blur-edges": {
         "cargoLock": null,
-        "date": "2025-03-09",
+        "date": "2025-11-01",
         "extract": null,
         "name": "mpv-blur-edges",
         "passthru": null,
@@ -4053,12 +4073,12 @@
             "name": null,
             "owner": "occivink",
             "repo": "mpv-scripts",
-            "rev": "65aa1da29570e9c21b49292725ec5dd719ab6bb4",
-            "sha256": "sha256-pca24cZY2ZNxkY1XP2T2WKo1UbD8gsGn+EskGH+CggE=",
+            "rev": "01f3e99558915bb715b614d7f4b052230360eb21",
+            "sha256": "sha256-v3TGsCzSg+a1vrOgI5NbTVf8Bh/iMRRgwMy194sNq1Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "65aa1da29570e9c21b49292725ec5dd719ab6bb4"
+        "version": "01f3e99558915bb715b614d7f4b052230360eb21"
     },
     "mpv-btfs-stream": {
         "cargoLock": null,
@@ -4331,11 +4351,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SM2nCmkY4HV10eUeJNM4P0XT6DdNbuJJEW8lv7mhFPI=",
+            "sha256": "sha256-nL0IvkNJIQRg6WE+EeeJ9LE+y6NvwLXpwbdtixetYEo=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v6.4.0/Numara-6.4.0-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v6.4.1/Numara-6.4.1-x86_64.AppImage"
         },
-        "version": "6.4.0"
+        "version": "6.4.1"
     },
     "org-export": {
         "cargoLock": null,
@@ -4554,7 +4574,7 @@
     },
     "pnut": {
         "cargoLock": null,
-        "date": "2025-10-11",
+        "date": "2025-11-05",
         "extract": null,
         "name": "pnut",
         "passthru": null,
@@ -4566,12 +4586,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "32801ba6f2b17d0f0857483db4c4430fc0e65f12",
-            "sha256": "sha256-cxF2AH+oaIknjgRk0mxzsiq3fEKaoPfDiAr4cpWfaTc=",
+            "rev": "2e638257b14ece2b2956e825d09c2cda3db2530d",
+            "sha256": "sha256-Hl5CYHiqKmJb5TDSWeksrz9VFJ4SbS7thgrPW7GHgu8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "32801ba6f2b17d0f0857483db4c4430fc0e65f12"
+        "version": "2e638257b14ece2b2956e825d09c2cda3db2530d"
     },
     "posting": {
         "cargoLock": null,
@@ -4687,11 +4707,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-HaHIKw/BQLsBA7wUQf/gYhVMjThJEYl1HuAP2MplznQ=",
+            "sha256": "sha256-D4y5VVAApLW2F/Zr/SVmJkxJhLJ1idO4RWhZg+jqhaw=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.12.3.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic/pydantic-2.12.4.tar.gz"
         },
-        "version": "2.12.3"
+        "version": "2.12.4"
     },
     "pydantic-core": {
         "cargoLock": null,
@@ -4702,11 +4722,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-cOR5KanUoZBaZ+S2h9WUYCY5BWio6VK5KCQRgGPO5NU=",
+            "sha256": "sha256-CNqlHqFq03P/1edgYlLMMvB7xysoKEtrycbfgEgWR24=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.41.4.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pydantic_core/pydantic_core-2.41.5.tar.gz"
         },
-        "version": "2.41.4"
+        "version": "2.41.5"
     },
     "pydantic-settings": {
         "cargoLock": null,
@@ -4783,7 +4803,7 @@
     "qlty": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-azSFfQHbcuGfe2NNneozdhLTGBOnoO46FBKOaWbnd94=/Cargo.lock",
+                "sha256-8MGjMtjJdk4B9hYMArT8LDjRxVyIWtC+4eiKEedpA_4=/Cargo.lock",
                 {
                     "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
                 }
@@ -4801,12 +4821,12 @@
             "name": null,
             "owner": "qltysh",
             "repo": "qlty",
-            "rev": "v0.587.0",
-            "sha256": "sha256-azSFfQHbcuGfe2NNneozdhLTGBOnoO46FBKOaWbnd94=",
+            "rev": "v0.588.0",
+            "sha256": "sha256-8MGjMtjJdk4B9hYMArT8LDjRxVyIWtC+4eiKEedpA/4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.587.0"
+        "version": "v0.588.0"
     },
     "qman": {
         "cargoLock": null,
@@ -5278,11 +5298,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-/KLGEzi9CNmTnndZRyhXe22jMlBB2Zfvv9RCJw8CtM0=",
+            "sha256": "sha256-+/etnqZsy1/x8w9jINZBrGAkYrflQ80ZBP9ghCqyj2g=",
             "type": "url",
-            "url": "https://github.com/sbsrf/sbsrf/releases/download/20241008/sbsrf.zip"
+            "url": "https://github.com/sbsrf/sbsrf/releases/download/20251108/sbsrf.zip"
         },
-        "version": "20241008"
+        "version": "20251108"
     },
     "servicer": {
         "cargoLock": {
@@ -5313,11 +5333,11 @@
     "shh": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=/Cargo.lock",
+                "sha256-wTjTE8M9cQ_z61V963e68Ag1IqkaiM_TcR_mHWR6LkU=/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-10-30",
+        "date": "2025-11-07",
         "extract": null,
         "name": "shh",
         "passthru": null,
@@ -5329,12 +5349,12 @@
             "name": null,
             "owner": "desbma",
             "repo": "shh",
-            "rev": "f3c935efd977fac6e651c9f7179c10cb4c70faf2",
-            "sha256": "sha256-BkuWFy88UWkYD7C0tWraKdHOJbESPs598ggH2UzugDM=",
+            "rev": "3ae335779451570f10cd590ada68cdf493c00f30",
+            "sha256": "sha256-wTjTE8M9cQ/z61V963e68Ag1IqkaiM/TcR/mHWR6LkU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f3c935efd977fac6e651c9f7179c10cb4c70faf2"
+        "version": "3ae335779451570f10cd590ada68cdf493c00f30"
     },
     "shipit": {
         "cargoLock": null,
@@ -5381,7 +5401,7 @@
     "simplemoji": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-QYZuyK2UM_ga335Kq5cDmXl_hTsNnLP506rhAdP0IXM=/Cargo.lock",
+                "sha256-f6KwfcYNLceRFFoR0NzrVl0fcXvhRb3HPNgRTfYWns8=/Cargo.lock",
                 {}
             ]
         },
@@ -5397,12 +5417,12 @@
             "name": null,
             "owner": "SergioRibera",
             "repo": "simplemoji",
-            "rev": "v1.2.0",
-            "sha256": "sha256-QYZuyK2UM/ga335Kq5cDmXl/hTsNnLP506rhAdP0IXM=",
+            "rev": "v1.2.1",
+            "sha256": "sha256-f6KwfcYNLceRFFoR0NzrVl0fcXvhRb3HPNgRTfYWns8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.2.0"
+        "version": "v1.2.1"
     },
     "sing-box-fork": {
         "cargoLock": null,
@@ -5984,11 +6004,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-9A35FloAHBAklpjVMvL1pxcItw8OTvP84IGp3ZP/6qo=",
+            "sha256": "sha256-5fFSzdR9tIpjXSO4OXIbrk0Oi22FXj/t5yhSGCiSlOM=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-6.4.0.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-6.5.0.tar.gz"
         },
-        "version": "6.4.0"
+        "version": "6.5.0"
     },
     "timewarrior": {
         "cargoLock": null,
@@ -6754,11 +6774,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-fai84ghAXZbEIYlaGwEN9UGZIY1NFt9JSgYDL5AmbbA=",
+            "sha256": "sha256-eqe6n5bT0kBIvUSukYLHK3lzfBf9sV0aBwFWFHxAzbU=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511072213/geoip.dat"
         },
-        "version": "202510292213"
+        "version": "202511072213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6769,11 +6789,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-6nNrlGUjfErLHszx20HaNVAakT6MDMbjL7W3ramkwaA=",
+            "sha256": "sha256-7DKqlolHOimDDVhCe2kocuEnQU+jipkRYAhRvcScZJA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202510292213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511072213/geosite.dat"
         },
-        "version": "202510292213"
+        "version": "202511072213"
     },
     "vim-auto-save": {
         "cargoLock": null,
@@ -7413,11 +7433,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-AlJLo2iDvCCCtGfnmViZXKzmTBMcYPJ5vUxdmVi9iI0=",
+            "sha256": "sha256-644SGu20i86G1Ehz8csTo71HqqlYlhY5mAaJq+1TDsk=",
             "type": "url",
-            "url": "https://github.com/Zephyruso/zashboard/releases/download/v1.108.0/dist.zip"
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v2.0.0/dist.zip"
         },
-        "version": "v1.108.0"
+        "version": "v2.0.0"
     },
     "zhlint": {
         "cargoLock": null,
