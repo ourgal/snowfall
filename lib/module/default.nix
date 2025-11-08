@@ -846,4 +846,13 @@ rec {
       toTOML
       ;
   };
+  mkSystemUser = name: {
+    users.users.${name} = {
+      description = "${lib.capitalize name} Service User";
+      home = "/var/lib/${name}";
+      createHome = true;
+      isSystemUser = true;
+      group = name;
+    };
+  };
 }

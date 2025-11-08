@@ -28,6 +28,7 @@ let
     "miniflux"
     "navidrome"
     "nix-serve"
+    "openlist"
     "pairdrop"
     "pyload"
     "qd"

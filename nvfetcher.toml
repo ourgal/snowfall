@@ -520,6 +520,10 @@ fetch.github = "Benexl/viu"
 src.container = "xhofe/alist-aria2"
 fetch.docker = "xhofe/alist-aria2"
 
+[docker-openlist]
+src.container = "openlistteam/openlist"
+fetch.docker = "openlistteam/openlist"
+
 [docker-ariang]
 src.container = "leonismoe/ariang"
 fetch.docker = "leonismoe/ariang"

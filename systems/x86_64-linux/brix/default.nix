@@ -33,10 +33,7 @@ in
         subconverter = enabled // {
           inherit nfs;
         };
-        alist = enabled // {
-          inherit nfs;
-          duckdns = enabled;
-        };
+        openlist = enabled;
         qd = enabled // {
           ports = 8923;
           inherit nfs;
