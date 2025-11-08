@@ -50,7 +50,7 @@ let
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
     anki-sync-server = "anki.${domain}";
-    sublink = "sublink-worker.sageer.me";
+    sublink = lib.strings.fileContents ./sublink.key;
   };
   xyzDomains = (foldl' (acc: v: acc // { "${v}" = "${v}.${xyzDomain}"; }) { } services) // {
     anki-sync-server = "anki.${xyzDomain}";
