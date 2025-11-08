@@ -289,7 +289,7 @@
           sops-nix = inputs.sops-nix.homeManagerModules.sops;
           nix-colors = inputs.nix-colors.homeManagerModules.default;
           wired = inputs.wired.homeManagerModules.default;
-          nix-index-database = inputs.nix-index-database.hmModules.nix-index;
+          nix-index-database = inputs.nix-index-database.homeModules.nix-index;
           catppuccin = inputs.catppuccin.homeModules.catppuccin;
           nixvim = inputs.nixvim.homeManagerModules.nixvim;
           nyaa = inputs.nyaa.homeManagerModule;
