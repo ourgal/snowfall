@@ -358,6 +358,20 @@ in
           inherit updateInterval;
           enable = true;
         };
+        kejiland = {
+          name = "kejiland";
+          url = mkSubUrl { raw = "https://sub.hkvip.ip-ddns.com/kejiland"; };
+          inherit updateInterval;
+          enable = true;
+        };
+        danfeng = {
+          name = "danfeng";
+          url = mkSubUrl {
+            raw = "https://sub.danfeng.eu.org/sub?uuid=b5544203-55e3-426e-92f1-0684c93f9829&host=snippet.danfeng.site";
+          };
+          inherit updateInterval;
+          enable = true;
+        };
       }
     );
 }
