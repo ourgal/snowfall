@@ -21,7 +21,7 @@ let
       inherit cfg;
       inherit (lib.${namespace}.sources."docker-${name}") src;
       user = name;
-      config = "/opt/openlist/data";
+      nativeVolumes = [ "/var/lib/${name}:/opt/openlist/data" ];
       env = {
         UMASK = "022";
       };
