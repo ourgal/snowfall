@@ -30,9 +30,7 @@ in
       in
       enabled
       // {
-        subconverter = enabled // {
-          inherit nfs;
-        };
+        subconverter = enabled;
         openlist = enabled;
         qd = enabled // {
           ports = 8923;
