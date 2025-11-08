@@ -1,4 +1,9 @@
-{ lib, inputs, ... }:
+{
+  lib,
+  namespace,
+  inputs,
+  ...
+}:
 let
   inherit (builtins)
     isString
@@ -849,7 +854,7 @@ rec {
   mkSystemUser = name: {
     users = {
       users.${name} = {
-        description = "${lib.capitalize name} Service User";
+        description = "${lib.${namespace}.capitalize name} Service User";
         home = "/var/lib/${name}";
         createHome = true;
         isSystemUser = true;
