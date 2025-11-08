@@ -19,6 +19,7 @@
     "bkt"
     "charm-freeze"
     "dcfldd"
+    "e2fsprogs"
     "exfatprogs"
     "flamelens"
     "geekbench"
