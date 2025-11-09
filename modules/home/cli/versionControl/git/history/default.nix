@@ -1,4 +1,5 @@
 {
+  myPkgs = "git-recall";
   nixPkgs = [
     # keep-sorted start
     "git-big-picture"

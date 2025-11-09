@@ -27,6 +27,7 @@ args.module (
         "diff"
         "download"
         "github"
+        "history"
         "hook"
         "ignore"
         "issue"

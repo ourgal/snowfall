@@ -1473,3 +1473,7 @@ src.github = "heiher/natmap"
 fetch.github = "heiher/natmap"
 git.fetchSubmodules = true
 git.deepClone = true
+
+[git-recall]
+src.github = "Fakerr/git-recall"
+fetch.github = "Fakerr/git-recall"
