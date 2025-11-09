@@ -11,8 +11,8 @@ args.module (
         enableSshSupport = false;
         enableFishIntegration = true;
         pinentry = {
-          program = "pinentry-gtk2";
-          package = pkgs.pinentry-all;
+          program = "pinentry-qt";
+          package = pkgs.pinentry-qt;
         };
       };
       progs.gpg = {
