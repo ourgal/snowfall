@@ -8,27 +8,13 @@ args.module (
         toTOML
         lib
         namespace
+        pkgs
         ;
       soft = lib.${namespace}.git.hostAliases.soft.name;
       myGithub = lib.${namespace}.git.hostAliases.myGithub.name;
       github = lib.${namespace}.git.hostAliases.github.name;
       home = "ssh://home:${config.home.homeDirectory}/workspace";
-    in
-    {
-      nixPkgs = "fw";
-      progs.fish = {
-        interactiveShellInit = # fish
-          ''
-            if test -x (command -v fw)
-              if test -x (command -v fzf)
-                fw print-fish-setup -f | source
-              else
-                fw print-fish-setup | source
-              end
-            end
-          '';
-      };
-      confs = {
+      conf = {
         "fw/settings.toml" = {
           workspace = "${config.home.homeDirectory}/workspace";
           # shell = [
@@ -131,6 +117,30 @@ args.module (
           trusted = false;
           git = "${myGithub}:termux-pkgs";
         };
+      };
+    in
+    {
+      nixPkgs = "fw";
+      progs.fish = {
+        interactiveShellInit = # fish
+          ''
+            if test -x (command -v fw)
+              if test -x (command -v fzf)
+                fw print-fish-setup -f | source
+              else
+                fw print-fish-setup | source
+              end
+            end
+          '';
+      };
+      confs = conf;
+      cacheFiles."fw_config.onchange" = {
+        text = builtins.toJSON conf;
+        onchange = ''
+          echo "fw update emacs projectile cache"
+          $DRY_RUN_CMD ${lib.getExe pkgs.fw} projectile
+        '';
+
       };
       value = {
         systemd.user.tmpfiles.rules = [ "d ${config.home.homeDirectory}/.emacs.d - - - -" ];
