@@ -309,6 +309,7 @@ rec {
       confs ? [ ],
       files ? [ ],
       dataFiles ? [ ],
+      cacheFiles ? [ ],
       progs ? [ ],
       servs ? [ ],
       env ? { },
@@ -355,6 +356,13 @@ rec {
                     { "${name}".text = toJSON value; }
                   else if (elem extension [ "toml" ]) then
                     { "${name}".text = toTOML value; }
+                  else if (elem extension [ "onchange" ]) then
+                    {
+                      "${name}" = {
+                        text = value.text;
+                        onChange = value.onchange;
+                      };
+                    }
                   else
                     { "${name}".source = value; }
                 else if (isPath value) then
@@ -384,24 +392,6 @@ rec {
                   (foldl' (acc: v: acc // (setHandle { "${name}" = v; })) { } value)
                 else if (isString value) then
                   { "${name}".text = value; }
-                else if (isAttrs value) then
-                  let
-                    filename = baseNameOf name;
-                    extension = lib.lists.last (lib.strings.splitString "." filename);
-                  in
-                  if
-                    (elem extension [
-                      "yaml"
-                      "yml"
-                      "json"
-                      "jsonc"
-                    ])
-                  then
-                    { "${name}".text = toJSON value; }
-                  else if (elem extension [ "toml" ]) then
-                    { "${name}".text = toTOML value; }
-                  else
-                    { "${name}".source = value; }
                 else
                   throw "not supported type";
             in
@@ -624,6 +614,7 @@ rec {
           xdg = {
             configFile = confHandle confs;
             dataFile = confHandle dataFiles;
+            cacheFile = confHandle cacheFiles;
             mimeApps = {
               enable = true;
               associations.added = defaults;

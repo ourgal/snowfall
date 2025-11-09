@@ -98,23 +98,7 @@ args.module (
           };
     in
     {
-      value = {
-        home = {
-          packages = notNixos (font.allPkgs pkgs namespace);
-          file."${config.xdg.cacheHome}/hm-fonts" =
-            let
-              getHash =
-                drv: builtins.elemAt (builtins.match "${builtins.storeDir}/([a-z0-9]{32})-.*.drv" drv.drvPath) 0;
-            in
-            {
-              text = lib.strings.concatMapStringsSep "\n" getHash (font.allPkgs pkgs namespace);
-              onChange = ''
-                echo "Caching fonts"
-                $DRY_RUN_CMD ${lib.getExe' pkgs.fontconfig "fc-cache"} -f
-              '';
-            };
-        };
-      };
+      nixPkgs = _: notNixos (font.allPkgs pkgs namespace);
       confs = {
         "fontconfig/fonts.conf" =
           let
@@ -155,6 +139,18 @@ args.module (
           in
           mkFontconfig header settings;
       };
+      cacheFiles."hm-fonts.onchange" =
+        let
+          getHash =
+            drv: builtins.elemAt (builtins.match "${builtins.storeDir}/([a-z0-9]{32})-.*.drv" drv.drvPath) 0;
+        in
+        {
+          text = lib.strings.concatMapStringsSep "\n" getHash (font.allPkgs pkgs namespace);
+          onchange = ''
+            echo "Caching fonts"
+            $DRY_RUN_CMD ${lib.getExe' pkgs.fontconfig "fc-cache"} -f
+          '';
+        };
     }
   )
 )
