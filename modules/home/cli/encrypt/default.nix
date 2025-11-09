@@ -30,6 +30,7 @@ args.module (
       pyPkgs = "names";
       enable = [
         # keep-sorted start
+        "age"
         "gopass"
         "gpg"
         "sops"
