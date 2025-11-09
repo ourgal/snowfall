@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs config;
       gapless = pkgs.writeShellScript "mp3_gapless" ''
         ffmpeg -i "$1" -f wav - | lame -V 2 --noreplaygain - "$2"
       '';
@@ -11,7 +11,7 @@ args.module (
     {
       progs.beets = {
         settings = {
-          plugins = "fromfilename chroma lyrics fish convert fetchart embedart";
+          plugins = "mpdupdate fromfilename chroma lyrics fish convert fetchart embedart";
           convert = {
             "command" = "${gapless} $source $dest";
             "extension" = "mp3";
@@ -19,6 +19,7 @@ args.module (
           lyrics = {
             synced = "yes";
           };
+          directory = config.services.mpd.musicDirectory;
         };
         package = (
           pkgs.beets.override {
