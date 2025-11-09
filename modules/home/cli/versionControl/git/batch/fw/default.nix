@@ -74,6 +74,12 @@ args.module (
         "fw/projects/default/nixpkgs" = toTOML {
           trusted = false;
           git = "${github}:NixOS/nixpkgs";
+          additional_remotes = [
+            {
+              name = "nju";
+              git = "https://mirror.nju.edu.cn/git/nixpkgs.git/";
+            }
+          ];
         };
         "fw/projects/default/snowfall" = toTOML {
           trusted = false;
