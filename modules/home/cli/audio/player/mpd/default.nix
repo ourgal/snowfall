@@ -28,6 +28,10 @@ args.module (
                   type            "pipewire"
                   name            "PipeWire Sound Server"
           }
+          decoder {
+            plugin "mpg123"
+            enabled "yes"
+          }
         '';
       };
       enable = [
