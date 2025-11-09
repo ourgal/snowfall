@@ -1691,13 +1691,13 @@
   };
   git-stats = {
     pname = "git-stats";
-    version = "3.4.0";
+    version = "3.5.0";
     src = fetchFromGitHub {
       owner = "IonicaBizau";
       repo = "git-stats";
-      rev = "3.4.0";
+      rev = "3.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Bb/0mI0ga/Z0RFR+GhlcWR1LHjWfAggs46lv0a/V7TQ=";
+      sha256 = "sha256-WAVLyzX3rubqVKfZd9cpboIaTOwzu5trqOuYivkOgiQ=";
     };
   };
   git-sumi = {

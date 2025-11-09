@@ -3044,12 +3044,12 @@
             "name": null,
             "owner": "IonicaBizau",
             "repo": "git-stats",
-            "rev": "3.4.0",
-            "sha256": "sha256-Bb/0mI0ga/Z0RFR+GhlcWR1LHjWfAggs46lv0a/V7TQ=",
+            "rev": "3.5.0",
+            "sha256": "sha256-WAVLyzX3rubqVKfZd9cpboIaTOwzu5trqOuYivkOgiQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "3.4.0"
+        "version": "3.5.0"
     },
     "git-sumi": {
         "cargoLock": {
