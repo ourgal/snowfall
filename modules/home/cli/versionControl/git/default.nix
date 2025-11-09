@@ -32,6 +32,7 @@ args.module (
         "ignore"
         "issue"
         "merge"
+        "push"
         "rebase"
         "search"
         "security"
