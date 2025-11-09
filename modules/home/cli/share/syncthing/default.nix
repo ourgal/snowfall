@@ -32,8 +32,8 @@ args.module (
         "task/taskchampion.sqlite3" = ln "${sync}/task/taskchampion.sqlite3";
       };
       files = {
-        Music = ln "${sync}/music";
-        Documents = ln "${sync}/documents";
+        "Music/mpd" = ln "${sync}/music";
+        "Documents/tech" = ln "${sync}/documents";
       };
       servs.syncthing = disabled // {
         # inherit guiAddress;
