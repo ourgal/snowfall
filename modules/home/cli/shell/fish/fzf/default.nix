@@ -3,9 +3,15 @@ args.module (
   args
   // (
     let
-      inherit (args) namespace lib pkgs;
+      inherit (args)
+        namespace
+        lib
+        pkgs
+        enabled
+        ;
     in
     {
+      ${namespace}.cli.search.fzf = enabled;
       progs.fish = {
         plugins = lib.${namespace}.mkFishPlugins [ "fzf" ] pkgs;
       };
