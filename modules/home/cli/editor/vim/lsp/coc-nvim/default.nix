@@ -1,4 +1,5 @@
 {
+  nixPkgs = "nodejs";
   progs.vim = {
     plugins = [
       # keep-sorted start
