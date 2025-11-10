@@ -3,9 +3,14 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace;
+      inherit (args) pkgs namespace enabled;
     in
     {
+      ${namespace}.cli = {
+        utils.cd.broot = enabled;
+        file-manager.lf = enabled;
+        versionControl.lazygit = enabled;
+      };
       progs.nixvim = {
         plugins.floaterm = {
           enable = true;
