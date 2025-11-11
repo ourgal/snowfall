@@ -173,13 +173,13 @@
   };
   av = {
     pname = "av";
-    version = "v0.1.13";
+    version = "v0.1.14";
     src = fetchFromGitHub {
       owner = "aviator-co";
       repo = "av";
-      rev = "v0.1.13";
+      rev = "v0.1.14";
       fetchSubmodules = false;
-      sha256 = "sha256-PHnJ7DSRV/Pm8f4RI5c+HtjWWglFWengkXrzt9ayCpw=";
+      sha256 = "sha256-u2qZbUf4L5YY0ym6tfvQDNdQ+RWbSn5shGdB7gH78p8=";
     };
   };
   awesome-freedesktop = {
@@ -778,12 +778,12 @@
   };
   docker-flaresolverr = {
     pname = "docker-flaresolverr";
-    version = "v3.4.4";
+    version = "v3.4.5";
     src = dockerTools.pullImage {
       imageName = "flaresolverr/flaresolverr";
-      imageDigest = "sha256:06c76759d062c185d8ac0b48f302258645b8d99db86109a3d6dce3209d93de51";
-      sha256 = "sha256-AdXMUowLvS6fWmdnfgp6KHgbAUmNC05hgaSJ36DeXhY=";
-      finalImageTag = "v3.4.4";
+      imageDigest = "sha256:4f4e5f759aa3a9a64305e99188ea1db1ec2944a5e7d290d2b089af5f2f6f48e4";
+      sha256 = "sha256-ATtC9R0HCPj7y4tIXJD+MXQbAnKj+iONp2gdi3SNaEc=";
+      finalImageTag = "v3.4.5";
     };
   };
   docker-freshrss = {
@@ -983,16 +983,16 @@
   };
   dra = {
     pname = "dra";
-    version = "0.9.0";
+    version = "0.9.1";
     src = fetchFromGitHub {
       owner = "devmatteini";
       repo = "dra";
-      rev = "0.9.0";
+      rev = "0.9.1";
       fetchSubmodules = false;
-      sha256 = "sha256-7VNhKGi+r827DDW937UbCSKvgEF7eI4zlHwOolcTr9c=";
+      sha256 = "sha256-jL/3AqXdlXW3Nut1VMol1WqME2CEpCtF2Tel6fxwdqs=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-7VNhKGi+r827DDW937UbCSKvgEF7eI4zlHwOolcTr9c=/Cargo.lock";
+      lockFile = ./. + "/sha256-jL_3AqXdlXW3Nut1VMol1WqME2CEpCtF2Tel6fxwdqs=/Cargo.lock";
       outputHashes = {
         
       };
@@ -1451,13 +1451,13 @@
   };
   geminicommit = {
     pname = "geminicommit";
-    version = "v0.5.0";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "tfkhdyt";
       repo = "geminicommit";
-      rev = "v0.5.0";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-wUqu6/j9AyD/THblX0w+Wt43FK//WammB6c425pTwbc=";
+      sha256 = "sha256-PH9IYVlHZuXEzpRvT0luSZej1dFzUyxGzoQ+z79u5kU=";
     };
   };
   geoip2fast = {
@@ -1875,16 +1875,16 @@
   };
   hledger-fmt = {
     pname = "hledger-fmt";
-    version = "v0.3.6";
+    version = "v0.3.7";
     src = fetchFromGitHub {
       owner = "mondeja";
       repo = "hledger-fmt";
-      rev = "v0.3.6";
+      rev = "v0.3.7";
       fetchSubmodules = false;
-      sha256 = "sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=";
+      sha256 = "sha256-u3J5wBEbxEBSr54+WxR0zkR2MGsjhkaebCMOh8+jOZk=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-xjBU8LgVIPjb758I57gDfz5q3sot8sV93gMAPXY2jOw=/Cargo.lock";
+      lockFile = ./. + "/sha256-u3J5wBEbxEBSr54+WxR0zkR2MGsjhkaebCMOh8+jOZk=/Cargo.lock";
       outputHashes = {
         
       };
@@ -2348,15 +2348,15 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "4a47dcab7afc2b81cc59b0609d04e580b216ac1b";
+    version = "2bbfeec6ef5b1d818be65ecd83d1f19ea68a2901";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "4a47dcab7afc2b81cc59b0609d04e580b216ac1b";
+      rev = "2bbfeec6ef5b1d818be65ecd83d1f19ea68a2901";
       fetchSubmodules = false;
-      sha256 = "sha256-YBIAKMzwVNVNjKDCaDX3tucliTUgpAEH068vnwLGe6I=";
+      sha256 = "sha256-9eJNmaG2yFLqoqm9LO+s+Y7vftu4+cSE4l3CZ/0NY2I=";
     };
-    date = "2025-11-10";
+    date = "2025-11-11";
   };
   natmap = {
     pname = "natmap";
@@ -2414,16 +2414,16 @@
   };
   nix-sweep = {
     pname = "nix-sweep";
-    version = "v0.7.0";
+    version = "v0.8.0";
     src = fetchFromGitHub {
       owner = "jzbor";
       repo = "nix-sweep";
-      rev = "v0.7.0";
+      rev = "v0.8.0";
       fetchSubmodules = false;
-      sha256 = "sha256-o+8VY8DxBtUhOjrFKKm7DGBk/a6xJgpib6IU9SaKEjU=";
+      sha256 = "sha256-C83AtqexEzx+8cNZXZyYUtg4gAUyam00IM0eXO8xOgA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-o+8VY8DxBtUhOjrFKKm7DGBk_a6xJgpib6IU9SaKEjU=/Cargo.lock";
+      lockFile = ./. + "/sha256-C83AtqexEzx+8cNZXZyYUtg4gAUyam00IM0eXO8xOgA=/Cargo.lock";
       outputHashes = {
         
       };
@@ -2572,15 +2572,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "7fa94326cd52a1fe415fefedb5c25893f4aadcb6";
+    version = "97a5704e506c661b79ed297b22399ba43569f55c";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "7fa94326cd52a1fe415fefedb5c25893f4aadcb6";
+      rev = "97a5704e506c661b79ed297b22399ba43569f55c";
       fetchSubmodules = false;
-      sha256 = "sha256-BLWLNguknZEnFsio7DtPpbrNKiPr9RYH2onCj0XGEpM=";
+      sha256 = "sha256-/QKSRctHWf67kfbKy+j+TsmNKuq9iSwBGJhJPuR2xsk=";
     };
-    date = "2025-11-08";
+    date = "2025-11-11";
   };
   posting = {
     pname = "posting";
@@ -3399,10 +3399,10 @@
   };
   textual = {
     pname = "textual";
-    version = "6.5.0";
+    version = "6.6.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-6.5.0.tar.gz";
-      sha256 = "sha256-5fFSzdR9tIpjXSO4OXIbrk0Oi22FXj/t5yhSGCiSlOM=";
+      url = "https://pypi.org/packages/source/t/textual/textual-6.6.0.tar.gz";
+      sha256 = "sha256-UzRRZtaw+f0CjtAhfXO49Hw6JmeaGLo7Z2FtystHDuw=";
     };
   };
   timewarrior = {
@@ -3833,18 +3833,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511092212";
+    version = "202511102214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511092212/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511102214/geoip.dat";
       sha256 = "sha256-eqe6n5bT0kBIvUSukYLHK3lzfBf9sV0aBwFWFHxAzbU=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511092212";
+    version = "202511102214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511092212/geosite.dat";
-      sha256 = "sha256-fVDS3A05eyZV5GKPQm0YZF5rdl1ufj3/zd2GmbbnTec=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511102214/geosite.dat";
+      sha256 = "sha256-NcnKMD4fPfR+uHdSGyP82LFQ6ksOZo9Y8loPJtxxQ5A=";
     };
   };
   vim-auto-save = {
