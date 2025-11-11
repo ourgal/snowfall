@@ -4,7 +4,6 @@ let
 in
 {
   dot = {
-    awesome.minimalFnl = enabled;
     fonts = enabled;
     cli = {
       versionControl = enabled;
@@ -15,7 +14,12 @@ in
       file-manager = enabled;
       multiplexer = enabled;
       shell = enabled;
+      ssh = enabled;
       zip = enabled;
     };
+    desktop = {
+      browser = enabled;
+    };
+    dev.nix = enabled;
   };
 }
