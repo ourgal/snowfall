@@ -6,7 +6,7 @@ args.module (
       inherit (args) namespace pkgs enabled;
     in
     {
-      ${namespace}.cli.search.fzf = enabled;
+      value.${namespace}.cli.search.fzf = enabled;
       progs.fish.interactiveShellInit = ''
         source ${pkgs.${namespace}.fzf-help}/lib/fzf-help.fish
         bind --mode insert \ca fzf-help-widget

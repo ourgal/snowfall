@@ -11,7 +11,7 @@ args.module (
         ;
     in
     {
-      ${namespace}.cli.search.fzf = enabled;
+      value.${namespace}.cli.search.fzf = enabled;
       progs.fish = {
         plugins = lib.${namespace}.mkFishPlugins [ "fzf" ] pkgs;
       };

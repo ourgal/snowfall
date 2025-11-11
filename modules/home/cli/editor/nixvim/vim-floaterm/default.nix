@@ -6,7 +6,7 @@ args.module (
       inherit (args) pkgs namespace enabled;
     in
     {
-      ${namespace}.cli = {
+      value.${namespace}.cli = {
         utils.cd.broot = enabled;
         file-manager.lf = enabled;
         versionControl.lazygit = enabled;
