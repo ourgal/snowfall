@@ -50,6 +50,7 @@ in
     "home-manager"
     "io-scheduler"
     "iotop"
+    "kdiskmark"
     "kmonad"
     "logrotate"
     "nh"
