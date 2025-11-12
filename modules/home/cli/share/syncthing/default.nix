@@ -10,8 +10,6 @@ args.module (
         namespace
         lib
         ;
-      ln = config.lib.file.mkOutOfStoreSymlink;
-      sync = "${config.xdg.dataHome}/syncthing";
       stc = lib.${namespace}.wrapper-manager.wrapWith pkgs {
         basePackage = pkgs.stc-cli;
         prependFlags = [
@@ -22,19 +20,6 @@ args.module (
     in
     {
       nixPkgs = _: [ stc ];
-      confs = {
-        todo = ln "${sync}/todo";
-      };
-      dataFiles = {
-        timewarrior = ln "${sync}/timew";
-        nap = ln "${sync}/nap";
-        jrnl = ln "${sync}/jrnl";
-        "task/taskchampion.sqlite3" = ln "${sync}/task/taskchampion.sqlite3";
-      };
-      files = {
-        "Music/mpd" = ln "${sync}/music";
-        "Documents/tech" = ln "${sync}/documents";
-      };
       servs.syncthing = disabled // {
         # inherit guiAddress;
         # key = config.sops.secrets."syncthing/${host}/key".path;
