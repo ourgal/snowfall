@@ -170,7 +170,6 @@ args.module (
                 ++ git
                 ++ termux
                 ++ editor
-                ++ ui
                 ++ keyboard;
               inherit repos;
             }
