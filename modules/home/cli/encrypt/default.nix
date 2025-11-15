@@ -12,6 +12,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "bottom-rs"
+        "cryptsetup"
         "enc"
         "genpass"
         "hashcat"
