@@ -25,6 +25,7 @@ args.module (
         "rage"
         "ssh-to-age"
         "ssss"
+        "tomb"
         # keep-sorted end
       ];
       pyPkgs = "names";
