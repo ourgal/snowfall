@@ -114,6 +114,7 @@ args.module (
               template = "${config.xdg.configHome}/git/template";
               gpgsign = true;
             };
+            user.signingkey = "ourgal";
             rerere = {
               enabled = true;
               autoupdate = true;
