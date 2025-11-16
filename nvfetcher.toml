@@ -1477,3 +1477,7 @@ git.deepClone = true
 [git-recall]
 src.github = "Fakerr/git-recall"
 fetch.github = "Fakerr/git-recall"
+
+[pyfreeproxy]
+src.pypi = "pyfreeproxy"
+fetch.pypi = "pyfreeproxy"

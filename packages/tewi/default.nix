@@ -32,6 +32,7 @@ python3.pkgs.buildPythonApplication rec {
     transmission-rpc
     pyperclip
     geoip2fast
+    qbittorrent-api
   ];
 
   pythonRelaxDeps = true;

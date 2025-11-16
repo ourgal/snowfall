@@ -2,6 +2,8 @@
   lib,
   python3,
   _sources',
+  pkgs,
+  namespace,
 }:
 
 python3.pkgs.buildPythonApplication {
@@ -19,6 +21,21 @@ python3.pkgs.buildPythonApplication {
     prettytable
     pycryptodome
     requests
+    json-repair
+    orjson
+    cryptography
+    faster-whisper
+    fake-useragent
+    pathvalidate
+    rich
+    emoji
+    bleach
+    beautifulsoup4
+    aigpy
+    av
+    tabulate
+    mutagen
+    pkgs.${namespace}.pyfreeproxy
   ];
 
   pythonImportsCheck = [ "musicdl" ];
