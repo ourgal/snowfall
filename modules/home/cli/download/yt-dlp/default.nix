@@ -13,8 +13,6 @@ args.module (
       myX86Pkgs = "yt";
       progs.yt-dlp.settings = {
         format = format.HD;
-        concurrent-fragments = 5;
-        downloader = "aria2c";
         no-mtime = true;
       };
       tmpfiles = [ "d ${config.home.homeDirectory}/Downloads/youtube - - - - -" ];
