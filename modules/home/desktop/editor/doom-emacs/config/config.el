@@ -164,3 +164,4 @@
 (load! "plugins/chinese-number")
 (load! "plugins/bing-dict")
 (load! "plugins/gt")
+(load! "plugins/engine-mode")
