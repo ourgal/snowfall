@@ -4764,6 +4764,21 @@
         },
         "version": "2.12.0"
     },
+    "pyfreeproxy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pyfreeproxy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-0T0YCjMZvc1jDox7feZ77JK3zIkRpjqBWJCyjSUNWbE=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.2.1.tar.gz"
+        },
+        "version": "0.2.1"
+    },
     "pyjokes": {
         "cargoLock": null,
         "date": null,

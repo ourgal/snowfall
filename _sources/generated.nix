@@ -2661,6 +2661,14 @@
       sha256 = "sha256-AFU475UePCpo4cCLKStfLnFJDe+FidQiG5XasA2vz9A=";
     };
   };
+  pyfreeproxy = {
+    pname = "pyfreeproxy";
+    version = "0.2.1";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.2.1.tar.gz";
+      sha256 = "sha256-0T0YCjMZvc1jDox7feZ77JK3zIkRpjqBWJCyjSUNWbE=";
+    };
+  };
   pyjokes = {
     pname = "pyjokes";
     version = "v0.6.0";
