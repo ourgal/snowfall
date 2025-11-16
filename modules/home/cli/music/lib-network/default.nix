@@ -104,6 +104,132 @@ args.module (
           album = "Nightcore";
           url = "https://www.bilibili.com/video/BV1ZY41177GT";
         }
+        {
+          artist = "Yuna Ito";
+          title = "Pureyes";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV14x411B73a";
+        }
+        {
+          artist = "Flower";
+          title = "白雪姫";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1q5411u71A";
+        }
+        {
+          artist = "Flower";
+          title = "人魚姫";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1p54y1L7zb";
+        }
+        {
+          artist = "Flower";
+          title = "カラフル";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1Ro4y117ip";
+        }
+        {
+          artist = "Flower";
+          title = "恋におちたら";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1Jv411p78z";
+        }
+        {
+          artist = "Flower";
+          title = "BRIGHT";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1Qa411z7Hj";
+        }
+        {
+          artist = "Flower";
+          title = "他の誰かより悲しい恋をしただけ";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1dV41137vD";
+        }
+        {
+          artist = "Flower";
+          title = "七色キャンドル";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1dy42187wL";
+        }
+        {
+          artist = "Flower";
+          title = "Clover";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV14m411X7S6";
+        }
+        {
+          artist = "Flower";
+          title = "瞳の奥の銀河";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV12DXuY5EzV";
+        }
+        {
+          artist = "花たん";
+          title = "Ray of Light";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1rUWMe1EQn";
+        }
+        {
+          artist = "西野カナ";
+          title = "ONE WAY LOVE";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1LG4y1Q7Pt";
+        }
+        {
+          artist = "西野カナ";
+          title = "Love you, Miss you";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1b14y1n7yt";
+        }
+        {
+          artist = "CHIHIRO";
+          title = "永遠";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1jd4y1t7wN";
+        }
+        {
+          artist = "3L";
+          title = "破月";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1RK411X7bS";
+        }
+        {
+          artist = "Airots";
+          title = "桃幻浪漫";
+          album = "桃幻浪漫 ～千の刃濤、桃花染の皇姫 花あかり～";
+          url = "https://www.bilibili.com/video/BV14J411T783";
+        }
+        {
+          artist = "Thelma Aoyama";
+          title = "二人の約束の日";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1js411r7QH";
+        }
+        {
+          artist = "日之内エミ";
+          title = "卒業";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1PD421K74g";
+        }
+        {
+          artist = "果山サキ";
+          title = "さよなら、愛してた。";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1Ks411h7jp";
+        }
+        {
+          artist = "Juliet";
+          title = "もっともっとキミを教えてよ";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV17W411D7WX";
+        }
+        {
+          artist = "Ayuse Kozue";
+          title = "Cry for You";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1SW411x7fs";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
