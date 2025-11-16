@@ -139,14 +139,14 @@ args.module (
           in
           mkFontconfig header settings;
       };
-      cacheFiles."hm-fonts.onchange" =
+      cacheFiles."hm-fonts" =
         let
           getHash =
             drv: builtins.elemAt (builtins.match "${builtins.storeDir}/([a-z0-9]{32})-.*.drv" drv.drvPath) 0;
         in
         {
           text = lib.strings.concatMapStringsSep "\n" getHash (font.allPkgs pkgs namespace);
-          onchange = ''
+          _onchange = ''
             echo "Caching fonts"
             $DRY_RUN_CMD ${lib.getExe' pkgs.fontconfig "fc-cache"} -f
           '';

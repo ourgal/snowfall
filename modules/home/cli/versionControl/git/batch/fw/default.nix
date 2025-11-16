@@ -145,9 +145,9 @@ args.module (
           '';
       };
       confs = conf;
-      cacheFiles."fw_config.onchange" = {
+      cacheFiles."fw_config" = {
         text = builtins.toJSON conf;
-        onchange = ''
+        _onchange = ''
           echo "fw update emacs projectile cache"
           $DRY_RUN_CMD ${lib.getExe pkgs.fw} projectile
         '';

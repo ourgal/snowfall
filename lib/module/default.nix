@@ -356,11 +356,11 @@ rec {
                     { "${name}".text = toJSON value; }
                   else if (elem extension [ "toml" ]) then
                     { "${name}".text = toTOML value; }
-                  else if (elem extension [ "onchange" ]) then
+                  else if (value ? text && value ? _onchange) then
                     {
                       "${name}" = {
                         text = value.text;
-                        onChange = value.onchange;
+                        onChange = value._onchange;
                       };
                     }
                   else
