@@ -2348,15 +2348,15 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "04a859c5019b2d1f8d6e7322b97ee171828d92c5";
+    version = "f56a68f6f037ba237b01f2770292f6c1df308728";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "04a859c5019b2d1f8d6e7322b97ee171828d92c5";
+      rev = "f56a68f6f037ba237b01f2770292f6c1df308728";
       fetchSubmodules = false;
-      sha256 = "sha256-YXTqZtoAbB4Cv9IOvzNLzj0r//l8Wh6mLOlvhj8Hvgs=";
+      sha256 = "sha256-gnh4D+0BZpeSRqAnb0IFBrGJ1cu9oV+NDNZXlnF+bcE=";
     };
-    date = "2025-11-16";
+    date = "2025-11-17";
   };
   natmap = {
     pname = "natmap";
@@ -3841,18 +3841,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511152210";
+    version = "202511162212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511152210/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511162212/geoip.dat";
       sha256 = "sha256-VSNZjO/xx+7PohUPi82SlLAQ2sHYVdDLkMoSCqucJDU=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511152210";
+    version = "202511162212";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511152210/geosite.dat";
-      sha256 = "sha256-oo12YqhADNeER03Nps/d92rsFzJR5pilo0ZENuI0d+8=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511162212/geosite.dat";
+      sha256 = "sha256-29q6WwdpDVQ7pORrHQfU9+BMjfl964VzezQeroJGehw=";
     };
   };
   vim-auto-save = {
