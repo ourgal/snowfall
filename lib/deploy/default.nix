@@ -17,6 +17,20 @@ in
         let
           host = hosts.${name};
           inherit (host.pkgs) system;
+          pkgs = import inputs.nixpkgs { inherit system; };
+          # nixpkgs with deploy-rs overlay but force the nixpkgs package
+          deployPkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [
+              inputs.deploy-rs.overlays.default # or deploy-rs.overlays.default
+              (_self: super: {
+                deploy-rs = {
+                  inherit (pkgs) deploy-rs;
+                  lib = super.deploy-rs.lib;
+                };
+              })
+            ];
+          };
         in
         result
         // {
@@ -24,7 +38,7 @@ in
             hostname = overrides.${name}.hostname or "${name}.local";
             profiles = (overrides.${name}.profiles or { }) // {
               system = (overrides.${name}.profiles.system or { }) // {
-                path = inputs.deploy-rs.lib.${system}.activate.nixos host;
+                path = deployPkgs.deploy-rs.lib.activate.nixos host;
               };
             };
             confirmTimeout = 300;
