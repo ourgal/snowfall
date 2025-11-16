@@ -16,8 +16,8 @@ function youtube() {
     fi
   done
 
-  if ! yt-dlp -P "$path" "$@"; then
-    yt-dlp -P "$path" "$@"
+  if ! yt-dlp --embed-subs -P "$path" "$@"; then
+    yt-dlp --embed-subs -P "$path" "$@"
   fi
 
   latest_file=$(find "$path" -type f \( -name "*.mp4" -o -name "*.webm" \) -printf "%T@ %P\n" | sort -nr | cut -d' ' -f2- | head -n 1)
