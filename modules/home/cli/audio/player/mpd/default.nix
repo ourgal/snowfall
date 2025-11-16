@@ -17,7 +17,7 @@ args.module (
         # keep-sorted end
       ];
       servs.mpd = {
-        musicDirectory = "${config.home.homeDirectory}/Music/mpd";
+        musicDirectory = "${config.home.homeDirectory}/Music";
         network = {
           listenAddress = "any";
           startWhenNeeded = true;
