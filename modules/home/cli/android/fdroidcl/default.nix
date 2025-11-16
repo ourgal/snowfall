@@ -86,7 +86,6 @@ args.module (
         "org.tasks"
       ];
       keyboard = [ "inc.flide.vi8" ];
-      ui = [ "cu.axel.smartdock" ];
     in
     {
       myPkgs = "fdroidcl";
