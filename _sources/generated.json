@@ -214,21 +214,6 @@
         },
         "version": "077c823fe76a5d4268e678d95a47e28878038650"
     },
-    "argparse": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "argparse",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/a/argparse/argparse-1.4.0.tar.gz"
-        },
-        "version": "1.4.0"
-    },
     "aria2.conf": {
         "cargoLock": null,
         "date": "2024-02-28",
@@ -673,6 +658,27 @@
         },
         "version": "v1.1.0"
     },
+    "chepy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "chepy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "securisec",
+            "repo": "chepy",
+            "rev": "7.4.0",
+            "sha256": "sha256-kvj5c8SGvi8J6BsMkTqSK5T4Xuw0LjJ9GLiDxnMoiQY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "7.4.0"
+    },
     "chezmoi-vim": {
         "cargoLock": null,
         "date": "2025-10-31",
@@ -776,21 +782,6 @@
             "type": "github"
         },
         "version": "09e958baeedeb6eed0fb1e048ed820888c5dbb84"
-    },
-    "climage": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "climage",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz"
-        },
-        "version": "0.2.2"
     },
     "clock-tui": {
         "cargoLock": {
@@ -2617,21 +2608,6 @@
         },
         "version": "v0.6.0"
     },
-    "geoip2fast": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "geoip2fast",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz"
-        },
-        "version": "1.2.2"
-    },
     "gg": {
         "cargoLock": null,
         "date": "2022-12-27",
@@ -3620,21 +3596,6 @@
         },
         "version": "v0.2.4"
     },
-    "kdtree": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "kdtree",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=",
-            "type": "url",
-            "url": "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz"
-        },
-        "version": "0.16"
-    },
     "lab": {
         "cargoLock": null,
         "date": null,
@@ -4184,6 +4145,27 @@
             "type": "github"
         },
         "version": "eb2da86b628c512184818b19307632fa71fe7fb9"
+    },
+    "mugen": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mugen",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "scherroman",
+            "repo": "mugen",
+            "rev": "v1.0.0",
+            "sha256": "sha256-4rWcFQwMt19pGQt+zYYbrn0ZJw9bKy++4Lt0l1aorU4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0"
     },
     "multiplex": {
         "cargoLock": null,
@@ -4836,6 +4818,81 @@
         },
         "version": "v0.4.1"
     },
+    "python-argparse": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "python-argparse",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/a/argparse/argparse-1.4.0.tar.gz"
+        },
+        "version": "1.4.0"
+    },
+    "python-climage": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "python-climage",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz"
+        },
+        "version": "0.2.2"
+    },
+    "python-geoip2fast": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "python-geoip2fast",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz"
+        },
+        "version": "1.2.2"
+    },
+    "python-kdtree": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "python-kdtree",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz"
+        },
+        "version": "0.16"
+    },
+    "python-moviepy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "python-moviepy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-yAy1aBXs6U5ePi02GqQAcO6zCgnSOiTE5oTQPhberLE=",
+            "type": "url",
+            "url": "https://pypi.org/packages/source/m/moviepy/moviepy-2.2.1.tar.gz"
+        },
+        "version": "2.2.1"
+    },
     "qlty": {
         "cargoLock": {
             "Cargo.lock": [
@@ -4866,7 +4923,7 @@
     },
     "qman": {
         "cargoLock": null,
-        "date": "2025-09-01",
+        "date": "2025-11-17",
         "extract": null,
         "name": "qman",
         "passthru": null,
@@ -4878,12 +4935,12 @@
             "name": null,
             "owner": "plp13",
             "repo": "qman",
-            "rev": "7ce2819688b9b939621ab95e4f74180c4b40b7f6",
-            "sha256": "sha256-336lEGD7Jj+bseMwsL7FexpsGNaZbYk17NuRMUPg69w=",
+            "rev": "74b46e665f68d0356148c80721508eb376ac6f97",
+            "sha256": "sha256-z3ILbbwcCYZT8qabVaGnMCyZRag8djEI32i6G7cLL2A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7ce2819688b9b939621ab95e4f74180c4b40b7f6"
+        "version": "74b46e665f68d0356148c80721508eb376ac6f97"
     },
     "quartz": {
         "cargoLock": null,
@@ -6008,7 +6065,7 @@
     "textpod": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=/Cargo.lock",
+                "sha256-7Qpy1JCXIUCGHZ_8KuQCQr6XwuBXUoKjS6nyNOrIqes=/Cargo.lock",
                 {}
             ]
         },
@@ -6024,12 +6081,12 @@
             "name": null,
             "owner": "freetonik",
             "repo": "textpod",
-            "rev": "0.1.5",
-            "sha256": "sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=",
+            "rev": "0.1.6",
+            "sha256": "sha256-7Qpy1JCXIUCGHZ/8KuQCQr6XwuBXUoKjS6nyNOrIqes=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.1.5"
+        "version": "0.1.6"
     },
     "textual": {
         "cargoLock": null,

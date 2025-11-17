@@ -127,14 +127,6 @@
     };
     date = "2025-08-26";
   };
-  argparse = {
-    pname = "argparse";
-    version = "1.4.0";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/a/argparse/argparse-1.4.0.tar.gz";
-      sha256 = "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=";
-    };
-  };
   "aria2.conf" = {
     pname = "aria2.conf";
     version = "02b9d95ea155e66f7e3c4340cd22717f8bc7401c";
@@ -386,6 +378,17 @@
       sha256 = "sha256-ljbUG5a03KQZtl+jIVEnrScK6ZqlHfvDvXxax+A9h90=";
     };
   };
+  chepy = {
+    pname = "chepy";
+    version = "7.4.0";
+    src = fetchFromGitHub {
+      owner = "securisec";
+      repo = "chepy";
+      rev = "7.4.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-kvj5c8SGvi8J6BsMkTqSK5T4Xuw0LjJ9GLiDxnMoiQY=";
+    };
+  };
   chezmoi-vim = {
     pname = "chezmoi-vim";
     version = "73b30df35c6b645ebd2e6a440eea8463ef3c3f47";
@@ -446,14 +449,6 @@
       sha256 = "sha256-nj+PlZpz8M2lvxsEa8RulWEb+aGN7ez7uF+iM9IhGKQ=";
     };
     date = "2017-05-23";
-  };
-  climage = {
-    pname = "climage";
-    version = "0.2.2";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz";
-      sha256 = "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=";
-    };
   };
   clock-tui = {
     pname = "clock-tui";
@@ -1460,14 +1455,6 @@
       sha256 = "sha256-PH9IYVlHZuXEzpRvT0luSZej1dFzUyxGzoQ+z79u5kU=";
     };
   };
-  geoip2fast = {
-    pname = "geoip2fast";
-    version = "1.2.2";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz";
-      sha256 = "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=";
-    };
-  };
   gg = {
     pname = "gg";
     version = "14e45a8e946eb7a04ebacc07e3a1f1f4235b1cd8";
@@ -2017,14 +2004,6 @@
       sha256 = "sha256-4quJ8sEl+Yjam04jQ27jFvd/P9EuOpI/9D8osmy0F3k=";
     };
   };
-  kdtree = {
-    pname = "kdtree";
-    version = "0.16";
-    src = fetchurl {
-      url = "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz";
-      sha256 = "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=";
-    };
-  };
   lab = {
     pname = "lab";
     version = "v1.3.1";
@@ -2332,6 +2311,17 @@
       rev = "eb2da86b628c512184818b19307632fa71fe7fb9";
       fetchSubmodules = false;
       sha256 = "sha256-udKOyX0/R47wXSmYndhhq38D94gksxZbhx50VjG1HhY=";
+    };
+  };
+  mugen = {
+    pname = "mugen";
+    version = "v1.0.0";
+    src = fetchFromGitHub {
+      owner = "scherroman";
+      repo = "mugen";
+      rev = "v1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-4rWcFQwMt19pGQt+zYYbrn0ZJw9bKy++4Lt0l1aorU4=";
     };
   };
   multiplex = {
@@ -2699,6 +2689,46 @@
       sha256 = "sha256-QHQZbjrKU0lE89L/13ukjXqZ2I/8XR9Hz5/YjmiXQhk=";
     };
   };
+  python-argparse = {
+    pname = "python-argparse";
+    version = "1.4.0";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/a/argparse/argparse-1.4.0.tar.gz";
+      sha256 = "sha256-YrCJpVvh2JSc0rx+DfC9254Cj678jDIDjMhIYq791uQ=";
+    };
+  };
+  python-climage = {
+    pname = "python-climage";
+    version = "0.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/c/climage/climage-0.2.2.tar.gz";
+      sha256 = "sha256-5hFrL189MTrbCFZlfv5KbRGeIhjN7yPCipk9lLhxq44=";
+    };
+  };
+  python-geoip2fast = {
+    pname = "python-geoip2fast";
+    version = "1.2.2";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/g/geoip2fast/geoip2fast-1.2.2.tar.gz";
+      sha256 = "sha256-OIFXAM7f6xl9UbS4czsNT3lls23hUUfBJVJxJPi0XWs=";
+    };
+  };
+  python-kdtree = {
+    pname = "python-kdtree";
+    version = "0.16";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/k/kdtree/kdtree-0.16.tar.gz";
+      sha256 = "sha256-OG32x4FqBeD6uXTjA135RPme9otWFfSkFncTkeM9dTQ=";
+    };
+  };
+  python-moviepy = {
+    pname = "python-moviepy";
+    version = "2.2.1";
+    src = fetchurl {
+      url = "https://pypi.org/packages/source/m/moviepy/moviepy-2.2.1.tar.gz";
+      sha256 = "sha256-yAy1aBXs6U5ePi02GqQAcO6zCgnSOiTE5oTQPhberLE=";
+    };
+  };
   qlty = {
     pname = "qlty";
     version = "v0.589.0";
@@ -2718,15 +2748,15 @@
   };
   qman = {
     pname = "qman";
-    version = "7ce2819688b9b939621ab95e4f74180c4b40b7f6";
+    version = "74b46e665f68d0356148c80721508eb376ac6f97";
     src = fetchFromGitHub {
       owner = "plp13";
       repo = "qman";
-      rev = "7ce2819688b9b939621ab95e4f74180c4b40b7f6";
+      rev = "74b46e665f68d0356148c80721508eb376ac6f97";
       fetchSubmodules = false;
-      sha256 = "sha256-336lEGD7Jj+bseMwsL7FexpsGNaZbYk17NuRMUPg69w=";
+      sha256 = "sha256-z3ILbbwcCYZT8qabVaGnMCyZRag8djEI32i6G7cLL2A=";
     };
-    date = "2025-09-01";
+    date = "2025-11-17";
   };
   quartz = {
     pname = "quartz";
@@ -3390,16 +3420,16 @@
   };
   textpod = {
     pname = "textpod";
-    version = "0.1.5";
+    version = "0.1.6";
     src = fetchFromGitHub {
       owner = "freetonik";
       repo = "textpod";
-      rev = "0.1.5";
+      rev = "0.1.6";
       fetchSubmodules = false;
-      sha256 = "sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=";
+      sha256 = "sha256-7Qpy1JCXIUCGHZ/8KuQCQr6XwuBXUoKjS6nyNOrIqes=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-Y2icoVle1m3b+9vMSPBpJ4VIjYkfIKJ4NzXiKk4OfoE=/Cargo.lock";
+      lockFile = ./. + "/sha256-7Qpy1JCXIUCGHZ_8KuQCQr6XwuBXUoKjS6nyNOrIqes=/Cargo.lock";
       outputHashes = {
         
       };
