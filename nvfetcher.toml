@@ -880,10 +880,6 @@ fetch.pypi = "kdtree"
 src.pypi = "climage"
 fetch.pypi = "climage"
 
-[python-lazy-import]
-src.pypi = "lazy-import"
-fetch.pypi = "lazy-import"
-
 [baca]
 src.github_tag = "wustho/baca"
 fetch.github = "wustho/baca"

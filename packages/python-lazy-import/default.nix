@@ -1,11 +1,18 @@
 {
   lib,
   python3,
-  _sources',
+  fetchPypi,
 }:
-python3.pkgs.buildPythonApplication {
-  inherit (_sources' ./.) pname version src;
+python3.pkgs.buildPythonApplication rec {
+  pname = "lazy-import";
+  version = "0.2.2";
   pyproject = true;
+
+  src = fetchPypi {
+    pname = "lazy_import"; # nvfetcher can't fetch this
+    inherit version;
+    hash = "sha256-IUmu+FeUWUB8Ys/szxGFJ5OcmTGs4STzVSNjYGRPij0=";
+  };
 
   nativeBuildInputs = [
     python3.pkgs.setuptools
