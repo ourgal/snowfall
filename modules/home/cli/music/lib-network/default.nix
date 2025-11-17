@@ -242,7 +242,7 @@ args.module (
               	$(yt) ${elem.url} -o $(temp)
               	$(ffmpeg) -i $(temp) $(silenceremove) "$@"
               	rm $(temp)
-              	$(id3) --title "${elem.title}" --artist "${elem.artist}" --album "${elem.album}" "$@"
+              	$(mid3v2) --song "${elem.title}" --artist "${elem.artist}" --album "${elem.album}" "$@"
             ''
           ]
         ) [ ] metadata
@@ -253,7 +253,7 @@ args.module (
         text = ''
           yt := ${lib.getExe pkgs.yt-dlp} -t mp3
           ffmpeg := ${lib.getExe pkgs.ffmpeg}
-          id3 := ${lib.getExe pkgs.id3}
+          mid3v2 := ${lib.getExe' pkgs.python3Packages.mutagen "mid3v2"}
           temp := temp.mp3
           silenceremove := -af silenceremove=start_periods=1:start_duration=0:start_threshold=-50dB:start_silence=1,areverse,silenceremove=start_periods=1:start_duration=0:start_threshold=-50dB:start_silence=1,areverse
 
