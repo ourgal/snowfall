@@ -18,8 +18,7 @@ python3.pkgs.buildPythonApplication {
   propagatedBuildInputs = with python3.pkgs; [
     appdirs
     beautifulsoup4
-    pkgs.${namespace}
-    climage
+    pkgs.${namespace}.python-climage
     fuzzywuzzy
     markdownify
     peewee

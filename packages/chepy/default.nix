@@ -30,7 +30,7 @@ python3.pkgs.buildPythonApplication {
     hexdump
     jmespath
     jsonpickle
-    pkgs.${namespace}.lazy-import
+    pkgs.${namespace}.python-lazy-import
     lz4
     msgpack
     parsel
@@ -47,6 +47,7 @@ python3.pkgs.buildPythonApplication {
     regex
     setuptools
     typing-extensions
+    pgpy
   ];
 
   meta = with lib; {

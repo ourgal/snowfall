@@ -18,7 +18,7 @@ python3.pkgs.buildPythonApplication {
   propagatedBuildInputs = with python3.pkgs; [
     aiohttp
     alive-progress
-    pkgs.${namespace}.argparse
+    pkgs.${namespace}.python-argparse
     emoji
   ];
 
