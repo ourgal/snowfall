@@ -1,4 +1,5 @@
 {
+  pyPkgs = "mutagen";
   nixPkgs = [
     # keep-sorted start
     "id3"
