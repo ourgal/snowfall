@@ -706,7 +706,7 @@ args.module (
         }
         {
           artist = "長尾ちえみ";
-          title = "Kiss &amp; Crazy (feat. 長尾ちえみ)";
+          title = "Kiss & Crazy (feat. 長尾ちえみ)";
           album = "864";
           url = "https://music.163.com/#/song?id=32405984";
         }
@@ -865,6 +865,204 @@ args.module (
           title = "Necro Fantasia feat. 美里";
           album = "For Your Pieces";
           url = "https://music.163.com/#/song?id=687463";
+        }
+        {
+          artist = "めらみぽっぷ";
+          title = "シャングリラ";
+          album = "パライソ";
+          url = "https://music.163.com/#/song?id=26454931";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "ミゼラブルの雫(with senya)";
+          album = "ミゼラブルの雫";
+          url = "https://music.163.com/#/song?id=869351";
+        }
+        {
+          artist = "彩音";
+          title = "いつもこの場所で";
+          album = "いつもこの場所で";
+          url = "https://music.163.com/#/song?id=26259014";
+        }
+        {
+          artist = "下川みくに & Nakagami & Ishikawa";
+          title = "White Album";
+          album = "Leaf Vocal Collection Volume 1";
+          url = "https://music.163.com/#/song?id=27622999";
+        }
+        {
+          artist = "つじあやの";
+          title = "風になる";
+          album = "猫の恩返し サウンドトラック";
+          url = "https://music.163.com/#/song?id=482172";
+        }
+        {
+          artist = "Rie fu";
+          title = "Life Is Like A Boat";
+          album = "Life Is Like A Boat";
+          url = "https://music.163.com/#/song?id=640565";
+        }
+        {
+          artist = "森永真由美";
+          title = "色は匂へど散りぬるを(with senya)";
+          album = "さぁ、こごう。";
+          url = "https://music.163.com/#/song?id=28547521";
+        }
+        {
+          artist = "Ceui";
+          title = "今、歩き出す君へ。";
+          album = "PCゲーム「いますぐお兄ちゃんに妹だっていいたい!」ボーカルアルバム";
+          url = "https://music.163.com/#/song?id=26209670";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "大地に咲く旋律";
+          album = "濡れた髪に触れられた时";
+          url = "https://music.163.com/#/song?id=26107913";
+        }
+        {
+          artist = "森永真由美";
+          title = "溺愛エクリプス";
+          album = "三千世界";
+          url = "https://music.163.com/#/song?id=27571852";
+        }
+        {
+          artist = "fripSide";
+          title = "an evening calm (kai Re:product RMX)";
+          album = "Re:product mixes ver.0.1";
+          url = "https://music.163.com/#/song?id=22660898";
+        }
+        {
+          artist = "左右田左";
+          title = "永遠の花が降る";
+          album = "秘密蜜封箋";
+          url = "https://music.163.com/#/song?id=27610163";
+        }
+        {
+          artist = "れるりり";
+          title = "Mr.Music(歌姫Ver)";
+          album = "Mr.Music";
+          url = "https://music.163.com/#/song?id=26550694";
+        }
+        {
+          artist = "彩音";
+          title = "Lunatic Tears…";
+          album = "Lunatic Tears…";
+          url = "https://music.163.com/#/song?id=552075";
+        }
+        {
+          artist = "3L";
+          title = "桜华月想";
+          album = "Overture l SUWA";
+          url = "https://music.163.com/song?id=686361";
+        }
+        {
+          artist = "綾倉盟";
+          title = "melt in the sky";
+          album = "Replica";
+          url = "https://music.163.com/#/song?id=833438";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "アイリミテッド";
+          album = "濡れた髪に触れられた时";
+          url = "https://music.163.com/#/song?id=26107909";
+        }
+        {
+          artist = "中村舞子";
+          title = "言えない気持ち";
+          album = "言えない気持ち";
+          url = "https://music.163.com/#/song?id=409830542";
+        }
+        {
+          artist = "紫咲ほたる";
+          title = "Relate";
+          album = "Definite Energy";
+          url = "https://music.163.com/#/song?id=22785150";
+        }
+        {
+          artist = "森永真由美";
+          title = "コノ葉隠レ(with senya)";
+          album = "コノ葉隠レ";
+          url = "https://music.163.com/#/song?id=33020436";
+        }
+        {
+          artist = "森永真由美";
+          title = "泡沫、哀のまほろば";
+          album = "幻-MABOROSHI- Singles Best Vol.2";
+          url = "https://music.163.com/#/song?id=28547527";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "ヒトリシズカ";
+          album = "幻想万華鏡～紅霧異変の章～ オリジナルサウンドトラック Vol.1";
+          url = "https://music.163.com/#/song?id=32235274";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "夕立、君と隠れ処";
+          album = "SOUND VOLTEX ULTIMATE TRACKS - 東方紅魔郷REMIX";
+          url = "https://music.163.com/#/song?id=28866582";
+        }
+        {
+          artist = "ゆいこんぬ";
+          title = "ルートスフィア";
+          album = "EXIT TUNES PRESENTS Cinderella";
+          url = "https://music.163.com/#/song?id=28566460";
+        }
+        {
+          artist = "日南結里 & 小澤亜李";
+          title = "ミライプリズム";
+          album = "ミライプリズム";
+          url = "https://music.163.com/#/song?id=29932153";
+        }
+        {
+          artist = "茶太";
+          title = "Secret";
+          album = "eclipse改";
+          url = "https://music.163.com/#/song?id=640866";
+        }
+        {
+          artist = "愛原圭織";
+          title = "Place";
+          album = "MA CHERIE";
+          url = "https://music.163.com/#/song?id=29050075";
+        }
+        {
+          artist = "花たん";
+          title = "恋ノ蟲";
+          album = "デジウィ LEGEND";
+          url = "https://music.163.com/#/song?id=28524863";
+        }
+        {
+          artist = "野村香菜子";
+          title = "恋の音色ライン";
+          album = "THE IDOLM@STER LIVE THE@TER HARMONY 09";
+          url = "https://music.163.com/#/song?id=31165257";
+        }
+        {
+          artist = "ナノ";
+          title = "DREAMCATCHER";
+          album = "DREAMCATCHER (アニメver.)";
+          url = "https://music.163.com/#/song?id=438456473";
+        }
+        {
+          artist = "沼倉愛美";
+          title = "叫べ";
+          album = "叫べ";
+          url = "https://music.163.com/#/song?id=438466359";
+        }
+        {
+          artist = "KOTOKO";
+          title = "Face of Fact";
+          album = "Starlight Symphony-KOTOKO LIVE 2006-IN YOKOHAMA ARENA";
+          url = "https://music.163.com/#/song?id=590097";
+        }
+        {
+          artist = "Halozy";
+          title = "Paranoid Lost (feat. 美里)";
+          album = "Tonic Triangle";
+          url = "https://music.163.com/#/song?id=22808847";
         }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
