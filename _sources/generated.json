@@ -4202,12 +4202,12 @@
             "name": null,
             "owner": "CharlesPikachu",
             "repo": "musicdl",
-            "rev": "f56a68f6f037ba237b01f2770292f6c1df308728",
-            "sha256": "sha256-gnh4D+0BZpeSRqAnb0IFBrGJ1cu9oV+NDNZXlnF+bcE=",
+            "rev": "210c2a060d74877052531e8c89647a6dca778fad",
+            "sha256": "sha256-8OUML5EHX9PwJacgmLzVwHdvGKpmwI2P6rHfDDuYQRQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f56a68f6f037ba237b01f2770292f6c1df308728"
+        "version": "210c2a060d74877052531e8c89647a6dca778fad"
     },
     "natmap": {
         "cargoLock": null,
@@ -4595,27 +4595,6 @@
             "type": "github"
         },
         "version": "88452b97ef0e1c69f0bbb16cd743d200bcc28c47"
-    },
-    "posting": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "posting",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "darrenburns",
-            "repo": "posting",
-            "rev": "2.9.2",
-            "sha256": "sha256-BX1D9XgBqRIfavDxAQH7mPP/dnayQu3xSSAF6/JSM54=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "2.9.2"
     },
     "powershell-beautifier": {
         "cargoLock": null,

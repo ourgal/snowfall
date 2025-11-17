@@ -2338,13 +2338,13 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "f56a68f6f037ba237b01f2770292f6c1df308728";
+    version = "210c2a060d74877052531e8c89647a6dca778fad";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "f56a68f6f037ba237b01f2770292f6c1df308728";
+      rev = "210c2a060d74877052531e8c89647a6dca778fad";
       fetchSubmodules = false;
-      sha256 = "sha256-gnh4D+0BZpeSRqAnb0IFBrGJ1cu9oV+NDNZXlnF+bcE=";
+      sha256 = "sha256-8OUML5EHX9PwJacgmLzVwHdvGKpmwI2P6rHfDDuYQRQ=";
     };
     date = "2025-11-17";
   };
@@ -2571,17 +2571,6 @@
       sha256 = "sha256-FCP/RwLv5Oa0VMw4g6dRIj10xrZ2HCb4IoNukhSrMMk=";
     };
     date = "2025-11-12";
-  };
-  posting = {
-    pname = "posting";
-    version = "2.9.2";
-    src = fetchFromGitHub {
-      owner = "darrenburns";
-      repo = "posting";
-      rev = "2.9.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-BX1D9XgBqRIfavDxAQH7mPP/dnayQu3xSSAF6/JSM54=";
-    };
   };
   powershell-beautifier = {
     pname = "powershell-beautifier";
