@@ -1,22 +1,11 @@
 {
   lib,
   python3,
-  _sources,
   _sources',
+  pkgs,
+  namespace,
 }:
-let
-  geoip2fast = python3.pkgs.buildPythonApplication {
-    inherit (_sources.geoip2fast) pname version src;
-    pyproject = true;
 
-    nativeBuildInputs = [
-      python3.pkgs.setuptools
-      python3.pkgs.wheel
-    ];
-
-    pythonImportsCheck = [ "geoip2fast" ];
-  };
-in
 python3.pkgs.buildPythonApplication rec {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
@@ -31,7 +20,7 @@ python3.pkgs.buildPythonApplication rec {
     textual
     transmission-rpc
     pyperclip
-    geoip2fast
+    pkgs.${namespace}.python-geoip2fast
     qbittorrent-api
   ];
 

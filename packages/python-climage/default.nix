@@ -5,7 +5,6 @@
   pkgs,
   namespace,
 }:
-
 python3.pkgs.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
@@ -13,31 +12,19 @@ python3.pkgs.buildPythonApplication {
   nativeBuildInputs = [
     python3.pkgs.setuptools
     python3.pkgs.wheel
-    python3.pkgs.pythonRelaxDepsHook
   ];
-
-  pythonImportsCheck = [ "mugen" ];
 
   propagatedBuildInputs = with python3.pkgs; [
-    pkgs.${namespace}.moviepy
-    librosa
+    pkgs.${namespace}.python-kdtree
     pillow
-    numpy
-    pysrt
-    tqdm
-    decorator
-    dill
-    proglog
-    pytesseract
   ];
 
-  pythonRelaxDeps = true;
+  pythonImportsCheck = [ "climage" ];
 
   meta = with lib; {
-    description = "A command-line music video generator based on rhythm";
-    homepage = "https://github.com/scherroman/mugen";
+    description = "Convert images to beautiful ANSI escape codes";
+    homepage = "https://pypi.org/project/climage/";
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "mugen";
   };
 }

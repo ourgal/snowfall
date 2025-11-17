@@ -1,31 +1,11 @@
 {
   lib,
   python3,
-  _sources,
+  pkgs,
+  namespace,
   _sources',
 }:
 
-let
-  argparse = python3.pkgs.buildPythonApplication {
-    inherit (_sources.argparse) pname version src;
-    pyproject = true;
-
-    nativeBuildInputs = [
-      python3.pkgs.setuptools
-      python3.pkgs.wheel
-    ];
-
-    pythonImportsCheck = [ "argparse" ];
-
-    meta = with lib; {
-      description = "Python command-line parsing library";
-      homepage = "https://pypi.org/project/argparse";
-      license = licenses.unfree; # FIXME: nix-init did not found a license
-      maintainers = with maintainers; [ zxc ];
-      mainProgram = "argparse";
-    };
-  };
-in
 python3.pkgs.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
@@ -38,7 +18,7 @@ python3.pkgs.buildPythonApplication {
   propagatedBuildInputs = with python3.pkgs; [
     aiohttp
     alive-progress
-    argparse
+    pkgs.${namespace}.argparse
     emoji
   ];
 

@@ -2,10 +2,8 @@
   lib,
   python3,
   _sources',
-  pkgs,
-  namespace,
 }:
-
+# broken https://github.com/Zulko/moviepy/issues/1826
 python3.pkgs.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
@@ -16,28 +14,26 @@ python3.pkgs.buildPythonApplication {
     python3.pkgs.pythonRelaxDepsHook
   ];
 
-  pythonImportsCheck = [ "mugen" ];
+  pythonImportsCheck = [ "moviepy" ];
 
   propagatedBuildInputs = with python3.pkgs; [
-    pkgs.${namespace}.moviepy
-    librosa
-    pillow
     numpy
-    pysrt
     tqdm
     decorator
     dill
     proglog
     pytesseract
+    requests
+    imageio
+    imageio-ffmpeg
   ];
 
   pythonRelaxDeps = true;
 
   meta = with lib; {
-    description = "A command-line music video generator based on rhythm";
-    homepage = "https://github.com/scherroman/mugen";
+    description = "Video editing with Python";
+    homepage = "https://pypi.org/project/moviepy/";
     license = licenses.mit;
     maintainers = with maintainers; [ zxc ];
-    mainProgram = "mugen";
   };
 }

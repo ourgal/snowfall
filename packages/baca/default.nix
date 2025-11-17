@@ -1,54 +1,11 @@
 {
   lib,
   python3,
-  _sources,
   _sources',
+  pkgs,
+  namespace,
 }:
-let
-  kdtree = python3.pkgs.buildPythonApplication {
-    inherit (_sources.kdtree) pname version src;
-    pyproject = true;
 
-    nativeBuildInputs = [
-      python3.pkgs.setuptools
-      python3.pkgs.wheel
-    ];
-
-    pythonImportsCheck = [ "kdtree" ];
-
-    meta = with lib; {
-      description = "A Python implemntation of a kd-tree";
-      homepage = "https://pypi.org/project/kdtree/";
-      license = licenses.isc;
-      maintainers = with maintainers; [ zxc ];
-      mainProgram = "kdtree";
-    };
-  };
-  climage = python3.pkgs.buildPythonApplication {
-    inherit (_sources.climage) pname version src;
-    pyproject = true;
-
-    nativeBuildInputs = [
-      python3.pkgs.setuptools
-      python3.pkgs.wheel
-    ];
-
-    propagatedBuildInputs = with python3.pkgs; [
-      kdtree
-      pillow
-    ];
-
-    pythonImportsCheck = [ "climage" ];
-
-    meta = with lib; {
-      description = "Convert images to beautiful ANSI escape codes";
-      homepage = "https://pypi.org/project/climage/";
-      license = licenses.mit;
-      maintainers = with maintainers; [ zxc ];
-      mainProgram = "climage";
-    };
-  };
-in
 python3.pkgs.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
@@ -61,6 +18,7 @@ python3.pkgs.buildPythonApplication {
   propagatedBuildInputs = with python3.pkgs; [
     appdirs
     beautifulsoup4
+    pkgs.${namespace}
     climage
     fuzzywuzzy
     markdownify

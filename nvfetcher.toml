@@ -203,9 +203,13 @@ fetch.github = "vilmibm/gh-screensaver"
 src.github = "aymanbagabas/gh-stars"
 fetch.github = "aymanbagabas/gh-stars"
 
-[argparse]
+[python-argparse]
 src.pypi = "argparse"
 fetch.pypi = "argparse"
+
+[python-moviepy]
+src.pypi = "moviepy"
+fetch.pypi = "moviepy"
 
 [github-dlr]
 src.github = "rocktimsaikia/github-dlr"
@@ -868,19 +872,27 @@ fetch.github = "Boeing/config-file-validator"
 src.github_tag = "cadecuddy/sauce"
 fetch.github = "cadecuddy/sauce"
 
-[kdtree]
+[python-kdtree]
 src.pypi = "kdtree"
 fetch.pypi = "kdtree"
 
-[climage]
+[python-climage]
 src.pypi = "climage"
 fetch.pypi = "climage"
+
+[python-pycipher]
+src.pypi = "pycipher"
+fetch.pypi = "pycipher"
+
+[python-lazy-import]
+src.pypi = "lazy-import"
+fetch.pypi = "lazy-import"
 
 [baca]
 src.github_tag = "wustho/baca"
 fetch.github = "wustho/baca"
 
-[geoip2fast]
+[python-geoip2fast]
 src.pypi = "geoip2fast"
 fetch.pypi = "geoip2fast"
 
@@ -1481,3 +1493,11 @@ fetch.github = "Fakerr/git-recall"
 [pyfreeproxy]
 src.pypi = "pyfreeproxy"
 fetch.pypi = "pyfreeproxy"
+
+[chepy]
+src.github = "securisec/chepy"
+fetch.github = "securisec/chepy"
+
+[mugen]
+src.github = "scherroman/mugen"
+fetch.github = "scherroman/mugen"
