@@ -369,10 +369,6 @@ fetch.pypi = "pydantic_settings"
 src.pypi = "pydantic-core"
 fetch.pypi = "pydantic_core"
 
-[posting]
-src.github = "darrenburns/posting"
-fetch.github = "darrenburns/posting"
-
 [radio-go-go]
 src.github = "matteo-pacini/RadioGoGo"
 fetch.github = "matteo-pacini/RadioGoGo"
