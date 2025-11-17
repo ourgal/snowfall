@@ -1,24 +1,24 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
   pkgs,
   namespace,
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
-    python3.pkgs.pythonRelaxDepsHook
+    python3Packages.setuptools
+    python3Packages.wheel
+    python3Packages.pythonRelaxDepsHook
   ];
 
   pythonImportsCheck = [ "mugen" ];
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     pkgs.${namespace}.moviepy
     librosa
     pillow

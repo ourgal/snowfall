@@ -1,21 +1,21 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
   pkgs,
   namespace,
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = with python3.pkgs; [
+  nativeBuildInputs = with python3Packages; [
     poetry-core
     pythonRelaxDepsHook
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     appdirs
     beautifulsoup4
     pkgs.${namespace}.python-climage

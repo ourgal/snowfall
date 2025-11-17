@@ -1,13 +1,13 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = [ python3.pkgs.poetry-core ];
+  nativeBuildInputs = [ python3Packages.poetry-core ];
 
   pythonImportsCheck = [ "whitespace_format" ];
 

@@ -1,18 +1,18 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname src version;
   pyproject = true;
 
   nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [ gitpython ];
+  propagatedBuildInputs = with python3Packages; [ gitpython ];
 
   patches = [ ./vim_key.patch ];
 

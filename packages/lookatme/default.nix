@@ -1,19 +1,19 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = with python3.pkgs; [
+  nativeBuildInputs = with python3Packages; [
     setuptools
     wheel
     pythonRelaxDepsHook
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     click
     marshmallow
     mistune

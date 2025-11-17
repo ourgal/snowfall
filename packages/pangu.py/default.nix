@@ -1,10 +1,10 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchFromGitHub,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   pname = "pangu-py";
   version = "4.0.6.1";
   pyproject = true;
@@ -17,8 +17,8 @@ python3.pkgs.buildPythonApplication rec {
   };
 
   build-system = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
   pythonImportsCheck = [ "pangu" ];

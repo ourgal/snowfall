@@ -1,13 +1,13 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   format = "other";
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     send2trash
     charset-normalizer
     setuptools

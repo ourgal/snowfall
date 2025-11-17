@@ -1,11 +1,11 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchFromGitHub,
   procps,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   pname = "px";
   version = "3.6.5";
   pyproject = true;
@@ -27,9 +27,9 @@ python3.pkgs.buildPythonApplication rec {
   '';
 
   nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
-    # python3.pkgs.pytest-runner
+    python3Packages.setuptools
+    python3Packages.wheel
+    # python3Packages.pytest-runner
   ];
 
   meta = with lib; {

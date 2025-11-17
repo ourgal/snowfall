@@ -1,10 +1,10 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
@@ -16,11 +16,11 @@ python3.pkgs.buildPythonApplication {
   '';
 
   build-system = [
-    python3.pkgs.colorama
-    python3.pkgs.setuptools
+    python3Packages.colorama
+    python3Packages.setuptools
   ];
 
-  dependencies = with python3.pkgs; [ colorama ];
+  dependencies = with python3Packages; [ colorama ];
 
   pythonImportsCheck = [ "files_sort" ];
 

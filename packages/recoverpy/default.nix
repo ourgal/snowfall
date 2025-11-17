@@ -1,19 +1,19 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  nativeBuildInputs = with python3.pkgs; [ pythonRelaxDepsHook ];
+  nativeBuildInputs = with python3Packages; [ pythonRelaxDepsHook ];
 
   pythonRelaxDeps = true;
 
-  build-system = [ python3.pkgs.hatchling ];
+  build-system = [ python3Packages.hatchling ];
 
-  dependencies = with python3.pkgs; [ textual ];
+  dependencies = with python3Packages; [ textual ];
 
   pythonImportsCheck = [ "recoverpy" ];
 

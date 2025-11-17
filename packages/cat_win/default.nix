@@ -1,15 +1,15 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   inherit (_sources' ./.) pname src version;
   pyproject = true;
 
-  nativeBuildInputs = [ python3.pkgs.flit-core ];
+  nativeBuildInputs = [ python3Packages.flit-core ];
 
-  passthru.optional-dependencies = with python3.pkgs; {
+  passthru.optional-dependencies = with python3Packages; {
     cfix = [ colorama ];
     clip = [ pyperclip ];
   };

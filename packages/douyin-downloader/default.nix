@@ -1,18 +1,18 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   postPatch = "cp ${./pyproject.toml} pyproject.toml";
 
-  build-system = [ python3.pkgs.hatchling ];
+  build-system = [ python3Packages.hatchling ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     requests
     pyyaml
     rich

@@ -1,13 +1,13 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname src version;
   pyproject = true;
 
-  nativeBuildInputs = [ python3.pkgs.hatchling ];
+  nativeBuildInputs = [ python3Packages.hatchling ];
 
   pythonImportsCheck = [ "pypipe" ];
 

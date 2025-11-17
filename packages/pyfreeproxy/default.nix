@@ -1,21 +1,21 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   postPatch = "cp ${./requirements.txt} requirements.txt";
 
   build-system = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     beautifulsoup4
     fake-useragent
     lxml

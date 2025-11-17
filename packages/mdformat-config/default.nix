@@ -1,19 +1,19 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname src version;
   pyproject = true;
 
-  nativeBuildInputs = [ python3.pkgs.poetry-core ];
+  nativeBuildInputs = [ python3Packages.poetry-core ];
 
   preBuild = ''
     sed -i '/taplo/d' pyproject.toml
   '';
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     mdformat
     ruamel-yaml
   ];

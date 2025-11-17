@@ -3,7 +3,7 @@
   lib,
   curl,
   aria2,
-  python3,
+  python3Packages,
 }:
 writeShellApplication rec {
   name = "imgboxdwl";
@@ -16,7 +16,7 @@ writeShellApplication rec {
   runtimeInputs = [
     curl
     aria2
-    python3.pkgs.tqdm
+    python3Packages.tqdm
   ];
 
   text = builtins.readFile ./imgboxdwl.sh;

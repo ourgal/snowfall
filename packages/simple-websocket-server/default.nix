@@ -1,16 +1,16 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonPackage {
+python3Packages.buildPythonPackage {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
   build-system = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
   pythonImportsCheck = [ "SimpleWebSocketServer" ];

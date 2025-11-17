@@ -1,23 +1,23 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 let
   source = _sources' ./.;
 in
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (source) pname src;
   version = builtins.replaceStrings [ "unstable-" "-" ] [ "" "." ] source.version;
   pyproject = true;
 
   nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.setuptools-scm
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.setuptools-scm
+    python3Packages.wheel
   ];
 
-  passthru.optional-dependencies = with python3.pkgs; {
+  passthru.optional-dependencies = with python3Packages; {
     dev = [
       black
       coverage

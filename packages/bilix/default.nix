@@ -1,12 +1,12 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchPypi,
   _sources,
   _sources',
 }:
 let
-  construct = python3.pkgs.buildPythonApplication rec {
+  construct = python3Packages.buildPythonApplication rec {
     pname = "construct";
     version = "2.8.8";
     pyproject = true;
@@ -17,11 +17,11 @@ let
     };
 
     build-system = [
-      python3.pkgs.setuptools
-      python3.pkgs.wheel
+      python3Packages.setuptools
+      python3Packages.wheel
     ];
 
-    optional-dependencies = with python3.pkgs; {
+    optional-dependencies = with python3Packages; {
       extras = [
         arrow
         cloudpickle
@@ -41,13 +41,13 @@ let
       maintainers = with lib.maintainers; [ zxc ];
     };
   };
-  bs4 = python3.pkgs.buildPythonApplication {
+  bs4 = python3Packages.buildPythonApplication {
     inherit (_sources.bs4) pname version src;
     pyproject = true;
 
-    build-system = [ python3.pkgs.hatchling ];
+    build-system = [ python3Packages.hatchling ];
 
-    dependencies = with python3.pkgs; [ beautifulsoup4 ];
+    dependencies = with python3Packages; [ beautifulsoup4 ];
 
     pythonImportsCheck = [ "bs4" ];
 
@@ -58,11 +58,11 @@ let
       maintainers = with lib.maintainers; [ zxc ];
     };
   };
-  pymp4 = python3.pkgs.buildPythonApplication {
+  pymp4 = python3Packages.buildPythonApplication {
     inherit (_sources.pymp4) pname version src;
     pyproject = true;
 
-    build-system = [ python3.pkgs.poetry-core ];
+    build-system = [ python3Packages.poetry-core ];
 
     dependencies = [ construct ];
 
@@ -75,16 +75,16 @@ let
       maintainers = with lib.maintainers; [ zxc ];
     };
   };
-  danmakuc = python3.pkgs.buildPythonApplication {
+  danmakuc = python3Packages.buildPythonApplication {
     inherit (_sources.danmakuc) pname version src;
     pyproject = true;
 
     build-system = [
-      python3.pkgs.pybind11
-      python3.pkgs.setuptools
+      python3Packages.pybind11
+      python3Packages.setuptools
     ];
 
-    dependencies = with python3.pkgs; [ protobuf ];
+    dependencies = with python3Packages; [ protobuf ];
 
     pythonImportsCheck = [ "danmakuC" ];
 
@@ -96,13 +96,13 @@ let
     };
   };
 in
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  build-system = [ python3.pkgs.hatchling ];
+  build-system = [ python3Packages.hatchling ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     aiofiles
     anyio
     browser-cookie3

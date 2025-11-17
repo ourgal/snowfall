@@ -1,22 +1,22 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  build-system = [ python3.pkgs.hatchling ];
+  build-system = [ python3Packages.hatchling ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     rich
     tomli
     typer
   ];
 
-  optional-dependencies = with python3.pkgs; {
+  optional-dependencies = with python3Packages; {
     dev = [
       black
       mypy

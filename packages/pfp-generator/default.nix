@@ -1,22 +1,22 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
 
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  build-system = [ python3.pkgs.poetry-core ];
+  build-system = [ python3Packages.poetry-core ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     numpy
     opencv-python
     pillow
   ];
 
-  nativeBuildInputs = with python3.pkgs; [ pythonRelaxDepsHook ];
+  nativeBuildInputs = with python3Packages; [ pythonRelaxDepsHook ];
 
   pythonImportsCheck = [ "pfp_generator" ];
 

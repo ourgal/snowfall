@@ -1,6 +1,6 @@
 {
   lib,
-  python3,
+  python3Packages,
   cargo,
   rustPlatform,
   rustc,
@@ -9,7 +9,7 @@
 let
   source = _sources' ./.;
 in
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (source) pname src version;
 
   cargoDeps = rustPlatform.importCargoLock source.cargoLock."Cargo.lock";
@@ -21,7 +21,7 @@ python3.pkgs.buildPythonApplication {
     rustc
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     gitpython
     importlib-metadata
     networkx
@@ -34,7 +34,7 @@ python3.pkgs.buildPythonApplication {
     tomli-w
   ];
 
-  passthru.optional-dependencies = with python3.pkgs; {
+  passthru.optional-dependencies = with python3Packages; {
     dev = [
       build
       coverage

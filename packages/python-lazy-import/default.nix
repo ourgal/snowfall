@@ -1,9 +1,9 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchPypi,
 }:
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   pname = "lazy-import";
   version = "0.2.2";
   pyproject = true;
@@ -15,11 +15,11 @@ python3.pkgs.buildPythonApplication rec {
   };
 
   nativeBuildInputs = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [ six ];
+  propagatedBuildInputs = with python3Packages; [ six ];
 
   pythonImportsCheck = [ "lazy_import" ];
 

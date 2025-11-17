@@ -1,24 +1,24 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources,
   _sources',
 }:
 let
-  textual = python3.pkgs.buildPythonApplication {
+  textual = python3Packages.buildPythonApplication {
     inherit (_sources.textual) pname version src;
     pyproject = true;
 
-    nativeBuildInputs = [ python3.pkgs.poetry-core ];
+    nativeBuildInputs = [ python3Packages.poetry-core ];
 
-    propagatedBuildInputs = with python3.pkgs; [
+    propagatedBuildInputs = with python3Packages; [
       markdown-it-py
       rich
       typing-extensions
       platformdirs
     ];
 
-    passthru.optional-dependencies = with python3.pkgs; {
+    passthru.optional-dependencies = with python3Packages; {
       syntax = [
         tree-sitter
         tree_sitter_languages
@@ -27,11 +27,11 @@ let
 
     pythonImportsCheck = [ "textual" ];
   };
-  fortune-python = python3.pkgs.buildPythonApplication {
+  fortune-python = python3Packages.buildPythonApplication {
     inherit (_sources.fortune-python) pname version src;
     pyproject = true;
 
-    build-system = [ python3.pkgs.setuptools ];
+    build-system = [ python3Packages.setuptools ];
 
     pythonImportsCheck = [ "fortune" ];
 
@@ -44,13 +44,13 @@ let
     };
   };
 in
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname version src;
   pyproject = true;
 
-  build-system = [ python3.pkgs.poetry-core ];
+  build-system = [ python3Packages.poetry-core ];
 
-  nativeBuildInputs = with python3.pkgs; [ pythonRelaxDepsHook ];
+  nativeBuildInputs = with python3Packages; [ pythonRelaxDepsHook ];
 
   dependencies = [
     fortune-python

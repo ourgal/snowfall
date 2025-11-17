@@ -1,10 +1,10 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchPypi,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   pname = "pycipher";
   version = "0.5.2";
   pyproject = true;
@@ -16,8 +16,8 @@ python3.pkgs.buildPythonApplication rec {
   };
 
   build-system = [
-    python3.pkgs.setuptools
-    python3.pkgs.wheel
+    python3Packages.setuptools
+    python3Packages.wheel
   ];
 
   pythonImportsCheck = [ "pycipher" ];

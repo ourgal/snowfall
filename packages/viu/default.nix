@@ -1,18 +1,18 @@
 {
   lib,
-  python3,
+  python3Packages,
   _sources',
 }:
-python3.pkgs.buildPythonApplication {
+python3Packages.buildPythonApplication {
   inherit (_sources' ./.) pname src version;
   pyproject = true;
 
-  nativeBuildInputs = with python3.pkgs; [
+  nativeBuildInputs = with python3Packages; [
     hatchling
     pythonRelaxDepsHook
   ];
 
-  propagatedBuildInputs = with python3.pkgs; [
+  propagatedBuildInputs = with python3Packages; [
     click
     inquirerpy
     requests
@@ -25,7 +25,7 @@ python3.pkgs.buildPythonApplication {
     pydantic
   ];
 
-  passthru.optional-dependencies = with python3.pkgs; {
+  passthru.optional-dependencies = with python3Packages; {
     api = [ fastapi ];
     full = [
       fastapi

@@ -1,11 +1,11 @@
 {
   lib,
-  python3,
+  python3Packages,
   fetchFromGitHub,
   fetchPypi,
 }:
 let
-  pyrlottie = python3.pkgs.buildPythonApplication rec {
+  pyrlottie = python3Packages.buildPythonApplication rec {
     pname = "pyrlottie";
     version = "2024.0.1";
     pyproject = true;
@@ -16,11 +16,11 @@ let
     };
 
     build-system = [
-      python3.pkgs.poetry-core
-      python3.pkgs.pythonRelaxDepsHook
+      python3Packages.poetry-core
+      python3Packages.pythonRelaxDepsHook
     ];
 
-    dependencies = with python3.pkgs; [
+    dependencies = with python3Packages; [
       attrs
       deprecation
       numpy
@@ -40,7 +40,7 @@ let
     };
   };
 in
-python3.pkgs.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   pname = "tstickers";
   version = "2024.1.3";
   pyproject = true;
@@ -53,11 +53,11 @@ python3.pkgs.buildPythonApplication rec {
   };
 
   build-system = [
-    python3.pkgs.poetry-core
-    python3.pkgs.pythonRelaxDepsHook
+    python3Packages.poetry-core
+    python3Packages.pythonRelaxDepsHook
   ];
 
-  dependencies = with python3.pkgs; [
+  dependencies = with python3Packages; [
     emoji
     loguru
     pillow
@@ -66,7 +66,7 @@ python3.pkgs.buildPythonApplication rec {
     requests-cache
   ];
 
-  optional-dependencies = with python3.pkgs; {
+  optional-dependencies = with python3Packages; {
     pyrlottie = [ pyrlottie ];
     rlottie-python = [ rlottie-python ];
   };
