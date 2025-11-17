@@ -1,23 +1,31 @@
 {
   lib,
   python3,
-  _sources',
+  fetchPypi,
 }:
-python3.pkgs.buildPythonApplication {
-  inherit (_sources' ./.) pname version src;
+
+python3.pkgs.buildPythonApplication rec {
+  pname = "pycipher";
+  version = "0.5.2";
   pyproject = true;
 
-  nativeBuildInputs = [
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-5bOz73NGBNoJ4WQvnElqdd+FBmiu5bGIGKOYjuxM1xs=";
+    extension = "zip"; # nvfetcher don't support zip
+  };
+
+  build-system = [
     python3.pkgs.setuptools
     python3.pkgs.wheel
   ];
 
   pythonImportsCheck = [ "pycipher" ];
 
-  meta = with lib; {
+  meta = {
     description = "Several simple cipher algorithms";
-    homepage = "https://pypi.org/project/pycipher/";
-    license = licenses.mit;
-    maintainers = with maintainers; [ zxc ];
+    homepage = "https://pypi.org/project/pycipher/#files";
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ zxc ];
   };
 }

@@ -880,10 +880,6 @@ fetch.pypi = "kdtree"
 src.pypi = "climage"
 fetch.pypi = "climage"
 
-[python-pycipher]
-src.pypi = "pycipher"
-fetch.pypi = "pycipher"
-
 [python-lazy-import]
 src.pypi = "lazy-import"
 fetch.pypi = "lazy-import"
