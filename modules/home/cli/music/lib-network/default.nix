@@ -5,7 +5,7 @@ args.module (
     let
       inherit (args) pkgs lib config;
       inherit (builtins) foldl' replaceStrings concatStringsSep;
-      sanitizeString = str: replaceStrings [ " " "'" ] [ "_" "" ] str;
+      sanitizeString = str: replaceStrings [ " " "'" ":" ] [ "_" "" "_" ] str;
       mkFilename = artist: title: "${sanitizeString artist}-${sanitizeString title}.mp3";
       metadata = [
         {
@@ -61,12 +61,6 @@ args.module (
           title = "Wonderful Day";
           album = "Nightcore";
           url = "https://www.bilibili.com/video/BV18m4y197DT";
-        }
-        {
-          artist = "花たん";
-          title = "オレンジ";
-          album = "Nightcore";
-          url = "https://www.bilibili.com/video/BV14B4y1p75K";
         }
         {
           artist = "HIROKO_WISE";
@@ -189,12 +183,6 @@ args.module (
           url = "https://www.bilibili.com/video/BV1jd4y1t7wN";
         }
         {
-          artist = "3L";
-          title = "破月";
-          album = "Nightcore";
-          url = "https://www.bilibili.com/video/BV1RK411X7bS";
-        }
-        {
           artist = "Airots";
           title = "桃幻浪漫";
           album = "桃幻浪漫 ～千の刃濤、桃花染の皇姫 花あかり～";
@@ -258,7 +246,7 @@ args.module (
           artist = "mineko";
           title = "miscalc";
           album = "PARTICLE";
-          url = "https://music.163.com/#/song?id=27548279";
+          url = "https://music.163.com/#/song?id=1395758737";
         }
         {
           artist = "96猫";
@@ -315,16 +303,16 @@ args.module (
           url = "https://music.163.com/#/song?id=26388031";
         }
         {
-          artist = "エアーマンが倒せない";
-          title = "花たん";
+          artist = "花たん";
+          title = "エアーマンが倒せない";
           album = "最新热歌慢摇82";
-          url = "https://music.163.com/#/song?id=26388031";
+          url = "https://music.163.com/#/song?id=29544924";
         }
         {
           artist = "光岡昌美";
           title = "ダメよ♡";
           album = "ダメよ";
-          url = "https://music.163.com/#/song?id=26388031";
+          url = "https://music.163.com/#/song?id=611653";
         }
         {
           artist = "天宮みや";
@@ -492,7 +480,7 @@ args.module (
           artist = "TrySail";
           title = "High Free Spirits";
           album = "High Free Spirits";
-          url = "https://music.163.com/#/song?id=559908";
+          url = "https://music.163.com/#/song?id=412327886";
         }
         {
           artist = "3L";
@@ -570,7 +558,7 @@ args.module (
           artist = "花たん";
           title = "ハジメテノオト";
           album = "Flower";
-          url = "https://music.163.com/#/song?id=31191255";
+          url = "https://music.163.com/#/song?id=27548253";
         }
         {
           artist = "宮崎歩";
@@ -762,7 +750,7 @@ args.module (
           artist = "森永真由美";
           title = "アンロジカル";
           album = "レプリカの恋";
-          url = "https://music.163.com/#/song?id=691351";
+          url = "https://music.163.com/#/song?id=28581729";
         }
         {
           artist = "市松椿";
@@ -1326,7 +1314,7 @@ args.module (
           artist = "花たん";
           title = "RED Signal";
           album = "Colorful✿Flower";
-          url = "https://music.163.com/#/song?id=29247552";
+          url = "https://music.163.com/#/song?id=22782491";
         }
         {
           artist = "仲村芽衣子";
@@ -1796,6 +1784,24 @@ args.module (
           album = "Roman";
           url = "https://music.163.com/#/song?id=22782025";
         }
+        {
+          artist = "Sora";
+          title = "1秒でも…";
+          album = "1秒でも…";
+          url = "https://music.163.com/#/song?id=5357641";
+        }
+        {
+          artist = "jyA-Me";
+          title = "Dear my friend with CHiE";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1Yt411r7BM";
+        }
+        {
+          artist = "南條愛乃";
+          title = "fortuna on the Sixteenth night";
+          album = "十六夜のフォルトゥーナ オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=28152340";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
@@ -1813,6 +1819,24 @@ args.module (
           ]
         ) [ ] metadata
       );
+      duplicateSongs = lib.pipe metadata [
+        (map (x: {
+          key = mkFilename x.artist x.title;
+        }))
+        (builtins.groupBy (entry: entry.key))
+        (lib.filterAttrs (_key: entries: builtins.length entries > 1))
+        (lib.mapAttrsToList (key: _entries: "Duplicate song ${key} found"))
+        lib.concatStrings
+      ];
+      duplicateSongUrls = lib.pipe metadata [
+        (map (x: {
+          key = x.url;
+        }))
+        (builtins.groupBy (entry: entry.key))
+        (lib.filterAttrs (_key: entries: builtins.length entries > 1))
+        (lib.mapAttrsToList (key: _entries: "Duplicate song url ${key} found"))
+        lib.concatStrings
+      ];
     in
     {
       files."Music/net/Makefile" = {
@@ -1836,6 +1860,16 @@ args.module (
           $DRY_RUN_CMD ${lib.getExe pkgs.gnumake} -C ${config.home.homeDirectory}/Music/net
         '';
       };
+      value.assertions = [
+        {
+          assertion = duplicateSongs == "";
+          message = duplicateSongs;
+        }
+        {
+          assertion = duplicateSongUrls == "";
+          message = duplicateSongUrls;
+        }
+      ];
     }
   )
 )
