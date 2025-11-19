@@ -2207,6 +2207,7 @@ with sqlite3.connect("waiting.db") as conn:
             [
                 "rumdl",
                 "A Markdown Linter and Formatter written in Rust",
+                "https://github.com/rvben/rumdl",
                 Categories.DEV,
                 "10/17/2025",
                 None,
