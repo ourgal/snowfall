@@ -3,6 +3,7 @@
   nixPkgs = [
     # keep-sorted start
     "amfora"
+    "browsh"
     "circumflex"
     "w3m"
     # keep-sorted end
