@@ -2217,7 +2217,18 @@ with sqlite3.connect("waiting.db") as conn:
             [
                 "durdraw",
                 "Versatile ASCII and ANSI Art text editor for drawing in the Linux/Unix/macOS terminal, with animation, 256 and 16 colors, Unicode and CP437, and customizable themes",
+                "https://github.com/cmang/durdraw",
                 Categories.FUN,
+                "11/19/2025",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
+            [
+                "gophertube",
+                "A modern terminal user interface for searching and watching YouTube videos using mpv and chafa",
+                "https://github.com/KrishnaSSh/GopherTube",
+                Categories.VIDEO,
                 "11/19/2025",
                 None,
                 Waiting_Status.WAITING,
