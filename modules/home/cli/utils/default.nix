@@ -19,6 +19,7 @@
     "cd"
     "cp"
     "cut"
+    "dd"
     "df"
     "du"
     "find"
