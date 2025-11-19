@@ -15,6 +15,7 @@ args.module (
       # keep-sorted start
       "acpi"
       "atop"
+      "below"
       "compsize"
       "cyme"
       "dmidecode"
