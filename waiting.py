@@ -39,6 +39,7 @@ class Categories(Enum):
     VIDEO = 17
     DOWNLOAD = 18
     PROXY = 19
+    FUN = 20
 
 
 with sqlite3.connect("waiting.db") as conn:
@@ -2208,6 +2209,15 @@ with sqlite3.connect("waiting.db") as conn:
                 "A Markdown Linter and Formatter written in Rust",
                 Categories.DEV,
                 "10/17/2025",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
+            [
+                "durdraw",
+                "Versatile ASCII and ANSI Art text editor for drawing in the Linux/Unix/macOS terminal, with animation, 256 and 16 colors, Unicode and CP437, and customizable themes",
+                Categories.FUN,
+                "11/19/2025",
                 None,
                 Waiting_Status.WAITING,
                 Types.PACKAGE,
