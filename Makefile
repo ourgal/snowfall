@@ -87,6 +87,10 @@ db: # update database
 android: # nix-on-droid
 	@nix-on-droid switch --flake .
 
+.PHONY: t4
+t4: # deploy to t4
+	@deploy -s --boot .#t4 -- --extra-substituters "http://192.168.123.178:50000"
+
 .PHONY: help
 help: # Show help for each of the Makefile recipes.
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
