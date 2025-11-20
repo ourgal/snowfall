@@ -19,7 +19,7 @@ python3Packages.buildPythonApplication {
   pythonImportsCheck = [ "mugen" ];
 
   propagatedBuildInputs = with python3Packages; [
-    pkgs.${namespace}.moviepy
+    pkgs.${namespace}.python-moviepy
     librosa
     pillow
     numpy
