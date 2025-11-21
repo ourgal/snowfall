@@ -21,5 +21,7 @@ in
       # keep-sorted end
     ];
 
+  boot.kernelParams = [ "console=tty" ];
+
   system.stateVersion = "25.05";
 }
