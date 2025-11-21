@@ -8,7 +8,7 @@ args.module (
     {
       nixPkgs = "gpg-tui";
       servs.gpg-agent = {
-        enableSshSupport = false;
+        enableSshSupport = true;
         enableFishIntegration = true;
         pinentry = {
           program = "pinentry-qt";
