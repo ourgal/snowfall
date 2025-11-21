@@ -1,5 +1,4 @@
 {
-  myPkgs = "tach";
   pyPkgs = [
     # keep-sorted start
     "black"
