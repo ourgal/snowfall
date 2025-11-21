@@ -1802,6 +1802,12 @@ args.module (
           album = "十六夜のフォルトゥーナ オリジナルサウンドトラック";
           url = "https://music.163.com/#/song?id=28152340";
         }
+        {
+          artist = "西野カナ";
+          title = "Sakura I Love You";
+          album = "Nightcore";
+          url = "https://www.bilibili.com/video/BV1qY4y1o7Cz";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
