@@ -5,7 +5,9 @@ let
   lan = "192.168.123";
   lan6 = [ "fd5e:4f87:237" ];
   _ip = fromTOML (fileContents ./ip.key);
-  ip = mapAttrs (_n: v: "${lan}.${toString v}") _ip;
+  ip = (mapAttrs (_n: v: "${lan}.${toString v}") _ip) // {
+    office1 = "192.168.1.107";
+  };
   subnet = "${lan}.0/24";
 in
 {
