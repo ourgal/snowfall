@@ -74,6 +74,7 @@ let
               "air"
               "surface"
               "nixos-uefi"
+              "office1"
             ])
           then
             "/dev/nvme0n1"
