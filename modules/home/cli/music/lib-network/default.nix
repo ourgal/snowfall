@@ -1936,6 +1936,12 @@ args.module (
           album = "Auxiliary Brightness";
           url = "https://music.163.com/#/song?id=26127123";
         }
+        {
+          artist = "桃鈴ねね";
+          title = "Lunch with me";
+          album = "Lunch with me";
+          url = "https://music.163.com/#/song?id=1930806302";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
