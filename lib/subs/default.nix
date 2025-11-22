@@ -346,8 +346,8 @@ in
           url = mkSubUrl { raw = "https://bh.jiedianxielou.workers.dev/"; };
           inherit updateInterval;
         };
-        worker1 = {
-          name = "worker1";
+        aniu-snippets = {
+          name = "aniu-snippets";
           url = mkSubUrl { raw = "https://h.x9527x.top/sub?token=X"; };
           inherit updateInterval;
           enable = true;
@@ -362,13 +362,17 @@ in
           name = "kejiland";
           url = mkSubUrl { raw = "https://sub.hkvip.ip-ddns.com/kejiland"; };
           inherit updateInterval;
-          enable = true;
         };
         danfeng = {
           name = "danfeng";
           url = mkSubUrl {
             raw = "https://sub.danfeng.eu.org/sub?uuid=b5544203-55e3-426e-92f1-0684c93f9829&host=snippet.danfeng.site";
           };
+          inherit updateInterval;
+        };
+        aniu-hk = {
+          name = "aniu-hk";
+          url = mkSubUrl { raw = "https://hk.xmm1993.top/sub?token=X"; };
           inherit updateInterval;
           enable = true;
         };
