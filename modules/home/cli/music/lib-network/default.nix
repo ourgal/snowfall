@@ -1997,7 +1997,7 @@ args.module (
       extraOpts = {
         download = switch;
       };
-      value.assertions = [
+      assertions = [
         {
           assertion = duplicateSongs == "";
           message = duplicateSongs;

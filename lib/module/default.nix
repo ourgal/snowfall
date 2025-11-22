@@ -334,6 +334,7 @@ rec {
       tmpfiles ? [ ],
       defaultApps ? { },
       systemdServices ? { },
+      assertions ? [ ],
       _name ? "",
       ...
     }@args:
@@ -654,6 +655,7 @@ rec {
             services = _systemdServices;
             tmpfiles.rules = tmpfiles;
           };
+          inherit assertions;
         } value
       );
     };
