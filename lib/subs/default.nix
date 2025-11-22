@@ -376,6 +376,18 @@ in
           inherit updateInterval;
           enable = true;
         };
+        aniu-jp = {
+          name = "aniu-jp";
+          url = mkSubUrl { raw = "https://jp.xmm1993.top/sub?token=X"; };
+          inherit updateInterval;
+          enable = true;
+        };
+        aniu-sg = {
+          name = "aniu-sg";
+          url = mkSubUrl { raw = "https://sg.xmm1993.top/sub?token=X"; };
+          inherit updateInterval;
+          enable = true;
+        };
       }
     );
 }
