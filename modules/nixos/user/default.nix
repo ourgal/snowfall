@@ -49,6 +49,7 @@ in
       m6NixOnDroid = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzosd4z2sZWxQFy4LpFFC3fSbLX8m4THJqESJkIIJaH nix-on-droid@localhost";
       macmini = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO7+IJ19YD6oqHwJ2w3h0mA7tI+zquJidGODkDcsbUd5 zxc@macmini";
       t4 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTr71VzINwJcF2XMBOblSjUXGcMA9Y3B417N0+57NeT zxc@t4";
+      cano = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrMpvfgz2jlMKWsbnjpBgtNYTcWv3XgjyLBIkJ5rta2Xf2Y81jfiAcHZyhPzPAXKcygL6dOtpa593mIRSfN28vLEf/DlwwihCu1VzUwjdaIxX3rbtFaU4wH6u3vZ7HNO8VGSPrLIYlCWSLgaI59pg+L4mumDSzrgFN56akm4PLodZn5uUz0pdXfPziZUfaaUQ0UJaYKD8lcJ+zyWISdvDgaa3WL5hJFGAc77YbmxHSN3rty+DeUcy84J1WPJO1VOEcSX7hdol9GKNOY3dbEF9N1dW+WOuwVRhSza1NmYFEZLnWptGuVHfVf66JYMCSjRuYHD5xrIxKajdiMCFkId (none)";
     };
     duckdns = {
       token = mkOpt' str (lib.strings.fileContents ./duckdns_token.key);
