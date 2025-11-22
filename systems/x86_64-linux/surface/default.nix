@@ -31,6 +31,6 @@ in
   }
   // settings.laptopModules;
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 
 }
