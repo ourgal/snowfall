@@ -1808,6 +1808,126 @@ args.module (
           album = "Nightcore";
           url = "https://www.bilibili.com/video/BV1qY4y1o7Cz";
         }
+        {
+          artist = "坂上なち";
+          title = "サクラ・ホライズン";
+          album = "Fortune Music selection of nachi";
+          url = "https://music.163.com/#/song?id=32803111";
+        }
+        {
+          artist = "So'Fly";
+          title = "i BELIEVE～星に願いを";
+          album = "ⅰ BELIEVE ～星に願いを";
+          url = "https://music.163.com/#/song?id=831459";
+        }
+        {
+          artist = "KOKIA";
+          title = "Spirits";
+          album = "アルカディアの蒼き巫女 オリジナル・サウンドトラック";
+          url = "https://music.163.com/#/song?id=32069326";
+        }
+        {
+          artist = "一咲美葵";
+          title = "紅に染まる恋の花(with Marcia)";
+          album = "紅に染まる恋の花";
+          url = "https://music.163.com/#/song?id=1438545192";
+        }
+        {
+          artist = "諫山実生";
+          title = "あやとり";
+          album = "ハナコトバ～花心詩～";
+          url = "https://music.163.com/#/song?id=22707944";
+        }
+        {
+          artist = "LiSA";
+          title = "crossing field";
+          album = "ソードアート・オンライン ソングコレクション";
+          url = "https://music.163.com/#/song?id=29027453";
+        }
+        {
+          artist = "ClariS";
+          title = "コネクト";
+          album = "コネクト";
+          url = "https://music.163.com/#/song?id=536622994";
+        }
+        {
+          artist = "紫咲ほたる";
+          title = "ことのは";
+          album = "Limited Dimension";
+          url = "https://music.163.com/#/song?id=721401";
+        }
+        {
+          artist = "F9 & lapix";
+          title = "A.S.H";
+          album = "Nature";
+          url = "https://music.163.com/#/song?id=28587958";
+        }
+        {
+          artist = "牧野由依";
+          title = "ジャスミン";
+          album = "アムリタ";
+          url = "https://music.163.com/#/song?id=610212";
+        }
+        {
+          artist = "鎖那";
+          title = "彼女は旅に出る";
+          album = "Hush a by little girl";
+          url = "https://music.163.com/#/song?id=509106775";
+        }
+        {
+          artist = "発熱巫女~ず";
+          title = "Flower of Life";
+          album = "アンチェインドメロディ";
+          url = "https://music.163.com/#/song?id=745239";
+        }
+        {
+          artist = "めらみぽっぷ";
+          title = "童遊";
+          album = "望";
+          url = "https://music.163.com/#/song?id=28732503";
+        }
+        {
+          artist = "C-CLAYS";
+          title = "月明かりの夜、永遠の色";
+          album = "YES！";
+          url = "https://music.163.com/#/song?id=28921683";
+        }
+        {
+          artist = "仲村芽衣子";
+          title = "プロセス";
+          album = "DIVINE FORTUNE";
+          url = "https://music.163.com/#/song?id=26388032";
+        }
+        {
+          artist = "3L";
+          title = "Three Magic";
+          album = "BEST OF WiNG";
+          url = "https://music.163.com/#/song?id=26565985";
+        }
+        {
+          artist = "Masayoshi Minoshima & 坂上なち ";
+          title = "of memories";
+          album = "of memories";
+          url = "https://music.163.com/#/song?id=22645087";
+        }
+        {
+          artist = "やなぎなぎ & 麻枝准";
+          title = "終わりの世界から";
+          album = "終わりの惑星のLove Song";
+          url = "https://music.163.com/#/song?id=676508";
+        }
+        {
+          artist = "minimum electric design";
+          title = "グーテンベルクの科学世紀";
+          album = "Two-Tone";
+          url = "https://music.163.com/#/song?id=412785540";
+        }
+        {
+          artist = "EastNewSound";
+          title = "Replay & Review";
+          album = "Auxiliary Brightness";
+          url = "https://music.163.com/#/song?id=26127123";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
