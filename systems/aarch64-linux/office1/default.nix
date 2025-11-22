@@ -5,21 +5,20 @@ let
 in
 {
 
-  dot =
-    {
-      user.host = name;
-      boot.grub = enabled;
-    }
-    // enabledList [
-      # keep-sorted start
-      "avahi"
-      "iotop"
-      "common"
-      "nh"
-      "disko"
-      "tuptime"
-      # keep-sorted end
-    ];
+  dot = {
+    user.host = name;
+    boot.grub.nodev = enabled;
+  }
+  // enabledList [
+    # keep-sorted start
+    "avahi"
+    "common"
+    "disko"
+    "iotop"
+    "nh"
+    "tuptime"
+    # keep-sorted end
+  ];
 
   boot.kernelParams = [ "console=tty" ];
 

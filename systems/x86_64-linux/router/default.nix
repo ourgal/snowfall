@@ -12,7 +12,7 @@ in
     in
     {
       user.host = name;
-      boot.grub = enabled;
+      boot.grub.normal = enabled;
       common = enabled;
       nh = enabled;
       disko = enabled;
