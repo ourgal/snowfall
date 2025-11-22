@@ -151,8 +151,8 @@ let
         type = "selector";
         tag = "🇬 谷歌服务";
         outbounds = getTag [
-          direct
           main
+          direct
         ];
       };
       apple = {
