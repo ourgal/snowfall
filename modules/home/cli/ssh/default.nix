@@ -33,7 +33,6 @@ args.module (
         # keep-sorted end
       ];
       perlPkgs = "AppClusterSSH";
-      enable = "ssh-tpm-agent";
       tmpfiles = [ "d ${config.home.homeDirectory}/.ssh - - - - -" ];
       progs.ssh.matchBlocks = {
         github = {
