@@ -23,9 +23,7 @@ in
       dnsmasq = enabled // {
         inherit lan;
         dns = enabled;
-        dhcp = enabled // {
-          only = true;
-        };
+        dhcp = enabled;
       };
       avahi = enabled;
       pppd = enabled // {
@@ -46,6 +44,7 @@ in
       cloudflared = enabled;
       tailscale = enabled;
       bbr = enabled;
+      pixiecore = enabled;
     };
 
   system.stateVersion = "24.11";
