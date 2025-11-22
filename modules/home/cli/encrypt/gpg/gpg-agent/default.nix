@@ -26,6 +26,12 @@ args.module (
       extraOpts = {
         ssh = switch;
       };
+      assertions = [
+        {
+          assertion = !(cfg.enable && cfg.ssh.enable && config.${namespace}.cli.ssh.ssh-tpm-agent.enable);
+          message = "disable gpg-agent ssh support or disable ssh-tpm-agent";
+        }
+      ];
     }
   )
 )
