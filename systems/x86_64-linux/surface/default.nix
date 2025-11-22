@@ -4,6 +4,8 @@ let
   name = getDirname ./.;
 in
 {
+  imports = [ ./facter.nix ];
+
   dot = {
     user.host = name;
     boot.systemd = enabled;

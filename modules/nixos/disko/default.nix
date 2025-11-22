@@ -26,12 +26,18 @@ let
           subvolumes = {
             # Subvolume name is different from mountpoint
             "root" = {
-              mountOptions = [ "compress=zstd" ];
+              mountOptions = [
+                "compress=zstd"
+                "noatime"
+              ];
               mountpoint = "/";
             };
             # Subvolume name is the same as the mountpoint
             "home" = {
-              mountOptions = [ "compress=zstd" ];
+              mountOptions = [
+                "compress=zstd"
+                "noatime"
+              ];
               mountpoint = "/home";
             };
             # Parent is not mounted so the mountpoint must be set

@@ -161,6 +161,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     wrapper-manager.url = "github:viperML/wrapper-manager";
+    nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
   };
 
   nixConfig = {
@@ -280,7 +281,10 @@
           filesystem
         ];
         t4.modules = [ inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4 ];
-        surface.modules = [ inputs.nixos-hardware.nixosModules.microsoft-surface-common ];
+        surface.modules = [
+          inputs.nixos-hardware.nixosModules.microsoft-surface-common
+          inputs.nixos-facter-modules.nixosModules.facter
+        ];
       };
 
       homes.modules =
