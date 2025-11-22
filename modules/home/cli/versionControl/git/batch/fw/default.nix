@@ -13,8 +13,9 @@ args.module (
       soft = lib.${namespace}.git.hostAliases.soft.name;
       myGithub = lib.${namespace}.git.hostAliases.myGithub.name;
       github = lib.${namespace}.git.hostAliases.github.name;
-      home = "ssh://home:${config.home.homeDirectory}/workspace";
+      home = "home:${config.home.homeDirectory}/workspace";
       emacs = "m6:/data/data/org.gnu.emacs/files";
+      t4 = "t4:${config.home.homeDirectory}/workspace";
       conf = {
         "fw/settings.toml" = {
           workspace = "${config.home.homeDirectory}/workspace";
@@ -97,6 +98,10 @@ args.module (
             {
               name = "emacs";
               git = "${emacs}/workspace/snowfall";
+            }
+            {
+              name = "t4";
+              git = "${t4}/snowfall";
             }
           ];
         };
