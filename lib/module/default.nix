@@ -40,21 +40,29 @@ rec {
 
   enabledList =
     opts:
-    let
-      handle =
-        acc: opt:
-        if (isString opt) then
-          acc // { ${opt} = enabled; }
-        else if (isAttrs opt) then
-          acc
-          // (lib.attrsets.foldlAttrs (
-            _acc: n: v:
-            _acc // { ${n} = enabled // v; }
-          ) { } opt)
-        else
-          throw "not supported type";
-    in
-    foldl' handle { } opts;
+    if isList opts then
+      let
+        handle =
+          acc: opt:
+          if (isString opt) then
+            acc // { ${opt} = enabled; }
+          else if (isAttrs opt) then
+            acc
+            // (lib.attrsets.foldlAttrs (
+              _acc: n: v:
+              _acc // { ${n} = enabled // v; }
+            ) { } opt)
+          else
+            throw "not supported type";
+      in
+      foldl' handle { } opts
+    else if isAttrs opts then
+      lib.attrsets.foldlAttrs (
+        acc: n: v:
+        acc // { ${n} = enabled // v; }
+      ) { } opts
+    else
+      throw "not supported sub module type";
 
   enableOpt = opts: foldl' (acc: opt: acc // { "${opt}" = true; }) { } opts;
 
@@ -173,10 +181,12 @@ rec {
     mkModuleOpt {
       inherit path;
       value =
-        if (isList subModule) then
+        if isList subModule then
           enabledList subModule
-        else if (isString subModule) then
+        else if isString subModule then
           enabledList [ subModule ]
+        else if isAttrs subModule then
+          enabledList subModule
         else
           throw "not supported type";
       prefix = "modules/home/";
@@ -191,10 +201,12 @@ rec {
     mkModuleOpt' {
       inherit path;
       value =
-        if (isList subModule) then
+        if isList subModule then
           enabledList subModule
-        else if (isString subModule) then
+        else if isString subModule then
           enabledList [ subModule ]
+        else if isAttrs subModule then
+          enabledList subModule
         else
           throw "not supported type";
     };
@@ -208,10 +220,12 @@ rec {
     mkModuleOpt {
       inherit path;
       value =
-        if (isList subModule) then
+        if isList subModule then
           enabledList subModule
-        else if (isString subModule) then
+        else if isString subModule then
           enabledList [ subModule ]
+        else if isAttrs subModule then
+          enabledList subModule
         else
           throw "not supported type";
       prefix = "modules/nixos/";
@@ -226,10 +240,12 @@ rec {
     mkModuleOpt' {
       inherit path;
       value =
-        if (isList subModule) then
+        if isList subModule then
           enabledList subModule
-        else if (isString subModule) then
+        else if isString subModule then
           enabledList [ subModule ]
+        else if isAttrs subModule then
+          enabledList subModule
         else
           throw "not supported type";
     };
