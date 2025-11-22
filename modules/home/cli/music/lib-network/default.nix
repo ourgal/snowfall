@@ -3,10 +3,18 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs lib config;
+      inherit (args)
+        pkgs
+        lib
+        config
+        switch
+        cfgHome
+        namespace
+        ;
       inherit (builtins) foldl' replaceStrings concatStringsSep;
       sanitizeString = str: replaceStrings [ " " "'" ":" ] [ "_" "" "_" ] str;
       mkFilename = artist: title: "${sanitizeString artist}-${sanitizeString title}.mp3";
+      cfg = cfgHome config.${namespace} ./.;
       metadata = [
         {
           artist = "Outlaw (feat. Miss Mary)";
@@ -1981,10 +1989,13 @@ args.module (
           clean:
           	rm *.mp3
         '';
-        _onchange = ''
+        _onchange = lib.optionalString cfg.download.enable ''
           echo "Downloading music from network"
           $DRY_RUN_CMD ${lib.getExe pkgs.gnumake} -C ${config.home.homeDirectory}/Music/net
         '';
+      };
+      extraOpts = {
+        download = switch;
       };
       value.assertions = [
         {
