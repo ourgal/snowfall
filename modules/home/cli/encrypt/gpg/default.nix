@@ -3,17 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) lib pkgs;
+      inherit (args) lib pkgs enabled;
     in
     {
       nixPkgs = "gpg-tui";
-      servs.gpg-agent = {
-        enableSshSupport = true;
-        enableFishIntegration = true;
-        pinentry = {
-          program = "pinentry-qt";
-          package = pkgs.pinentry-qt;
-        };
+      enable = {
+        gpg-agent.ssh = enabled;
       };
       progs.gpg = {
         settings = {
