@@ -32,7 +32,6 @@ let
     "surface"
     "office2043"
     "q4ospc"
-    "office1"
   ];
   work = [
     "office2043"
