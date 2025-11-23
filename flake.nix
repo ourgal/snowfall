@@ -162,6 +162,10 @@
     };
     wrapper-manager.url = "github:viperML/wrapper-manager";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -261,6 +265,7 @@
           arion = inputs.arion.nixosModules.arion;
           sops-nix = inputs.sops-nix.nixosModules.sops;
           nix-monitored = inputs.nix-monitored.nixosModules.default;
+          lanzaboote = inputs.lanzaboote.nixosModules.lanzaboote;
         in
         [
           niri
@@ -269,6 +274,7 @@
           arion
           sops-nix
           nix-monitored
+          lanzaboote
         ];
 
       systems.hosts = lib.attrsets.recursiveUpdate systemSpecialArgsFinal {
