@@ -1,8 +1,10 @@
 args:
 let
   inherit (args) namespace lib config;
-  inherit (lib.${namespace}) nixosModule;
+  inherit (lib.${namespace}) nixosModule switch cfgNixos;
   inherit (config.${namespace}.user) host;
+  inherit (builtins) elem throw;
+  cfg = cfgNixos config.${namespace} ./.;
   gpt = {
     type = "gpt";
     partitions = {
@@ -71,45 +73,112 @@ let
       }
     ];
   };
-  value = {
-    disko.devices = {
-      disk.disk1 = {
-        device =
-          if
-            (builtins.elem host [
-              "air"
-              "surface"
-              "nixos-uefi"
-              "office1"
-            ])
-          then
-            "/dev/nvme0n1"
-          else if
-            (builtins.elem host [
-              "brix"
-              "home"
-              "router"
-              "yanyu"
-              "nixos-mbr"
-            ])
-          then
-            "/dev/sda"
-          else
-            builtins.throw "unknown host";
-        type = "disk";
-        content =
-          if
-            (builtins.elem host [
-              "nixos-mbr"
-              "router"
-            ])
-          then
-            msdos
-          else
-            gpt;
+  luks-btrfs = {
+    type = "gpt";
+    partitions = {
+      ESP = {
+        size = "512M";
+        type = "EF00";
+        content = {
+          type = "filesystem";
+          format = "vfat";
+          mountpoint = "/boot";
+          mountOptions = [ "umask=0077" ];
+        };
+      };
+      luks = {
+        size = "100%";
+        content = {
+          type = "luks";
+          name = "crypted";
+          # disable settings.keyFile if you want to use interactive password entry
+          #passwordFile = "/tmp/secret.key"; # Interactive
+          settings = {
+            allowDiscards = true;
+            keyFile = "/key/keyfile";
+          };
+          # additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
+          content = {
+            type = "btrfs";
+            extraArgs = [ "-f" ];
+            subvolumes = {
+              "root" = {
+                mountpoint = "/";
+                mountOptions = [
+                  "compress=zstd"
+                  "noatime"
+                ];
+              };
+              "home" = {
+                mountpoint = "/home";
+                mountOptions = [
+                  "compress=zstd"
+                  "noatime"
+                ];
+              };
+              "nix" = {
+                mountpoint = "/nix";
+                mountOptions = [
+                  "compress=zstd"
+                  "noatime"
+                ];
+              };
+              "swap" = {
+                mountpoint = "/.swapvol";
+                swap.swapfile.size = "4G";
+              };
+            };
+          };
+        };
       };
     };
   };
-  _args = { inherit value args; };
+  value = {
+    disko.devices = {
+      disk = {
+        disk1 = {
+          device =
+            if
+              elem host [
+                "air"
+                "surface"
+                "nixos-uefi"
+                "office1"
+              ]
+            then
+              "/dev/nvme0n1"
+            else if
+              elem host [
+                "brix"
+                "home"
+                "router"
+                "yanyu"
+                "nixos-mbr"
+              ]
+            then
+              "/dev/sda"
+            else
+              throw "unknown host";
+          type = "disk";
+          content =
+            if
+              elem host [
+                "nixos-mbr"
+                "router"
+              ]
+            then
+              msdos
+            else if cfg.encrypt.enable then
+              luks-btrfs
+            else
+              gpt;
+        };
+      };
+    };
+  };
+  extraOpts = {
+    encrypt = switch;
+  };
+  _args = { inherit value args extraOpts; };
 in
 nixosModule _args

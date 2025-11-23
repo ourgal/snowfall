@@ -48,9 +48,35 @@ mmdoc:
 chezmoi:
     @chezmoi apply
 
-anywhere host ip:
-    @git add .
-    @nixos-anywhere --flake .#{{ host }} root@{{ ip }}
+anywhere host ip ssh:
+    #!/usr/bin/env bash
+
+    # Create a temporary directory
+    temp=$(mktemp -d)
+
+    # Function to cleanup temporary directory on exit
+    cleanup() {
+      rm -rf "$temp"
+    }
+    trap cleanup EXIT
+
+    # Create the directory where sshd expects to find the host keys
+    install -d -m755 "$temp/etc/ssh"
+
+    # Decrypt your private key from the password store and copy it to the temporary directory
+    gopass ssh/{{ ssh }}/ed25519_key > "$temp/etc/ssh/ssh_host_ed25519_key"
+    gopass ssh/{{ ssh }}/ed25519_key.pub > "$temp/etc/ssh/ssh_host_ed25519_key.pub"
+    gopass ssh/{{ ssh }}/rsa_key > "$temp/etc/ssh/ssh_host_rsa_key"
+    gopass ssh/{{ ssh }}/rsa_key.pub > "$temp/etc/ssh/ssh_host_rsa_key.pub"
+
+    # Set the correct permissions so sshd will accept the key
+    chmod 600 "$temp/etc/ssh/ssh_host_ed25519_key"
+    chmod 644 "$temp/etc/ssh/ssh_host_ed25519_key.pub"
+    chmod 600 "$temp/etc/ssh/ssh_host_rsa_key"
+    chmod 644 "$temp/etc/ssh/ssh_host_rsa_key.pub"
+
+    # Install NixOS to the host system with our secrets
+    nixos-anywhere --disk-encryption-keys /key/keyfile /media/ASUSBIOS/keyfile --extra-files "$temp" --flake .#{{ host }} --target-host root@{{ ip }}
 
 qutebrowser:
     @make -C modules/home/desktop/browser/qutebrowser
