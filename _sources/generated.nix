@@ -856,8 +856,8 @@
     version = "1.11.2";
     src = dockerTools.pullImage {
       imageName = "linuxserver/pairdrop";
-      imageDigest = "sha256:3ac006365984a195a71e3af6d79852e8440da8f7b2995296f38470a8c4fe005a";
-      sha256 = "sha256-MCPtJz+cql4Oa6xyL/cLSS9/j1ln/gbm4H2AasN453g=";
+      imageDigest = "sha256:b142d76ea81e1bcdf858ed41eb382201ba1a76a9cba9d582223f51862b1154c2";
+      sha256 = "sha256-3JSnzzyAHLOIJEnCmsg8H5l/PNeCTmPVmHlBthgKBp0=";
       finalImageTag = "1.11.2";
     };
   };
@@ -1851,13 +1851,13 @@
   };
   hl = {
     pname = "hl";
-    version = "v0.32.2";
+    version = "v0.32.3";
     src = fetchFromGitHub {
       owner = "pamburus";
       repo = "hl";
-      rev = "v0.32.2";
+      rev = "v0.32.3";
       fetchSubmodules = false;
-      sha256 = "sha256-JG5+RpUc8UGYxSlEX0c+dcUU2fFuVEwz/duK94XYkOc=";
+      sha256 = "sha256-BYSVzLh/GGC5BK0Q2xyZ54AA6UUxmWNFj9mH8gGvLXQ=";
     };
   };
   hledger-fmt = {
@@ -2338,15 +2338,15 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "4a6a289a9a26c6bb8bedc211ac3ee8ff29677d53";
+    version = "88f05f5adec45f4b93ab88616b66efee558b447c";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "4a6a289a9a26c6bb8bedc211ac3ee8ff29677d53";
+      rev = "88f05f5adec45f4b93ab88616b66efee558b447c";
       fetchSubmodules = false;
-      sha256 = "sha256-uKTFGYZB/hST9typOn1cbpTiziYNe+VUufgFUV7GbPc=";
+      sha256 = "sha256-xKZ+wTxFaghVVf2a8MjSdrb+OfXe0S+1YGERH0hyKZA=";
     };
-    date = "2025-11-22";
+    date = "2025-11-24";
   };
   natmap = {
     pname = "natmap";
@@ -2562,15 +2562,15 @@
   };
   pnut = {
     pname = "pnut";
-    version = "afa24a6246982055a3b68d4247a35ed8433156d7";
+    version = "f777da56d5dc293b5124f06e044b942f65223529";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "afa24a6246982055a3b68d4247a35ed8433156d7";
+      rev = "f777da56d5dc293b5124f06e044b942f65223529";
       fetchSubmodules = false;
-      sha256 = "sha256-u84KOmqfUfe3m8k3ROM12+q8zZq8meYQ5f1tJYs9MkU=";
+      sha256 = "sha256-Rc2flnw18pc1E+aTA1V+hTpbT5L42v5LwPm0oXaVOAo=";
     };
-    date = "2025-11-17";
+    date = "2025-11-23";
   };
   powershell-beautifier = {
     pname = "powershell-beautifier";
@@ -2720,16 +2720,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.591.0";
+    version = "v0.592.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.591.0";
+      rev = "v0.592.0";
       fetchSubmodules = false;
-      sha256 = "sha256-nRahEAkUUO3BJ8rb05Yhgjo7X/qTV6IZj/SW0L3fCnM=";
+      sha256 = "sha256-bp/YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-nRahEAkUUO3BJ8rb05Yhgjo7X_qTV6IZj_SW0L3fCnM=/Cargo.lock";
+      lockFile = ./. + "/sha256-bp_YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=/Cargo.lock";
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };
@@ -3861,18 +3861,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511212214";
+    version = "202511232213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511212214/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geoip.dat";
       sha256 = "sha256-dmaakIEbcWbcrGIdypD2JG4rIQZTwYhDVRN/QvQRUrA=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511212214";
+    version = "202511232213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511212214/geosite.dat";
-      sha256 = "sha256-ewgmS7Cdqdj/V2OdU7rYKFSlEpVEhCm24liUIcy25VA=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geosite.dat";
+      sha256 = "sha256-2vAKkL1eJIvJTU047aYBJHx6i10yZ2SZh3JiAYaLFb4=";
     };
   };
   vim-auto-save = {
