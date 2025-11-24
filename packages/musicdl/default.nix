@@ -36,6 +36,7 @@ python3Packages.buildPythonApplication {
     tabulate
     mutagen
     pkgs.${namespace}.pyfreeproxy
+    ytmusicapi
   ];
 
   pythonImportsCheck = [ "musicdl" ];
