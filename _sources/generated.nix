@@ -2338,13 +2338,13 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "88f05f5adec45f4b93ab88616b66efee558b447c";
+    version = "fb87d7608bdcb890ac238ea5064805e30a639294";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "88f05f5adec45f4b93ab88616b66efee558b447c";
+      rev = "fb87d7608bdcb890ac238ea5064805e30a639294";
       fetchSubmodules = false;
-      sha256 = "sha256-xKZ+wTxFaghVVf2a8MjSdrb+OfXe0S+1YGERH0hyKZA=";
+      sha256 = "sha256-FCS0YFLjr4Gw7d7XGgMn46KbdlET5PTlv41qckkn994=";
     };
     date = "2025-11-24";
   };
@@ -2562,13 +2562,13 @@
   };
   pnut = {
     pname = "pnut";
-    version = "f777da56d5dc293b5124f06e044b942f65223529";
+    version = "82370749674db6f7fbce65e1cf3a51d15e3ad594";
     src = fetchFromGitHub {
       owner = "udem-dlteam";
       repo = "pnut";
-      rev = "f777da56d5dc293b5124f06e044b942f65223529";
+      rev = "82370749674db6f7fbce65e1cf3a51d15e3ad594";
       fetchSubmodules = false;
-      sha256 = "sha256-Rc2flnw18pc1E+aTA1V+hTpbT5L42v5LwPm0oXaVOAo=";
+      sha256 = "sha256-kgnK+VstxKueahiX/KFEm2gkzJGluFuKs+V42EOio68=";
     };
     date = "2025-11-23";
   };
@@ -3674,15 +3674,15 @@
   };
   tmux2k = {
     pname = "tmux2k";
-    version = "59d73779edcce92bf5a9fb2d4c470296134e34be";
+    version = "90707b93e4c4c3a20dc5dbff1cc9106057c70c71";
     src = fetchFromGitHub {
       owner = "2KAbhishek";
       repo = "tmux2k";
-      rev = "59d73779edcce92bf5a9fb2d4c470296134e34be";
+      rev = "90707b93e4c4c3a20dc5dbff1cc9106057c70c71";
       fetchSubmodules = false;
-      sha256 = "sha256-ZPnjgZPFfbVhAb6jwKrFUepia6RHQxDeDPhsMX66How=";
+      sha256 = "sha256-AdKskM3gSIB+ysusNgQRp9Jb2rM2dldr/wtV2PUqTjo=";
     };
-    date = "2025-10-14";
+    date = "2025-11-24";
   };
   to-fish = {
     pname = "to-fish";
@@ -3861,18 +3861,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511232213";
+    version = "202511242213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geoip.dat";
       sha256 = "sha256-dmaakIEbcWbcrGIdypD2JG4rIQZTwYhDVRN/QvQRUrA=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511232213";
+    version = "202511242213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geosite.dat";
-      sha256 = "sha256-2vAKkL1eJIvJTU047aYBJHx6i10yZ2SZh3JiAYaLFb4=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geosite.dat";
+      sha256 = "sha256-NIplq6wHsYUy011/GZzIOjOJliGzoah+u5lT2KxGkmY=";
     };
   };
   vim-auto-save = {

@@ -4202,12 +4202,12 @@
             "name": null,
             "owner": "CharlesPikachu",
             "repo": "musicdl",
-            "rev": "88f05f5adec45f4b93ab88616b66efee558b447c",
-            "sha256": "sha256-xKZ+wTxFaghVVf2a8MjSdrb+OfXe0S+1YGERH0hyKZA=",
+            "rev": "fb87d7608bdcb890ac238ea5064805e30a639294",
+            "sha256": "sha256-FCS0YFLjr4Gw7d7XGgMn46KbdlET5PTlv41qckkn994=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "88f05f5adec45f4b93ab88616b66efee558b447c"
+        "version": "fb87d7608bdcb890ac238ea5064805e30a639294"
     },
     "natmap": {
         "cargoLock": null,
@@ -4589,12 +4589,12 @@
             "name": null,
             "owner": "udem-dlteam",
             "repo": "pnut",
-            "rev": "f777da56d5dc293b5124f06e044b942f65223529",
-            "sha256": "sha256-Rc2flnw18pc1E+aTA1V+hTpbT5L42v5LwPm0oXaVOAo=",
+            "rev": "82370749674db6f7fbce65e1cf3a51d15e3ad594",
+            "sha256": "sha256-kgnK+VstxKueahiX/KFEm2gkzJGluFuKs+V42EOio68=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f777da56d5dc293b5124f06e044b942f65223529"
+        "version": "82370749674db6f7fbce65e1cf3a51d15e3ad594"
     },
     "powershell-beautifier": {
         "cargoLock": null,
@@ -6505,7 +6505,7 @@
     },
     "tmux2k": {
         "cargoLock": null,
-        "date": "2025-10-14",
+        "date": "2025-11-24",
         "extract": null,
         "name": "tmux2k",
         "passthru": null,
@@ -6517,12 +6517,12 @@
             "name": null,
             "owner": "2KAbhishek",
             "repo": "tmux2k",
-            "rev": "59d73779edcce92bf5a9fb2d4c470296134e34be",
-            "sha256": "sha256-ZPnjgZPFfbVhAb6jwKrFUepia6RHQxDeDPhsMX66How=",
+            "rev": "90707b93e4c4c3a20dc5dbff1cc9106057c70c71",
+            "sha256": "sha256-AdKskM3gSIB+ysusNgQRp9Jb2rM2dldr/wtV2PUqTjo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "59d73779edcce92bf5a9fb2d4c470296134e34be"
+        "version": "90707b93e4c4c3a20dc5dbff1cc9106057c70c71"
     },
     "to-fish": {
         "cargoLock": null,
@@ -6849,9 +6849,9 @@
             "name": null,
             "sha256": "sha256-dmaakIEbcWbcrGIdypD2JG4rIQZTwYhDVRN/QvQRUrA=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geoip.dat"
         },
-        "version": "202511232213"
+        "version": "202511242213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6862,11 +6862,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-2vAKkL1eJIvJTU047aYBJHx6i10yZ2SZh3JiAYaLFb4=",
+            "sha256": "sha256-NIplq6wHsYUy011/GZzIOjOJliGzoah+u5lT2KxGkmY=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511232213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geosite.dat"
         },
-        "version": "202511232213"
+        "version": "202511242213"
     },
     "vim-auto-save": {
         "cargoLock": null,
