@@ -1942,6 +1942,96 @@ args.module (
           album = "Lunch with me";
           url = "https://music.163.com/#/song?id=1930806302";
         }
+        {
+          artist = "Juliet";
+          title = "サクラブ -桜、咲く-";
+          album = "サクラブ";
+          url = "https://music.163.com/#/song?id=753225";
+        }
+        {
+          artist = "Ms.OOJA";
+          title = "baby don't know why";
+          album = "VOICE";
+          url = "https://music.163.com/#/song?id=22778302";
+        }
+        {
+          artist = "Aimer & EGOIST";
+          title = "ninelie";
+          album = "ninelie";
+          url = "https://music.163.com/#/song?id=409872504";
+        }
+        {
+          artist = "山崎あおい";
+          title = "鯖鯖";
+          album = "鯖鯖";
+          url = "https://music.163.com/#/song?id=1316563576";
+        }
+        {
+          artist = "WHITE JAM";
+          title = "AMAZING ME";
+          album = "TIK TOK";
+          url = "https://music.163.com/#/song?id=28563383";
+        }
+        {
+          artist = "ROOKiEZ is PUNK'D";
+          title = "コンプリケイション";
+          album = "コンプリケイション デュラララ!!盘";
+          url = "https://music.163.com/#/song?id=811995";
+        }
+        {
+          artist = "HoneyWorks & かぴ";
+          title = "可愛くてごめん (feat. かぴ)";
+          album = "告白実行委員会 -FLYING SONGS- 恋してる";
+          url = "https://music.163.com/#/song?id=1969519579";
+        }
+        {
+          artist = "和田光司";
+          title = "Butter-Fly";
+          album = "DIGIMON HISTORY 1999-2006 All The Best";
+          url = "https://music.163.com/#/song?id=4940920";
+        }
+        {
+          artist = "三浦サリー";
+          title = "セツナイのは…";
+          album = "セツナイのは…";
+          url = "https://music.163.com/#/song?id=26142483";
+        }
+        {
+          artist = "MY FIRST STORY";
+          title = "不可逆リプレイス - Fukagyaku Replace";
+          album = "不可逆リプレイス - Fukagyaku Replace";
+          url = "https://music.163.com/#/song?id=29436956";
+        }
+        {
+          artist = "T-ara";
+          title = "DAY BY DAY (Japanese Ver.)";
+          album = "Sexy Love (Japanese ver.)";
+          url = "https://music.163.com/#/song?id=26089233";
+        }
+        {
+          artist = "ワカバ";
+          title = "明日、僕は君に会いに行く。";
+          album = "明日、僕は君に会いに行く。";
+          url = "https://music.163.com/#/song?id=863974";
+        }
+        {
+          artist = "Reol & Giga";
+          title = "No title";
+          album = "No title-";
+          url = "https://music.163.com/#/song?id=28941713";
+        }
+        {
+          artist = "Trident";
+          title = "ブルー・フィールド";
+          album = "ブルー・フィールド";
+          url = "https://music.163.com/#/song?id=27901850";
+        }
+        {
+          artist = "SPYAIR";
+          title = "サムライハート(Some Like It Hot!!)";
+          album = "银魂BEST3";
+          url = "https://music.163.com/#/song?id=28018217";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
