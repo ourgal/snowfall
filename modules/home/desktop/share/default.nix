@@ -1,1 +1,8 @@
-{ nixPkgs = "alisthelper"; }
+{
+  nixPkgs = [
+    # keep-sorted start
+    "alisthelper"
+    "packet"
+    # keep-sorted end
+  ];
+}
