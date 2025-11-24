@@ -28,6 +28,7 @@
     "less"
     "ls"
     "mv"
+    "nohup"
     "pipe"
     "ps"
     "rm"
