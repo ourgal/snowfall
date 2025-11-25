@@ -2032,6 +2032,54 @@ args.module (
           album = "银魂BEST3";
           url = "https://music.163.com/#/song?id=28018217";
         }
+        {
+          artist = "一咲美葵";
+          title = "明日散る運命なら[with Marcia]";
+          album = "明日散る運命なら";
+          url = "https://music.163.com/#/song?id=1833392131";
+        }
+        {
+          artist = "CHiCO with HoneyWorks";
+          title = "世界は恋に落ちている";
+          album = "世界は恋に落ちている";
+          url = "https://music.163.com/#/song?id=28891491";
+        }
+        {
+          artist = "高野健一";
+          title = "さくら";
+          album = "さくら";
+          url = "https://music.163.com/#/song?id=28283665";
+        }
+        {
+          artist = "中島みゆき";
+          title = "銀の龍の背に乗って";
+          album = "銀の龍の背に乗って";
+          url = "https://music.163.com/#/song?id=624751";
+        }
+        {
+          artist = "Field Of View";
+          title = "DAN DAN 心魅かれてく(Cinema Version)";
+          album = "ドラゴンボール~最強への道~オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=493735159";
+        }
+        {
+          artist = "福原美穂";
+          title = "LET IT OUT";
+          album = "LET IT OUT";
+          url = "https://music.163.com/#/song?id=571330";
+        }
+        {
+          artist = "Ayase";
+          title = "夜撫でるメノウ (Ayase ver.)";
+          album = "幽霊東京";
+          url = "https://music.163.com/#/song?id=1466019532";
+        }
+        {
+          artist = "宇多田ヒカル";
+          title = "Beautiful World 2021 Remastered";
+          album = "Beautiful World -2021 Remastered-";
+          url = "https://music.163.com/#/song?id=1825842042";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
