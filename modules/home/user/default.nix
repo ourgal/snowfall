@@ -10,9 +10,9 @@ let
   inherit (lib.${namespace})
     cfgHome
     mkOpt'
-    enabled
     defaultTypes
     mime
+    disabled
     ;
   cfg = cfgHome config.${namespace} ./.;
   defaults = defaultTypes "${cfg.browser}.desktop" mime.html;
@@ -50,7 +50,7 @@ in
 
   config = mkIf (isString cfg.name) (
     {
-      catppuccin = enabled // {
+      catppuccin = disabled // {
         accent = "blue";
         flavor = "macchiato";
       };
