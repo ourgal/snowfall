@@ -64,10 +64,10 @@ anywhere host ip ssh:
     install -d -m755 "$temp/etc/ssh"
 
     # Decrypt your private key from the password store and copy it to the temporary directory
-    gopass ssh/{{ ssh }}/ed25519_key > "$temp/etc/ssh/ssh_host_ed25519_key"
-    gopass ssh/{{ ssh }}/ed25519_key.pub > "$temp/etc/ssh/ssh_host_ed25519_key.pub"
-    gopass ssh/{{ ssh }}/rsa_key > "$temp/etc/ssh/ssh_host_rsa_key"
-    gopass ssh/{{ ssh }}/rsa_key.pub > "$temp/etc/ssh/ssh_host_rsa_key.pub"
+    gopass ssh/{{ ssh }}/system/ed25519_key > "$temp/etc/ssh/ssh_host_ed25519_key"
+    gopass ssh/{{ ssh }}/system/ed25519_key.pub > "$temp/etc/ssh/ssh_host_ed25519_key.pub"
+    gopass ssh/{{ ssh }}/system/rsa_key > "$temp/etc/ssh/ssh_host_rsa_key"
+    gopass ssh/{{ ssh }}/system/rsa_key.pub > "$temp/etc/ssh/ssh_host_rsa_key.pub"
 
     # Set the correct permissions so sshd will accept the key
     chmod 600 "$temp/etc/ssh/ssh_host_ed25519_key"
