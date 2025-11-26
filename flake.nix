@@ -277,21 +277,28 @@
           lanzaboote
         ];
 
-      systems.hosts = lib.attrsets.recursiveUpdate systemSpecialArgsFinal {
-        n1.modules = with inputs.nixos-n1.nixosModules; [
-          dtos
-          gpu
-          loader
-          misc
-          wireless
-          filesystem
-        ];
-        t4.modules = [ inputs.nixos-hardware.nixosModules.friendlyarm-nanopc-t4 ];
-        surface.modules = [
-          inputs.nixos-hardware.nixosModules.microsoft-surface-common
-          inputs.nixos-facter-modules.nixosModules.facter
-        ];
-      };
+      systems.hosts =
+        let
+          nixos-hardware = inputs.nixos-hardware.nixosModules;
+          facter = inputs.nixos-facter-modules.nixosModules.facter;
+        in
+        lib.attrsets.recursiveUpdate systemSpecialArgsFinal {
+          n1.modules = with inputs.nixos-n1.nixosModules; [
+            dtos
+            gpu
+            loader
+            misc
+            wireless
+            filesystem
+          ];
+          t4.modules = [ nixos-hardware.friendlyarm-nanopc-t4 ];
+          home.modules = [ facter ];
+          router.modules = [ facter ];
+          surface.modules = [
+            nixos-hardware.microsoft-surface-common
+            facter
+          ];
+        };
 
       homes.modules =
         let

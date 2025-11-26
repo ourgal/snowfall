@@ -4,7 +4,10 @@ let
   name = getDirname ./.;
 in
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./facter.nix
+  ];
 
   dot = {
     user.host = name;
