@@ -62,6 +62,7 @@ in
     "opentabletdriver"
     "power"
     "scrutiny"
+    "stylix"
     "syncthing"
     "temp-hosts"
     "tpm"

@@ -16,7 +16,7 @@ args.module (
       progs.rofi = {
         cycle = true;
         terminal = lib.getExe pkgs.kitty;
-        theme = "spotlight";
+        theme = lib.mkDefault "spotlight";
         plugins = [ pkgs.rofi-emoji ];
         extraConfig = {
           modes = lib.strings.concatStringsSep "," cfg.modes;
@@ -35,7 +35,6 @@ args.module (
           name = "Rofi-screenshot";
           exec = "rofi-screenshot";
         };
-        catppuccin.rofi.enable = false;
       };
       enable = "power-menu";
       extraOpts = {

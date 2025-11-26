@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) lib config;
+      inherit (args) lib;
     in
     {
       progs.zathura = {
@@ -16,7 +16,7 @@ args.module (
           "scroll-step" = "100";
           "font" = "Source Han Sans SC 14";
         }
-        // lib.mkIf (!config.catppuccin.enable) {
+        // lib.mkDefault {
           "default-bg" = "#000000"; # 00
           "default-fg" = "#F7F7F6"; # 01
           "statusbar-fg" = "#B0B0B0"; # 04

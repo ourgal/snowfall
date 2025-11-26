@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib;
     in
     {
       progs.vscode = {
@@ -14,8 +14,8 @@ args.module (
           userSettings = {
             "files.autoSave" = "afterDelay";
             "files.autoSaveDelay" = 1000;
-            "editor.fontFamily" = "monospace";
-            "editor.fontSize" = "16";
+            "editor.fontFamily" = lib.mkDefault "monospace";
+            "editor.fontSize" = lib.mkDefault 16;
           };
         };
         package = pkgs.vscodium;

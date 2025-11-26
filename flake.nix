@@ -166,6 +166,10 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -266,6 +270,7 @@
           sops-nix = inputs.sops-nix.nixosModules.sops;
           nix-monitored = inputs.nix-monitored.nixosModules.default;
           lanzaboote = inputs.lanzaboote.nixosModules.lanzaboote;
+          stylix = inputs.stylix.nixosModules.stylix;
         in
         [
           niri
@@ -275,6 +280,7 @@
           sops-nix
           nix-monitored
           lanzaboote
+          stylix
         ];
 
       systems.hosts =

@@ -756,7 +756,7 @@ args.module (
         broot = switch;
         live_grep = switch;
       };
-      value.catppuccin.helix = enabled // {
+      value.catppuccin.helix = {
         flavor = "mocha";
         useItalics = true;
       };

@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs namespace;
+      inherit (args) pkgs namespace lib;
     in
     {
       servs.dunst = {
@@ -13,7 +13,7 @@ args.module (
         };
         settings = {
           global = {
-            font = "Iosevka Nerd Font 14";
+            font = lib.mkDefault "Iosevka Nerd Font 14";
           };
           play_sound = {
             summary = "*";
