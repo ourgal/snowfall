@@ -2080,6 +2080,78 @@ args.module (
           album = "Beautiful World -2021 Remastered-";
           url = "https://music.163.com/#/song?id=1825842042";
         }
+        {
+          artist = "Spontania & AZU";
+          title = "同じ空みつめてるあなたに";
+          album = "同じ空みつめてるあなたに";
+          url = "https://music.163.com/#/song?id=820340";
+        }
+        {
+          artist = "高橋洋子";
+          title = "残酷な天使のテーゼ (Director's Edit.Version)";
+          album = "残酷な天使のテーゼ FLY ME TO THE MOON";
+          url = "https://music.163.com/#/song?id=657680";
+        }
+        {
+          artist = "森永真由美";
+          title = "レプリカの恋";
+          album = "レプリカの恋";
+          url = "https://music.163.com/#/song?id=28581725";
+        }
+        {
+          artist = "WANDS";
+          title = "世界が終るまでは···";
+          album = "SLAM DUNK BEST COLLECTION";
+          url = "https://music.163.com/#/song?id=26508150";
+        }
+        {
+          artist = "花たん";
+          title = "Wave";
+          album = "Flower";
+          url = "https://music.163.com/#/song?id=27548257";
+        }
+        {
+          artist = "シド";
+          title = "嘘";
+          album = "鋼の錬金術師 THE BEST";
+          url = "https://music.163.com/#/song?id=28272047";
+        }
+        {
+          artist = "SoulJa & 中村舞子 & 壇蜜";
+          title = "What’s your name? (collaboration with 壇蜜)";
+          album = "雨のち晴れ What's your name?";
+          url = "https://music.163.com/#/song?id=26902203";
+        }
+        {
+          artist = "放課後ティータイム";
+          title = "Don't say lazy [5人Ver.]";
+          album = "けいおん!はいれぞ!「Come with Me!!」セット";
+          url = "https://music.163.com/#/song?id=514765042";
+        }
+        {
+          artist = "平原綾香";
+          title = "はじまりの風";
+          album = "4つのL";
+          url = "https://music.163.com/#/song?id=22811178";
+        }
+        {
+          artist = "MARiA";
+          title = "Girls";
+          album = "aMazing MusiQue PaRK";
+          url = "https://music.163.com/#/song?id=22793308";
+        }
+        {
+          artist = "SPICY CHOCOLATE & JASMINE & SKY-HI & 寿君";
+          title = "それでも君が好き";
+          album = "渋谷純愛物語";
+          url = "https://music.163.com/#/song?id=29567155";
+        }
+        {
+          artist = "FictionJunction & 南里侑香";
+          title = "暁の車";
+          album = "暁の車";
+          url = "https://music.163.com/#/song?id=724495";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
