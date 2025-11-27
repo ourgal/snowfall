@@ -90,8 +90,8 @@
 ;; set font
 (setq +main-font "Fira Code")
 
-(setq doom-font (font-spec :family "monospace" :size 18)
-      doom-variable-pitch-font (font-spec :family "sans-serif" :size 19))
+(setq doom-font (font-spec :family "monospace" :size 15)
+      doom-variable-pitch-font (font-spec :family "sans-serif" :size 15))
 
 (setq doom-themes-enable-bold t
       doom-themes-enable-italic t)
