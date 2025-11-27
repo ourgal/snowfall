@@ -2152,6 +2152,60 @@ args.module (
           album = "暁の車";
           url = "https://music.163.com/#/song?id=724495";
         }
+        {
+          artist = "ClariS";
+          title = "pastel";
+          album = "アネモネ";
+          url = "https://music.163.com/#/song?id=33469881";
+        }
+        {
+          artist = "Lia";
+          title = "鳥の詩";
+          album = "Ornithopter -AIR Original Compilation-";
+          url = "https://music.163.com/#/song?id=761594";
+        }
+        {
+          artist = "童子-T & YU-A";
+          title = "願い";
+          album = "12love Stories";
+          url = "https://music.163.com/#/song?id=524184";
+        }
+        {
+          artist = "ナナツカゼ & PIKASONIC & なこたんまる";
+          title = "朧月夜";
+          album = "朧月夜";
+          url = "https://music.163.com/#/song?id=2059807644";
+        }
+        {
+          artist = "Lezel";
+          title = "未完成ランデヴー";
+          album = "未完成ランデヴー";
+          url = "https://music.163.com/#/song?id=2604586574";
+        }
+        {
+          artist = "のみこ";
+          title = "Bad Apple!! feat. nomico";
+          album = "EXSERENS";
+          url = "https://music.163.com/#/song?id=687506";
+        }
+        {
+          artist = "Islet & 倚水";
+          title = "星になる (feat. 倚水)";
+          album = "星になる (feat. 倚水)";
+          url = "https://music.163.com/#/song?id=2002970862";
+        }
+        {
+          artist = "T-ara";
+          title = "T.T.L ～Time to Love～ (Japanese ver.)";
+          album = "Queen of Pops";
+          url = "https://music.163.com/#/song?id=28828606";
+        }
+        {
+          artist = "A-One";
+          title = "How to Love";
+          album = "NECRO PHANTASISTA";
+          url = "https://music.163.com/#/song?id=33211167";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
