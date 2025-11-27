@@ -16,9 +16,12 @@ in
     boot.systemd = enabled;
     common = enabled;
     nh = enabled;
-    disko = enabled;
+    disko = enabled // {
+      encrypt = enabled;
+    };
     tuptime = enabled;
     avahi = enabled;
+    usb-keyfile = enabled;
   };
 
   snowfallorg.users.${user}.home = disabled;
