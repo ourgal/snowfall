@@ -2206,6 +2206,66 @@ args.module (
           album = "NECRO PHANTASISTA";
           url = "https://music.163.com/#/song?id=33211167";
         }
+        {
+          artist = "ギギ・アンダルシア";
+          title = "夢で逢いましょう";
+          album = "TVアニメ『名探偵コナン』EDテーマ「夢で逢いましょう」";
+          url = "https://music.163.com/#/song?id=2621421177";
+        }
+        {
+          artist = "島みやえい子";
+          title = "宇宙の花";
+          album = "ULYSSES";
+          url = "https://music.163.com/#/song?id=22789069";
+        }
+        {
+          artist = "ういにゃす & おっちょこバニー";
+          title = "嗚呼 絢爛の泡沫が如く";
+          album = "『千の刃濤、桃花染の皇姫』OPテーマ";
+          url = "https://music.163.com/#/song?id=424995301";
+        }
+        {
+          artist = "少女フラクタル";
+          title = "悠久の月に照らされて";
+          album = "悠久の月に照らされて";
+          url = "https://music.163.com/#/song?id=434732450";
+        }
+        {
+          artist = "大事MANブラザーズバンド";
+          title = "それが大事";
+          album = "それが大事";
+          url = "https://music.163.com/#/song?id=848332";
+        }
+        {
+          artist = "松澤由美";
+          title = "地球ぎ";
+          album = "聖闘士星矢 冥王ハーデス十二宮編 主題歌";
+          url = "https://music.163.com/#/song?id=614150";
+        }
+        {
+          artist = "瑶山百霊";
+          title = "奏穹のラプソディア";
+          album = "奏穹のラプソディア";
+          url = "https://music.163.com/#/song?id=469699517";
+        }
+        {
+          artist = "Risa Yuzuki";
+          title = "偽りの私";
+          album = "聖人の調律";
+          url = "https://music.163.com/#/song?id=40915854";
+        }
+        {
+          artist = "AKINO";
+          title = "創聖のアクエリオン";
+          album = "創聖のアクエリオン";
+          url = "https://music.163.com/#/song?id=558173";
+        }
+        {
+          artist = "May'n & 中島愛";
+          title = "ライオン";
+          album = "マクロスF VOCAL COLLECTION「娘たま♀」";
+          url = "https://music.163.com/#/song?id=22766925";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
