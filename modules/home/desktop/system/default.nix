@@ -32,7 +32,6 @@ args.module (
         "xcolor"
         "xdragon"
         "xmagnify"
-        "xsel"
         "zenity"
         # keep-sorted end
       ];
@@ -59,6 +58,7 @@ args.module (
         "sxhkd"
         "volnoti"
         "xbanish"
+        "xsel"
         # keep-sorted end
       ];
       value = {
