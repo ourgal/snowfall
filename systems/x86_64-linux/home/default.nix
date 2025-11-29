@@ -31,6 +31,9 @@ in
       desktops = enabled;
       ssh = enabled;
     };
+    stylix = enabled // {
+      theme = "github-dark";
+    };
   }
   // enabledList [
     # keep-sorted start
@@ -62,7 +65,6 @@ in
     "opentabletdriver"
     "power"
     "scrutiny"
-    "stylix"
     "syncthing"
     "temp-hosts"
     "tpm"
