@@ -35,6 +35,7 @@
     "nixos-facter"
     "pinentry-all"
     "pipx"
+    "psmisc"
     "screenkey"
     "sequin"
     "sysz"
