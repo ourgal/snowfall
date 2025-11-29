@@ -44,6 +44,7 @@
     "rss"
     "runner"
     "search"
+    "security"
     "share"
     "shell"
     "snippet"
