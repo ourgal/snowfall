@@ -4,7 +4,6 @@
     "archwiki"
     "eg"
     "lib-x"
-    "qman"
     # keep-sorted end
   ];
   nixPkgs = [
@@ -22,6 +21,7 @@
     # keep-sorted start
     "doxx"
     "outfieldr"
+    "qman"
     # keep-sorted end
   ];
 }

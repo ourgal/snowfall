@@ -1,0 +1,4 @@
+{
+  myPkgs = "qman";
+  nixPkgs = "groff";
+}
