@@ -34,6 +34,7 @@
     "pipes-rs"
     "ponysay"
     "pv"
+    "sl"
     "tmatrix"
     "toilet"
     # keep-sorted end
