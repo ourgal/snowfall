@@ -16,6 +16,7 @@
   ];
   nixPkgs = [
     # keep-sorted start
+    "at"
     "bkt"
     "charm-freeze"
     "dcfldd"
