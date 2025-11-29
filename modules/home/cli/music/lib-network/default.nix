@@ -2266,6 +2266,54 @@ args.module (
           album = "マクロスF VOCAL COLLECTION「娘たま♀」";
           url = "https://music.163.com/#/song?id=22766925";
         }
+        {
+          artist = "ワルキューレ";
+          title = "ワルキューレがとまらない ～without Freyja～";
+          album = "ワルキューレは裏切らない";
+          url = "https://music.163.com/#/song?id=536623413";
+        }
+        {
+          artist = "う～み";
+          title = "星の在り処";
+          album = "空を見上げて ～英雄伝説 空の軌跡 ボーカルバージョン～";
+          url = "https://music.163.com/#/song?id=730669";
+        }
+        {
+          artist = "riya";
+          title = "小さなてのひら";
+          album = "CLANNAD ORIGINAL SOUNDTRACK";
+          url = "https://music.163.com/#/song?id=22707009";
+        }
+        {
+          artist = "Kiroro";
+          title = "長い間";
+          album = "Nagai Aida ～Kiroro no Mori～";
+          url = "https://music.163.com/#/song?id=22746142";
+        }
+        {
+          artist = "兎明";
+          title = "創造の地平線を見つめて";
+          album = "創造の地平線を見つめて";
+          url = "https://music.163.com/#/song?id=1316563399";
+        }
+        {
+          artist = "小清水亜美";
+          title = "玻璃の空";
+          album = "玻璃の空";
+          url = "https://music.163.com/#/song?id=687747";
+        }
+        {
+          artist = "eufonius";
+          title = "メグメル (cuckool Mix 2007)";
+          album = "メグメル/だんご大家族";
+          url = "https://music.163.com/#/song?id=760528";
+        }
+        {
+          artist = "See-Saw";
+          title = "あんなに一绪だったのに";
+          album = "「機動戦士ガンダムSEED」エンディングテーマ あんなに一緒だったのに";
+          url = "https://music.163.com/#/song?id=819663";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
