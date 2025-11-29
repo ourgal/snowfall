@@ -165,3 +165,5 @@
 (load! "plugins/bing-dict")
 (load! "plugins/gt")
 (load! "plugins/engine-mode")
+
+(load! "configs/waiting_packages")
