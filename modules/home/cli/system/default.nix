@@ -22,6 +22,7 @@
     "dcfldd"
     "e2fsprogs"
     "exfatprogs"
+    "fdupes"
     "flamelens"
     "geekbench"
     "glib"
