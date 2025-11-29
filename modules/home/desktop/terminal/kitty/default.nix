@@ -16,7 +16,7 @@ args.module (
           copy_on_select = "yes";
           listen_on = "unix:/tmp/kitty";
           enabled_layouts = "splits";
-          background_opacity = lib.mkDefault "0.8";
+          background_opacity = lib.mkDefault 0.8;
           cursor_trail = 0;
           cursor_trail_decay = "0.1 0.4";
         };
