@@ -31,6 +31,7 @@
     "license-cli"
     "ls-lint"
     "mise"
+    "pixi"
     "process-compose"
     "reuse"
     "tooling-language-server"
