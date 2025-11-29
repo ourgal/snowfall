@@ -17,6 +17,10 @@ let
     stylix = enabled // {
       base16Scheme = "${pkgs.base16-schemes}/share/themes/${cfg.theme}.yaml";
       opacity.terminal = 0.9;
+      fonts.monospace = {
+        name = "Fira Code";
+        package = pkgs.fira-code;
+      };
     };
   };
   extraOpts = {

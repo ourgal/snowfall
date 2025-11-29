@@ -33,6 +33,10 @@ in
       };
 
       # english monospace
+      firacode = {
+        pkg = "fira-code";
+        name = "Fira Code";
+      };
 
       # english serif
       chunk = {
@@ -181,7 +185,7 @@ in
       cjk = recursiveUpdate { inherit (sourceHan) sans serif mono; } overrids.cjk;
       en = recursiveUpdate {
         inherit (noto) sans serif;
-        mono = lilex;
+        mono = firacode;
       } overrids.en;
       allPkgs = getPkg (
         [
@@ -195,6 +199,7 @@ in
         chunk
         font100_base
         font100_extend
+        lilex
       ];
     };
   mkFontconfig =
