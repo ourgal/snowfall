@@ -14,6 +14,7 @@
     "dasht"
     "halp"
     "jiten"
+    "man-pages"
     "wiki-tui"
     # keep-sorted end
   ];
