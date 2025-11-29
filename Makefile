@@ -4,12 +4,22 @@ $(eval $(MAKE_ARGS):;@:)
 
 .PHONY: all clean test
 
-all: home
+all: system
 
 .PHONY: home
-home: qutebrowser # home manager switch
+home: qutebrowser # nh home switch
 	@git add .
 	@nh home switch --backup-extension bak
+
+.PHONY: system
+system: qutebrowser # nh os switch
+	@git add .
+	@nh os switch
+
+.PHONY: hm
+hm: # home manager switch
+	@git add .
+	@home-manager --flake .
 
 .PHONY: qutebrowser
 qutebrowser: # update qutebrowser bookmarks
