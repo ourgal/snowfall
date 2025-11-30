@@ -2314,6 +2314,60 @@ args.module (
           album = "「機動戦士ガンダムSEED」エンディングテーマ あんなに一緒だったのに";
           url = "https://music.163.com/#/song?id=819663";
         }
+        {
+          artist = "KG & 滴草由実";
+          title = "叶わない恋でも… duet with 滴草由実";
+          album = "DUET WITH BEST";
+          url = "https://music.163.com/#/song?id=26115245";
+        }
+        {
+          artist = "シド";
+          title = "レイン";
+          album = "鋼の錬金術師 THE BEST";
+          url = "https://music.163.com/#/song?id=28272061";
+        }
+        {
+          artist = "nayuta";
+          title = "死奏憐音、玲瓏ノ終";
+          album = "Scattered Destiny";
+          url = "https://music.163.com/#/song?id=22785270";
+        }
+        {
+          artist = "ClariS";
+          title = "irony";
+          album = "irony";
+          url = "https://music.163.com/#/song?id=705376";
+        }
+        {
+          artist = "ヲタみん";
+          title = "Letter Song";
+          album = "Letter Song";
+          url = "https://music.163.com/#/song?id=27571001";
+        }
+        {
+          artist = "YUI";
+          title = "Rolling star";
+          album = "BLEACH BEST TUNES";
+          url = "https://music.163.com/#/song?id=4952978";
+        }
+        {
+          artist = "Angel Note & 真里歌";
+          title = "quantum jump";
+          album = "フレラバ ミニファンディスク＆フルサウンドトラック";
+          url = "https://music.163.com/#/song?id=29307295";
+        }
+        {
+          artist = "Risa Yuzuki";
+          title = "彷徨いの冥";
+          album = "彷徨いの冥";
+          url = "https://music.163.com/#/song?id=32098510";
+        }
+        {
+          artist = "森永真由美";
+          title = "月輪に巡らされた記憶";
+          album = "月輪に巡らされた記憶";
+          url = "https://music.163.com/#/song?id=1387399056";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
