@@ -557,7 +557,7 @@ rec {
                 }
                 // (if (value ? type) then { Type = value.type; } else { Type = "simple"; })
                 // (if (value ? nice) then { Nice = value.nice; } else { })
-                // (if (value ? restart) then { Restart = value.restart; } else { Restart = "always"; })
+                // (if (value ? restart) then { Restart = value.restart; } else { Restart = "on-failure"; })
                 // (if (value ? reload) then { ExecReload = value.reload; } else { })
                 // (if (value ? start) then { ExecStart = value.start; } else { })
                 // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { })
