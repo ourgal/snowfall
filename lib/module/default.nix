@@ -561,7 +561,40 @@ rec {
                 // (if (value ? reload) then { ExecReload = value.reload; } else { })
                 // (if (value ? start) then { ExecStart = value.start; } else { })
                 // (if (value ? startPre) then { ExecStartPre = value.startPre; } else { })
-                // (if (value ? env) then { Environment = value.env; } else { });
+                // (
+                  if (value ? env || value ? path) then
+                    {
+                      Environment =
+                        (
+                          if value ? env then
+                            if builtins.isString value.env then
+                              [ value.env ]
+                            else if builtins.isList value.env then
+                              value.env
+                            else
+                              builtins.throw "systemd services env is neither string nor list"
+                          else
+                            [ ]
+                        )
+                        ++ (
+                          if value ? path then
+                            [
+                              (
+                                "PATH="
+                                + (builtins.concatStringsSep ":" (
+                                  map (x: if builtins.isString x then x else "${x}/bin") value.path
+                                ))
+                                + ":$PATH"
+                              )
+                            ]
+                          else
+                            [ ]
+                        );
+                    }
+                  else
+                    { }
+                )
+                // (if (value ? reloadTriggers) then { reloadTriggers = value.reloadTriggers; } else { });
               }
               // value;
             in
@@ -583,6 +616,8 @@ rec {
                       "startPre"
                       "after"
                       "env"
+                      "path"
+                      "reloadTriggers"
                     ]
                   ) newVal
                 else
