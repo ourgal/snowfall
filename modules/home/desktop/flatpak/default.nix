@@ -163,13 +163,13 @@ args.module (
       confs = {
         "flatpak-compose/config.yaml" = conf;
       };
-      value = {
-        home.activation.flatpak-compose = config.lib.dag.entryAfter [ "reloadSystemd" ] ''
-          PATH=$PATH:${lib.makeBinPath [ pkgs.flatpak ]}
-          ${
-            pkgs.${namespace}.flatpak-compose
-          }/bin/flatpak-compose apply -assumeyes -f ${config.xdg.configHome}/flatpak-compose/config.yaml
-        '';
+      systemdServices.flatpak-compose = {
+        reloadTriggers = [ (builtins.toJSON conf) ];
+        path = [ pkgs.flatpak ];
+        type = "onshot";
+        start = "${
+          lib.getExe pkgs.${namespace}.flatpak-compose
+        } apply -assumeyes -f ${config.xdg.configHome}/flatpak-compose/config.yaml";
       };
     }
   )
