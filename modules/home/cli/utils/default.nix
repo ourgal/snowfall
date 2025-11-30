@@ -8,6 +8,7 @@
     "parallel-full"
     "progress"
     "retry"
+    "rush"
     "wait4x"
     "with-shell"
     # keep-sorted end
