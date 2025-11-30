@@ -17,5 +17,6 @@ in
       time-tracker.activitywatch = enabled;
     };
     dev = enabled;
+    stylix = enabled;
   };
 }

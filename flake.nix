@@ -319,6 +319,7 @@
           nvchad4nix = inputs.nvchad4nix.homeManagerModule;
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
           lazyvim = inputs.lazyvim.homeManagerModules.default;
+          stylix = inputs.stylix.homeModules.stylix;
         in
         [
           homeage
@@ -332,6 +333,7 @@
           nvchad4nix
           nix-doom-emacs-unstraightened
           lazyvim
+          stylix
         ];
 
       templates = {

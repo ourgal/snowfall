@@ -31,9 +31,7 @@ in
       desktops = enabled;
       ssh = enabled;
     };
-    stylix = enabled // {
-      theme = "github-dark";
-    };
+    stylix = enabled;
   }
   // enabledList [
     # keep-sorted start
