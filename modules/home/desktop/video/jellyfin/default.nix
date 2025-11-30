@@ -1,1 +1,4 @@
-{ enable = "jellyfin-mpv-shim"; }
+{
+  enable = "jellyfin-mpv-shim";
+  nixPkgs = "tsukimi";
+}
