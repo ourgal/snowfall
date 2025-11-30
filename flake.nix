@@ -271,6 +271,7 @@
           nix-monitored = inputs.nix-monitored.nixosModules.default;
           lanzaboote = inputs.lanzaboote.nixosModules.lanzaboote;
           stylix = inputs.stylix.nixosModules.stylix;
+          facter = inputs.nixos-facter-modules.nixosModules.facter;
         in
         [
           niri
@@ -281,12 +282,12 @@
           nix-monitored
           lanzaboote
           stylix
+          facter
         ];
 
       systems.hosts =
         let
           nixos-hardware = inputs.nixos-hardware.nixosModules;
-          facter = inputs.nixos-facter-modules.nixosModules.facter;
         in
         lib.attrsets.recursiveUpdate systemSpecialArgsFinal {
           n1.modules = with inputs.nixos-n1.nixosModules; [
@@ -298,12 +299,7 @@
             filesystem
           ];
           t4.modules = [ nixos-hardware.friendlyarm-nanopc-t4 ];
-          home.modules = [ facter ];
-          router.modules = [ facter ];
-          surface.modules = [
-            nixos-hardware.microsoft-surface-common
-            facter
-          ];
+          surface.modules = [ nixos-hardware.microsoft-surface-common ];
         };
 
       homes.modules =
