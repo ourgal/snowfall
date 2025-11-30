@@ -31,6 +31,7 @@
     "hwinfo"
     "inxi"
     "isd"
+    "iwqr"
     "kbt" # keyboard tester
     "kmon"
     "nixos-facter"
