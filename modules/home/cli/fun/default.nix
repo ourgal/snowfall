@@ -19,6 +19,7 @@
     "cowsay"
     "ditaa"
     "doge"
+    "era"
     "figlet"
     "figurine"
     "fortune"
