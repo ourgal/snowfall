@@ -351,21 +351,21 @@
   };
   cdo = {
     pname = "cdo";
-    version = "29d8da4f4c5b6a2a8f7df6baf188a4bec15202a5";
+    version = "99692769eff4089369b00e2de209e1a519062b15";
     src = fetchFromGitHub {
       owner = "dotboris";
       repo = "cdo";
-      rev = "29d8da4f4c5b6a2a8f7df6baf188a4bec15202a5";
+      rev = "99692769eff4089369b00e2de209e1a519062b15";
       fetchSubmodules = false;
-      sha256 = "sha256-tUdRnKAYO0APvqcAhW5Ms6WvQkCBTYNrurLJ4CXUhCs=";
+      sha256 = "sha256-2P2cXakmmKCWXTrrJ24ZCpHqmDomf4CJLixAQCnFfJ0=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-tUdRnKAYO0APvqcAhW5Ms6WvQkCBTYNrurLJ4CXUhCs=/Cargo.lock";
+      lockFile = ./. + "/sha256-2P2cXakmmKCWXTrrJ24ZCpHqmDomf4CJLixAQCnFfJ0=/Cargo.lock";
       outputHashes = {
         
       };
     };
-    date = "2025-11-09";
+    date = "2025-11-29";
   };
   ch = {
     pname = "ch";
@@ -773,12 +773,12 @@
   };
   docker-flaresolverr = {
     pname = "docker-flaresolverr";
-    version = "v3.4.5";
+    version = "v3.4.6";
     src = dockerTools.pullImage {
       imageName = "flaresolverr/flaresolverr";
-      imageDigest = "sha256:4f4e5f759aa3a9a64305e99188ea1db1ec2944a5e7d290d2b089af5f2f6f48e4";
-      sha256 = "sha256-ATtC9R0HCPj7y4tIXJD+MXQbAnKj+iONp2gdi3SNaEc=";
-      finalImageTag = "v3.4.5";
+      imageDigest = "sha256:7962759d99d7e125e108e0f5e7f3cdbcd36161776d058d1d9b7153b92ef1af9e";
+      sha256 = "sha256-OtN7IONYRiOv3ilp+0YwHTRIY8q0bjQHwmFUofvHZNA=";
+      finalImageTag = "v3.4.6";
     };
   };
   docker-freshrss = {
@@ -806,8 +806,8 @@
     version = "0.8.8";
     src = dockerTools.pullImage {
       imageName = "linuxserver/kavita";
-      imageDigest = "sha256:73edf1a4380700f3d4192c7a1f136f4a0fbefd0a4df31db7a0b35f1e1819268a";
-      sha256 = "sha256-piPw+ZJxuaW4zMZjuSYp5H/Uuh7SK1Vujyz1XfixMAI=";
+      imageDigest = "sha256:1faa2d4daf95d983414b26b8d37dd7f7ffa771bcd155ac8f9f5872edf2e34ae7";
+      sha256 = "sha256-8jI/ut3fBhj20KfQLOLFOal1R7WO8tP9kcSyiNDaegY=";
       finalImageTag = "0.8.8";
     };
   };
@@ -823,12 +823,12 @@
   };
   docker-memos = {
     pname = "docker-memos";
-    version = "0.25.2";
+    version = "0.25.3";
     src = dockerTools.pullImage {
       imageName = "neosmemo/memos";
-      imageDigest = "sha256:240e34c9328b5206d534782a47b6d8164f19177eface64ffa44da93efcb929a0";
-      sha256 = "sha256-fTWI/HK8XOFKO5ZGikatkGDF053HRRNjTeMCeOBIzMA=";
-      finalImageTag = "0.25.2";
+      imageDigest = "sha256:40db300a188ede0c2cf1fc0c49741a03077478d6891fd3ace05c16d702b536a6";
+      sha256 = "sha256-YHvsZcHpokC5VcJtIqktXvnbntkHIGBoXfanuMbEYQk=";
+      finalImageTag = "0.25.3";
     };
   };
   docker-miniflux = {
@@ -843,12 +843,12 @@
   };
   docker-openlist = {
     pname = "docker-openlist";
-    version = "v4.1.7";
+    version = "v4.1.8";
     src = dockerTools.pullImage {
       imageName = "openlistteam/openlist";
-      imageDigest = "sha256:5a4708814345a417b48dfb227cbde755e071c59f629b928118a818d1518772cd";
-      sha256 = "sha256-2fu28QmXuAD0Y3ZfQiyapXZJVJu2yjZKugH/y41zI/k=";
-      finalImageTag = "v4.1.7";
+      imageDigest = "sha256:430a306fe7404ae549991c294cfd00b88e82c1e62a16967b40ed23cd4912590a";
+      sha256 = "sha256-ZPitXiD2EHtIGx3L6F5+qYbNLIJYdxDPWHNNSx5bC+Q=";
+      finalImageTag = "v4.1.8";
     };
   };
   docker-pairdrop = {
@@ -856,8 +856,8 @@
     version = "1.11.2";
     src = dockerTools.pullImage {
       imageName = "linuxserver/pairdrop";
-      imageDigest = "sha256:b142d76ea81e1bcdf858ed41eb382201ba1a76a9cba9d582223f51862b1154c2";
-      sha256 = "sha256-3JSnzzyAHLOIJEnCmsg8H5l/PNeCTmPVmHlBthgKBp0=";
+      imageDigest = "sha256:cb06203233c551f6c77f342dd30e2b7d48faac32bc880ed9392aa7f2949d18ad";
+      sha256 = "sha256-PPSA7QT567O68RNlFqKxq7pic0aGeHdoCeUTx6ETY5A=";
       finalImageTag = "1.11.2";
     };
   };
@@ -893,12 +893,12 @@
   };
   docker-siyuan = {
     pname = "docker-siyuan";
-    version = "v3.4.0";
+    version = "v3.4.1";
     src = dockerTools.pullImage {
       imageName = "b3log/siyuan";
-      imageDigest = "sha256:d63485de0b47af96aa7b9fc2dc9d53cb682f114510b2b0e8068f8ea11bfd4579";
-      sha256 = "sha256-Q4QiygNpCReL7DySAOe0efqezNa4adHFE1xAHqGUV/U=";
-      finalImageTag = "v3.4.0";
+      imageDigest = "sha256:2bf66a37f37cec5c8641905da7371fa0faf077d1cc5cae92844d1170c7598837";
+      sha256 = "sha256-rC3noG8bIQxxhRvkdDVyPE/CgbE4iD74mTPRNAtALuU=";
+      finalImageTag = "v3.4.1";
     };
   };
   docker-soft-serve = {
@@ -2338,15 +2338,15 @@
   };
   musicdl = {
     pname = "musicdl";
-    version = "fb87d7608bdcb890ac238ea5064805e30a639294";
+    version = "b7ea13fa41c31ce89464eba5ad04e129ed5beddb";
     src = fetchFromGitHub {
       owner = "CharlesPikachu";
       repo = "musicdl";
-      rev = "fb87d7608bdcb890ac238ea5064805e30a639294";
+      rev = "b7ea13fa41c31ce89464eba5ad04e129ed5beddb";
       fetchSubmodules = false;
-      sha256 = "sha256-FCS0YFLjr4Gw7d7XGgMn46KbdlET5PTlv41qckkn994=";
+      sha256 = "sha256-uAD+7AfvEmHQrKgv5AvirAuhCUiuB/HclTkkk2oHqCo=";
     };
-    date = "2025-11-24";
+    date = "2025-12-01";
   };
   natmap = {
     pname = "natmap";
@@ -2432,10 +2432,10 @@
   };
   numara = {
     pname = "numara";
-    version = "6.5.1";
+    version = "6.5.2";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v6.5.1/Numara-6.5.1-x86_64.AppImage";
-      sha256 = "sha256-Eq/jaBhh067QqcCBtrAq9w+EcXNbHKN55n4ZL1by23M=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v6.5.2/Numara-6.5.2-x86_64.AppImage";
+      sha256 = "sha256-m0RCeWFHRRDaQ7HXn9of/PHqV9A+xsai2gCxKQq3ky4=";
     };
   };
   org-export = {
@@ -2618,10 +2618,10 @@
   };
   pydantic = {
     pname = "pydantic";
-    version = "2.12.4";
+    version = "2.12.5";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.12.4.tar.gz";
-      sha256 = "sha256-D4y5VVAApLW2F/Zr/SVmJkxJhLJ1idO4RWhZg+jqhaw=";
+      url = "https://pypi.org/packages/source/p/pydantic/pydantic-2.12.5.tar.gz";
+      sha256 = "sha256-TTUQJMdcDwhan+u7ZlzowMbsXTDpA722OUt+3iauu0k=";
     };
   };
   pydantic-core = {
@@ -2924,16 +2924,16 @@
   };
   rsv = {
     pname = "rsv";
-    version = "v0.4.18";
+    version = "v0.4.19";
     src = fetchFromGitHub {
       owner = "ribbondz";
       repo = "rsv";
-      rev = "v0.4.18";
+      rev = "v0.4.19";
       fetchSubmodules = false;
-      sha256 = "sha256-kaGEjBqXhcBEAcos/CyzkFk6kaL3zJ89GuaqG0g94Kc=";
+      sha256 = "sha256-puoxFDfyubRSohwmQub2VbRa0K/T78A3oMniWX+2Yng=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-kaGEjBqXhcBEAcos_CyzkFk6kaL3zJ89GuaqG0g94Kc=/Cargo.lock";
+      lockFile = ./. + "/sha256-puoxFDfyubRSohwmQub2VbRa0K_T78A3oMniWX+2Yng=/Cargo.lock";
       outputHashes = {
         
       };
@@ -3134,13 +3134,13 @@
   };
   sonicradio = {
     pname = "sonicradio";
-    version = "v0.8.9";
+    version = "v0.8.11";
     src = fetchFromGitHub {
       owner = "dancnb";
       repo = "sonicradio";
-      rev = "v0.8.9";
+      rev = "v0.8.11";
       fetchSubmodules = false;
-      sha256 = "sha256-pAYmrDtpVOb4zPXNk+glEDJYwJs8VqfP2k/9G/rALmY=";
+      sha256 = "sha256-2p/QgE6nCHvkpUwNCCH6PWrR35vkJKdtxlmpQALhgPI=";
     };
   };
   soundfx = {
@@ -3294,16 +3294,16 @@
   };
   tach = {
     pname = "tach";
-    version = "v0.32.0";
+    version = "v0.32.1";
     src = fetchFromGitHub {
       owner = "gauge-sh";
       repo = "tach";
-      rev = "v0.32.0";
+      rev = "v0.32.1";
       fetchSubmodules = false;
-      sha256 = "sha256-RpDGgTrJtMuIp4kBGjiFsGfEvyDiafBF26JFd6f4urE=";
+      sha256 = "sha256-I7b5BJxCINmWxVnip3gWZSbQrmxhrcEYx5NTrbeUeDE=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-RpDGgTrJtMuIp4kBGjiFsGfEvyDiafBF26JFd6f4urE=/Cargo.lock";
+      lockFile = ./. + "/sha256-I7b5BJxCINmWxVnip3gWZSbQrmxhrcEYx5NTrbeUeDE=/Cargo.lock";
       outputHashes = {
         "salsa-0.24.0" = "sha256-3TEv1VQ+bwVhmoEu6ZdCY0Z2x8pnhCUuJh8joBpeGlY=";
         "ruff_annotate_snippets-0.1.0" = "sha256-iYXZyB0s3rlGV3HQLN1fuAohFUm/53VLAwA3Ahj6HzM=";
@@ -3388,13 +3388,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v1.1.0";
+    version = "v1.2.1";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v1.1.0";
+      rev = "v1.2.1";
       fetchSubmodules = false;
-      sha256 = "sha256-WhbSF33jHnwuC5yOJ2tiF2KD5YcgBhatRsRLtpT7E84=";
+      sha256 = "sha256-WzoQwAJBb0tN0Cz92nk58dhYdpZ/KKogcEAKk7Hczf0=";
     };
   };
   textimg = {
@@ -3427,10 +3427,10 @@
   };
   textual = {
     pname = "textual";
-    version = "6.6.0";
+    version = "6.7.0";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-6.6.0.tar.gz";
-      sha256 = "sha256-UzRRZtaw+f0CjtAhfXO49Hw6JmeaGLo7Z2FtystHDuw=";
+      url = "https://pypi.org/packages/source/t/textual/textual-6.7.0.tar.gz";
+      sha256 = "sha256-7x/Vh6O1spd31LAwN+Co8Q0XTmM2bpml2FGKdLU4Ljg=";
     };
   };
   timewarrior = {
@@ -3861,18 +3861,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511242213";
+    version = "202511292213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geoip.dat";
-      sha256 = "sha256-dmaakIEbcWbcrGIdypD2JG4rIQZTwYhDVRN/QvQRUrA=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geoip.dat";
+      sha256 = "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511242213";
+    version = "202511292213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511242213/geosite.dat";
-      sha256 = "sha256-NIplq6wHsYUy011/GZzIOjOJliGzoah+u5lT2KxGkmY=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geosite.dat";
+      sha256 = "sha256-Fmqt+baEL2W9c2fpQLLu/MWj09LbeFMstihMLPA5lAc=";
     };
   };
   vim-auto-save = {
@@ -4232,10 +4232,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v2.2.0";
+    version = "v2.3.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v2.2.0/dist.zip";
-      sha256 = "sha256-sahH82IaP7VTvHD7pLjcEwoMwwzq7N17RTtWGBezZAE=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v2.3.0/dist.zip";
+      sha256 = "sha256-T1yFKWIento7T9ZznO2LngQw/3dqvdoep+qH8dVaWuI=";
     };
   };
   zhlint = {
