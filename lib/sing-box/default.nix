@@ -179,7 +179,7 @@ let
       youtube = {
         type = "selector";
         tag = "📺 Youtube";
-        outbounds = [ main.tag ] ++ countriesTags;
+        outbounds = [ main.tag ] ++ subsTags ++ countriesTags;
       };
       global = {
         type = "selector";
