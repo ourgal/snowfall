@@ -15,6 +15,7 @@ let
     "macmini"
     "nixos-mbr"
     "nixos-uefi"
+    "nixos-uefi-luks"
     "livecd"
     "livecd-arm"
     "livecd-ft2000"
