@@ -2504,7 +2504,7 @@ args.module (
           pkgs.yt-dlp
         ];
         online = true;
-        type = "onshot";
+        type = "oneshot";
         start = "${lib.getExe pkgs.gnumake} -C ${config.xdg.userDirs.music}/net";
       };
       extraOpts = {

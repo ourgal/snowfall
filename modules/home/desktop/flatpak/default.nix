@@ -164,9 +164,8 @@ args.module (
         "flatpak-compose/config.yaml" = conf;
       };
       systemdServices.flatpak-compose = {
-        reloadTriggers = [ (builtins.toJSON conf) ];
         path = [ pkgs.flatpak ];
-        type = "onshot";
+        type = "oneshot";
         start = "${
           lib.getExe pkgs.${namespace}.flatpak-compose
         } apply -assumeyes -f ${config.xdg.configHome}/flatpak-compose/config.yaml";

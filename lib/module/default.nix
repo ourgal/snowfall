@@ -555,7 +555,29 @@ rec {
                   ExecStart = if (value ? start) then value.start else "";
                   RestartSec = 10;
                 }
-                // (if (value ? type) then { Type = value.type; } else { Type = "simple"; })
+                // (
+                  if (value ? type) then
+                    {
+                      Type =
+                        if
+                          builtins.elem value.type [
+                            "simple"
+                            "oneshot"
+                            "exec"
+                            "forking"
+                            "dbus"
+                            "notify"
+                            "notify-reload"
+                            "idle"
+                          ]
+                        then
+                          value.type
+                        else
+                          builtins.throw "systemd services type neither simple nor oneshot";
+                    }
+                  else
+                    { Type = "simple"; }
+                )
                 // (if (value ? nice) then { Nice = value.nice; } else { })
                 // (if (value ? restart) then { Restart = value.restart; } else { Restart = "on-failure"; })
                 // (if (value ? reload) then { ExecReload = value.reload; } else { })
@@ -572,7 +594,7 @@ rec {
                             else if builtins.isList value.env then
                               value.env
                             else
-                              builtins.throw "systemd services env is neither string nor list"
+                              builtins.throw "systemd services env neither string nor list"
                           else
                             [ ]
                         )
