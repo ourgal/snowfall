@@ -1278,10 +1278,6 @@ cargo_lock = ["Cargo.lock"]
 src.git = "https://github.com/bearstech/quickbench"
 fetch.github = "bearstech/quickbench"
 
-[musicdl]
-src.git = "https://github.com/CharlesPikachu/musicdl"
-fetch.github = "CharlesPikachu/musicdl"
-
 [downdoc]
 src.github_tag = "opendevise/downdoc"
 fetch.github = "opendevise/downdoc"

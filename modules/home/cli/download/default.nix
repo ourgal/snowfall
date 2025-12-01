@@ -5,7 +5,6 @@
     "douyin-downloader"
     "dra"
     "imgboxdwl"
-    "musicdl"
     "tstickers"
     # keep-sorted end
   ];
