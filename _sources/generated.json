@@ -3401,12 +3401,12 @@
             "name": null,
             "owner": "JohannesKaufmann",
             "repo": "html-to-markdown",
-            "rev": "v2.4.0",
-            "sha256": "sha256-QpW1qLDMPoMDIkzyFa5HQ/y3m8ngAwzRFNZEiKTznmw=",
+            "rev": "v2.5.0",
+            "sha256": "sha256-xTfJNijtDlQ5oEZkl92KEyFg3U+Wl4nJcsT5puS7h4A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.4.0"
+        "version": "v2.5.0"
     },
     "hypergrep": {
         "cargoLock": null,
@@ -4187,27 +4187,6 @@
             "type": "github"
         },
         "version": "e20c6182233b37c43d1bb00791a914faed13a06c"
-    },
-    "musicdl": {
-        "cargoLock": null,
-        "date": "2025-12-01",
-        "extract": null,
-        "name": "musicdl",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "CharlesPikachu",
-            "repo": "musicdl",
-            "rev": "b7ea13fa41c31ce89464eba5ad04e129ed5beddb",
-            "sha256": "sha256-uAD+7AfvEmHQrKgv5AvirAuhCUiuB/HclTkkk2oHqCo=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "b7ea13fa41c31ce89464eba5ad04e129ed5beddb"
     },
     "natmap": {
         "cargoLock": null,
@@ -6077,11 +6056,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-7x/Vh6O1spd31LAwN+Co8Q0XTmM2bpml2FGKdLU4Ljg=",
+            "sha256": "sha256-KlrLCrMWp7qedLCikfq4kz1oHXz29OHutFw5pzGwlM8=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/t/textual/textual-6.7.0.tar.gz"
+            "url": "https://pypi.org/packages/source/t/textual/textual-6.7.1.tar.gz"
         },
-        "version": "6.7.0"
+        "version": "6.7.1"
     },
     "timewarrior": {
         "cargoLock": null,
@@ -6849,9 +6828,9 @@
             "name": null,
             "sha256": "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geoip.dat"
         },
-        "version": "202511292213"
+        "version": "202512012213"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6862,11 +6841,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Fmqt+baEL2W9c2fpQLLu/MWj09LbeFMstihMLPA5lAc=",
+            "sha256": "sha256-NAETVkrtJTIHstPzpPCJJzGaF3NEZAWE1rq4ftbBfgg=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geosite.dat"
         },
-        "version": "202511292213"
+        "version": "202512012213"
     },
     "vim-auto-save": {
         "cargoLock": null,

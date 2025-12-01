@@ -1891,13 +1891,13 @@
   };
   html-to-markdown = {
     pname = "html-to-markdown";
-    version = "v2.4.0";
+    version = "v2.5.0";
     src = fetchFromGitHub {
       owner = "JohannesKaufmann";
       repo = "html-to-markdown";
-      rev = "v2.4.0";
+      rev = "v2.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-QpW1qLDMPoMDIkzyFa5HQ/y3m8ngAwzRFNZEiKTznmw=";
+      sha256 = "sha256-xTfJNijtDlQ5oEZkl92KEyFg3U+Wl4nJcsT5puS7h4A=";
     };
   };
   hypergrep = {
@@ -2335,18 +2335,6 @@
       sha256 = "sha256-dGIe9L1VuWj6bqkh+k862gVboOPlAi9aRBLHJeUW5qg=";
     };
     date = "2025-07-31";
-  };
-  musicdl = {
-    pname = "musicdl";
-    version = "b7ea13fa41c31ce89464eba5ad04e129ed5beddb";
-    src = fetchFromGitHub {
-      owner = "CharlesPikachu";
-      repo = "musicdl";
-      rev = "b7ea13fa41c31ce89464eba5ad04e129ed5beddb";
-      fetchSubmodules = false;
-      sha256 = "sha256-uAD+7AfvEmHQrKgv5AvirAuhCUiuB/HclTkkk2oHqCo=";
-    };
-    date = "2025-12-01";
   };
   natmap = {
     pname = "natmap";
@@ -3427,10 +3415,10 @@
   };
   textual = {
     pname = "textual";
-    version = "6.7.0";
+    version = "6.7.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/t/textual/textual-6.7.0.tar.gz";
-      sha256 = "sha256-7x/Vh6O1spd31LAwN+Co8Q0XTmM2bpml2FGKdLU4Ljg=";
+      url = "https://pypi.org/packages/source/t/textual/textual-6.7.1.tar.gz";
+      sha256 = "sha256-KlrLCrMWp7qedLCikfq4kz1oHXz29OHutFw5pzGwlM8=";
     };
   };
   timewarrior = {
@@ -3861,18 +3849,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202511292213";
+    version = "202512012213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geoip.dat";
       sha256 = "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202511292213";
+    version = "202512012213";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202511292213/geosite.dat";
-      sha256 = "sha256-Fmqt+baEL2W9c2fpQLLu/MWj09LbeFMstihMLPA5lAc=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geosite.dat";
+      sha256 = "sha256-NAETVkrtJTIHstPzpPCJJzGaF3NEZAWE1rq4ftbBfgg=";
     };
   };
   vim-auto-save = {
