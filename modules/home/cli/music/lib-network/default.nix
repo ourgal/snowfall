@@ -2449,10 +2449,10 @@ args.module (
           ++ [
             ''
               ${mkFilename elem.artist elem.title}:
-              	$(yt) ${elem.url} -o $(temp)
-              	$(ffmpeg) -i $(temp) $(silenceremove) "$@"
+              	yt-dlp -t mp3 ${elem.url} -o $(temp)
+              	ffmpeg -i $(temp) $(silenceremove) "$@"
               	rm $(temp)
-              	$(mid3v2) --song "${elem.title}" --artist "${elem.artist}" --album "${elem.album}" "$@"
+              	mid3v2 --song "${elem.title}" --artist "${elem.artist}" --album "${elem.album}" "$@"
             ''
           ]
         ) [ ] metadata
@@ -2479,9 +2479,6 @@ args.module (
     {
       files."Music/net/Makefile" = {
         text = ''
-          yt := ${lib.getExe pkgs.yt-dlp} -t mp3
-          ffmpeg := ${lib.getExe pkgs.ffmpeg}
-          mid3v2 := ${lib.getExe' pkgs.python3Packages.mutagen "mid3v2"}
           temp := temp.mp3
           silenceremove := -af silenceremove=start_periods=1:start_duration=0:start_threshold=-50dB:start_silence=1,areverse,silenceremove=start_periods=1:start_duration=0:start_threshold=-50dB:start_silence=1,areverse
 
@@ -2493,13 +2490,25 @@ args.module (
           clean:
           	rm *.mp3
         '';
-        _onchange = lib.optionalString cfg.download.enable ''
+        _onchange = lib.optionalString cfg.script.enable ''
           echo "Downloading music from network"
           $DRY_RUN_CMD ${lib.getExe pkgs.gnumake} -C ${config.home.homeDirectory}/Music/net
         '';
       };
+      systemdServices.lib-network = {
+        path = [
+          pkgs.bash
+          pkgs.coreutils
+          pkgs.ffmpeg
+          pkgs.python3Packages.mutagen
+          pkgs.yt-dlp
+        ];
+        online = true;
+        type = "onshot";
+        start = "${lib.getExe pkgs.gnumake} -C ${config.xdg.userDirs.music}/net";
+      };
       extraOpts = {
-        download = switch;
+        script = switch;
       };
       assertions = [
         {
