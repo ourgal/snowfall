@@ -7,12 +7,12 @@ $(eval $(MAKE_ARGS):;@:)
 all: system
 
 .PHONY: home
-home: qutebrowser # nh home switch
+home: # nh home switch
 	@git add .
 	@nh home switch --backup-extension bak
 
 .PHONY: system
-system: qutebrowser # nh os switch
+system: # nh os switch
 	@git add .
 	@nh os switch
 
@@ -20,10 +20,6 @@ system: qutebrowser # nh os switch
 hm: # home manager switch
 	@git add .
 	@home-manager --flake .
-
-.PHONY: qutebrowser
-qutebrowser: # update qutebrowser bookmarks
-	@make -C modules/home/desktop/browser/qutebrowser
 
 .PHONY: u
 u: update # nvfetcher update

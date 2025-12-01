@@ -8,6 +8,7 @@ args.module (
         lib
         namespace
         host
+        config
         ;
       copyHintText = pkgs.writeShellScript "qutebrowserCopyHintText" ''
         echo -n "$QUTE_SELECTED_TEXT" | xsel -b
@@ -20,6 +21,14 @@ args.module (
         fi
       '';
       isWork = builtins.elem host lib.${namespace}.settings.work;
+      quickmarks = pkgs.runCommand "qutebrowserQuickmarks" { buildInputs = [ pkgs.buku ]; } ''
+          mkdir temp
+          ln -s ${config.${namespace}.cli.bookmark.buku.db.path} temp/bookmarks.db
+          export BUKU_DEFAULT_DBDIR=temp
+        	buku --nostdin --export buku.md
+        	sed -i -E 's/- \[(.+)\]\((.+)\)(.+)?/"\1" = "\2"/' buku.md
+        	mv buku.md $out
+      '';
     in
     {
       progs.qutebrowser = {
@@ -72,7 +81,7 @@ args.module (
             tt = "spawn --userscript ${pkgs.${namespace}.qute-translate-popup}/bin/translate --target_lang zh";
           };
         };
-        quickmarks = if !isWork then lib.importTOML ./quickmarks.key else { };
+        quickmarks = if !isWork then lib.importTOML quickmarks else { };
         greasemonkey =
           let
             go = name: pkgs.writeText "${name}.js" (builtins.readFile ./${name}.js);

@@ -3,9 +3,10 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs;
+      inherit (args) pkgs lib namespace;
+      inherit (lib.${namespace}) mkOpt';
       db =
-        pkgs.runCommandNoCC "bukuDB" { buildInputs = [ (pkgs.python3.withPackages (ps: [ ps.pandas ])) ]; }
+        pkgs.runCommand "bukuDB" { buildInputs = [ (pkgs.python3.withPackages (ps: [ ps.pandas ])) ]; }
           ''
             python ${./db.key}
             mv bookmarks.db $out
@@ -13,6 +14,9 @@ args.module (
     in
     {
       dataFiles."buku/bookmarks.db" = db;
+      extraOpts = {
+        path = mkOpt' lib.types.package db;
+      };
     }
   )
 )
