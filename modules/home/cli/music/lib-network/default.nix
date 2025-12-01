@@ -2368,6 +2368,78 @@ args.module (
           album = "月輪に巡らされた記憶";
           url = "https://music.163.com/#/song?id=1387399056";
         }
+        {
+          artist = "ういにゃす";
+          title = "月夜に舞う恋の花";
+          album = "『千の刃濤、桃花染の皇姫』EDテーママキシシングル";
+          url = "https://music.163.com/#/song?id=434981395";
+        }
+        {
+          artist = "あやぽんず* & あよ";
+          title = "幻想コネクト-森羅万象ver.-";
+          album = "幻想コネクト / 貴方と繋ぐ想い";
+          url = "https://music.163.com/#/song?id=1453415397";
+        }
+        {
+          artist = "平原綾香";
+          title = "はじまりの风(On Air Ver.)";
+          album = "彩云国物语 オリジナルサウンドトラック 1";
+          url = "https://music.163.com/#/song?id=1871420";
+        }
+        {
+          artist = "坂本昌一郎";
+          title = "My Sweet Home";
+          album = "Liber_7 オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=509512638";
+        }
+        {
+          artist = "一咲美葵";
+          title = "瞳を閉じて、映す夢幻";
+          album = "瞳を閉じて、映す夢幻";
+          url = "https://music.163.com/#/song?id=1972604900";
+        }
+        {
+          artist = "結城アイラ";
+          title = "colorless wind";
+          album = "colorless wind";
+          url = "https://music.163.com/#/song?id=28642378";
+        }
+        {
+          artist = "折戸伸治";
+          title = "潮鳴り";
+          album = "CLANNAD ORIGINAL SOUNDTRACK";
+          url = "https://music.163.com/#/song?id=22707008";
+        }
+        {
+          artist = "山崎もえ";
+          title = "コトダマ紬ぐ未来";
+          album = "アマツツミ 予約特典 主題歌マキシシングルCD";
+          url = "https://music.163.com/#/song?id=427419615";
+        }
+        {
+          artist = "himmel & 瑶山百霊";
+          title = "千之缘";
+          album = "千之缘";
+          url = "https://music.163.com/#/song?id=436667894";
+        }
+        {
+          artist = "幽閉サテライト & sroa";
+          title = "唯我独尊の果て";
+          album = "唯我独尊の果て";
+          url = "https://music.163.com/#/song?id=2618701284";
+        }
+        {
+          artist = "fripSide";
+          title = "HesitationSnow";
+          album = "はつゆきさくら COMPLETE SOUNDTRACK";
+          url = "https://music.163.com/#/song?id=622956";
+        }
+        {
+          artist = "真優";
+          title = "風に吹かれて(vocal song)";
+          album = "こいらぼ ヴォーカルソング+";
+          url = "https://music.163.com/#/song?id=717921";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
