@@ -4013,6 +4013,16 @@ with sqlite3.connect("waiting.db") as conn:
                 Waiting_Status.WAITING,
                 Types.PACKAGE,
             ],
+            [
+                "dtop",
+                "Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration.",
+                "https://github.com/amir20/dtop",
+                Categories.DEV,
+                "12/02/2025",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
         ],
         columns=[
             "name",
