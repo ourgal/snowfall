@@ -593,8 +593,7 @@ rec {
                     }
                   else
                     { }
-                )
-                // (if (value ? reloadTriggers) then { reloadTriggers = value.reloadTriggers; } else { });
+                );
               }
               // value;
             in
@@ -617,7 +616,6 @@ rec {
                       "after"
                       "env"
                       "path"
-                      "reloadTriggers"
                     ]
                   ) newVal
                 else
