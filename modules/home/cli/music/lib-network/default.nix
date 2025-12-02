@@ -194,7 +194,7 @@ args.module (
           artist = "Airots";
           title = "桃幻浪漫";
           album = "桃幻浪漫 ～千の刃濤、桃花染の皇姫 花あかり～";
-          url = "https://www.bilibili.com/video/BV14J411T783";
+          url = "https://music.163.com/#/song?id=1395939524";
         }
         {
           artist = "Thelma Aoyama";
@@ -2439,6 +2439,30 @@ args.module (
           title = "風に吹かれて(vocal song)";
           album = "こいらぼ ヴォーカルソング+";
           url = "https://music.163.com/#/song?id=717921";
+        }
+        {
+          artist = "ClariS";
+          title = "桜咲く";
+          album = "STEP";
+          url = "https://music.163.com/#/song?id=28406557";
+        }
+        {
+          artist = "SoulJa & 青山テルマ";
+          title = "ここにいるよ";
+          album = "Spirits";
+          url = "https://music.163.com/#/song?id=22664256";
+        }
+        {
+          artist = "ワルキューレ";
+          title = "僕らの戦場";
+          album = "Walküre Attack!";
+          url = "https://music.163.com/#/song?id=419238089";
+        }
+        {
+          artist = "Vivian or Kazuma";
+          title = "moment";
+          album = "moment";
+          url = "https://music.163.com/#/song?id=858277";
         }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
