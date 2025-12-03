@@ -791,10 +791,6 @@ fetch.github = "git-time-metric/gtm-vim-plugin"
 src.git = "https://github.com/hotoo/pangu.vim"
 fetch.github = "hotoo/pangu.vim"
 
-[parinfer-rust]
-src.git = "https://github.com/eraserhd/parinfer-rust"
-fetch.github = "eraserhd/parinfer-rust"
-
 [vim-tome]
 src.git = "https://github.com/laktak/tome"
 fetch.github = "laktak/tome"
