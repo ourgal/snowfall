@@ -103,6 +103,10 @@ args.module (
               name = "t4";
               git = "${t4}/snowfall";
             }
+            {
+              name = "soft";
+              git = "${soft}:snowfall";
+            }
           ];
         };
         "fw/projects/default/wiki" = toTOML {
