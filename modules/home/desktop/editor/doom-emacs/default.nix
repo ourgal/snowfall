@@ -3,7 +3,13 @@ args.module (
   args
   // (
     let
-      inherit (args) config lib;
+      inherit (args)
+        config
+        lib
+        target
+        namespace
+        ;
+      inherit (lib.${namespace}) isX86;
     in
     {
       servs = "emacs";
@@ -30,7 +36,6 @@ args.module (
         "eglot-booster"
         "engine-mode"
         "fzf"
-        "git-time-metric"
         "gt"
         "just-mode"
         "just-ts-mode"
@@ -51,6 +56,7 @@ args.module (
         "zoxide"
         # keep-sorted end
       ]
+      ++ isX86 target "git-time-metric"
       ++ lib.optional config.catppuccin.enable "catppuccin-theme";
     }
   )

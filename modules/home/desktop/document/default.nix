@@ -10,12 +10,12 @@ args.module (
       );
     in
     {
+      nixX86Pkgs = "onlyoffice-desktopeditors";
       nixPkgs = [
         # keep-sorted start
         "calibre"
         "evince"
         "libreoffice"
-        "onlyoffice-bin"
         "readest"
         "zeal"
         # keep-sorted end

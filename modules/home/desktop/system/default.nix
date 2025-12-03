@@ -13,6 +13,7 @@ args.module (
     {
       inputPkgs = p: [ p.ulauncher.packages."${pkgs.system}".default ];
       myPkgs = "hyprkan";
+      nixX86Pkgs = "rustdesk";
       nixPkgs = [
         # keep-sorted start
         "blobdrop"
@@ -24,7 +25,6 @@ args.module (
         "polkit"
         "qtscrcpy"
         "ripdrag"
-        "rustdesk"
         "scrcpy"
         "swww"
         "variety"
