@@ -8,6 +8,8 @@ args.module (
         inputs
         enabled
         pkgs
+        lib
+        host
         ;
     in
     {
@@ -18,7 +20,6 @@ args.module (
         # keep-sorted start
         "blobdrop"
         "brightnessctl"
-        "deskflow"
         "fuzzel"
         "hardinfo2"
         "libnotify"
@@ -39,7 +40,6 @@ args.module (
         # keep-sorted start
         "clipboard"
         "cursor"
-        "deskflow"
         "dunst"
         "espanso"
         "flameshot"
@@ -60,7 +60,8 @@ args.module (
         "xbanish"
         "xsel"
         # keep-sorted end
-      ];
+      ]
+      ++ lib.optional (host != "office1") "deskflow";
       value = {
         colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
         xdg.portal = enabled // {
