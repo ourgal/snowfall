@@ -2464,6 +2464,24 @@ args.module (
           album = "moment";
           url = "https://music.163.com/#/song?id=858277";
         }
+        {
+          artist = "Ceui";
+          title = "Stigmata";
+          album = "イメージアルバム 穢翼のユースティア 夢想曲(トロイメライ) ~Seeking Asphodelus~";
+          url = "https://music.163.com/#/song?id=26141649";
+        }
+        {
+          artist = "RSP";
+          title = "さくら 〜あなたに出会えてよかった〜";
+          album = "さくら 〜あなたに出会えてよかった〜";
+          url = "https://music.163.com/#/song?id=805197";
+        }
+        {
+          artist = "Kotoha";
+          title = "雪は何色";
+          album = "ましろ色シンフォニー SANA EDITION Maxi Single";
+          url = "https://music.163.com/#/song?id=2075565121";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
