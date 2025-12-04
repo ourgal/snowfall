@@ -1,5 +1,5 @@
 {
-  nixPkgs= "parinfer-rust-emacs";
+  nixPkgs = "parinfer-rust-emacs";
   progs.vim = {
     plugins = "parinfer-rust";
     extraConfig = ./config.vim;
