@@ -16,7 +16,7 @@
       };
     };
     hostAliasesConfig = lib.attrsets.foldlAttrs (
-      acc: name: value:
+      acc: _name: value:
       acc // { "url \"${value.url}\"".insteadOf = "${value.name}:"; }
     ) { } hostAliases;
   };

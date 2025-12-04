@@ -9,7 +9,6 @@ let
     ;
   inherit (lib.${namespace})
     nixosModule
-    _sources
     ip
     domain
     getDirname
