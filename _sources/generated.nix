@@ -1704,17 +1704,6 @@
       };
     };
   };
-  git-toolbelt = {
-    pname = "git-toolbelt";
-    version = "v1.9.4";
-    src = fetchFromGitHub {
-      owner = "nvie";
-      repo = "git-toolbelt";
-      rev = "v1.9.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-6ubxMGDi5ocSh8q8rDujxpViT1OmVi7JzH+R6V/88UQ=";
-    };
-  };
   github-dlr = {
     pname = "github-dlr";
     version = "0.1.2";
@@ -2461,18 +2450,6 @@
     };
     date = "2023-02-19";
   };
-  parinfer-rust = {
-    pname = "parinfer-rust";
-    version = "f519995ce802941007684e2d79e4fcba97853446";
-    src = fetchFromGitHub {
-      owner = "eraserhd";
-      repo = "parinfer-rust";
-      rev = "f519995ce802941007684e2d79e4fcba97853446";
-      fetchSubmodules = false;
-      sha256 = "sha256-oaWhWrLTeieT7V88vFGlGTKZpNMNuc7vFs3ZBdubT08=";
-    };
-    date = "2025-10-04";
-  };
   pfp-generator = {
     pname = "pfp-generator";
     version = "v0.5.0";
@@ -2630,10 +2607,10 @@
   };
   pyfreeproxy = {
     pname = "pyfreeproxy";
-    version = "0.3.0";
+    version = "0.3.1";
     src = fetchurl {
-      url = "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.3.0.tar.gz";
-      sha256 = "sha256-JJL77jChm7cRx/PdLK/SIDjz2Eep6PPFrwId+vuFoHo=";
+      url = "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.3.1.tar.gz";
+      sha256 = "sha256-M91179Rw1JslGIe83opmt0d77Bh8lAVk6O+R78K4MVs=";
     };
   };
   pyjokes = {

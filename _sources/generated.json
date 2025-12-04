@@ -3053,27 +3053,6 @@
         },
         "version": "v0.2.0"
     },
-    "git-toolbelt": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "git-toolbelt",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nvie",
-            "repo": "git-toolbelt",
-            "rev": "v1.9.4",
-            "sha256": "sha256-6ubxMGDi5ocSh8q8rDujxpViT1OmVi7JzH+R6V/88UQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.9.4"
-    },
     "github-dlr": {
         "cargoLock": null,
         "date": null,
@@ -4402,27 +4381,6 @@
         },
         "version": "b7210117695dca05d94de1ac2108401f8eff0a2d"
     },
-    "parinfer-rust": {
-        "cargoLock": null,
-        "date": "2025-10-04",
-        "extract": null,
-        "name": "parinfer-rust",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "eraserhd",
-            "repo": "parinfer-rust",
-            "rev": "f519995ce802941007684e2d79e4fcba97853446",
-            "sha256": "sha256-oaWhWrLTeieT7V88vFGlGTKZpNMNuc7vFs3ZBdubT08=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "f519995ce802941007684e2d79e4fcba97853446"
-    },
     "pfp-generator": {
         "cargoLock": null,
         "date": null,
@@ -4713,11 +4671,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-JJL77jChm7cRx/PdLK/SIDjz2Eep6PPFrwId+vuFoHo=",
+            "sha256": "sha256-M91179Rw1JslGIe83opmt0d77Bh8lAVk6O+R78K4MVs=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.3.0.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.3.1.tar.gz"
         },
-        "version": "0.3.0"
+        "version": "0.3.1"
     },
     "pyjokes": {
         "cargoLock": null,
