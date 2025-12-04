@@ -647,21 +647,21 @@
   };
   dela = {
     pname = "dela";
-    version = "d85ee56a924d5c33a20b44331db18f2f8be44d8c";
+    version = "b65a7d4af826f0d98f8903b56fdc5a8c168c846a";
     src = fetchFromGitHub {
       owner = "aleyan";
       repo = "dela";
-      rev = "d85ee56a924d5c33a20b44331db18f2f8be44d8c";
+      rev = "b65a7d4af826f0d98f8903b56fdc5a8c168c846a";
       fetchSubmodules = false;
-      sha256 = "sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh/fZZDmgIvxKdjaMaM=";
+      sha256 = "sha256-6zJ69aTBuwFE8+mFCNoYw8Z8egBRjGmxW3HtDxv81aI=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh_fZZDmgIvxKdjaMaM=/Cargo.lock";
+      lockFile = ./. + "/sha256-6zJ69aTBuwFE8+mFCNoYw8Z8egBRjGmxW3HtDxv81aI=/Cargo.lock";
       outputHashes = {
         
       };
     };
-    date = "2025-12-02";
+    date = "2025-12-04";
   };
   devdocs-vim = {
     pname = "devdocs-vim";
@@ -2708,16 +2708,16 @@
   };
   qlty = {
     pname = "qlty";
-    version = "v0.592.0";
+    version = "v0.593.0";
     src = fetchFromGitHub {
       owner = "qltysh";
       repo = "qlty";
-      rev = "v0.592.0";
+      rev = "v0.593.0";
       fetchSubmodules = false;
-      sha256 = "sha256-bp/YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=";
+      sha256 = "sha256-uVbvuH/rjqrUWiXJirM+hRIvKvvnNaRAfAszzZ6SULw=";
     };
     cargoLock."Cargo.lock" = {
-      lockFile = ./. + "/sha256-bp_YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=/Cargo.lock";
+      lockFile = ./. + "/sha256-uVbvuH_rjqrUWiXJirM+hRIvKvvnNaRAfAszzZ6SULw=/Cargo.lock";
       outputHashes = {
         "duct-0.13.7" = "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA=";
       };

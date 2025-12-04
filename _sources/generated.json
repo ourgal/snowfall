@@ -1130,11 +1130,11 @@
     "dela": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh_fZZDmgIvxKdjaMaM=/Cargo.lock",
+                "sha256-6zJ69aTBuwFE8+mFCNoYw8Z8egBRjGmxW3HtDxv81aI=/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-12-02",
+        "date": "2025-12-04",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1146,12 +1146,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "d85ee56a924d5c33a20b44331db18f2f8be44d8c",
-            "sha256": "sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh/fZZDmgIvxKdjaMaM=",
+            "rev": "b65a7d4af826f0d98f8903b56fdc5a8c168c846a",
+            "sha256": "sha256-6zJ69aTBuwFE8+mFCNoYw8Z8egBRjGmxW3HtDxv81aI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "d85ee56a924d5c33a20b44331db18f2f8be44d8c"
+        "version": "b65a7d4af826f0d98f8903b56fdc5a8c168c846a"
     },
     "devdocs-vim": {
         "cargoLock": null,
@@ -4854,7 +4854,7 @@
     "qlty": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-bp_YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=/Cargo.lock",
+                "sha256-uVbvuH_rjqrUWiXJirM+hRIvKvvnNaRAfAszzZ6SULw=/Cargo.lock",
                 {
                     "duct-0.13.7": "sha256-Txzn025lWXctujpAnmp6JLyWLw7rhloCV5tCa+KkAlA="
                 }
@@ -4872,12 +4872,12 @@
             "name": null,
             "owner": "qltysh",
             "repo": "qlty",
-            "rev": "v0.592.0",
-            "sha256": "sha256-bp/YTMtLLIRTiKM4z3zBzl6tuuQPaA0WEAo8A3Ad6fA=",
+            "rev": "v0.593.0",
+            "sha256": "sha256-uVbvuH/rjqrUWiXJirM+hRIvKvvnNaRAfAszzZ6SULw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.592.0"
+        "version": "v0.593.0"
     },
     "qman": {
         "cargoLock": null,
