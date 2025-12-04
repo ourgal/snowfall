@@ -1130,11 +1130,11 @@
     "dela": {
         "cargoLock": {
             "Cargo.lock": [
-                "sha256-aorPH7RwhqkydAO_KwsJMtcWRUZLBdQe0aDE2ICYyMA=/Cargo.lock",
+                "sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh_fZZDmgIvxKdjaMaM=/Cargo.lock",
                 {}
             ]
         },
-        "date": "2025-09-28",
+        "date": "2025-12-02",
         "extract": null,
         "name": "dela",
         "passthru": null,
@@ -1146,12 +1146,12 @@
             "name": null,
             "owner": "aleyan",
             "repo": "dela",
-            "rev": "80c6843b2194bcea3525e8248b9afdbb209255c4",
-            "sha256": "sha256-aorPH7RwhqkydAO/KwsJMtcWRUZLBdQe0aDE2ICYyMA=",
+            "rev": "d85ee56a924d5c33a20b44331db18f2f8be44d8c",
+            "sha256": "sha256-t8wXeMNBgcqDO+MZkaJhxQFRwh/fZZDmgIvxKdjaMaM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "80c6843b2194bcea3525e8248b9afdbb209255c4"
+        "version": "d85ee56a924d5c33a20b44331db18f2f8be44d8c"
     },
     "devdocs-vim": {
         "cargoLock": null,
@@ -1609,14 +1609,14 @@
             "arch": null,
             "finalImageName": null,
             "finalImageTag": null,
-            "imageDigest": "sha256:2bf66a37f37cec5c8641905da7371fa0faf077d1cc5cae92844d1170c7598837",
+            "imageDigest": "sha256:20ffaf44e69ab2c3c0d4e5ab758a29ebc7a32ccbe7a401ee38152278891b299a",
             "imageName": "b3log/siyuan",
-            "imageTag": "v3.4.1",
+            "imageTag": "v3.4.2",
             "os": null,
-            "sha256": "sha256-rC3noG8bIQxxhRvkdDVyPE/CgbE4iD74mTPRNAtALuU=",
+            "sha256": "sha256-iWoKMqnAmiGmGlAuxDPtVS1O+BPkfu6KC78PihR5sI8=",
             "tlsVerify": null
         },
-        "version": "v3.4.1"
+        "version": "v3.4.2"
     },
     "docker-soft-serve": {
         "cargoLock": null,
@@ -1742,7 +1742,7 @@
     },
     "dps-ghosttext-vim": {
         "cargoLock": null,
-        "date": "2025-11-20",
+        "date": "2025-12-02",
         "extract": null,
         "name": "dps-ghosttext-vim",
         "passthru": null,
@@ -1754,12 +1754,12 @@
             "name": null,
             "owner": "gamoutatsumi",
             "repo": "dps-ghosttext.vim",
-            "rev": "1c77623b1ffb926c1739ec71b5764d521985970c",
-            "sha256": "sha256-7IaVpvGKCFrvSdi6EVNpaiZv5VtGZW268QFiqxXh9S8=",
+            "rev": "5b2268ab8e4a028f8a13023c306fea64061b4197",
+            "sha256": "sha256-fqQea3y8TL/oDU2vrc1zYpNRJgddY7wwPfCRAHWXQy4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1c77623b1ffb926c1739ec71b5764d521985970c"
+        "version": "5b2268ab8e4a028f8a13023c306fea64061b4197"
     },
     "dra": {
         "cargoLock": {
@@ -4713,11 +4713,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-jnEIMtTnqtyGslsBgCUHi5Do4QjppZ/5jYQJjX8KD1Y=",
+            "sha256": "sha256-JJL77jChm7cRx/PdLK/SIDjz2Eep6PPFrwId+vuFoHo=",
             "type": "url",
-            "url": "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.2.2.tar.gz"
+            "url": "https://pypi.org/packages/source/p/pyfreeproxy/pyfreeproxy-0.3.0.tar.gz"
         },
-        "version": "0.2.2"
+        "version": "0.3.0"
     },
     "pyjokes": {
         "cargoLock": null,
@@ -6828,9 +6828,9 @@
             "name": null,
             "sha256": "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geoip.dat"
         },
-        "version": "202512012213"
+        "version": "202512032215"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6841,11 +6841,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-NAETVkrtJTIHstPzpPCJJzGaF3NEZAWE1rq4ftbBfgg=",
+            "sha256": "sha256-7b7iFVwC2vMa2h/vV/9fq040zyMhFeiKswAx97f8ZOE=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512012213/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geosite.dat"
         },
-        "version": "202512012213"
+        "version": "202512032215"
     },
     "vim-auto-save": {
         "cargoLock": null,
@@ -7239,12 +7239,12 @@
             "name": null,
             "owner": "Benexl",
             "repo": "viu",
-            "rev": "v3.2.8",
-            "sha256": "sha256-iwsW5hG7lBTM4SFg+G6rlziKXb8paArDm5D7vfPMhiA=",
+            "rev": "v3.3.2",
+            "sha256": "sha256-aZ/LkolzWYeuLReTrd2FH0Kr9HfHC8J3cBugG9ipPOY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v3.2.8"
+        "version": "v3.3.2"
     },
     "vl": {
         "cargoLock": null,
@@ -7485,11 +7485,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-T1yFKWIento7T9ZznO2LngQw/3dqvdoep+qH8dVaWuI=",
+            "sha256": "sha256-1aS42nFd6MbbDPYBqJIjB+L9e5IvC3PVuLTdZ1bUPJQ=",
             "type": "url",
-            "url": "https://github.com/Zephyruso/zashboard/releases/download/v2.3.0/dist.zip"
+            "url": "https://github.com/Zephyruso/zashboard/releases/download/v2.3.1/dist.zip"
         },
-        "version": "v2.3.0"
+        "version": "v2.3.1"
     },
     "zhlint": {
         "cargoLock": null,
