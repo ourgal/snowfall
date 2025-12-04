@@ -81,6 +81,7 @@ args.module (
         "com.termux"
         "com.termux.api"
       ];
+      nix = [ "com.termux.nix" ];
       todo = [
         "de.tnmgl.ntodotxt"
         "org.tasks"
@@ -165,11 +166,15 @@ args.module (
                 ++ IME
                 ++ store
                 ++ weather
-                ++ share
                 ++ git
-                ++ termux
                 ++ editor
-                ++ keyboard;
+                ++ keyboard
+                ++ nix;
+              inherit repos;
+            }
+            {
+              id = "bak";
+              apps = share;
               inherit repos;
             }
           ];
