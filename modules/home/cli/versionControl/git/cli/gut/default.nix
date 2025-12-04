@@ -15,8 +15,8 @@ args.module (
           mZP-mvQBynsRxGy31Elwj = {
             Alias = "git";
             Website = "git.zxc.cn";
-            Username = config.programs.git.userName;
-            Email = config.programs.git.userEmail;
+            Username = config.programs.git.settings.user.name;
+            Email = config.programs.git.settings.user.email;
           };
         };
       };

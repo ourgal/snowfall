@@ -2,7 +2,7 @@
   nixPkgs = [
     # keep-sorted start
     "diskus"
-    "du-dust"
+    "dust"
     "dua"
     "duc"
     "gdu"

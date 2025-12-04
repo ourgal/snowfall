@@ -11,6 +11,9 @@ let
 in
 python3Packages.buildPythonApplication {
   inherit (source) pname src version;
+  pyproject = true;
+
+  build-system = [ python3Packages.setuptools ];
 
   cargoDeps = rustPlatform.importCargoLock source.cargoLock."Cargo.lock";
 

@@ -40,10 +40,5 @@
     "vscode-json-languageserver"
     # keep-sorted end
   ];
-  myPkgs = [
-    # keep-sorted start
-    "bafi"
-    "vscode-json-language-server"
-    # keep-sorted end
-  ];
+  myPkgs = "bafi";
 }

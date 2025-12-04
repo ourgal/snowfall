@@ -1,6 +1,7 @@
 {
-  progs.git.diff-so-fancy = {
+  progs.diff-so-fancy = {
     enable = true;
-    markEmptyLines = false;
+    settings.markEmptyLines = false;
+    enableGitIntegration = true;
   };
 }

@@ -1,7 +1,6 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "emanote"
     "hledger-ui"
     "hledger-web"
     "jrnl"

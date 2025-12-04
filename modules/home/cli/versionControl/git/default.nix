@@ -46,10 +46,8 @@ args.module (
       ];
       progs = {
         git = {
-          userName = "ourgal";
-          userEmail = "git@fairever.aleeas.com";
           lfs = enabled;
-          extraConfig = {
+          settings = {
             init.defaultBranch = "main";
             pull = {
               rebase = true;
@@ -76,7 +74,7 @@ args.module (
               showUntrackedFiles = "all";
             };
             git-extras = {
-              defualt-branch = config.programs.git.extraConfig.init.defaultBranch;
+              defualt-branch = config.programs.git.settings.init.defaultBranch;
               get.clone-path = "${config.home.homeDirectory}/src";
             };
             push = {
@@ -114,7 +112,11 @@ args.module (
               template = "${config.xdg.configHome}/git/template";
               gpgsign = true;
             };
-            user.signingkey = "ourgal";
+            user = {
+              signingkey = "ourgal";
+              name = "ourgal";
+              email = "git@fairever.aleeas.com";
+            };
             rerere = {
               enabled = true;
               autoupdate = true;

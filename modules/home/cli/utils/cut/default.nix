@@ -1,5 +1,4 @@
 {
-  pyPkgs = "percol";
   nixPkgs = [
     # keep-sorted start
     "choose"

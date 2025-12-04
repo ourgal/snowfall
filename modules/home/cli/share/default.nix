@@ -14,7 +14,6 @@
     "miniserve"
     "nfs-utils"
     "pastebinit"
-    "pcp"
     "portal"
     "rsync"
     "screego" # TODO

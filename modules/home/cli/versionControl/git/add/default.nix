@@ -5,7 +5,7 @@
     "git-crecord"
     # keep-sorted end
   ];
-  progs.git.extraConfig.interactive = {
+  progs.git.settings.interactive = {
     singlekey = true;
   };
 }

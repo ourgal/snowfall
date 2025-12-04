@@ -1,8 +1,8 @@
 {
   myPkgs = "antifennel";
+  luaPkgs = "fennel";
   nixPkgs = [
     # keep-sorted start
-    "fennel"
     "fennel-ls"
     "fnlfmt"
     "parinfer-rust-emacs"

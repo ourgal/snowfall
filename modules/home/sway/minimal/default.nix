@@ -29,7 +29,7 @@ args.module (
               lib.mkOptionDefault {
                 "${modifier}+Return" = "exec ${lib.getExe pkgs.kitty}";
                 "${modifier}+Shift+c" = "kill";
-                "${modifier}+d" = "exec ${lib.getExe pkgs.rofi-wayland} -show drun";
+                "${modifier}+d" = "exec ${lib.getExe pkgs.rofi} -show drun";
               };
           };
         };

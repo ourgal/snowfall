@@ -16,7 +16,7 @@ args.module (
             pkgs.gnome-epub-thumbnailer
             pkgs.imagemagick
             pkgs.mediainfo
-            pkgs.poppler_utils
+            pkgs.poppler-utils
             pkgs.ueberzugpp
           ];
           bookmarks = {

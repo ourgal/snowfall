@@ -1,4 +1,1 @@
-{
-  nixPkgs = "pot";
-  enable = "crow-translate";
-}
+{ enable = "crow-translate"; }

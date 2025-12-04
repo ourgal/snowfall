@@ -15,7 +15,7 @@ args.module (
     in
     {
       nixPkgs = "git-ftp";
-      progs.git.extraConfig.git-ftp = lib.mkIf (elem host settings.desktops && !elem host settings.work) {
+      progs.git.settings.git-ftp = lib.mkIf (elem host settings.desktops && !elem host settings.work) {
         url = "brix.local";
         inherit user;
         password = lib.strings.fileContents ./password.key;

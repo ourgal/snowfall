@@ -3,8 +3,6 @@
   programs = {
     git = {
       enable = true;
-      userName = "ourgal";
-      userEmail = "git@fairever.aleeas.com";
       lfs.enable = true;
       extraConfig = {
         init.defaultBranch = "main";

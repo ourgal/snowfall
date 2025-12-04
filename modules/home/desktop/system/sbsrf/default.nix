@@ -139,7 +139,7 @@ args.module (
               fcitx5-mozc
               fcitx5-tokyonight
               fcitx5-rose-pine
-              fcitx5-configtool
+              qt6Packages.fcitx5-configtool
               fcitx5-material-color
             ];
           };

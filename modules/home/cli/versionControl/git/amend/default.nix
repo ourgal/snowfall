@@ -6,7 +6,7 @@
     "patchy"
     # keep-sorted end
   ];
-  progs.git.extraConfig.absorb = {
+  progs.git.settings.absorb = {
     autoStageIfNothingStaged = true;
     oneFixupPerCommit = true;
   };

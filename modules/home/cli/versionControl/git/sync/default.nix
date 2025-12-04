@@ -5,10 +5,9 @@
     "datalad"
     "git-annex"
     "git-annex-remote-rclone"
-    "gitfs"
     # keep-sorted end
   ];
-  progs.git.extraConfig = {
+  progs.git.settings = {
     annex.security.allowed-ip-addresses = "all";
   };
   enable = "git-ftp";

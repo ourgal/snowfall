@@ -63,8 +63,6 @@ let
     system.autoUpgrade = disabled // enableOpt [ "allowReboot" ];
 
     programs.nix-ld = enabled // {
-      package = pkgs.nix-ld-rs;
-
       libraries = with pkgs; [
         gcc
         icu

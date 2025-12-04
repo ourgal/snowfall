@@ -10,7 +10,7 @@ args.module (
             src = ./config;
             nativeBuildInputs = [
               pkgs.gnumake
-              pkgs.fennel
+              pkgs.luaPackages.fennel
             ];
           }
           ''

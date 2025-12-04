@@ -13,7 +13,7 @@ args.module (
     in
     {
       nixPkgs = "mergiraf";
-      progs.git.extraConfig = {
+      progs.git.settings = {
         merge = {
           tool = "vimdiff";
           mergiraf = {

@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix/release-25.05";
+      url = "github:ezKEa/aagl-gtk-on-nix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
@@ -54,7 +54,7 @@
     };
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-25.05";
+      url = "github:nix-community/nixvim/nixos-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
@@ -140,7 +140,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     darwin = {
-      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     colmena.url = "github:zhaofengli/colmena/stable";
@@ -167,7 +167,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -229,10 +229,12 @@
               "aspnetcore-runtime-6.0.36"
             ];
             beekeeper = [ "beekeeper-studio-5.1.5" ];
-            ventoy = [ "ventoy-1.1.05" ];
-            jlink = [ "segger-jlink-qt4-810" ];
+            ventoy = [ "ventoy-1.1.07" ];
+            jlink = [ "segger-jlink-qt4-874" ];
+            qtwebengine = [ "qtwebengine-5.15.19" ];
+            beekeeper-studio = [ "beekeeper-studio-5.3.4" ];
           in
-          koreader ++ sonarr ++ beekeeper ++ ventoy ++ jlink;
+          koreader ++ sonarr ++ beekeeper ++ ventoy ++ jlink ++ qtwebengine ++ beekeeper-studio;
       };
 
       overlays =
@@ -311,7 +313,7 @@
           wired = inputs.wired.homeManagerModules.default;
           nix-index-database = inputs.nix-index-database.homeModules.nix-index;
           catppuccin = inputs.catppuccin.homeModules.catppuccin;
-          nixvim = inputs.nixvim.homeManagerModules.nixvim;
+          nixvim = inputs.nixvim.homeModules.nixvim;
           nyaa = inputs.nyaa.homeManagerModule;
           nvchad4nix = inputs.nvchad4nix.homeManagerModule;
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;

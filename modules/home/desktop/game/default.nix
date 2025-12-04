@@ -9,7 +9,6 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "bottles"
-        "gamehub"
         "gnome-mahjongg"
         "lutris"
         "moonlight-qt"

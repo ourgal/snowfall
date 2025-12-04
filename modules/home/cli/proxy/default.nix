@@ -11,7 +11,7 @@
     # keep-sorted start
     "clashtui"
     "cloudflared"
-    "gg"
+    "go-graft"
     # keep-sorted end
   ];
 }

@@ -19,7 +19,7 @@ args.module (
               pkgs.gnumake
               pkgs.git
               pkgs.fnlfmt
-              pkgs.fennel
+              pkgs.luaPackages.fennel
             ]
           }
           ${lib.getExe pkgs.chezmoi} apply --force

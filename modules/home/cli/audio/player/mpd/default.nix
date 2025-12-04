@@ -10,7 +10,7 @@ args.module (
         # keep-sorted start
         "inori"
         "mmtc"
-        "mpc-cli"
+        "mpc"
         "pms"
         "rmpc"
         "vimpc"

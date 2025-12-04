@@ -258,10 +258,6 @@ src.github = "welpo/git-sumi"
 fetch.github = "welpo/git-sumi"
 cargo_lock = ["Cargo.lock"]
 
-[git-toolbelt]
-src.github = "nvie/git-toolbelt"
-fetch.github = "nvie/git-toolbelt"
-
 [gogitmoji]
 src.github = "jamesdobson/gogitmoji"
 fetch.github = "jamesdobson/gogitmoji"

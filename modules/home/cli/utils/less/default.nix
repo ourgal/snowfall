@@ -1,7 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "moar"
+    "moor"
     "most"
     "peep"
     # keep-sorted end

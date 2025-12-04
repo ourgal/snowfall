@@ -72,8 +72,8 @@ let
                 "intel-media-driver" # LIBVA_DRIVER_NAME=iHD
                 "libvdpau-va-gl"
                 "nvidia-vaapi-driver"
-                "vaapiIntel" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-                "vaapiVdpau" # VA-API and VDPAU
+                "intel-vaapi-driver" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+                "intel-vaapi-driver" # VA-API and VDPAU
               ];
             }
         );

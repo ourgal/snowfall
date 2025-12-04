@@ -1,6 +1,6 @@
 {
   nixPkgs = "ov";
-  progs.git.extraConfig = {
+  progs.git.settings = {
     delta = {
       navigate.enable = true;
       side-by-side.enable = true;

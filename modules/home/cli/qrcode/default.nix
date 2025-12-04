@@ -5,7 +5,6 @@
     "qrcode"
     "qrcp"
     "qrencode"
-    "qrscan"
     "qrtool"
     "wifi-qr"
     # keep-sorted end

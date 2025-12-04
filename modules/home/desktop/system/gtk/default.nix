@@ -28,7 +28,7 @@ args.module (
           font = {
             name = "Ubuntu";
             size = 12;
-            package = pkgs.ubuntu_font_family;
+            package = pkgs.ubuntu-classic;
           };
           gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
           gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;

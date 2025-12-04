@@ -3,7 +3,7 @@
   nixPkgs = [
     # keep-sorted start
     "compsize"
-    "ventoy-bin-full"
+    "ventoy-full"
     # keep-sorted end
   ];
 }

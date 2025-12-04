@@ -5,7 +5,6 @@ let
   value = {
     services.udev = {
       packages = [
-        pkgs.android-udev-rules
         pkgs.${namespace}.nrf-udev
         pkgs.qmk-udev-rules
       ];

@@ -4,7 +4,7 @@
     "git-interactive-rebase-tool"
     # keep-sorted end
   ];
-  progs.git.extraConfig = {
+  progs.git.settings = {
     rebase.autoSquash = true;
     sequence.editor = "interactive-rebase-tool";
     interactive-rebase-tool = {

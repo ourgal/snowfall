@@ -11,8 +11,8 @@ args.module (
       progs = {
         jujutsu.settings = {
           user = {
-            name = config.programs.git.userName;
-            email = config.programs.git.userEmail;
+            name = config.programs.git.settings.user.name;
+            email = config.programs.git.settings.user.email;
           };
           ui = {
             default-command = "log";

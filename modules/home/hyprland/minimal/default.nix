@@ -122,7 +122,7 @@ args.module (
               "${modifier} SHIFT, S,exec,swaync-client -rs"
               "${modifier}, S,exec,screenshootin"
               "${modifier} SHIFT, G,exec,godot4"
-              "${modifier}, D,exec,${lib.getExe pkgs.rofi-wayland} -show drun"
+              "${modifier}, D,exec,${lib.getExe pkgs.rofi} -show drun"
               "${modifier}, A,exec,playerctl play-pause"
               "${modifier}, P,pseudo,"
               "${modifier} SHIFT, I,togglesplit,"

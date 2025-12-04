@@ -1,5 +1,5 @@
 {
-  nixPkgs = "kak-lsp";
+  nixPkgs = "kakoune-lsp";
   progs.kakoune = {
     config.keyMappings = [
       {

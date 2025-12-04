@@ -20,7 +20,7 @@ args.module (
         "git-trim"
         # keep-sorted end
       ];
-      progs.git.aliases.bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
+      progs.git.settings.aliases.bb = "!${pkgs.${namespace}.better-git-branch}/bin/better-git-branch";
     }
   )
 )

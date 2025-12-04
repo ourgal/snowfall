@@ -6,8 +6,7 @@ args.module (
       inherit (args) pkgs lib;
     in
     {
-      myPkgs = "git-toolbelt";
-      progs.git.aliases = {
+      progs.git.settings.aliases = {
         f = "!${lib.getExe pkgs.zsh-forgit}";
         fa = "!${lib.getExe pkgs.zsh-forgit} add";
         fr = "!${lib.getExe pkgs.zsh-forgit} reset_head";
@@ -17,6 +16,7 @@ args.module (
         # keep-sorted start
         "bit"
         "git-extras"
+        "git-toolbelt"
         "zsh-forgit"
         # keep-sorted end
       ];

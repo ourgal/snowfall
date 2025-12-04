@@ -22,7 +22,7 @@ args.module (
       "fastfetch"
       "file"
       "glances"
-      "glxinfo"
+      "mesa-demos"
       "libva-utils"
       "neofetch"
       "onefetch"

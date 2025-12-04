@@ -52,7 +52,7 @@ args.module (
           # keep-sorted end
         ];
       progs = {
-        git.extraConfig.credential.helper = "gopass";
+        git.settings.credential.helper = "gopass";
       };
       confs = {
         "BraveSoftware/Brave-Browser/NativeMessagingHosts/com.justwatch.gopass.json" = chromiumNative;

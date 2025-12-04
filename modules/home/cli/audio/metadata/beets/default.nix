@@ -22,7 +22,7 @@ args.module (
           directory = config.services.mpd.musicDirectory;
         };
         package = (
-          pkgs.beets.override {
+          pkgs.python3Packages.beets.override {
             pluginOverrides = {
               fromfilename.enable = true;
               chroma.enable = true;
