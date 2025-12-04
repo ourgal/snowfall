@@ -2482,6 +2482,36 @@ args.module (
           album = "ましろ色シンフォニー SANA EDITION Maxi Single";
           url = "https://music.163.com/#/song?id=2075565121";
         }
+        {
+          artist = "仲村芽衣子";
+          title = "ギプソフィラを花束に";
+          album = "ギプソフィラを花束に";
+          url = "https://music.163.com/#/song?id=2042187545";
+        }
+        {
+          artist = "Kirara Magic & Xomu & nayuta";
+          title = "Night of Bloom (feat. nayuta)";
+          album = "Night of Bloom";
+          url = "https://music.163.com/#/song?id=1963634342";
+        }
+        {
+          artist = "GFRIEND";
+          title = "Glass Bead -JP ver.-";
+          album = "今日から私たちは ～GFRIEND 1st BEST～";
+          url = "https://music.163.com/#/song?id=568207106";
+        }
+        {
+          artist = "幽閉サテライト & 森永真由美";
+          title = "共鳴しない愛のカタチ";
+          album = "魔法が生まれた日";
+          url = "https://music.163.com/#/song?id=436016269";
+        }
+        {
+          artist = "綾瀬理恵";
+          title = "形のない花";
+          album = "Infect Paranoia";
+          url = "https://music.163.com/#/song?id=29027527";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
