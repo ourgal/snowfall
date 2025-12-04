@@ -16,6 +16,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "emacs-lsp-booster"
+        "parinfer-rust-emacs"
         "gnuplot"
         # keep-sorted end
       ];
