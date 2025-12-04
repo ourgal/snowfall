@@ -175,6 +175,7 @@
   nixConfig = {
     extra-substituters = [
       "https://mirrors.cernet.edu.cn/nix-channels/store?priority=10"
+      "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
       "https://nix-community.cachix.org?priority=100"
     ];
     extra-trusted-public-keys = [
