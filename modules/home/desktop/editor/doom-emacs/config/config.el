@@ -102,7 +102,8 @@
 (setq select-enable-clipboard nil)
 
 ;; time tracking
-(add-hook! 'after-save-hook 'git-time-metric-record)
+(unless (eq (system-name) 'office1)
+  (add-hook! 'after-save-hook 'git-time-metric-record))
 
 ;; make script executable
 (add-hook! 'after-save-hook #'executable-make-buffer-file-executable-if-script-p)

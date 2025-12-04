@@ -14,6 +14,7 @@ let
     with'
     enableNixosSubModule'
     ;
+  inherit (config.${namespace}.user) host;
   value = {
     security.rtkit = enabled;
 
@@ -59,16 +60,23 @@ let
     services.libinput = enabled;
 
     hardware = {
-      graphics = enabled // {
-        enable32Bit = true;
-        extraPackages = with' pkgs [
-          "intel-media-driver" # LIBVA_DRIVER_NAME=iHD
-          "libvdpau-va-gl"
-          "nvidia-vaapi-driver"
-          "vaapiIntel" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-          "vaapiVdpau" # VA-API and VDPAU
-        ];
-      };
+      graphics =
+        enabled
+        // (
+          if builtins.elem host [ "office1" ] then
+            { }
+          else
+            {
+              enable32Bit = true;
+              extraPackages = with' pkgs [
+                "intel-media-driver" # LIBVA_DRIVER_NAME=iHD
+                "libvdpau-va-gl"
+                "nvidia-vaapi-driver"
+                "vaapiIntel" # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+                "vaapiVdpau" # VA-API and VDPAU
+              ];
+            }
+        );
     };
 
     # XDG portal

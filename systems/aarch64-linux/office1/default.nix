@@ -14,6 +14,8 @@ in
     # keep-sorted start
     "avahi"
     "common"
+    "desktop"
+    "home-manager"
     "disko"
     "iotop"
     "nh"
