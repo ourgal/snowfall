@@ -2512,6 +2512,12 @@ args.module (
           album = "Infect Paranoia";
           url = "https://music.163.com/#/song?id=29027527";
         }
+        {
+          artist = "Himeka";
+          title = "PRECIOUS";
+          album = "PRECIOUS";
+          url = "https://music.163.com/#/song?id=440411449";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
