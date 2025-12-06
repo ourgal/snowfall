@@ -6,5 +6,10 @@
     "openpomodoro-cli"
     # keep-sorted end
   ];
-  enable = "focus-timer";
+  enable = [
+    # keep-sorted start
+    "focus-timer"
+    "tomat"
+    # keep-sorted end
+  ];
 }
