@@ -6,6 +6,7 @@ args.module (
       inherit (args) config;
     in
     {
+      progs = "retroarch";
       nixPkgs = [
         # keep-sorted start
         "bottles"
@@ -13,7 +14,6 @@ args.module (
         "lutris"
         "moonlight-qt"
         "prismlauncher"
-        "retroarch"
         "wine"
         # keep-sorted end
       ];
