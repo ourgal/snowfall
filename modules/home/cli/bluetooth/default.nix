@@ -1,8 +1,4 @@
 {
-  nixPkgs = [
-    # keep-sorted start
-    "bluetui"
-    "bluetuith"
-    # keep-sorted end
-  ];
+  nixPkgs = "bluetui";
+  progs = "bluetuith";
 }
