@@ -1,6 +1,5 @@
 {
-  nixPkgs = "lazygit";
-  confs."lazygit/config.yml" = {
+  progs.lazygit.settings = {
     gui.nerdFontsVersion = "3";
     promptToReturnFromSubprocess = false;
     git.parseEmoji = true;
@@ -49,35 +48,35 @@
         command = "tig blame -- {{.SelectedFile.Name}}";
         context = "files";
         description = "blame file at tree";
-        subprocess = true;
+        output = "terminal";
       }
       {
         key = "b";
         command = "tig blame {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}";
         context = "commitFiles";
         description = "blame file at revision";
-        subprocess = true;
+        output = "terminal";
       }
       {
         key = "B";
         command = "tig blame -- {{.SelectedCommitFile.Name}}";
         context = "commitFiles";
         description = "blame file at tree";
-        subprocess = true;
+        output = "terminal";
       }
       {
         key = "t";
         command = "tig {{.SelectedLocalCommit.Sha}} -- {{.SelectedCommitFile.Name}}";
         context = "commitFiles";
         description = "tig file (history of commits affecting file)";
-        subprocess = true;
+        output = "terminal";
       }
       {
         key = "t";
         command = "tig -- {{.SelectedFile.Name}}";
         context = "files";
         description = "tig file (history of commits affecting file)";
-        subprocess = true;
+        output = "terminal";
       }
       {
         key = "<c-v>";
@@ -180,5 +179,4 @@
     "shortcut"
     "diff-so-fancy"
   ];
-  value.catppuccin.lazygit.enable = true;
 }

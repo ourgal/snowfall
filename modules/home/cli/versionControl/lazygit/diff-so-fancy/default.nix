@@ -6,10 +6,12 @@ args.module (
       inherit (args) pkgs lib;
     in
     {
-      progs.lazygit.settings.git.paging = {
-        colorArg = "always";
-        pager = lib.getExe pkgs.diff-so-fancy;
-      };
+      progs.lazygit.settings.git.papers = [
+        {
+          colorArg = "always";
+          pager = lib.getExe pkgs.diff-so-fancy;
+        }
+      ];
     }
   )
 )
