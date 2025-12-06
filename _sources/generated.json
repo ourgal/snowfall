@@ -6356,6 +6356,27 @@
         },
         "version": "345af747c36e94344cbb360310f1d746f1517b6a"
     },
+    "tmux-tokyo-night": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "tmux-tokyo-night",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "fabioluciano",
+            "repo": "tmux-tokyo-night",
+            "rev": "v2.16.1",
+            "sha256": "sha256-2zH7/C305KfisOVSioy9NyBmVXN5ej2VIaph5PnWUv8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.16.1"
+    },
     "tmux-tome": {
         "cargoLock": null,
         "date": "2025-10-08",
@@ -6784,11 +6805,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=",
+            "sha256": "sha256-v6JMBbyoEWT+hZ8m/224vXGV0vr3dcL/N0xLT62+pHk=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geoip.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512052214/geoip.dat"
         },
-        "version": "202512032215"
+        "version": "202512052214"
     },
     "v2ray-rules-dat-geosite": {
         "cargoLock": null,
@@ -6799,11 +6820,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-7b7iFVwC2vMa2h/vV/9fq040zyMhFeiKswAx97f8ZOE=",
+            "sha256": "sha256-lxXKFfaCuaU0oKXENVrWq0UmWCcL6JXEIux5CnJ0tdo=",
             "type": "url",
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geosite.dat"
+            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512052214/geosite.dat"
         },
-        "version": "202512032215"
+        "version": "202512052214"
     },
     "vim-auto-save": {
         "cargoLock": null,

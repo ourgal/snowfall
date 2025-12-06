@@ -3589,6 +3589,17 @@
     };
     date = "2024-09-10";
   };
+  tmux-tokyo-night = {
+    pname = "tmux-tokyo-night";
+    version = "v2.16.1";
+    src = fetchFromGitHub {
+      owner = "fabioluciano";
+      repo = "tmux-tokyo-night";
+      rev = "v2.16.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-2zH7/C305KfisOVSioy9NyBmVXN5ej2VIaph5PnWUv8=";
+    };
+  };
   tmux-tome = {
     pname = "tmux-tome";
     version = "4c4b31eeb8e8e12d1493a88b3870a257c7d15667";
@@ -3826,18 +3837,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202512032215";
+    version = "202512052214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geoip.dat";
-      sha256 = "sha256-W2/ndUbJiTCGIN2nzFhJlbkgA/H8G1O00YwDnZqXeQo=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512052214/geoip.dat";
+      sha256 = "sha256-v6JMBbyoEWT+hZ8m/224vXGV0vr3dcL/N0xLT62+pHk=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202512032215";
+    version = "202512052214";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512032215/geosite.dat";
-      sha256 = "sha256-7b7iFVwC2vMa2h/vV/9fq040zyMhFeiKswAx97f8ZOE=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202512052214/geosite.dat";
+      sha256 = "sha256-lxXKFfaCuaU0oKXENVrWq0UmWCcL6JXEIux5CnJ0tdo=";
     };
   };
   vim-auto-save = {
