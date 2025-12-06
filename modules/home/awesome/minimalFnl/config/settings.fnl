@@ -1,6 +1,7 @@
 (let [awful (require :awful)
       terminal (-> (os.getenv :TERMINAL) (or :kitty))
-      terminal_opts {:kitty " --single-instance" :wezterm ""}
+      terminal_opts {:kitty " --single-instance --session $HOME/.config/kitty/sessions/tmux"
+                     :wezterm ""}
       editor (-> (os.getenv :EDITOR) (or :vim))
       browser :firefox
       browserS :brave

@@ -6,6 +6,7 @@ args.module (
       inherit (args) host lib;
     in
     {
+      confs."kitty/sessions/tmux" = "launch tmux a";
       progs.kitty = {
         themeFile = "Tomorrow_Night_Bright";
         font = {
