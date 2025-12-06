@@ -59,7 +59,6 @@ let
         cert = config.sops.secrets."${name}/${host}/cert".path;
         inherit dataDir;
         configDir = if isDesktop then "/home/${user}/.config/${name}" else "${dataDir}/.config/${name}";
-        extraFlags = [ "--no-default-folder" ];
         openDefaultPorts = true;
         settings = {
           gui = {
