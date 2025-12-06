@@ -34,63 +34,66 @@ args.module (
       ];
       perlPkgs = "AppClusterSSH";
       tmpfiles = [ "d ${config.home.homeDirectory}/.ssh - - - - -" ];
-      progs.ssh.matchBlocks = {
-        "*" = {
-          forwardAgent = false;
-          addKeysToAgent = "no";
-          compression = false;
-          serverAliveInterval = 0;
-          serverAliveCountMax = 3;
-          hashKnownHosts = false;
-          userKnownHostsFile = "~/.ssh/known_hosts";
-          controlMaster = "no";
-          controlPath = "~/.ssh/master-%r@%n:%p";
-          controlPersist = "no";
-        };
-        github = {
-          host = "github.com";
-          hostname = "ssh.github.com";
-          port = 443;
-          user = "git";
-        };
-        termux = {
-          host = "termux";
-          hostname = "localhost";
-          port = 8022;
-          user = "u0_a420";
-        };
-      }
-      // mkSshConfig
-      // (
-        if elem host settings.desktops && !elem host settings.work then
-          {
-            soft = {
-              host = "soft";
-              hostname = ip.brix;
-              port = 23231;
-            };
-            m6 = {
-              host = "m6";
-              hostname = ip.m6;
-              port = 2222;
-              user = "u0_a420";
-            };
-            s10 = {
-              host = "s10";
-              hostname = ip.s10;
-              port = 2222;
-              user = "u0_a661";
-            };
-            u20 = {
-              host = "u20";
-              hostname = ip.u20;
-              port = 2222;
-              user = "u0_a519";
-            };
-          }
-        else
-          { }
-      );
+      progs.ssh = {
+        enableDefaultConfig = false;
+        matchBlocks = {
+          "*" = {
+            forwardAgent = false;
+            addKeysToAgent = "no";
+            compression = false;
+            serverAliveInterval = 0;
+            serverAliveCountMax = 3;
+            hashKnownHosts = false;
+            userKnownHostsFile = "~/.ssh/known_hosts";
+            controlMaster = "no";
+            controlPath = "~/.ssh/master-%r@%n:%p";
+            controlPersist = "no";
+          };
+          github = {
+            host = "github.com";
+            hostname = "ssh.github.com";
+            port = 443;
+            user = "git";
+          };
+          termux = {
+            host = "termux";
+            hostname = "localhost";
+            port = 8022;
+            user = "u0_a420";
+          };
+        }
+        // mkSshConfig
+        // (
+          if elem host settings.desktops && !elem host settings.work then
+            {
+              soft = {
+                host = "soft";
+                hostname = ip.brix;
+                port = 23231;
+              };
+              m6 = {
+                host = "m6";
+                hostname = ip.m6;
+                port = 2222;
+                user = "u0_a420";
+              };
+              s10 = {
+                host = "s10";
+                hostname = ip.s10;
+                port = 2222;
+                user = "u0_a661";
+              };
+              u20 = {
+                host = "u20";
+                hostname = ip.u20;
+                port = 2222;
+                user = "u0_a519";
+              };
+            }
+          else
+            { }
+        );
+      };
     }
   )
 )
