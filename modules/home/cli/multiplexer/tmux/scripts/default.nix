@@ -1,6 +1,1 @@
-{
-  enable = [
-    "auto-attach"
-    "cdb"
-  ];
-}
+{ enable = "cdb"; }
