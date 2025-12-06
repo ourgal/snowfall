@@ -9,12 +9,26 @@ all: system
 .PHONY: home
 home: # nh home switch
 	@git add .
-	@nh home switch --backup-extension bak
+	@nh home switch --backup-extension bak -- --accept-flake-config
+
+.PHONY: news
+news: # home manager news
+	@home-manager --flake . news
+
+.PHONY: home-compile
+home-compile: # nh home switch
+	@git add .
+	@nh home switch --backup-extension bak -- --accept-flake-config -j 1
 
 .PHONY: system
 system: # nh os switch
 	@git add .
-	@nh os switch
+	@nh os switch -- --accept-flake-config
+
+.PHONY: system-compile
+system-compile: # nh os switch single job
+	@git add .
+	@nh os switch -- --accept-flake-config -j 1
 
 .PHONY: hm
 hm: # home manager switch
