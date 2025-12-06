@@ -1,1 +1,1 @@
-{ enable = "catppuccin"; }
+{ enable = "tmux-tokyo-night"; }
