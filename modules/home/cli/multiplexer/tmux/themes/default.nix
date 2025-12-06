@@ -1,1 +1,1 @@
-{ enable = "catppuccin"; }
+{ enable = "tokyo-night"; }
