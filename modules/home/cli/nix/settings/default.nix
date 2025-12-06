@@ -11,7 +11,7 @@ args.module (
         inputs
         cfgHome
         ;
-      inherit (lib.${namespace}) mkOpt';
+      inherit (lib.${namespace}) mkOpt' switch;
       cfg = cfgHome config.${namespace} ./.;
     in
     {
@@ -26,7 +26,7 @@ args.module (
             ${lib.getExe pkgs.nvd} diff $oldGenPath $newGenPath
           fi
         '';
-        xdg.configFile = {
+        xdg.configFile = lib.mkIf cfg.conf.enable {
           "nix/nix.conf".text =
             let
               mirrorUrls =
@@ -52,6 +52,7 @@ args.module (
           "nju"
           "none"
         ]) "none";
+        conf = switch;
       };
     }
   )
