@@ -17,5 +17,10 @@
     "viu"
     # keep-sorted end
   ];
-  enable = "trackma";
+  enable = [
+    # keep-sorted start
+    "anup"
+    "trackma"
+    # keep-sorted end
+  ];
 }
