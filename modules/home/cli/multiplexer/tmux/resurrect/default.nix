@@ -3,7 +3,12 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs config namespace;
+      inherit (args)
+        pkgs
+        config
+        namespace
+        lib
+        ;
       pluginsResurrect = [
         {
           plugin = pkgs.tmuxPlugins.resurrect;
@@ -24,7 +29,7 @@ args.module (
     in
     {
       progs.tmux = {
-        plugins = pluginsResurrect;
+        plugins = lib.mkAfter pluginsResurrect;
       };
       value = {
         home.file.".tmux/resurrect/fixSymlink".source = pkgs.writeShellScript "fixSymlink" ''

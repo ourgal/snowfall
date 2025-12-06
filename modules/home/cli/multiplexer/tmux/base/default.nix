@@ -39,8 +39,6 @@ args.module (
         # Enable mouse support
         set -g mouse on
 
-        set -g status-position top
-
         # ==========================
         # ===   Key bindings     ===
         # ==========================
