@@ -42,7 +42,7 @@ in
     terminal = mkOpt' str "kitty";
     browserS = mkOpt' str "brave";
     browserSS = mkOpt' str "qutebrowser";
-    pager = mkOpt' str "moar";
+    pager = mkOpt' str "moor";
     tmux = {
       keys = mkOpt' (listOf str) [ ];
     };
