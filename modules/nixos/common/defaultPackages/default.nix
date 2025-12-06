@@ -12,7 +12,6 @@ let
         defaultEditor = true;
       };
     };
-    security.doas = enabled;
   };
   _args = { inherit value args; };
 in
