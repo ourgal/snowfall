@@ -10,6 +10,7 @@
     "fzf"
     "fzf-url"
     "gentrify"
+    "gitmux"
     "jump"
     "mouse-swipe"
     "open"
