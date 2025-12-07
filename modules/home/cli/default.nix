@@ -4,6 +4,7 @@
     "AI"
     "android"
     "anime"
+    "ansible"
     "audio"
     "benchmark"
     "bluetooth"
