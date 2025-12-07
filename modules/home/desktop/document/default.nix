@@ -17,6 +17,7 @@ args.module (
         "evince"
         "libreoffice"
         "readest"
+        "wpsoffice-cn"
         "zeal"
         # keep-sorted end
       ];
