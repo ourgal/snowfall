@@ -137,6 +137,10 @@ args.module (
           trusted = false;
           git = "${myGithub}:termux-pkgs";
         };
+        "fw/projects/default/ansible" = toTOML {
+          trusted = false;
+          git = "${soft}:ansible";
+        };
       };
     in
     {
