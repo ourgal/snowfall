@@ -18,7 +18,9 @@ args.module (
       progs.tmux = {
         plugins = [ { plugin = pkgs.tmuxPlugins.tmux-thumbs; } ];
         extraConfig = ''
-          bind-key ${cfg.key} thumbs-pick
+          set -g @thumbs-key ${cfg.key}
+          set -g @thumbs-osc52 1
+          set -g @thumbs-command 'tmux set-buffer -- {} && echo -n {} | xsel -ib && tmux display-message \"Copied {}\"'
         '';
       };
       extraOpts = {

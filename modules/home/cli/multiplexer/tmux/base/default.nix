@@ -44,34 +44,34 @@ args.module (
         # ==========================
 
         # unbind default key bindings, we're going to override
-        unbind "\$" # rename-session
-        unbind ,    # rename-window
-        unbind %    # split-window -h
-        unbind '"'  # split-window
-        unbind \}    # swap-pane -D
-        unbind \{    # swap-pane -U
-        unbind [    # paste-buffer
-        unbind ]
-        unbind "'"  # select-window
-        unbind n    # next-window
-        unbind p    # previous-window
-        unbind l    # last-window
-        unbind M-n  # next window with alert
-        unbind M-p  # next window with alert
-        unbind o    # focus thru panes
-        unbind &    # kill-window
-        unbind "#"  # list-buffer
-        unbind =    # choose-buffer
+        # unbind "\$" # rename-session
+        # unbind ,    # rename-window
+        # unbind %    # split-window -h
+        # unbind '"'  # split-window
+        # unbind \}    # swap-pane -D
+        # unbind \{    # swap-pane -U
+        # unbind [    # paste-buffer
+        # unbind ]
+        # unbind "'"  # select-window
+        # unbind n    # next-window
+        # unbind p    # previous-window
+        # unbind l    # last-window
+        # unbind M-n  # next window with alert
+        # unbind M-p  # next window with alert
+        # unbind o    # focus thru panes
+        # unbind &    # kill-window
+        # unbind "#"  # list-buffer
+        # unbind =    # choose-buffer
         # unbind z    # zoom-pane
-        unbind M-Up  # resize 5 rows up
-        unbind M-Down # resize 5 rows down
-        unbind M-Right # resize 5 rows right
-        unbind M-Left # resize 5 rows left
-        unbind b
-        unbind w # choose window
-        unbind . # move window
-        unbind i # display window information
-        unbind f # search for a pane
+        # unbind M-Up  # resize 5 rows up
+        # unbind M-Down # resize 5 rows down
+        # unbind M-Right # resize 5 rows right
+        # unbind M-Left # resize 5 rows left
+        # unbind b
+        # unbind w # choose window
+        # unbind . # move window
+        # unbind i # display window information
+        # unbind f # search for a pane
 
         # new window and retain cwd
         bind n new-session
