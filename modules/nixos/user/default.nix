@@ -65,11 +65,11 @@ in
         isNormalUser = true;
         extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
         shell = pkgs.fish;
-        hashedPassword = "$6$l/D9BaSzaYnuQBsG$DsGEmCOSrFc7ouT7KQoGPdesJyn88dfftTh8TP8k/8wvO4b50dCcaxZwls5dexllp3K8ri1mzyAxO/koMZrzt1";
+        hashedPassword = settings.userPassword;
         openssh.authorizedKeys.keys = attrValues config.dot.user.sshKeys;
       };
       root = {
-        hashedPassword = "$6$fQ9kPcLF.Ib8hmfa$8/NymO9CKitPafQfyKZRzvhAvTbHsviJZS5yKndVDzR3IKSNwb5lMhqmYo.7FgJXXjOUYVrUAC33ek8A2GtIW0";
+        hashedPassword = settings.rootPassword;
         openssh.authorizedKeys.keys = attrValues config.dot.user.sshKeys;
       };
     };
