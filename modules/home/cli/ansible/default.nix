@@ -23,6 +23,10 @@ args.module (
             name = "sshd";
             runlevel = "default";
           }
+          {
+            name = "ntpd";
+            runlevel = "default";
+          }
         ];
         disabled_services = [
           {
