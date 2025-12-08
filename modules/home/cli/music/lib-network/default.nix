@@ -2518,6 +2518,60 @@ args.module (
           album = "PRECIOUS";
           url = "https://music.163.com/#/song?id=440411449";
         }
+        {
+          artist = "千歳サラ";
+          title = "アルカディア";
+          album = "11月のアルカディア Complete Songs";
+          url = "https://music.163.com/#/song?id=35470874";
+        }
+        {
+          artist = "花たん & プリコ & ヲタみん & ChouCho & 転少女";
+          title = "リリリリ★バーニングナイト";
+          album = "DANCEROID Official Sound Track";
+          url = "https://music.163.com/#/song?id=22780159";
+        }
+        {
+          artist = "东京塔子";
+          title = "雪之泪 雨之音";
+          album = "雪之泪 雨之音";
+          url = "https://music.163.com/#/song?id=460839654";
+        }
+        {
+          artist = "みぃ";
+          title = "ROLLING MY LIFE";
+          album = "Agony";
+          url = "https://music.163.com/#/song?id=40915753";
+        }
+        {
+          artist = "ALTIMA";
+          title = "Burst the Gravity";
+          album = "Burst the Gravity";
+          url = "https://music.163.com/#/song?id=26390039";
+        }
+        {
+          artist = "ワルキューレ";
+          title = "Absolute 5";
+          album = "Walküre Trap!";
+          url = "https://music.163.com/#/song?id=431853288";
+        }
+        {
+          artist = "紫咲ほたる";
+          title = "Re:TrymenT";
+          album = "Re:LieF~親愛なるあなたへ~ OriginaL SounD TracK";
+          url = "https://music.163.com/#/song?id=451520657";
+        }
+        {
+          artist = "KyoKa";
+          title = "桜爛ロマンシア";
+          album = "さくらの雲＊スカアレットの恋 コンプリートサウンドアルバム";
+          url = "https://music.163.com/#/song?id=1490122495";
+        }
+        {
+          artist = "幽閉サテライト & 森永真由美";
+          title = "魂の語りに導かれて";
+          album = "魂の語りに導かれて";
+          url = "https://music.163.com/#/song?id=34338787";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
