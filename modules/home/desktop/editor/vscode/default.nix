@@ -22,6 +22,7 @@ args.module (
       };
       enable = [
         # keep-sorted start
+        "ansible"
         "even_better_toml"
         "nix-ide"
         "vim"
