@@ -2572,6 +2572,180 @@ args.module (
           album = "魂の語りに導かれて";
           url = "https://music.163.com/#/song?id=34338787";
         }
+        {
+          artist = "CLIFF EDGE & 中村舞子";
+          title = "The Distance";
+          album = "HEART";
+          url = "https://music.163.com/#/song?id=22672228";
+        }
+        {
+          artist = "一咲美葵";
+          title = "語り継ぐ魂は[with Marcia]";
+          album = "語り継ぐ魂は";
+          url = "https://music.163.com/#/song?id=1927596918";
+        }
+        {
+          artist = "志田サマー新井サマー";
+          title = "あんなに好きだったサマー";
+          album = "あんなに好きだったサマー/ GO GO ｻﾏｰ!";
+          url = "https://music.163.com/#/song?id=461581874";
+        }
+        {
+          artist = "KOTOKO";
+          title = "→unfinished→";
+          album = "→unfinished→";
+          url = "https://music.163.com/#/song?id=589296";
+        }
+        {
+          artist = "川田まみ";
+          title = "INITIATIVE";
+          album = "Love, Election & Chocolate × I've Maxi Single CD";
+          url = "https://music.163.com/#/song?id=751607";
+        }
+        {
+          artist = "花たん";
+          title = "笹舟";
+          album = "FLOWER DROPS";
+          url = "https://music.163.com/#/song?id=31191351";
+        }
+        {
+          artist = "PIKASONIC & なこたんまる";
+          title = "追憶 (feat. nakotanmaru)";
+          album = "追憶 (feat. nakotanmaru)";
+          url = "https://music.163.com/#/song?id=1869161372";
+        }
+        {
+          artist = "和田光司";
+          title = "ターゲット~赤い冲撃~";
+          album = "DIGIMON HISTORY 1999-2006 All The Best";
+          url = "https://music.163.com/#/song?id=4940921";
+        }
+        {
+          artist = "YU-A";
+          title = "忘れられない恋";
+          album = "忘れられない恋";
+          url = "https://music.163.com/#/song?id=26284054";
+        }
+        {
+          artist = "GFRIEND";
+          title = "NAVILLERA -JP ver.-";
+          album = "今日から私たちは ～GFRIEND 1st BEST～";
+          url = "https://music.163.com/#/song?id=568207109";
+        }
+        {
+          artist = "fripSide";
+          title = "closest love";
+          album = "closest love";
+          url = "https://music.163.com/#/song?id=725429";
+        }
+        {
+          artist = "ピコ";
+          title = "桜音";
+          album = "银魂BEST2";
+          url = "https://music.163.com/#/song?id=4925822";
+        }
+        {
+          artist = "山口リサ";
+          title = "Rainy Love ~届かない想い~";
+          album = "Eternal Color";
+          url = "https://music.163.com/#/song?id=22699147";
+        }
+        {
+          artist = "Suara";
+          title = "恋夢";
+          album = "声";
+          url = "https://music.163.com/#/song?id=35447088";
+        }
+        {
+          artist = "茉ひる & RINZO";
+          title = "フレグランス (Sped Up Version)";
+          album = "フレグランス";
+          url = "https://music.163.com/#/song?id=2106836589";
+        }
+        {
+          artist = "一咲美葵";
+          title = "陽だまり探して[with Marcia]";
+          album = "陽だまりを探して";
+          url = "https://music.163.com/#/song?id=1901070033";
+        }
+        {
+          artist = "坂上なち";
+          title = "追忆サマーナイト";
+          album = "Crimson Tempest";
+          url = "https://music.163.com/#/song?id=685908";
+        }
+        {
+          artist = "sroa";
+          title = "硝子の鍵に似ていた";
+          album = "硝子の鍵に似ていた";
+          url = "https://music.163.com/#/song?id=2743418869";
+        }
+        {
+          artist = "川田まみ";
+          title = "Wings of Courage -空を超えて-";
+          album = "蒼の彼方のフォーリズム主題歌MAXI SINGLE CD";
+          url = "https://music.163.com/#/song?id=29771058";
+        }
+        {
+          artist = "GET IN THE RING";
+          title = "祭炎";
+          album = "東方PARTYBOX2";
+          url = "https://music.163.com/#/song?id=434974954";
+        }
+        {
+          artist = "Fivesta";
+          title = "今でもI Love You";
+          album = "Fivesta";
+          url = "https://music.163.com/#/song?id=22810614";
+        }
+        {
+          artist = "nonoc";
+          title = "Memento";
+          album = "Memento";
+          url = "https://music.163.com/#/song?id=1964102917";
+        }
+        {
+          artist = "NegNasu & Xomu";
+          title = "Hound of Aubergine (feat. Xomu)";
+          album = "Hound of Aubergine (feat. Xomu)";
+          url = "https://music.163.com/#/song?id=2009721409";
+        }
+        {
+          artist = "鈴木このみ";
+          title = "真理の鏡、剣乃ように";
+          album = "真理の鏡、剣乃ように";
+          url = "https://music.163.com/#/song?id=1375880110";
+        }
+        {
+          artist = "Tiara";
+          title = "My best friend";
+          album = "Message for You";
+          url = "https://music.163.com/#/song?id=22845966";
+        }
+        {
+          artist = "25時、ナイトコードで。";
+          title = "Bad Apple!! feat.SEKAI";
+          album = "25時、ナイトコードで。 SEKAI ALBUM vol.3";
+          url = "https://music.163.com/#/song?id=2702706005";
+        }
+        {
+          artist = "RSP";
+          title = "優しい詩。";
+          album = "優しい詩。";
+          url = "https://music.163.com/#/song?id=28283406";
+        }
+        {
+          artist = "天宮みや & 姫城碧海";
+          title = "不可測的メトロポリス";
+          album = "不可測的メトロポリス";
+          url = "https://music.163.com/#/song?id=1414857563";
+        }
+        {
+          artist = "Flower";
+          title = "花時計 ～Party's on!～ (version2016)";
+          album = "瞳の奥の銀河 (形態B)";
+          url = "https://music.163.com/#/song?id=39227348";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (

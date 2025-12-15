@@ -11,6 +11,7 @@
     "bookmark"
     "browser"
     "chat"
+    "chezmoi"
     "clipboard"
     "clock"
     "completion"
