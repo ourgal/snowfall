@@ -3,19 +3,34 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs lib namespace;
-      inherit (lib.${namespace}.sources) vsc-fugitive;
-      fugitive = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          name = "vscode-fugitive";
-          publisher = "hnrk-str";
-          inherit (vsc-fugitive) version;
-          inherit (vsc-fugitive.src) sha256;
-        }
-      ];
+      inherit (args) pkgs;
     in
     {
-      progs.vscode.profiles.default.extensions = fugitive;
+      progs.vscode.profiles.default = {
+        extensions = [ pkgs.nix-vscode-extensions.vscode-marketplace.hnrk-str.vscode-fugitive ];
+        userSettings = {
+          "vim.normalModeKeyBindings" = [
+            {
+              "before" = [
+                "<leader>"
+                "g"
+                "g"
+              ];
+              "commands" = [ "fugitive.open" ];
+            }
+            {
+              "before" = [ "q" ];
+              "commands" = [ "fugitive.close" ];
+              "when" = "(vim.mode == 'Normal' || !vim.mode) && resourceScheme == fugitive && editorTextFocus";
+            }
+            {
+              "command" = "fugitive.toggleInlineDiff";
+              "key" = "tab";
+              "when" = "(vim.mode == 'Normal' || !vim.mode) && resourceScheme == fugitive && editorTextFocus";
+            }
+          ];
+        };
+      };
     }
   )
 )

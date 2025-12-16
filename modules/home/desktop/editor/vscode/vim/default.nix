@@ -19,11 +19,8 @@ args.module (
               "commands" = [ "workbench.action.quickOpen" ];
             }
             {
-              "before" = [
-                "<leader>"
-                "g"
-              ];
-              "commands" = [ "fugitive.open" ];
+              "before" = [ "K" ];
+              "commands" = [ "editor.action.showHover" ];
             }
             {
               "before" = [ "H" ];
@@ -34,31 +31,69 @@ args.module (
               "commands" = [ ":bn" ];
             }
             {
-              "before" = [ "<C-j>" ];
+              "before" = [
+                "<leader>"
+                "w"
+                "j"
+              ];
               "after" = [
                 "<C-w>"
                 "j"
               ];
             }
             {
-              "before" = [ "<C-k>" ];
+              "before" = [
+                "<leader>"
+                "w"
+                "k"
+              ];
               "after" = [
                 "<C-w>"
                 "k"
               ];
             }
             {
-              "before" = [ "<C-l>" ];
+              "before" = [
+                "<leader>"
+                "w"
+                "l"
+              ];
               "after" = [
                 "<C-w>"
                 "l"
               ];
             }
             {
-              "before" = [ "<C-h>" ];
+              "before" = [
+                "<leader>"
+                "w"
+                "h"
+              ];
               "after" = [
                 "<C-w>"
                 "h"
+              ];
+            }
+            {
+              "before" = [
+                "<leader>"
+                "w"
+                "v"
+              ];
+              "after" = [
+                "<C-w>"
+                "v"
+              ];
+            }
+            {
+              "before" = [
+                "<leader>"
+                "w"
+                "s"
+              ];
+              "after" = [
+                "<C-w>"
+                "s"
               ];
             }
           ];
