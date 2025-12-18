@@ -1,0 +1,4 @@
+% javascript
+
+# js SRI
+openssl dgst -sha256 -binary <(curl <url>) | openssl base64 -A
