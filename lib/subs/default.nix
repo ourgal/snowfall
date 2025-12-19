@@ -83,7 +83,6 @@ in
             path = "V2RAY_BASE64.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
         yudou66 = {
           name = "yudou66";
@@ -174,7 +173,6 @@ in
             path = "v.txt";
           };
           inherit updateInterval;
-          enable = true;
         };
       };
     in
@@ -348,13 +346,7 @@ in
         };
         aniu-snippets = {
           name = "aniu-snippets";
-          url = mkSubUrl { raw = "https://h.x9527x.top/sub?token=X"; };
-          inherit updateInterval;
-          enable = true;
-        };
-        worker2 = {
-          name = "worker2";
-          url = mkSubUrl { raw = "https://misub.yifang.ggff.net/yifang/yifang1"; };
+          url = mkSubUrl { raw = "https://hj.x9527x.top/sub?token=aniu"; };
           inherit updateInterval;
           enable = true;
         };
@@ -372,19 +364,19 @@ in
         };
         aniu-hk = {
           name = "aniu-hk";
-          url = mkSubUrl { raw = "https://hk.xmm1993.top/sub?token=X"; };
+          url = mkSubUrl { raw = "https://hk.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
           enable = true;
         };
         aniu-jp = {
           name = "aniu-jp";
-          url = mkSubUrl { raw = "https://jp.xmm1993.top/sub?token=X"; };
+          url = mkSubUrl { raw = "https://jp.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
           enable = true;
         };
         aniu-sg = {
           name = "aniu-sg";
-          url = mkSubUrl { raw = "https://sg.xmm1993.top/sub?token=X"; };
+          url = mkSubUrl { raw = "https://sg.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
           enable = true;
         };
