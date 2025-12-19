@@ -10,14 +10,18 @@ args.module (
       );
     in
     {
-      nixX86Pkgs = "onlyoffice-desktopeditors";
+      nixX86Pkgs = [
+        # keep-sorted start
+        "onlyoffice-desktopeditors"
+        "wpsoffice-cn"
+        # keep-sorted end
+      ];
       nixPkgs = [
         # keep-sorted start
         "calibre"
         "evince"
         "libreoffice"
         "readest"
-        "wpsoffice-cn"
         "zeal"
         # keep-sorted end
       ];
