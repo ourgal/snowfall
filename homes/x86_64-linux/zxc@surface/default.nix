@@ -11,7 +11,10 @@ in
     fonts = enabled;
     cli = enabled;
     desktop = enabled // {
-      system.batsignal = enabled;
+      system = {
+        batsignal = enabled;
+        kmonad = enabled;
+      };
     };
     dev = enabled;
   };
