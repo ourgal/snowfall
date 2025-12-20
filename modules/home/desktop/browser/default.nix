@@ -8,6 +8,7 @@
   enable = [
     # keep-sorted start
     "chromium"
+    "extensions"
     "qutebrowser"
     # keep-sorted end
   ];
