@@ -11,12 +11,12 @@ in
   // enabledList [
     # keep-sorted start
     "avahi"
-    "iotop"
     "common"
+    "iotop"
     "nh"
     "tuptime"
     # keep-sorted end
   ];
 
-  system.stateVersion = "25.05";
+  system.stateVersion = lib.mkForce "25.05";
 }
