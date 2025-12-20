@@ -11,6 +11,7 @@ in
     fonts = enabled;
     cli = enabled;
     desktop = enabled // {
+      editor.vscode = enabled;
       system = {
         batsignal = enabled;
         kmonad = enabled;
