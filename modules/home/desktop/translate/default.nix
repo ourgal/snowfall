@@ -1,1 +1,1 @@
-{ enable = "crow-translate"; }
+{ }

@@ -7,10 +7,5 @@
     "xmp"
     # keep-sorted end
   ];
-  enable = [
-    # keep-sorted start
-    "fum"
-    "mpd"
-    # keep-sorted end
-  ];
+  enable = "fum";
 }

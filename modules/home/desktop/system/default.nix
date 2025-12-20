@@ -20,6 +20,7 @@ args.module (
         # keep-sorted start
         "blobdrop"
         "brightnessctl"
+        "dragon-drop"
         "fuzzel"
         "hardinfo2"
         "libnotify"
@@ -31,7 +32,6 @@ args.module (
         "variety"
         "xclip"
         "xcolor"
-        "dragon-drop"
         "xmagnify"
         "zenity"
         # keep-sorted end
@@ -47,16 +47,13 @@ args.module (
         "gtk"
         "kdeconnect"
         "maim"
-        "mouse-actions"
         "picom"
         "playerctl"
         "qt"
         "redshift"
         "rofi"
         "sbsrf"
-        "scream"
         "sxhkd"
-        "volnoti"
         "xbanish"
         "xsel"
         # keep-sorted end

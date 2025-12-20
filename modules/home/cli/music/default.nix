@@ -1,4 +1,1 @@
-{
-  nixPkgs = "piano-rs";
-  enable = "lib-network";
-}
+{ nixPkgs = "piano-rs"; }

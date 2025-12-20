@@ -19,7 +19,11 @@ args.module (
           lyrics = {
             synced = "yes";
           };
-          directory = config.services.mpd.musicDirectory;
+          directory =
+            if config.services.mpd.enable then
+              config.services.mpd.musicDirectory
+            else
+              "${config.home.homeDirectory}/Music";
         };
         package = (
           pkgs.python3Packages.beets.override {
