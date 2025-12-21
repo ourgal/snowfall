@@ -20,6 +20,7 @@
   enable = [
     # keep-sorted start
     "anup"
+    "jerry"
     "trackma"
     # keep-sorted end
   ];
