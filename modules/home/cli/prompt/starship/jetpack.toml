@@ -118,7 +118,7 @@ symbol = "◎ "
 
 [localip]
 disabled = false
-format = " ◯[$localipv4](bold magenta)"
+format = "◯[$localipv4](bold magenta)"
 ssh_only = true
 
 [lua]
@@ -220,6 +220,6 @@ utc_time_offset = "local"
 
 [username]
 disabled = false
-format = "[$user]($style) ▻ "
+format = " [$user]($style) ▻ "
 style_root = "purple bold italic"
 style_user = "yellow bold"
