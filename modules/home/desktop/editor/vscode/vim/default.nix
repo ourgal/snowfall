@@ -14,9 +14,16 @@ args.module (
             {
               "before" = [
                 "<leader>"
-                "f"
+                "<space>"
               ];
               "commands" = [ "workbench.action.quickOpen" ];
+            }
+            {
+              "before" = [
+                "<leader>"
+                "."
+              ];
+              "commands" = [ "workbench.action.tasks.build" ];
             }
             {
               "before" = [ "K" ];
