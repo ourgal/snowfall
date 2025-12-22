@@ -14,6 +14,7 @@ args.module (
             DD = "shell rip %s";
             gD = "cd ~/Downloads";
             "g." = "cd ~/.config";
+            eX = "extract_raw -p123";
           };
           rifle = [
             {
