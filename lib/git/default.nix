@@ -1,4 +1,7 @@
 { lib, ... }:
+let
+  giteeUsername = lib.strings.fileContents ./mygitee.key;
+in
 {
   git = rec {
     hostAliases = {
@@ -13,6 +16,14 @@
       soft = {
         name = "soft";
         url = "ssh://brix.local:23231/";
+      };
+      gitee = {
+        name = "gitee";
+        url = "git@gitee.com:";
+      };
+      mygitee = {
+        name = "mygitee";
+        url = "git@gitee.com:${giteeUsername}/";
       };
     };
     hostAliasesConfig = lib.attrsets.foldlAttrs (
