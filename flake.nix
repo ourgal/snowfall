@@ -170,6 +170,13 @@
       url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
   nixConfig = {
@@ -320,6 +327,7 @@
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
           lazyvim = inputs.lazyvim.homeManagerModules.default;
           stylix = inputs.stylix.homeModules.stylix;
+          zen-browser = inputs.zen-browser.homeModules.twilight;
         in
         [
           homeage
@@ -334,6 +342,7 @@
           nix-doom-emacs-unstraightened
           lazyvim
           stylix
+          zen-browser
         ];
 
       templates = {

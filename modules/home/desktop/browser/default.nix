@@ -10,6 +10,7 @@
     "chromium"
     "extensions"
     "qutebrowser"
+    "zen-browser"
     # keep-sorted end
   ];
 }
