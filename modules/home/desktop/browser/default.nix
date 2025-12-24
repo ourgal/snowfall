@@ -10,6 +10,7 @@
     "chromium"
     "extensions"
     "qutebrowser"
+    "vieb"
     "zen-browser"
     # keep-sorted end
   ];
