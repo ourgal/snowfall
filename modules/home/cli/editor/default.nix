@@ -10,6 +10,7 @@
   ];
   enable = [
     # keep-sorted start
+    "fresh"
     "helix"
     "kakoune"
     "lazyvim"
