@@ -27,6 +27,7 @@
     "geekbench"
     "glib"
     "handlr-regex"
+    "hdparm"
     "hot-resize"
     "hwinfo"
     "inxi"
