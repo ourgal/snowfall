@@ -5,8 +5,8 @@
 }:
 
 tmuxPlugins.mkTmuxPlugin rec {
-  pluginName = "tmux-tokyo-night";
-  rtpFilePath = "tmux-tokyo-night.tmux";
+  pluginName = "tmux-powerkit";
+  rtpFilePath = "tmux-powerkit.tmux";
 
   inherit (_sources' ./.) pname version src;
 

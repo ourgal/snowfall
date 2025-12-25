@@ -1478,6 +1478,6 @@ fetch.github = "securisec/chepy"
 src.github = "scherroman/mugen"
 fetch.github = "scherroman/mugen"
 
-[tmux-tokyo-night]
-src.github = "fabioluciano/tmux-tokyo-night"
-fetch.github = "fabioluciano/tmux-tokyo-night"
+[tmux-powerkit]
+src.github = "fabioluciano/tmux-powerkit"
+fetch.github = "fabioluciano/tmux-powerkit"
