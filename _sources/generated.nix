@@ -2409,10 +2409,10 @@
   };
   numara = {
     pname = "numara";
-    version = "6.5.3";
+    version = "6.6.0";
     src = fetchurl {
-      url = "https://github.com/bornova/numara-calculator/releases/download/v6.5.3/Numara-6.5.3-x86_64.AppImage";
-      sha256 = "sha256-9vfJEsCeJxKWdkT06MV6X/k9kteUVKldJPv6LtSI3ek=";
+      url = "https://github.com/bornova/numara-calculator/releases/download/v6.6.0/Numara-6.6.0-x86_64.AppImage";
+      sha256 = "sha256-6ckNdEcNRdu7xN0NPv7KFXCNKgEe+VilXxF6ltuKa2o=";
     };
   };
   org-export = {
@@ -3353,13 +3353,13 @@
   };
   tewi = {
     pname = "tewi";
-    version = "v2.1.0";
+    version = "v2.2.0";
     src = fetchFromGitHub {
       owner = "anlar";
       repo = "tewi";
-      rev = "v2.1.0";
+      rev = "v2.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-fl66nIGT0oM95COgqfZpwDZVm4zJQVnFXowEthgiezw=";
+      sha256 = "sha256-XLriHazE+YyLTEWcjDuW+3WX3NKYdsvzRmIc/Oc81oM=";
     };
   };
   textimg = {
@@ -3565,6 +3565,17 @@
     };
     date = "2025-12-11";
   };
+  tmux-powerkit = {
+    pname = "tmux-powerkit";
+    version = "v4.4.0";
+    src = fetchFromGitHub {
+      owner = "fabioluciano";
+      repo = "tmux-powerkit";
+      rev = "v4.4.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-3gBSyJS2XVKNQcafAxMqkIgy2siyIaaee4I5WOfKEP0=";
+    };
+  };
   tmux-ssh-split = {
     pname = "tmux-ssh-split";
     version = "0be7da85c69858806f59c168cdf6734c978ef51f";
@@ -3588,17 +3599,6 @@
       sha256 = "sha256-CgPn+VZmaMm8lxJlgzQRLdhwHM/XA+KSIr/qwQdf5bs=";
     };
     date = "2024-09-10";
-  };
-  tmux-tokyo-night = {
-    pname = "tmux-tokyo-night";
-    version = "v4.4.0";
-    src = fetchFromGitHub {
-      owner = "fabioluciano";
-      repo = "tmux-tokyo-night";
-      rev = "v4.4.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-3gBSyJS2XVKNQcafAxMqkIgy2siyIaaee4I5WOfKEP0=";
-    };
   };
   tmux-tome = {
     pname = "tmux-tome";

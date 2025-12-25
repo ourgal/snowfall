@@ -4312,11 +4312,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-9vfJEsCeJxKWdkT06MV6X/k9kteUVKldJPv6LtSI3ek=",
+            "sha256": "sha256-6ckNdEcNRdu7xN0NPv7KFXCNKgEe+VilXxF6ltuKa2o=",
             "type": "url",
-            "url": "https://github.com/bornova/numara-calculator/releases/download/v6.5.3/Numara-6.5.3-x86_64.AppImage"
+            "url": "https://github.com/bornova/numara-calculator/releases/download/v6.6.0/Numara-6.6.0-x86_64.AppImage"
         },
-        "version": "6.5.3"
+        "version": "6.6.0"
     },
     "org-export": {
         "cargoLock": null,
@@ -5951,12 +5951,12 @@
             "name": null,
             "owner": "anlar",
             "repo": "tewi",
-            "rev": "v2.1.0",
-            "sha256": "sha256-fl66nIGT0oM95COgqfZpwDZVm4zJQVnFXowEthgiezw=",
+            "rev": "v2.2.0",
+            "sha256": "sha256-XLriHazE+YyLTEWcjDuW+3WX3NKYdsvzRmIc/Oc81oM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.1.0"
+        "version": "v2.2.0"
     },
     "textimg": {
         "cargoLock": null,
@@ -6314,6 +6314,27 @@
         },
         "version": "3078520f3da4766ff4e69d03201392ee5faaf4e3"
     },
+    "tmux-powerkit": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "tmux-powerkit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "fabioluciano",
+            "repo": "tmux-powerkit",
+            "rev": "v4.4.0",
+            "sha256": "sha256-3gBSyJS2XVKNQcafAxMqkIgy2siyIaaee4I5WOfKEP0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.4.0"
+    },
     "tmux-ssh-split": {
         "cargoLock": null,
         "date": "2025-04-12",
@@ -6355,27 +6376,6 @@
             "type": "github"
         },
         "version": "345af747c36e94344cbb360310f1d746f1517b6a"
-    },
-    "tmux-tokyo-night": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "tmux-tokyo-night",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "fabioluciano",
-            "repo": "tmux-tokyo-night",
-            "rev": "v4.4.0",
-            "sha256": "sha256-3gBSyJS2XVKNQcafAxMqkIgy2siyIaaee4I5WOfKEP0=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v4.4.0"
     },
     "tmux-tome": {
         "cargoLock": null,
