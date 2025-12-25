@@ -1,1 +1,1 @@
-{ enable = "tmux-tokyo-night"; }
+{ enable = "tmux-powerkit"; }
