@@ -6,9 +6,10 @@
 stdenv.mkDerivation {
   inherit (_sources' ./.) pname version src;
 
+  makeFlags = [ "PREFIX=$(out)" ];
+
   preBuild = ''
-    substituteInPlace Makefile --replace-fail /usr/local/bin $out/bin
-    substituteInPlace Makefile --replace-fail 'sudo cp' 'install -D -m755'
+    substituteInPlace Makefile --replace-fail 'cp' 'install -D -m755'
   '';
 
   meta = with lib; {
