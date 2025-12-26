@@ -14,7 +14,6 @@ in
       editor.vscode = enabled;
       system = {
         batsignal = enabled;
-        kmonad = enabled;
       };
     };
     dev = enabled;

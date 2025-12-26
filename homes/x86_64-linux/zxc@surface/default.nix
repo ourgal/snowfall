@@ -13,7 +13,6 @@ in
     desktop = enabled // {
       system = {
         batsignal = enabled;
-        kmonad = enabled;
       };
     };
     dev = enabled;
