@@ -1,6 +1,7 @@
 { lib, ... }:
 let
   giteeUsername = lib.strings.fileContents ./mygitee.key;
+  bitbucketUsername = lib.strings.fileContents ./bitbucket.key;
 in
 {
   git = rec {
@@ -21,9 +22,13 @@ in
         name = "gitee";
         url = "git@gitee.com:";
       };
-      mygitee = {
-        name = "mygitee";
+      myGitee = {
+        name = "mygt";
         url = "git@gitee.com:${giteeUsername}/";
+      };
+      myBitbucket = {
+        name = "mybb";
+        url = "git@bitbucket.org:${bitbucketUsername}/";
       };
     };
     hostAliasesConfig = lib.attrsets.foldlAttrs (
