@@ -13,6 +13,8 @@ args.module (
       soft = lib.${namespace}.git.hostAliases.soft.name;
       myGithub = lib.${namespace}.git.hostAliases.myGithub.name;
       github = lib.${namespace}.git.hostAliases.github.name;
+      myGitee = lib.${namespace}.git.hostAliases.myGitee.name;
+      myBitbucket = lib.${namespace}.git.hostAliases.myBitbucket.name;
       home = "home:${config.home.homeDirectory}/workspace";
       emacs = "m6:/data/data/org.gnu.emacs/files";
       t4 = "t4:${config.home.homeDirectory}/workspace";
@@ -106,6 +108,14 @@ args.module (
             {
               name = "soft";
               git = "${soft}:snowfall";
+            }
+            {
+              name = "gitee";
+              git = "${myGitee}:snowfall";
+            }
+            {
+              name = "bitbucket";
+              git = "${myBitbucket}:snowfall";
             }
           ];
         };
