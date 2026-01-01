@@ -17,6 +17,7 @@ args.module (
             "editor.fontFamily" = lib.mkDefault "monospace";
             "editor.fontSize" = lib.mkDefault 16;
             "editor.wordWrap" = "on";
+            "editor.lineNumbers" = "relative";
             "workbench.tree.enableStickyScroll" = false;
             "workbench.tree.renderIndentGuides" = "none";
             "workbench.tree.indent" = 8;
