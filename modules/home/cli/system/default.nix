@@ -41,6 +41,7 @@
     "psmisc"
     "screenkey"
     "sequin"
+    "squashfsTools"
     "sysz"
     "toolbox"
     "topgrade"
