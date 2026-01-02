@@ -5,6 +5,7 @@
     "amfora"
     "browsh"
     "circumflex"
+    "links2"
     "w3m"
     # keep-sorted end
   ];
