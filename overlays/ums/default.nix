@@ -1,7 +1,7 @@
 { ... }:
 _final: prev: {
   ums = prev.ums.overrideAttrs (_oldAttrs: {
-    postInstall = ''
+    postFixup = ''
       rm $out/README.md
     '';
   });
