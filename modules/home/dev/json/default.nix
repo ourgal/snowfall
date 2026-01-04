@@ -5,7 +5,6 @@
     "dasel"
     "faq"
     "fastgron"
-    "fx"
     "gjo"
     "jaq"
     "jd-diff-patch"

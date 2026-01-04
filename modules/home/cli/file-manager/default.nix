@@ -2,6 +2,7 @@
   nixPkgs = [
     # keep-sorted start
     "clifm"
+    "felix-fm"
     "fm-go"
     "mc"
     "sfm"
