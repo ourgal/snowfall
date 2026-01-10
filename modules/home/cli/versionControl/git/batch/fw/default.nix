@@ -151,6 +151,10 @@ args.module (
           trusted = false;
           git = "${soft}:ansible";
         };
+        "fw/projects/default/windows_init" = toTOML {
+          trusted = false;
+          git = "${soft}:windows_init";
+        };
       };
     in
     {
