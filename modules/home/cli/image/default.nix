@@ -3,7 +3,6 @@
     # keep-sorted start
     "compress"
     "convert"
-    "crop"
     "generator"
     "metadata"
     "screenshot"

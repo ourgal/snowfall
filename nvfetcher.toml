@@ -127,10 +127,6 @@ fetch.github = "Wazzaps/fingerpaint"
 src.github = "Zeioth/fzf-kill"
 fetch.github = "Zeioth/fzf-kill"
 
-[autocrop]
-src.git = "https://github.com/mandykoh/autocrop"
-fetch.github = "mandykoh/autocrop"
-
 [av]
 src.github = "aviator-co/av"
 fetch.github = "aviator-co/av"
