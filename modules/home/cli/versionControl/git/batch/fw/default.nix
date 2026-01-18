@@ -155,6 +155,14 @@ args.module (
           trusted = false;
           git = "${soft}:windows_init";
         };
+        "fw/projects/default/fuckBookWalker" = toTOML {
+          trusted = false;
+          git = "${myGithub}:fuckBookWalker";
+        };
+        "fw/projects/default/windows_unattend" = toTOML {
+          trusted = false;
+          git = "${soft}:windows_unattend";
+        };
       };
     in
     {
