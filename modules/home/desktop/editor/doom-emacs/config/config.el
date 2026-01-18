@@ -166,5 +166,6 @@
 (load! "plugins/bing-dict")
 (load! "plugins/gt")
 (load! "plugins/engine-mode")
+(load! "plugins/org-auto-tangle")
 
 (load! "configs/waiting_packages")

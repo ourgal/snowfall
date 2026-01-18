@@ -16,8 +16,8 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "emacs-lsp-booster"
-        "parinfer-rust-emacs"
         "gnuplot"
+        "parinfer-rust-emacs"
         # keep-sorted end
       ];
       progs.doom-emacs = {
@@ -47,6 +47,7 @@ args.module (
         "nftables-mode"
         "notmuch"
         "nov"
+        "org-auto-tangle"
         "pangu-spacing"
         "perltidy"
         "rainbow-delimiters"
