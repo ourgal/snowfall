@@ -53,7 +53,6 @@ args.module (
         "redshift"
         "rofi"
         "sbsrf"
-        "sxhkd"
         "xbanish"
         "xsel"
         # keep-sorted end
