@@ -1,1 +1,1 @@
-{ enable = "vim-prosession"; }
+{ enable = "vim-workspace"; }

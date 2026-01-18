@@ -25,7 +25,6 @@ args.module (
         # keep-sorted start
         "align"
         "annotate"
-        "auto-save"
         "command"
         "comment"
         "format"
