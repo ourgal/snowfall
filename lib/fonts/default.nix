@@ -171,7 +171,9 @@ in
       extras = [ maple ];
       overrids = {
         cjk = { };
-        en = { };
+        en = {
+          mono = maple;
+        };
       };
       emoji = [
         nerdfonts
