@@ -52,6 +52,7 @@ args.module (
         "ansible"
         "even_better_toml"
         "fugitive"
+        "leojs"
         "make-task-provider"
         "material-icon-theme"
         "nix-ide"
