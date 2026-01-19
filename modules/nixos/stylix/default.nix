@@ -1,15 +1,9 @@
 args:
 let
   inherit (args) namespace lib pkgs;
-  inherit (lib.${namespace}) nixosModule enabled;
+  inherit (lib.${namespace}) nixosModule;
   value = {
-    stylix = enabled // {
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/${lib.${namespace}.stylix.theme}.yaml";
-      opacity.terminal = 0.9;
-      fonts.monospace = {
-        name = "Fira Code";
-        package = pkgs.fira-code;
-      };
+    stylix = (lib.${namespace}.stylix.defaultConfig pkgs) // {
       homeManagerIntegration.autoImport = false;
     };
   };

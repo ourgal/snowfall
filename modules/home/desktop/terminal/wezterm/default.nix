@@ -1,1 +1,1 @@
-{ progs.wezterm.extraConfig = builtins.readFile ./config.lua; }
+{ progs.wezterm.enable = true; }

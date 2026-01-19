@@ -83,7 +83,7 @@ in
           "maple-mono"
           "NF-CN"
         ];
-        name = "Maple Mono SC NF";
+        name = "Maple Mono NF CN";
       };
 
       # cjk sans
@@ -113,6 +113,19 @@ in
         name = "Lilex";
       };
 
+      getFontPkg =
+        pkgs: font:
+        let
+          pkg =
+            if isString font.pkg then
+              pkgs."${font.pkg}"
+            else if isList font.pkg then
+              lib.attrsets.getAttrFromPath font.pkg pkgs
+            else
+              throw "unknow font pkg name type";
+        in
+        pkg;
+
       getPkg =
         settings: pkgs: namespace:
         let
@@ -126,12 +139,12 @@ in
                 let
                   res =
                     if (name == "pkg") then
-                      if builtins.isString value then
+                      if isString value then
                         [ value ]
-                      else if builtins.isList value then
+                      else if isList value then
                         [ (lib.attrsets.getAttrFromPath value pkgs) ]
                       else
-                        builtins.throw "unknow font pkg name type"
+                        throw "unknow font pkg name type"
                     else if (isAttrs value) then
                       go value
                     else
@@ -183,7 +196,7 @@ in
       ];
     in
     rec {
-      inherit getName emoji;
+      inherit getName emoji getFontPkg;
       cjk = recursiveUpdate { inherit (sourceHan) sans serif mono; } overrids.cjk;
       en = recursiveUpdate {
         inherit (noto) sans serif;

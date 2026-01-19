@@ -31,6 +31,7 @@ set guioptions-=e
 set guioptions-=m
 set t_Co=256
 set guitablabel=%M\ %t
+set guifont=monospace\ 12
 endif
 
 set encoding=utf8

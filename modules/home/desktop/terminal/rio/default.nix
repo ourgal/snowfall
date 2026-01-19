@@ -8,7 +8,7 @@ args.module (
     {
       progs.rio.settings = {
         window = {
-          background-opacity = 0.5;
+          background-opacity = lib.mkDefault 0.5;
           blur = true;
         };
         fonts = {

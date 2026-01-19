@@ -88,7 +88,7 @@
 (setq shell-file-name (executable-find "bash"))
 
 ;; set font
-(setq +main-font "Fira Code")
+(setq +main-font "monospace")
 
 (setq doom-font (font-spec :family "monospace" :size 15)
       doom-variable-pitch-font (font-spec :family "sans-serif" :size 15))
