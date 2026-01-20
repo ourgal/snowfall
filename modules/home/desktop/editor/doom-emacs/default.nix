@@ -30,6 +30,7 @@ args.module (
         "adoc-mode"
         "alert"
         "annotate"
+        "beacon"
         "bing-dict"
         "chinese-conv"
         "chinese-number"
