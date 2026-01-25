@@ -24,6 +24,7 @@ args.module (
             "explorer.compactFolder" = false;
             "explorer.confirmDragAndDrop" = false;
             "explorer.confirmDelete" = false;
+            "workbench.editor.closeEmptyGroups" = false;
           };
           keybindings = [
             {
@@ -42,6 +43,11 @@ args.module (
               "command" = "selectPrevSuggestion";
               "when" =
                 "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && !inSnippetMode";
+            }
+            {
+              "key" = "ctrl+t";
+              "command" = "leojs.showOutline";
+              "when" = "leojsTreeOpened";
             }
           ];
         };
