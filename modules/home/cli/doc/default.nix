@@ -15,6 +15,7 @@
     "halp"
     "jiten"
     "man-pages"
+    "pdftk"
     "wiki-tui"
     # keep-sorted end
   ];
