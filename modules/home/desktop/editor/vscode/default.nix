@@ -56,8 +56,8 @@ args.module (
       enable = [
         # keep-sorted start
         "ansible"
+        "edamagit"
         "even_better_toml"
-        "fugitive"
         "leojs"
         "make-task-provider"
         "material-icon-theme"
