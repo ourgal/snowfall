@@ -20,6 +20,7 @@
     "bkt"
     "charm-freeze"
     "dcfldd"
+    "dos2unix"
     "e2fsprogs"
     "exfatprogs"
     "fdupes"
