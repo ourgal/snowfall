@@ -12,7 +12,7 @@ args.module (
         namespace
         ;
       inherit (builtins) foldl' replaceStrings concatStringsSep;
-      sanitizeString = str: replaceStrings [ " " "'" ":" ] [ "_" "" "_" ] str;
+      sanitizeString = str: replaceStrings [ " " "'" ":" "/" ] [ "_" "" "_" "_" ] str;
       mkFilename = artist: title: "${sanitizeString artist}-${sanitizeString title}.mp3";
       cfg = cfgHome config.${namespace} ./.;
       metadata = [
@@ -2745,6 +2745,450 @@ args.module (
           title = "花時計 ～Party's on!～ (version2016)";
           album = "瞳の奥の銀河 (形態B)";
           url = "https://music.163.com/#/song?id=39227348";
+        }
+        {
+          artist = "ChouCho";
+          title = "starlog";
+          album = "starlog";
+          url = "https://music.163.com/#/song?id=27526074";
+        }
+        {
+          artist = "豊田萌絵 & 前田玲奈 & 麻倉もも";
+          title = "Shining Ray";
+          album = "ガールフレンド（♪） キャラクターソングCD「Shining Ray」";
+          url = "https://music.163.com/#/song?id=445845467";
+        }
+        {
+          artist = "一咲美葵";
+          title = "永遠の都で[with Marcia]";
+          album = "永遠の都で";
+          url = "https://music.163.com/#/song?id=2011887276";
+        }
+        {
+          artist = "SINGERS GUILD & HOEN";
+          title = "i believe";
+          album = "i believe";
+          url = "https://music.163.com/#/song?id=35726238";
+        }
+        {
+          artist = "mican* & 綾倉盟";
+          title = "Saigetsu(砕月)";
+          album = "PLASTIK WORLD";
+          url = "https://music.163.com/#/song?id=687140";
+        }
+        {
+          artist = "詩音";
+          title = "Re:ナミダボシ feat. CLIFF EDGE";
+          album = "Truth";
+          url = "https://music.163.com/#/song?id=22645735";
+        }
+        {
+          artist = "牧野由依";
+          title = "synchronicity";
+          album = "synchronicity";
+          url = "https://music.163.com/#/song?id=610034";
+        }
+        {
+          artist = "舞花";
+          title = "Time and again";
+          album = "Flying Fantastica";
+          url = "https://music.163.com/#/song?id=526904552";
+        }
+        {
+          artist = "Riryka";
+          title = "疾るセカイと僕らのミライ";
+          album = "ミライセカイのプラネッタ オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=26209772";
+        }
+        {
+          artist = "Kicco";
+          title = "終わらない煌めきを";
+          album = "Amazing Sky";
+          url = "https://music.163.com/#/song?id=418708367";
+        }
+        {
+          artist = "sweet ARMS";
+          title = "I swear";
+          album = "I swear";
+          url = "https://music.163.com/#/song?id=1340119926";
+        }
+        {
+          artist = "Larval Stage Planning";
+          title = "Trip -innocent of D-";
+          album = "Trip -innocent of D-";
+          url = "https://music.163.com/#/song?id=775072";
+        }
+        {
+          artist = "春奈るな";
+          title = "Startear";
+          album = "Startear";
+          url = "https://music.163.com/#/song?id=28949422";
+        }
+        {
+          artist = "花たん";
+          title = "cat's dance";
+          album = "Flower";
+          url = "https://music.163.com/#/song?id=27548278";
+        }
+        {
+          artist = "ICHIKO";
+          title = "I SAY YES";
+          album = "TVアニメ ゼロの使い魔~双月の骑士~ OPテーマ“I SAY YES”";
+          url = "https://music.163.com/#/song?id=583624";
+        }
+        {
+          artist = "fripSide";
+          title = "Last Fortune - Short Ver -";
+          album = "ティンクル☆くるせいだーす -Passion Star Stream- 豪華版特典 PSS&GoGo!&SB オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=4919240";
+        }
+        {
+          artist = "森永真由美";
+          title = "温度差";
+          album = "想いが歴史に変わる時";
+          url = "https://music.163.com/#/song?id=29897825";
+        }
+        {
+          artist = "ChouCho";
+          title = "Asterism";
+          album = "Asterism";
+          url = "https://music.163.com/#/song?id=422132770";
+        }
+        {
+          artist = "米倉千尋";
+          title = "InFINITE Line";
+          album = "9-nine-Songbook";
+          url = "https://music.163.com/#/song?id=1940024246";
+        }
+        {
+          artist = "中恵光城 & 霜月はるか";
+          title = "mirage";
+          album = "Another Flower II";
+          url = "https://music.163.com/#/song?id=31680144";
+        }
+        {
+          artist = "冬乃桜";
+          title = "TSUBAKi IRO KOiUTA";
+          album = "絆きらめく恋いろは -椿恋歌- 響宴ノ舞";
+          url = "https://music.163.com/#/song?id=1396497627";
+        }
+        {
+          artist = "May'n";
+          title = "Scarlet Ballet";
+          album = "Scarlet Ballet";
+          url = "https://music.163.com/#/song?id=609891";
+        }
+        {
+          artist = "eufonius";
+          title = "リフレクティア";
+          album = "TVアニメ true tears 5周年記念CD-BOX";
+          url = "https://music.163.com/#/song?id=26475785";
+        }
+        {
+          artist = "ClariS";
+          title = "カラフル";
+          album = "カラフル";
+          url = "https://music.163.com/#/song?id=27901526";
+        }
+        {
+          artist = "秣本瑳羅";
+          title = "いと儚き燿の如く";
+          album = "metamorphoXIs";
+          url = "https://music.163.com/#/song?id=26099480";
+        }
+        {
+          artist = "戸松遥";
+          title = "courage";
+          album = "courage";
+          url = "https://music.163.com/#/song?id=29718090";
+        }
+        # {
+        #   artist = "ave;new & 佐倉紗織";
+        #   title = "Eternal Wish";
+        #   album = "GWAVE2005 2nd Impact";
+        #   url = "https://music.163.com/#/song?id=739914";
+        # }
+        {
+          artist = "ClariS";
+          title = "CLICK";
+          album = "CLICK(期間生産限定アニメ盤)";
+          url = "https://music.163.com/#/song?id=28234361";
+        }
+        {
+          artist = "fripSide";
+          title = "floral summer";
+          album = "フローラル・フローラブ 予約特典スペシャルサウンドトラック";
+          url = "https://music.163.com/#/song?id=432698896";
+        }
+        {
+          artist = "MYNAME";
+          title = "Baby I'm Sorry (Japanese ver)";
+          album = "Shirayuki (WEB盤)";
+          url = "https://music.163.com/#/song?id=1999750254";
+        }
+        {
+          artist = "Halozy";
+          title = "源流懐古 (feat. ほたる)";
+          album = "Cosmic Armonica";
+          url = "https://music.163.com/#/song?id=22808859";
+        }
+        {
+          artist = "KOTOKO";
+          title = "Reboot oN/↓0";
+          album = "バルドスカイ ゼロ2 BALDRSKY ZERO2 主題歌マキシシングルCD";
+          url = "https://music.163.com/#/song?id=28432316";
+        }
+        {
+          artist = "KG & 菅原纱由理（THE SxPLAY）";
+          title = "谁よりも";
+          album = "谁よりも duet with 菅原纱由理";
+          url = "https://music.163.com/#/song?id=456499";
+        }
+        {
+          artist = "fripSide";
+          title = "glow in the darkness";
+          album = "南十字星恋歌 -Southern Cross Love Song ★- ボーカルコレクション";
+          url = "https://music.163.com/#/song?id=29450460";
+        }
+        {
+          artist = "jyA-Me & CLIFF EDGE";
+          title = "White Sweet Love";
+          album = "White Sweet Love";
+          url = "https://music.163.com/#/song?id=26096581";
+        }
+        {
+          artist = "森永真由美";
+          title = "造花であろうとした者";
+          album = "造花であろうとした者";
+          url = "https://music.163.com/#/song?id=425298906";
+        }
+        {
+          artist = "やなぎなぎ";
+          title = "恋文";
+          album = "Rewrite Original SoundTrack";
+          url = "https://music.163.com/#/song?id=26131698";
+        }
+        {
+          artist = "発熱巫女~ず";
+          title = "Pages";
+          album = "Coda";
+          url = "https://music.163.com/#/song?id=744960";
+        }
+        {
+          artist = "中島愛";
+          title = "星間飛行";
+          album = "キャラクターソング・コレクション FULL OF LOVE!!";
+          url = "https://music.163.com/#/song?id=1488050828";
+        }
+        {
+          artist = "May'n";
+          title = "真空のダイアモンド クレバス";
+          album = "マクロスF(フロンティア) O.S.T.2 娘トラ☆";
+          url = "https://music.163.com/#/song?id=589170";
+        }
+        {
+          artist = "Juliet";
+          title = "モトカレ";
+          album = "モトカレ";
+          url = "https://music.163.com/song?id=26103514";
+        }
+        {
+          artist = "ナノ & MY FIRST STORY";
+          title = "SAVIOR OF SONG";
+          album = "SAVIOR OF SONG (蒼き鋼のアルペジオVer.)";
+          url = "https://music.163.com/#/song?id=27901866";
+        }
+        {
+          artist = "花耶";
+          title = "Reincarnation";
+          album = "Reincarnation";
+          url = "https://music.163.com/#/song?id=2747205657";
+        }
+        {
+          artist = "Yonder Voice";
+          title = "Shrine Maiden – 永遠の巫女";
+          album = "Shrine Maiden Promotion Disc";
+          url = "https://music.163.com/#/song?id=29724821";
+        }
+        {
+          artist = "めらみぽっぷ";
+          title = "どうして…";
+          album = "宴";
+          url = "https://music.163.com/#/song?id=850775";
+        }
+        {
+          artist = "ALTIMA & KOTOKO";
+          title = "どうして…";
+          album = "PLASMIC FIRE(アニメ盤)";
+          url = "https://music.163.com/#/song?id=420500282";
+        }
+        {
+          artist = "d0tc0mmie & GUMI";
+          title = "I Can't Wait (feat. GUMI)";
+          album = "I Can't Wait (feat. GUMI)";
+          url = "https://music.163.com/#/song?id=3326907142";
+        }
+        {
+          artist = "RINZO & 茉ひる";
+          title = "デイドリーム (Daydream)";
+          album = "デイドリーム (Daydream)";
+          url = "https://music.163.com/#/song?id=2737352162";
+        }
+        {
+          artist = "鲷鱼";
+          title = "明日への花束（Blossoming ver.）";
+          album = "明日への花束（Blossoming ver.）";
+          url = "https://music.163.com/#/song?id=2751512490";
+        }
+        {
+          artist = "EastNewSound";
+          title = "Scarlet Elegy";
+          album = "Secret Color";
+          url = "https://music.163.com/#/song?id=2747135311";
+        }
+        {
+          artist = "御莉姫 & 廉";
+          title = "Masquerade Kill";
+          album = "Masquerade Kill";
+          url = "https://music.163.com/#/song?id=3312146708";
+        }
+        {
+          artist = "aki";
+          title = "壊されたお守り (feat. aki/隣人(ZYTOKINE))";
+          album = "風 -KAZE-";
+          url = "https://music.163.com/#/song?id=834954";
+        }
+        {
+          artist = "MIMI & 重音テト";
+          title = "トリックハート (feat. 重音テト)";
+          album = "トリックハート (feat. 重音テト)";
+          url = "https://music.163.com/#/song?id=3335544260";
+        }
+        {
+          artist = "少女病 & 中恵光城";
+          title = "黒紫のオーンブレ";
+          album = "天巡メルクマール";
+          url = "https://music.163.com/#/song?id=420154083";
+        }
+        {
+          artist = "solfa & 夢乃ゆき";
+          title = "Ever and… (feat. 夢乃ゆき)";
+          album = "Ever and…";
+          url = "https://music.163.com/#/song?id=2757955613";
+        }
+        {
+          artist = "Kicco";
+          title = "Amazing Sky";
+          album = "Amazing Sky";
+          url = "https://music.163.com/#/song?id=418708362";
+        }
+        {
+          artist = "茶太";
+          title = "min~眠~";
+          album = "Sally";
+          url = "https://music.163.com/#/song?id=835947";
+        }
+        {
+          artist = "栗林みな実 & 橋本みゆき & yozuca* & Faylan & rino & 美郷あき";
+          title = "すーぱー☆あふぇくしょん";
+          album = "すーぱー☆あふぇくしょん";
+          url = "https://music.163.com/#/song?id=27623632";
+        }
+        {
+          artist = "EricJC";
+          title = "東京を遊ぶ";
+          album = "東京を遊ぶ";
+          url = "https://music.163.com/#/song?id=3316725626";
+        }
+        {
+          artist = "Falcom Sound Team J.D.K.";
+          title = "名もなき悪夢の果て";
+          album = "英雄伝説 黎の軌跡 オリジナルサウンドトラック";
+          url = "https://music.163.com/#/song?id=1927176367";
+        }
+        {
+          artist = "平野綾";
+          title = "God knows...";
+          album = "TVアニメ『涼宮ハルヒの憂鬱』 Imaginary ENOZ featuring HARUHI";
+          url = "https://music.163.com/#/song?id=27876224";
+        }
+        {
+          artist = "早見沙織 & 松井恵理子 & 潘めぐみ";
+          title = "十六夜ゐ雪洞唄";
+          album = "十六夜ゐ雪洞唄";
+          url = "https://music.163.com/#/song?id=441116312";
+        }
+        {
+          artist = "Stack";
+          title = "Dreamer";
+          album = "世界の選択 - Freedom Paradise-";
+          url = "https://music.163.com/#/song?id=30870396";
+        }
+        {
+          artist = "May'n & 中島愛";
+          title = "タブレット";
+          album = "マクロスF cosmic cuune";
+          url = "https://music.163.com/#/song?id=4931484";
+        }
+        {
+          artist = "blue drops";
+          title = "Ring My Bell (TVサイズ)";
+          album = "そらのおとしもの ～天使がくれた劇伴集～";
+          url = "https://music.163.com/#/song?id=4941315";
+        }
+        {
+          artist = "KEiNA";
+          title = "Glorias war";
+          album = "Glorias war";
+          url = "https://music.163.com/#/song?id=774208";
+        }
+        {
+          artist = "葉月ゆら";
+          title = "白羽の乙女と滅びの村";
+          album = "La Fata";
+          url = "https://music.163.com/#/song?id=3327188287";
+        }
+        {
+          artist = "橋本みゆき";
+          title = "Star☆drops";
+          album = "Star☆drops";
+          url = "https://music.163.com/#/song?id=579207";
+        }
+        {
+          artist = "M・A・O & 伊藤美来 & 立花理香";
+          title = "Lost Princess";
+          album = "プリンセスコネクト! Re:Dive PRICONNE CHARACTER SONG 01";
+          url = "https://music.163.com/#/song?id=1309903594";
+        }
+        {
+          artist = "ワルキューレ";
+          title = "ALIVE～祈りの唄～";
+          album = "「劇場版マクロスΔ 絶対LIVE!!!!!!」ボーカルソング集";
+          url = "https://music.163.com/#/song?id=1887059984";
+        }
+        {
+          artist = "冬乃桜";
+          title = "無上ノ刃";
+          album = "刹那にかける恋はなび Soundtrack: KOI-HANABI";
+          url = "https://music.163.com/#/song?id=2621227728";
+        }
+        {
+          artist = "fripSide";
+          title = "prismatic fate";
+          album = "fripSide PC game compilation vol. 1";
+          url = "https://music.163.com/#/song?id=22660769";
+        }
+        {
+          artist = "向日葵";
+          title = "AIRI-愛離-";
+          album = "AIRI -愛離-、炎路夜行";
+          url = "https://music.163.com/#/song?id=30039378";
+        }
+        {
+          artist = "CHIHIRO";
+          title = "4℃";
+          album = "4℃";
+          url = "https://music.163.com/#/song?id=563279";
         }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
