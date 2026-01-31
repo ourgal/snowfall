@@ -42,6 +42,7 @@
     "psmisc"
     "screenkey"
     "sequin"
+    "smartmontools"
     "squashfsTools"
     "sysz"
     "toolbox"
