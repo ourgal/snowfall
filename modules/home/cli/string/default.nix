@@ -16,7 +16,6 @@
   nixPkgs = [
     # keep-sorted start
     "chars"
-    "gotemplate"
     "mustache-go"
     "pyp"
     "sttr"

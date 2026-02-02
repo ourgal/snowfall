@@ -5,5 +5,6 @@
     "templify"
     # keep-sorted end
   ];
+  nixPkgs = "gotemplate";
   enable = "cookiecutter";
 }
