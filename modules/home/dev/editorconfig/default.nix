@@ -1,4 +1,5 @@
 {
+  nixPkgs = "editorconfig-core-c";
   value = {
     editorconfig = {
       enable = true;
