@@ -1,4 +1,1 @@
-{
-  nixX86Pkgs = "jamesdsp";
-  enable = "easyeffects";
-}
+{ nixX86Pkgs = "jamesdsp"; }
