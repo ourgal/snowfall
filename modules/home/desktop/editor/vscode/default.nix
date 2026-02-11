@@ -44,11 +44,6 @@ args.module (
               "when" =
                 "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && !inSnippetMode";
             }
-            {
-              "key" = "ctrl+t";
-              "command" = "leojs.showOutline";
-              "when" = "leojsTreeOpened";
-            }
           ];
         };
         package = pkgs.vscodium;
