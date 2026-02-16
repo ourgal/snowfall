@@ -288,6 +288,7 @@ args.module (
                 language-servers = [
                   "scls"
                   "taplo"
+                  "tombi"
                 ];
                 formatter = {
                   command = "taplo";

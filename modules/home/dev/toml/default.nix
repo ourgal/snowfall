@@ -6,6 +6,7 @@
     "otree"
     "remarshal"
     "taplo"
+    "tombi"
     "tomlq"
     # keep-sorted end
   ];
