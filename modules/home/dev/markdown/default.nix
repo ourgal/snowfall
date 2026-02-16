@@ -17,6 +17,7 @@
     "cbfmt"
     "doctoc"
     "lowdown"
+    "markdown-oxide"
     "marksman"
     "md-tangle"
     "mdbook"
