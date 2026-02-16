@@ -28,6 +28,7 @@
     "rq"
     "spruce"
     "visidata"
+    "vscode-langservers-extracted"
     "yj"
     "yq-go"
     # keep-sorted end
@@ -36,7 +37,6 @@
     # keep-sorted start
     "fixjson"
     "prettier"
-    "vscode-json-languageserver"
     # keep-sorted end
   ];
   myPkgs = "bafi";
