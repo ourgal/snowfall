@@ -26,6 +26,7 @@ args.module (
         "libnotify"
         "polkit"
         "qtscrcpy"
+        "remmina"
         "ripdrag"
         "scrcpy"
         "swww"
