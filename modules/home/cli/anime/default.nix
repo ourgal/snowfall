@@ -3,6 +3,7 @@
     # keep-sorted start
     "ani-cli"
     "ani-skip"
+    "filebot"
     # keep-sorted end
   ];
   nixX86Pkgs = [
