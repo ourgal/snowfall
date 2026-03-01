@@ -11,6 +11,7 @@ args.module (
         "inori"
         "mmtc"
         "mpc"
+        "ncmpc"
         "pms"
         "rmpc"
         "vimpc"
