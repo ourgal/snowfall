@@ -7,7 +7,7 @@
 buildGoModule (
   lib.${namespace}.mkGoSource (_sources' ./.)
   // {
-    vendorHash = "sha256-WS1DZqExyXYRs+4PsXzgMa+wUx1L+Y8KEaK7P5JVMOk=";
+    vendorHash = "sha256-R1qLdAECY6t8XI6WdyXubbKowmbx7gBp9JlRogOHDeo=";
 
     ldflags = [
       "-s"
