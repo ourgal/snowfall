@@ -494,11 +494,6 @@ fetch.github = "DavidPal/whitespace-format"
 src.github = "Banh-Canh/ytui"
 fetch.github = "Banh-Canh/ytui"
 
-[hayase]
-src.github_tag = "hayase-app/docs"
-src.prefix = "v"
-fetch.url = "https://github.com/hayase-app/docs/releases/download/v$ver/linux-hayase-$ver-linux.AppImage"
-
 [numara]
 src.github = "bornova/numara-calculator"
 src.prefix = "v"
