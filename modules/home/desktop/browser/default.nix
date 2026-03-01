@@ -5,6 +5,7 @@
     "firefox"
     # keep-sorted end
   ];
+  myPkgs = "helix-ghost";
   enable = [
     # keep-sorted start
     "chromium"

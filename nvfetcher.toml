@@ -1477,3 +1477,7 @@ fetch.github = "scherroman/mugen"
 [tmux-powerkit]
 src.github = "fabioluciano/tmux-powerkit"
 fetch.github = "fabioluciano/tmux-powerkit"
+
+[helix-ghost]
+src.github = "rahji/helix-ghost"
+fetch.github = "rahji/helix-ghost"
