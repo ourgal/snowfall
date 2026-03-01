@@ -1448,7 +1448,7 @@ src.github = "dtonon/ch"
 fetch.github = "dtonon/ch"
 
 [natmap]
-src.github = "heiher/natmap"
+src.git = "https://github.com/heiher/natmap"
 fetch.github = "heiher/natmap"
 git.fetchSubmodules = true
 git.deepClone = true
