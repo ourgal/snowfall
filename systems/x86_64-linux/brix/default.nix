@@ -26,6 +26,10 @@ in
     sops-nix = enabled // {
       ssh = enabled;
     };
+    firewall = {
+      aria2 = enabled;
+      transmission = enabled;
+    };
     postgres-update = disabled;
     docker =
       let
@@ -45,6 +49,7 @@ in
   // enabledList [
     # keep-sorted start
     "anki-sync-server"
+    "aria2"
     "ariang"
     "avahi"
     "bpftune"

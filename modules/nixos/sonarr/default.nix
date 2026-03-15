@@ -1,6 +1,11 @@
 args:
 let
-  inherit (args) namespace lib _name;
+  inherit (args)
+    namespace
+    lib
+    _name
+    config
+    ;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -23,7 +28,10 @@ let
       borgmatic.settings.source_directories = [ "/var/lib/${name}/.config/NzbDrone/Backups" ];
     };
     systemd.services.sonarr.serviceConfig = {
-      SupplementaryGroups = [ "transmission" ];
+      SupplementaryGroups =
+        [ ]
+        ++ lib.optional config.${namespace}.transmission.enable "transmission"
+        ++ lib.optional config.${namespace}.aria2.enable "aria2";
     };
     systemd.tmpfiles.rules = [ "d /mnt/anime 0770 ${name} ${name} - -" ];
     ${namespace} = mkFireholRule {
