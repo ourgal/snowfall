@@ -31,6 +31,7 @@
     "license-cli"
     "ls-lint"
     "mise"
+    "nvchecker"
     "pixi"
     "process-compose"
     "reuse"
