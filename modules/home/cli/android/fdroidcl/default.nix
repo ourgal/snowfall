@@ -87,6 +87,7 @@ args.module (
         "org.tasks"
       ];
       keyboard = [ "inc.flide.vi8" ];
+      qr = [ "com.secuso.privacyFriendlyCodeScanner" ];
     in
     {
       myPkgs = "fdroidcl";
@@ -142,12 +143,14 @@ args.module (
                 ++ termux
                 ++ weather
                 ++ todo
-                ++ keyboard;
+                ++ keyboard
+                ++ qr;
               inherit repos;
             }
             {
               id = "sub-phone";
-              apps = phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo ++ keyboard;
+              apps =
+                phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo ++ keyboard ++ qr;
               inherit repos;
             }
             {
@@ -169,7 +172,8 @@ args.module (
                 ++ git
                 ++ editor
                 ++ keyboard
-                ++ nix;
+                ++ nix
+                ++ qr;
               inherit repos;
             }
             {
