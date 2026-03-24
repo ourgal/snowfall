@@ -4,6 +4,7 @@
     "binsider"
     "fq"
     "hexyl"
+    "vbindiff"
     # keep-sorted end
   ];
 }
