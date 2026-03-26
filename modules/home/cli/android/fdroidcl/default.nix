@@ -38,10 +38,10 @@ args.module (
         "com.gianlu.aria2app" # Aria2App, An advanced download manager and aria2 client for your pocket.
       ];
       sync = [
-        "com.github.catfriend1.syncthingandroid" # Syncthing-Fork, Wrapper for Syncthing - Open and decentralized file synchronization
+        "com.github.catfriend1.syncthingfork" # Syncthing-Fork, Wrapper for Syncthing - Open and decentralized file synchronization
       ];
       chat = [
-        "org.telegram.messenger" # Telegram FOSS, Telegram is a messaging app with a focus on speed and security.
+        "org.forkgram.messenger" # Forkgram is a fork of the official Telegram for Android application.
         "chat.simplex.app" # SimpleX Chat, SimpleX Chat - e2e encrypted messenger without any user IDs - private by design!
       ];
       manga = [
