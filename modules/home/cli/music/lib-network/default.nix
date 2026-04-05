@@ -12,7 +12,7 @@ args.module (
         namespace
         ;
       inherit (builtins) foldl' replaceStrings concatStringsSep;
-      sanitizeString = str: replaceStrings [ " " "'" ":" "/" ] [ "_" "" "_" "_" ] str;
+      sanitizeString = str: replaceStrings [ " " "'" ":" "/" "*" "?" ] [ "_" "" "_" "_" "_" "_" ] str;
       mkFilename = artist: title: "${sanitizeString artist}-${sanitizeString title}.mp3";
       cfg = cfgHome config.${namespace} ./.;
       metadata = [
@@ -3189,6 +3189,48 @@ args.module (
           title = "4℃";
           album = "4℃";
           url = "https://music.163.com/#/song?id=563279";
+        }
+        {
+          artist = "Flower";
+          title = "とても深いグリーン";
+          album = "F";
+          url = "https://www.bilibili.com/video/BV1EyHYeBEFr";
+        }
+        {
+          artist = "一咲美葵";
+          title = "赤く青い炎";
+          album = "鮮やかな記憶の中で";
+          url = "https://music.163.com/#/song?id=1832167926";
+        }
+        {
+          artist = "YOASOBI";
+          title = "Watch me!";
+          album = "Watch me!";
+          url = "https://www.bilibili.com/video/BV1m1JEzAEbd/";
+        }
+        {
+          artist = "伊東健人";
+          title = "My Factor";
+          album = "咲音";
+          url = "https://www.bilibili.com/video/BV1c64y1P7aH";
+        }
+        {
+          artist = "フィロソフィーのダンス";
+          title = "迷っちゃうわ";
+          album = "迷っちゃうわ";
+          url = "https://www.bilibili.com/video/BV1iwkUBeEqL/";
+        }
+        {
+          artist = "花たん";
+          title = "蕚 – Utena -";
+          album = "DiGiTAL FLOWER BEST";
+          url = "https://music.163.com/#/song?id=501133607";
+        }
+        {
+          artist = "Soala";
+          title = "声の軌跡";
+          album = "声の軌跡";
+          url = "https://music.163.com/#/song?id=3343888367";
         }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
