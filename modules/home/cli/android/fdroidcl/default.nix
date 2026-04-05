@@ -25,6 +25,7 @@ args.module (
       store = [
         "com.machiav3lli.fdroid" # Neo Store, A modern feature-rich F-Droid client
         "org.fdroid.fdroid" # F-Droid, The app store that respects freedom and privacy
+        "zed.rainxch.githubstore" # App store for GitHub releases - discover and install apps with one click
       ];
       video = [
         "org.videolan.vlc" # VLC, The best video and music player. Fast and “just works”, plays any file
@@ -144,13 +145,24 @@ args.module (
                 ++ weather
                 ++ todo
                 ++ keyboard
-                ++ qr;
+                ++ qr
+                ++ store;
               inherit repos;
             }
             {
               id = "sub-phone";
               apps =
-                phone ++ battery ++ sync ++ integratetion ++ IME ++ weather ++ termux ++ todo ++ keyboard ++ qr;
+                phone
+                ++ battery
+                ++ sync
+                ++ integratetion
+                ++ IME
+                ++ weather
+                ++ termux
+                ++ todo
+                ++ keyboard
+                ++ qr
+                ++ store;
               inherit repos;
             }
             {
