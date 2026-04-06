@@ -1,1 +1,1 @@
-{ nixPkgs = p: [ p.nur.repos.Vortriz.fresh ]; }
+{ nixPkgs = p: [ p.nur.repos.nakido.fresh ]; }

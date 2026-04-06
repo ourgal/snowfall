@@ -45,7 +45,6 @@ let
             pkgs.luaPackages.vicious
             pkgs.${namespace}.bling
           ];
-          package = pkgs.awesome-git;
         };
         xmonad = disabled;
         # qtile = enabled;

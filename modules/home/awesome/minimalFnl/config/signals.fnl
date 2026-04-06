@@ -9,7 +9,3 @@
 
 (signal "mouse::enter" #($1:emit_signal "request::activate" :mouse_enter
                                         {:raise false}))
-
-(signal :focus #(set $1.border_color beautiful.border_focus))
-
-(signal :unfocus #(set $1.border_color beautiful.border_normal))

@@ -13,7 +13,6 @@
     "fresh"
     "helix"
     "kakoune"
-    "lazyvim"
     "vim"
     # keep-sorted end
   ];

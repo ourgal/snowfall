@@ -1,1 +1,6 @@
-{ nixPkgs = "eartag"; }
+{
+  nixPkgs = [
+    "voicevox"
+    "eartag"
+  ];
+}

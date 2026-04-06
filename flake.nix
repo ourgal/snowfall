@@ -49,7 +49,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin = {
-      url = "github:catppuccin/nix/release-25.05";
+      url = "github:catppuccin/nix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
@@ -148,10 +148,6 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim = {
-      url = "github:pfassina/lazyvim-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixos-generators = {
       url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -237,7 +233,7 @@
               "aspnetcore-runtime-6.0.36"
             ];
             beekeeper = [ "beekeeper-studio-5.1.5" ];
-            ventoy = [ "ventoy-1.1.07" ];
+            ventoy = [ "ventoy-1.1.10" ];
             jlink = [ "segger-jlink-qt4-874" ];
             qtwebengine = [ "qtwebengine-5.15.19" ];
             beekeeper-studio = [ "beekeeper-studio-5.3.4" ];
@@ -325,7 +321,6 @@
           nyaa = inputs.nyaa.homeManagerModule;
           nvchad4nix = inputs.nvchad4nix.homeManagerModule;
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
-          lazyvim = inputs.lazyvim.homeManagerModules.default;
           stylix = inputs.stylix.homeModules.stylix;
           zen-browser = inputs.zen-browser.homeModules.twilight;
         in
@@ -340,7 +335,6 @@
           nyaa
           nvchad4nix
           nix-doom-emacs-unstraightened
-          lazyvim
           stylix
           zen-browser
         ];
