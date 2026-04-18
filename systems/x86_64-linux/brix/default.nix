@@ -39,7 +39,8 @@ in
       enabled
       // {
         subconverter = enabled;
-        openlist = enabled;
+        alist = enabled;
+        rsshub = enabled;
         qd = enabled // {
           ports = 8923;
           inherit nfs;
@@ -49,7 +50,6 @@ in
   }
   // enabledList [
     # keep-sorted start
-    "anki-sync-server"
     "aria2"
     "ariang"
     "avahi"
@@ -59,19 +59,13 @@ in
     "dufs"
     "flaresolverr"
     "harmonia"
-    "homebox"
     "jackett"
     "jellyfin"
     "logrotate"
-    "memos"
-    "metacubexd"
     "miniflux"
-    "navidrome"
     "nfs"
     "nh"
-    "pairdrop"
     "postgresqlBackup"
-    "rustypaste"
     "scrutiny"
     "soft-serve"
     "sonarr"
@@ -80,7 +74,6 @@ in
     "tuptime"
     "vaultwarden"
     "vsftpd"
-    "yacd"
     "zashboard"
     # keep-sorted end
   ];

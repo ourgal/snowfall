@@ -20,6 +20,9 @@ let
       inherit cfg;
       inherit (lib.${namespace}.sources."docker-${name}") src;
       containerPorts = ports;
+      env = {
+        YOUTUBE_KEY = lib.strings.fileContents ./youtube.key;
+      };
     })
     // {
       ${namespace} = mkFireholRule {

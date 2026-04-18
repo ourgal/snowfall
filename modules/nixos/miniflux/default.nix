@@ -23,6 +23,7 @@ let
       miniflux = enabled // {
         config = {
           POLLING_PARSING_ERROR_LIMIT = 0;
+          FETCHER_ALLOW_PRIVATE_NETWORKS = 1;
           LISTEN_ADDR = "localhost:${toString port}";
         };
         adminCredentialsFile = config.sops.secrets."${name}/adminCredentialsFile".path;

@@ -33,6 +33,7 @@ let
     "pyload"
     "qd"
     "restic-server"
+    "rsshub"
     "rustypaste"
     "scrutiny"
     "searx"
