@@ -5427,6 +5427,16 @@ with sqlite3.connect("waiting.db") as conn:
                 Waiting_Status.WAITING,
                 Types.PACKAGE,
             ],
+            [
+                "mdterm",
+                "A terminal-based Markdown browser.",
+                "https://github.com/bahdotsh/mdterm",
+                Categories.DOC,
+                "04/19/2026",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
         ],
         columns=[
             "name",
