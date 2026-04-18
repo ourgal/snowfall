@@ -3232,6 +3232,42 @@ args.module (
           album = "声の軌跡";
           url = "https://music.163.com/#/song?id=3343888367";
         }
+        {
+          artist = "VILLSHANA & 茉ひる";
+          title = "Time";
+          album = "2";
+          url = "https://music.163.com/#/song?id=2672467882";
+        }
+        {
+          artist = "祈Inory";
+          title = "ViR to ReaL -Connected-";
+          album = "ViR to ReaL";
+          url = "https://music.163.com/#/song?id=422429078";
+        }
+        {
+          artist = "上田麗奈";
+          title = "リリィ";
+          album = "リリィ";
+          url = "https://www.bilibili.com/video/BV1waHTzcEQQ";
+        }
+        {
+          artist = "AYUMI KAWAKITA";
+          title = "E☆Right";
+          album = "WINTER LOVE";
+          url = "https://music.163.com/#/song?id=29775134";
+        }
+        {
+          artist = "京";
+          title = "終電は新月の駅を通り過ぎる";
+          album = "Ontos Vol.1《終電は新月の駅を通り過ぎる》";
+          url = "https://music.163.com/#/song?id=2751036411";
+        }
+        {
+          artist = "真崎ゆか";
+          title = "あなたがいるから";
+          album = "Tears of Heart";
+          url = "https://music.163.com/#/song?id=22787488";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
