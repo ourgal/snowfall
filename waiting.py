@@ -5437,6 +5437,16 @@ with sqlite3.connect("waiting.db") as conn:
                 Waiting_Status.WAITING,
                 Types.PACKAGE,
             ],
+            [
+                "giter8",
+                "A command line tool to apply templates defined on GitHub",
+                "https://www.foundweekends.org/giter8/",
+                Categories.DEV,
+                "04/19/2026",
+                None,
+                Waiting_Status.WAITING,
+                Types.PACKAGE,
+            ],
         ],
         columns=[
             "name",
