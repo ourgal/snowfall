@@ -63,6 +63,7 @@ in
     "opentabletdriver"
     "pcscd"
     "power"
+    "sane"
     "scrutiny"
     "syncthing"
     "temp-hosts"
