@@ -1,5 +1,6 @@
 {
   myPkgs = "v";
+  X86Pkgs = "fresh";
   nixPkgs = [
     # keep-sorted start
     "micro"
@@ -10,7 +11,6 @@
   ];
   enable = [
     # keep-sorted start
-    "fresh"
     "helix"
     "kakoune"
     "vim"
