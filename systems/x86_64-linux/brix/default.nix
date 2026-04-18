@@ -28,6 +28,7 @@ in
     };
     firewall = {
       aria2 = enabled;
+      fossil = enabled;
       transmission = enabled;
     };
     postgres-update = disabled;
