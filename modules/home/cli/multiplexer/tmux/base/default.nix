@@ -123,6 +123,12 @@ args.module (
         #     popup -d '#{pane_current_path}' -xC -yC -w 80% -h 80% -E "tmux attach -t popup || tmux new -s popup"
         # }
 
+        # zellij like navigation
+        bind -n M-j if -F "#{pane_at_bottom}" "switch-client -n" "select-pane -D"
+        bind -n M-k if -F "#{pane_at_top}" "switch-client -p" "select-pane -U"
+        bind -n M-l if -F "#{pane_at_right}" "next-window" "select-pane -R"
+        bind -n M-h if -F "#{pane_at_left}" "previous-window" "select-pane -L"
+
         # ================================================
         # ===     Copy mode, scroll and clipboard      ===
         # ================================================

@@ -433,10 +433,6 @@ fetch.github = "T1erno/tmux-auto-renumber-session"
 src.git = "https://github.com/ourgal/tmux-continuum"
 fetch.github = "ourgal/tmux-continuum"
 
-[tmux-edgelord]
-src.git = "https://github.com/ourgal/tmux-edgelord"
-fetch.github = "ourgal/tmux-edgelord"
-
 [tmux-fzf-url]
 src.git = "https://github.com/wfxr/tmux-fzf-url"
 fetch.github = "wfxr/tmux-fzf-url"

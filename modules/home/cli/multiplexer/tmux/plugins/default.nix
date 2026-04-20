@@ -3,7 +3,6 @@
     # keep-sorted start
     "auto-renumber-session"
     "copycat"
-    "edgelord"
     "extrakto"
     "fpp"
     "fuzzback"
