@@ -21,6 +21,7 @@ let
     "livecd-ft2000"
     "q4ospc"
     "office1"
+    "work2"
   ];
   laptops = [
     "air"
@@ -33,12 +34,14 @@ let
     "surface"
     "office2043"
     "q4ospc"
+    "work2"
   ];
   work = [
     "office2043"
     "office-laptop3"
     "q4ospc"
     "office1"
+    "work2"
   ];
   windows = [ "nuc" ];
   non-NixOS = [
