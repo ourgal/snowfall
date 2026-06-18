@@ -3268,6 +3268,60 @@ args.module (
           album = "Tears of Heart";
           url = "https://music.163.com/#/song?id=22787488";
         }
+        {
+          artist = "BRIGHT";
+          title = "lonely tears";
+          album = "BRIGHT";
+          url = "https://music.163.com/#/song?id=22647930";
+        }
+        {
+          artist = "Koshidar";
+          title = "永遠の軌跡";
+          album = "永遠の軌跡";
+          url = "https://music.163.com/#/song?id=3342735561";
+        }
+        {
+          artist = "朱彦安 & 夏野Natsuno";
+          title = "少女進行日記";
+          album = "少女進行日記";
+          url = "https://music.163.com/#/song?id=1985510682";
+        }
+        {
+          artist = "Da-iCE";
+          title = "切なくて";
+          album = "I'll be back";
+          url = "https://music.163.com/#/song?id=27629679";
+        }
+        {
+          artist = "幽閉サテライト";
+          title = "君と不揃いなカンタータを";
+          album = "君と不揃いなカンタータをvol.1";
+          url = "https://music.163.com/#/song?id=3332664621";
+        }
+        {
+          artist = "井口裕香";
+          title = "加賀岬";
+          album = "艦娘想歌【参】加賀岬";
+          url = "https://music.163.com/#/song?id=408277114";
+        }
+        {
+          artist = "香月ゆか";
+          title = "Every moment with you";
+          album = "東方弦奏歌-MESSIAH-";
+          url = "https://music.163.com/#/song?id=495848447";
+        }
+        {
+          artist = "CHIHIRO";
+          title = "Ex-Boyfriend";
+          album = "RESET～また、恋したくなるように～";
+          url = "https://music.163.com/#/song?id=29378998";
+        }
+        {
+          artist = "詩音";
+          title = "Re:ナミダボシ feat. CLIFF EDGE";
+          album = "Truth";
+          url = "https://music.163.com/#/song?id=22645735";
+        }
       ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
