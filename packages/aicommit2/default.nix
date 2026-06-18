@@ -4,20 +4,23 @@
   _sources',
   nodejs,
   pnpm,
+  pnpmConfigHook,
+  fetchPnpmDeps,
 }:
 
 stdenv.mkDerivation rec {
   inherit (_sources' ./.) pname version src;
 
-  pnpmDeps = pnpm.fetchDeps {
-    fetcherVersion = 1;
+  pnpmDeps = fetchPnpmDeps {
+    fetcherVersion = 3;
     inherit pname version src;
-    hash = "sha256-96/qySx4dKfVCoIgwKXv6c7B3AG0S1HbLxt86/y/qTw=";
+    hash = "sha256-8sZYllSeXmnp9Y+fuEzoNmr/8PvsL0czEG3ngLy5ldY=";
   };
 
   nativeBuildInputs = [
     nodejs
-    pnpm.configHook
+    pnpmConfigHook
+    pnpm
   ];
   buildInputs = [ nodejs ];
 

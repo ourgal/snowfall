@@ -1,7 +1,11 @@
 {
   lib,
   stdenv,
-  xorg,
+  libx11,
+  libxi,
+  libxrandr,
+  xinput,
+  libxext,
   pkg-config,
   autoreconfHook,
   _sources',
@@ -11,11 +15,11 @@ stdenv.mkDerivation {
   inherit (_sources' ./.) pname version src;
 
   buildInputs = [
-    xorg.libX11
-    xorg.libXrandr
-    xorg.libXext
-    xorg.libXi
-    xorg.xinput
+    libx11
+    libxrandr
+    libxext
+    libxi
+    xinput
   ];
 
   nativeBuildInputs = [

@@ -19,7 +19,6 @@ args.module (
         {
           neovim = {
             extraLuaPackages = ps: [ ps.magick ];
-            catppuccin.enable = false;
           };
         }
         {

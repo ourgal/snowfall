@@ -36,9 +36,9 @@ args.module (
       tmpfiles = [ "d ${config.home.homeDirectory}/.ssh - - - - -" ];
       progs.ssh = {
         enableDefaultConfig = false;
-        matchBlocks = {
+        settings = {
           "*" = {
-            forwardAgent = false;
+            ForwardAgent = false;
             addKeysToAgent = "no";
             compression = false;
             serverAliveInterval = 0;
@@ -49,17 +49,15 @@ args.module (
             controlPath = "~/.ssh/master-%r@%n:%p";
             controlPersist = "no";
           };
-          github = {
-            host = "github.com";
-            hostname = "ssh.github.com";
-            port = 443;
-            user = "git";
+          "github.com" = {
+            HostName = "ssh.github.com";
+            Port = 443;
+            User = "git";
           };
           termux = {
-            host = "termux";
-            hostname = "localhost";
-            port = 8022;
-            user = "u0_a420";
+            HostName = "localhost";
+            Port = 8022;
+            User = "u0_a420";
           };
         }
         // mkSshConfig
@@ -67,27 +65,23 @@ args.module (
           if elem host settings.desktops && !elem host settings.work then
             {
               soft = {
-                host = "soft";
-                hostname = ip.brix;
-                port = 23231;
+                HostName = ip.brix;
+                Port = 23231;
               };
               m6 = {
-                host = "m6";
-                hostname = ip.m6;
-                port = 2222;
-                user = "u0_a420";
+                HostName = ip.m6;
+                Port = 2222;
+                User = "u0_a420";
               };
               s10 = {
-                host = "s10";
-                hostname = ip.s10;
-                port = 2222;
-                user = "u0_a661";
+                HostName = ip.s10;
+                Port = 2222;
+                User = "u0_a661";
               };
               u20 = {
-                host = "u20";
-                hostname = ip.u20;
-                port = 2222;
-                user = "u0_a519";
+                HostName = ip.u20;
+                Port = 2222;
+                User = "u0_a519";
               };
             }
           else

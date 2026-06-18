@@ -8,6 +8,7 @@
     # keep-sorted start
     "argbash"
     "argc"
+    "bash-language-server"
     "bashly"
     "complgen"
     "jc"
@@ -18,5 +19,4 @@
     "zx"
     # keep-sorted end
   ];
-  nodePkgs = "bash-language-server";
 }

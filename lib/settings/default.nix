@@ -48,6 +48,7 @@ let
     "office2043"
     "office-laptop3"
     "q4ospc"
+    "work2"
   ];
   non-HomeManager = [
     "brix"

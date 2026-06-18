@@ -5,7 +5,7 @@
     # keep-sorted start
     "coreutils-full"
     "empty"
-    "parallel-full"
+    "parallel"
     "progress"
     "retry"
     "rush"

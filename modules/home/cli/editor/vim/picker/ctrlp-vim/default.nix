@@ -1,5 +1,5 @@
 {
   progs.vim = {
-    plugins = "ctrlp";
+    plugins = "ctrlp-vim";
   };
 }

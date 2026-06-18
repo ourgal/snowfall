@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix/release-25.11";
+      url = "github:ezKEa/aagl-gtk-on-nix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
@@ -49,12 +49,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin = {
-      url = "github:catppuccin/nix/release-25.11";
+      url = "github:catppuccin/nix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-25.11";
+      url = "github:nix-community/nixvim/nixos-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
@@ -140,7 +140,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     darwin = {
-      url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     colmena.url = "github:zhaofengli/colmena/stable";
@@ -163,7 +163,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
-      url = "github:nix-community/stylix/release-25.11";
+      url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -231,7 +231,7 @@
               "aspnetcore-runtime-6.0.36"
             ];
             beekeeper = [ "beekeeper-studio-5.1.5" ];
-            ventoy = [ "ventoy-1.1.10" ];
+            ventoy = [ "ventoy-1.1.12" ];
             jlink = [ "segger-jlink-qt4-874" ];
             qtwebengine = [ "qtwebengine-5.15.19" ];
             beekeeper-studio = [ "beekeeper-studio-5.3.4" ];

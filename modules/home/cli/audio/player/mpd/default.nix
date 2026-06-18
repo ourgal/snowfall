@@ -44,6 +44,7 @@ args.module (
       value = {
         xdg.userDirs = {
           enable = true;
+          setSessionVariables = false;
           createDirectories = true;
         };
       };

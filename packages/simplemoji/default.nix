@@ -4,7 +4,11 @@
   pkg-config,
   libxkbcommon,
   wayland,
-  xorg,
+  libxcursor,
+  libx11,
+  libxrandr,
+  libxcb,
+  libxi,
   fontconfig,
   libgcc,
   stdenv,
@@ -22,11 +26,11 @@ rustPlatform.buildRustPackage (
       fontconfig.dev
       libxkbcommon.dev
       wayland
-      xorg.libxcb
-      xorg.libX11
-      xorg.libXcursor
-      xorg.libXrandr
-      xorg.libXi
+      libxcb
+      libx11
+      libxcursor
+      libxrandr
+      libxi
       libgcc
     ];
 

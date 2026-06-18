@@ -14,7 +14,6 @@
     # keep-sorted start
     "lobster"
     "sauce"
-    "toru"
     "viu"
     # keep-sorted end
   ];

@@ -6,7 +6,7 @@
     "nil"
     "niv"
     "nixd"
-    "nixfmt-rfc-style"
+    "nixfmt"
     "nixpkgs-lint-community"
     "npins"
     "patsh"

@@ -1,1 +1,1 @@
-{ progs.vim.plugins = "signature"; }
+{ progs.vim.plugins = "vim-signature"; }

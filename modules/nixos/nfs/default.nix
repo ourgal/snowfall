@@ -21,6 +21,7 @@ let
     systemd.user.tmpfiles.users.${user}.rules = [ "d ${folder} 0770 ${user} users -" ];
 
     fileSystems."/srv/nfs" = {
+      fsType = "btrfs";
       device = "${folder}";
       options = [ "bind" ];
     };

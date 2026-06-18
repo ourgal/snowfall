@@ -22,14 +22,15 @@ args.module (
       "fastfetch"
       "file"
       "glances"
-      "mesa-demos"
+      "hyfetch"
       "libva-utils"
-      "neofetch"
+      "mesa-demos"
       "onefetch"
       "pciutils"
       "usbutils"
       "vulkan-tools"
       "wev"
+      "xev"
       "zenith"
       # keep-sorted end
     ];
@@ -37,6 +38,5 @@ args.module (
       "cpu-x"
       "owofetch"
     ];
-    xorgPkgs = "xev";
   })
 )

@@ -5,9 +5,6 @@ let
   value = {
     programs = {
       fish = enabled;
-      light = enabled // {
-        brightnessKeys = enabled;
-      };
       vim = enabled // {
         defaultEditor = true;
       };

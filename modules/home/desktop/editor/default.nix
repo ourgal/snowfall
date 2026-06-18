@@ -10,7 +10,6 @@
     "leo-editor"
     "manuskript"
     "neovide"
-    "notepadqq"
     "retext"
     # keep-sorted end
   ];

@@ -1,4 +1,8 @@
 {
-  nodePkgs = "vim-language-server";
-  nixPkgs = "vim-vint";
+  nixPkgs = [
+    # keep-sorted start
+    "vim-language-server"
+    "vim-vint"
+    # keep-sorted end
+  ];
 }

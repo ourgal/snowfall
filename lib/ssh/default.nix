@@ -12,9 +12,8 @@ in
       acc
       // {
         ${e} = {
-          host = e;
-          hostname = "${e}.local";
-          port = 22;
+          HostName = "${e}.local";
+          Port = 22;
         };
       }
     ) { } allHosts;

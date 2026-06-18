@@ -7,7 +7,7 @@
   dbus,
   gdk-pixbuf,
   glib,
-  xorg,
+  libx11,
   gtk2,
   librsvg,
   dbus-glib,
@@ -45,7 +45,7 @@ stdenv.mkDerivation {
     dbus
     gdk-pixbuf
     glib
-    xorg.libX11
+    libx11
     gtk2
     dbus-glib
     librsvg

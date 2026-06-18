@@ -52,7 +52,6 @@ let
         nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
 
-    nixpkgs.config.allowUnfree = true;
     system.activationScripts.report-changes = ''
       PATH=$PATH:${
         lib.makeBinPath [

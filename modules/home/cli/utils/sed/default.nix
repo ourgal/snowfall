@@ -8,7 +8,6 @@
   nixPkgs = [
     # keep-sorted start
     "amber"
-    "anew"
     "rep-grep"
     "repgrep"
     "ruplacer"

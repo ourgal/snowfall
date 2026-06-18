@@ -2,7 +2,12 @@
   lib,
   buildGoModule,
   _sources',
-  xorg,
+  libx11,
+  libxrandr,
+  libxcursor,
+  libxinerama,
+  libxxf86vm,
+  libxi,
   libGL,
   namespace,
 }:
@@ -16,13 +21,13 @@ buildGoModule (
     doCheck = false;
 
     buildInputs = [
-      xorg.libX11.dev # X11/Xlib.h
-      xorg.libXrandr # X11/extensions/Xrandr.h
+      libx11.dev # X11/Xlib.h
+      libxrandr # X11/extensions/Xrandr.h
       libGL # GL/glx.h
-      xorg.libXcursor # X11/Xcursor/Xcursor.h
-      xorg.libXinerama # X11/extensions/Xinerama.h
-      xorg.libXi # X11/extensions/XInput2.h
-      xorg.libXxf86vm # Xxf86vm
+      libxcursor # X11/Xcursor/Xcursor.h
+      libxinerama # X11/extensions/Xinerama.h
+      libxi # X11/extensions/XInput2.h
+      libxxf86vm # Xxf86vm
     ];
 
     vendorHash = "sha256-Mlv0xTn1kDU3eqiyCH6s965tYSYfzbd6n/xViLPiC+0=";

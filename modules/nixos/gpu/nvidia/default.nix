@@ -24,7 +24,7 @@ let
     hardware.nvidia = {
       modesetting = enabled;
       powerManagement = disabled // disableOpt [ "finegrained" ];
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
     }
     // enableOpt [ "nvidiaSettings" ]
     // disableOpt [ "open" ]

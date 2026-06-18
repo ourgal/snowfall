@@ -23,7 +23,6 @@ args.module (
         wayland.windowManager.hyprland = enabled // {
           xwayland = enabled;
           systemd = disabled; # mess with path
-          plugins = with pkgs.hyprlandPlugins; [ hyprsplit ];
           settings = {
             monitor = ",preferred,auto,${screenScale}";
             windowrule = [

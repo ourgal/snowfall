@@ -1,5 +1,4 @@
 {
-  nodePkgs = "fkill-cli";
   nixPkgs = [
     # keep-sorted start
     "killport"

@@ -1335,10 +1335,6 @@ src.github = "qltysh/qlty"
 fetch.github = "qltysh/qlty"
 cargo_lock = ["Cargo.lock"]
 
-[zhlint]
-src.github = "zhlint-project/zhlint"
-fetch.github = "zhlint-project/zhlint"
-
 [tmux-gentrify]
 src.git = "https://github.com/kristopolous/tmux-gentrify"
 fetch.github = "kristopolous/tmux-gentrify"

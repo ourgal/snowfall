@@ -5,7 +5,6 @@
     "beekeeper-studio"
     "dbgate"
     "dblab"
-    "gobang"
     "harlequin"
     "lazysql"
     "litecli"

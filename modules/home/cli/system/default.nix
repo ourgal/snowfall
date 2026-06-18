@@ -51,8 +51,8 @@
     "ugm"
     "wmctrl"
     "xdotool"
+    "xkill"
     # keep-sorted end
   ];
   nixX86Pkgs = "intentrace";
-  xorgPkgs = "xkill";
 }

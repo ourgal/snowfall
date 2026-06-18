@@ -1,7 +1,6 @@
 {
   progs.git.delta = {
     enable = true;
-    catppuccin.enable = false;
     options = {
       true-color = "always";
       decorations = {

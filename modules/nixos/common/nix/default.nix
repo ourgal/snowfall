@@ -18,7 +18,7 @@ let
     nix =
       let
         mirrors = [
-          "https://cache.nixos.org"
+          "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
           "https://nix-community.cachix.org?priority=100"
         ];
       in
@@ -29,7 +29,10 @@ let
             "flakes"
             "pipe-operators"
           ];
-          substituters = lib.mkBefore mirrors;
+          extra-substituters = lib.mkBefore mirrors;
+          extra-trusted-public-keys = [
+            "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+          ];
           trusted-users = [ config.${namespace}.user.name ];
           max-jobs =
             if
@@ -51,7 +54,6 @@ let
         nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
 
-    nixpkgs.config.allowUnfree = true;
     system.activationScripts.system-diff = {
       supportsDryActivation = true; # safe: only outputs to stdout
       text = ''

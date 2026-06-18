@@ -21,7 +21,7 @@ let
       "${name}/secret".source = ./secret.key;
     };
     services = {
-      harmonia = enabled // {
+      harmonia.cache = enabled // {
         settings = {
           bind = "[::]:${toString cfg.port}";
           workers = 4;

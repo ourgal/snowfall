@@ -1,6 +1,6 @@
 {
   progs.vim = {
-    plugins = "zeavim";
+    plugins = "zeavim-vim";
     extraConfig = ./config.vim;
   };
 }

@@ -5,6 +5,7 @@
     "dasel"
     "faq"
     "fastgron"
+    "fixjson"
     "gjo"
     "jaq"
     "jd-diff-patch"
@@ -24,6 +25,7 @@
     "jtc"
     "miller"
     "otree"
+    "prettier"
     "remarshal"
     "rq"
     "spruce"
@@ -31,12 +33,6 @@
     "vscode-langservers-extracted"
     "yj"
     "yq-go"
-    # keep-sorted end
-  ];
-  nodePkgs = [
-    # keep-sorted start
-    "fixjson"
-    "prettier"
     # keep-sorted end
   ];
   myPkgs = "bafi";

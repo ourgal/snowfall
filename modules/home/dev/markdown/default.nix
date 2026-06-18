@@ -6,10 +6,8 @@
     "pangu.py"
     "pmark"
     "textpod"
-    "zhlint"
     # keep-sorted end
   ];
-  nodePkgs = "prettier";
   pyPkgs = "grip";
   nixPkgs = [
     # keep-sorted start
@@ -25,6 +23,7 @@
     "mdsh"
     "mmdoc"
     "mpls"
+    "prettier"
     "proselint"
     "textlint"
     "vale"

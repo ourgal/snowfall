@@ -678,13 +678,6 @@ args.module (
               ccls = {
                 command = "ccls";
               };
-              gpt = {
-                command = "helix-gpt";
-                args = [
-                  "--handler"
-                  "codeium"
-                ];
-              };
               sqls = {
                 command = "sqls";
               };
@@ -706,7 +699,6 @@ args.module (
       };
       nixPkgs = [
         # keep-sorted start
-        "helix-gpt"
         "simple-completion-language-server"
         # keep-sorted end
       ];
