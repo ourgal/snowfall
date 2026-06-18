@@ -177,8 +177,6 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=10"
-      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=10"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
       "https://nix-community.cachix.org?priority=100"
     ];
