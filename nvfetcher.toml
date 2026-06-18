@@ -469,12 +469,8 @@ fetch.github = "TheSast/tmux-transient-status"
 src.git = "https://github.com/alexwforsythe/tmux-which-key"
 fetch.github = "alexwforsythe/tmux-which-key"
 
-[toru]
-src.github = "sweetbbak/toru"
-fetch.github = "sweetbbak/toru"
-
 [treegen]
-src.github = "bilbilak/treegen"
+src.git = "https://github.com/bilbilak/treegen"
 fetch.github = "bilbilak/treegen"
 
 [tuime]
@@ -560,7 +556,7 @@ src.container = "qdtoday/qd"
 fetch.docker = "qdtoday/qd"
 
 [docker-rsshub]
-src.container = "diygod/rsshub:chromium-bundled"
+src.container = "diygod/rsshub"
 fetch.docker = "diygod/rsshub"
 
 [docker-rustypaste]
@@ -589,7 +585,8 @@ fetch.docker = "vaultwarden/server"
 
 [tp]
 src.github = "minefuto/tp"
-fetch.url = "https://github.com/minefuto/tp/releases/download/$ver/tp_Linux_x86_64.tar.gz"
+src.prefix = "v"
+fetch.url = "https://github.com/minefuto/tp/releases/download/v$ver/tp_$ver_linux_amd64.tar.gz"
 
 [hl]
 src.github = "pamburus/hl"
@@ -1279,10 +1276,6 @@ url.name = "chinadns-ng"
 [Alatsi]
 src.git = "https://github.com/SorkinType/Alatsi"
 fetch.github = "SorkinType/Alatsi"
-
-[toneoz-font-pinyin-kai]
-src.github_tag = "jeffreyxuan/toneoz-font-pinyin-kai"
-fetch.github = "jeffreyxuan/toneoz-font-pinyin-kai"
 
 [Chillkai]
 src.github_tag = "Warren2060/Chillkai"
