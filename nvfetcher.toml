@@ -560,7 +560,7 @@ src.container = "qdtoday/qd"
 fetch.docker = "qdtoday/qd"
 
 [docker-rsshub]
-src.container = "diygod/rsshub"
+src.container = "diygod/rsshub:chromium-bundled"
 fetch.docker = "diygod/rsshub"
 
 [docker-rustypaste]
