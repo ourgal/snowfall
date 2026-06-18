@@ -18,7 +18,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ makeWrapper ];
 
   doCheck = true;
-  checkPhase = ''shellcheck $src/app-shell.bash'';
+  checkPhase = "shellcheck $src/app-shell.bash";
 
   installPhase = ''
     mkdir -p $out/bin $out/share/nix

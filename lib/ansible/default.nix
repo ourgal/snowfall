@@ -234,7 +234,7 @@ let
           {
             name = "Install homebrew";
             "ansible.builtin.command" = {
-              cmd = ''git clone --depth=1 https://mirror.nju.edu.cn/git/homebrew/brew.git /home/linuxbrew/.linuxbrew'';
+              cmd = "git clone --depth=1 https://mirror.nju.edu.cn/git/homebrew/brew.git /home/linuxbrew/.linuxbrew";
             };
             when = "not brew_stat.stat.exists";
           }

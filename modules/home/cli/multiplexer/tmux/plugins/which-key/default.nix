@@ -455,7 +455,7 @@ args.module (
                 {
                   name = "Copycat Git Status Files";
                   key = "C-g";
-                  command = ''run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_git_special.sh #{pane_current_path}'';
+                  command = "run-shell ${pkgs.tmuxPlugins.copycat}/share/tmux-plugins/copycat/scripts/copycat_git_special.sh #{pane_current_path}";
                 }
                 {
                   name = "Copycat Hash Search";

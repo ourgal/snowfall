@@ -9,7 +9,7 @@ args.module (
       nixPkgs = "perlnavigator";
       perlPkgs = "Appcpanminus";
       files = {
-        ".perlcriticrc" = ''[-Subroutines::ProhibitSubroutinePrototypes]'';
+        ".perlcriticrc" = "[-Subroutines::ProhibitSubroutinePrototypes]";
         ".perltidyrc" = ''
           -i=${toString config.editorconfig.settings."*".indent_size}
         '';

@@ -15,5 +15,5 @@ mkShell {
     snowfall-flake.packages.${system}.flake
   ];
 
-  shellHook = '''';
+  shellHook = "";
 }
