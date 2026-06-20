@@ -7,7 +7,7 @@
   ];
   enable = [
     # keep-sorted start
-    "atuin"
+    "mcfly"
     "shellclear"
     # keep-sorted end
   ];
