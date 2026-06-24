@@ -48,6 +48,10 @@
       url = "github:snowfallorg/thaw";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    snowfall-drift = {
+      url = "github:snowfallorg/drift";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin = {
       url = "github:catppuccin/nix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -84,10 +88,6 @@
     };
     pog = {
       url = "github:jpetrucciani/pog";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    snowfall-drift = {
-      url = "github:snowfallorg/drift";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lem = {
