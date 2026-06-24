@@ -485,12 +485,6 @@ args.module (
           url = "https://music.163.com/#/song?id=559908";
         }
         {
-          artist = "TrySail";
-          title = "High Free Spirits";
-          album = "High Free Spirits";
-          url = "https://music.163.com/#/song?id=412327886";
-        }
-        {
           artist = "3L";
           title = "Gods Garden";
           album = "FORLANE | REI";
@@ -2075,12 +2069,6 @@ args.module (
           url = "https://music.163.com/#/song?id=1466019532";
         }
         {
-          artist = "宇多田ヒカル";
-          title = "Beautiful World 2021 Remastered";
-          album = "Beautiful World -2021 Remastered-";
-          url = "https://music.163.com/#/song?id=1825842042";
-        }
-        {
           artist = "Spontania & AZU";
           title = "同じ空みつめてるあなたに";
           album = "同じ空みつめてるあなたに";
@@ -2469,12 +2457,6 @@ args.module (
           title = "Stigmata";
           album = "イメージアルバム 穢翼のユースティア 夢想曲(トロイメライ) ~Seeking Asphodelus~";
           url = "https://music.163.com/#/song?id=26141649";
-        }
-        {
-          artist = "RSP";
-          title = "さくら 〜あなたに出会えてよかった〜";
-          album = "さくら 〜あなたに出会えてよかった〜";
-          url = "https://music.163.com/#/song?id=805197";
         }
         {
           artist = "Kotoha";
@@ -2902,12 +2884,6 @@ args.module (
           album = "courage";
           url = "https://music.163.com/#/song?id=29718090";
         }
-        # {
-        #   artist = "ave;new & 佐倉紗織";
-        #   title = "Eternal Wish";
-        #   album = "GWAVE2005 2nd Impact";
-        #   url = "https://music.163.com/#/song?id=739914";
-        # }
         {
           artist = "ClariS";
           title = "CLICK";
@@ -3316,7 +3292,7 @@ args.module (
           album = "RESET～また、恋したくなるように～";
           url = "https://music.163.com/#/song?id=29378998";
         }
-      ];
+        ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
         foldl' (
