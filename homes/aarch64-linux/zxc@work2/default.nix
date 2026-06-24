@@ -6,6 +6,7 @@ in
   dot = {
     cli = enabled;
     dev.nix = enabled;
+    desktop.browser = enabled;
     fonts = enabled;
   };
 }
