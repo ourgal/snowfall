@@ -175,8 +175,5 @@
       }
     ];
   };
-  enable = [
-    "shortcut"
-    "diff-so-fancy"
-  ];
+  enable = [ "diff-so-fancy" ];
 }

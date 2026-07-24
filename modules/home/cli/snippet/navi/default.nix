@@ -1,7 +1,7 @@
 {
   progs.navi = {
-    enableFishIntegration = false;
-    enableZshIntegration = false;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
   };
   dataFiles."navi/cheats" = ./my_cheats;
 }
