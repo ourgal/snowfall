@@ -12,7 +12,11 @@ args.module (
       inherit (lib.${namespace}) isX86;
     in
     {
-      servs = "emacs";
+      servs = {
+        emacs = {
+          startWithUserSession = "graphical";
+        };
+      };
       nixPkgs = [
         # keep-sorted start
         "emacs-lsp-booster"
