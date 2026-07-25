@@ -3,7 +3,7 @@ args.module (
   args
   // (
     let
-      inherit (args) pkgs lib;
+      inherit (args) lib;
     in
     {
       progs.vscode = {
@@ -46,7 +46,6 @@ args.module (
             }
           ];
         };
-        package = pkgs.vscodium;
       };
       enable = [
         # keep-sorted start
