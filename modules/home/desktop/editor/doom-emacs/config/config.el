@@ -128,11 +128,10 @@
 ;; (use-package! chezmoi)
 ;; (map! :leader
 ;;       :desc "Chezmoi find" "f z" #'chezmoi-find)
-;; (after! dirvish
-;;   (dirvish-side-follow-mode))
-;; (map! :n "-" #'dirvish)
-;; (map! :map 'dirvish-mode-map :n "a" #'dired-create-empty-file)
-(map! :n "-" #'dired-jump)
+(after! dirvish
+  (dirvish-side-follow-mode))
+(map! :n "-" #'dirvish)
+(map! :map 'dirvish-mode-map :n "a" #'dired-create-empty-file)
 (after! eglot
   (add-to-list 'eglot-server-programs
     '(fennel-mode . ("fennel-ls")))
