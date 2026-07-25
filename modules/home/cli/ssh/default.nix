@@ -29,6 +29,7 @@ args.module (
         "sshs"
         "sshx"
         "termscp"
+        "trzsz-ssh"
         "wishlist"
         # keep-sorted end
       ];

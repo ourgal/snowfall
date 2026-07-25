@@ -895,10 +895,6 @@ fetch.url = "https://github.com/akuse-app/akuse/releases/download/$ver/linux-aku
 src.git = "https://github.com/ourgal/v"
 fetch.github = "ourgal/v"
 
-[trzsz-ssh]
-src.github = "trzsz/trzsz-ssh"
-fetch.github = "trzsz/trzsz-ssh"
-
 [trzsz-go]
 src.github = "trzsz/trzsz-go"
 fetch.github = "trzsz/trzsz-go"
