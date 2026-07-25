@@ -3292,7 +3292,7 @@ args.module (
           album = "RESET～また、恋したくなるように～";
           url = "https://music.163.com/#/song?id=29378998";
         }
-        ];
+      ];
       filenames = foldl' (acc: elem: acc + " " + (mkFilename elem.artist elem.title)) "" metadata;
       targets = concatStringsSep "\n" (
         foldl' (

@@ -3,13 +3,8 @@ args.module (
   args
   // (
     let
-      inherit (args)
-        config
-        lib
-        target
-        namespace
-        ;
-      inherit (lib.${namespace}) isX86;
+      inherit (args) lib namespace;
+      inherit (lib.${namespace}) domains;
     in
     {
       servs = {
@@ -24,47 +19,15 @@ args.module (
         "parinfer-rust-emacs"
         # keep-sorted end
       ];
+      confs = {
+        "doom/.authinfo" =
+          "machine ${domains.miniflux} port 80 login miniflux password ${lib.strings.fileContents ./miniflux.key}";
+      };
       progs.doom-emacs = {
         enable = true;
         doomDir = ./config;
         experimentalFetchTree = true; # Disable if there are fetcher issues
       };
-      enable = [
-        # keep-sorted start
-        "adoc-mode"
-        "alert"
-        "annotate"
-        "beacon"
-        "bing-dict"
-        "chinese-conv"
-        "chinese-number"
-        "dotenv-mode"
-        "eglot-booster"
-        "engine-mode"
-        "fzf"
-        "gt"
-        "just-mode"
-        "just-ts-mode"
-        "magit-delta"
-        "magit-stats"
-        "magit-todos"
-        "move-text"
-        "nftables-mode"
-        "notmuch"
-        "nov"
-        "org-auto-tangle"
-        "pangu-spacing"
-        "perltidy"
-        "rainbow-delimiters"
-        "super-save"
-        "treesit-grammars"
-        "vimscript-ts-mode"
-        "zeal-at-point"
-        "zoxide"
-        # keep-sorted end
-      ]
-      ++ isX86 target "git-time-metric"
-      ++ lib.optional config.catppuccin.enable "catppuccin-theme";
     }
   )
 )

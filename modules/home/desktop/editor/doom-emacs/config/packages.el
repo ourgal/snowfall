@@ -52,3 +52,22 @@
 ;; (package! codeium :recipe (:host github :repo "Exafunction/codeium.el"))
 
 ;; (package! indent-guide)
+(package! ahk-mode)
+;; (package! chezmoi)
+(package! magit-delta)
+(package! magit-stats)
+(package! magit-todos)
+(package! nov
+  :recipe (:host github :repo "wasamasa/nov.el"))
+(package! pangu-spacing)
+(package! zeal-at-point)
+(package! eglot-booster
+  :recipe (:host github :repo "jdtsmith/eglot-booster"))
+(package! elfeed-protocol)
+(package! elsqlite)
+(package! super-save)
+(package! org-auto-tangle)
+;; (package! org-modern)
+(package! ob-async)
+;; (package! bing-dict)
+(package! gt)
