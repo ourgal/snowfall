@@ -79,10 +79,12 @@ let
     };
 
     # XDG portal
-    xdg.portal = enabled // {
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      config.common.default = "*";
-    };
+    # xdg.portal = enabled // {
+    #   extraPortals = [
+    #     pkgs.kdePackages.xdg-desktop-portal-kde
+    #   ];
+    #   config.common.default = "*";
+    # };
   };
   _args = { inherit value args; };
 in

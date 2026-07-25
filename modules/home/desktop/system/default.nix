@@ -62,7 +62,8 @@ args.module (
       value = {
         colorScheme = inputs.nix-colors.colorSchemes.gigavolt;
         xdg.portal = enabled // {
-          extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+          config.common.default = "kde";
+          extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
         };
         ${namespace}.desktop.system = {
           waybar = {
