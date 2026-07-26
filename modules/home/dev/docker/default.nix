@@ -13,6 +13,7 @@
     "oxker"
     "podman"
     "podman-compose"
+    "undock"
     # keep-sorted end
   ];
 }
