@@ -11,6 +11,7 @@ args.module (
         # keep-sorted start
         "air"
         "betteralign"
+        "copygen"
         "errcheck"
         "go-critic"
         "go-errorlint"
