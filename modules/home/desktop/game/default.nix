@@ -11,6 +11,7 @@ args.module (
         # keep-sorted start
         "bottles"
         "gnome-mahjongg"
+        "inputplumber"
         "lutris"
         "moonlight-qt"
         "prismlauncher"
