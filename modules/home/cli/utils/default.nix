@@ -29,6 +29,7 @@
     "less"
     "ls"
     "mv"
+    "netstat"
     "nohup"
     "pipe"
     "ps"
