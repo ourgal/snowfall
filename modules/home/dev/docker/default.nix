@@ -7,6 +7,7 @@
     "dockerfile-language-server-nodejs"
     "dockfmt"
     "dockle"
+    "ducker"
     "hadolint"
     "lazydocker"
     "oxker"
