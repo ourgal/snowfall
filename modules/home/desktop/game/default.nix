@@ -12,6 +12,7 @@ args.module (
         "bottles"
         "gnome-mahjongg"
         "inputplumber"
+        "itgmania"
         "lutris"
         "moonlight-qt"
         "prismlauncher"
