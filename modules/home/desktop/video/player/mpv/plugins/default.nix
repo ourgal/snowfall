@@ -21,13 +21,14 @@ args.module (
         scripts =
           with' pkgs.mpvScripts [
             # keep-sorted start
+            "cut"
             "manga-reader"
+            "memo"
             "mpris"
             "quack"
-            "memo"
-            "videoclip"
             "thumbfast"
             "uosc"
+            "videoclip"
             # keep-sorted end
           ]
           ++ with' pkgs.${namespace} [
