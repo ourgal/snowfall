@@ -49,6 +49,7 @@
     "topgrade"
     "tray-tui"
     "ugm"
+    "wifitui"
     "wmctrl"
     "xdotool"
     "xkill"
