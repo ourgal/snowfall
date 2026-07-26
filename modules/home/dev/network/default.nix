@@ -35,6 +35,7 @@
     "termshark"
     "trippy"
     "trurl"
+    "urlfinder"
     "wget"
     "whois"
     "wirelesstools"
