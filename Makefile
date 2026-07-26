@@ -53,8 +53,6 @@ man-home: # home man page
 man-nixos: # home man page
 	@man 5 configuration.nix
 
-$(eval $(MAKE_ARGS):;@:)
-
 .PHONY: deploy
 deploy: # deploy to host
 	@git add .
@@ -98,10 +96,11 @@ mmdoc: # generate doc
 chezmoi: # chezmoi apply
 	@chezmoi apply
 
-.PHONY: db
-db: # update database
+.PHONY: readme
+readme: # update readme
 	@-rm waiting.db
 	@nix-shell -p python3Packages.pandas --run ./waiting.py
+	@emacs --batch README.org --eval '(org-babel-do-load-languages (quote org-babel-load-languages) (quote ((sqlite . t))))' --eval '(setq org-confirm-babel-evaluate nil)' --eval '(org-babel-goto-named-src-block "waiting list")' --eval '(org-babel-execute-src-block)' --eval '(save-buffer)'
 
 .PHONY: android
 android: # nix-on-droid
@@ -122,3 +121,7 @@ brix: # deploy to brix
 .PHONY: help
 help: # Show help for each of the Makefile recipes.
 	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
+
+clean:
+
+test:
