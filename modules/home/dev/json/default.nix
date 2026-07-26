@@ -20,6 +20,7 @@
     "jqfmt"
     "jql"
     "jqp"
+    "json-tui"
     "jsonfmt"
     "jtbl"
     "jtc"
