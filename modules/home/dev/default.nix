@@ -114,7 +114,6 @@
     "fennel"
     "fish"
     "go"
-    "haskell"
     "html"
     "jinja"
     "json"
@@ -138,7 +137,6 @@
     "sqlite"
     "template"
     "toml"
-    "vagrant"
     "vim"
     "yaml"
     # keep-sorted end
