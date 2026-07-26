@@ -1,0 +1,1 @@
+{ nixPkgs = "git-pr"; }
