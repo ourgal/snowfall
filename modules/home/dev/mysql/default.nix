@@ -9,6 +9,7 @@
     "lazysql"
     "mycli"
     "sql-studio"
+    "sqlit-tui"
     "sqls"
     "sqruff"
     "usql"

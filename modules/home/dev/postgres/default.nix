@@ -9,6 +9,7 @@
     "lazysql"
     "rainfrog"
     "sql-studio"
+    "sqlit-tui"
     "sqls"
     "sqruff"
     "usql"
