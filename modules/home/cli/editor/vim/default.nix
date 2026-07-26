@@ -32,7 +32,6 @@ args.module (
         "integration"
         "jump"
         "lang"
-        "lint"
         "lsp"
         "mark"
         "motion"
