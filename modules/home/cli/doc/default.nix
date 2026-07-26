@@ -11,6 +11,7 @@
     "bk"
     "ccal"
     "cheat"
+    "cppman"
     "dasht"
     "halp"
     "jiten"
