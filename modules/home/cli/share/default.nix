@@ -3,7 +3,6 @@
     # keep-sorted start
     "biliup-rs"
     "copyparty"
-    "webdav"
     "croc"
     "dufs"
     "ffsend"
@@ -26,9 +25,11 @@
     "tty-share"
     "updog"
     "upterm"
+    "webdav"
     "webwormhole"
     "wgetpaste"
     "wush"
+    "zipline"
     # keep-sorted end
   ];
   enable = [
