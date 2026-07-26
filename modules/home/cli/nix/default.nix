@@ -25,6 +25,7 @@
     "nvd"
     "nvfetcher"
     "nvrs"
+    "nxv"
     "toml2nix"
     # keep-sorted end
   ];
