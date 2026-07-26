@@ -25,6 +25,7 @@
     "fortune"
     "genact"
     "hr"
+    "install-nothing"
     "kittysay"
     "krabby"
     "lolcat"
