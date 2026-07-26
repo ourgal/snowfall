@@ -10,6 +10,7 @@ args.module (
       nixPkgs = [
         # keep-sorted start
         "air"
+        "betteralign"
         "errcheck"
         "go-critic"
         "go-errorlint"
