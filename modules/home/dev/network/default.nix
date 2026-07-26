@@ -30,6 +30,7 @@
     "netop"
     "oha"
     "q"
+    "resterm"
     "speed-cloudflare-cli"
     "tcping-go"
     "termshark"
