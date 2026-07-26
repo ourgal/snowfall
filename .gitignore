@@ -7,3 +7,5 @@ out
 waiting.db
 .env
 tags
+tags.lock
+tags.temp
