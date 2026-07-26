@@ -4205,7 +4205,7 @@ with sqlite3.connect("waiting.db") as conn:
                 "01/07/2026",
                 None,
                 Waiting_Status.WAITING,
-                Types.PACKAGE,
+                Types.MODULE,
             ],
             [
                 "snitch",
