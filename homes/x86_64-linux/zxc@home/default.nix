@@ -18,7 +18,6 @@ in
     desktop = enabled // {
       editor = enabled;
       flatpak = enabled;
-      game = enabled;
       time-tracker.activitywatch = enabled;
       translate.crow-translate = enabled;
       system = {
