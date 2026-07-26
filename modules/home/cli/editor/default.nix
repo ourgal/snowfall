@@ -1,6 +1,6 @@
 {
   myPkgs = "v";
-  X86Pkgs = "fresh";
+  nixX86Pkgs = "fresh-editor";
   nixPkgs = [
     # keep-sorted start
     "micro"
