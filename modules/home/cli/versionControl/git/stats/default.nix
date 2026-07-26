@@ -15,6 +15,7 @@
     "git-quick-stats"
     "git-sizer"
     "gitcs"
+    "gitnapped"
     "gitstats"
     "scc"
     "tokei"
