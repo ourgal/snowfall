@@ -23,6 +23,7 @@ args.module (
         # keep-sorted start
         "fast-ssh"
         "ggh"
+        "opener"
         "openssl"
         "ssh-tools"
         "sshpass"
