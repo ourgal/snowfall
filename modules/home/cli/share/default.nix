@@ -13,6 +13,7 @@
     "miniserve"
     "nfs-utils"
     "pastebinit"
+    "picoshare"
     "portal"
     "rsync"
     "screego" # TODO
