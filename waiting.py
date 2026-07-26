@@ -4334,7 +4334,7 @@ with sqlite3.connect("waiting.db") as conn:
                 Categories.GIT,
                 "04/13/2026",
                 None,
-                Waiting_Status.WAITING,
+                Waiting_Status.DONE,
                 Types.PACKAGE,
             ],
             [
