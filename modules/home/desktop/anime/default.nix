@@ -1,4 +1,5 @@
 {
+  nixPkgs = "seanime";
   enable = [
     # keep-sorted start
     "akuse"
