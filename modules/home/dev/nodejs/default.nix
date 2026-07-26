@@ -11,6 +11,7 @@ args.module (
         "eslint"
         "flow"
         "nodejs"
+        "oxfmt"
         "pnpm"
         "quick-lint-js"
         "taze"
