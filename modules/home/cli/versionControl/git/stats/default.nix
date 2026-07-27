@@ -17,6 +17,7 @@
     "gitcs"
     "gitnapped"
     "gitstats"
+    "gmap"
     "scc"
     "tokei"
     # keep-sorted end
