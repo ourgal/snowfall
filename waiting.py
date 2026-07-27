@@ -2918,13 +2918,13 @@ with sqlite3.connect("waiting.db") as conn:
                 Types.PACKAGE,
             ],
             [
-                "issue2md?tab=readme-ov-file",
+                "issue2md",
                 "A tool to convert GitHub issue/discussion into Markdown.",
-                "https://github.com/bigwhite/issue2md?tab=readme-ov-file",
+                "https://github.com/bigwhite/issue2md",
                 Categories.WEB,
                 "11/30/2025",
                 None,
-                Waiting_Status.WAITING,
+                Waiting_Status.DONE,
                 Types.PACKAGE,
             ],
             [

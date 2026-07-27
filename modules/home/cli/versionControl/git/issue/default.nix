@@ -7,6 +7,7 @@
   nixPkgs = [
     # keep-sorted start
     "git-bug"
+    "issue2md"
     # keep-sorted end
   ];
 }
