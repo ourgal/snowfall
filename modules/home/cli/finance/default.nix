@@ -1,9 +1,10 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "jrnl"
-    "nb"
-    "pandoc"
+    "hledger-ui"
+    "hledger-web"
+    "paisa"
     # keep-sorted end
   ];
+  enable = "hledger";
 }
