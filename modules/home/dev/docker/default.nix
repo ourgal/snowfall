@@ -5,6 +5,7 @@
     "dive"
     "docker-compose"
     "dockerfile-language-server-nodejs"
+    "dockerfmt"
     "dockfmt"
     "dockle"
     "ducker"
