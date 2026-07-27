@@ -35,6 +35,7 @@
     "ps"
     "rm"
     "sed"
+    "shasum"
     "tee"
     "time"
     "touch"
