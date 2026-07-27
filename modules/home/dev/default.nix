@@ -35,6 +35,7 @@
     "pixi"
     "process-compose"
     "reuse"
+    "secretspec"
     "sizelint"
     "tooling-language-server"
     "treefmt"
