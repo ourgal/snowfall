@@ -35,6 +35,7 @@
     "pixi"
     "process-compose"
     "reuse"
+    "sizelint"
     "tooling-language-server"
     "treefmt"
     "tup"
