@@ -154,6 +154,7 @@ let
                 "router"
                 "yanyu"
                 "nixos-mbr"
+                "work3"
               ]
             then
               "/dev/sda"

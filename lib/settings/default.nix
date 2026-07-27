@@ -22,6 +22,7 @@ let
     "q4ospc"
     "office1"
     "work2"
+    "work3"
   ];
   laptops = [
     "air"
@@ -35,6 +36,7 @@ let
     "office2043"
     "q4ospc"
     "work2"
+    "work3"
   ];
   work = [
     "office2043"
@@ -42,6 +44,7 @@ let
     "q4ospc"
     "office1"
     "work2"
+    "work3"
   ];
   windows = [ "nuc" ];
   non-NixOS = [
