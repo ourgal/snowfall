@@ -17,6 +17,7 @@
     "lowdown"
     "markdown-oxide"
     "marksman"
+    "md-lsp"
     "md-tangle"
     "mdbook"
     "mdq"
