@@ -44,6 +44,7 @@
     "sequin"
     "smartmontools"
     "squashfsTools"
+    "systemd-manager-tui"
     "sysz"
     "toolbox"
     "topgrade"
