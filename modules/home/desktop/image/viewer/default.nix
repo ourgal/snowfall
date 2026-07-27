@@ -1,6 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
+    "beeref"
     "emulsion"
     "nomacs"
     "phototonic"

@@ -2864,7 +2864,7 @@ with sqlite3.connect("waiting.db") as conn:
                 Categories.IMAGE,
                 "11/30/2025",
                 None,
-                Waiting_Status.WAITING,
+                Waiting_Status.DONE,
                 Types.PACKAGE,
             ],
             [
