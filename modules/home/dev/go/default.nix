@@ -12,6 +12,7 @@ args.module (
         "air"
         "betteralign"
         "copygen"
+        "dbtpl"
         "errcheck"
         "go-critic"
         "go-errorlint"
