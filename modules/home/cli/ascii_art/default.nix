@@ -37,6 +37,7 @@
     "ponysay"
     "pv"
     "sl"
+    "terminal-toys"
     "tmatrix"
     "toilet"
     # keep-sorted end
