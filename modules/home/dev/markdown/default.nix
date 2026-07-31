@@ -22,6 +22,7 @@
     "mdbook"
     "mdq"
     "mdsh"
+    "mdwatch"
     "mmdoc"
     "mpls"
     "prettier"
