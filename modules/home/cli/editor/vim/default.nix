@@ -55,6 +55,7 @@ args.module (
         "d ${config.xdg.dataHome}/vim - - - - -"
         "d ${config.home.homeDirectory}/.cache/vim - - - - -"
       ];
+      confs."vim/vimrc" = "";
     }
   )
 )
