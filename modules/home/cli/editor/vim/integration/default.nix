@@ -9,7 +9,6 @@ args.module (
     {
       enable = [
         # keep-sorted start
-        "devdocs-vim"
         "meson"
         "vim-bracketed-paste"
         "vim-carbon-now-sh"
