@@ -23,8 +23,8 @@ args.module (
         );
       enable = [
         # keep-sorted start
-        "command"
         "comment"
+        "file-management"
         "format"
         "git"
         "help"
@@ -37,6 +37,7 @@ args.module (
         "multi-cursor"
         "pair"
         "picker"
+        "preview"
         "quickfix"
         "register"
         "search"
