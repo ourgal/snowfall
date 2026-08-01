@@ -23,8 +23,6 @@ args.module (
         );
       enable = [
         # keep-sorted start
-        "align"
-        "annotate"
         "command"
         "comment"
         "format"

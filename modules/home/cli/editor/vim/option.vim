@@ -99,7 +99,6 @@ set showtabline=1
 augroup settings
     autocmd!
     autocmd FocusGained,BufEnter * checktime
-    autocmd FileType qf nnoremap <buffer><silent> q :cclose<bar>lclose<CR>
 augroup END
 
 set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
@@ -114,3 +113,18 @@ set scrolloff=5
 set shortmess-=S " show she search count
 
 set gdefault
+
+" completion
+set autocomplete
+set complete=o^5,.^5,w^5,b^5,u^5
+set completeopt=popup
+
+inoremap <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+autocmd CmdlineChanged [:\/\?] call wildtrigger()
+set wildmode=noselect:lastused,full
+set wildoptions=pum
+
+autocmd CmdlineEnter [\/\?] set pumheight=8
+autocmd CmdlineLeave [\/\?] set pumheight&
