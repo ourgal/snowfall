@@ -1,7 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "jsonnet"
+    "go-jsonnet"
     "jsonnet-language-server"
     # keep-sorted end
   ];

@@ -119,6 +119,7 @@
     "html"
     "jinja"
     "json"
+    "jsonnet"
     "latex"
     "lisp"
     "lua"
