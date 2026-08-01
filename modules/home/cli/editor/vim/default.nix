@@ -29,6 +29,7 @@ args.module (
         "comment"
         "format"
         "git"
+        "help"
         "integration"
         "jump"
         "lang"

@@ -8,9 +8,6 @@
     xmap <buffer> <tab> =
   '';
   confs."vim/ftplugin/gitcommit.vim" = ''
-    augroup gitcommitInLeft
-      autocmd!
-      autocmd BufWinEnter <buffer> wincmd L
-    augroup END
+    autocmd BufEnter <buffer> silent wincmd L
   '';
 }

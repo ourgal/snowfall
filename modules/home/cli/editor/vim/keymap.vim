@@ -4,6 +4,8 @@ nnoremap <leader>bo <cmd>%bd\|e#\|bd#<CR>
 map <silent> \h :noh<cr>
 noremap Q @@
 xnoremap / <Esc>/\%V
+nnoremap ZQ <cmd>qa!<cr>
+nnoremap ZX <cmd>xa!<cr>
 
 cnoremap <expr> %% getcmdtype( ) == ":" ? expand("%:h") .. "/" : "%%"
 nnoremap & <cmd>&&<CR>
