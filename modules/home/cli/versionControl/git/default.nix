@@ -56,7 +56,7 @@ args.module (
             core = {
               editor = config.${namespace}.user.editor;
               excludesfile = "~/.gitignore";
-              fsmonitor = true;
+              fsmonitor = false;
               untrackedCache = true;
               compression = 9;
               whitespace = "error";
@@ -89,7 +89,6 @@ args.module (
               updateRefs = true;
               missingCommitsCheck = "warn";
             };
-            maintenance.repo = [ "${config.home.homeDirectory}/workspace/snowfall" ];
             culumn.ui = "auto";
             branch.sort = "-committerdate";
             tag.sort = "version:refname";
