@@ -9,7 +9,6 @@ args.module (
     {
       enable = [
         # keep-sorted start
-        "vim-carbon-now-sh"
         "vim-dispatch"
         "vim-floaterm"
         "vim-silicon"
