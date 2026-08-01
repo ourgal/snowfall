@@ -2,24 +2,9 @@ scriptencoding utf8
 let g:mapleader = ' '
 nnoremap <leader>bo <cmd>%bd\|e#\|bd#<CR>
 map <silent> \h :noh<cr>
-nnoremap ZZ <cmd>xa<cr>
-nnoremap ZQ <cmd>qa!<cr>
 noremap Q @@
 xnoremap / <Esc>/\%V
-nnoremap <c-n> <tab>
-nnoremap <tab> <cmd>tabnext<cr>
-nnoremap <s-tab> <cmd>tab split<cr>
-nnoremap <tab> <cmd>tabclose<cr>
 
-function FoldWithH()
-    if col('.') == 1
-        return 'zc'
-    else
-        return 'h'
-    endif
-endfunction
-
-nnoremap <expr> h FoldWithH()
 cnoremap <expr> %% getcmdtype( ) == ":" ? expand("%:h") .. "/" : "%%"
 nnoremap & <cmd>&&<CR>
 xnoremap & <cmd>'<,'>&&<CR>
