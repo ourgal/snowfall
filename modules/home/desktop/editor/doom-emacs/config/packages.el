@@ -71,3 +71,4 @@
 (package! ob-async)
 ;; (package! bing-dict)
 (package! gt)
+(package! jsonnet-mode)

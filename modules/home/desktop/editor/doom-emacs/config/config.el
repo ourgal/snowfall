@@ -315,3 +315,8 @@
           url
           ;; 用今天的日期
           (format-time-string "%m/%d/%Y"))))))
+(use-package! jsonnet-mode
+  :mode "\\.jsonnet\\'"
+  :config
+  (when (modulep! :editor format)
+    (set-formatter! 'jsonnetfmt '("jsonnetfmt" "-") :modes '(jsonnet-mode))))
