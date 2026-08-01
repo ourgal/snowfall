@@ -11,7 +11,6 @@ in
     fonts = enabled;
     cli = enabled // {
       ansible = enabled;
-      chezmoi = enabled;
       music.lib-network = enabled;
       audio.player.mpd = enabled;
     };
