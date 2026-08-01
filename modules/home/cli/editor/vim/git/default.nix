@@ -3,7 +3,6 @@
     # keep-sorted start
     "conflict-marker-vim"
     "git-lens-vim"
-    "git-messager-vim"
     "gv-vim"
     "vim-flog"
     "vim-fugitive"
