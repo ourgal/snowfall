@@ -9,7 +9,6 @@ args.module (
     {
       enable = [
         # keep-sorted start
-        "chezmoi-vim"
         "devdocs-vim"
         "meson"
         "vim-bracketed-paste"
