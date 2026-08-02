@@ -1,5 +1,8 @@
 {
   progs.vim = {
-    plugins = "vim-markdown";
+    plugins = [
+      "tabular"
+      "vim-markdown"
+    ];
   };
 }
