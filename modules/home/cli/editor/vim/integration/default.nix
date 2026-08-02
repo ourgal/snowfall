@@ -11,7 +11,6 @@ args.module (
         # keep-sorted start
         "vim-dispatch"
         "vim-floaterm"
-        "vim-tome" # tmux playbook
         "vimux" # tmux
         "zeavim-vim"
         "zoxide-vim"
