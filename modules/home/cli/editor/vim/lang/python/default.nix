@@ -1,1 +1,1 @@
-{ disable = "vim-ipython"; }
+{ }
