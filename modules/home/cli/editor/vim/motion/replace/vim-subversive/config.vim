@@ -1,2 +1,3 @@
-nnoremap R <plug>(SubversiveSubstitute)
-xnoremap R <plug>(SubversiveSubstitute)
+nnoremap s <plug>(SubversiveSubstitute)
+nnoremap ss <plug>(SubversiveSubstituteLine)
+nnoremap S <plug>(SubversiveSubstituteToEndOfLine)
