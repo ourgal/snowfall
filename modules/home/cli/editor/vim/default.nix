@@ -32,7 +32,6 @@ args.module (
         "jump"
         "lang"
         "lsp"
-        "mark"
         "motion"
         "multi-cursor"
         "pair"
