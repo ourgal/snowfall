@@ -29,7 +29,6 @@ args.module (
         "git"
         "help"
         "integration"
-        "jump"
         "lang"
         "lsp"
         "motion"
