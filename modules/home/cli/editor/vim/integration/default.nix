@@ -11,7 +11,6 @@ args.module (
         # keep-sorted start
         "vim-dispatch"
         "vim-floaterm"
-        "zeavim-vim"
         "zoxide-vim"
         # keep-sorted end
       ]
