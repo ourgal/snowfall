@@ -11,7 +11,6 @@ args.module (
         # keep-sorted start
         "vim-dispatch"
         "vim-floaterm"
-        "zoxide-vim"
         # keep-sorted end
       ]
       ++ isX86 target [ "gtm-vim-plugin" ];
