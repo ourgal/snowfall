@@ -1,8 +1,7 @@
 {
   enable = [
     # keep-sorted start
-    "easyjump-vim"
-    "vim-fetch"
+    "vim-sneak"
     # keep-sorted end
   ];
 }
