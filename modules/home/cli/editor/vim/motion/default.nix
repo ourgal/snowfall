@@ -2,7 +2,6 @@
   enable = [
     # keep-sorted start
     "CACX"
-    "asterisk"
     "brackets"
     "dot"
     "exchange"
