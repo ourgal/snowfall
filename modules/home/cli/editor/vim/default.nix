@@ -36,7 +36,6 @@ args.module (
         "pair"
         "picker"
         "preview"
-        "quickfix"
         "register"
         "search"
         "session"
