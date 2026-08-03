@@ -1,1 +1,1 @@
-{ disable = "vim-peekaboo"; }
+{ enable = "vim-peekaboo"; }
