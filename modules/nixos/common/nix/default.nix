@@ -19,6 +19,7 @@ let
       let
         mirrors = [
           "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
+          "https://mirror.sjtu.edu.cn/nix-channels/store?priority=11"
           "https://nix-community.cachix.org?priority=100"
         ];
       in
