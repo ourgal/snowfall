@@ -38,7 +38,6 @@ args.module (
         "preview"
         "session"
         "snippet"
-        "tabline"
         "template"
         "theme"
         "ui"
