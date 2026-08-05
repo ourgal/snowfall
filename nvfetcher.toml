@@ -1173,10 +1173,6 @@ src.git = "https://github.com/aleyan/dela"
 fetch.github = "aleyan/dela"
 cargo_lock = ["Cargo.lock"]
 
-[emacs-eglot-booster]
-src.git = "https://github.com/jdtsmith/eglot-booster"
-fetch.github = "jdtsmith/eglot-booster"
-
 [emacs-perltidy]
 src.git = "https://github.com/perl-ide/perltidy.el"
 fetch.github = "perl-ide/perltidy.el"

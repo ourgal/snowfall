@@ -149,9 +149,6 @@
     '(makefile-gmake-mode . ("make-language-server")))
   (add-hook 'makefile-gmake-mode-hook 'eglot-ensure)
   (setq lua-lsp-dir (expand-file-name "~/.local/share/lua-language-server/")))
-(use-package! eglot-booster
-  :after eglot
-  :config (eglot-booster-mode))
 (map! :after elfeed
   :leader
   :desc "Elfeed" "o e" #'elfeed)

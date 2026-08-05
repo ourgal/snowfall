@@ -61,8 +61,6 @@
   :recipe (:host github :repo "wasamasa/nov.el"))
 (package! pangu-spacing)
 (package! zeal-at-point)
-(package! eglot-booster
-  :recipe (:host github :repo "jdtsmith/eglot-booster"))
 (package! elfeed-protocol)
 (package! elsqlite)
 (package! super-save)

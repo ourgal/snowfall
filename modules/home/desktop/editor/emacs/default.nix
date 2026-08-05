@@ -8,7 +8,6 @@ args.module (
     {
       nixPkgs = [
         # keep-sorted start
-        "emacs-lsp-booster"
         "gnuplot"
         # keep-sorted end
       ];
@@ -25,7 +24,6 @@ args.module (
         "corfu"
         "dirvish"
         "editorconfig"
-        "eglot-booster"
         "eldoc-box"
         "evil"
         "fzf"
