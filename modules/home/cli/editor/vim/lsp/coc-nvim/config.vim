@@ -126,12 +126,15 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " provide custom statusline: lightline.vim, vim-airline
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function',''\'''\')}
 
-let g:coc_global_extensions = ['coc-fish', '@yaegassy/coc-marksman', 'coc-emoji', 'coc-dash-complete', 'coc-just-complete', 'coc-translator', 'coc-perl']
+let g:coc_global_extensions = ['coc-fish', '@yaegassy/coc-marksman', 'coc-emoji', 'coc-dash-complete', 'coc-just-complete', 'coc-translator', 'coc-perl', 'coc-go', 'coc-json', 'coc-prettier', 'coc-basedpyright', 'coc-r-lsp', 'coc-sh', 'coc-sumneko-lua', 'coc-texlab', 'coc-toml', 'coc-vimlsp', 'coc-yaml', 'coc-pairs', 'coc-snippets', 'coc-marketplace', 'coc-translator' ]
 " nnoremap <leader>e <Cmd>CocCommand explorer --quit-on-open<CR>
 
 " limit completion item
 let g:coc_filetype_map = { 'yaml.ansible': 'ansible', }
 set pumheight=10
 
-nmap <Leader>,t <Plug>(coc-translator-p)
-vmap <Leader>,t <Plug>(coc-translator-pv)
+nmap <Leader>K <Plug>(coc-translator-p)
+vmap <Leader>K <Plug>(coc-translator-pv)
+
+" coc snippets
+imap <C-j> <Plug>(coc-snippets-expand-jump)
