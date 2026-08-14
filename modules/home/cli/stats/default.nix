@@ -14,6 +14,7 @@
     "atop"
     "below"
     "compsize"
+    "cpufetch"
     "cyme"
     "dmidecode"
     "fastfetch"
