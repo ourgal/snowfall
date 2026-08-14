@@ -3,6 +3,7 @@
   nixPkgs = [
     # keep-sorted start
     "antora"
+    "cobalt"
     "gssg"
     "hugo"
     "jekyll"
