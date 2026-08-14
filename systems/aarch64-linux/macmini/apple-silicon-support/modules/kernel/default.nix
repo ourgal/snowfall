@@ -1,7 +1,6 @@
 # the Asahi Linux kernel and options that must go along with it
 
-{ config, lib, ... }:
-{
+{ config, lib, ... }: {
   config = lib.mkIf config.hardware.asahi.enable {
     boot.kernelPackages =
       let
@@ -14,15 +13,18 @@
     # source: https://www.kernel.org/doc/html/latest/scheduler/sched-energy.html
     powerManagement.cpuFreqGovernor = lib.mkOverride 800 "schedutil";
 
-    boot.initrd.includeDefaultModules = false;
     boot.initrd.availableKernelModules = [
       # list of initrd modules stolen from
       # https://github.com/AsahiLinux/asahi-scripts/blob/f461f080a1d2575ae4b82879b5624360db3cff8c/initcpio/install/asahi
       "apple-mailbox"
+      "apple_nvmem_spmi"
       "nvme_apple"
       "pinctrl-apple-gpio"
       "macsmc"
-      "macsmc-rtkit"
+      "macsmc-power"
+      "macsmc-input"
+      "macsmc-hwmon"
+      "macsmc-reboot"
       "i2c-pasemi-platform"
       "tps6598x"
       "apple-dart"
@@ -37,9 +39,7 @@
       "spi-hid-apple"
       "spi-hid-apple-of"
       "rtc-macsmc"
-      "simple-mfd-spmi"
       "spmi-apple-controller"
-      "nvmem_spmi_mfd"
       "apple-dockchannel"
       "dockchannel-hid"
       "apple-rtkit-helper"
@@ -68,9 +68,6 @@
 
     # U-Boot does not support EFI variables
     boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
-
-    # U-Boot does not support switching console mode
-    boot.loader.systemd-boot.consoleMode = "0";
 
     # GRUB has to be installed as removable if the user chooses to use it
     boot.loader.grub = lib.mkDefault {

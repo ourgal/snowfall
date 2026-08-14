@@ -236,8 +236,9 @@
             jlink = [ "segger-jlink-qt4-874" ];
             qtwebengine = [ "qtwebengine-5.15.19" ];
             beekeeper-studio = [ "beekeeper-studio-5.3.4" ];
+            pnpm = [ "pnpm-9.15.9" ];
           in
-          koreader ++ sonarr ++ beekeeper ++ ventoy ++ jlink ++ qtwebengine ++ beekeeper-studio;
+          koreader ++ sonarr ++ beekeeper ++ ventoy ++ jlink ++ qtwebengine ++ beekeeper-studio ++ pnpm;
       };
 
       overlays =
@@ -248,7 +249,7 @@
           nixpkgs-f2k = inputs.nixpkgs-f2k.overlays.window-managers;
           nvfetcher = inputs.nvfetcher.overlays.default;
           nix-vscode-extensions = inputs.nix-vscode-extensions.overlays.default;
-          pog = inputs.pog.overlays.${system}.default;
+          pog = inputs.pog.overlays.default;
           nur = inputs.nur.overlays.default;
           nix-monitored = inputs.nix-monitored.overlays.default;
           copyparty = inputs.copyparty.overlays.default;
@@ -318,7 +319,7 @@
           catppuccin = inputs.catppuccin.homeModules.catppuccin;
           nixvim = inputs.nixvim.homeModules.nixvim;
           nyaa = inputs.nyaa.homeManagerModule;
-          nvchad4nix = inputs.nvchad4nix.homeManagerModule;
+          nvchad4nix = inputs.nvchad4nix.homeManagerModules.default;
           nix-doom-emacs-unstraightened = inputs.nix-doom-emacs-unstraightened.hmModule;
           stylix = inputs.stylix.homeModules.stylix;
           zen-browser = inputs.zen-browser.homeModules.twilight;

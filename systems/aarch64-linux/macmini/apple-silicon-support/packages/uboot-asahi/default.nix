@@ -7,13 +7,12 @@
 
 (buildUBoot rec {
   src = fetchFromGitHub {
-    # tracking: https://pagure.io/fedora-asahi/uboot-tools/commits/main
     owner = "AsahiLinux";
     repo = "u-boot";
-    rev = "asahi-v2025.04-1";
-    hash = "sha256-/z37qj26AqsyEBsFT6UEN3GjG6KVsoJOoUB4s9BRDbE=";
+    rev = "asahi-v2026.04-2";
+    hash = "sha256-DbXS8L3j5w8ryYknR+DnAonAdPMNNLaBwWyc27vK0r4=";
   };
-  version = "2025.04-1-asahi";
+  version = "2026.04-2-asahi";
 
   defconfig = "apple_m1_defconfig";
   extraMeta.platforms = [ "aarch64-linux" ];
@@ -40,6 +39,6 @@
     preInstall = ''
       # compress so that m1n1 knows U-Boot's size and can find things after it
       gzip -n u-boot-nodtb.bin
-      cat ${m1n1}/build/m1n1.bin arch/arm/dts/t[68]*.dtb u-boot-nodtb.bin.gz > m1n1-u-boot.bin
+      cat ${m1n1}/lib/m1n1/m1n1.bin arch/arm/dts/t[68]*.dtb u-boot-nodtb.bin.gz > m1n1-u-boot.bin
     '';
   })

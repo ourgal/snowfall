@@ -1,147 +1,72 @@
 {
   lib,
   callPackage,
-  writeText,
   linuxPackagesFor,
-  withRust ? true,
   _kernelPatches ? [ ],
-}:
+}@args:
 
 let
-  i = builtins.elemAt;
-
-  # parse <OPT> [ymn]|foo style configuration as found in a patch's extraConfig
-  # into a list of k, v tuples
-  parseExtraConfig =
-    config:
-    let
-      lines = builtins.filter (s: s != "") (lib.strings.splitString "\n" config);
-      parseLine =
-        line:
-        let
-          t = lib.strings.splitString " " line;
-          join = l: builtins.foldl' (a: b: "${a} ${b}") (builtins.head l) (builtins.tail l);
-          v = if (builtins.length t) > 2 then join (builtins.tail t) else (i t 1);
-        in
-        [
-          "CONFIG_${i t 0}"
-          v
-        ];
-    in
-    map parseLine lines;
-
-  # parse <OPT>=lib.kernel.(yes|module|no)|lib.kernel.freeform "foo"
-  # style configuration as found in a patch's extraStructuredConfig into
-  # a list of k, v tuples
-  parseExtraStructuredConfig =
-    config:
-    lib.attrsets.mapAttrsToList (k: v: [
-      "CONFIG_${k}"
-      (v.tristate or v.freeform)
-    ]) config;
-
-  parsePatchConfig =
-    {
-      extraConfig ? "",
-      extraStructuredConfig ? { },
-      ...
-    }:
-    (parseExtraConfig extraConfig) ++ (parseExtraStructuredConfig extraStructuredConfig);
-
-  # parse CONFIG_<OPT>=[ymn]|"foo" style configuration as found in a config file
-  # into a list of k, v tuples
-  parseConfig =
-    config:
-    let
-      parseLine = builtins.match ''(CONFIG_[[:upper:][:digit:]_]+)=(([ymn])|"([^"]*)")'';
-      # get either the [ymn] option or the "foo" option; whichever matched
-      t =
-        l:
-        let
-          v = (i l 2);
-        in
-        [
-          (i l 0)
-          (if v != null then v else (i l 3))
-        ];
-      lines = lib.strings.splitString "\n" config;
-    in
-    map t (builtins.filter (l: l != null) (map parseLine lines));
-
-  origConfigfile = ./config;
+  extraArgs = lib.removeAttrs args [
+    "lib"
+    "callPackage"
+    "linuxPackagesFor"
+    "_kernelPatches"
+  ];
 
   linux-asahi-pkg =
     {
       stdenv,
       lib,
       fetchFromGitHub,
-      linuxKernel,
+      buildLinux,
       ...
     }:
-    let
-      origConfigText = builtins.readFile origConfigfile;
+    buildLinux (
+      lib.recursiveUpdate rec {
+        inherit stdenv lib;
 
-      # extraConfig from all patches in order
-      extraConfig =
-        lib.fold (patch: ex: ex ++ (parsePatchConfig patch)) [ ] _kernelPatches
-        ++ (lib.optional withRust [
-          "CONFIG_RUST"
-          "y"
-        ]);
-      # config file text for above
-      extraConfigText =
-        let
-          text = k: v: if (v == "y") || (v == "m") || (v == "n") then "${k}=${v}" else ''${k}="${v}"'';
-        in
-        (map (t: text (i t 0) (i t 1)) extraConfig);
+        pname = "linux-asahi";
+        version = "7.1.5";
+        modDirVersion = version;
+        extraMeta.branch = "7.1";
 
-      # final config as a text file path
-      configfile =
-        if extraConfig == [ ] then
-          origConfigfile
-        else
-          writeText "config" ''
-            ${origConfigText}
+        src = fetchFromGitHub {
+          owner = "AsahiLinux";
+          repo = "linux";
+          tag = "asahi-7.1.5-2";
+          hash = "sha256-z7S0YTmDshMK2frFhMm4M4wUOV3rPOwxPkR2IXk4R+Y=";
+        };
 
-            # Patches
-            ${lib.strings.concatStringsSep "\n" extraConfigText}
-          '';
-      # final config as an attrset
-      configAttrs =
-        let
-          makePair = t: lib.nameValuePair (i t 0) (i t 1);
-          configList = (parseConfig origConfigText) ++ extraConfig;
-        in
-        builtins.listToAttrs (map makePair (lib.lists.reverseList configList));
+        kernelPatches = [
+          {
+            name = "Asahi config";
+            patch = null;
+            structuredExtraConfig = with lib.kernel; {
+              # Needed for GPU
+              ARM64_16K_PAGES = yes;
 
-      # used to fix issues when nixpkgs gets ahead of the kernel
-    in
-    linuxKernel.manualConfig rec {
-      inherit stdenv lib;
+              ARM64_MEMORY_MODEL_CONTROL = yes;
+              ARM64_ACTLR_STATE = yes;
 
-      version = "6.14.8-asahi";
-      modDirVersion = version;
-      extraMeta.branch = "6.14";
+              # Might lead to the machine rebooting if not loaded soon enough
+              APPLE_WATCHDOG = yes;
 
-      src = fetchFromGitHub {
-        # tracking: https://github.com/AsahiLinux/linux/tree/asahi-wip (w/ fedora verification)
-        owner = "AsahiLinux";
-        repo = "linux";
-        rev = "asahi-6.14.8-1";
-        hash = "sha256-JrWVw1FiF9LYMiOPm0QI0bg/CrZAMSSVcs4AWNDIH3Q=";
-      };
+              # Can not be built as a module, defaults to no
+              APPLE_M1_CPU_PMU = yes;
 
-      kernelPatches = [ ] ++ _kernelPatches;
+              # Defaults to 'y', but we want to allow the user to set options in modprobe.d
+              HID_APPLE = module;
 
-      inherit configfile;
-      config = configAttrs;
-    };
+              APPLE_PMGR_MISC = yes;
+              APPLE_PMGR_PWRSTATE = yes;
+            };
+            features.rust = true;
+          }
+        ]
+        ++ _kernelPatches;
+      } extraArgs
+    );
 
-  linux-asahi = (callPackage linux-asahi-pkg { }).overrideAttrs (_: {
-    # FIXME: Remove when https://github.com/NixOS/nixpkgs/pull/436245 lands
-    preConfigure = ''
-      export RUST_LIB_SRC KRUSTFLAGS
-    '';
-  });
+  linux-asahi = callPackage linux-asahi-pkg { };
 in
 lib.recurseIntoAttrs (linuxPackagesFor linux-asahi)
