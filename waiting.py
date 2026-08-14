@@ -5204,7 +5204,7 @@ with sqlite3.connect("waiting.db") as conn:
                 Categories.AUDIO,
                 "04/15/2026",
                 None,
-                Waiting_Status.WAITING,
+                Waiting_Status.DONE,
                 Types.PACKAGE,
             ],
             [

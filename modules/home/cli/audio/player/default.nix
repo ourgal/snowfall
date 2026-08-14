@@ -1,6 +1,7 @@
 {
   nixPkgs = [
     # keep-sorted start
+    "cliamp"
     "cmus"
     "jellyfin-tui"
     "mpg123"
