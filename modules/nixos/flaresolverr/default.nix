@@ -1,11 +1,6 @@
 args:
 let
-  inherit (args)
-    namespace
-    lib
-    pkgs
-    _name
-    ;
+  inherit (args) namespace lib _name;
   inherit (lib.${namespace})
     nixosModule
     enabled
@@ -20,7 +15,6 @@ let
     services = {
       flaresolverr = enabled // {
         openFirewall = true;
-        package = pkgs.nur.repos.xddxdd.flaresolverr-21hsmw;
       };
       caddy = mkCaddyProxy {
         domain = domains.${name};
