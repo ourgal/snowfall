@@ -76,11 +76,13 @@ let
   package =
     if cfg.xcaddy.enable then
       xcaddy
-    else
+    else if cfg.plugin.enable then
       pkgs.caddy.withPlugins {
         plugins = [ "github.com/caddy-dns/duckdns@${sources.duckdns.version}" ];
         hash = "sha256-uMYFZJ+dOoahO9+nAU+bGiuFQRmPbPWFwH1uH8xBcFQ=";
-      };
+      }
+    else
+      pkgs.caddy;
   value = {
     services.caddy = enabled // {
       virtualHosts =
@@ -105,6 +107,7 @@ let
   };
   extraOpts = {
     xcaddy = switch;
+    plugin = switch;
   };
   _args = { inherit value args extraOpts; };
 in
