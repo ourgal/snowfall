@@ -12,6 +12,7 @@ let
     domains
     getDirname
     mkFireholRule
+    mkCaddyProxy
     ;
   port = 8222;
   name = getDirname _name;
@@ -26,23 +27,10 @@ let
         environmentFile = config.sops.secrets."${name}/adminToken".path;
       };
       borgmatic.settings.source_directories = [ "/var/lib/bitwarden_rs" ];
-      caddy =
-        let
-          inherit (config.${namespace}.user.duckdns) token domain;
-        in
-        {
-          virtualHosts = {
-            "http://${domains.${name}}".extraConfig = ''
-              reverse_proxy http://localhost:${toString port}
-            '';
-            "${name}.${domain}.duckdns.org".extraConfig = ''
-              tls {
-                  dns duckdns ${token}
-              }
-              reverse_proxy http://localhost:${toString port}
-            '';
-          };
-        };
+      caddy = mkCaddyProxy {
+        domain = domains.${name};
+        inherit port;
+      };
     };
     ${namespace} = mkFireholRule {
       inherit name;
