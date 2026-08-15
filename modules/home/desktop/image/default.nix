@@ -7,7 +7,6 @@
     "random-background"
     "viewer"
     "wallpapers"
-    "whiteboard"
     # keep-sorted end
   ];
 }
