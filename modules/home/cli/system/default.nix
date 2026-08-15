@@ -16,6 +16,7 @@
   ];
   nixPkgs = [
     # keep-sorted start
+
     "at"
     "bkt"
     "charm-freeze"
@@ -25,7 +26,6 @@
     "exfatprogs"
     "fdupes"
     "flamelens"
-    "geekbench"
     "glib"
     "handlr-regex"
     "hdparm"
