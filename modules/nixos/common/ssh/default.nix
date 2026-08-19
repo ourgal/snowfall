@@ -10,7 +10,6 @@ let
       settings.PermitRootLogin = "yes";
       startWhenNeeded = true;
     };
-    programs.mosh = enabled;
     environment.systemPackages = [ pkgs.${namespace}.trzsz-go ];
   };
   _args = { inherit value args; };
