@@ -23,6 +23,7 @@ let
     "office1"
     "work2"
     "work3"
+    "nuc"
   ];
   laptops = [
     "air"
@@ -37,6 +38,7 @@ let
     "q4ospc"
     "work2"
     "work3"
+    "nuc"
   ];
   work = [
     "office2043"

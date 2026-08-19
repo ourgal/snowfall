@@ -14,6 +14,7 @@ let
     enabled
     ;
   inherit (config.${namespace}.user) host;
+  isHarmonia = true && (host == "nuc");
   value = {
     nix =
       let
@@ -21,7 +22,8 @@ let
           "https://mirror.nju.edu.cn/nix-channels/store?priority=10"
           "https://mirror.sjtu.edu.cn/nix-channels/store?priority=11"
           "https://nix-community.cachix.org?priority=100"
-        ];
+        ]
+        ++ lib.optional isHarmonia "http://192.168.123.100:50000?priority=9";
       in
       {
         settings = enableOpt [ "auto-optimise-store" ] // {
@@ -33,8 +35,10 @@ let
           extra-substituters = lib.mkBefore mirrors;
           extra-trusted-public-keys = [
             "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-          ];
+          ]
+          ++ lib.optional isHarmonia "cache.example.org-1:lFI4YUR1ZKE8dz1JoXTRBvIEHaeKmW3LHBlDTJDW1V8=";
           trusted-users = [ config.${namespace}.user.name ];
+          fallback = true;
           max-jobs =
             if
               builtins.elem host [
