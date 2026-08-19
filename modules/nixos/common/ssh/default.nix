@@ -1,6 +1,6 @@
 args:
 let
-  inherit (args) namespace lib pkgs;
+  inherit (args) namespace lib;
   inherit (lib.${namespace}) nixosModule enabled;
   value = {
     services.openssh = enabled // {
@@ -10,7 +10,6 @@ let
       settings.PermitRootLogin = "yes";
       startWhenNeeded = true;
     };
-    environment.systemPackages = [ pkgs.${namespace}.trzsz-go ];
   };
   _args = { inherit value args; };
 in
