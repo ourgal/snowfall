@@ -5,9 +5,6 @@
     "convert"
     "metadata"
     "player"
-    "radio"
-    "subsonic"
-    "visual"
     # keep-sorted end
   ];
 }

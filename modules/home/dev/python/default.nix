@@ -1,27 +1,17 @@
 {
   pyPkgs = [
     # keep-sorted start
-    "black"
-    "flynt"
     "ipython"
     "ptpython"
     # keep-sorted end
   ];
   nixPkgs = [
     # keep-sorted start
-    "bandit"
-    "migrate-to-uv"
     "mypy"
     "poetry"
-    "pylint"
-    "pypy"
     "pyright"
-    "python-launcher"
-    "pyupgrade"
-    "rye"
     "uv"
     "uv-sort"
-    "zxpy"
     # keep-sorted end
   ];
   progs = {

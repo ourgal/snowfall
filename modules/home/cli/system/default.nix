@@ -1,60 +1,13 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "cache"
-    "ccsum"
-    "ch"
-    "cron"
-    "debounce"
-    "is"
-    "quickbench"
-    "recoverpy"
-    "servicer"
-    "wol"
-    "xrestrict"
-    # keep-sorted end
-  ];
   nixPkgs = [
     # keep-sorted start
-
-    "at"
-    "bkt"
-    "charm-freeze"
-    "dcfldd"
     "dos2unix"
-    "e2fsprogs"
-    "exfatprogs"
-    "fdupes"
-    "flamelens"
-    "glib"
-    "handlr-regex"
-    "hdparm"
-    "hot-resize"
-    "hwinfo"
-    "inxi"
-    "isd"
-    "iwqr"
-    "kbt" # keyboard tester
-    "kmon"
-    "nixos-facter"
-    "pinentry-all"
     "pipx"
-    "psmisc"
-    "screenkey"
-    "sequin"
     "smartmontools"
-    "squashfsTools"
-    "systemd-manager-tui"
     "sysz"
-    "toolbox"
-    "topgrade"
-    "tray-tui"
-    "ugm"
-    "wifitui"
     "wmctrl"
     "xdotool"
     "xkill"
     # keep-sorted end
   ];
-  nixX86Pkgs = "intentrace";
 }

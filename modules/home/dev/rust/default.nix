@@ -3,7 +3,6 @@
     # keep-sorted start
     "cargo"
     "rustc"
-    "rustycli"
     # keep-sorted end
   ];
   files = {

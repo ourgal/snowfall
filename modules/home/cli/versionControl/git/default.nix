@@ -14,33 +14,16 @@ args.module (
     {
       enable = [
         # keep-sorted start
-        "add"
-        "alias"
-        "amend"
         "batch"
-        "blame"
-        "branch"
         "changelog"
-        "cli"
-        "clone"
         "commit"
         "diff"
         "download"
-        "github"
-        "history"
         "hook"
-        "ignore"
-        "issue"
-        "merge"
-        "push"
         "rebase"
-        "search"
         "security"
         "stats"
-        "sync"
         "template"
-        "time-tracking"
-        "tui"
         "undo"
         # keep-sorted end
       ];

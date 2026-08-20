@@ -4,5 +4,4 @@
     "aonsoku"
     # keep-sorted end
   ];
-  enable = "effect";
 }

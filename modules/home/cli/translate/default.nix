@@ -1,11 +1,4 @@
 {
-  nixPkgs = [
-    # keep-sorted start
-    "gtt"
-    "opencc"
-    "udict"
-    "ydict"
-    # keep-sorted end
-  ];
+  nixPkgs = "ydict";
   enable = "translate-shell";
 }

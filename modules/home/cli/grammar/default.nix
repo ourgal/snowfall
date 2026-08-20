@@ -1,30 +1,19 @@
-args:
-args.module (
-  args
-  // (
-    let
-      inherit (args) pkgs;
-    in
-    {
-      value = {
-        home.packages = [
-          # keep-sorted start
-          pkgs.enchant
-          pkgs.hunspell
-          pkgs.languagetool
-          pkgs.wordnet
-          # keep-sorted end
-          (pkgs.aspellWithDicts (
-            dicts: with dicts; [
-              # keep-sorted start
-              en
-              en-computers
-              en-science
-              # keep-sorted end
-            ]
-          ))
-        ];
-      };
-    }
-  )
-)
+{
+  nixPkgs = p: [
+    # keep-sorted start
+    p.enchant
+    p.hunspell
+    p.languagetool
+    p.wordnet
+    # keep-sorted end
+    (p.aspellWithDicts (
+      dicts: with dicts; [
+        # keep-sorted start
+        en
+        en-computers
+        en-science
+        # keep-sorted end
+      ]
+    ))
+  ];
+}

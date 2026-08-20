@@ -13,28 +13,7 @@ args.module (
       inherit (builtins) elem;
     in
     {
-      myPkgs = [
-        # keep-sorted start
-        "lssh"
-        "shipit"
-        # keep-sorted end
-      ];
-      nixPkgs = [
-        # keep-sorted start
-        "fast-ssh"
-        "ggh"
-        "opener"
-        "openssl"
-        "ssh-tools"
-        "sshpass"
-        "sshs"
-        "sshx"
-        "termscp"
-        "trzsz-ssh"
-        "wishlist"
-        # keep-sorted end
-      ];
-      perlPkgs = "AppClusterSSH";
+      nixPkgs = "termscp";
       tmpfiles = [ "d ${config.home.homeDirectory}/.ssh - - - - -" ];
       progs.ssh = {
         enableDefaultConfig = false;

@@ -3,7 +3,6 @@
     # keep-sorted start
     "jrnl"
     "nb"
-    "pandoc"
     # keep-sorted end
   ];
 }

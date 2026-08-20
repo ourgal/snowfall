@@ -1,16 +1,5 @@
 {
-  nixPkgs = [
-    # keep-sorted start
-    "delta"
-    "diffnav"
-    "riffdiff"
-    "ydiff"
-    # keep-sorted end
-  ];
-  progs.fish.functions.diffnav = {
-    body = "git diff | command diffnav";
-    description = "Diffnav";
-  };
+  nixPkgs = "delta";
   progs.git.settings."color \"diff\"" = {
     meta = "blue bold";
     frag = "magenta";

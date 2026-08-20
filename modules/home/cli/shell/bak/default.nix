@@ -1,0 +1,1 @@
+{ nixPkgs = "oils-for-unix"; }

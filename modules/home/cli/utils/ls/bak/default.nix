@@ -1,0 +1,4 @@
+{
+  myPkgs = "facad";
+  nixPkgs = "tree";
+}

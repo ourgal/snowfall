@@ -1,13 +1,8 @@
 {
   nixPkgs = [
     # keep-sorted start
-    "diskus"
-    "dust"
     "dua"
-    "duc"
-    "gdu"
-    "ncdu"
-    "wiper"
+    "dust"
     # keep-sorted end
   ];
 }

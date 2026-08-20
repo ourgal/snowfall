@@ -13,7 +13,6 @@
     "edir"
     "f2"
     "massren"
-    "mmv-go"
     "mnamer"
     "nomino"
     "regname"

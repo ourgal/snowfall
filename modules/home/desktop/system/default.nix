@@ -13,33 +13,20 @@ args.module (
         ;
     in
     {
-      inputPkgs = p: [ p.ulauncher.packages."${pkgs.system}".default ];
-      myPkgs = "hyprkan";
-      nixX86Pkgs = "rustdesk";
       nixPkgs = [
         # keep-sorted start
-        "blobdrop"
         "brightnessctl"
         "dragon-drop"
         "fuzzel"
-        "hardinfo2"
         "libnotify"
-        "polkit"
-        "qtscrcpy"
-        "remmina"
         "ripdrag"
         "scrcpy"
         "swww"
-        "variety"
         "xclip"
-        "xcolor"
-        "xmagnify"
-        "zenity"
         # keep-sorted end
       ];
       enable = [
         # keep-sorted start
-        "clipboard"
         "cursor"
         "dunst"
         "espanso"

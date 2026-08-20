@@ -1,30 +1,8 @@
 {
-  myPkgs = [
-    # keep-sorted start
-    "archwiki"
-    "eg"
-    "lib-x"
-    # keep-sorted end
-  ];
+  myPkgs = "archwiki";
   nixPkgs = [
-    # keep-sorted start
-    "bk"
-    "ccal"
+    "pandoc"
     "cheat"
-    "cppman"
-    "dasht"
-    "halp"
-    "jiten"
-    "man-pages"
-    "pdftk"
-    "wiki-tui"
-    # keep-sorted end
   ];
-  enable = [
-    # keep-sorted start
-    "doxx"
-    "outfieldr"
-    "qman"
-    # keep-sorted end
-  ];
+  enable = "qman";
 }

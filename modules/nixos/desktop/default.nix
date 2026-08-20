@@ -25,18 +25,18 @@ let
       ];
     };
 
-    programs = {
-      hyprland = enabled // {
-        xwayland = enabled;
-      };
-      sway = enabled;
-      niri = enabled // {
-        package = pkgs.niri;
-      };
-    };
+    # programs = {
+    #   hyprland = enabled // {
+    #     xwayland = enabled;
+    #   };
+    #   sway = enabled;
+    #   niri = enabled // {
+    #     package = pkgs.niri;
+    #   };
+    # };
 
-    # for swaylock
-    security.pam.services.swaylock = { };
+    # # for swaylock
+    # security.pam.services.swaylock = { };
 
     services.xserver = enabled // {
       windowManager = {
@@ -79,12 +79,10 @@ let
     };
 
     # XDG portal
-    # xdg.portal = enabled // {
-    #   extraPortals = [
-    #     pkgs.kdePackages.xdg-desktop-portal-kde
-    #   ];
-    #   config.common.default = "*";
-    # };
+    xdg.portal = enabled // {
+      extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
+      config.common.default = "*";
+    };
   };
   _args = { inherit value args; };
 in

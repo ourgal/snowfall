@@ -1,5 +1,10 @@
 {
-  nixPkgs = "gpg-tui";
+  nixPkgs = [
+    # keep-sorted start
+    "gpg-tui"
+    "pinentry-all"
+    # keep-sorted end
+  ];
   enable = {
     gpg-agent.ssh.enable = true;
   };
