@@ -112,7 +112,6 @@ in
       "laptop"
       "logrotate"
       "nh"
-      "pcscd"
       "power"
       "scrutiny"
       "sops-nix"

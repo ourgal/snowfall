@@ -28,7 +28,6 @@ in
     "home-manager"
     "logrotate"
     "nh"
-    "pcscd"
     "tuptime"
     # keep-sorted end
   ];
