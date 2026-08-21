@@ -13,6 +13,7 @@
     "download"
     "editor"
     "encrypt"
+    "epub"
     "file-manager"
     "grammar"
     "history"
