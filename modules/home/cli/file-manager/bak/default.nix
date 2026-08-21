@@ -1,4 +1,11 @@
 {
   myPkgs = "bt";
-  nixPkgs = "projectable";
+  nixPkgs = [
+    # keep-sorted start
+    "felix-fm"
+    "fm-go"
+    "projectable"
+    "sfm"
+    # keep-sorted end
+  ];
 }
