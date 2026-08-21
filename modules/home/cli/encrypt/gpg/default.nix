@@ -7,6 +7,7 @@
   ];
   enable = {
     gpg-agent.ssh.enable = true;
+    pcscd.enable = true;
   };
   progs.gpg = {
     settings = {
