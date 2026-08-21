@@ -18,10 +18,12 @@ args.module (
               "detect-rounded-corners"
               "detect-client-opacity"
               "detect-transient"
-              "glx-no-stencil"
               "use-damage"
             ]
-            // disableOpt [ "inactive-opacity-override" ]
+            // disableOpt [
+              "inactive-opacity-override"
+              "glx-no-stencil"
+            ]
             // {
               shadow-radius = 7;
               shadow-offset-x = -7;
