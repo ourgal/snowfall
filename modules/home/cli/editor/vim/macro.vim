@@ -1,9 +1,9 @@
 scriptencoding utf-8
 function LinovelReg()
-    call setreg('n', '"z4yy3j"zpkA,j^j$b"+Riqj$be2k^') " new
+    call setreg('n', '"z4yy3j"zpkA,j^j$b"+siqj$be2k^') " new
     call setreg('r', '4yy$%pkA,3j2k') " repeat
     call setreg('i', '3yy2jpkA,j^j$3bek^') " add image
-    call setreg('d', '^yejRe^') " rename file
+    call setreg('d', '^yejse^') " rename file
     call setreg('x', '$"ap^yiq%%Riq')
 endfunction
 
