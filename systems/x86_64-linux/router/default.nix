@@ -37,13 +37,13 @@ in
         router = enabled;
         ssh = enabled;
         cloudflared = enabled;
-        tailscale = disabled;
+        tailscale = enabled;
       };
       bpftune = enabled;
       iotop = enabled;
       harmonia = enabled;
       cloudflared = enabled;
-      tailscale = disabled;
+      tailscale = enabled;
       bbr = enabled;
       pixiecore = enabled;
     };

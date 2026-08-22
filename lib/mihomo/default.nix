@@ -93,7 +93,7 @@ in
           (lib.attrsets.filterAttrs (n: _v: n != "tolerance") origin)
           // {
             type = "select";
-            tag = origin.tag + " 手动";
+            name = origin.name + " 手动";
           };
       in
       rec {

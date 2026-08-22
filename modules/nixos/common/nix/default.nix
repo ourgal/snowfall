@@ -14,7 +14,12 @@ let
     enabled
     ;
   inherit (config.${namespace}.user) host;
-  isHarmonia = true && (host == "nuc");
+  isHarmonia =
+    true
+    && (builtins.elem host [
+      "router"
+      "nuc"
+    ]);
   value = {
     nix =
       let
