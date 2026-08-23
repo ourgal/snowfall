@@ -3030,6 +3030,17 @@
     };
     date = "2024-08-16";
   };
+  sing-box-subscribe-cli = {
+    pname = "sing-box-subscribe-cli";
+    version = "v1.0.4";
+    src = fetchFromGitHub {
+      owner = "rainbend";
+      repo = "sing-box-subscribe-cli";
+      rev = "v1.0.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-wHDzB3OPs+yMnyG0Br+dczfOnewBEgxuwlEjCR9vWtg=";
+    };
+  };
   slashslash-fish = {
     pname = "slashslash-fish";
     version = "64d29b229f77e5f01562370f310edc3fcaa5ca1c";
