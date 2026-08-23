@@ -66,7 +66,6 @@ in
     "sane"
     "scrutiny"
     "syncthing"
-    "temp-hosts"
     "tpm"
     "tuptime"
     "udev"
