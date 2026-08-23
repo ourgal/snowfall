@@ -2698,7 +2698,7 @@ dependencies = [
 
 [[package]]
 name = "qlty"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -2774,7 +2774,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-analysis"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "config",
@@ -2803,6 +2803,7 @@ dependencies = [
  "tree-sitter-c",
  "tree-sitter-c-sharp",
  "tree-sitter-cpp",
+ "tree-sitter-elixir",
  "tree-sitter-go",
  "tree-sitter-java",
  "tree-sitter-javascript",
@@ -2819,7 +2820,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-check"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "ar",
@@ -2862,6 +2863,7 @@ dependencies = [
  "sysinfo",
  "tar",
  "tempfile",
+ "thiserror 2.0.16",
  "tracing",
  "tracing-test",
  "ureq",
@@ -2871,7 +2873,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-cloud"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "insta",
@@ -2883,7 +2885,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-config"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "auth-git2",
@@ -2921,7 +2923,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-coverage"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -2953,7 +2955,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-formats"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "flate2",
@@ -2966,14 +2968,14 @@ dependencies = [
 
 [[package]]
 name = "qlty-plugins"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "rust-embed",
 ]
 
 [[package]]
 name = "qlty-smells"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "anyhow",
  "bencher",
@@ -2992,7 +2994,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-test-utilities"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "git2",
  "tempfile",
@@ -3000,7 +3002,7 @@ dependencies = [
 
 [[package]]
 name = "qlty-types"
-version = "0.630.0"
+version = "0.643.0"
 dependencies = [
  "clap",
  "pbjson",
@@ -4394,6 +4396,16 @@ name = "tree-sitter-cpp"
 version = "0.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e058d4b9cefb54a8f322b31a1bd3cd306919b70b729523473b5aad8d315a8897"
+dependencies = [
+ "cc",
+ "tree-sitter",
+]
+
+[[package]]
+name = "tree-sitter-elixir"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "df94bf7f057768b1cab2ee1f14812ed4ae33f9e04d09254043eeaa797db4ef70"
 dependencies = [
  "cc",
  "tree-sitter",
