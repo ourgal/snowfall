@@ -51,20 +51,14 @@ let
   ];
   domains = (foldl' (acc: v: acc // { "${v}" = "${v}.${domain}"; }) { } services) // {
     anki-sync-server = "anki.${domain}";
-    sublink = lib.strings.fileContents ./sublink.key;
   };
   xyzDomains = (foldl' (acc: v: acc // { "${v}" = "${v}.${xyzDomain}"; }) { } services) // {
     anki-sync-server = "anki.${xyzDomain}";
+    sublink = "sub.${xyzDomain}";
   };
   fakeIpExclude = lib.strings.splitString "\n" (lib.strings.fileContents ./fakeIpExclude.key);
   domainBlackList = lib.strings.splitString "\n" (lib.strings.fileContents ./blacklist.key);
   domainWhiteList = lib.strings.splitString "\n" (lib.strings.fileContents ./whitelist.key);
-  redirectDomains = [
-    {
-      from = "lightnovel.us";
-      to = "lightnovel.fun";
-    }
-  ];
 in
 {
   inherit
@@ -73,7 +67,6 @@ in
     fakeIpExclude
     domainBlackList
     domainWhiteList
-    redirectDomains
     xyzDomain
     xyzDomains
     ;

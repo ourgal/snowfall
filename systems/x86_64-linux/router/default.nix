@@ -26,24 +26,26 @@ in
         dns = enabled;
         dhcp = enabled;
       };
+      firewall = {
+        disable = enabled;
+      };
       avahi = enabled;
       pppd = enabled // {
         inherit wan lan;
       };
       sing-box = enabled;
       mihomo = disabled;
-      temp-hosts = enabled;
       sops-nix = enabled // {
         router = enabled;
         ssh = enabled;
         cloudflared = enabled;
-        tailscale = enabled;
+        tailscale = disabled;
       };
       bpftune = enabled;
       iotop = enabled;
       harmonia = enabled;
       cloudflared = enabled;
-      tailscale = enabled;
+      tailscale = disabled;
       bbr = enabled;
       pixiecore = enabled;
     };

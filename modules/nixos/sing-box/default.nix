@@ -8,8 +8,6 @@ let
     ;
   inherit (lib.${namespace})
     nixosModule
-    mkOpt'
-    cfgNixos
     enabled
     domainBlackList
     domainWhiteList
@@ -23,32 +21,11 @@ let
     dnsRules
     ruleSet
     mkProvider
-    mkFirewall
     ;
-  inherit (builtins) map attrValues;
-  freeSubs = lib.${namespace}.freeSubs { isMihomo = false; };
-  cfg = cfgNixos config.${namespace} ./.;
-  isTproxy = cfg.mode == "tproxy";
+  inherit (builtins) attrValues;
   apiPort = 9999;
-  tproxyPort = 7893;
-  redirectPort = 7892;
-  dnsPort = 1053;
   mixPort = 7890;
-  routingMark = 255;
-  fakeIpSubnet = "198.18.0.0/16";
-  fakeIp6Subnet = "fc00::/16";
   customdnsRules = [
-    {
-      domain = [
-        "localhost"
-        "time.android.com"
-        "time.facebook.com"
-      ];
-      domain_suffix =
-        (lib.strings.splitString "\n" (lib.strings.fileContents ./localDomain.key))
-        ++ (map (v: v.from) lib.${namespace}.redirectDomains);
-      server = dnsServers.hosts_local.tag;
-    }
     {
       domain_suffix = fakeIpExclude;
       server = dnsServers.direct.tag;
@@ -66,26 +43,44 @@ let
   ];
   value = {
     services.sing-box = enabled // {
-      package = pkgs.${namespace}.sing-box-fork;
+      package = pkgs.sing-box;
       settings = {
         dns = {
           servers = attrValues dnsServers;
           rules = customdnsRules ++ dnsRules;
-          final = dnsServers.proxy.tag;
-          independent_cache = true;
+          final = dnsServers.local.tag;
           reverse_mapping = true;
-          fakeip = {
-            enabled = true;
-            inet4_range = fakeIpSubnet;
-            inet6_range = fakeIp6Subnet;
-          };
         };
+        ntp = {
+          enabled = true;
+          server = "time.apple.com";
+          server_port = 123;
+          interval = "30m";
+        };
+        inbounds = [
+          {
+            type = "mixed";
+            tag = "mixed-in";
+            listen = "0.0.0.0";
+            listen_port = mixPort;
+          }
+          {
+            type = "tun";
+            tag = "tun-in";
+            address = "172.19.0.1/30";
+            auto_route = true;
+            auto_redirect = true;
+            strict_route = true;
+            stack = "mixed";
+          }
+        ];
+        outbounds = outboundsSorted;
         route = {
+          default_domain_resolver = dnsServers.resolver.tag;
           rules = customRouteRules ++ routeRules;
           rule_set = attrValues ruleSet;
           final = outbounds.final.tag;
-          auto_detect_interface = false;
-          default_mark = routingMark;
+          auto_detect_interface = true;
         };
         experimental = {
           cache_file = {
@@ -101,53 +96,18 @@ let
             default_mode = "Rule";
           };
         };
-        inbounds = [
-          {
-            type = "tproxy";
-            tag = "tproxy-in";
-            listen = "::";
-            listen_port = tproxyPort;
-            udp_fragment = true;
-            sniff = true;
-            sniff_override_destination = false;
-          }
-          {
-            type = "redirect";
-            tag = "redirect-in";
-            listen = "::";
-            listen_port = redirectPort;
-            sniff = true;
-            sniff_override_destination = false;
-          }
-          {
-            type = "direct";
-            tag = "dns-in";
-            listen = "::";
-            listen_port = dnsPort;
-          }
-          {
-            type = "mixed";
-            tag = "mixed-in";
-            listen = "::";
-            listen_port = mixPort;
-            sniff = true;
-            sniff_override_destination = false;
-          }
-        ];
         log = {
           disabled = false;
           level = "info";
           timestamp = true;
         };
-        outbounds = outboundsSorted;
-        outbound_providers = [
+        providers = [
           (mkProvider {
             tag = "nano";
             url = {
               _secret = config.sops.secrets."subs/nano".path;
             };
             hour = 4;
-            minute = 0;
           })
           (mkProvider {
             tag = "knjc";
@@ -155,88 +115,29 @@ let
               _secret = config.sops.secrets."subs/knjc".path;
             };
             hour = 24;
-            minute = 0;
           })
-          (mkProvider {
-            tag = "worker";
-            url = {
-              _secret = config.sops.secrets."subs/worker".path;
-            };
-            hour = 0;
-            minute = 15;
-          })
-        ]
-        ++ map (
-          x:
-          mkProvider {
-            tag = x.name;
-            url = x.url;
-            hour = x.updateInterval;
-          }
-        ) (attrValues freeSubs);
+        ];
       };
     };
     networking = {
       firewall =
         let
           p = [
-            dnsPort
             apiPort
             mixPort
             53
-          ]
-          ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+          ];
         in
         {
           allowedTCPPorts = p;
           allowedUDPPorts = p;
         };
     };
-    systemd.services.sing-box =
-      let
-        firewallScripts = mkFirewall {
-          inherit
-            isTproxy
-            apiPort
-            tproxyPort
-            redirectPort
-            dnsPort
-            mixPort
-            fakeIpSubnet
-            fakeIp6Subnet
-            routingMark
-            ;
-          FirewallMark = toString 1;
-          ipTableMark = "100";
-          ipTableMarkV6 = "101";
-        };
-        firewallStart = pkgs.writeShellScript "singboxFirewallStart" firewallScripts.start;
-        firewallStop = pkgs.writeShellScript "singboxFirewallStop" firewallScripts.stop;
-      in
-      {
-        path = with pkgs; [
-          iptables
-          iproute2
-          gawk
-        ];
-        serviceConfig = {
-          ExecStartPre = [ firewallStart ];
-          ExecStop = [ firewallStop ];
-        };
-      };
     ${namespace}.user.ports = [
       apiPort
-      dnsPort
       mixPort
-    ]
-    ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+    ];
   };
-  extraOpts = {
-    mode = mkOpt' (lib.types.enum [
-      "tproxy"
-      "redirect"
-    ]) "tproxy";
-  };
-  _args = { inherit value args extraOpts; };
+  _args = { inherit value args; };
 in
 nixosModule _args

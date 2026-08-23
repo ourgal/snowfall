@@ -17,10 +17,8 @@ let
     lan
     getDirname
     mkFireholRule
-    redirectDomains
     mkBoolOpt'
     ;
-  inherit (builtins) map;
   cfg = cfgNixos config.${namespace} ./.;
   dhcpPort = [
     67
@@ -59,7 +57,6 @@ let
         expand-hosts = true;
 
         no-hosts = false;
-        cname = map (v: "${v.from},${v.to}") redirectDomains;
       }
       // (
         if cfg.dhcp.enable then
