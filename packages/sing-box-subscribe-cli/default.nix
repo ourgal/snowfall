@@ -19,6 +19,8 @@ buildGoModule (
         "-X=main.version=${finalAttrs.src.rev}"
       ];
 
+      postInstall = "mv $out/bin/{sing-box-subscribe-cli,sing-box-sub}";
+
       passthru.updateScript = nix-update-script { };
 
       meta = {
@@ -27,7 +29,7 @@ buildGoModule (
         changelog = "https://github.com/rainbend/sing-box-subscribe-cli/releases/tag/${finalAttrs.src.tag}";
         license = lib.licenses.asl20;
         maintainers = with lib.maintainers; [ zxc ];
-        mainProgram = "sing-box-subscribe-cli";
+        mainProgram = "sing-box-sub";
       };
     }
   )
