@@ -1,1 +1,1 @@
-{ nixPkgs = "clash-verge-rev"; }
+{ nixPkgs = "sub-store"; }

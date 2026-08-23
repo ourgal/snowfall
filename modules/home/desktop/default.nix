@@ -7,6 +7,7 @@
     "document"
     "flashcard"
     "image"
+    "proxy"
     "system"
     "terminal"
     "video"
