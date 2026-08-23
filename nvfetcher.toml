@@ -1449,3 +1449,7 @@ fetch.github = "fabioluciano/tmux-powerkit"
 [helix-ghost]
 src.github = "rahji/helix-ghost"
 fetch.github = "rahji/helix-ghost"
+
+[sing-box-subscribe-cli]
+src.github = "rainbend/sing-box-subscribe-cli"
+fetch.github = "rainbend/sing-box-subscribe-cli"
