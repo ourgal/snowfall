@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   clerk = prev.clerk.overrideAttrs (_oldAttrs: {
     postFixup =
       let

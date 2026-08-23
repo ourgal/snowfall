@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   gat = prev.gat.overrideAttrs (_oldAttrs: {
     excludedPackages = [
       "docs"

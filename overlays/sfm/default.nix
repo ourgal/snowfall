@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   sfm = prev.sfm.overrideAttrs (_oldAttrs: {
     patches = [
       ./nerdicons-0.4.diff

@@ -1,6 +1,6 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) enabled settings getDirname;
+  inherit (lib.${namespace}) enabled getDirname;
   name = getDirname ./.;
 in
 {

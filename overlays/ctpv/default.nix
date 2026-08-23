@@ -1,5 +1,4 @@
-{ channels, lib, ... }:
-_final: prev: {
+{ channels, lib, ... }: _final: prev: {
   ctpv = prev.ctpv.overrideAttrs (_oldAttrs: {
     preFixup = with channels.nixpkgs; ''
       wrapProgram $out/bin/ctpv \

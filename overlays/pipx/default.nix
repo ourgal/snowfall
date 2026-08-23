@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   pipx = prev.jackett.overrideAttrs {
     disabledTests = [
       "test_fix_package_name"

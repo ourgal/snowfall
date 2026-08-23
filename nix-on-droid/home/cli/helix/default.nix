@@ -1,5 +1,4 @@
-{ pkgs, toTOML, ... }:
-{
+{ pkgs, toTOML, ... }: {
   home.packages = [ pkgs.helix ];
   xdg.configFile."helix/config.toml".text = toTOML {
     theme = "catppuccin_mocha";

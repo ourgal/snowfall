@@ -1,5 +1,4 @@
-{ lib, namespace, ... }:
-{
+{ lib, namespace, ... }: {
   mkPodmanOpts =
     {
       ports ? [ ],

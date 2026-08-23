@@ -1,5 +1,4 @@
-{ ... }:
-{
+{ ... }: {
   interface = {
     brix = {
       lan = "eno1";

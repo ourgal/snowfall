@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   git-instafix = prev.git-instafix.overrideAttrs (_oldAttrs: {
     doCheck = false;
   });

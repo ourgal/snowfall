@@ -1,5 +1,4 @@
-{ ... }:
-_final: prev: {
+{ ... }: _final: prev: {
   sesh = prev.sesh.overrideAttrs (_oldAttrs: {
     excludedPackages = [ "docs" ];
   });
