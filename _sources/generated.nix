@@ -3773,18 +3773,18 @@
   };
   v2ray-rules-dat-geoip = {
     pname = "v2ray-rules-dat-geoip";
-    version = "202608222215";
+    version = "202608232215";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202608222215/geoip.dat";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202608232215/geoip.dat";
       sha256 = "sha256-jryxEzP33u1L8nQPLOMkmqiZfvA9Q3FQx643PAEc1yo=";
     };
   };
   v2ray-rules-dat-geosite = {
     pname = "v2ray-rules-dat-geosite";
-    version = "202608222215";
+    version = "202608232215";
     src = fetchurl {
-      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202608222215/geosite.dat";
-      sha256 = "sha256-kZwZoJGP93Sp8DB7uN5W8XY20Stb/7xRZ7v9MPeXC70=";
+      url = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202608232215/geosite.dat";
+      sha256 = "sha256-rdUCe/OJuKA1eXyh3m7VtO1ZzvQBYvopE9xC7k2IGew=";
     };
   };
   vim-auto-save = {
@@ -4144,10 +4144,10 @@
   };
   zashboard = {
     pname = "zashboard";
-    version = "v3.21.0";
+    version = "v3.22.0";
     src = fetchurl {
-      url = "https://github.com/Zephyruso/zashboard/releases/download/v3.21.0/dist.zip";
-      sha256 = "sha256-U0jmzhprzuz7vwfSenjj76coF7l56EczcVH/GrIB7yE=";
+      url = "https://github.com/Zephyruso/zashboard/releases/download/v3.22.0/dist.zip";
+      sha256 = "sha256-NhwYG0t70azAh4yAGI02d272cgw2jwWyWfVwfqT55Rk=";
     };
   };
 }
