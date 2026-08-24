@@ -1,0 +1,616 @@
+{
+  "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://gh-proxy.org/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  },
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxy_dns",
+        "type": "https",
+        "server": "8.8.8.8",
+        "detour": "Default"
+      },
+      {
+        "tag": "proxy_dns",
+        "type": "https",
+        "server": "v.recipes",
+        "domain_resolver": "cn_dns"
+      },
+      {
+        "tag": "proxy_dns",
+        "type": "https",
+        "server": "dot.18bit.cn",
+        "domain_resolver": "cn_dns"
+      },
+      {
+        "tag": "cn_dns",
+        "type": "https",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "fake_dns",
+        "type": "fakeip",
+        "inet4_range": "11.0.0.0/16",
+        "inet6_range": "3ffe::/16"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "direct",
+        "server": "cn_dns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "fake_dns"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "domain_suffix": [
+              ".cn"
+            ]
+          },
+          {
+            "rule_set": "cnsite"
+          },
+          {
+            "domain": [
+              "time-ios.apple.com",
+              "time1.cloud.tencent.com",
+              "music.163.com",
+              "musicapi.taihe.com",
+              "music.taihe.com",
+              "songsearch.kugou.com",
+              "trackercdn.kugou.com",
+              "api-jooxtt.sanook.com",
+              "api.joox.com",
+              "joox.com",
+              "y.qq.com",
+              "streamoc.music.tc.qq.com",
+              "mobileoc.music.tc.qq.com",
+              "isure.stream.qqmusic.qq.com",
+              "dl.stream.qqmusic.qq.com",
+              "aqqmusic.tc.qq.com",
+              "amobile.music.tc.qq.com",
+              "music.migu.cn",
+              "localhost.ptlogin2.qq.com",
+              "localhost.sec.qq.com",
+              "xnotify.xboxlive.com",
+              "proxy.golang.org",
+              "heartbeat.belkin.com",
+              "mesu.apple.com",
+              "swscan.apple.com",
+              "swquery.apple.com",
+              "swdownload.apple.com",
+              "swcdn.apple.com",
+              "swdist.apple.com",
+              "lens.l.google.com",
+              "stun.l.google.com",
+              "na.b.g-tun.com",
+              "ff.dorado.sdo.com",
+              "shark007.net",
+              "adguardteam.github.io",
+              "adrules.top",
+              "anti-ad.net",
+              "local.adguard.org",
+              "static.adtidy.org",
+              "ps.res.netease.com"
+            ]
+          },
+          {
+            "domain_suffix": [
+              "lan",
+              "localdomain",
+              "example",
+              "invalid",
+              "localhost",
+              "test",
+              "local",
+              "home.arpa",
+              "time.edu.cn",
+              "ntp.org.cn",
+              "pool.ntp.org",
+              "music.163.com",
+              "126.net",
+              "kuwo.cn",
+              "y.qq.com",
+              "xiami.com",
+              "music.migu.cn",
+              "msftconnecttest.com",
+              "msftncsi.com",
+              "qq.com",
+              "tencent.com",
+              "steamcontent.com",
+              "srv.nintendo.net",
+              "n.n.srv.nintendo.net",
+              "cdn.nintendo.net",
+              "stun.playstation.net",
+              "battlenet.com.cn",
+              "wotgame.cn",
+              "wggames.cn",
+              "wowsgame.cn",
+              "wargaming.net",
+              "linksys.com",
+              "linksyssmartwifi.com",
+              "router.asus.com",
+              "nflxvideo.net",
+              "square-enix.com",
+              "finalfantasyxiv.com",
+              "ffxiv.com",
+              "ff14.sdo.com",
+              "mcdn.bilivideo.cn",
+              "media.dssott.com",
+              "market.xiaomi.com",
+              "cmbchina.com",
+              "cmbimg.com",
+              "sandai.net",
+              "n0808.com",
+              "3gppnetwork.org",
+              "uu.163.com",
+              "oray.com",
+              "orayimg.com",
+              "gcloudcs.com",
+              "gcloudsdk.com"
+            ]
+          },
+          {
+            "domain_regex": [
+              "time.*.com",
+              "time.*.gov",
+              "time.*.edu.cn",
+              "time.*.apple.com",
+              "time1.*.com",
+              "time2.*.com",
+              "time3.*.com",
+              "time4.*.com",
+              "time5.*.com",
+              "time6.*.com",
+              "time7.*.com",
+              "ntp.*.com",
+              "ntp1.*.com",
+              "ntp2.*.com",
+              "ntp3.*.com",
+              "ntp4.*.com",
+              "ntp5.*.com",
+              "ntp6.*.com",
+              "ntp7.*.com",
+              "xbox.*.*.microsoft.com",
+              ".*.*.xboxlive.com",
+              "xbox.*.microsoft.com",
+              "stun.*.*",
+              "stun.*.*.*",
+              ".+.stun.*.*",
+              ".+.stun.*.*.*",
+              ".+.stun.*.*.*.*",
+              ".+.stun.*.*.*.*.*"
+            ]
+          }
+        ],
+        "server": "cn_dns"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fake_dns",
+        "rewrite_ttl": 1
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "singbox_tun",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "mtu": 9000,
+      "auto_route": true,
+      "route_exclude_address": [
+        "10.0.0.0/8",
+        "100.64.0.0/10",
+        "169.254.0.0/16",
+        "172.16.0.0/12",
+        "192.0.0.0/24",
+        "192.168.0.0/16"
+      ],
+      "route_exclude_address_set": [
+        "cnip"
+      ],
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed",
+      "auto_redirect": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 7890
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Default",
+      "outbounds": [
+        "🌏日韩台新",
+        "📌单选节点",
+        "🇭🇰香港节点",
+        "🇯🇵日本节点",
+        "🇰🇷韩国节点",
+        "🇹🇼台湾节点",
+        "🇸🇬新加坡节点",
+        "🇺🇸美国节点"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🇬 谷歌服务",
+      "outbounds": [
+        "Direct-Out",
+        "🌏日韩台新",
+        "📌单选节点",
+        "🇭🇰香港节点",
+        "🇯🇵日本节点",
+        "🇰🇷韩国节点",
+        "🇹🇼台湾节点",
+        "🇸🇬新加坡节点",
+        "🇺🇸美国节点"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📺 Youtube",
+      "outbounds": [
+        "🌏日韩台新",
+        "📌单选节点",
+        "🇭🇰香港节点",
+        "🇯🇵日本节点",
+        "🇰🇷韩国节点",
+        "🇹🇼台湾节点",
+        "🇸🇬新加坡节点",
+        "🇺🇸美国节点"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐟 漏网之鱼",
+      "outbounds": [
+        "Direct-Out",
+        "🌏日韩台新",
+        "📌单选节点",
+        "🇭🇰香港节点",
+        "🇯🇵日本节点",
+        "🇰🇷韩国节点",
+        "🇹🇼台湾节点",
+        "🇸🇬新加坡节点",
+        "🇺🇸美国节点"
+      ]
+    },
+    {
+      "tag": "🌏日韩台新",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|South Korea|🇹🇼|台湾|TW|Taiwan|🇸🇬|新加坡|SG|Singapore"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "📌单选节点",
+      "type": "selector",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "exclude",
+          "keywords": [
+            "剩余|流量|raffic|有效|时间|到期|xpire|地址|网址|官网|自动|最优|最快"
+          ]
+        }
+      ],
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇭🇰香港节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇭🇰|香港|HK|Hong Kong"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇯🇵日本节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇯🇵|日本|JP|Japan"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇰🇷韩国节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇰🇷|韩国|KR|South Korea"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇹🇼台湾节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇹🇼|台湾|TW|Taiwan"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇸🇬新加坡节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇸🇬|新加坡|SG|Singapore"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "tag": "🇺🇸美国节点",
+      "type": "urltest",
+      "outbounds": [
+        "{all}"
+      ],
+      "filter": [
+        {
+          "action": "include",
+          "keywords": [
+            "🇺🇸|美国|US|USA|United States"
+          ]
+        }
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 10,
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "direct",
+      "tag": "Direct-Out"
+    }
+  ],
+  "route": {
+    "final": "🐟 漏网之鱼",
+    "auto_detect_interface": true,
+    "default_domain_resolver": "cn_dns",
+    "rule_set": [
+      {
+        "tag": "cnsite",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/cn.srs"
+      },
+      {
+        "tag": "cnip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "cngames",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/category-games-!cn@cn.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "gfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/gfw.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "telegramip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/telegram.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "telegramsite",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/telegram.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset-compatible/google-cn.srs",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset-compatible/youtube.srs",
+        "update_interval": "24h"
+      }
+    ],
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "port": 443
+          },
+          {
+            "network": "udp"
+          }
+        ],
+        "action": "reject"
+      },
+      {
+        "network": "icmp",
+        "action": "bypass"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "action": "bypass"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "Direct-Out"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "Default"
+      },
+      {
+        "protocol": "quic",
+        "action": "reject"
+      },
+      {
+        "port": [
+          22,
+          80,
+          443,
+          8080,
+          8443
+        ],
+        "invert": true,
+        "action": "bypass"
+      },
+      {
+        "rule_set": "telegramsite",
+        "outbound": "Default"
+      },
+      {
+        "rule_set": "google",
+        "outbound": "🇬 谷歌服务"
+      },
+      {
+        "rule_set": "youtube",
+        "outbound": "📺 Youtube"
+      },
+      {
+        "rule_set": "cngames",
+        "action": "bypass"
+      },
+      {
+        "rule_set": "gfw",
+        "outbound": "Default"
+      },
+      {
+        "action": "resolve"
+      },
+      {
+        "rule_set": "telegramip",
+        "outbound": "Default"
+      },
+      {
+        "rule_set": "cnip",
+        "action": "bypass"
+      }
+    ]
+  }
+}

@@ -24,7 +24,6 @@
     "nix"
     "notification"
     "prompt"
-    "proxy"
     "rss"
     "runner"
     "search"
