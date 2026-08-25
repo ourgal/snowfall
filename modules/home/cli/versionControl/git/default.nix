@@ -92,7 +92,7 @@ args.module (
             commit = {
               verbose = true;
               template = "${config.xdg.configHome}/git/template";
-              gpgsign = true;
+              gpgsign = false;
             };
             user = {
               signingkey = "ourgal";
