@@ -26,9 +26,6 @@ in
         dns = enabled;
         dhcp = enabled;
       };
-      firewall = {
-        disable = enabled;
-      };
       avahi = enabled;
       pppd = enabled // {
         inherit wan lan;
