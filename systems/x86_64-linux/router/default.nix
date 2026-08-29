@@ -1,4 +1,9 @@
-{ lib, namespace, ... }:
+{
+  lib,
+  namespace,
+  config,
+  ...
+}:
 let
   inherit (lib.${namespace}) enabled disabled getDirname;
   name = getDirname ./.;
@@ -36,7 +41,11 @@ in
         router = enabled;
         ssh = enabled;
         cloudflared = enabled;
-        tailscale = disabled;
+        tailscale =
+          if (config.${namespace}.tailscale.enable || config.${namespace}.sing-box.tailscale.enable) then
+            enabled
+          else
+            disabled;
       };
       bpftune = enabled;
       iotop = enabled;

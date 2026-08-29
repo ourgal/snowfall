@@ -5,17 +5,23 @@ let
     lib
     pkgs
     config
+    inputs
     ;
   inherit (lib.${namespace})
     nixosModule
+    switch
     mkOpt'
     cfgNixos
     domainBlackList
     domainWhiteList
     ;
   inherit (lib.${namespace}.sing-box) mkFirewall;
+  inherit (lib) optional;
+  utils = import "${inputs.nixpkgs}/nixos/lib/utils.nix" { inherit lib pkgs config; };
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
+  isRedirect = cfg.mode == "redirect";
+  isTun = cfg.mode == "tun";
   package = pkgs.sing-box;
   apiPort = 9999;
   tproxyPort = 7893;
@@ -48,36 +54,42 @@ let
             "time.facebook.com" = "203.107.6.88";
           };
         }
-        {
-          type = "https";
-          tag = "dns_proxy";
-          detour = "♻️ 自动选择";
-          routing_mark = routingMark;
-          domain_resolver = "dns_resolver";
-          server = "cloudflare-dns.com";
-          server_port = 443;
-        }
-        {
-          type = "https";
-          tag = "dns_direct";
-          routing_mark = routingMark;
-          domain_resolver = "dns_resolver";
-          server = "dns.alidns.com";
-          server_port = 443;
-        }
+        (
+          {
+            type = "https";
+            tag = "dns_proxy";
+            detour = "♻️ 自动选择";
+            domain_resolver = "dns_resolver";
+            server = "cloudflare-dns.com";
+            server_port = 443;
+          }
+          // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
+        )
+        (
+          {
+            type = "https";
+            tag = "dns_direct";
+            domain_resolver = "dns_resolver";
+            server = "dns.alidns.com";
+            server_port = 443;
+          }
+          // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
+        )
         {
           type = "fakeip";
           tag = "dns_fakeip";
           inet4_range = fakeIpSubnet;
           inet6_range = fakeIp6Subnet;
         }
-        {
-          type = "https";
-          tag = "dns_resolver";
-          routing_mark = routingMark;
-          server = "223.5.5.5";
-          server_port = 443;
-        }
+        (
+          {
+            type = "https";
+            tag = "dns_resolver";
+            server = "223.5.5.5";
+            server_port = 443;
+          }
+          // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
+        )
       ];
       rules = [
         {
@@ -257,7 +269,6 @@ let
       final = "dns_proxy";
       reverse_mapping = true;
       strategy = "prefer_ipv4";
-      independent_cache = false;
     };
     certificate = {
       store = "mozilla";
@@ -269,25 +280,57 @@ let
         listen = "::";
         listen_port = mixPort;
       }
-      {
-        type = "direct";
-        tag = "dns-in";
-        listen = "::";
-        listen_port = dnsPort;
-      }
-      {
-        type = "redirect";
-        tag = "redirect-in";
-        listen = "::";
-        listen_port = redirectPort;
-      }
-      {
-        type = "tproxy";
-        tag = "tproxy-in";
-        listen = "::";
-        listen_port = tproxyPort;
-      }
-    ];
+    ]
+    ++ (optional (isTproxy || isRedirect) {
+      type = "direct";
+      tag = "dns-in";
+      listen = "::";
+      listen_port = dnsPort;
+    })
+    ++ (optional isTproxy {
+      type = "tproxy";
+      tag = "tproxy-in";
+      listen = "::";
+      listen_port = tproxyPort;
+    })
+    ++ (optional isRedirect {
+      type = "redirect";
+      tag = "redirect-in";
+      listen = "::";
+      listen_port = redirectPort;
+    })
+    ++ (optional isTun {
+      type = "tun";
+      tag = "tun-in";
+      address = [
+        "172.18.0.1/30"
+        "fdfe:dcba:9876::1/126"
+      ];
+      mtu = 9000;
+      route_exclude_address = [
+        "10.0.0.0/8"
+        "100.64.0.0/10"
+        "169.254.0.0/16"
+        "172.16.0.0/12"
+        "192.0.0.0/24"
+        "192.168.0.0/16"
+      ];
+      auto_route = true;
+      auto_redirect = true;
+      strict_route = true;
+      endpoint_independent_nat = false;
+      exclude_package = [ "com.android.captiveportallogin" ];
+    });
+    endpoints =
+      [ ]
+      ++ optional cfg.tailscale.enable {
+        type = "tailscale";
+        tag = "ts-ep";
+        auth_key = {
+          _secret = config.sops.secrets."tailscale/authKey".path;
+        };
+        hostname = "router";
+      };
     outbounds = [
       {
         type = "direct";
@@ -645,8 +688,8 @@ let
         type = "selector";
         tag = "🐟 漏网之鱼";
         outbounds = [
-          "🚀 节点选择"
           "🎯 本地直连"
+          "🚀 节点选择"
           "♻️ 自动选择"
           "🛠️ 手动切换"
           "🇭🇰 香港节点"
@@ -787,268 +830,307 @@ let
         tolerance = 100;
       }
     ];
-    route = {
-      rules = [
-        {
-          inbound = "dns-in";
-          action = "hijack-dns";
-        }
-        {
-          action = "sniff";
-          timeout = "500ms";
-        }
-        {
-          clash_mode = "Direct";
-          outbound = "DIRECT";
-        }
-        {
-          clash_mode = "Global";
-          outbound = "GLOBAL";
-        }
-        {
-          domain_suffix = "captive.apple.com";
-          outbound = "DIRECT";
-        }
-        {
-          domain_suffix = "kamo.teracloud.jp";
-          outbound = "DIRECT";
-        }
-        {
-          domain_suffix = domainWhiteList;
-          outbound = "DIRECT";
-        }
-        {
-          domain_suffix = domainBlackList;
-          outbound = "🚀 节点选择";
-        }
-        {
-          rule_set = "private";
-          outbound = "🎯 本地直连";
-        }
-        {
-          rule_set = "ads";
-          outbound = "🛑 广告拦截";
-        }
-        {
-          rule_set = "networktest";
-          outbound = "📈 网络测速";
-        }
-        {
-          rule_set = "applications";
-          outbound = "↔️ 直连软件";
-        }
-        {
-          rule_set = "trackerslist";
-          outbound = "🧲 BT下载";
-        }
-        {
-          rule_set = "apple-cn";
-          outbound = "🍎 苹果服务";
-        }
-        {
-          rule_set = "microsoft-cn";
-          outbound = "🪟 微软服务";
-        }
-        {
-          rule_set = "google-cn";
-          outbound = "🇬 谷歌服务";
-        }
-        {
-          rule_set = "steamcn";
-          outbound = "🦾 Steam平台";
-        }
-        {
-          rule_set = "games-cn";
-          outbound = "🕹 国服游戏";
-        }
-        {
-          rule_set = "googlefcm";
-          outbound = "📢 谷歌推送";
-        }
-        {
-          rule_set = "netflix";
-          outbound = "🎬 奈飞视频";
-        }
-        {
-          rule_set = "youtube";
-          outbound = "▶️ 油管视频";
-        }
-        {
-          rule_set = "ai";
-          outbound = "🤖 AI 平台";
-        }
-        {
-          rule_set = "media";
-          outbound = "🌍 国际媒体";
-        }
-        {
-          rule_set = "proxy";
-          outbound = "🌐 国际流量";
-        }
-        {
-          rule_set = "cn";
-          outbound = "🀄️ 国内流量";
-        }
-        {
-          rule_set = "privateip";
-          outbound = "🎯 本地直连";
-        }
-        {
-          rule_set = "telegramip";
-          outbound = "📲 电报消息";
-        }
-        {
-          action = "resolve";
-          server = "dns_proxy";
-          strategy = "prefer_ipv4";
-        }
-        {
-          rule_set = "mediaip";
-          outbound = "🌍 国际媒体";
-        }
-        {
-          rule_set = "cnip";
-          outbound = "🀄️ 国内流量";
-        }
-      ];
-      rule_set = [
-        {
-          type = "remote";
-          tag = "private";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/private.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "ads";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/ads.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "networktest";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/networktest.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "applications";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/applications.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "trackerslist";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/trackerslist.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "apple-cn";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/apple-cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "microsoft-cn";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/microsoft-cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "google-cn";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/google-cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "steamcn";
-          url = "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/steam%40cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "games-cn";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/games-cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "googlefcm";
-          url = "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/googlefcm.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "netflix";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/netflix.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "youtube";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/youtube.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "ai";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/ai.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "media";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/media.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "games";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/games.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "proxy";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/proxy.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "cn";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/cn.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "privateip";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/privateip.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "telegramip";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/telegramip.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "mediaip";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/mediaip.srs";
-          download_detour = "DIRECT";
-        }
-        {
-          type = "remote";
-          tag = "cnip";
-          url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/cnip.srs";
-          download_detour = "DIRECT";
-        }
-      ];
-      final = "🐟 漏网之鱼";
-      default_mark = routingMark;
-      default_domain_resolver = "dns_resolver";
-    };
+    route = (
+      {
+        rules =
+          (optional cfg.tailscale.enable {
+            inbound = "ts-ep";
+            port = 53;
+            action = "hijack-dns";
+          })
+          ++ [
+            {
+              inbound = "dns-in";
+              action = "hijack-dns";
+            }
+            {
+              action = "sniff";
+              timeout = "500ms";
+            }
+          ]
+          ++ (optional isTun (
+            {
+              type = "logical";
+              mode = "or";
+              rules = [
+                { port = 853; }
+                { network = "quic"; }
+                { protocol = "stun"; }
+              ];
+              action = "reject";
+            }
+              {
+                type = "logical";
+                mode = "or";
+                rules = [
+                  { network = "icmp"; }
+                  { ip_is_private = true; }
+                  { protocol = "bittorrent"; }
+                  {
+                    port = [
+                      80
+                      443
+                    ];
+                    invert = true;
+                  }
+                ];
+                action = "bypass";
+              }
+          ))
+          ++ [
+            {
+              clash_mode = "Direct";
+              outbound = "DIRECT";
+            }
+            {
+              clash_mode = "Global";
+              outbound = "GLOBAL";
+            }
+            {
+              domain_suffix = "captive.apple.com";
+              outbound = "DIRECT";
+            }
+            {
+              domain_suffix = "kamo.teracloud.jp";
+              outbound = "DIRECT";
+            }
+            {
+              domain_suffix = domainWhiteList;
+              outbound = "DIRECT";
+            }
+            {
+              domain_suffix = domainBlackList;
+              outbound = "🚀 节点选择";
+            }
+            {
+              rule_set = "private";
+              outbound = "🎯 本地直连";
+            }
+            {
+              rule_set = "ads";
+              outbound = "🛑 广告拦截";
+            }
+            {
+              rule_set = "networktest";
+              outbound = "📈 网络测速";
+            }
+            {
+              rule_set = "applications";
+              outbound = "↔️ 直连软件";
+            }
+            {
+              rule_set = "trackerslist";
+              outbound = "🧲 BT下载";
+            }
+            {
+              rule_set = "apple-cn";
+              outbound = "🍎 苹果服务";
+            }
+            {
+              rule_set = "microsoft-cn";
+              outbound = "🪟 微软服务";
+            }
+            {
+              rule_set = "google-cn";
+              outbound = "🇬 谷歌服务";
+            }
+            {
+              rule_set = "steamcn";
+              outbound = "🦾 Steam平台";
+            }
+            {
+              rule_set = "games-cn";
+              outbound = "🕹 国服游戏";
+            }
+            {
+              rule_set = "googlefcm";
+              outbound = "📢 谷歌推送";
+            }
+            {
+              rule_set = "netflix";
+              outbound = "🎬 奈飞视频";
+            }
+            {
+              rule_set = "youtube";
+              outbound = "▶️ 油管视频";
+            }
+            {
+              rule_set = "ai";
+              outbound = "🤖 AI 平台";
+            }
+            {
+              rule_set = "media";
+              outbound = "🌍 国际媒体";
+            }
+            {
+              rule_set = "proxy";
+              outbound = "🌐 国际流量";
+            }
+            {
+              rule_set = "cn";
+              outbound = "🀄️ 国内流量";
+            }
+            {
+              rule_set = "privateip";
+              outbound = "🎯 本地直连";
+            }
+            {
+              rule_set = "telegramip";
+              outbound = "📲 电报消息";
+            }
+            {
+              action = "resolve";
+              server = "dns_proxy";
+              strategy = "prefer_ipv4";
+            }
+            {
+              rule_set = "mediaip";
+              outbound = "🌍 国际媒体";
+            }
+            {
+              rule_set = "cnip";
+              outbound = "🀄️ 国内流量";
+            }
+          ];
+        rule_set = [
+          {
+            type = "remote";
+            tag = "private";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/private.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "ads";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/ads.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "networktest";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/networktest.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "applications";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/applications.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "trackerslist";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/trackerslist.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "apple-cn";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/apple-cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "microsoft-cn";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/microsoft-cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "google-cn";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/google-cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "steamcn";
+            url = "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/steam%40cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "games-cn";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/games-cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "googlefcm";
+            url = "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/googlefcm.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "netflix";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/netflix.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "youtube";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/youtube.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "ai";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/ai.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "media";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/media.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "games";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/games.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "proxy";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/proxy.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "cn";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/cn.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "privateip";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/privateip.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "telegramip";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/telegramip.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "mediaip";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/mediaip.srs";
+            download_detour = "DIRECT";
+          }
+          {
+            type = "remote";
+            tag = "cnip";
+            url = "https://testingcf.jsdelivr.net/gh/DustinWin/ruleset_geodata@refs/heads/sing-box-ruleset/cnip.srs";
+            download_detour = "DIRECT";
+          }
+        ];
+        final = "🐟 漏网之鱼";
+        default_domain_resolver = "dns_resolver";
+      }
+      // (if (isTproxy || isRedirect) then { default_mark = routingMark; } else { })
+    );
     experimental = {
       clash_api = {
         external_controller = "0.0.0.0:${toString apiPort}";
@@ -1061,19 +1143,23 @@ let
   value = {
     networking = {
       firewall =
-        let
-          p = [
-            dnsPort
-            apiPort
-            mixPort
-            53
-          ]
-          ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
-        in
-        {
-          allowedTCPPorts = p;
-          allowedUDPPorts = p;
-        };
+        if (isTproxy || isRedirect) then
+          let
+            p = [
+              dnsPort
+              apiPort
+              mixPort
+              53
+            ]
+            ++ optional isTproxy tproxyPort
+            ++ optional isRedirect redirectPort;
+          in
+          {
+            allowedTCPPorts = p;
+            allowedUDPPorts = p;
+          }
+        else
+          { enable = false; };
     };
     # for polkit rules
     environment.systemPackages = [ package ];
@@ -1097,6 +1183,7 @@ let
           FirewallMark = toString 1;
           ipTableMark = "100";
           ipTableMarkV6 = "101";
+          isTailscale = cfg.tailscale.enable;
         };
         firewallStart = pkgs.writeShellScript "singboxFirewallStart" firewallScripts.start;
         firewallStop = pkgs.writeShellScript "singboxFirewallStop" firewallScripts.stop;
@@ -1118,23 +1205,28 @@ let
           WorkingDirectory = "/var/lib/sing-box";
           ExecStartPre =
             let
-              template = pkgs.writeText "template.json" (builtins.toJSON configTemplate);
               script = pkgs.writeShellScript "sing-box-pre-start" ''
+                ${utils.genJqSecretsReplacementSnippet configTemplate "/run/sing-box/template"}
                 ${
                   lib.getExe pkgs.${namespace}.sing-box-subscribe-cli
-                } --template ${template} --out /run/sing-box/config.json ${lib.strings.fileContents ./nano.key}
+                } --template /run/sing-box/template --out /run/sing-box/config.json $(cat ${
+                  config.sops.secrets."subs/nano".path
+                })
                 chown --reference=/run/sing-box /run/sing-box/config.json
               '';
             in
-            [
-              firewallStart
-              script
-            ];
+            if (isTproxy || isRedirect) then
+              [
+                firewallStart
+                script
+              ]
+            else
+              [ script ];
           ExecStart = [
             ""
             "${lib.getExe package} -D \${STATE_DIRECTORY} -C \${RUNTIME_DIRECTORY} run"
           ];
-          ExecStop = [ firewallStop ];
+          ExecStop = if (isTproxy || isRedirect) then [ firewallStop ] else [ ];
         };
         # After= is specified by upstream
         requires = [ "network-online.target" ];
@@ -1154,13 +1246,16 @@ let
       dnsPort
       mixPort
     ]
-    ++ (if isTproxy then [ tproxyPort ] else [ redirectPort ]);
+    ++ optional isTproxy tproxyPort
+    ++ optional isRedirect redirectPort;
   };
   extraOpts = {
     mode = mkOpt' (lib.types.enum [
       "tproxy"
       "redirect"
+      "tun"
     ]) "tproxy";
+    tailscale = switch;
   };
   _args = { inherit value args extraOpts; };
 in

@@ -446,7 +446,7 @@ in
               8080
               8443
             ];
-            proxySSH = true;
+            proxySSH = false;
             proxyHTTP = true;
             proxyXMPP = false;
             proxyIRC = false;
@@ -463,6 +463,7 @@ in
       {
         name ? "sing-box",
         isTproxy ? true,
+        isTailscale ? false,
         FirewallMark ? toString 1,
         ipTableMark ? "100",
         ipTableMarkV6 ? "101",
@@ -507,21 +508,24 @@ in
         validFakeIp6 = fakeIp6Subnet != "";
         joinLines = concatStringsSep "\n";
         proxyPorts' = concatStringsSep "," (map toString proxyPorts);
-        tailscaleIp = lib.pipe lib.${namespace}.tailscale [
-          (builtins.attrValues)
-          (map (x: "\n${x}/32"))
-          (builtins.concatStringsSep "")
-        ];
         waitWan = ''
           i=1
           while [ "$i" -le "20" ]; do
               host_ipv4=$(ip -o -f inet addr show | grep -Ev 'utun|iot|peer|docker|podman|virbr|vnet|ovs|vmbr|veth|vmnic|vboxnet|lxcbr|xenbr|vEthernet' | grep -E ' 1(92|0|72)\.' | awk '/scope global/ {print $4}')
-              host_ipv4+=$'${tailscaleIp}'
               host_ipv6=$(ip -o -f inet6 addr show | awk '/scope global/ {print $4}')
               [ -n "$host_ipv6" ] && [ -n "$host_ipv4" ] && break
               sleep 1 && i=$((i + 1))
           done
-        '';
+        ''
+        + (
+          if isTailscale then
+            ''
+              $host_ipv4+=" 100.64.0.0/10"
+              $host_ipv6+=" fd7a:115c:a1e0::/48"
+            ''
+          else
+            ""
+        );
         routeStart =
           if isTproxy then
             ''
@@ -575,10 +579,10 @@ in
               ]
             )
             ++ [
-              "for ipv4 in $host_ipv4; do"
-              "ip6tables -w -t nat -A ${natTable} -d $ipv4 -j RETURN"
-              "ip6tables -w -t nat -A ${natTable} -s $ipv4 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
-              "ip6tables -w -t nat -A ${natTable} -s $ipv4 -p udp -j REDIRECT --to-ports ${toString redirectPort}"
+              "for ipv6 in $host_ipv6; do"
+              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
+              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p udp -j REDIRECT --to-ports ${toString redirectPort}"
+              "ip6tables -w -t nat -A ${natTable} -d $ipv6 -j RETURN"
               "done"
             ]
             ++ map (x: "ip6tables -w -t nat ${x}") (
@@ -586,9 +590,9 @@ in
               ++ [ "-A ${natTableDns} -m mark --mark ${FirewallMark} -j RETURN" ]
             )
             ++ [
-              "for ipv4 in $host_ipv4; do"
-              "ip6tables -w -t nat -A ${natTableDns} -s $ipv4 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-              "ip6tables -w -t nat -A ${natTableDns} -s $ipv4 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
+              "for ipv6 in $host_ipv6; do"
+              "ip6tables -w -t nat -A ${natTableDns} -s $ipv6 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
+              "ip6tables -w -t nat -A ${natTableDns} -s $ipv6 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
               "done"
             ]
 
@@ -736,24 +740,20 @@ in
               ))
               ++ [
                 "for ipv4 in $host_ipv4; do"
+                "iptables -w -t mangle -A ${mangleTable} -s $ipv4 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
                 "iptables -w -t mangle -A ${mangleTable} -d $ipv4 -j RETURN"
                 "done"
               ]
               ++ (map (x: "iptables -w -t mangle ${x}") (
                 map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets
               ))
-              ++ [
-                "for ipv4 in $host_ipv4; do"
-                "iptables -w -t mangle -A ${mangleTable} -s $ipv4 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-                "done"
-              ]
             ))
           else
             "";
         mangleStop =
           if isTproxy then
             (joinLines (
-              map (x: "iptables -w -t mangle ${x}") (
+              (map (x: "iptables -w -t mangle ${x}") (
                 lib.optionals validFakeIp [
                   "-D PREROUTING -d ${fakeIpSubnet} -p tcp -j ${mangleTable}"
                   "-D PREROUTING -d ${fakeIpSubnet} -p udp -j ${mangleTable}"
@@ -764,7 +764,7 @@ in
                   "-F ${mangleTable}"
                   "-X ${mangleTable}"
                 ]
-              )
+              ))
             ))
           else
             "";
