@@ -30,6 +30,7 @@ let
   mixPort = 7890;
   routingMark = 255;
   fakeIpSubnet = "28.0.0.0/8";
+  fakeIp6Subnet = "fc00::/16";
   settings = {
     mixed-port = mixPort;
     redir-port = redirectPort;
@@ -81,6 +82,7 @@ let
         };
         enhanced-mode = "fake-ip";
         fake-ip-range = fakeIpSubnet;
+        fake-ip-range6 = fakeIp6Subnet;
         fake-ip-filter = (map (v: "*.${v}") fakeIpExclude) ++ [
           "*.lan"
           "*.localdomain"
@@ -290,6 +292,7 @@ let
               dnsPort = dnsPort;
               mark = routingMark;
               fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else if isRedirect then
             lib.${namespace}.sing-box.redir_start {
@@ -298,6 +301,7 @@ let
               dnsPort = dnsPort;
               mark = routingMark;
               fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else
             ""
@@ -307,6 +311,7 @@ let
             lib.${namespace}.sing-box.tproxy_stop {
               firewall_mark = 1;
               fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else if isRedirect then
             lib.${namespace}.sing-box.redir_stop {
@@ -315,6 +320,7 @@ let
               dnsPort = dnsPort;
               mark = routingMark;
               fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else
             ""
