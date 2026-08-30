@@ -1,32 +1,31 @@
 { lib, namespace, ... }:
 let
-  inherit (builtins)
-    concatStringsSep
-    map
-    attrValues
-    foldl'
-    ;
+  inherit (builtins) concatStringsSep map attrValues;
   mkOutboundSub =
     tag: type:
     {
       inherit type;
-      providers = [ tag ];
-      include = ".*";
-      exclude = lib.${namespace}.subsExcludes;
-      tag = "provider/${tag}";
+      providers = tag;
+      includes = ".*";
+      excludes = lib.${namespace}.subsExcludes;
+      inherit tag;
     }
     // lib.optionalAttrs (type == "urltest") { tolerance = 100; };
+  freeSubs = map (x: mkOutboundSub x.name "selector") (
+    attrValues (lib.${namespace}.freeSubs { isMihomo = false; })
+  );
   subs = [
     (mkOutboundSub "knjc" "urltest")
     (mkOutboundSub "nano" "urltest")
-  ];
+  ]
+  ++ freeSubs;
   getTag = map (x: x.tag);
   outbounds =
     let
-      mkOutbound = tag: include: {
+      mkOutbound = tag: includes: {
         type = "urltest";
         use_all_providers = true;
-        inherit tag include;
+        inherit tag includes;
       };
       toSelector =
         origin:
@@ -113,11 +112,6 @@ let
         tag = "🐟 漏网之鱼";
         outbounds = [ direct.tag ] ++ subsTags ++ countriesTags ++ priceTags ++ [ manual.tag ];
       };
-      not_cn = {
-        type = "selector";
-        tag = "🌐 非中国";
-        outbounds = [ direct.tag ] ++ subsTags ++ countriesTags ++ priceTags ++ [ manual.tag ];
-      };
       foreign = {
         type = "selector";
         tag = "🎯 全球直连";
@@ -186,24 +180,30 @@ let
         tag = "📺 Youtube";
         outbounds = [ main.tag ] ++ subsTags ++ countriesTags;
       };
-      github = {
-        type = "selector";
-        tag = "🐱 Github";
-        outbounds = [ main.tag ] ++ subsTags ++ countriesTags;
-      };
       global = {
         type = "selector";
         tag = "GLOBAL";
         outbounds = [ direct.tag ] ++ countriesTags ++ subsTags ++ [ manual.tag ];
       };
-      cn = {
-        type = "selector";
-        tag = "🔒 国内服务";
-        outbounds = [ direct.tag ] ++ countriesTags ++ subsTags ++ [ manual.tag ];
+      dns = {
+        type = "dns";
+        tag = "dns-out";
       };
       direct = {
         type = "direct";
         tag = "DIRECT";
+      };
+      ad = {
+        type = "selector";
+        tag = "🛑 广告拦截";
+        outbounds = getTag [
+          block
+          direct
+        ];
+      };
+      block = {
+        type = "block";
+        tag = "REJECT";
       };
       manual = {
         type = "selector";
@@ -214,7 +214,6 @@ let
   outboundsSorted = [
     outbounds.main
     outbounds.final
-    outbounds.not_cn
   ]
   ++ subs
   ++ [ outbounds.manual ]
@@ -225,7 +224,6 @@ let
     outbounds.foreign
     outbounds.telegram
     outbounds.youtube
-    outbounds.github
     outbounds.ai
     outbounds.games
     outbounds.microsoft
@@ -233,74 +231,75 @@ let
     outbounds.apple
     outbounds.networktest
     outbounds.netflix
+    outbounds.ad
     outbounds.global
-    outbounds.cn
     outbounds.direct
+    outbounds.block
+    outbounds.dns
   ];
-  dnsServers = {
+  dnsServers = rec {
     direct = {
       tag = "dns_direct";
-      type = "udp";
-      server = "223.5.5.5";
+      address = "https://223.5.5.5/dns-query";
+      address_resolver = resolver.tag;
+      strategy = "prefer_ipv4";
+      detour = outbounds.direct.tag;
     };
     proxy = {
       tag = "dns_proxy";
-      type = "tls";
-      server = "8.8.4.4";
+      address = "https://1.0.0.1/dns-query";
+      address_resolver = resolver.tag;
     };
     resolver = {
       tag = "dns_resolver";
-      type = "udp";
-      server = "223.5.5.5";
+      address = "223.5.5.5";
+      detour = outbounds.direct.tag;
     };
     fakeip = {
       tag = "dns_fakeip";
-      type = "fakeip";
-      inet4_range = "fc00::/16";
-      inet6_range = "198.18.0.0/16";
+      address = "fakeip";
     };
-    hosts = {
-      tag = "hosts";
-      type = "hosts";
-      predefined = foldl' (acc: v: acc // { "${v}" = lib.${namespace}.ip.brix; }) { } (
-        attrValues lib.${namespace}.domains
-      );
+    block = {
+      tag = "block";
+      address = "rcode://success";
     };
     local = {
       tag = "local";
-      type = "local";
+      address = "local";
+      detour = outbounds.direct.tag;
+    };
+    hosts_local = {
+      tag = "hosts_local";
+      address = "local";
+      detour = outbounds.direct.tag;
     };
   };
   ruleSet =
     let
-      geo = tag: {
+      go = tag: {
         inherit tag;
         type = "remote";
         format = "binary";
-        url = "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/${tag}.srs";
-        download_detour = outbounds.direct.tag;
-      };
-      ip = tag: {
-        tag = "${tag}_ip";
-        type = "remote";
-        format = "binary";
-        url = "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/${tag}.srs";
+        url = "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset-compatible/${tag}.srs";
         download_detour = outbounds.direct.tag;
       };
     in
     {
-      ai = geo "category-ai-!cn";
-      youtube = geo "youtube";
-      google = geo "google";
-      geo_cn = geo "geolocation-cn";
-      cn = geo "cn";
-      github = geo "github";
-      gitlab = geo "gitlab";
-      geo_not_cn = geo "geolocation-!cn";
-      google_ip = ip "google";
-      private_ip = ip "private";
-      cn_ip = ip "cn";
-      telegram_ip = ip "telegram";
+      private = go "private";
+      ai = go "ai";
+      microsoft = go "microsoft-cn";
+      apple = go "apple-cn";
+      google = go "google-cn";
+      games = go "games-cn";
+      networktest = go "networktest";
+      proxy = go "proxy";
+      cn = go "cn";
+      telegram = go "telegramip";
+      cn_ip = go "cnip";
+      ads = go "ads";
+      youtube = go "youtube";
+      netflix = go "netflix";
+      netflix_ip = go "netflixip";
     };
   host_ip = ''
     host_ipv4=$(ip -o -f inet addr show | grep -Ev 'utun|iot|peer|docker|podman|virbr|vnet|ovs|vmbr|veth|vmnic|vboxnet|lxcbr|xenbr|vEthernet' | grep -E ' 1(92|0|72)\.' | awk '/scope global/ {print $4}')
@@ -317,95 +316,242 @@ in
       ;
     dnsRules = [
       {
-        rule_set = ruleSet.geo_not_cn.tag;
+        outbound = [ "any" ];
+        server = dnsServers.direct.tag;
+      }
+      {
+        clash_mode = "Global";
+        server = dnsServers.fakeip.tag;
+        rewrite_ttl = 1;
+      }
+      {
+        clash_mode = "Direct";
+        server = dnsServers.direct.tag;
+      }
+      {
+        domain = [
+          "time-ios.apple.com"
+          "time1.cloud.tencent.com"
+          "music.163.com"
+          "musicapi.taihe.com"
+          "music.taihe.com"
+          "songsearch.kugou.com"
+          "trackercdn.kugou.com"
+          "api-jooxtt.sanook.com"
+          "api.joox.com"
+          "joox.com"
+          "y.qq.com"
+          "streamoc.music.tc.qq.com"
+          "mobileoc.music.tc.qq.com"
+          "isure.stream.qqmusic.qq.com"
+          "dl.stream.qqmusic.qq.com"
+          "aqqmusic.tc.qq.com"
+          "amobile.music.tc.qq.com"
+          "music.migu.cn"
+          "localhost.ptlogin2.qq.com"
+          "localhost.sec.qq.com"
+          "xnotify.xboxlive.com"
+          "proxy.golang.org"
+          "heartbeat.belkin.com"
+          "mesu.apple.com"
+          "swscan.apple.com"
+          "swquery.apple.com"
+          "swdownload.apple.com"
+          "swcdn.apple.com"
+          "swdist.apple.com"
+          "lens.l.google.com"
+          "stun.l.google.com"
+          "na.b.g-tun.com"
+          "ff.dorado.sdo.com"
+          "shark007.net"
+          "adguardteam.github.io"
+          "adrules.top"
+          "anti-ad.net"
+          "local.adguard.org"
+          "static.adtidy.org"
+          "ps.res.netease.com"
+        ];
+        server = dnsServers.direct.tag;
+      }
+      {
+        domain_suffix = [
+          "lan"
+          "localdomain"
+          "example"
+          "invalid"
+          "localhost"
+          "test"
+          "local"
+          "home.arpa"
+          "time.edu.cn"
+          "ntp.org.cn"
+          "pool.ntp.org"
+          "music.163.com"
+          "126.net"
+          "kuwo.cn"
+          "y.qq.com"
+          "xiami.com"
+          "music.migu.cn"
+          "msftconnecttest.com"
+          "msftncsi.com"
+          "qq.com"
+          "tencent.com"
+          "steamcontent.com"
+          "srv.nintendo.net"
+          "n.n.srv.nintendo.net"
+          "cdn.nintendo.net"
+          "stun.playstation.net"
+          "battlenet.com.cn"
+          "wotgame.cn"
+          "wggames.cn"
+          "wowsgame.cn"
+          "wargaming.net"
+          "linksys.com"
+          "linksyssmartwifi.com"
+          "router.asus.com"
+          "nflxvideo.net"
+          "square-enix.com"
+          "finalfantasyxiv.com"
+          "ffxiv.com"
+          "ff14.sdo.com"
+          "mcdn.bilivideo.cn"
+          "media.dssott.com"
+          "market.xiaomi.com"
+          "cmbchina.com"
+          "cmbimg.com"
+          "sandai.net"
+          "n0808.com"
+          "3gppnetwork.org"
+          "uu.163.com"
+          "oray.com"
+          "orayimg.com"
+          "gcloudcs.com"
+          "gcloudsdk.com"
+        ];
+        server = dnsServers.direct.tag;
+      }
+      {
+        domain_regex = [
+          "time.*.com"
+          "time.*.gov"
+          "time.*.edu.cn"
+          "time.*.apple.com"
+          "time1.*.com"
+          "time2.*.com"
+          "time3.*.com"
+          "time4.*.com"
+          "time5.*.com"
+          "time6.*.com"
+          "time7.*.com"
+          "ntp.*.com"
+          "ntp1.*.com"
+          "ntp2.*.com"
+          "ntp3.*.com"
+          "ntp4.*.com"
+          "ntp5.*.com"
+          "ntp6.*.com"
+          "ntp7.*.com"
+          "xbox.*.*.microsoft.com"
+          ".*.*.xboxlive.com"
+          "xbox.*.microsoft.com"
+          "stun.*.*"
+          "stun.*.*.*"
+          ".+.stun.*.*"
+          ".+.stun.*.*.*"
+          ".+.stun.*.*.*.*"
+          ".+.stun.*.*.*.*.*"
+        ];
+        server = dnsServers.direct.tag;
+      }
+      {
+        rule_set = ruleSet.cn.tag;
+        server = dnsServers.direct.tag;
+      }
+      {
         query_type = [
           "A"
           "AAAA"
         ];
         server = dnsServers.fakeip.tag;
-      }
-      {
-        rule_set = ruleSet.geo_not_cn.tag;
-        query_type = [ "CNAME" ];
-        server = dnsServers.proxy.tag;
-      }
-      {
-        query_type = [
-          "A"
-          "AAAA"
-          "CNAME"
-        ];
-        invert = true;
-        server = dnsServers.local.tag;
-      }
-      {
-        domain_suffix = "zxc.cn";
-        server = dnsServers.hosts.tag;
+        rewrite_ttl = 1;
       }
     ];
     routeRules = [
-      { action = "sniff"; }
       {
-        protocol = "dns";
-        action = "hijack-dns";
+        inbound = "dns-in";
+        outbound = outbounds.dns.tag;
       }
       {
-        protocol = "bittorrent";
-        outbound = outbounds.direct.tag;
-      }
-      {
-        clash_mode = "global";
+        clash_mode = "Global";
         outbound = outbounds.global.tag;
       }
       {
-        clash_mode = "direct";
+        clash_mode = "Direct";
         outbound = outbounds.direct.tag;
+      }
+      {
+        rule_set = ruleSet.private.tag;
+        outbound = outbounds.foreign.tag;
       }
       {
         rule_set = ruleSet.ai.tag;
         outbound = outbounds.ai.tag;
       }
       {
-        rule_set = ruleSet.youtube.tag;
-        outbound = outbounds.youtube.tag;
+        rule_set = ruleSet.microsoft.tag;
+        outbound = outbounds.microsoft.tag;
+      }
+      {
+        rule_set = ruleSet.apple.tag;
+        outbound = outbounds.apple.tag;
       }
       {
         rule_set = ruleSet.google.tag;
         outbound = outbounds.google.tag;
       }
       {
-        rule_set = [
-          ruleSet.geo_cn.tag
-          ruleSet.cn.tag
-        ];
-        outbound = outbounds.cn.tag;
+        rule_set = ruleSet.games.tag;
+        outbound = outbounds.games.tag;
       }
       {
-        rule_set = [
-          ruleSet.github.tag
-          ruleSet.gitlab.tag
-        ];
-        outbound = outbounds.github.tag;
+        rule_set = ruleSet.networktest.tag;
+        outbound = outbounds.networktest.tag;
       }
       {
-        rule_set = ruleSet.geo_not_cn.tag;
-        outbound = outbounds.github.tag;
+        rule_set = ruleSet.youtube.tag;
+        outbound = outbounds.youtube.tag;
       }
       {
-        rule_set = ruleSet.google_ip.tag;
-        outbound = outbounds.google.tag;
+        rule_set = ruleSet.proxy.tag;
+        outbound = outbounds.main.tag;
       }
       {
-        rule_set = ruleSet.private_ip.tag;
+        rule_set = ruleSet.cn.tag;
         outbound = outbounds.direct.tag;
       }
       {
-        rule_set = ruleSet.cn_ip.tag;
-        outbound = outbounds.cn.tag;
+        rule_set = ruleSet.telegram.tag;
+        outbound = outbounds.telegram.tag;
       }
       {
-        rule_set = ruleSet.telegram_ip.tag;
-        outbound = outbounds.telegram.tag;
+        rule_set = ruleSet.netflix.tag;
+        outbound = outbounds.netflix.tag;
+      }
+      {
+        rule_set = ruleSet.netflix_ip.tag;
+        outbound = outbounds.netflix.tag;
+      }
+      {
+        rule_set = ruleSet.cn_ip.tag;
+        outbound = outbounds.direct.tag;
+      }
+      {
+        rule_set = ruleSet.ads.tag;
+        outbound = outbounds.ad.tag;
+      }
+      {
+        rule_set = ruleSet.youtube.tag;
+        outbound = outbounds.youtube.tag;
       }
     ];
     mkProvider =
@@ -417,15 +563,14 @@ in
       }:
       {
         type = "remote";
-        user_agent = "clash.meta";
-        update_interval = "${toString hour}h${toString minute}m0s";
-        health_check = {
-          enabled = true;
-          url = "https://www.gstatic.com/generate_204";
-          interval = "10m0s";
-        };
+        download_ua = "clash.meta";
+        download_interval = "${toString hour}h${toString minute}m0s";
+        healthcheck_url = "https://www.gstatic.com/generate_204";
+        healthcheck_interval = "10m0s";
         download_detour = outbounds.direct.tag;
-        inherit url tag;
+        inherit tag;
+        path = "./providers/${tag}.yaml";
+        download_url = url;
       };
     mkFirewall =
       let
