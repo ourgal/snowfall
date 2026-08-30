@@ -1,6 +1,6 @@
 { lib, namespace, ... }:
 let
-  inherit (lib.${namespace}) domains;
+  inherit (lib.${namespace}) domains xyzDomains;
   inherit (builtins) isBool throw;
 in
 {
@@ -24,7 +24,7 @@ in
           subconverter = "http://${domains.subconverter}/sub?target=${
             if isMihomo then "clash" else "singbox"
           }&config=config/ACL4SSR_Mini.ini&url=";
-          sublink = "https://${domains.sublink}/${
+          sublink = "https://${xyzDomains.sublink}/${
             if isMihomo then "clash" else "singbox"
           }?&ua=&selectedRules=[]&customRules=[]&config=";
         in
