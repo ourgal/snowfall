@@ -54,26 +54,6 @@ in
       );
       updateInterval = 6;
       mihomoSupport = {
-        free-trojan = {
-          name = "free-trojan";
-          url = mkSubUrl {
-            user = "barry-far";
-            repo = "V2ray-Configs";
-            branch = "main";
-            path = "Splitted-By-Protocol/trojan.txt";
-          };
-          inherit updateInterval;
-        };
-        free-vmess = {
-          name = "free-vmess";
-          url = mkSubUrl {
-            user = "barry-far";
-            repo = "V2ray-Configs";
-            branch = "main";
-            path = "Splitted-By-Protocol/vmess.txt";
-          };
-          inherit updateInterval;
-        };
         openproxylist = {
           name = "openproxylist";
           url = mkSubUrl {
@@ -90,7 +70,7 @@ in
             user = "Barabama";
             repo = "FreeNodes";
             branch = "main";
-            path = "nodes/yudou66.txt";
+            path = "nodes/yudou.txt";
           };
           inherit updateInterval;
         };
@@ -348,7 +328,6 @@ in
           name = "aniu-snippets";
           url = mkSubUrl { raw = "https://hj.x9527x.top/sub?token=aniu"; };
           inherit updateInterval;
-          enable = true;
         };
         kejiland = {
           name = "kejiland";
@@ -366,19 +345,47 @@ in
           name = "aniu-hk";
           url = mkSubUrl { raw = "https://hk.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
-          enable = true;
         };
         aniu-jp = {
           name = "aniu-jp";
           url = mkSubUrl { raw = "https://jp.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
-          enable = true;
         };
         aniu-sg = {
           name = "aniu-sg";
           url = mkSubUrl { raw = "https://sg.xmm1993.top/sub?token=aniu"; };
           inherit updateInterval;
+        };
+        free-v2ray-public-list_hy2 = {
+          name = "free-v2ray-public-list_hy2";
+          url = mkSubUrl {
+            user = "ebrasha";
+            repo = "free-v2ray-public-list";
+            branch = "main";
+            path = "separated-protocols/hysteria2_configs.txt";
+          };
+          inherit updateInterval;
           enable = true;
+        };
+        free-v2ray-collector_vless = {
+          name = "free-v2ray-collector_vless";
+          url = mkSubUrl {
+            user = "iboxz";
+            repo = "free-v2ray-collector";
+            branch = "main";
+            path = "main/vless.txt";
+          };
+          inherit updateInterval;
+        };
+        daily_free_vpn = {
+          name = "daily_free_vpn";
+          url = mkSubUrl {
+            user = "cbusifabcap";
+            repo = "daily_free_vpn";
+            branch = "main";
+            path = "Z.txt";
+          };
+          inherit updateInterval;
         };
       }
     );
