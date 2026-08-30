@@ -302,6 +302,10 @@ let
       cn_ip = ip "cn";
       telegram_ip = ip "telegram";
     };
+  host_ip = ''
+    host_ipv4=$(ip -o -f inet addr show | grep -Ev 'utun|iot|peer|docker|podman|virbr|vnet|ovs|vmbr|veth|vmnic|vboxnet|lxcbr|xenbr|vEthernet' | grep -E ' 1(92|0|72)\.' | awk '/scope global/ {print $4}')
+    host_ipv6=$(ip -6 route show | grep -Ev 'default|unreachable|fe80::/|wan|ppp|utun|iot|peer|docker|podman|virbr|vnet|ovs|vmbr|veth|vmnic|vboxnet|lxcbr|xenbr|vEthernet|wgs|multicast|anycast' | awk '{print $1}' | tr '\n' ' ' | sed 's/ $//')
+  '';
 in
 {
   sing-box = {
@@ -499,8 +503,6 @@ in
           "2001:20::/28"
           "2001:db8::/32"
           "2002::/16"
-          "fe80::/10"
-          "ff00::/8"
         ],
       }:
       let
@@ -516,6 +518,8 @@ in
               [ -n "$host_ipv6" ] && [ -n "$host_ipv4" ] && break
               sleep 1 && i=$((i + 1))
           done
+
+          $host_ipv4+=" 127.0.0.0/8"
         ''
         + (
           if isTailscale then
@@ -578,17 +582,17 @@ in
                 "-A ${natTable} -m mark --mark ${FirewallMark} -j RETURN"
               ]
             )
-            ++ [
-              "for ipv6 in $host_ipv6; do"
-              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
-              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p udp -j REDIRECT --to-ports ${toString redirectPort}"
-              "ip6tables -w -t nat -A ${natTable} -d $ipv6 -j RETURN"
-              "done"
-            ]
             ++ map (x: "ip6tables -w -t nat ${x}") (
               (map (x: "-A ${natTable} -d ${x} -j RETURN") reservedSubnets)
               ++ [ "-A ${natTableDns} -m mark --mark ${FirewallMark} -j RETURN" ]
             )
+            ++ [
+              "for ipv6 in $host_ipv6; do"
+              "ip6tables -w -t nat -A ${natTable} -d $ipv6 -j RETURN"
+              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
+              "ip6tables -w -t nat -A ${natTable} -s $ipv6 -p udp -j REDIRECT --to-ports ${toString redirectPort}"
+              "done"
+            ]
             ++ [
               "for ipv6 in $host_ipv6; do"
               "ip6tables -w -t nat -A ${natTableDns} -s $ipv6 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
@@ -623,24 +627,13 @@ in
         natTableV6Dns = "${name}_v6_nat_dns";
         natStartV6 =
           if isTproxy then
-            let
-              subnets = [
-                "fe80::/10"
-                "fe80::/10"
-                "fd00::/8"
-                "fd00::/8"
-              ];
-            in
             joinLines (
-              map (x: "ip6tables -w -t nat ${x}") (
-                [
-                  "-N ${natTableV6}"
-                  "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
-                  "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6}"
-                  "-A ${natTableV6} -m mark --mark ${FirewallMark} -j RETURN"
-                ]
-                ++ map (x: "-A ${natTableV6} -s ${x} -p tcp -j REDIRECT --to-ports ${toString dnsPort}") subnets
-              )
+              map (x: "ip6tables -w -t nat ${x}") ([
+                "-N ${natTableV6}"
+                "-A PREROUTING -p udp -m udp --dport 53 -j ${natTableV6}"
+                "-A PREROUTING -p tcp -m tcp --dport 53 -j ${natTableV6}"
+                "-A ${natTableV6} -m mark --mark ${FirewallMark} -j RETURN"
+              ])
             )
             + "\n"
             + ''
@@ -677,10 +670,6 @@ in
                   "-A ${natTableV6} -s fe80::/10 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
                   "-A ${natTableV6} -s fd00::/8 -p tcp -j REDIRECT --to-ports ${toString redirectPort}"
                   "-A ${natTableV6Dns} -m mark --mark ${FirewallMark} -j RETURN"
-                  "-A ${natTableV6Dns} -s fe80::/10 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fe80::/10 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fd00::/8 -p tcp -j REDIRECT --to-ports ${toString dnsPort}"
-                  "-A ${natTableV6Dns} -s fd00::/8 -p udp -j REDIRECT --to-ports ${toString dnsPort}"
                 ]
               )
             )
@@ -738,15 +727,15 @@ in
                   "-A ${mangleTable} -m mark --mark ${toString routingMark} -j RETURN"
                 ]
               ))
-              ++ [
-                "for ipv4 in $host_ipv4; do"
-                "iptables -w -t mangle -A ${mangleTable} -s $ipv4 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
-                "iptables -w -t mangle -A ${mangleTable} -d $ipv4 -j RETURN"
-                "done"
-              ]
               ++ (map (x: "iptables -w -t mangle ${x}") (
                 map (x: "-A ${mangleTable} -d ${x} -j RETURN") reservedSubnets
               ))
+              ++ [
+                "for ipv4 in $host_ipv4; do"
+                "iptables -w -t mangle -A ${mangleTable} -d $ipv4 -j RETURN"
+                "iptables -w -t mangle -A ${mangleTable} -s $ipv4 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip 0.0.0.0 --tproxy-mark ${FirewallMark}"
+                "done"
+              ]
             ))
           else
             "";
@@ -787,12 +776,6 @@ in
                     "-A ${mangleTableV6} -m mark --mark ${FirewallMark} -j RETURN"
                   ]
                   ++ map (x: "-A ${mangleTableV6} -d ${x} -j RETURN") reservedSubnetsV6
-                  ++ [
-                    "-A ${mangleTableV6} -s fe80::/10 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fd00::/8 -p tcp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fe80::/10 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                    "-A ${mangleTableV6} -s fd00::/8 -p udp -j TPROXY --on-port ${toString tproxyPort} --on-ip :: --tproxy-mark ${FirewallMark}"
-                  ]
                 )
               )
               + "\n"
@@ -872,5 +855,507 @@ in
           + "\n"
           + filterStop;
       };
+    tproxy_start =
+      {
+        isTailscale ? true,
+        firewall_mark ? 1,
+        tproxyPort ? 7893,
+        dnsPort ? 1053,
+        mark ? 255,
+        fakeip ? "28.0.0.0/8",
+        fakeipV6 ? "fc00::/16",
+        dailyPorts ? false,
+      }:
+      let
+        tailscale =
+          if isTailscale then
+            ''
+              # tailscale
+              host_ipv4+=" 100.64.0.0/10"
+              host_ipv6+=" fd7a:115c:a1e0::/48"
+            ''
+          else
+            "";
+        ip_taleb_mark = 100;
+        ipv6_taleb_mark = 101;
+        dns_table_name = "sing_box_dns";
+        dns_v6_table_name = "sing_box_dns_v6";
+        mark_table_name = "sing_box_mark";
+        mark_v6_table_name = "sing_box_mark_v6";
+      in
+      ''
+        mark=${toString mark}
+        firewall_mark=${toString firewall_mark}
+        daily_ports=${toString (if dailyPorts then 1 else 0)}
+
+        # waiting network
+        i=1
+        while [ "$i" -le "20" ]; do
+          ${host_ip}
+          [ -n "$host_ipv6" ] && [ -n "$host_ipv4" ] && break
+          sleep 1 && i=$((i + 1))
+        done
+
+        host_ipv4+=" 127.0.0.0/8"
+        host_ipv6+=" fe80::/10 fd00::/8"
+
+        ${tailscale}
+
+        # route
+        ip_taleb_mark=${toString ip_taleb_mark}
+        ipv6_taleb_mark=${toString ipv6_taleb_mark}
+
+        ip rule add fwmark "$firewall_mark" lookup "$ip_taleb_mark"
+        ip route add local default dev lo table "$ip_taleb_mark"
+        ip -6 rule add fwmark "$firewall_mark" lookup "$ipv6_taleb_mark"
+        ip -6 route add local default dev lo table "$ipv6_taleb_mark"
+
+        dns_table=${dns_table_name}
+        dns_v6_table=${dns_v6_table_name}
+
+        # nat
+        iptables -w -t nat -N "$dns_table"
+        for p in tcp udp; do
+          iptables -w -t nat -A PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_table"
+        done
+        iptables -w -t nat -A "$dns_table" -m mark --mark "$mark" -j RETURN
+
+        ip6tables -w -t nat -N "$dns_v6_table"
+        for p in tcp udp; do
+          ip6tables -w -t nat -A PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
+        done
+        ip6tables -w -t nat -A "$dns_v6_table" -m mark --mark "$mark" -j RETURN
+
+        dns_port=${toString dnsPort}
+
+        for ipv4 in $host_ipv4; do
+          for p in tcp udp; do
+            iptables -w -t nat -A "$dns_table" -s "$ipv4" -p "$p" -j REDIRECT --to-ports "$dns_port"
+          done
+        done
+
+        for ipv6 in $host_ipv6; do
+          for p in tcp udp; do
+            ip6tables -w -t nat -A "$dns_table" -s "$ipv6" -p "$p" -j REDIRECT --to-ports "$dns_port"
+          done
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t nat -A "$dns_v6_table" -t "$p" -j RETURN
+        done
+
+        # filter
+        for ipv4 in $host_ipv4; do
+          iptables -w -t filter -A INPUT -s "$ipv4" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          iptables -w -t filter -A INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t filter -A INPUT -s "$ipv6" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t filter -A INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        mark_table=${mark_table_name}
+        mark_v6_table=${mark_v6_table_name}
+
+        # mangle
+        iptables -w -t mangle -N "$mark_table"
+
+        ip6tables -w -t mangle -N "$mark_v6_table"
+
+        for p in tcp udp; do
+          iptables -w -t mangle -A PREROUTING -d "${fakeip}" -p "$p" -j "$mark_table"
+          if (( daily_ports )); then
+            iptables -w -t mangle -A PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
+          else
+            iptables -w -t mangle -A PREROUTING -p "$p" -m "$p" -j "$mark_table"
+          fi
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t mangle -A PREROUTING -d "${fakeipV6}" -p "$p" -j "$mark_v6_table"
+          if (( daily_ports )); then
+            ip6tables -w -t mangle -A PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
+          else
+            ip6tables -w -t mangle -A PREROUTING -p "$p" -m "$p" -j "$mark_v6_table"
+          fi
+        done
+
+        for p in tcp udp; do
+          iptables -w -t mangle -A "$mark_table" -p "$p" -m "$p" --dport 53 -j RETURN
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t mangle -A "$mark_v6_table" -p "$p" -m "$p" --dport 53 -j RETURN
+        done
+
+        iptables -w -t mangle -A "$mark_table" -m mark --mark "$mark" -j RETURN
+
+        ip6tables -w -t mangle -A "$mark_v6_table" -m mark --mark "$mark" -j RETURN
+
+        for ipv4 in $host_ipv4; do
+          iptables -w -t mangle -A "$mark_table" -d "$ipv4" -j RETURN
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t mangle -A "$mark_v6_table" -d "$ipv6" -j RETURN
+        done
+
+        reseved_subnets=("0.0.0.0/8" "10.0.0.0/8" "127.0.0.0/8" "100.64.0.0/10" "169.254.0.0/16" "172.16.0.0/12" "192.168.0.0/16" "224.0.0.0/4" "240.0.0.0/4")
+        for subnet in "''${reseved_subnets[@]}"; do
+          iptables -w -t mangle -A "$mark_table" -d "$subnet" -j RETURN
+        done
+
+        reseved_subnets_v6=("fe80::/10" "fd00::/8" "::/128" "::1/128" "::ffff:0.0.0.0/96" "64:ff9b::/96" "100::/64" "2001::/32" "2001:20::/28" "2001:db8::/32" "2002::/16")
+        for subnet in "''${reseved_subnets_v6[@]}"; do
+          ip6tables -w -t mangle -A "$mark_v6_table" -d "$subnet" -j RETURN
+        done
+
+        tproxy_port=${toString tproxyPort}
+
+        for ipv4 in $host_ipv4; do
+          for p in tcp udp; do
+            iptables -w -t mangle -A "$mark_table" -s "$ipv4" -p "$p" -j TPROXY --on-port "$tproxy_port" --on-ip 0.0.0.0 --tproxy-mark "$firewall_mark"
+          done
+        done
+
+        for ipv6 in $host_ipv6; do
+          for p in tcp udp; do
+            ip6tables -w -t mangle -A "$mark_v6_table" -s "$ipv6" -p "$p" -j TPROXY --on-port "$tproxy_port" --on-ip :: --tproxy-mark "$firewall_mark"
+          done
+        done
+      '';
+    tproxy_stop =
+      {
+        isTailscale ? true,
+        firewall_mark ? 1,
+        fakeip ? "28.0.0.0/8",
+        fakeipV6 ? "fc00::/16",
+        dailyPorts ? false,
+      }:
+      let
+        tailscale =
+          if isTailscale then
+            ''
+              # tailscale
+              host_ipv4+=" 100.64.0.0/10"
+              host_ipv6+=" fd7a:115c:a1e0::/48"
+            ''
+          else
+            "";
+        ip_taleb_mark = 100;
+        ipv6_taleb_mark = 101;
+        dns_table_name = "sing_box_dns";
+        dns_v6_table_name = "sing_box_dns_v6";
+        mark_table_name = "sing_box_mark";
+        mark_v6_table_name = "sing_box_mark_v6";
+      in
+      ''
+        firewall_mark=${toString firewall_mark}
+        daily_ports=${toString (if dailyPorts then 1 else 0)}
+
+        ${host_ip}
+
+        host_ipv4+=" 127.0.0.0/8"
+        host_ipv6+=" fe80::/10 fd00::/8"
+
+        ${tailscale}
+
+        # route
+        ip_taleb_mark=${toString ip_taleb_mark}
+        ipv6_taleb_mark=${toString ipv6_taleb_mark}
+
+        ip rule del fwmark "$firewall_mark" table "$ip_taleb_mark" 2>/dev/null
+        ip route flush table "$ip_taleb_mark" 2>/dev/null
+        ip -6 rule del fwmark "$firewall_mark" table "$ipv6_taleb_mark" 2>/dev/null
+        ip -6 route flush table "$ipv6_taleb_mark" 2>/dev/null
+
+        dns_table=${dns_table_name}
+        dns_v6_table=${dns_v6_table_name}
+
+        # nat
+        for p in tcp udp; do
+          iptables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_table"
+        done
+        iptables -w -t nat -F "$dns_table"
+        iptables -w -t nat -X "$dns_table"
+
+        for p in tcp udp; do
+          ip6tables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
+        done
+        ip6tables -w -t nat -F "$dns_v6_table"
+        ip6tables -w -t nat -X "$dns_v6_table"
+
+        # filter
+        for ipv4 in $host_ipv4; do
+          iptables -w -t filter -D INPUT -s "$ipv4" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          iptables -w -t filter -D INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t filter -D INPUT -s "$ipv6" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t filter -D INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        mark_table=${mark_table_name}
+        mark_v6_table=${mark_v6_table_name}
+
+        # mangle
+        for p in tcp udp; do
+          iptables -w -t mangle -D PREROUTING -d "${fakeip}" -p "$p" -j "$mark_table"
+          if (( daily_ports )); then
+            iptables -w -t mangle -D PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
+          else
+            iptables -w -t mangle -D PREROUTING -p "$p" -m "$p" -j "$mark_table"
+          fi
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t mangle -D PREROUTING -d "${fakeipV6}" -p "$p" -j "$mark_v6_table"
+          if (( daily_ports )); then
+            ip6tables -w -t mangle -D PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
+          else
+            ip6tables -w -t mangle -D PREROUTING -p "$p" -m "$p" -j "$mark_v6_table"
+          fi
+        done
+
+        iptables -w -t mangle -F "$mark_table"
+        iptables -w -t mangle -X "$mark_table"
+
+        ip6tables -w -t mangle -F "$mark_v6_table"
+        ip6tables -w -t mangle -X "$mark_v6_table"
+      '';
+    redir_start =
+      {
+        isTailscale ? true,
+        redirPort ? 7892,
+        dnsPort ? 1053,
+        mark ? 255,
+        fakeip ? "28.0.0.0/8",
+        fakeipV6 ? "fc00::/16",
+        dailyPorts ? false,
+      }:
+      let
+        tailscale =
+          if isTailscale then
+            ''
+              # tailscale
+              host_ipv4+=" 100.64.0.0/10"
+              host_ipv6+=" fd7a:115c:a1e0::/48"
+            ''
+          else
+            "";
+        dns_table_name = "sing_box_dns";
+        dns_v6_table_name = "sing_box_dns_v6";
+        mark_table_name = "sing_box_mark";
+        mark_v6_table_name = "sing_box_mark_v6";
+      in
+      ''
+        mark=${toString mark}
+        daily_ports=${toString (if dailyPorts then 1 else 0)}
+
+        i=1
+        while [ "$i" -le "20" ]; do
+          ${host_ip}
+          sleep 1 && i=$((i + 1))
+        done
+
+        host_ipv4+=" 127.0.0.0/8"
+        host_ipv6+=" fe80::/10 fd00::/8"
+
+        ${tailscale}
+
+        # nat
+        dns_table=${dns_table_name}
+        dns_v6_table=${dns_v6_table_name}
+        mark_table=${mark_table_name}
+        mark_v6_table=${mark_v6_table_name}
+        iptables -w -t nat -N "$dns_table"
+        iptables -w -t nat -N "$mark_table"
+        iptables -w -t nat -N "$dns_v6_table"
+        iptables -w -t nat -N "$mark_v6_table"
+
+        for p in tcp udp; do
+          iptables -w -t nat -A PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_table"
+          ip6tables -w -t nat -A PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
+        done
+
+        iptables -w -t nat -A PREROUTING -d "${fakeip}" -p tcp -j "$mark_table"
+        if (( daily_ports )); then
+          iptables -w -t nat -A PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
+        else
+          iptables -w -t nat -A PREROUTING -p tcp -m tcp -j "$mark_table"
+        fi
+
+        ip6tables -w -t nat -A PREROUTING -d "${fakeipV6}" -p tcp -j "$mark_v6_table"
+        if (( daily_ports )); then
+          ip6tables -w -t nat -A PREROUTING -p tcp -m tcp -j "$mark_v6_table"
+        else
+          ip6tables -w -t nat -A PREROUTING -p tcp -m tcp -j "$mark_v6_table"
+        fi
+
+        for p in tcp udp; do
+          iptables -w -t nat -A "$mark_table" -p "$p" --dport 53 -j RETURN
+        done
+        iptables -w -t nat -A "$mark_table" -m --mark "$mark" -j RETURN
+
+        for p in tcp udp; do
+          ip6tables -w -t nat -A "$mark_v6_table" -p "$p" --dport 53 -j RETURN
+        done
+        ip6tables -w -t nat -A "$mark_v6_table" -m --mark "$mark" -j RETURN
+
+        for ipv4 in $host_ipv4; do
+          iptables -w -t nat -A "$mark_table" -d "$ipv4" -j RETURN
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t nat -A "$mark_v6_table" -d "$ipv6" -j RETURN
+        done
+
+        reseved_subnets=("0.0.0.0/8" "10.0.0.0/8" "127.0.0.0/8" "100.64.0.0/10" "169.254.0.0/16" "172.16.0.0/12" "192.168.0.0/16" "224.0.0.0/4" "240.0.0.0/4")
+        for subnet in "''${reseved_subnets[@]}"; do
+          iptables -w -t nat -A "$mark_table" -d "$subnet" -j RETURN
+        done
+
+        reseved_subnets_v6=("fe80::/10" "fd00::/8" "::/128" "::1/128" "::ffff:0.0.0.0/96" "64:ff9b::/96" "100::/64" "2001::/32" "2001:20::/28" "2001:db8::/32" "2002::/16")
+        for subnet in "''${reseved_subnets_v6[@]}"; do
+          ip6tables -w -t nat -A "$mark_v6_table" -d "$subnet" -j RETURN
+        done
+
+        redir_port=${toString redirPort}
+
+        for ipv4 in $host_ipv4; do
+          iptables -w -t nat -A "$mark_table" -s "$ipv4" -j REDIRECT --to-ports "$redir_port"
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t nat -A "$mark_v6_table" -s "$ipv6" -j REDIRECT --to-ports "$redir_port"
+        done
+
+        iptables -w -t nat -A "$dns_table" -m --mark "$mark" -j RETURN
+
+        ip6tables -w -t nat -A "$dns_v6_table" -m --mark "$mark" -j RETURN
+
+        dns_port=${toString dnsPort}
+
+        for ipv4 in $host_ipv4; do
+          for p in tcp udp; do
+            iptables -w -t nat -A "$dns_table" -s "$ipv4" -p "$p" -j REDIRECT --to-ports "$dns_port"
+          done
+        done
+
+        for ipv6 in $host_ipv6; do
+          for p in tcp udp; do
+            ip6tables -w -t nat -A "$dns_v6_table" -s "$ipv6" -p "$p" -j REDIRECT --to-ports "$dns_port"
+          done
+        done
+
+        # filter
+        for ipv4 in $host_ipv4; do
+          iptables -w -t filter -A INPUT -s "$ipv4" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          iptables -w -t filter -A INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t filter -A INPUT -s "$ipv6" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t filter -A INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+      '';
+    redir_stop =
+      {
+        isTailscale ? true,
+        fakeip ? "28.0.0.0/8",
+        fakeipV6 ? "fc00::/16",
+        dailyPorts ? false,
+      }:
+      let
+        tailscale =
+          if isTailscale then
+            ''
+              # tailscale
+              host_ipv4+=" 100.64.0.0/10"
+              host_ipv6+=" fd7a:115c:a1e0::/48"
+            ''
+          else
+            "";
+        dns_table_name = "sing_box_dns";
+        dns_v6_table_name = "sing_box_dns_v6";
+        mark_table_name = "sing_box_mark";
+        mark_v6_table_name = "sing_box_mark_v6";
+      in
+      ''
+        ${host_ip}
+        daily_ports=${toString (if dailyPorts then 1 else 0)}
+
+        host_ipv4+=" 127.0.0.0/8"
+        host_ipv6+=" fe80::/10 fd00::/8"
+
+        ${tailscale}
+
+        dns_table=${dns_table_name}
+        dns_v6_table=${dns_v6_table_name}
+        mark_table=${mark_table_name}
+        mark_v6_table=${mark_v6_table_name}
+
+        # nat
+        for p in tcp udp; do
+          iptables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_table"
+        done
+        iptables -w -t nat -D PREROUTING -d "${fakeip}" -p tcp -j "$mark_table"
+        iptables -w -t nat -D PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
+        iptables -w -t nat -F "$dns_table"
+        iptables -w -t nat -X "$dns_table"
+        iptables -w -t nat -F "$mark_table"
+        iptables -w -t nat -X "$mark_table"
+
+        for p in tcp udp; do
+          ip6tables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
+        done
+        ip6tables -w -t nat -D PREROUTING -d "${fakeipV6}" -p tcp -j "$mark_v6_table"
+        if (( daily_ports )); then
+          ip6tables -w -t nat -D PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
+        else
+          ip6tables -w -t nat -D PREROUTING -p tcp -m tcp -j "$mark_v6_table"
+        fi
+        ip6tables -w -t nat -F "$dns_v6_table"
+        ip6tables -w -t nat -X "$dns_v6_table"
+        ip6tables -w -t nat -F "$mark_v6_table"
+        ip6tables -w -t nat -X "$mark_v6_table"
+
+        # filter
+        for ipv4 in $host_ipv4; do
+          iptables -w -t filter -D INPUT -s "$ipv4" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          iptables -w -t filter -D INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+
+        for ipv6 in $host_ipv6; do
+          ip6tables -w -t filter -D INPUT -s "$ipv6" -j ACCEPT
+        done
+
+        for p in tcp udp; do
+          ip6tables -w -t filter -D INPUT -p "$p" -m multiport --dports 7890,9999 -j reject --reject-with icmp-port-unreachable
+        done
+      '';
   };
 }

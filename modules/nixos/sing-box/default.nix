@@ -15,7 +15,6 @@ let
     domainBlackList
     domainWhiteList
     ;
-  inherit (lib.${namespace}.sing-box) mkFirewall;
   inherit (lib) optional;
   utils = import "${inputs.nixpkgs}/nixos/lib/utils.nix" { inherit lib pkgs config; };
   cfg = cfgNixos config.${namespace} ./.;
@@ -29,7 +28,7 @@ let
   dnsPort = 1053;
   mixPort = 7890;
   routingMark = 255;
-  fakeIpSubnet = "198.18.0.0/16";
+  fakeIpSubnet = "28.0.0.0/8";
   fakeIp6Subnet = "fc00::/16";
   configTemplate = {
     log = {
@@ -326,10 +325,8 @@ let
       ++ optional cfg.tailscale.enable {
         type = "tailscale";
         tag = "ts-ep";
-        auth_key = {
-          _secret = config.sops.secrets."tailscale/authKey".path;
-        };
         hostname = "router";
+        advertise_routes = [ "192.168.123.0/24" ];
       };
     outbounds = [
       {
@@ -848,7 +845,14 @@ let
               timeout = "500ms";
             }
           ]
-          ++ (optional isTun (
+          ++ (optional cfg.tailscale.enable {
+            ip_cidr = [
+              "100.64.0.0/10"
+              "fd7a:115c:a1e0::/48"
+            ];
+            outbound = "ts-ep";
+          })
+          ++ [
             {
               type = "logical";
               mode = "or";
@@ -859,6 +863,7 @@ let
               ];
               action = "reject";
             }
+            (
               {
                 type = "logical";
                 mode = "or";
@@ -874,10 +879,9 @@ let
                     invert = true;
                   }
                 ];
-                action = "bypass";
               }
-          ))
-          ++ [
+              // (if isTun then { action = "bypass"; } else { outbound = "DIRECT"; })
+            )
             {
               clash_mode = "Direct";
               outbound = "DIRECT";
@@ -1168,25 +1172,51 @@ let
 
     systemd.services.sing-box =
       let
-        firewallScripts = mkFirewall {
-          inherit
-            isTproxy
-            apiPort
-            tproxyPort
-            redirectPort
-            dnsPort
-            mixPort
-            fakeIpSubnet
-            fakeIp6Subnet
-            routingMark
-            ;
-          FirewallMark = toString 1;
-          ipTableMark = "100";
-          ipTableMarkV6 = "101";
-          isTailscale = cfg.tailscale.enable;
-        };
-        firewallStart = pkgs.writeShellScript "singboxFirewallStart" firewallScripts.start;
-        firewallStop = pkgs.writeShellScript "singboxFirewallStop" firewallScripts.stop;
+        firewallStart = pkgs.writeShellScript "singboxFirewallStart" (
+          if isTproxy then
+            lib.${namespace}.sing-box.tproxy_start {
+              isTailscale = cfg.tailscale.enable;
+              firewall_mark = 1;
+              tproxyPort = tproxyPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = "28.0.0.0/8";
+              fakeipV6 = "fc00::/16";
+            }
+          else if isRedirect then
+            lib.${namespace}.sing-box.redir_start {
+              isTailscale = cfg.tailscale.enable;
+              firewall_mark = 1;
+              redirPort = redirectPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = "28.0.0.0/8";
+              fakeipV6 = "fc00::/16";
+            }
+          else
+            ""
+        );
+        firewallStop = pkgs.writeShellScript "singboxFirewallStop" (
+          if isTproxy then
+            lib.${namespace}.sing-box.tproxy_stop {
+              isTailscale = cfg.tailscale.enable;
+              firewall_mark = 1;
+              fakeip = "28.0.0.0/8";
+              fakeipV6 = "fc00::/16";
+            }
+          else if isRedirect then
+            lib.${namespace}.sing-box.redir_stop {
+              isTailscale = cfg.tailscale.enable;
+              firewall_mark = 1;
+              redirPort = redirectPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = "28.0.0.0/8";
+              fakeipV6 = "fc00::/16";
+            }
+          else
+            ""
+        );
       in
       {
         path = with pkgs; [
