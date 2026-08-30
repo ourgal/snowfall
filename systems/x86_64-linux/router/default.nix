@@ -35,7 +35,9 @@ in
       pppd = enabled // {
         inherit wan lan;
       };
-      sing-boxp = enabled;
+      sing-box = enabled // {
+        tailscale = enabled;
+      };
       mihomo = disabled;
       sops-nix = enabled // {
         router = enabled;
@@ -51,7 +53,7 @@ in
       iotop = enabled;
       harmonia = enabled;
       cloudflared = enabled;
-      tailscale = enabled;
+      tailscale = disabled;
       bbr = enabled;
       pixiecore = enabled;
     };

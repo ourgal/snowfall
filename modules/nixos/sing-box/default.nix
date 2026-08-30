@@ -869,7 +869,6 @@ let
               rules = [
                 { port = 853; }
                 { network = "quic"; }
-                { protocol = "stun"; }
               ];
               action = "reject";
             }
