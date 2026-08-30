@@ -19,11 +19,7 @@ let
     ;
   freeSubs = lib.${namespace}.freeSubs { isMihomo = true; };
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
-  inherit (builtins)
-    mapAttrs
-    toJSON
-    map
-    ;
+  inherit (builtins) mapAttrs toJSON map;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
   isRedirect = cfg.mode == "redirect";
@@ -54,8 +50,8 @@ let
     dns =
       let
         defaultDns = [
-          "https://223.5.5.5/dns-query"
-          "https://114.114.114.114/dns-query"
+          "tls://223.5.5.5"
+          "tls://114.114.114.114"
         ];
       in
       {
@@ -73,8 +69,8 @@ let
         };
         nameserver = defaultDns;
         fallback = [
-          "https://1.0.0.1/dns-query"
-          "https://8.8.4.4/dns-query"
+          "tls://8.8.4.4"
+          "tls://1.1.1.1"
         ];
         fallback-filter = {
           geoip = true;
