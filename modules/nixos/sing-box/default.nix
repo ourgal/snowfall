@@ -74,6 +74,16 @@ let
           }
           // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
         )
+        (
+          {
+            type = "https";
+            tag = "dns_direct";
+            server = "114.114.114.114";
+            path = "dns-query";
+            server_port = 443;
+          }
+          // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
+        )
         {
           type = "fakeip";
           tag = "dns_fakeip";
