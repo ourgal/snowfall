@@ -23,7 +23,6 @@ let
     mapAttrs
     toJSON
     map
-    foldl'
     ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
@@ -58,11 +57,6 @@ let
           "https://223.5.5.5/dns-query"
           "https://114.114.114.114/dns-query"
         ];
-        systemDns = [ "system" ];
-        directDomains = [ ];
-        directDomainsPolicy =
-          (foldl' (acc: v: acc // { "+.${v}" = defaultDns; }) { } directDomains)
-          // (foldl' (acc: v: acc // { "+.${v.from}" = systemDns; }) { } lib.${namespace}.redirectDomains);
       in
       {
         enable = true;
@@ -76,8 +70,7 @@ let
             "https://8.8.4.4/dns-query"
             "https://doh.opendns.com/dns-query"
           ];
-        }
-        // directDomainsPolicy;
+        };
         nameserver = defaultDns;
         fallback = [
           "https://1.0.0.1/dns-query"
