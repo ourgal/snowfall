@@ -74,16 +74,6 @@ let
           }
           // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
         )
-        (
-          {
-            type = "https";
-            tag = "dns_direct";
-            server = "114.114.114.114";
-            path = "dns-query";
-            server_port = 443;
-          }
-          // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
-        )
         {
           type = "fakeip";
           tag = "dns_fakeip";
@@ -326,7 +316,7 @@ let
       ];
       auto_route = true;
       auto_redirect = true;
-      strict_route = true;
+      strict_route = false;
       endpoint_independent_nat = false;
       exclude_package = [ "com.android.captiveportallogin" ];
     });
@@ -847,12 +837,12 @@ let
           })
           ++ [
             {
-              inbound = "dns-in";
-              action = "hijack-dns";
-            }
-            {
               action = "sniff";
               timeout = "500ms";
+            }
+            {
+              protocol = "dns";
+              action = "hijack-dns";
             }
           ]
           ++ (optional cfg.tailscale.enable {
@@ -1134,6 +1124,7 @@ let
         ];
         final = "🐟 漏网之鱼";
         default_domain_resolver = "dns_resolver";
+        auto_detect_interface = true;
       }
       // (if (isTproxy || isRedirect) then { default_mark = routingMark; } else { })
     );

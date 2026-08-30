@@ -36,7 +36,8 @@ in
         inherit wan lan;
       };
       sing-box = enabled // {
-        tailscale = enabled;
+        tailscale = disabled;
+        mode = "tun";
       };
       mihomo = disabled;
       sops-nix = enabled // {
@@ -53,7 +54,7 @@ in
       iotop = enabled;
       harmonia = enabled;
       cloudflared = enabled;
-      tailscale = disabled;
+      tailscale = enabled;
       bbr = enabled;
       pixiecore = enabled;
     };
