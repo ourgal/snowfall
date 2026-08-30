@@ -864,7 +864,7 @@ in
         mark ? 255,
         fakeip ? "28.0.0.0/8",
         fakeipV6 ? "fc00::/16",
-        dailyPorts ? false,
+        dailyPorts ? true,
       }:
       let
         tailscale =
@@ -1037,7 +1037,7 @@ in
         firewall_mark ? 1,
         fakeip ? "28.0.0.0/8",
         fakeipV6 ? "fc00::/16",
-        dailyPorts ? false,
+        dailyPorts ? true,
       }:
       let
         tailscale =
@@ -1145,7 +1145,7 @@ in
         mark ? 255,
         fakeip ? "28.0.0.0/8",
         fakeipV6 ? "fc00::/16",
-        dailyPorts ? false,
+        dailyPorts ? true,
       }:
       let
         tailscale =
@@ -1284,7 +1284,7 @@ in
         isTailscale ? true,
         fakeip ? "28.0.0.0/8",
         fakeipV6 ? "fc00::/16",
-        dailyPorts ? false,
+        dailyPorts ? true,
       }:
       let
         tailscale =
