@@ -871,13 +871,6 @@ let
                   { network = "icmp"; }
                   { ip_is_private = true; }
                   { protocol = "bittorrent"; }
-                  {
-                    port = [
-                      80
-                      443
-                    ];
-                    invert = true;
-                  }
                 ];
               }
               // (if isTun then { action = "bypass"; } else { outbound = "DIRECT"; })
