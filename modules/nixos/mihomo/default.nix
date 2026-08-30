@@ -19,7 +19,6 @@ let
     ;
   freeSubs = lib.${namespace}.freeSubs { isMihomo = true; };
   inherit (lib.${namespace}.mihomo) mkProxyProvider RuleProviders proxyGroups;
-  inherit (lib.${namespace}.sing-box) mkFirewall;
   inherit (builtins)
     mapAttrs
     toJSON
@@ -28,13 +27,14 @@ let
     ;
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
+  isRedirect = cfg.mode == "redirect";
   apiPort = 9999;
   tproxyPort = 7893;
   redirectPort = 7892;
   dnsPort = 1053;
   mixPort = 7890;
   routingMark = 255;
-  fakeIpSubnet = "198.18.0.0/16";
+  fakeIpSubnet = "28.0.0.0/8";
   settings = {
     mixed-port = mixPort;
     redir-port = redirectPort;
@@ -55,8 +55,8 @@ let
     dns =
       let
         defaultDns = [
-          "tls://223.5.5.5"
-          "tls://114.114.114.114"
+          "https://223.5.5.5/dns-query"
+          "https://114.114.114.114/dns-query"
         ];
         systemDns = [ "system" ];
         directDomains = [ ];
@@ -80,8 +80,8 @@ let
         // directDomainsPolicy;
         nameserver = defaultDns;
         fallback = [
-          "tls://8.8.4.4"
-          "tls://1.1.1.1"
+          "https://1.0.0.1/dns-query"
+          "https://8.8.4.4/dns-query"
         ];
         fallback-filter = {
           geoip = true;
@@ -293,25 +293,43 @@ let
     };
     systemd.services.mihomo =
       let
-        firewallScripts = mkFirewall {
-          inherit
-            isTproxy
-            apiPort
-            tproxyPort
-            redirectPort
-            dnsPort
-            mixPort
-            fakeIpSubnet
-            routingMark
-            ;
-          name = "mihomo";
-          fakeIp6Subnet = "";
-          FirewallMark = toString 1;
-          ipTableMark = "100";
-          ipTableMarkV6 = "101";
-        };
-        firewallStart = pkgs.writeShellScript "mihomoFirewallStart" firewallScripts.start;
-        firewallStop = pkgs.writeShellScript "mihomoFirewallStop" firewallScripts.stop;
+        firewallStart = pkgs.writeShellScript "mihomoFirewallStart" (
+          if isTproxy then
+            lib.${namespace}.sing-box.tproxy_start {
+              firewall_mark = 1;
+              tproxyPort = tproxyPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = fakeIpSubnet;
+            }
+          else if isRedirect then
+            lib.${namespace}.sing-box.redir_start {
+              firewall_mark = 1;
+              redirPort = redirectPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = fakeIpSubnet;
+            }
+          else
+            ""
+        );
+        firewallStop = pkgs.writeShellScript "mihomoFirewallStop" (
+          if isTproxy then
+            lib.${namespace}.sing-box.tproxy_stop {
+              firewall_mark = 1;
+              fakeip = fakeIpSubnet;
+            }
+          else if isRedirect then
+            lib.${namespace}.sing-box.redir_stop {
+              firewall_mark = 1;
+              redirPort = redirectPort;
+              dnsPort = dnsPort;
+              mark = routingMark;
+              fakeip = fakeIpSubnet;
+            }
+          else
+            ""
+        );
       in
       {
         path = with pkgs; [

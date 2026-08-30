@@ -1173,8 +1173,8 @@ let
               tproxyPort = tproxyPort;
               dnsPort = dnsPort;
               mark = routingMark;
-              fakeip = "28.0.0.0/8";
-              fakeipV6 = "fc00::/16";
+              fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else if isRedirect then
             lib.${namespace}.sing-box.redir_start {
@@ -1183,8 +1183,8 @@ let
               redirPort = redirectPort;
               dnsPort = dnsPort;
               mark = routingMark;
-              fakeip = "28.0.0.0/8";
-              fakeipV6 = "fc00::/16";
+              fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else
             ""
@@ -1194,8 +1194,8 @@ let
             lib.${namespace}.sing-box.tproxy_stop {
               isTailscale = cfg.tailscale.enable;
               firewall_mark = 1;
-              fakeip = "28.0.0.0/8";
-              fakeipV6 = "fc00::/16";
+              fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else if isRedirect then
             lib.${namespace}.sing-box.redir_stop {
@@ -1204,8 +1204,8 @@ let
               redirPort = redirectPort;
               dnsPort = dnsPort;
               mark = routingMark;
-              fakeip = "28.0.0.0/8";
-              fakeipV6 = "fc00::/16";
+              fakeip = fakeIpSubnet;
+              fakeipV6 = fakeIp6Subnet;
             }
           else
             ""

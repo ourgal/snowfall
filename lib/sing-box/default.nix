@@ -857,13 +857,13 @@ in
       };
     tproxy_start =
       {
-        isTailscale ? true,
+        isTailscale ? false,
         firewall_mark ? 1,
         tproxyPort ? 7893,
         dnsPort ? 1053,
         mark ? 255,
-        fakeip ? "28.0.0.0/8",
-        fakeipV6 ? "fc00::/16",
+        fakeip ? "",
+        fakeipV6 ? "",
         dailyPorts ? true,
       }:
       let
@@ -887,6 +887,8 @@ in
         mark=${toString mark}
         firewall_mark=${toString firewall_mark}
         daily_ports=${toString (if dailyPorts then 1 else 0)}
+        fakeip=${fakeip}
+        fakeipV6=${fakeipV6}
 
         # waiting network
         i=1
@@ -970,7 +972,9 @@ in
         ip6tables -w -t mangle -N "$mark_v6_table"
 
         for p in tcp udp; do
-          iptables -w -t mangle -A PREROUTING -d "${fakeip}" -p "$p" -j "$mark_table"
+          if [[ -n $fakeip ]]; then
+            iptables -w -t mangle -A PREROUTING -d "$fakeip" -p "$p" -j "$mark_table"
+          fi
           if (( daily_ports )); then
             iptables -w -t mangle -A PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
           else
@@ -979,7 +983,9 @@ in
         done
 
         for p in tcp udp; do
-          ip6tables -w -t mangle -A PREROUTING -d "${fakeipV6}" -p "$p" -j "$mark_v6_table"
+          if [[ -n $fakeipV6 ]]; then
+            ip6tables -w -t mangle -A PREROUTING -d "$fakeipV6" -p "$p" -j "$mark_v6_table"
+          fi
           if (( daily_ports )); then
             ip6tables -w -t mangle -A PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
           else
@@ -1033,10 +1039,10 @@ in
       '';
     tproxy_stop =
       {
-        isTailscale ? true,
+        isTailscale ? false,
         firewall_mark ? 1,
-        fakeip ? "28.0.0.0/8",
-        fakeipV6 ? "fc00::/16",
+        fakeip ? "",
+        fakeipV6 ? "",
         dailyPorts ? true,
       }:
       let
@@ -1059,6 +1065,8 @@ in
       ''
         firewall_mark=${toString firewall_mark}
         daily_ports=${toString (if dailyPorts then 1 else 0)}
+        fakeip=${fakeip}
+        fakeipV6=${fakeipV6}
 
         ${host_ip}
 
@@ -1114,7 +1122,9 @@ in
 
         # mangle
         for p in tcp udp; do
-          iptables -w -t mangle -D PREROUTING -d "${fakeip}" -p "$p" -j "$mark_table"
+          if [[ -n $fakeip ]]; then
+            iptables -w -t mangle -D PREROUTING -d "$fakeip" -p "$p" -j "$mark_table"
+          fi
           if (( daily_ports )); then
             iptables -w -t mangle -D PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
           else
@@ -1123,7 +1133,9 @@ in
         done
 
         for p in tcp udp; do
-          ip6tables -w -t mangle -D PREROUTING -d "${fakeipV6}" -p "$p" -j "$mark_v6_table"
+          if [[ -n $fakeipV6 ]]; then
+            ip6tables -w -t mangle -D PREROUTING -d "$fakeipV6" -p "$p" -j "$mark_v6_table"
+          fi
           if (( daily_ports )); then
             ip6tables -w -t mangle -D PREROUTING -p "$p" -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
           else
@@ -1139,12 +1151,12 @@ in
       '';
     redir_start =
       {
-        isTailscale ? true,
+        isTailscale ? false,
         redirPort ? 7892,
         dnsPort ? 1053,
         mark ? 255,
-        fakeip ? "28.0.0.0/8",
-        fakeipV6 ? "fc00::/16",
+        fakeip ? "",
+        fakeipV6 ? "",
         dailyPorts ? true,
       }:
       let
@@ -1165,6 +1177,8 @@ in
       ''
         mark=${toString mark}
         daily_ports=${toString (if dailyPorts then 1 else 0)}
+        fakeip=${fakeip}
+        fakeipV6=${fakeipV6}
 
         i=1
         while [ "$i" -le "20" ]; do
@@ -1192,14 +1206,18 @@ in
           ip6tables -w -t nat -A PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
         done
 
-        iptables -w -t nat -A PREROUTING -d "${fakeip}" -p tcp -j "$mark_table"
+        if [[ -n $fakeip ]]; then
+          iptables -w -t nat -A PREROUTING -d "$fakeip" -p tcp -j "$mark_table"
+        fi
         if (( daily_ports )); then
           iptables -w -t nat -A PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
         else
           iptables -w -t nat -A PREROUTING -p tcp -m tcp -j "$mark_table"
         fi
 
-        ip6tables -w -t nat -A PREROUTING -d "${fakeipV6}" -p tcp -j "$mark_v6_table"
+        if [[ -n $fakeipV6 ]]; then
+          ip6tables -w -t nat -A PREROUTING -d "$fakeipV6" -p tcp -j "$mark_v6_table"
+        fi
         if (( daily_ports )); then
           ip6tables -w -t nat -A PREROUTING -p tcp -m tcp -j "$mark_v6_table"
         else
@@ -1281,9 +1299,9 @@ in
       '';
     redir_stop =
       {
-        isTailscale ? true,
-        fakeip ? "28.0.0.0/8",
-        fakeipV6 ? "fc00::/16",
+        isTailscale ? false,
+        fakeip ? "",
+        fakeipV6 ? "",
         dailyPorts ? true,
       }:
       let
@@ -1304,6 +1322,8 @@ in
       ''
         ${host_ip}
         daily_ports=${toString (if dailyPorts then 1 else 0)}
+        fakeip=${fakeip}
+        fakeipV6=${fakeipV6}
 
         host_ipv4+=" 127.0.0.0/8"
         host_ipv6+=" fe80::/10 fd00::/8"
@@ -1319,7 +1339,9 @@ in
         for p in tcp udp; do
           iptables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_table"
         done
-        iptables -w -t nat -D PREROUTING -d "${fakeip}" -p tcp -j "$mark_table"
+        if [[ -n $fakeip ]]; then
+          iptables -w -t nat -D PREROUTING -d "$fakeip" -p tcp -j "$mark_table"
+        fi
         iptables -w -t nat -D PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_table"
         iptables -w -t nat -F "$dns_table"
         iptables -w -t nat -X "$dns_table"
@@ -1329,7 +1351,9 @@ in
         for p in tcp udp; do
           ip6tables -w -t nat -D PREROUTING -p "$p" -m "$p" --dport 53 -j "$dns_v6_table"
         done
-        ip6tables -w -t nat -D PREROUTING -d "${fakeipV6}" -p tcp -j "$mark_v6_table"
+        if [[ -n $fakeipV6 ]]; then
+          ip6tables -w -t nat -D PREROUTING -d "$fakeipV6" -p tcp -j "$mark_v6_table"
+        fi
         if (( daily_ports )); then
           ip6tables -w -t nat -D PREROUTING -p tcp -m multiport --dports 22,80,443,8080,8443 -j "$mark_v6_table"
         else
