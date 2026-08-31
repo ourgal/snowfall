@@ -880,7 +880,7 @@ let
             }
             {
               clash_mode = "Global";
-              outbound = "GLOBAL";
+              outbound = "🚀 节点选择";
             }
             {
               domain_suffix = "captive.apple.com";
