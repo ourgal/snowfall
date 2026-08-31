@@ -242,16 +242,6 @@ let
           server = "dns_direct";
         }
         {
-          query_type = [
-            "A"
-            "AAAA"
-          ];
-          clash_mode = "Global";
-          server = "dns_fakeip";
-          strategy = "prefer_ipv4";
-          rewrite_ttl = 1;
-        }
-        {
           rule_set = "cn";
           server = "dns_direct";
         }
