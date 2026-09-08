@@ -1,1 +1,4 @@
-{ enable = "aichat"; }
+{
+  enable = "aichat";
+  nixPkgs = "opencode";
+}
