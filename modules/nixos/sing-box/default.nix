@@ -298,12 +298,12 @@ let
       mtu = 9000;
       route_exclude_address = [
         "10.0.0.0/8"
-        "100.64.0.0/10"
         "169.254.0.0/16"
         "172.16.0.0/12"
         "192.0.0.0/24"
         "192.168.0.0/16"
-      ];
+      ]
+      ++ optional (!cfg.tailscale.enable && !config.services.tailscale.enable) "100.64.0.0/10";
       auto_route = true;
       auto_redirect = true;
       strict_route = false;
