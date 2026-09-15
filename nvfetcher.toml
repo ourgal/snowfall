@@ -1457,3 +1457,4 @@ fetch.github = "rainbend/sing-box-subscribe-cli"
 [subforge]
 src.github = "bitxwave/subforge"
 fetch.github = "bitxwave/subforge"
+cargo_lock = ["Cargo.lock"]
