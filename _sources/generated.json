@@ -2449,12 +2449,12 @@
             "name": null,
             "owner": "BartSte",
             "repo": "fzf-help",
-            "rev": "v2.3.2",
-            "sha256": "sha256-0URTNRDw6fKcpIvnKziIyk6TOjeFUYVfy+Yyh14oNt8=",
+            "rev": "v2.4.0",
+            "sha256": "sha256-OaDuj5VtEgalVbbb7bVQAgFgfsa6xPRZ6wvvRe2uGMQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.2"
+        "version": "v2.4.0"
     },
     "fzf-kill": {
         "cargoLock": null,
@@ -5597,7 +5597,12 @@
         "version": "d9d5911f4d2d141fea74936f235a74bf03961c71"
     },
     "subforge": {
-        "cargoLock": null,
+        "cargoLock": {
+            "Cargo.lock": [
+                "sha256-4MQgQOrLvLNJ7KUAf_0svBYvKFGHthnkBuDVH4DmN38=/Cargo.lock",
+                {}
+            ]
+        },
         "date": null,
         "extract": null,
         "name": "subforge",

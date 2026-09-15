@@ -1361,13 +1361,13 @@
   };
   fzf-help = {
     pname = "fzf-help";
-    version = "v2.3.2";
+    version = "v2.4.0";
     src = fetchFromGitHub {
       owner = "BartSte";
       repo = "fzf-help";
-      rev = "v2.3.2";
+      rev = "v2.4.0";
       fetchSubmodules = false;
-      sha256 = "sha256-0URTNRDw6fKcpIvnKziIyk6TOjeFUYVfy+Yyh14oNt8=";
+      sha256 = "sha256-OaDuj5VtEgalVbbb7bVQAgFgfsa6xPRZ6wvvRe2uGMQ=";
     };
   };
   fzf-kill = {
@@ -3156,6 +3156,12 @@
       rev = "v3.0.1";
       fetchSubmodules = false;
       sha256 = "sha256-4MQgQOrLvLNJ7KUAf/0svBYvKFGHthnkBuDVH4DmN38=";
+    };
+    cargoLock."Cargo.lock" = {
+      lockFile = ./. + "/sha256-4MQgQOrLvLNJ7KUAf_0svBYvKFGHthnkBuDVH4DmN38=/Cargo.lock";
+      outputHashes = {
+        
+      };
     };
   };
   subtotxt = {
