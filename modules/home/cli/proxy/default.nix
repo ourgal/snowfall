@@ -1,1 +1,6 @@
-{ myPkgs = "sing-box-subscribe-cli"; }
+{
+  myPkgs = [
+    "subforge"
+    "sing-box-subscribe-cli"
+  ];
+}

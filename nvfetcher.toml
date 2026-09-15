@@ -1453,3 +1453,7 @@ fetch.github = "rahji/helix-ghost"
 [sing-box-subscribe-cli]
 src.github = "rainbend/sing-box-subscribe-cli"
 fetch.github = "rainbend/sing-box-subscribe-cli"
+
+[subforge]
+src.github = "bitxwave/subforge"
+fetch.github = "bitxwave/subforge"

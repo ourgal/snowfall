@@ -89,6 +89,7 @@ rec {
 
   mkRustSource = s: {
     inherit (s) pname version src;
+    __structuredAttrs = true;
     cargoLock = s.cargoLock."Cargo.lock";
   };
 
