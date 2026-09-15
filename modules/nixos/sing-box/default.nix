@@ -15,7 +15,7 @@ let
     domainBlackList
     domainWhiteList
     ;
-  inherit (lib) optional;
+  inherit (lib) optional optionals;
   utils = import "${inputs.nixpkgs}/nixos/lib/utils.nix" { inherit lib pkgs config; };
   cfg = cfgNixos config.${namespace} ./.;
   isTproxy = cfg.mode == "tproxy";
@@ -89,172 +89,184 @@ let
           }
           // (if (isTproxy || isRedirect) then { routing_mark = routingMark; } else { })
         )
-      ];
-      rules = [
-        {
-          ip_accept_any = true;
-          server = "hosts";
-        }
-        {
-          clash_mode = "Direct";
-          server = "dns_direct";
-          strategy = "prefer_ipv4";
-        }
-        {
-          domain_suffix = "services.googleapis.cn";
-          server = "dns_fakeip";
-          strategy = "prefer_ipv4";
-          rewrite_ttl = 1;
-        }
-        {
-          domain = [
-            "time-ios.apple.com"
-            "time1.cloud.tencent.com"
-            "music.163.com"
-            "musicapi.taihe.com"
-            "music.taihe.com"
-            "songsearch.kugou.com"
-            "trackercdn.kugou.com"
-            "api-jooxtt.sanook.com"
-            "api.joox.com"
-            "joox.com"
-            "y.qq.com"
-            "streamoc.music.tc.qq.com"
-            "mobileoc.music.tc.qq.com"
-            "isure.stream.qqmusic.qq.com"
-            "dl.stream.qqmusic.qq.com"
-            "aqqmusic.tc.qq.com"
-            "amobile.music.tc.qq.com"
-            "music.migu.cn"
-            "localhost.ptlogin2.qq.com"
-            "localhost.sec.qq.com"
-            "xnotify.xboxlive.com"
-            "proxy.golang.org"
-            "heartbeat.belkin.com"
-            "mesu.apple.com"
-            "swscan.apple.com"
-            "swquery.apple.com"
-            "swdownload.apple.com"
-            "swcdn.apple.com"
-            "swdist.apple.com"
-            "lens.l.google.com"
-            "na.b.g-tun.com"
-            "ff.dorado.sdo.com"
-            "shark007.net"
-            "adguardteam.github.io"
-            "adrules.top"
-            "anti-ad.net"
-            "local.adguard.org"
-            "static.adtidy.org"
-            "ps.res.netease.com"
-          ];
-          server = "dns_direct";
-        }
-        {
-          domain_suffix = [
-            "*"
-            "lan"
-            "localdomain"
-            "example"
-            "invalid"
-            "localhost"
-            "test"
-            "local"
-            "home.arpa"
-            "direct"
-            "time.edu.cn"
-            "ntp.org.cn"
-            "pool.ntp.org"
-            "music.163.com"
-            "126.net"
-            "kuwo.cn"
-            "y.qq.com"
-            "xiami.com"
-            "music.migu.cn"
-            "msftconnecttest.com"
-            "msftncsi.com"
-            "kk-rays.com"
-            "steamcontent.com"
-            "srv.nintendo.net"
-            "n.n.srv.nintendo.net"
-            "cdn.nintendo.net"
-            "battle.net"
-            "battlenet.com.cn"
-            "wotgame.cn"
-            "wggames.cn"
-            "wowsgame.cn"
-            "wargaming.net"
-            "linksys.com"
-            "linksyssmartwifi.com"
-            "router.asus.com"
-            "square-enix.com"
-            "finalfantasyxiv.com"
-            "ffxiv.com"
-            "ff14.sdo.com"
-            "mcdn.bilivideo.cn"
-            "media.dssott.com"
-            "market.xiaomi.com"
-            "cmbchina.com"
-            "cmbimg.com"
-            "sandai.net"
-            "n0808.com"
-            "3gppnetwork.org"
-            "uu.163.com"
-            "pub.3gppnetwork.org"
-            "oray.com"
-            "orayimg.com"
-            "gcloudcs.com"
-            "gcloudsdk.com"
-            "dynv6.net"
-          ];
-          server = "dns_direct";
-        }
-        {
-          domain_regex = [
-            "time\\..*\\.com"
-            "time\\..*\\.gov"
-            "time\\..*\\.edu\\.cn"
-            "time\\..*\\.apple\\.com"
-            "time1\\..*\\.com"
-            "time2\\..*\\.com"
-            "time3\\..*\\.com"
-            "time4\\..*\\.com"
-            "time5\\..*\\.com"
-            "time6\\..*\\.com"
-            "time7\\..*\\.com"
-            "ntp\\..*\\.com"
-            "ntp1\\..*\\.com"
-            "ntp2\\..*\\.com"
-            "ntp3\\..*\\.com"
-            "ntp4\\..*\\.com"
-            "ntp5\\..*\\.com"
-            "ntp6\\..*\\.com"
-            "ntp7\\..*\\.com"
-            "localhost\\..*\\.weixin\\.qq\\.com"
-            "xbox\\..*\\.*\\.microsoft\\.com"
-            ".*\\.*\\.xboxlive\\.com"
-            "xbox\\..*\\.microsoft\\.com"
-            ".+\\.stun\\..*\\.*"
-            ".+\\.stun\\..*\\.*\\.*"
-            ".+\\.stun\\..*\\.*\\.*\\.*"
-            ".+\\.stun\\..*\\.*\\.*\\.*\\.*"
-          ];
-          server = "dns_direct";
-        }
-        {
-          rule_set = "cn";
-          server = "dns_direct";
-        }
-        {
-          query_type = [
-            "A"
-            "AAAA"
-          ];
-          server = "dns_fakeip";
-          strategy = "prefer_ipv4";
-          rewrite_ttl = 1;
-        }
-      ];
+      ]
+      ++ optional cfg.tailscale.enable {
+        type = "tailscale";
+        tag = "dns_ts";
+        endpoint = "ts-ep";
+      };
+      rules =
+        optionals cfg.tailscale.enable [
+          {
+            ip_accept_any = true;
+            server = "dns_ts";
+          }
+        ]
+        ++ [
+          {
+            ip_accept_any = true;
+            server = "hosts";
+          }
+          {
+            clash_mode = "Direct";
+            server = "dns_direct";
+            strategy = "prefer_ipv4";
+          }
+          {
+            domain_suffix = "services.googleapis.cn";
+            server = "dns_fakeip";
+            strategy = "prefer_ipv4";
+            rewrite_ttl = 1;
+          }
+          {
+            domain = [
+              "time-ios.apple.com"
+              "time1.cloud.tencent.com"
+              "music.163.com"
+              "musicapi.taihe.com"
+              "music.taihe.com"
+              "songsearch.kugou.com"
+              "trackercdn.kugou.com"
+              "api-jooxtt.sanook.com"
+              "api.joox.com"
+              "joox.com"
+              "y.qq.com"
+              "streamoc.music.tc.qq.com"
+              "mobileoc.music.tc.qq.com"
+              "isure.stream.qqmusic.qq.com"
+              "dl.stream.qqmusic.qq.com"
+              "aqqmusic.tc.qq.com"
+              "amobile.music.tc.qq.com"
+              "music.migu.cn"
+              "localhost.ptlogin2.qq.com"
+              "localhost.sec.qq.com"
+              "xnotify.xboxlive.com"
+              "proxy.golang.org"
+              "heartbeat.belkin.com"
+              "mesu.apple.com"
+              "swscan.apple.com"
+              "swquery.apple.com"
+              "swdownload.apple.com"
+              "swcdn.apple.com"
+              "swdist.apple.com"
+              "lens.l.google.com"
+              "na.b.g-tun.com"
+              "ff.dorado.sdo.com"
+              "shark007.net"
+              "adguardteam.github.io"
+              "adrules.top"
+              "anti-ad.net"
+              "local.adguard.org"
+              "static.adtidy.org"
+              "ps.res.netease.com"
+            ];
+            server = "dns_direct";
+          }
+          {
+            domain_suffix = [
+              "*"
+              "lan"
+              "localdomain"
+              "example"
+              "invalid"
+              "localhost"
+              "test"
+              "local"
+              "home.arpa"
+              "direct"
+              "time.edu.cn"
+              "ntp.org.cn"
+              "pool.ntp.org"
+              "music.163.com"
+              "126.net"
+              "kuwo.cn"
+              "y.qq.com"
+              "xiami.com"
+              "music.migu.cn"
+              "msftconnecttest.com"
+              "msftncsi.com"
+              "kk-rays.com"
+              "steamcontent.com"
+              "srv.nintendo.net"
+              "n.n.srv.nintendo.net"
+              "cdn.nintendo.net"
+              "battle.net"
+              "battlenet.com.cn"
+              "wotgame.cn"
+              "wggames.cn"
+              "wowsgame.cn"
+              "wargaming.net"
+              "linksys.com"
+              "linksyssmartwifi.com"
+              "router.asus.com"
+              "square-enix.com"
+              "finalfantasyxiv.com"
+              "ffxiv.com"
+              "ff14.sdo.com"
+              "mcdn.bilivideo.cn"
+              "media.dssott.com"
+              "market.xiaomi.com"
+              "cmbchina.com"
+              "cmbimg.com"
+              "sandai.net"
+              "n0808.com"
+              "3gppnetwork.org"
+              "uu.163.com"
+              "pub.3gppnetwork.org"
+              "oray.com"
+              "orayimg.com"
+              "gcloudcs.com"
+              "gcloudsdk.com"
+              "dynv6.net"
+            ];
+            server = "dns_direct";
+          }
+          {
+            domain_regex = [
+              "time\\..*\\.com"
+              "time\\..*\\.gov"
+              "time\\..*\\.edu\\.cn"
+              "time\\..*\\.apple\\.com"
+              "time1\\..*\\.com"
+              "time2\\..*\\.com"
+              "time3\\..*\\.com"
+              "time4\\..*\\.com"
+              "time5\\..*\\.com"
+              "time6\\..*\\.com"
+              "time7\\..*\\.com"
+              "ntp\\..*\\.com"
+              "ntp1\\..*\\.com"
+              "ntp2\\..*\\.com"
+              "ntp3\\..*\\.com"
+              "ntp4\\..*\\.com"
+              "ntp5\\..*\\.com"
+              "ntp6\\..*\\.com"
+              "ntp7\\..*\\.com"
+              "localhost\\..*\\.weixin\\.qq\\.com"
+              "xbox\\..*\\.*\\.microsoft\\.com"
+              ".*\\.*\\.xboxlive\\.com"
+              "xbox\\..*\\.microsoft\\.com"
+              ".+\\.stun\\..*\\.*"
+              ".+\\.stun\\..*\\.*\\.*"
+              ".+\\.stun\\..*\\.*\\.*\\.*"
+              ".+\\.stun\\..*\\.*\\.*\\.*\\.*"
+            ];
+            server = "dns_direct";
+          }
+          {
+            rule_set = "cn";
+            server = "dns_direct";
+          }
+          {
+            query_type = [
+              "A"
+              "AAAA"
+            ];
+            server = "dns_fakeip";
+            strategy = "prefer_ipv4";
+            rewrite_ttl = 1;
+          }
+        ];
       final = "dns_proxy";
       reverse_mapping = true;
       strategy = "prefer_ipv4";
@@ -301,9 +313,11 @@ let
         "169.254.0.0/16"
         "172.16.0.0/12"
         "192.0.0.0/24"
-        "192.168.0.0/16"
       ]
-      ++ optional (!cfg.tailscale.enable && !config.services.tailscale.enable) "100.64.0.0/10";
+      ++ optionals (!cfg.tailscale.enable && !config.services.tailscale.enable) [
+        "100.64.0.0/10"
+        "192.168.0.0/16"
+      ];
       auto_route = true;
       auto_redirect = true;
       strict_route = false;
@@ -316,6 +330,10 @@ let
         type = "tailscale";
         tag = "ts-ep";
         hostname = "router";
+        accept_routes = true;
+        exit_node = "work";
+        exit_node_allow_lan_access = true;
+        advertise_exit_node = false;
         advertise_routes = [ "192.168.123.0/24" ];
       };
     outbounds = [
@@ -819,165 +837,160 @@ let
     ];
     route = (
       {
-        rules =
-          (optional cfg.tailscale.enable {
-            inbound = "ts-ep";
-            port = 53;
+        rules = [
+          {
+            action = "sniff";
+            timeout = "500ms";
+          }
+          {
+            protocol = "dns";
             action = "hijack-dns";
-          })
-          ++ [
-            {
-              action = "sniff";
-              timeout = "500ms";
-            }
-            {
-              protocol = "dns";
-              action = "hijack-dns";
-            }
-          ]
-          ++ (optional cfg.tailscale.enable {
-            ip_cidr = [
-              "100.64.0.0/10"
-              "fd7a:115c:a1e0::/48"
+          }
+        ]
+        ++ (optional cfg.tailscale.enable {
+          ip_cidr = [
+            "100.64.0.0/10"
+            "fd7a:115c:a1e0::/48"
+            "192.168.0.0/24"
+          ];
+          outbound = "ts-ep";
+        })
+        ++ [
+          {
+            type = "logical";
+            mode = "or";
+            rules = [
+              { port = 853; }
+              { network = "quic"; }
             ];
-            outbound = "ts-ep";
-          })
-          ++ [
+            action = "reject";
+          }
+          (
             {
               type = "logical";
               mode = "or";
               rules = [
-                { port = 853; }
-                { network = "quic"; }
+                { network = "icmp"; }
+                { ip_is_private = true; }
+                { protocol = "bittorrent"; }
               ];
-              action = "reject";
             }
-            (
-              {
-                type = "logical";
-                mode = "or";
-                rules = [
-                  { network = "icmp"; }
-                  { ip_is_private = true; }
-                  { protocol = "bittorrent"; }
-                ];
-              }
-              // (if isTun then { action = "bypass"; } else { outbound = "DIRECT"; })
-            )
-            {
-              clash_mode = "Direct";
-              outbound = "DIRECT";
-            }
-            {
-              clash_mode = "Global";
-              outbound = "🚀 节点选择";
-            }
-            {
-              domain_suffix = "captive.apple.com";
-              outbound = "DIRECT";
-            }
-            {
-              domain_suffix = "kamo.teracloud.jp";
-              outbound = "DIRECT";
-            }
-            {
-              domain_suffix = domainWhiteList;
-              outbound = "DIRECT";
-            }
-            {
-              domain_suffix = domainBlackList;
-              outbound = "🚀 节点选择";
-            }
-            {
-              rule_set = "private";
-              outbound = "🎯 本地直连";
-            }
-            {
-              rule_set = "ads";
-              outbound = "🛑 广告拦截";
-            }
-            {
-              rule_set = "networktest";
-              outbound = "📈 网络测速";
-            }
-            {
-              rule_set = "applications";
-              outbound = "↔️ 直连软件";
-            }
-            {
-              rule_set = "trackerslist";
-              outbound = "🧲 BT下载";
-            }
-            {
-              rule_set = "apple-cn";
-              outbound = "🍎 苹果服务";
-            }
-            {
-              rule_set = "microsoft-cn";
-              outbound = "🪟 微软服务";
-            }
-            {
-              rule_set = "google-cn";
-              outbound = "🇬 谷歌服务";
-            }
-            {
-              rule_set = "steamcn";
-              outbound = "🦾 Steam平台";
-            }
-            {
-              rule_set = "games-cn";
-              outbound = "🕹 国服游戏";
-            }
-            {
-              rule_set = "googlefcm";
-              outbound = "📢 谷歌推送";
-            }
-            {
-              rule_set = "netflix";
-              outbound = "🎬 奈飞视频";
-            }
-            {
-              rule_set = "youtube";
-              outbound = "▶️ 油管视频";
-            }
-            {
-              rule_set = "ai";
-              outbound = "🤖 AI 平台";
-            }
-            {
-              rule_set = "media";
-              outbound = "🌍 国际媒体";
-            }
-            {
-              rule_set = "proxy";
-              outbound = "🌐 国际流量";
-            }
-            {
-              rule_set = "cn";
-              outbound = "🀄️ 国内流量";
-            }
-            {
-              rule_set = "privateip";
-              outbound = "🎯 本地直连";
-            }
-            {
-              rule_set = "telegramip";
-              outbound = "📲 电报消息";
-            }
-            {
-              action = "resolve";
-              server = "dns_proxy";
-              strategy = "prefer_ipv4";
-            }
-            {
-              rule_set = "mediaip";
-              outbound = "🌍 国际媒体";
-            }
-            {
-              rule_set = "cnip";
-              outbound = "🀄️ 国内流量";
-            }
-          ];
+            // (if isTun then { action = "bypass"; } else { outbound = "DIRECT"; })
+          )
+          {
+            clash_mode = "Direct";
+            outbound = "DIRECT";
+          }
+          {
+            clash_mode = "Global";
+            outbound = "🚀 节点选择";
+          }
+          {
+            domain_suffix = "captive.apple.com";
+            outbound = "DIRECT";
+          }
+          {
+            domain_suffix = "kamo.teracloud.jp";
+            outbound = "DIRECT";
+          }
+          {
+            domain_suffix = domainWhiteList;
+            outbound = "DIRECT";
+          }
+          {
+            domain_suffix = domainBlackList;
+            outbound = "🚀 节点选择";
+          }
+          {
+            rule_set = "private";
+            outbound = "🎯 本地直连";
+          }
+          {
+            rule_set = "ads";
+            outbound = "🛑 广告拦截";
+          }
+          {
+            rule_set = "networktest";
+            outbound = "📈 网络测速";
+          }
+          {
+            rule_set = "applications";
+            outbound = "↔️ 直连软件";
+          }
+          {
+            rule_set = "trackerslist";
+            outbound = "🧲 BT下载";
+          }
+          {
+            rule_set = "apple-cn";
+            outbound = "🍎 苹果服务";
+          }
+          {
+            rule_set = "microsoft-cn";
+            outbound = "🪟 微软服务";
+          }
+          {
+            rule_set = "google-cn";
+            outbound = "🇬 谷歌服务";
+          }
+          {
+            rule_set = "steamcn";
+            outbound = "🦾 Steam平台";
+          }
+          {
+            rule_set = "games-cn";
+            outbound = "🕹 国服游戏";
+          }
+          {
+            rule_set = "googlefcm";
+            outbound = "📢 谷歌推送";
+          }
+          {
+            rule_set = "netflix";
+            outbound = "🎬 奈飞视频";
+          }
+          {
+            rule_set = "youtube";
+            outbound = "▶️ 油管视频";
+          }
+          {
+            rule_set = "ai";
+            outbound = "🤖 AI 平台";
+          }
+          {
+            rule_set = "media";
+            outbound = "🌍 国际媒体";
+          }
+          {
+            rule_set = "proxy";
+            outbound = "🌐 国际流量";
+          }
+          {
+            rule_set = "cn";
+            outbound = "🀄️ 国内流量";
+          }
+          {
+            rule_set = "privateip";
+            outbound = "🎯 本地直连";
+          }
+          {
+            rule_set = "telegramip";
+            outbound = "📲 电报消息";
+          }
+          {
+            action = "resolve";
+            server = "dns_proxy";
+            strategy = "prefer_ipv4";
+          }
+          {
+            rule_set = "mediaip";
+            outbound = "🌍 国际媒体";
+          }
+          {
+            rule_set = "cnip";
+            outbound = "🀄️ 国内流量";
+          }
+        ];
         rule_set = [
           {
             type = "remote";
